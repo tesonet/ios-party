@@ -14,7 +14,7 @@ class LoadingView: UIView {
     @IBOutlet weak var label: UILabel!
     static private var shareInstanceView: LoadingView?
     
-    let minimumAnimationDuration: TimeInterval = 1.0
+    let minimumAnimationDuration: TimeInterval = 0.8
     var startedAnimating: Date = Date()
     
     class func sharedInstance() -> LoadingView{

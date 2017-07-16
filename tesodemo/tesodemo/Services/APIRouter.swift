@@ -6,11 +6,7 @@
 //
 //
 
-import UIKit
-
 import Foundation
-
-
 
 enum APIRouter {
     static let baseUrl = URL(string: "http://playground.tesonet.lt/v1/")!

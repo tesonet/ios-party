@@ -9,8 +9,6 @@
 import UIKit
 import Foundation
 
-
-
 extension UIFont {
     
     enum AppFont: String {
@@ -27,6 +25,4 @@ extension UIFont {
     class func applicationFont(_ fontName: AppFont, size: CGFloat) -> UIFont {
         return UIFont(name: fontName.name, size: size)!
     }
-    
-
 }

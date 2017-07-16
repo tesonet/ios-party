@@ -32,8 +32,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
             string: "UsernamePlaceholder".localized,
             attributes: [NSForegroundColorAttributeName: UIColor.appTextFieldPlaceholder])
         
-        
-        
         passwordField.font = UIFont.applicationFont(.light, size: 10)
         passwordField.delegate = self
         passwordField.attributedPlaceholder = NSAttributedString(
@@ -43,7 +41,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object:nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillChangeFrame, object:nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object:nil)
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func loginClicked() {
@@ -85,11 +82,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
             self.logoView.alpha = 1
             self.view.layoutIfNeeded()
         })
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override var prefersStatusBarHidden: Bool {

@@ -25,19 +25,10 @@ class ServerCell: UITableViewCell {
         
         distanceLabel.font = UIFont.applicationFont(.light, size: 11)
         distanceLabel.textColor = UIColor.appListContent
-        // Initialization code
-        
     }
     
     func setup(server: ServerModel) {
         nameLabel.text = server.name
         distanceLabel.text = String(format: "ServerDistanceFormat".localized, server.distance)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
