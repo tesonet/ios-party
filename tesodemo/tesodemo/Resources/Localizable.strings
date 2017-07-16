@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  tesodemo
+
+  Created by Vytautas Vasiliauskas on 16/07/2017.
+
+*/
+
+//LoginViewController
+"LoginButton" = "Log In";
+"UsernamePlaceholder" = "Username";
+"PasswordPlaceholder" = "Password";
+
+//ServerController
+"ServerDistanceFormat" = "%i km";
+"ServersDistanceHeader" = "DISTANCE";
+"ServersNameHeader" = "SERVER";
+
+//Loading
+"LoadingAuthenticating" = "Authenticating...";
+"LoadingFetchingList" = "Fetching the list...";
