@@ -1,3 +1,23 @@
-PODFILE CHECKSUM: 630c79af9a04e68d3ac0ad6ec57a6ce6e06fe499
+PODS:
+  - ObjectMapper (2.2.8)
+  - Realm (2.9.1):
+    - Realm/Headers (= 2.9.1)
+  - Realm/Headers (2.9.1)
+  - RealmSwift (2.9.1):
+    - Realm (= 2.9.1)
+  - SVProgressHUD (2.1.2)
 
-COCOAPODS: 1.2.1
+DEPENDENCIES:
+  - ObjectMapper (~> 2.2)
+  - RealmSwift
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+  Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
+  RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+
+PODFILE CHECKSUM: 51f1c50c65f136f0a7c6ddf6033f0c2122290c8e
+
+COCOAPODS: 1.3.0
