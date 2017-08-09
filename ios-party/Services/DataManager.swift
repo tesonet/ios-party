@@ -23,22 +23,22 @@ class DataManager : NSObject {
     
     var delegate : SyncProtocol?
     
-    func sync(cars : [Server]) {
+    func sync(servers : [Server]) {
         DispatchQueue.global(qos: .background).async {
             let realm = try! Realm()
             realm.beginWrite()
             
-            let ids = cars.map { $0.id }
-            let objectsToDelete = realm.objects(Server.self).filter("NOT (id IN %@)", ids)
+            let ids = servers.map { $0.name }
+            let objectsToDelete = realm.objects(Server.self).filter("NOT (name IN %@)", ids)
             if !objectsToDelete.isEmpty {
                 realm.delete(objectsToDelete)
             }
             
-            for car in cars {
-                if realm.object(ofType: Server.self, forPrimaryKey: car.id) != nil {
-                    realm.add(car, update: true)
+            for server in servers {
+                if realm.object(ofType: Server.self, forPrimaryKey: server.name) != nil {
+                    realm.add(server, update: true)
                 } else {
-                    realm.add(car)
+                    realm.add(server)
                 }
             }
             

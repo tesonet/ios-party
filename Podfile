@@ -6,6 +6,7 @@ target 'ios-party' do
 pod 'SVProgressHUD'
 pod 'RealmSwift'
 pod 'ObjectMapper', '~> 2.2'
+pod 'KeychainSwift', git: 'https://github.com/marketplacer/keychain-swift.git', branch: 'swift-4.0'
   # Pods for ios-party
 
   target 'ios-partyTests' do

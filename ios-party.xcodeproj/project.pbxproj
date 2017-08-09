@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5265711F07A268E6F1F0E43B /* Pods_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE577CA8C02DC776A1D57CCA /* Pods_ios_partyUITests.framework */; };
+		AA1149391F39F28A0005E45E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1149381F39F28A0005E45E /* Utilities.swift */; };
+		AA11493B1F39F2CE0005E45E /* IVTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11493A1F39F2CE0005E45E /* IVTextField.swift */; };
 		AA29056C1F34DF3C000CBBBC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29056B1F34DF3C000CBBBC /* LoginController.swift */; };
 		AA2905701F34DFB0000CBBBC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29056F1F34DFB0000CBBBC /* Server.swift */; };
 		AA2905751F34E033000CBBBC /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2905731F34E033000CBBBC /* ServerCell.swift */; };
@@ -15,6 +17,8 @@
 		AA29057A1F34E107000CBBBC /* ServersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2905791F34E107000CBBBC /* ServersController.swift */; };
 		AA29057D1F34E256000CBBBC /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29057C1F34E256000CBBBC /* ConnectionManager.swift */; };
 		AA29057F1F34E263000CBBBC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29057E1F34E263000CBBBC /* DataManager.swift */; };
+		AA5078B11F3A400E009E9F2A /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AA5078B01F3A400E009E9F2A /* SF-Pro-Text-Regular.otf */; };
+		AAD18B9F1F3B329F00C4F222 /* IVSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD18B9E1F3B329F00C4F222 /* IVSearchBar.swift */; };
 		AAFB89051F34BAFC0075CB7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFB89041F34BAFC0075CB7D /* AppDelegate.swift */; };
 		AAFB890A1F34BAFC0075CB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFB89081F34BAFC0075CB7D /* Main.storyboard */; };
 		AAFB890C1F34BAFC0075CB7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFB890B1F34BAFC0075CB7D /* Assets.xcassets */; };
@@ -48,6 +52,9 @@
 		36796865B40258DE81359961 /* Pods-ios-partyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.release.xcconfig"; sourceTree = "<group>"; };
 		53C9C96FE33D1204BD1B32F9 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9CE73F5A535A7D126BE2F5F4 /* Pods-ios-partyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-partyUITests/Pods-ios-partyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA1149381F39F28A0005E45E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		AA11493A1F39F2CE0005E45E /* IVTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVTextField.swift; sourceTree = "<group>"; };
+		AA11493E1F3A134D0005E45E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AA29056B1F34DF3C000CBBBC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AA29056F1F34DFB0000CBBBC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		AA2905731F34E033000CBBBC /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
@@ -55,6 +62,8 @@
 		AA2905791F34E107000CBBBC /* ServersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersController.swift; sourceTree = "<group>"; };
 		AA29057C1F34E256000CBBBC /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		AA29057E1F34E263000CBBBC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AA5078B01F3A400E009E9F2A /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		AAD18B9E1F3B329F00C4F222 /* IVSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVSearchBar.swift; sourceTree = "<group>"; };
 		AAFB89011F34BAFC0075CB7D /* ios-party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFB89041F34BAFC0075CB7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFB89091F34BAFC0075CB7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				AA2905781F34E059000CBBBC /* Cells */,
+				AA11493A1F39F2CE0005E45E /* IVTextField.swift */,
+				AAD18B9E1F3B329F00C4F222 /* IVSearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,8 +164,17 @@
 			children = (
 				AA29057C1F34E256000CBBBC /* ConnectionManager.swift */,
 				AA29057E1F34E263000CBBBC /* DataManager.swift */,
+				AA1149381F39F28A0005E45E /* Utilities.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AA5078B21F3A4015009E9F2A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AA5078B01F3A400E009E9F2A /* SF-Pro-Text-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AAFB88F81F34BAFC0075CB7D = {
@@ -182,6 +202,7 @@
 		AAFB89031F34BAFC0075CB7D /* ios-party */ = {
 			isa = PBXGroup;
 			children = (
+				AA5078B21F3A4015009E9F2A /* Fonts */,
 				AA29057B1F34E23A000CBBBC /* Services */,
 				AAFB89101F34BAFC0075CB7D /* Info.plist */,
 				AAFB890D1F34BAFC0075CB7D /* LaunchScreen.storyboard */,
@@ -216,6 +237,7 @@
 		CF93A3227D508966DB77F41E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA11493E1F3A134D0005E45E /* Security.framework */,
 				DE35A405CE0A9AEDCA595D5D /* Pods_ios_party.framework */,
 				D9DCA1A2041685C625CA643B /* Pods_ios_partyTests.framework */,
 				FE577CA8C02DC776A1D57CCA /* Pods_ios_partyUITests.framework */,
@@ -300,13 +322,16 @@
 				TargetAttributes = {
 					AAFB89001F34BAFC0075CB7D = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					AAFB89141F34BAFC0075CB7D = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						TestTargetID = AAFB89001F34BAFC0075CB7D;
 					};
 					AAFB891F1F34BAFC0075CB7D = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						TestTargetID = AAFB89001F34BAFC0075CB7D;
 					};
 				};
@@ -337,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAFB890F1F34BAFC0075CB7D /* LaunchScreen.storyboard in Resources */,
+				AA5078B11F3A400E009E9F2A /* SF-Pro-Text-Regular.otf in Resources */,
 				AAFB890C1F34BAFC0075CB7D /* Assets.xcassets in Resources */,
 				AA2905761F34E033000CBBBC /* ServerCell.xib in Resources */,
 				AAFB890A1F34BAFC0075CB7D /* Main.storyboard in Resources */,
@@ -481,6 +507,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios-party/Pods-ios-party-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -488,6 +515,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -520,12 +548,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA11493B1F39F2CE0005E45E /* IVTextField.swift in Sources */,
 				AA29057A1F34E107000CBBBC /* ServersController.swift in Sources */,
 				AA29057D1F34E256000CBBBC /* ConnectionManager.swift in Sources */,
 				AAFB89051F34BAFC0075CB7D /* AppDelegate.swift in Sources */,
+				AAD18B9F1F3B329F00C4F222 /* IVSearchBar.swift in Sources */,
 				AA29057F1F34E263000CBBBC /* DataManager.swift in Sources */,
 				AA2905701F34DFB0000CBBBC /* Server.swift in Sources */,
 				AA2905751F34E033000CBBBC /* ServerCell.swift in Sources */,
+				AA1149391F39F28A0005E45E /* Utilities.swift in Sources */,
 				AA29056C1F34DF3C000CBBBC /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,7 +728,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "testtask.ios-party";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -711,7 +742,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "testtask.ios-party";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

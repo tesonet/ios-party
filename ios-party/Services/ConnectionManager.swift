@@ -7,12 +7,14 @@
 //
 
 import UIKit
-import RealmSwift
+import Realm
+import KeychainSwift
+import ObjectMapper
 
 private let connectionManager = ConnectionManager()
 
 protocol ConnectionManagerDelegate {
-    func connectionManagerDidRecieveObject(responseObject:AnyObject)
+    func connectionManagerDidRecieveObject(responseObject:Any)
 }
 
 
@@ -27,81 +29,85 @@ class ConnectionManager: NSObject {
     let authURL = "http://playground.tesonet.lt/v1/tokens"
     let apiURL = "http://playground.tesonet.lt/v1/servers"
     
-    func requestToken() {
-        let url = URL(string: authURL)
-        let request = NSMutableURLRequest(URL: NSURL(string:url)!)
-        let session = NSURLSession.sharedSession()
-        let params : [String:AnyOnbject] = ["username" : "tesonet", "password": "partyanimal"]
-        
-        request.HTTPMethod = "POST"
-        
     
+    func requestToken(withParams params:[String:Any]) {
+        let url = URL(string: authURL)
+        let request = NSMutableURLRequest.init(url:url!)
+        let session = URLSession.shared
+        
+        request.httpMethod = "POST"
+        
+        
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.httpBody = try! JSONSerialization.data(withJSONObject: params, options: .sortedKeys)
         
-        request.httpBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-        
-        let task = session.dataTaskWithRequest(request) { data, response, error in
+        let task = session.dataTask(with: request as URLRequest) { data, response, error in
             guard data != nil else {
-                print("no data found: \(error)")
+//                print("no data found: \(error)")
                 return
             }
             
             do {
-                if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary {
                     print("Response: \(json)")
+                    let token = json.object(forKey: "token") as! String
+                    Utilities.sharedInstance.keychain.set(token, forKey: "token")
+                    
                     self.delegate!.connectionManagerDidRecieveObject(responseObject: json)
                 } else {
-                    let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)// No error thrown, but not NSDictionary
-                    print("Error could not parse JSON: \(jsonStr)")
-                    self.eroorResponse(jsonStr!)
+//                    let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)// No error thrown, but not NSDictionary
+//                    print("Error could not parse JSON: \(jsonStr)")
+//                    self.eroorResponse(jsonStr!)
                 }
             } catch let parseError {
                 print(parseError)// Log the error thrown by `JSONObjectWithData`
-                let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print("Error could not parse JSON: '\(jsonStr)'")
-                self.eroorResponse(jsonStr!)
+//                let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+//                print("Error could not parse JSON: '\(jsonStr)'")
+//                self.eroorResponse(jsonStr!)
             }
         }
         
         task.resume()
-        }
     }
     
     func requestServers() {
-        let url = URL(string: apiURL)
-        let request = NSMutableURLRequest(URL: NSURL(string:url)!)
-        let session = NSURLSession.sharedSession()
-        request.HTTPMethod = "GET"
+        let url = URL(string: self.apiURL)
+        let request = NSMutableURLRequest.init(url:url!)
+        let session = URLSession.shared
         
+        request.httpMethod = "GET"
+        
+        if let token = Utilities.sharedInstance.keychain.get("token") {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.addValue(token, forHTTPHeaderField: "Authorization: Bearer")
         
-        
-        let task = session.dataTaskWithRequest(request) { data, response, error in
+        let task = session.dataTask(with: request as URLRequest) { data, response, error in
             guard data != nil else {
-                print("no data found: \(error)")
+//                print("no data found: \(error)")
                 return
             }
             
             do {
-                if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                if let json = try JSONSerialization.jsonObject(with: data!, options:[]) as? [[String:Any]] {
                     print("Response: \(json)")
-                    self.delegate!.connectionManagerDidRecieveObject(responseObject: json)
+                    DataManager.sharedInstance.sync(servers: Array(Mapper<Server>().mapSet(JSONArray: json)))
                 } else {
-                    let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)// No error thrown, but not NSDictionary
-                    print("Error could not parse JSON: \(jsonStr)")
-                    self.eroorResponse(jsonStr!)
+//                    let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)// No error thrown, but not NSDictionary
+//                    print("Error could not parse JSON: \(jsonStr)")
                 }
             } catch let parseError {
                 print(parseError)// Log the error thrown by `JSONObjectWithData`
-                let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print("Error could not parse JSON: '\(jsonStr)'")
-                self.eroorResponse(jsonStr!)
+//                let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+//                print("Error could not parse JSON: '\(jsonStr)'")
             }
         }
         
         task.resume()
     }
+}
+
+ 
 
