@@ -1,3 +1,29 @@
-PODFILE CHECKSUM: cb94df727a55d9fc4ab16a2f620ea0cbafbb8d31
+PODS:
+  - Alamofire (4.5.0)
+  - IHKeyboardAvoiding (4.0)
+  - KeychainAccess (3.0.2)
+  - Moya (8.0.5):
+    - Moya/Core (= 8.0.5)
+  - Moya/Core (8.0.5):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Result (3.2.3)
+  - SnapKit (3.2.0)
+
+DEPENDENCIES:
+  - IHKeyboardAvoiding
+  - KeychainAccess
+  - Moya
+  - SnapKit (~> 3.2.0)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  IHKeyboardAvoiding: d1063551a2bed47cdbeab255e3aa5d7847d7efa8
+  KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
+  Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+
+PODFILE CHECKSUM: d1ebf45c2f5119e9449af2b9104a9be61b9d8a89
 
 COCOAPODS: 1.2.1.beta.1

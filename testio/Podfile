@@ -4,6 +4,10 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'testio' do
+   pod "Moya"
+   pod 'SnapKit', '~> 3.2.0'
+   pod 'IHKeyboardAvoiding'
+   pod 'KeychainAccess'
 end
 
 # Copy acknowledgements to the Settings.bundle
