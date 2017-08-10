@@ -10,6 +10,36 @@
 		1FB2AA858B711EBE9669AF66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377F8712F25761E9C30479BD /* LaunchScreen.xib */; };
 		57452740C6BE4460EE1DE770 /* Pods_testio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8639B4F7C69AD0518F67382 /* Pods_testio.framework */; };
 		6790D7134CCB67BEF6C04867 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A28C8C19516A32CD9B259C /* Images.xcassets */; };
+		6D66D41F1F3C9A2F008DADA4 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D41D1F3C9A2F008DADA4 /* UIView+NibLoading.swift */; };
+		6D66D4201F3C9A2F008DADA4 /* UIView+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D41E1F3C9A2F008DADA4 /* UIView+Appearance.swift */; };
+		6D66D4221F3C9A39008DADA4 /* UIViewController+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4211F3C9A39008DADA4 /* UIViewController+NibLoading.swift */; };
+		6D66D4241F3C9A44008DADA4 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4231F3C9A44008DADA4 /* UITableViewCell+Identifier.swift */; };
+		6D66D4271F3C9C17008DADA4 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4261F3C9C17008DADA4 /* Localization.swift */; };
+		6D66D4291F3C9C3D008DADA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D66D4281F3C9C3D008DADA4 /* Localizable.strings */; };
+		6D66D4341F3CA28D008DADA4 /* TestioApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D42E1F3CA28D008DADA4 /* TestioApi.swift */; };
+		6D66D4351F3CA28D008DADA4 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D42F1F3CA28D008DADA4 /* ApiProvider.swift */; };
+		6D66D4361F3CA28D008DADA4 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4301F3CA28D008DADA4 /* Authentication.swift */; };
+		6D66D4371F3CA28D008DADA4 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4311F3CA28D008DADA4 /* LoginService.swift */; };
+		6D66D4381F3CA28D008DADA4 /* ServerListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4321F3CA28D008DADA4 /* ServerListService.swift */; };
+		6D66D4391F3CA28D008DADA4 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4331F3CA28D008DADA4 /* NetworkResult.swift */; };
+		6D66D43D1F3CA2F6008DADA4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D43B1F3CA2F6008DADA4 /* Server.swift */; };
+		6D66D43E1F3CA2F6008DADA4 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D43C1F3CA2F6008DADA4 /* Credentials.swift */; };
+		6D66D4411F3CF5B2008DADA4 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4401F3CF5B2008DADA4 /* AppNavigator.swift */; };
+		6D66D4451F3CF5ED008DADA4 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4431F3CF5ED008DADA4 /* StartupViewController.swift */; };
+		6D66D4461F3CF5ED008DADA4 /* StartupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D66D4441F3CF5ED008DADA4 /* StartupViewController.xib */; };
+		6D66D44A1F3CF62A008DADA4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4481F3CF62A008DADA4 /* LoadingView.swift */; };
+		6D66D44B1F3CF62A008DADA4 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D66D4491F3CF62A008DADA4 /* LoadingView.xib */; };
+		6D66D44F1F3CF641008DADA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D44D1F3CF641008DADA4 /* LoginView.swift */; };
+		6D66D4501F3CF641008DADA4 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D66D44E1F3CF641008DADA4 /* LoginView.xib */; };
+		6D66D4521F3CF7B4008DADA4 /* ServerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4511F3CF7B4008DADA4 /* ServerCellViewModel.swift */; };
+		6D66D4561F3CF7CB008DADA4 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D4541F3CF7CB008DADA4 /* ServerListViewController.swift */; };
+		6D66D4571F3CF7CB008DADA4 /* ServerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D66D4551F3CF7CB008DADA4 /* ServerListViewController.xib */; };
+		6D66D45C1F3CF7F9008DADA4 /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D45A1F3CF7F9008DADA4 /* ServerTableViewCell.swift */; };
+		6D66D45D1F3CF7F9008DADA4 /* ServerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D66D45B1F3CF7F9008DADA4 /* ServerTableViewCell.xib */; };
+		6D66D4601F3CF809008DADA4 /* ServerListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66D45E1F3CF809008DADA4 /* ServerListHeaderView.swift */; };
+		6D66D4611F3CF809008DADA4 /* ServerListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D66D45F1F3CF809008DADA4 /* ServerListHeaderView.xib */; };
+		6DB4190C1F3D0EE8001B8B66 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DB4190A1F3D0EE8001B8B66 /* Roboto-Bold.ttf */; };
+		6DB4190D1F3D0EE8001B8B66 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DB4190B1F3D0EE8001B8B66 /* Roboto-Light.ttf */; };
 		BD51E993B0DDBCCDC5A1AD3E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68AFA06B8E91D294A966A2FB /* Settings.bundle */; };
 		CA08DAA759DC0923BC114235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7620E10AA9E3A49AABF4CE79 /* Foundation.framework */; };
 		F460B9FD42360D8B0FF04D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80C600BF04072060A07E3AC /* AppDelegate.swift */; };
@@ -22,6 +52,8 @@
 		62697A4610B1C9F36CE2F592 /* Pods-testio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testio.release.xcconfig"; path = "Pods/Target Support Files/Pods-testio/Pods-testio.release.xcconfig"; sourceTree = "<group>"; };
 		68AFA06B8E91D294A966A2FB /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6D6D80108FE4E20774D176DD /* Pods-unit_tests-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests-UnitTests/Pods-unit_tests-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DB4190A1F3D0EE8001B8B66 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		6DB4190B1F3D0EE8001B8B66 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		6F37D0837AE8C0F540DCA9C3 /* libPods-unit_tests-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7620E10AA9E3A49AABF4CE79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		84CCBADDABA2F5E4021280BB /* Pods-unit_tests-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests-UnitTests/Pods-unit_tests-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +82,7 @@
 				A0A28C8C19516A32CD9B259C /* Images.xcassets */,
 				48AB512ED9982B6CCF4955EE /* Nibs */,
 				541A95E710C161B3E7DBB840 /* Other-Sources */,
+				6DB419091F3D0EB8001B8B66 /* Fonts */,
 				68AFA06B8E91D294A966A2FB /* Settings.bundle */,
 			);
 			path = Resources;
@@ -93,6 +126,131 @@
 				28FAF39CEDA6B3174D8D41C5 /* Info.plist */,
 			);
 			path = "Other-Sources";
+			sourceTree = "<group>";
+		};
+		6D66D41A1F3C99FD008DADA4 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D41D1F3C9A2F008DADA4 /* UIView+NibLoading.swift */,
+				6D66D41E1F3C9A2F008DADA4 /* UIView+Appearance.swift */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		6D66D41B1F3C9A08008DADA4 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4211F3C9A39008DADA4 /* UIViewController+NibLoading.swift */,
+			);
+			name = UIViewController;
+			sourceTree = "<group>";
+		};
+		6D66D41C1F3C9A0E008DADA4 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4231F3C9A44008DADA4 /* UITableViewCell+Identifier.swift */,
+			);
+			name = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		6D66D4251F3C9C0A008DADA4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4261F3C9C17008DADA4 /* Localization.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		6D66D42D1F3CA18E008DADA4 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D42E1F3CA28D008DADA4 /* TestioApi.swift */,
+				6D66D42F1F3CA28D008DADA4 /* ApiProvider.swift */,
+				6D66D4301F3CA28D008DADA4 /* Authentication.swift */,
+				6D66D4311F3CA28D008DADA4 /* LoginService.swift */,
+				6D66D4321F3CA28D008DADA4 /* ServerListService.swift */,
+				6D66D4331F3CA28D008DADA4 /* NetworkResult.swift */,
+			);
+			name = Api;
+			sourceTree = "<group>";
+		};
+		6D66D43F1F3CF5A4008DADA4 /* AppNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4401F3CF5B2008DADA4 /* AppNavigator.swift */,
+			);
+			name = AppNavigator;
+			sourceTree = "<group>";
+		};
+		6D66D4421F3CF5D7008DADA4 /* StartupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4431F3CF5ED008DADA4 /* StartupViewController.swift */,
+				6D66D4441F3CF5ED008DADA4 /* StartupViewController.xib */,
+			);
+			name = StartupViewController;
+			sourceTree = "<group>";
+		};
+		6D66D4471F3CF61B008DADA4 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4481F3CF62A008DADA4 /* LoadingView.swift */,
+				6D66D4491F3CF62A008DADA4 /* LoadingView.xib */,
+			);
+			name = LoadingView;
+			sourceTree = "<group>";
+		};
+		6D66D44C1F3CF632008DADA4 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D44D1F3CF641008DADA4 /* LoginView.swift */,
+				6D66D44E1F3CF641008DADA4 /* LoginView.xib */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
+		6D66D4531F3CF7C1008DADA4 /* ServerListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4541F3CF7CB008DADA4 /* ServerListViewController.swift */,
+				6D66D4551F3CF7CB008DADA4 /* ServerListViewController.xib */,
+			);
+			name = ServerListViewController;
+			sourceTree = "<group>";
+		};
+		6D66D4581F3CF7DE008DADA4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D4591F3CF7F0008DADA4 /* ServerTableViewCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		6D66D4591F3CF7F0008DADA4 /* ServerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D45A1F3CF7F9008DADA4 /* ServerTableViewCell.swift */,
+				6D66D45B1F3CF7F9008DADA4 /* ServerTableViewCell.xib */,
+			);
+			name = ServerTableViewCell;
+			sourceTree = "<group>";
+		};
+		6D66D4621F3CF80E008DADA4 /* ServerListHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				6D66D45E1F3CF809008DADA4 /* ServerListHeaderView.swift */,
+				6D66D45F1F3CF809008DADA4 /* ServerListHeaderView.xib */,
+			);
+			name = ServerListHeaderView;
+			sourceTree = "<group>";
+		};
+		6DB419091F3D0EB8001B8B66 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6DB4190A1F3D0EE8001B8B66 /* Roboto-Bold.ttf */,
+				6DB4190B1F3D0EE8001B8B66 /* Roboto-Light.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		70BD4BE480BA0CDB2130F9B2 /* Extensions */ = {
@@ -233,6 +391,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6790D7134CCB67BEF6C04867 /* Images.xcassets in Resources */,
+				6DB4190D1F3D0EE8001B8B66 /* Roboto-Light.ttf in Resources */,
+				6D66D4291F3C9C3D008DADA4 /* Localizable.strings in Resources */,
+				6D66D4501F3CF641008DADA4 /* LoginView.xib in Resources */,
+				6DB4190C1F3D0EE8001B8B66 /* Roboto-Bold.ttf in Resources */,
+				6D66D4611F3CF809008DADA4 /* ServerListHeaderView.xib in Resources */,
+				6D66D44B1F3CF62A008DADA4 /* LoadingView.xib in Resources */,
+				6D66D45D1F3CF7F9008DADA4 /* ServerTableViewCell.xib in Resources */,
 				1FB2AA858B711EBE9669AF66 /* LaunchScreen.xib in Resources */,
 				BD51E993B0DDBCCDC5A1AD3E /* Settings.bundle in Resources */,
 			);
