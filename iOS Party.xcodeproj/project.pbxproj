@@ -14,6 +14,9 @@
 		D08886B11F432DC700CD68D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08886AA1F432DC700CD68D1 /* Assets.xcassets */; };
 		D08886B21F432DC700CD68D1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D08886AB1F432DC700CD68D1 /* Info.plist */; };
 		D08886B31F432DC700CD68D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08886AC1F432DC700CD68D1 /* LaunchScreen.storyboard */; };
+		D08886B81F432EF400CD68D1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08886B71F432EF400CD68D1 /* API.swift */; };
+		D08886BA1F43300D00CD68D1 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08886B91F43300D00CD68D1 /* AuthenticationAPI.swift */; };
+		D08886BC1F43301B00CD68D1 /* ServersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08886BB1F43301B00CD68D1 /* ServersAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		D08886AA1F432DC700CD68D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08886AB1F432DC700CD68D1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D08886AC1F432DC700CD68D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D08886B71F432EF400CD68D1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D08886B91F43300D00CD68D1 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
+		D08886BB1F43301B00CD68D1 /* ServersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				D08886A11F432DC700CD68D1 /* AppDelegate.swift */,
+				D08886B41F432EE800CD68D1 /* Utils */,
 				D08886A21F432DC700CD68D1 /* Model */,
-				D08886A31F432DC700CD68D1 /* Utils */,
 				D08886A41F432DC700CD68D1 /* Views */,
 			);
 			name = APP;
@@ -72,13 +78,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D08886A31F432DC700CD68D1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		D08886A41F432DC700CD68D1 /* Views */ = {
@@ -108,6 +107,32 @@
 			);
 			name = Resources;
 			path = "iOS Party/Resources";
+			sourceTree = "<group>";
+		};
+		D08886B41F432EE800CD68D1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D08886B51F432EE800CD68D1 /* API */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D08886B51F432EE800CD68D1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D08886B61F432EE800CD68D1 /* Helpers */,
+				D08886B71F432EF400CD68D1 /* API.swift */,
+				D08886B91F43300D00CD68D1 /* AuthenticationAPI.swift */,
+				D08886BB1F43301B00CD68D1 /* ServersAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D08886B61F432EE800CD68D1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08886AF1F432DC700CD68D1 /* LoginViewController.swift in Sources */,
+				D08886BC1F43301B00CD68D1 /* ServersAPI.swift in Sources */,
 				D08886AE1F432DC700CD68D1 /* ListViewController.swift in Sources */,
+				D08886B81F432EF400CD68D1 /* API.swift in Sources */,
+				D08886BA1F43300D00CD68D1 /* AuthenticationAPI.swift in Sources */,
 				D08886AD1F432DC700CD68D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
