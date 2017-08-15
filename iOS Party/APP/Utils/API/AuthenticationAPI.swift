@@ -15,5 +15,10 @@ extension API.Authentication {
         let username, password: String
         var parameters: [String : Any]? { return ["username": username, "password": password] }
         var path: String { return "tokens" }
+        
+        init(with username: String, and password: String) {
+            self.username = username
+            self.password = password
+        }
     }
 }
