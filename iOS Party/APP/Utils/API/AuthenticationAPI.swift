@@ -10,10 +10,10 @@ import RxSwift
 import SwiftyUserDefaults
 
 extension API.Authentication {
-    struct Login: ModelTargetType, MethodPOST {
+    struct Login: ModelTargetType, MethodPOST, IsUnauthorized {
         typealias T = Auth
         let username, password: String
-        var parameters: [String : Any]? { return ["username": email, "password": password] }
+        var parameters: [String : Any]? { return ["username": username, "password": password] }
         var path: String { return "tokens" }
     }
 }

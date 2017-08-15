@@ -10,7 +10,7 @@ import RxSwift
 import SwiftyUserDefaults
 
 extension API.Servers {
-    struct GetAll: ModelTargetType, MethodGET {
+    struct GetAll: ModelArrayTargetType, MethodGET {
         typealias T = Auth
         var path: String { return "servers." }
     }

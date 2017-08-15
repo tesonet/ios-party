@@ -15,6 +15,7 @@ import Alamofire
 
 enum API {
     enum Authentication {}
+    enum Headers        {}
     enum Servers        {}
 }
 
@@ -45,7 +46,9 @@ extension RxMoyaProvider {
             return endpoint
         }, requestClosure: { endpoint, closure in
             guard var request = endpoint.adding(newParameterEncoding: JSONEncoding.default).urlRequest else { return }
+            
             API.Headers.all.forEach { request.addValue($0.1, forHTTPHeaderField: $0.0) }
+            
             closure(.success(request))
         }, manager: manager, plugins: [ErrorHandler.instance])
     }
