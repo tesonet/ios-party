@@ -9,9 +9,11 @@
 import Unbox
 
 struct ServerData: Unboxable {
-    let something: String
+    let name:     String
+    let distance: Int
     
     init(unboxer: Unboxer) throws {
-        self.something =  try unboxer.unbox(key: "something")
+        self.name =     try unboxer.unbox(key: "name")
+        self.distance = try unboxer.unbox(key: "distance")
     }
 }
