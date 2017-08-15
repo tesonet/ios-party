@@ -8,17 +8,20 @@
 
 import UIKit
 
-class ServerTableViewCell: UITableViewCell {
+final class ServerTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet private var titleLabel:    UILabel!
+    @IBOutlet private var distanceLabel: UILabel!
+    
+    func setup(with server: ServerData) {
+        titleLabel   .text = server.name
+        distanceLabel.text = server.distance.km
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+}
 
-        // Configure the view for the selected state
+private extension Int {
+    var km: String {
+        return "\(self) km"
     }
-
 }

@@ -11,7 +11,7 @@ import SwiftyUserDefaults
 
 extension API.Servers {
     struct GetAll: ModelArrayTargetType, MethodGET {
-        typealias T = Auth
-        var path: String { return "servers." }
+        typealias T = ServerData
+        var path: String { return "servers" }
     }
 }

@@ -22,6 +22,7 @@ extension UIColor {
     }
     
     class var appGreen: UIColor { return UIColor(hex: 0xA0D342) }
+    class var appGray: UIColor  { return UIColor(hex: 0xE3E6E8) }
     
 }
 

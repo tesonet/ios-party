@@ -17,6 +17,10 @@ extension API.Headers {
         set { Defaults[.token] = newValue }
     }
     
+    static func isLoggedIn() -> Bool {
+        return token != nil
+    }
+    
     static func clear() {
         token = nil
     }

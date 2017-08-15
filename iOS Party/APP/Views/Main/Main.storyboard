@@ -135,7 +135,6 @@
                         <outlet property="passwordField" destination="82R-bT-nHC" id="5dS-Jj-hY0"/>
                         <outlet property="stackViewCenterConstrain" destination="7i0-Yn-pYY" id="TWb-K3-4q0"/>
                         <outlet property="userNameField" destination="lk0-BW-H0Q" id="BFW-8m-miU"/>
-                        <segue destination="hZg-Gz-hNj" kind="presentation" id="6xI-CN-QXD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -145,7 +144,7 @@
         <!--List View Controller-->
         <scene sceneID="LAj-GA-DVw">
             <objects>
-                <viewController id="hZg-Gz-hNj" customClass="ListViewController" customModule="iOS_Party" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hZg-Gz-hNj" customClass="ListViewController" customModule="iOS_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kRG-la-YdF"/>
                         <viewControllerLayoutGuide type="bottom" id="DZ2-uj-Lck"/>
@@ -167,9 +166,9 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6S-e2-BVT">
-                                                <rect key="frame" x="315" y="25" width="60" height="30"/>
+                                                <rect key="frame" x="315" y="22" width="60" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="41q-8D-Ftm"/>
+                                                    <constraint firstAttribute="height" constant="25" id="41q-8D-Ftm"/>
                                                     <constraint firstAttribute="width" constant="60" id="HQC-VT-Z3g"/>
                                                 </constraints>
                                                 <state key="normal" image="ico-logout"/>
@@ -177,7 +176,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="M6S-e2-BVT" firstAttribute="top" secondItem="YKM-dT-rg0" secondAttribute="top" constant="25" id="KMX-kn-4fe"/>
+                                            <constraint firstItem="M6S-e2-BVT" firstAttribute="top" secondItem="YKM-dT-rg0" secondAttribute="top" constant="22" id="KMX-kn-4fe"/>
                                             <constraint firstAttribute="height" constant="55" id="WJk-sw-aB4"/>
                                             <constraint firstAttribute="trailing" secondItem="M6S-e2-BVT" secondAttribute="trailing" id="gEt-fD-eE9"/>
                                             <constraint firstItem="j7o-3E-lEi" firstAttribute="top" secondItem="YKM-dT-rg0" secondAttribute="top" constant="25" id="msj-T7-51l"/>
@@ -255,12 +254,23 @@
                                                         <constraint firstAttribute="trailing" secondItem="O1A-PO-QJe" secondAttribute="trailing" constant="15" id="IQw-cQ-EeR"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="distanceLabel" destination="aDx-Zy-ZcV" id="H8y-DQ-Ihv"/>
+                                                    <outlet property="titleLabel" destination="Py9-lm-sjM" id="EYV-nE-B4Y"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-zk-PgI" userLabel="Loading View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dx-gQ-UJ4">
+                                <rect key="frame" x="0.0" y="95" width="375" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bLc-Jh-vGY"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-zk-PgI" userLabel="Loading View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="8BU-eR-mmg">
@@ -297,19 +307,24 @@
                         <constraints>
                             <constraint firstItem="DZ2-uj-Lck" firstAttribute="top" secondItem="Pwp-zk-PgI" secondAttribute="bottom" id="2my-3k-Yq9"/>
                             <constraint firstAttribute="trailing" secondItem="Pwp-zk-PgI" secondAttribute="trailing" id="PzM-Gn-bsy"/>
+                            <constraint firstItem="6dx-gQ-UJ4" firstAttribute="leading" secondItem="H04-bn-hgu" secondAttribute="leading" id="R2u-1s-Ard"/>
                             <constraint firstItem="q67-oO-2li" firstAttribute="leading" secondItem="bSA-II-fyf" secondAttribute="leading" id="R8f-h4-164"/>
                             <constraint firstItem="q67-oO-2li" firstAttribute="top" secondItem="bSA-II-fyf" secondAttribute="top" id="Tdp-Ms-ha0"/>
                             <constraint firstAttribute="trailing" secondItem="q67-oO-2li" secondAttribute="trailing" id="al8-HG-zUD"/>
+                            <constraint firstItem="6dx-gQ-UJ4" firstAttribute="top" secondItem="H04-bn-hgu" secondAttribute="top" id="gWg-AP-V9C"/>
                             <constraint firstItem="Pwp-zk-PgI" firstAttribute="leading" secondItem="bSA-II-fyf" secondAttribute="leading" id="pfd-hM-yZJ"/>
+                            <constraint firstItem="6dx-gQ-UJ4" firstAttribute="trailing" secondItem="H04-bn-hgu" secondAttribute="trailing" id="sHo-vb-CDn"/>
                             <constraint firstAttribute="bottom" secondItem="q67-oO-2li" secondAttribute="bottom" id="tkm-pK-ypk"/>
                             <constraint firstItem="Pwp-zk-PgI" firstAttribute="top" secondItem="bSA-II-fyf" secondAttribute="top" id="vjs-Qb-s7P"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Pwp-zk-PgI"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="loadingCircle" destination="VOj-ly-IPc" id="n9S-se-ydU"/>
+                        <outlet property="loadingView" destination="Pwp-zk-PgI" id="UTl-2N-Sx1"/>
+                        <outlet property="logOutButton" destination="M6S-e2-BVT" id="9hN-SI-vyR"/>
+                        <outlet property="shadowView" destination="6dx-gQ-UJ4" id="iWu-GW-Gpx"/>
+                        <outlet property="tableView" destination="H04-bn-hgu" id="IFP-UO-Z9k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDH-vk-hH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
