@@ -12,27 +12,53 @@ import SwiftyUserDefaults
 
 extension API.Headers {
     
-    private static var token: String? {
-        get { return Defaults[.token] }
-        set { Defaults[.token] = newValue }
-    }
+    //Commented lines show my initial token storing.
+    
+//    private static var token: String? {
+//        get { return Defaults[.token] }
+//        set { Defaults[.token] = newValue }
+//    }
     
     static func isLoggedIn() -> Bool {
-        return token != nil
+        let token = getToken()
+        return token != nil && token != ""
+        
+//        return token != nil
     }
     
     static func clear() {
-        token = nil
+        authorize(token: "")
+        
+        //        token = nil
+    }
+    
+    private static func getToken() -> String? {
+        do {
+            let passwordItem = KeychainPasswordItem(service: "iOSParty", account: "password", accessGroup: nil)
+            let keychainPassword = try passwordItem.readPassword()
+            return keychainPassword
+        } catch {
+            return nil
+        }
     }
     
     static func authorize(token: String) {
-        self.token = token
+        do {
+            let passwordItem = KeychainPasswordItem(service: "iOSParty", account: "password", accessGroup: nil)
+            try passwordItem.savePassword(token)
+        } catch {
+            fatalError("Error updating keychain - \(error)")
+        }
+        
+//        self.token = token
     }
     
     static var all: [String: String] {
         var all = [String: String]()
         
-        if let token = token { all["Authorization"] = "Bearer \(token)" }
+        if let token = getToken() { all["Authorization"] = "Bearer \(token)" }
+        
+//        if let token = token { all["Authorization"] = "Bearer \(token)" }
         
         return all
     }

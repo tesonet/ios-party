@@ -12,6 +12,7 @@
 		D049CBC21F435432001BEDE7 /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049CBC11F435432001BEDE7 /* ServerTableViewCell.swift */; };
 		D049CBC41F4354E6001BEDE7 /* ServerListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049CBC31F4354E6001BEDE7 /* ServerListVM.swift */; };
 		D049CBC61F43575B001BEDE7 /* UIView+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049CBC51F43575B001BEDE7 /* UIView+Identifier.swift */; };
+		D049CBCD1F436823001BEDE7 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049CBCC1F436823001BEDE7 /* KeychainPasswordItem.swift */; };
 		D08886AD1F432DC700CD68D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08886A11F432DC700CD68D1 /* AppDelegate.swift */; };
 		D08886AE1F432DC700CD68D1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08886A61F432DC700CD68D1 /* ListViewController.swift */; };
 		D08886AF1F432DC700CD68D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08886A71F432DC700CD68D1 /* LoginViewController.swift */; };
@@ -50,6 +51,7 @@
 		D049CBC11F435432001BEDE7 /* ServerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
 		D049CBC31F4354E6001BEDE7 /* ServerListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListVM.swift; sourceTree = "<group>"; };
 		D049CBC51F43575B001BEDE7 /* UIView+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Identifier.swift"; sourceTree = "<group>"; };
+		D049CBCC1F436823001BEDE7 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		D08886891F41F15200CD68D1 /* iOS Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08886A11F432DC700CD68D1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D08886A61F432DC700CD68D1 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D049CBCB1F436823001BEDE7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D049CBCC1F436823001BEDE7 /* KeychainPasswordItem.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D08886801F41F15200CD68D1 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 			children = (
 				D08886B51F432EE800CD68D1 /* API */,
 				D08886D91F43376800CD68D1 /* Extensions */,
+				D049CBCB1F436823001BEDE7 /* Helpers */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -377,6 +388,7 @@
 				D08886AE1F432DC700CD68D1 /* ListViewController.swift in Sources */,
 				D08886D81F4335AF00CD68D1 /* HeadersAPI.swift in Sources */,
 				D08886D41F43347000CD68D1 /* Auth.swift in Sources */,
+				D049CBCD1F436823001BEDE7 /* KeychainPasswordItem.swift in Sources */,
 				D08886B81F432EF400CD68D1 /* API.swift in Sources */,
 				D08886EB1F433EA600CD68D1 /* UIColor+Theme.swift in Sources */,
 				D049CBC21F435432001BEDE7 /* ServerTableViewCell.swift in Sources */,

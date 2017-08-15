@@ -49,7 +49,7 @@ final class ListViewController: UIViewController {
         logOutButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 API.Headers.clear()
-                UIApplication.shared.keyWindow?.rootViewController = self?.storyboard?.instantiateViewController(withIdentifier: "\(ListViewController.self)")
+                UIApplication.shared.keyWindow?.rootViewController = self?.storyboard?.instantiateViewController(withIdentifier: "\(LoginViewController.self)")
             })
             .addDisposableTo(rx_disposeBag)
     }
@@ -58,15 +58,21 @@ final class ListViewController: UIViewController {
     
     private func setupLoadingView() {
         serverListVM.loading
-            .map{ !$0 }
-            .bind(to: loadingView.rx.isHidden)
-            .addDisposableTo(rx_disposeBag)
-        
-        serverListVM.loading
-            .subscribeNext(self, ListViewController.animateCircle)
+            .subscribeNext(self, ListViewController.animateLoadingView)
     }
     
-    private func animateCircle(animate: Bool) {
+    private func animateLoadingView(animate: Bool) {
+        if animate {
+            loadingView.isHidden = false
+            animateCircle(animate)
+        } else {
+            UIView.animate(withDuration: 0.5, animations: { _ in
+                self.loadingView.isHidden = true
+            }, completion: { _ in self.animateCircle(animate) })
+        }
+    }
+    
+    private func animateCircle(_ animate: Bool) {
         if animate {
             rotateView()
         } else {
