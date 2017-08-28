@@ -24,23 +24,23 @@ class ServerListModel {
     private let request = Request()
     private let serversListPath = "servers"
     
-    //var servers: [Server] = []
+    var servers: [Server] = []
     
     func getServerList(completion: @escaping ([Server], Error?) -> Void) {
         request.dataTask(withPath: serversListPath) { object, error in
-            var servers: [Server] = []
+            self.servers = []
             if error == nil {
                 if let array = object as? NSArray {
                     for element in array {
                         if let serverDictionary = element as? NSDictionary {
-                            servers.append(Server(fromDictionary: serverDictionary))
+                            self.servers.append(Server(fromDictionary: serverDictionary))
                         }
                     }
                 }
             } else {
                 
             }
-            completion(servers, error)
+            completion(self.servers, error)
         }
     }
 }

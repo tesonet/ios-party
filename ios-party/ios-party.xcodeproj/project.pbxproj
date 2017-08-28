@@ -17,8 +17,11 @@
 		7AD78E5B1F533A35008129E8 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E5A1F533A35008129E8 /* Authentication.swift */; };
 		7AD78E5D1F533A90008129E8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E5C1F533A90008129E8 /* MainViewModel.swift */; };
 		7AD78E5F1F535EF3008129E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E5E1F535EF3008129E8 /* Constants.swift */; };
-		7AD78E621F536546008129E8 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E601F536546008129E8 /* LoadingViewController.swift */; };
-		7AD78E631F536546008129E8 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD78E611F536546008129E8 /* LoadingViewController.xib */; };
+		7AD78E661F548A7C008129E8 /* ServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E641F548A7C008129E8 /* ServersListViewController.swift */; };
+		7AD78E671F548A7C008129E8 /* ServersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD78E651F548A7C008129E8 /* ServersListViewController.xib */; };
+		7AD78E6C1F548F34008129E8 /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E6A1F548F34008129E8 /* ServerTableViewCell.swift */; };
+		7AD78E6D1F548F34008129E8 /* ServerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD78E6B1F548F34008129E8 /* ServerTableViewCell.xib */; };
+		7AD78E6F1F54B65B008129E8 /* KeychainPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E6E1F54B65B008129E8 /* KeychainPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +37,11 @@
 		7AD78E5A1F533A35008129E8 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		7AD78E5C1F533A90008129E8 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7AD78E5E1F535EF3008129E8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7AD78E601F536546008129E8 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		7AD78E611F536546008129E8 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		7AD78E641F548A7C008129E8 /* ServersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListViewController.swift; sourceTree = "<group>"; };
+		7AD78E651F548A7C008129E8 /* ServersListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersListViewController.xib; sourceTree = "<group>"; };
+		7AD78E6A1F548F34008129E8 /* ServerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
+		7AD78E6B1F548F34008129E8 /* ServerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerTableViewCell.xib; sourceTree = "<group>"; };
+		7AD78E6E1F54B65B008129E8 /* KeychainPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,7 @@
 			children = (
 				7AD78E571F533995008129E8 /* Networking */,
 				7AD78E541F532E61008129E8 /* Components */,
-				7AD78E531F532E50008129E8 /* View Controllers */,
+				7AD78E531F532E50008129E8 /* ViewControllers */,
 				7AD78E391F3CD16A008129E8 /* AppDelegate.swift */,
 				7AD78E401F3CD16A008129E8 /* Assets.xcassets */,
 				7AD78E421F3CD16A008129E8 /* LaunchScreen.storyboard */,
@@ -80,21 +86,20 @@
 			path = "ios-party";
 			sourceTree = "<group>";
 		};
-		7AD78E531F532E50008129E8 /* View Controllers */ = {
+		7AD78E531F532E50008129E8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7AD78E4B1F3CD86B008129E8 /* LoginViewController.swift */,
-				7AD78E4C1F3CD86B008129E8 /* LoginViewController.xib */,
-				7AD78E601F536546008129E8 /* LoadingViewController.swift */,
-				7AD78E611F536546008129E8 /* LoadingViewController.xib */,
+				7AD78E691F548E73008129E8 /* ServersList */,
+				7AD78E681F548E6A008129E8 /* Login */,
 			);
-			name = "View Controllers";
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		7AD78E541F532E61008129E8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				7AD78E551F532EA9008129E8 /* ResponderRevealingScrollView.swift */,
+				7AD78E6E1F54B65B008129E8 /* KeychainPassword.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -107,6 +112,26 @@
 				7AD78E5C1F533A90008129E8 /* MainViewModel.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		7AD78E681F548E6A008129E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7AD78E4B1F3CD86B008129E8 /* LoginViewController.swift */,
+				7AD78E4C1F3CD86B008129E8 /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		7AD78E691F548E73008129E8 /* ServersList */ = {
+			isa = PBXGroup;
+			children = (
+				7AD78E641F548A7C008129E8 /* ServersListViewController.swift */,
+				7AD78E651F548A7C008129E8 /* ServersListViewController.xib */,
+				7AD78E6A1F548F34008129E8 /* ServerTableViewCell.swift */,
+				7AD78E6B1F548F34008129E8 /* ServerTableViewCell.xib */,
+			);
+			name = ServersList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +196,9 @@
 			files = (
 				7AD78E441F3CD16A008129E8 /* LaunchScreen.storyboard in Resources */,
 				7AD78E4E1F3CD86B008129E8 /* LoginViewController.xib in Resources */,
+				7AD78E6D1F548F34008129E8 /* ServerTableViewCell.xib in Resources */,
 				7AD78E411F3CD16A008129E8 /* Assets.xcassets in Resources */,
-				7AD78E631F536546008129E8 /* LoadingViewController.xib in Resources */,
+				7AD78E671F548A7C008129E8 /* ServersListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD78E6C1F548F34008129E8 /* ServerTableViewCell.swift in Sources */,
 				7AD78E561F532EA9008129E8 /* ResponderRevealingScrollView.swift in Sources */,
 				7AD78E4D1F3CD86B008129E8 /* LoginViewController.swift in Sources */,
 				7AD78E3A1F3CD16A008129E8 /* AppDelegate.swift in Sources */,
-				7AD78E621F536546008129E8 /* LoadingViewController.swift in Sources */,
+				7AD78E661F548A7C008129E8 /* ServersListViewController.swift in Sources */,
+				7AD78E6F1F54B65B008129E8 /* KeychainPassword.swift in Sources */,
 				7AD78E5B1F533A35008129E8 /* Authentication.swift in Sources */,
 				7AD78E5F1F535EF3008129E8 /* Constants.swift in Sources */,
 				7AD78E591F5339D9008129E8 /* NetworkService.swift in Sources */,

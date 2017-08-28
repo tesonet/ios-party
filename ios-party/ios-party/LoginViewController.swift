@@ -15,18 +15,41 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var scrollView: ResponderRevealingScrollView!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loadingImageView: UIImageView!
     
     private let authentication = Authentication()
+    private let keychainPassword = KeychainPassword()
+    private var isLoading: Bool! {
+        didSet {
+            loadingView.isHidden = !isLoading
+            scrollView.isHidden = isLoading
+            if isLoading {
+                loadingImageView.startRotating()
+            } else {
+                loadingImageView.stopRotating()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameTextField.delegate = self
-        passwordTextField.delegate = self
         setupUI()
+        
+        guard let username = UserDefaults.standard.string(forKey: Keys.usernameKey) else {
+            return
+        }
+        do {
+            let password = try keychainPassword.read()
+            login(username: username, password: password)
+        } catch {
+            UserDefaults.standard.set(nil, forKey: Keys.usernameKey)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loginButton.isEnabled = true
+        isLoading = false
     }
     
     @IBAction func loginPressed() {
@@ -34,16 +57,10 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text else {
                 return
         }
-        loginButton.isEnabled = false
-        present(LoadingViewController(), animated: true) {
-            self.authentication.login(username: username, password: password, completion: { success, message in
-                if !success && message != nil {
-                    self.presentAlert(withMessage: message!)
-                } else if success {
-                    self.getServerList()
-                }
-            })
-        }
+        view.endEditing(true)
+        
+        isLoading = true
+        login(username: username, password: password)
     }
     
     private func setupUI() {
@@ -53,20 +70,37 @@ class LoginViewController: UIViewController {
     }
     
     private func presentAlert(withMessage message: String) {
-        navigationController?.dismiss(animated: true) {
-            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default) { _ in
-                alertController.dismiss(animated: true, completion: nil)
-            }
-            alertController.addAction(action)
-            self.present(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            alertController.dismiss(animated: true, completion: nil)
         }
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func login(username: String, password: String) {
+        authentication.login(username: username, password: password, completion: { errorMessage in
+            if let message = errorMessage {
+                self.isLoading = false
+                self.presentAlert(withMessage: message)
+            } else {
+                self.usernameTextField.text = ""
+                self.passwordTextField.text = ""
+                do {
+                    try self.keychainPassword.save(password)
+                    UserDefaults.standard.set(username, forKey: Keys.usernameKey)
+                } catch {
+                }
+                self.getServerList()
+            }
+        })
     }
     
     private func getServerList() {
         let serversModel = ServerListModel()
         serversModel.getServerList() { servers, error in
-            print(servers)
+            self.isLoading = false
+            self.navigationController?.present(ServersListViewController(model: serversModel), animated: true)
         }
     }
 }
@@ -78,5 +112,23 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+//MARK: - Loader view helper
+
+extension UIView {
+    func startRotating() {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.fromValue = 0
+        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.duration = 2
+        rotation.isCumulative = true
+        rotation.repeatCount = .greatestFiniteMagnitude
+        layer.add(rotation, forKey: "rotationAnimation")
+    }
+    
+    func stopRotating() {
+        layer.removeAnimation(forKey: "rotationAnimation")
     }
 }

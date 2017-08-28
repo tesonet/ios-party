@@ -13,9 +13,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ios_party" customModuleProvider="target">
             <connections>
+                <outlet property="loadingImageView" destination="AwN-sU-Qru" id="77Q-S5-s31"/>
+                <outlet property="loadingView" destination="BIr-dP-bTG" id="XDu-Ic-67x"/>
                 <outlet property="loginButton" destination="Q5q-ee-pP2" id="cQv-rp-iT8"/>
                 <outlet property="passwordContainerView" destination="TqR-D2-qS9" id="htZ-Ko-pIp"/>
                 <outlet property="passwordTextField" destination="sET-Gg-Iye" id="mCR-sr-ZK0"/>
+                <outlet property="scrollView" destination="TDk-Zm-dlY" id="FKQ-PB-8BH"/>
                 <outlet property="usernameContainerView" destination="Vkg-9w-9xR" id="HQ2-8g-6ez"/>
                 <outlet property="usernameTextField" destination="OqK-fe-tjz" id="YiY-8D-fRu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,6 +33,27 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                 </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIr-dP-bTG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="AwN-sU-Qru">
+                            <rect key="frame" x="64.5" y="301.5" width="246" height="64"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching the list..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5C-IO-pZJ">
+                            <rect key="frame" x="119.5" y="512.5" width="136" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="x5C-IO-pZJ" firstAttribute="centerX" secondItem="BIr-dP-bTG" secondAttribute="centerX" id="5Wo-Um-Mie"/>
+                        <constraint firstItem="AwN-sU-Qru" firstAttribute="centerY" secondItem="BIr-dP-bTG" secondAttribute="centerY" id="9Du-OG-ZvW"/>
+                        <constraint firstAttribute="bottom" secondItem="x5C-IO-pZJ" secondAttribute="bottom" multiplier="1.25" id="Gpu-5L-bIk"/>
+                        <constraint firstItem="AwN-sU-Qru" firstAttribute="centerX" secondItem="BIr-dP-bTG" secondAttribute="centerX" id="xRo-zz-7Tc"/>
+                    </constraints>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDk-Zm-dlY" customClass="ResponderRevealingScrollView" customModule="ios_party" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
@@ -65,6 +89,9 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="czR-wf-Ycx"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,6 +119,9 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="zuO-vv-bEb"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,11 +183,15 @@
                 <constraint firstItem="2iF-Qy-2kY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bc7-37-En3"/>
                 <constraint firstItem="TDk-Zm-dlY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Fbq-IB-aSg"/>
                 <constraint firstAttribute="bottom" secondItem="TDk-Zm-dlY" secondAttribute="bottom" id="GwK-J1-Mmr"/>
+                <constraint firstAttribute="trailing" secondItem="BIr-dP-bTG" secondAttribute="trailing" id="Xe6-Y1-dho"/>
                 <constraint firstItem="TDk-Zm-dlY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z3a-bi-e5f"/>
                 <constraint firstItem="2iF-Qy-2kY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dCQ-nd-8rt"/>
                 <constraint firstAttribute="trailing" secondItem="2iF-Qy-2kY" secondAttribute="trailing" id="nwx-Uc-3bh"/>
                 <constraint firstAttribute="bottom" secondItem="2iF-Qy-2kY" secondAttribute="bottom" id="on4-ku-IeR"/>
+                <constraint firstItem="BIr-dP-bTG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ra8-Zf-4j6"/>
                 <constraint firstAttribute="trailing" secondItem="TDk-Zm-dlY" secondAttribute="trailing" id="vV3-OD-eHh"/>
+                <constraint firstAttribute="bottom" secondItem="BIr-dP-bTG" secondAttribute="bottom" id="wSH-cM-5Yb"/>
+                <constraint firstItem="BIr-dP-bTG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wzd-vx-ek9"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>

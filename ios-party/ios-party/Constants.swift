@@ -8,6 +8,7 @@
 
 import Foundation
 
-enum Constants {
+enum Keys {
     static let tokenKey = "token"
+    static let usernameKey = "username"
 }

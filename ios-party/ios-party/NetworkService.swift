@@ -13,11 +13,6 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
-enum JSONResponseType {
-    case nsarray
-    case nsdictionary
-}
-
 class Request {
     
     private let baseURL = "http://playground.tesonet.lt/v1/"
@@ -42,7 +37,7 @@ class Request {
         request.httpMethod = method.rawValue
         
         if tokenRequired {
-            if let token = UserDefaults.standard.string(forKey: Constants.tokenKey) {
+            if let token = UserDefaults.standard.string(forKey: Keys.tokenKey) {
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
             } else {
