@@ -15,7 +15,7 @@
 		7AD78E561F532EA9008129E8 /* ResponderRevealingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E551F532EA9008129E8 /* ResponderRevealingScrollView.swift */; };
 		7AD78E591F5339D9008129E8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E581F5339D9008129E8 /* NetworkService.swift */; };
 		7AD78E5B1F533A35008129E8 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E5A1F533A35008129E8 /* Authentication.swift */; };
-		7AD78E5D1F533A90008129E8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E5C1F533A90008129E8 /* MainViewModel.swift */; };
+		7AD78E5D1F533A90008129E8 /* ServerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E5C1F533A90008129E8 /* ServerListModel.swift */; };
 		7AD78E5F1F535EF3008129E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E5E1F535EF3008129E8 /* Constants.swift */; };
 		7AD78E661F548A7C008129E8 /* ServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD78E641F548A7C008129E8 /* ServersListViewController.swift */; };
 		7AD78E671F548A7C008129E8 /* ServersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD78E651F548A7C008129E8 /* ServersListViewController.xib */; };
@@ -35,7 +35,7 @@
 		7AD78E551F532EA9008129E8 /* ResponderRevealingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderRevealingScrollView.swift; sourceTree = "<group>"; };
 		7AD78E581F5339D9008129E8 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7AD78E5A1F533A35008129E8 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		7AD78E5C1F533A90008129E8 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		7AD78E5C1F533A90008129E8 /* ServerListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListModel.swift; sourceTree = "<group>"; };
 		7AD78E5E1F535EF3008129E8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7AD78E641F548A7C008129E8 /* ServersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListViewController.swift; sourceTree = "<group>"; };
 		7AD78E651F548A7C008129E8 /* ServersListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersListViewController.xib; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			children = (
 				7AD78E581F5339D9008129E8 /* NetworkService.swift */,
 				7AD78E5A1F533A35008129E8 /* Authentication.swift */,
-				7AD78E5C1F533A90008129E8 /* MainViewModel.swift */,
+				7AD78E5C1F533A90008129E8 /* ServerListModel.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 				7AD78E5B1F533A35008129E8 /* Authentication.swift in Sources */,
 				7AD78E5F1F535EF3008129E8 /* Constants.swift in Sources */,
 				7AD78E591F5339D9008129E8 /* NetworkService.swift in Sources */,
-				7AD78E5D1F533A90008129E8 /* MainViewModel.swift in Sources */,
+				7AD78E5D1F533A90008129E8 /* ServerListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
