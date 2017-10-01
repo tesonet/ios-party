@@ -12,6 +12,14 @@
 		046956731F80F143004971CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046956721F80F143004971CE /* MainMenu.xib */; };
 		046956781F80F30D004971CE /* ServerBrowserWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956771F80F30D004971CE /* ServerBrowserWindowController.swift */; };
 		0469567D1F80F3C3004971CE /* ServerBrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469567C1F80F3C3004971CE /* ServerBrowserWindow.xib */; };
+		046956811F80FDCF004971CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956801F80FDCF004971CE /* LoginViewController.swift */; };
+		046956831F80FF65004971CE /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956821F80FF65004971CE /* LoginViewControllerDelegate.swift */; };
+		046956851F8105A3004971CE /* LoadScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956841F8105A3004971CE /* LoadScreenViewController.swift */; };
+		046956871F8105F1004971CE /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956861F8105F1004971CE /* ServerListViewController.swift */; };
+		046956891F810620004971CE /* ServerListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956881F810620004971CE /* ServerListViewControllerDelegate.swift */; };
+		0469568B1F810A99004971CE /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469568A1F810A99004971CE /* LoginView.xib */; };
+		0469568D1F810C78004971CE /* LoadScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469568C1F810C78004971CE /* LoadScreenView.xib */; };
+		0469568F1F810E47004971CE /* ServerListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469568E1F810E47004971CE /* ServerListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		046956721F80F143004971CE /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		046956771F80F30D004971CE /* ServerBrowserWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerBrowserWindowController.swift; sourceTree = "<group>"; };
 		0469567C1F80F3C3004971CE /* ServerBrowserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerBrowserWindow.xib; sourceTree = "<group>"; };
+		046956801F80FDCF004971CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		046956821F80FF65004971CE /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
+		046956841F8105A3004971CE /* LoadScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadScreenViewController.swift; sourceTree = "<group>"; };
+		046956861F8105F1004971CE /* ServerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
+		046956881F810620004971CE /* ServerListViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0469568A1F810A99004971CE /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		0469568C1F810C78004971CE /* LoadScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadScreenView.xib; sourceTree = "<group>"; };
+		0469568E1F810E47004971CE /* ServerListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerListView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				046956771F80F30D004971CE /* ServerBrowserWindowController.swift */,
+				046956801F80FDCF004971CE /* LoginViewController.swift */,
+				046956821F80FF65004971CE /* LoginViewControllerDelegate.swift */,
+				046956841F8105A3004971CE /* LoadScreenViewController.swift */,
+				046956861F8105F1004971CE /* ServerListViewController.swift */,
+				046956881F810620004971CE /* ServerListViewControllerDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -86,6 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				0469567C1F80F3C3004971CE /* ServerBrowserWindow.xib */,
+				0469568A1F810A99004971CE /* LoginView.xib */,
+				0469568C1F810C78004971CE /* LoadScreenView.xib */,
+				0469568E1F810E47004971CE /* ServerListView.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -164,7 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				046956681F80F061004971CE /* Assets.xcassets in Resources */,
+				0469568F1F810E47004971CE /* ServerListView.xib in Resources */,
 				046956731F80F143004971CE /* MainMenu.xib in Resources */,
+				0469568D1F810C78004971CE /* LoadScreenView.xib in Resources */,
+				0469568B1F810A99004971CE /* LoginView.xib in Resources */,
 				0469567D1F80F3C3004971CE /* ServerBrowserWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,8 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046956811F80FDCF004971CE /* LoginViewController.swift in Sources */,
+				046956851F8105A3004971CE /* LoadScreenViewController.swift in Sources */,
+				046956831F80FF65004971CE /* LoginViewControllerDelegate.swift in Sources */,
+				046956871F8105F1004971CE /* ServerListViewController.swift in Sources */,
 				046956641F80F061004971CE /* AppDelegate.swift in Sources */,
 				046956781F80F30D004971CE /* ServerBrowserWindowController.swift in Sources */,
+				046956891F810620004971CE /* ServerListViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
