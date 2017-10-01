@@ -20,6 +20,8 @@
 		0469568B1F810A99004971CE /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469568A1F810A99004971CE /* LoginView.xib */; };
 		0469568D1F810C78004971CE /* LoadScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469568C1F810C78004971CE /* LoadScreenView.xib */; };
 		0469568F1F810E47004971CE /* ServerListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469568E1F810E47004971CE /* ServerListView.xib */; };
+		046956931F8122D7004971CE /* AccessTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956921F8122D7004971CE /* AccessTokenStorage.swift */; };
+		046956951F812365004971CE /* KeychainAccessTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956941F812365004971CE /* KeychainAccessTokenStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		0469568A1F810A99004971CE /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		0469568C1F810C78004971CE /* LoadScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadScreenView.xib; sourceTree = "<group>"; };
 		0469568E1F810E47004971CE /* ServerListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerListView.xib; sourceTree = "<group>"; };
+		046956921F8122D7004971CE /* AccessTokenStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenStorage.swift; sourceTree = "<group>"; };
+		046956941F812365004971CE /* KeychainAccessTokenStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessTokenStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		046956761F80F2CC004971CE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				046956901F8122A4004971CE /* AccessTokenStorage */,
+				046956911F8122A4004971CE /* ServerListLoader */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -126,6 +132,22 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		046956901F8122A4004971CE /* AccessTokenStorage */ = {
+			isa = PBXGroup;
+			children = (
+				046956921F8122D7004971CE /* AccessTokenStorage.swift */,
+				046956941F812365004971CE /* KeychainAccessTokenStorage.swift */,
+			);
+			path = AccessTokenStorage;
+			sourceTree = "<group>";
+		};
+		046956911F8122A4004971CE /* ServerListLoader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServerListLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +228,9 @@
 				046956811F80FDCF004971CE /* LoginViewController.swift in Sources */,
 				046956851F8105A3004971CE /* LoadScreenViewController.swift in Sources */,
 				046956831F80FF65004971CE /* LoginViewControllerDelegate.swift in Sources */,
+				046956931F8122D7004971CE /* AccessTokenStorage.swift in Sources */,
 				046956871F8105F1004971CE /* ServerListViewController.swift in Sources */,
+				046956951F812365004971CE /* KeychainAccessTokenStorage.swift in Sources */,
 				046956641F80F061004971CE /* AppDelegate.swift in Sources */,
 				046956781F80F30D004971CE /* ServerBrowserWindowController.swift in Sources */,
 				046956891F810620004971CE /* ServerListViewControllerDelegate.swift in Sources */,

@@ -16,6 +16,8 @@ class ServerBrowserWindowController: NSWindowController, LoginViewControllerDele
     
     // MARK: -
     
+    private let tokenStorage: AccessTokenStorage?
+    
     private lazy var loginViewController: LoginViewController = {
         guard let viewController = LoginViewController(nibName: "LoginView",
                                                        bundle: nil) else {
@@ -42,7 +44,8 @@ class ServerBrowserWindowController: NSWindowController, LoginViewControllerDele
         return viewController
     }()
     
-    init() {
+    init(tokenStorage: AccessTokenStorage?) {
+        self.tokenStorage = tokenStorage
         super.init(window: nil)
     }
     
@@ -58,8 +61,14 @@ class ServerBrowserWindowController: NSWindowController, LoginViewControllerDele
     
     override func windowDidLoad() {
         super.windowDidLoad()
-        // ...
-        switchToViewController(loginViewController)
+        // If there is stored token -> skip login and try to fetch server list
+        if let storedToken = tokenStorage?.storedToken {
+            switchToViewController(loadScreenViewController)
+            // todo: fetch server list
+        }
+        else {
+            switchToViewController(loginViewController)
+        }
     }
     
     // MARK: - LoginViewControllerDelegate

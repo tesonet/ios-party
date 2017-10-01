@@ -14,7 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var mainWindowController: ServerBrowserWindowController!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        mainWindowController = ServerBrowserWindowController()
+        let serverURL = URL(string: "http://playground.tesonet.lt")
+        let accessTokenStorage = KeychainAccessTokenStorage(serverURL: serverURL!)
+        mainWindowController = ServerBrowserWindowController(tokenStorage: accessTokenStorage)
         mainWindowController.showWindow(nil)
     }
     
