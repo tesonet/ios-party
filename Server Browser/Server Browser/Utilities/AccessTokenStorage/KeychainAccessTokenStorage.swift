@@ -54,8 +54,8 @@ class KeychainAccessTokenStorage: AccessTokenStorage {
             }
             
             let urlCredential = URLCredential(user: "token",
-                                               password: newToken,
-                                               persistence: URLCredential.Persistence.permanent)
+                                              password: newToken,
+                                              persistence: URLCredential.Persistence.permanent)
             credentialStorage.set(urlCredential, for: protectionSpace)
         }
     }

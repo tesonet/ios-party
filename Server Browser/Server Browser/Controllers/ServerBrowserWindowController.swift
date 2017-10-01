@@ -64,7 +64,7 @@ class ServerBrowserWindowController: NSWindowController, LoginViewControllerDele
         // If there is stored token -> skip login and try to fetch server list
         if let storedToken = tokenStorage?.storedToken {
             switchToViewController(loadScreenViewController)
-            // todo: fetch server list
+            fetchServerList(withAccessToken: storedToken)
         }
         else {
             switchToViewController(loginViewController)
@@ -87,5 +87,9 @@ class ServerBrowserWindowController: NSWindowController, LoginViewControllerDele
     
     func switchToViewController(_ viewController: NSViewController) {
         window?.contentViewController = viewController
+    }
+    
+    func fetchServerList(withAccessToken token: String) {
+        // todo: fetch server list
     }
 }

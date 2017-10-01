@@ -7,5 +7,5 @@
 //
 
 protocol ServerListViewControllerDelegate: class {
-    func serverListViewControllerDidRequestLogout(_ : ServerListViewController)
+    func serverListViewControllerDidRequestLogout(_: ServerListViewController)
 }

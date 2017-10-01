@@ -7,5 +7,5 @@
 //
 
 protocol LoginViewControllerDelegate: class {
-    func loginViewControllerDidRequestLogin(_ : LoginViewController)
+    func loginViewControllerDidRequestLogin(_: LoginViewController)
 }
