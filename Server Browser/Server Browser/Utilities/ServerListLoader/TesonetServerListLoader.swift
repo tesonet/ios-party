@@ -9,15 +9,19 @@
 import Foundation
 
 class TesonetServerListLoader: ServerListLoader {
-    private let session: URLSession = {
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
-        configuration.timeoutIntervalForRequest = 10
-        return URLSession(configuration: configuration)
-    }()
-    
+    private var activeSession: URLSession?
+    private var session: URLSession {
+        if activeSession == nil {
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+            configuration.timeoutIntervalForRequest = 10
+            activeSession = URLSession(configuration: configuration)
+        }
+        return activeSession!
+    }
+
     deinit {
-        session.invalidateAndCancel()
+        abortAllLoadingTasks()
     }
     
     // MARK: - ServerListLoader
@@ -41,9 +45,24 @@ class TesonetServerListLoader: ServerListLoader {
             else if let httpResponse = response as? HTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 200:
-                    // todo: get token from data
-                    let token: String? = nil // temp
-                    completionHandler(token, nil)
+                    guard let receivedData = data else {
+                        print("Failed to get access token. " +
+                            "HTTP Status is 200, but no data was received.")
+                        assert(false)
+                        completionHandler(nil, RequestError.unknownFailure)
+                        break
+                    }
+                    
+                    let jsonObj = try? JSONSerialization.jsonObject(with: receivedData, options: [])
+                    let dataDictionary = jsonObj as? [String: String]
+                    if let token = dataDictionary?["token"] {
+                        completionHandler(token, nil)
+                    }
+                    else {
+                        print("Failed to get access token from received data.")
+                        assert(false)
+                        completionHandler(nil, RequestError.unknownFailure)
+                    }
                 case 401:
                     completionHandler(nil, RequestError.unauthorized)
                 default:
@@ -73,9 +92,33 @@ class TesonetServerListLoader: ServerListLoader {
             else if let httpResponse = response as? HTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 200:
-                    // todo: get server list from data
-                    let servers: [Server]? = nil // temp
-                    completionHandler(servers, nil)
+                    guard let receivedData = data else {
+                        print("Failed to fetch server list. " +
+                            "HTTP Status is 200, but no data was received.")
+                        assert(false)
+                        completionHandler(nil, RequestError.unknownFailure)
+                        break
+                    }
+                    
+                    let jsonObj = try? JSONSerialization.jsonObject(with: receivedData, options: [])
+                    if let serverDictionariesArray = jsonObj as? [[String: Any]] {
+                        var serverList = [Server]()
+                        for serverDictionary in serverDictionariesArray {
+                            if let server = Server(jsonDictionary: serverDictionary) {
+                                serverList.append(server)
+                            }
+                            else {
+                                print("Failed to parse server object from JSON.")
+                                assert(false)
+                            }
+                        }
+                        completionHandler(serverList, nil)
+                    }
+                    else {
+                        print("Failed to get servers list from received data.")
+                        assert(false)
+                        completionHandler(nil, RequestError.unknownFailure)
+                    }
                 case 401:
                     completionHandler(nil, RequestError.unauthorized)
                 default:
@@ -88,5 +131,10 @@ class TesonetServerListLoader: ServerListLoader {
             }
         }
         dataTask.resume()
+    }
+    
+    func abortAllLoadingTasks() {
+        activeSession?.invalidateAndCancel()
+        activeSession = nil
     }
 }

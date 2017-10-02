@@ -6,6 +6,6 @@
 //  Copyright © 2017 Slava. All rights reserved.
 //
 
-protocol AccessTokenStorage {
+protocol AccessTokenStorage: class {
     var storedToken: String? { get set }
 }

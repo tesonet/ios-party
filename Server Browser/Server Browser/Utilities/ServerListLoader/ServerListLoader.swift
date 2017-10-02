@@ -13,4 +13,6 @@ protocol ServerListLoader {
 
     func fetchServerList(withAccessToken: String,
                          completionHandler: @escaping ([Server]?, Error?) -> Void)
+    
+    func abortAllLoadingTasks()
 }
