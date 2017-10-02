@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LoginViewController" customModule="Server_Browser" customModuleProvider="target">
             <connections>
-                <outlet property="passwordTextField" destination="Uui-R5-tWh" id="mbK-un-KJr"/>
-                <outlet property="usernameTextField" destination="Vue-qW-IpF" id="24T-JQ-97y"/>
+                <outlet property="passwordTextField" destination="Z0X-T3-N0O" id="54a-oP-bWv"/>
+                <outlet property="usernameTextField" destination="at8-kf-Hr3" id="slo-x5-a7R"/>
                 <outlet property="view" destination="c22-O7-iKe" id="v39-Qm-f01"/>
             </connections>
         </customObject>
@@ -24,38 +25,67 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bg" id="PEc-Oc-Kt6"/>
                 </imageView>
-                <secureTextField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uui-R5-tWh">
-                    <rect key="frame" x="152" y="231" width="96" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="0Th-Am-mSn">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        <allowedInputSourceLocales>
-                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
-                        </allowedInputSourceLocales>
-                    </secureTextFieldCell>
-                </secureTextField>
-                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-qW-IpF">
-                    <rect key="frame" x="152" y="271" width="96" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="UdO-EZ-ikc">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojy-5k-Tg1">
                     <rect key="frame" x="118" y="454" width="164" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo-white" id="BpK-Wf-vIQ"/>
                 </imageView>
+                <box fixedFrame="YES" boxType="custom" cornerRadius="4" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="i53-WT-Hna">
+                    <rect key="frame" x="90" y="228" width="220" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="HRU-y9-tM3">
+                        <rect key="frame" x="1" y="1" width="218" height="42"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at8-kf-Hr3">
+                                <rect key="frame" x="37" y="13" width="178" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" placeholderString="Username" id="W2I-yF-uCd">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pe-tg-Do7">
+                                <rect key="frame" x="12" y="15" width="18" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico-username" id="4fB-1s-43U"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </box>
+                <box fixedFrame="YES" boxType="custom" cornerRadius="4" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-Aj-bA4">
+                    <rect key="frame" x="90" y="175" width="220" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="fvk-YR-zak">
+                        <rect key="frame" x="1" y="1" width="218" height="42"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0X-T3-N0O" customClass="NSSecureTextField">
+                                <rect key="frame" x="37" y="13" width="178" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" placeholderString="Password" id="38T-YF-fkB" customClass="NSSecureTextFieldCell">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szS-FA-0Pe">
+                                <rect key="frame" x="12" y="15" width="18" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico-lock" id="LHw-Sj-s1E"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </box>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arv-7W-3DM" customClass="FlatButton" customModule="Server_Browser" customModuleProvider="target">
-                    <rect key="frame" x="90" y="132" width="220" height="43"/>
+                    <rect key="frame" x="90" y="123" width="220" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="squareTextured" title="Log In" bezelStyle="texturedSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9eM-xS-wma">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="systemBold" size="14"/>
+                        <font key="font" metaFont="systemBold" size="12"/>
                     </buttonCell>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
@@ -74,6 +104,8 @@
     </objects>
     <resources>
         <image name="bg" width="1920" height="1080"/>
+        <image name="ico-lock" width="16" height="20"/>
+        <image name="ico-username" width="18" height="20"/>
         <image name="logo-white" width="246" height="64"/>
     </resources>
 </document>
