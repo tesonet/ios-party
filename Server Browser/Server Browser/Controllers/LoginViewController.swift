@@ -46,9 +46,9 @@ class LoginViewController: NSViewController {
     // MARK: - NSViewController
     
     override func viewDidLoad() {
-        loginButton.setBackgroundColor(NSColor(calibratedRed: 0.62,
-                                               green: 0.83,
-                                               blue: 0.19,
+        loginButton.setBackgroundColor(NSColor(calibratedRed: 0.60,
+                                               green: 0.80,
+                                               blue: 0.18,
                                                alpha: 1.0))
         loginButton.setBorderAttributes(color: NSColor.black,
                                         borderWidth: 0.5,
