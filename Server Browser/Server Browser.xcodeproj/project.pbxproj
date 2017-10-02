@@ -26,7 +26,7 @@
 		046956991F8172DF004971CE /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956981F8172DF004971CE /* Server.swift */; };
 		0469569B1F8173B6004971CE /* TesonetServerListLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469569A1F8173B6004971CE /* TesonetServerListLoader.swift */; };
 		0469569D1F8186CD004971CE /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469569C1F8186CD004971CE /* RequestError.swift */; };
-		0469569F1F82AF9D004971CE /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469569E1F82AF9D004971CE /* FlatButton.swift */; };
+		046956A11F82DB8A004971CE /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046956A01F82DB8A004971CE /* FancyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		046956981F8172DF004971CE /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		0469569A1F8173B6004971CE /* TesonetServerListLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesonetServerListLoader.swift; sourceTree = "<group>"; };
 		0469569C1F8186CD004971CE /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
-		0469569E1F82AF9D004971CE /* FlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
+		046956A01F82DB8A004971CE /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 		0469567F1F80F615004971CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0469569E1F82AF9D004971CE /* FlatButton.swift */,
+				046956A01F82DB8A004971CE /* FancyButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,12 +243,12 @@
 				046956811F80FDCF004971CE /* LoginViewController.swift in Sources */,
 				046956851F8105A3004971CE /* LoadScreenViewController.swift in Sources */,
 				046956831F80FF65004971CE /* LoginViewControllerDelegate.swift in Sources */,
-				0469569F1F82AF9D004971CE /* FlatButton.swift in Sources */,
 				046956971F817121004971CE /* ServerListLoader.swift in Sources */,
 				046956931F8122D7004971CE /* AccessTokenStorage.swift in Sources */,
 				046956871F8105F1004971CE /* ServerListViewController.swift in Sources */,
 				046956991F8172DF004971CE /* Server.swift in Sources */,
 				046956951F812365004971CE /* KeychainAccessTokenStorage.swift in Sources */,
+				046956A11F82DB8A004971CE /* FancyButton.swift in Sources */,
 				0469569B1F8173B6004971CE /* TesonetServerListLoader.swift in Sources */,
 				0469569D1F8186CD004971CE /* RequestError.swift in Sources */,
 				046956641F80F061004971CE /* AppDelegate.swift in Sources */,

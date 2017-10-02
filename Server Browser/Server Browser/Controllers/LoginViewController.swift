@@ -13,6 +13,7 @@ class LoginViewController: NSViewController {
     
     @IBOutlet weak var usernameTextField: NSTextField!
     @IBOutlet weak var passwordTextField: NSSecureTextField!
+    @IBOutlet weak var loginButton: FancyButton!
     
     // MARK: -
     
@@ -40,6 +41,22 @@ class LoginViewController: NSViewController {
             loadViewIfNeeded()
             passwordTextField.stringValue = newValue
         }
+    }
+    
+    // MARK: - NSViewController
+    
+    override func viewDidLoad() {
+        loginButton.setBackgroundColor(NSColor(calibratedRed: 0.62,
+                                               green: 0.83,
+                                               blue: 0.19,
+                                               alpha: 1.0))
+        loginButton.setBorderAttributes(color: NSColor.black,
+                                        borderWidth: 0.5,
+                                        cornerRadius: 5.0)
+        loginButton.setText("Log In",
+                            font: NSFont.boldSystemFont(ofSize: 12.0),
+                            color: NSColor.white)
+        super.viewDidLoad()
     }
     
     // MARK: - Actions

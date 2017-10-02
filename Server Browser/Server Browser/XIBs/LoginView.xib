@@ -9,6 +9,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LoginViewController" customModule="Server_Browser" customModuleProvider="target">
             <connections>
+                <outlet property="loginButton" destination="vpk-eM-MeY" id="k3e-cp-0H1"/>
                 <outlet property="passwordTextField" destination="Z0X-T3-N0O" id="54a-oP-bWv"/>
                 <outlet property="usernameTextField" destination="at8-kf-Hr3" id="slo-x5-a7R"/>
                 <outlet property="view" destination="c22-O7-iKe" id="v39-Qm-f01"/>
@@ -80,23 +81,15 @@
                     </view>
                     <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </box>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arv-7W-3DM" customClass="FlatButton" customModule="Server_Browser" customModuleProvider="target">
-                    <rect key="frame" x="90" y="123" width="220" height="44"/>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vpk-eM-MeY" customClass="FancyButton" customModule="Server_Browser" customModuleProvider="target">
+                    <rect key="frame" x="90" y="119" width="220" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="squareTextured" title="Log In" bezelStyle="texturedSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9eM-xS-wma">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="systemBold" size="12"/>
+                    <buttonCell key="cell" type="square" title="Log In" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="trx-24-2dn">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                            <color key="value" red="0.64924538135528564" green="0.84788167476654053" blue="0.067073158919811249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="login:" target="-2" id="IPW-6R-YD5"/>
+                        <action selector="login:" target="-2" id="VPc-7t-QcV"/>
                     </connections>
                 </button>
             </subviews>
