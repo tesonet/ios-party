@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  TesonetTask
+
+  Created by Artyom Belenkov on 10/8/17.
+  Copyright © 2017 abelenkov. All rights reserved.
+*/
+
+"cLoginButtonTitle" 	= "Log In";
+"cUserNamePlaceholder" 	= "Username";
+"cPasswordPlaceholder" 	= "Password";

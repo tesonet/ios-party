@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */; };
+		D4958EB31F8A41D8004CE176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4958EB21F8A41D8004CE176 /* Assets.xcassets */; };
+		D4958EB61F8A41D8004CE176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4958EB41F8A41D8004CE176 /* Main.storyboard */; };
+		D4958EC11F8A41D8004CE176 /* TesonetTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EC01F8A41D8004CE176 /* TesonetTaskTests.swift */; };
+		D4958ECE1F8A444E004CE176 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958ECC1F8A444E004CE176 /* LoginViewController.swift */; };
+		D4958ED11F8A4467004CE176 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958ED01F8A4467004CE176 /* LoginViewPresenter.swift */; };
+		D4958ED61F8A6A30004CE176 /* TesonetTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4958ED41F8A6A30004CE176 /* TesonetTask.xcdatamodeld */; };
+		D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */; };
+		D4958EDB1F8A6C96004CE176 /* LoginButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */; };
+		D4958EDD1F8A7540004CE176 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4958EDC1F8A7540004CE176 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4958EBD1F8A41D8004CE176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4958EA01F8A41D8004CE176 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4958EA71F8A41D8004CE176;
+			remoteInfo = TesonetTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4958EA81F8A41D8004CE176 /* TesonetTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesonetTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4958EB21F8A41D8004CE176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4958EB51F8A41D8004CE176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4958EB71F8A41D8004CE176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4958EBC1F8A41D8004CE176 /* TesonetTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4958EC01F8A41D8004CE176 /* TesonetTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetTaskTests.swift; sourceTree = "<group>"; };
+		D4958EC21F8A41D8004CE176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4958ECC1F8A444E004CE176 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D4958ED01F8A4467004CE176 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		D4958ED51F8A6A30004CE176 /* TesonetTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TesonetTask.xcdatamodel; sourceTree = "<group>"; };
+		D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorAdditions.swift; sourceTree = "<group>"; };
+		D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButtonCell.swift; sourceTree = "<group>"; };
+		D4958EDC1F8A7540004CE176 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4958EA51F8A41D8004CE176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4958EB91F8A41D8004CE176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4958E9F1F8A41D7004CE176 = {
+			isa = PBXGroup;
+			children = (
+				D4958EAA1F8A41D8004CE176 /* TesonetTask */,
+				D4958EBF1F8A41D8004CE176 /* TesonetTaskTests */,
+				D4958EA91F8A41D8004CE176 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4958EA91F8A41D8004CE176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4958EA81F8A41D8004CE176 /* TesonetTask.app */,
+				D4958EBC1F8A41D8004CE176 /* TesonetTaskTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4958EAA1F8A41D8004CE176 /* TesonetTask */ = {
+			isa = PBXGroup;
+			children = (
+				D4958ED21F8A6996004CE176 /* Utilities */,
+				D4958ECB1F8A442E004CE176 /* Login */,
+				D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */,
+				D4958EB41F8A41D8004CE176 /* Main.storyboard */,
+				D4958ED31F8A69BE004CE176 /* Resources */,
+			);
+			path = TesonetTask;
+			sourceTree = "<group>";
+		};
+		D4958EBF1F8A41D8004CE176 /* TesonetTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4958EC01F8A41D8004CE176 /* TesonetTaskTests.swift */,
+				D4958EC21F8A41D8004CE176 /* Info.plist */,
+			);
+			path = TesonetTaskTests;
+			sourceTree = "<group>";
+		};
+		D4958ECB1F8A442E004CE176 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4958ED01F8A4467004CE176 /* LoginViewPresenter.swift */,
+				D4958ECC1F8A444E004CE176 /* LoginViewController.swift */,
+				D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		D4958ED21F8A6996004CE176 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D4958ED71F8A6A4C004CE176 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D4958ED31F8A69BE004CE176 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4958ED41F8A6A30004CE176 /* TesonetTask.xcdatamodeld */,
+				D4958EB21F8A41D8004CE176 /* Assets.xcassets */,
+				D4958EB71F8A41D8004CE176 /* Info.plist */,
+				D4958EDC1F8A7540004CE176 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4958ED71F8A6A4C004CE176 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4958EA71F8A41D8004CE176 /* TesonetTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4958EC51F8A41D8004CE176 /* Build configuration list for PBXNativeTarget "TesonetTask" */;
+			buildPhases = (
+				D4958EA41F8A41D8004CE176 /* Sources */,
+				D4958EA51F8A41D8004CE176 /* Frameworks */,
+				D4958EA61F8A41D8004CE176 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TesonetTask;
+			productName = TesonetTask;
+			productReference = D4958EA81F8A41D8004CE176 /* TesonetTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4958EBB1F8A41D8004CE176 /* TesonetTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4958EC81F8A41D8004CE176 /* Build configuration list for PBXNativeTarget "TesonetTaskTests" */;
+			buildPhases = (
+				D4958EB81F8A41D8004CE176 /* Sources */,
+				D4958EB91F8A41D8004CE176 /* Frameworks */,
+				D4958EBA1F8A41D8004CE176 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4958EBE1F8A41D8004CE176 /* PBXTargetDependency */,
+			);
+			name = TesonetTaskTests;
+			productName = TesonetTaskTests;
+			productReference = D4958EBC1F8A41D8004CE176 /* TesonetTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4958EA01F8A41D8004CE176 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = abelenkov;
+				TargetAttributes = {
+					D4958EA71F8A41D8004CE176 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CDWC9M5VJC;
+						ProvisioningStyle = Automatic;
+					};
+					D4958EBB1F8A41D8004CE176 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CDWC9M5VJC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D4958EA71F8A41D8004CE176;
+					};
+				};
+			};
+			buildConfigurationList = D4958EA31F8A41D8004CE176 /* Build configuration list for PBXProject "TesonetTask" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4958E9F1F8A41D7004CE176;
+			productRefGroup = D4958EA91F8A41D8004CE176 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4958EA71F8A41D8004CE176 /* TesonetTask */,
+				D4958EBB1F8A41D8004CE176 /* TesonetTaskTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4958EA61F8A41D8004CE176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4958EB31F8A41D8004CE176 /* Assets.xcassets in Resources */,
+				D4958EDD1F8A7540004CE176 /* Localizable.strings in Resources */,
+				D4958EB61F8A41D8004CE176 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4958EBA1F8A41D8004CE176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4958EA41F8A41D8004CE176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4958ED11F8A4467004CE176 /* LoginViewPresenter.swift in Sources */,
+				D4958EDB1F8A6C96004CE176 /* LoginButtonCell.swift in Sources */,
+				D4958ED61F8A6A30004CE176 /* TesonetTask.xcdatamodeld in Sources */,
+				D4958ECE1F8A444E004CE176 /* LoginViewController.swift in Sources */,
+				D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */,
+				D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4958EB81F8A41D8004CE176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4958EC11F8A41D8004CE176 /* TesonetTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4958EBE1F8A41D8004CE176 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4958EA71F8A41D8004CE176 /* TesonetTask */;
+			targetProxy = D4958EBD1F8A41D8004CE176 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4958EB41F8A41D8004CE176 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4958EB51F8A41D8004CE176 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4958EC31F8A41D8004CE176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4958EC41F8A41D8004CE176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		D4958EC61F8A41D8004CE176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDWC9M5VJC;
+				INFOPLIST_FILE = TesonetTask/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abelenkov.TesonetTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D4958EC71F8A41D8004CE176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDWC9M5VJC;
+				INFOPLIST_FILE = TesonetTask/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abelenkov.TesonetTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D4958EC91F8A41D8004CE176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDWC9M5VJC;
+				INFOPLIST_FILE = TesonetTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abelenkov.TesonetTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TesonetTask.app/Contents/MacOS/TesonetTask";
+			};
+			name = Debug;
+		};
+		D4958ECA1F8A41D8004CE176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDWC9M5VJC;
+				INFOPLIST_FILE = TesonetTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abelenkov.TesonetTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TesonetTask.app/Contents/MacOS/TesonetTask";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4958EA31F8A41D8004CE176 /* Build configuration list for PBXProject "TesonetTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4958EC31F8A41D8004CE176 /* Debug */,
+				D4958EC41F8A41D8004CE176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4958EC51F8A41D8004CE176 /* Build configuration list for PBXNativeTarget "TesonetTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4958EC61F8A41D8004CE176 /* Debug */,
+				D4958EC71F8A41D8004CE176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4958EC81F8A41D8004CE176 /* Build configuration list for PBXNativeTarget "TesonetTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4958EC91F8A41D8004CE176 /* Debug */,
+				D4958ECA1F8A41D8004CE176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D4958ED41F8A6A30004CE176 /* TesonetTask.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D4958ED51F8A6A30004CE176 /* TesonetTask.xcdatamodel */,
+			);
+			currentVersion = D4958ED51F8A6A30004CE176 /* TesonetTask.xcdatamodel */;
+			path = TesonetTask.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D4958EA01F8A41D8004CE176 /* Project object */;
+}
