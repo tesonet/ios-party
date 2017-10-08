@@ -17,6 +17,18 @@
 		D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */; };
 		D4958EDB1F8A6C96004CE176 /* LoginButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */; };
 		D4958EDD1F8A7540004CE176 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4958EDC1F8A7540004CE176 /* Localizable.strings */; };
+		D4C040351F8A87DD00179FB5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040341F8A87DD00179FB5 /* ListViewController.swift */; };
+		D4C040371F8AAABD00179FB5 /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040361F8AAABD00179FB5 /* TableRowView.swift */; };
+		D4C040391F8AAACC00179FB5 /* TableRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C040381F8AAACC00179FB5 /* TableRowView.xib */; };
+		D4C0403B1F8AAC6B00179FB5 /* NSTableViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0403A1F8AAC6B00179FB5 /* NSTableViewAdditions.swift */; };
+		D4C040401F8AAE5D00179FB5 /* IBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0403F1F8AAE5D00179FB5 /* IBaseCell.swift */; };
+		D4C040421F8ABBC800179FB5 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */; };
+		D4C040441F8ABEAB00179FB5 /* LoginToListSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040431F8ABEAB00179FB5 /* LoginToListSegue.swift */; };
+		D4C040461F8AC6A400179FB5 /* IBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040451F8AC6A400179FB5 /* IBaseController.swift */; };
+		D4C040481F8AD25900179FB5 /* NSBezierPathAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040471F8AD25900179FB5 /* NSBezierPathAdditions.swift */; };
+		D4C0404A1F8AD40F00179FB5 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040491F8AD40F00179FB5 /* TableViewHeader.swift */; };
+		D4C0404C1F8AD44200179FB5 /* TableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C0404B1F8AD44200179FB5 /* TableViewHeader.xib */; };
+		D4C0404E1F8AD5B300179FB5 /* NSViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0404D1F8AD5B300179FB5 /* NSViewAdditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +56,18 @@
 		D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorAdditions.swift; sourceTree = "<group>"; };
 		D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButtonCell.swift; sourceTree = "<group>"; };
 		D4958EDC1F8A7540004CE176 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D4C040341F8A87DD00179FB5 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D4C040361F8AAABD00179FB5 /* TableRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
+		D4C040381F8AAACC00179FB5 /* TableRowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableRowView.xib; sourceTree = "<group>"; };
+		D4C0403A1F8AAC6B00179FB5 /* NSTableViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTableViewAdditions.swift; sourceTree = "<group>"; };
+		D4C0403F1F8AAE5D00179FB5 /* IBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBaseCell.swift; sourceTree = "<group>"; };
+		D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		D4C040431F8ABEAB00179FB5 /* LoginToListSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginToListSegue.swift; sourceTree = "<group>"; };
+		D4C040451F8AC6A400179FB5 /* IBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBaseController.swift; sourceTree = "<group>"; };
+		D4C040471F8AD25900179FB5 /* NSBezierPathAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBezierPathAdditions.swift; sourceTree = "<group>"; };
+		D4C040491F8AD40F00179FB5 /* TableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
+		D4C0404B1F8AD44200179FB5 /* TableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewHeader.xib; sourceTree = "<group>"; };
+		D4C0404D1F8AD5B300179FB5 /* NSViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewAdditions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +109,12 @@
 		D4958EAA1F8A41D8004CE176 /* TesonetTask */ = {
 			isa = PBXGroup;
 			children = (
+				D4C0403E1F8AAE4400179FB5 /* Base */,
+				D4C040331F8A859E00179FB5 /* List */,
 				D4958ED21F8A6996004CE176 /* Utilities */,
 				D4958ECB1F8A442E004CE176 /* Login */,
 				D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */,
+				D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */,
 				D4958EB41F8A41D8004CE176 /* Main.storyboard */,
 				D4958ED31F8A69BE004CE176 /* Resources */,
 			);
@@ -109,6 +136,7 @@
 				D4958ED01F8A4467004CE176 /* LoginViewPresenter.swift */,
 				D4958ECC1F8A444E004CE176 /* LoginViewController.swift */,
 				D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */,
+				D4C040431F8ABEAB00179FB5 /* LoginToListSegue.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -136,8 +164,32 @@
 			isa = PBXGroup;
 			children = (
 				D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */,
+				D4C0403A1F8AAC6B00179FB5 /* NSTableViewAdditions.swift */,
+				D4C040471F8AD25900179FB5 /* NSBezierPathAdditions.swift */,
+				D4C0404D1F8AD5B300179FB5 /* NSViewAdditions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4C040331F8A859E00179FB5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D4C040341F8A87DD00179FB5 /* ListViewController.swift */,
+				D4C040361F8AAABD00179FB5 /* TableRowView.swift */,
+				D4C040381F8AAACC00179FB5 /* TableRowView.xib */,
+				D4C040491F8AD40F00179FB5 /* TableViewHeader.swift */,
+				D4C0404B1F8AD44200179FB5 /* TableViewHeader.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		D4C0403E1F8AAE4400179FB5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D4C0403F1F8AAE5D00179FB5 /* IBaseCell.swift */,
+				D4C040451F8AC6A400179FB5 /* IBaseController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +277,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C040391F8AAACC00179FB5 /* TableRowView.xib in Resources */,
 				D4958EB31F8A41D8004CE176 /* Assets.xcassets in Resources */,
+				D4C0404C1F8AD44200179FB5 /* TableViewHeader.xib in Resources */,
 				D4958EDD1F8A7540004CE176 /* Localizable.strings in Resources */,
 				D4958EB61F8A41D8004CE176 /* Main.storyboard in Resources */,
 			);
@@ -245,12 +299,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C040371F8AAABD00179FB5 /* TableRowView.swift in Sources */,
+				D4C040401F8AAE5D00179FB5 /* IBaseCell.swift in Sources */,
 				D4958ED11F8A4467004CE176 /* LoginViewPresenter.swift in Sources */,
 				D4958EDB1F8A6C96004CE176 /* LoginButtonCell.swift in Sources */,
 				D4958ED61F8A6A30004CE176 /* TesonetTask.xcdatamodeld in Sources */,
 				D4958ECE1F8A444E004CE176 /* LoginViewController.swift in Sources */,
 				D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */,
+				D4C040461F8AC6A400179FB5 /* IBaseController.swift in Sources */,
 				D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */,
+				D4C0403B1F8AAC6B00179FB5 /* NSTableViewAdditions.swift in Sources */,
+				D4C040481F8AD25900179FB5 /* NSBezierPathAdditions.swift in Sources */,
+				D4C0404E1F8AD5B300179FB5 /* NSViewAdditions.swift in Sources */,
+				D4C040441F8ABEAB00179FB5 /* LoginToListSegue.swift in Sources */,
+				D4C0404A1F8AD40F00179FB5 /* TableViewHeader.swift in Sources */,
+				D4C040421F8ABBC800179FB5 /* ContainerViewController.swift in Sources */,
+				D4C040351F8A87DD00179FB5 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

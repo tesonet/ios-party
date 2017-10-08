@@ -16,14 +16,12 @@ class LoginViewController: NSViewController {
     @IBOutlet private weak var passwordTextField: NSSecureTextField!
     @IBOutlet private weak var loginButton: NSButton!
     
-    override func awakeFromNib() {
-		super.awakeFromNib()
-        setupUI()
-	}
+    @IBOutlet fileprivate weak var backgroundHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var backgroundWidthConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        setupUI()
     }
     
     private func setupUI() {
@@ -40,4 +38,11 @@ class LoginViewController: NSViewController {
         loginTextField.placeholderString = NSLocalizedString("cUserNamePlaceholder", comment: "")
     }
     
+}
+
+extension LoginViewController : IBaseController {
+	internal func resetConstrains() {
+    	backgroundHeightConstraint.isActive = false
+        backgroundWidthConstraint.isActive = false
+    }
 }

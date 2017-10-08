@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="TableRowView" customModule="TesonetTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="527" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="UoV-8c-Wcc">
+                    <rect key="frame" x="20" y="0.0" width="487" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vMH-TA-GhY"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbL-Tx-4uu">
+                    <rect key="frame" x="18" y="43" width="105" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="test_Canada #10" id="sxo-aH-xLt">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sC-w9-ACk">
+                    <rect key="frame" x="404" y="43" width="86" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="test_4073 km" id="blY-S9-A3k">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UoV-8c-Wcc" secondAttribute="trailing" constant="20" id="Fyo-vw-NKd"/>
+                <constraint firstItem="zbL-Tx-4uu" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="RNE-IB-233"/>
+                <constraint firstItem="3sC-w9-ACk" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="VJa-5M-WNo"/>
+                <constraint firstAttribute="bottom" secondItem="UoV-8c-Wcc" secondAttribute="bottom" id="gMS-pm-myv"/>
+                <constraint firstAttribute="trailing" secondItem="3sC-w9-ACk" secondAttribute="leading" constant="121" id="jFU-3Z-Z01"/>
+                <constraint firstItem="zbL-Tx-4uu" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="wB4-xz-wTJ"/>
+                <constraint firstItem="UoV-8c-Wcc" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="yls-fv-0nv"/>
+            </constraints>
+            <connections>
+                <outlet property="distanceTextField" destination="3sC-w9-ACk" id="Vc2-Kx-8f8"/>
+                <outlet property="separatorView" destination="UoV-8c-Wcc" id="Xqv-Mi-fWT"/>
+                <outlet property="serverTextField" destination="zbL-Tx-4uu" id="ofO-Lh-MUT"/>
+            </connections>
+            <point key="canvasLocation" x="155.5" y="84.5"/>
+        </customView>
+    </objects>
+</document>
