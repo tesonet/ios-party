@@ -788,7 +788,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="WkM-NE-cwK" kind="custom" identifier="loadingViewControllerSegue" customClass="LoginToListSegue" customModule="TesonetTask" customModuleProvider="target" id="v9J-iZ-W9o"/>
+                                            <segue destination="WkM-NE-cwK" kind="custom" identifier="loadingViewControllerSegue" customClass="CustomSegue" customModule="TesonetTask" customModuleProvider="target" id="v9J-iZ-W9o"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -963,7 +963,7 @@
                         <outlet property="headerView" destination="juz-56-db7" id="hKz-Ai-Qd1"/>
                         <outlet property="tableHeaderViewContainer" destination="mqU-Ub-7QP" id="IXQ-03-yE7"/>
                         <outlet property="tableView" destination="U60-Vo-aiY" id="nxY-YT-j8T"/>
-                        <segue destination="XfG-lQ-9wD" kind="custom" identifier="logoutSegue" customClass="LoginToListSegue" customModule="TesonetTask" customModuleProvider="target" id="dYI-Mg-Yyk"/>
+                        <segue destination="XfG-lQ-9wD" kind="custom" identifier="logoutSegue" customClass="CustomSegue" customModule="TesonetTask" customModuleProvider="target" id="dYI-Mg-Yyk"/>
                     </connections>
                 </viewController>
                 <customObject id="7HJ-PL-Hnd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1016,8 +1016,10 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="e75-7S-2G8" id="WP6-7C-KJo"/>
+                        <outlet property="backgroundHeightConstraint" destination="oZ7-56-3ms" id="0BA-vG-5gn"/>
+                        <outlet property="backgroundWidthConstraint" destination="j1R-ee-kvt" id="SH2-fw-hnS"/>
                         <outlet property="progressTextField" destination="og4-g1-8CW" id="9M3-9z-CT7"/>
-                        <segue destination="JOT-hJ-0mh" kind="custom" identifier="listViewControllerSegue" customClass="LoginToListSegue" customModule="TesonetTask" customModuleProvider="target" id="FAN-bj-p31"/>
+                        <segue destination="JOT-hJ-0mh" kind="custom" identifier="listViewControllerSegue" customClass="CustomSegue" customModule="TesonetTask" customModuleProvider="target" id="FAN-bj-p31"/>
                     </connections>
                 </viewController>
                 <customObject id="Ijk-eg-tfl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

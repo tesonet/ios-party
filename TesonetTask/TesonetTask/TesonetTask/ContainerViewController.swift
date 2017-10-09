@@ -9,8 +9,9 @@
 import Cocoa
 
 class ContainerViewController: NSViewController {
-	
     private let mainStoryboard: NSStoryboard = NSStoryboard(name: "Main", bundle: nil)
+    fileprivate let presenter: ContainerViewControllerPresenter = ContainerViewControllerPresenter()
+    fileprivate let dataHandler: DataHandler = DataHandler()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,3 +22,35 @@ class ContainerViewController: NSViewController {
     }
     
 }
+
+extension ContainerViewController : ListViewControllerDelegate {
+	
+    internal func didRequestLogOut(vc: ListViewController) {
+		presenter.didRequestLogOut(vc: vc)
+	}
+    
+    internal func didRequestLoadData(vc:ListViewController) {
+    	dataHandler.loadData()
+    }
+    
+}
+
+extension ContainerViewController : LoadingViewControllerDelegate {
+	
+    internal func didLoadData(vc: LoadingViewController) {
+		presenter.didLoadData(vc: vc)
+	}
+    
+    internal func didFailLoadData(vc: LoadingViewController) {
+		presenter.didFailLoadData(vc: vc)
+	}
+}
+
+extension ContainerViewController : LoginViewControllerDelegate {
+    
+    func didRequestLogin(vc:LoginViewController) {
+    	presenter.didRequestLogin(vc: vc)
+    }
+    
+}
+

@@ -8,12 +8,13 @@
 
 import Cocoa
 
-class LoginToListSegue: NSStoryboardSegue {
+class CustomSegue: NSStoryboardSegue {
 	
     override func perform() {
         let sourceViewController = self.sourceController as! IBaseController
         let destinationViewController = self.destinationController as! IBaseController
         let containerViewController = sourceViewController.controller.parent!
+//        destinationViewController.delegate = containerViewController as? ContainerViewController
         
         containerViewController.insertChildViewController(destinationViewController.controller, at: 1)
         let targetSize = destinationViewController.controller.view.frame.size

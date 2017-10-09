@@ -8,6 +8,10 @@
 
 import Cocoa
 
+protocol LoginViewControllerDelegate : class {
+    func didRequestLogin(vc:LoginViewController)
+}
+
 class LoginViewController: NSViewController {
 
     @IBOutlet private weak var passwordViewContainer: NSView!
@@ -17,8 +21,10 @@ class LoginViewController: NSViewController {
     @IBOutlet private weak var loginButton: NSButton!
     
     @IBOutlet fileprivate weak var backgroundHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var backgroundWidthConstraint: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var backgroundWidthConstraint: NSLayoutConstraint!
     
+    internal weak var delegate : LoginViewControllerDelegate?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

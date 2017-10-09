@@ -8,6 +8,11 @@
 
 import Cocoa
 
+protocol ListViewControllerDelegate : class {
+    func didRequestLogOut(vc:ListViewController)
+    func didRequestLoadData(vc:ListViewController)
+}
+
 class ListViewController: NSViewController {
     
     @IBOutlet private weak var headerView: NSView!
@@ -15,7 +20,9 @@ class ListViewController: NSViewController {
     private var tableViewHeader: NSView? = TableViewHeader.createFromNib()
     
     @IBOutlet private weak var tableView: NSTableView!
-	
+    
+    internal weak var delegate : ListViewControllerDelegate?
+    	
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -43,6 +50,7 @@ class ListViewController: NSViewController {
     
     @IBAction private func logoutAction(_ sender: NSButton) {
     	performSegue(withIdentifier: "logoutSegue", sender: self)
+        delegate?.didRequestLogOut(vc: self)
     }
     
 }

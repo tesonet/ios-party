@@ -8,11 +8,21 @@
 
 import Cocoa
 
+protocol LoadingViewControllerDelegate : class {
+    func didLoadData(vc:LoadingViewController)
+    func didFailLoadData(vc:LoadingViewController)
+}
+
 class LoadingViewController: NSViewController {
 	
     @IBOutlet private weak var progressTextField: NSTextField!
     @IBOutlet private weak var activityIndicator: NSImageView!
     
+    @IBOutlet fileprivate weak var backgroundHeightConstraint: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var backgroundWidthConstraint: NSLayoutConstraint!
+    
+    internal weak var delegate: LoadingViewControllerDelegate?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,10 +36,14 @@ class LoadingViewController: NSViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
         	self.activityIndicator.stopAnimations()
             self.performSegue(withIdentifier:"listViewControllerSegue", sender: self)
+            self.delegate?.didLoadData(vc: self)
         }
 	}
 }
 
 extension LoadingViewController : IBaseController {
-	internal func resetConstrains() {}
+	internal func resetConstrains() {
+    	backgroundHeightConstraint.isActive = false
+        backgroundWidthConstraint.isActive = false
+    }
 }

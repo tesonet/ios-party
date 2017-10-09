@@ -10,7 +10,6 @@ import Cocoa
 
 protocol IBaseController: class {
 	var controller : NSViewController {get}
-    
     func resetConstrains()
 }
 
