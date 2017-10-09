@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D47F65B01F8AED98007A6C45 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F65AF1F8AED98007A6C45 /* LoadingViewController.swift */; };
+		D47F65B21F8AF12B007A6C45 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F65B11F8AF12B007A6C45 /* CustomActivityIndicatorView.swift */; };
 		D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */; };
 		D4958EB31F8A41D8004CE176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4958EB21F8A41D8004CE176 /* Assets.xcassets */; };
 		D4958EB61F8A41D8004CE176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4958EB41F8A41D8004CE176 /* Main.storyboard */; };
 		D4958EC11F8A41D8004CE176 /* TesonetTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EC01F8A41D8004CE176 /* TesonetTaskTests.swift */; };
 		D4958ECE1F8A444E004CE176 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958ECC1F8A444E004CE176 /* LoginViewController.swift */; };
-		D4958ED11F8A4467004CE176 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958ED01F8A4467004CE176 /* LoginViewPresenter.swift */; };
 		D4958ED61F8A6A30004CE176 /* TesonetTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4958ED41F8A6A30004CE176 /* TesonetTask.xcdatamodeld */; };
 		D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */; };
 		D4958EDB1F8A6C96004CE176 /* LoginButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D47F65AF1F8AED98007A6C45 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		D47F65B11F8AF12B007A6C45 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
 		D4958EA81F8A41D8004CE176 /* TesonetTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesonetTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4958EB21F8A41D8004CE176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,11 +53,10 @@
 		D4958EBC1F8A41D8004CE176 /* TesonetTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4958EC01F8A41D8004CE176 /* TesonetTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetTaskTests.swift; sourceTree = "<group>"; };
 		D4958EC21F8A41D8004CE176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4958ECC1F8A444E004CE176 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D4958ED01F8A4467004CE176 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		D4958ECC1F8A444E004CE176 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		D4958ED51F8A6A30004CE176 /* TesonetTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TesonetTask.xcdatamodel; sourceTree = "<group>"; };
 		D4958ED81F8A6A68004CE176 /* NSColorAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorAdditions.swift; sourceTree = "<group>"; };
-		D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButtonCell.swift; sourceTree = "<group>"; };
+		D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginButtonCell.swift; path = Login/LoginButtonCell.swift; sourceTree = "<group>"; };
 		D4958EDC1F8A7540004CE176 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D4C040341F8A87DD00179FB5 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D4C040361F8AAABD00179FB5 /* TableRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		D4C0403A1F8AAC6B00179FB5 /* NSTableViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTableViewAdditions.swift; sourceTree = "<group>"; };
 		D4C0403F1F8AAE5D00179FB5 /* IBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBaseCell.swift; sourceTree = "<group>"; };
 		D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		D4C040431F8ABEAB00179FB5 /* LoginToListSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginToListSegue.swift; sourceTree = "<group>"; };
+		D4C040431F8ABEAB00179FB5 /* LoginToListSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginToListSegue.swift; path = Login/LoginToListSegue.swift; sourceTree = "<group>"; };
 		D4C040451F8AC6A400179FB5 /* IBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBaseController.swift; sourceTree = "<group>"; };
 		D4C040471F8AD25900179FB5 /* NSBezierPathAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBezierPathAdditions.swift; sourceTree = "<group>"; };
 		D4C040491F8AD40F00179FB5 /* TableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
@@ -88,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D47F65AE1F8AED69007A6C45 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				D47F65B11F8AF12B007A6C45 /* CustomActivityIndicatorView.swift */,
+				D47F65AF1F8AED98007A6C45 /* LoadingViewController.swift */,
+			);
+			name = Loading;
+			path = Login/Loading;
+			sourceTree = "<group>";
+		};
 		D4958E9F1F8A41D7004CE176 = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +123,8 @@
 			children = (
 				D4C0403E1F8AAE4400179FB5 /* Base */,
 				D4C040331F8A859E00179FB5 /* List */,
-				D4958ED21F8A6996004CE176 /* Utilities */,
 				D4958ECB1F8A442E004CE176 /* Login */,
+				D4958ED21F8A6996004CE176 /* Utilities */,
 				D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */,
 				D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */,
 				D4958EB41F8A41D8004CE176 /* Main.storyboard */,
@@ -133,7 +145,7 @@
 		D4958ECB1F8A442E004CE176 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D4958ED01F8A4467004CE176 /* LoginViewPresenter.swift */,
+				D47F65AE1F8AED69007A6C45 /* Loading */,
 				D4958ECC1F8A444E004CE176 /* LoginViewController.swift */,
 				D4958EDA1F8A6C96004CE176 /* LoginButtonCell.swift */,
 				D4C040431F8ABEAB00179FB5 /* LoginToListSegue.swift */,
@@ -301,7 +313,7 @@
 			files = (
 				D4C040371F8AAABD00179FB5 /* TableRowView.swift in Sources */,
 				D4C040401F8AAE5D00179FB5 /* IBaseCell.swift in Sources */,
-				D4958ED11F8A4467004CE176 /* LoginViewPresenter.swift in Sources */,
+				D47F65B01F8AED98007A6C45 /* LoadingViewController.swift in Sources */,
 				D4958EDB1F8A6C96004CE176 /* LoginButtonCell.swift in Sources */,
 				D4958ED61F8A6A30004CE176 /* TesonetTask.xcdatamodeld in Sources */,
 				D4958ECE1F8A444E004CE176 /* LoginViewController.swift in Sources */,
@@ -310,6 +322,7 @@
 				D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */,
 				D4C0403B1F8AAC6B00179FB5 /* NSTableViewAdditions.swift in Sources */,
 				D4C040481F8AD25900179FB5 /* NSBezierPathAdditions.swift in Sources */,
+				D47F65B21F8AF12B007A6C45 /* CustomActivityIndicatorView.swift in Sources */,
 				D4C0404E1F8AD5B300179FB5 /* NSViewAdditions.swift in Sources */,
 				D4C040441F8ABEAB00179FB5 /* LoginToListSegue.swift in Sources */,
 				D4C0404A1F8AD40F00179FB5 /* TableViewHeader.swift in Sources */,

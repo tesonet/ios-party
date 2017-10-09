@@ -11,3 +11,4 @@
 "cPasswordPlaceholder" 		= "Password";
 "cServerTextFieldText"		= "SERVER";
 "cDistanceTextFieldText" 	= "DISTANCE";
+"cProgressTextFieldText"	= "Fetching the list...";
