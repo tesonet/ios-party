@@ -17,6 +17,10 @@ class ContainerViewController: NSViewController {
         super.viewDidLoad()
         let loginViewController = mainStoryboard.instantiateController(withIdentifier: "loginViewController") as! LoginViewController
         loginViewController.containerViewController = self
+        if let username = presenter.username {
+            loginViewController.setup(username:username)
+        }
+        
         self.insertChildViewController(loginViewController, at: 0)
         self.view.addSubview(loginViewController.view)
         self.view.frame = loginViewController.view.frame
@@ -36,21 +40,10 @@ extension ContainerViewController : ListViewControllerDelegate {
     
 }
 
-extension ContainerViewController : LoadingViewControllerDelegate {
-	
-    internal func didLoadData(vc: LoadingViewController) {
-		presenter.didLoadData(vc: self)
-	}
-    
-    internal func didFailLoadData(vc: LoadingViewController) {
-		presenter.didFailLoadData(vc: self)
-	}
-}
-
 extension ContainerViewController : LoginViewControllerDelegate {
     
-    func didRequestLogin(vc:LoginViewController) {
-    	presenter.didRequestLogin(vc: self)
+    func loginViewControllerdidRequestLogin(vc: LoginViewController, username: String, password: String) {
+    	presenter.containerVCdidRequestLogin(vc:self, username: username, password: password)
     }
     
 }

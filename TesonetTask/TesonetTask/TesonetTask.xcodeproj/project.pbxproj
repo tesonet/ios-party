@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082E15CE1F8B518D00153855 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E15CD1F8B518D00153855 /* CustomSegue.swift */; };
+		082E15D11F8B520C00153855 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E15D01F8B520C00153855 /* NetworkingManager.swift */; };
+		082E15D51F8B596300153855 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E15D41F8B596300153855 /* LoginRequest.swift */; };
+		082E15D71F8B5AFE00153855 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E15D61F8B5AFE00153855 /* UserModel.swift */; };
+		082E16041F8B717C00153855 /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 082E15E91F8B60F000153855 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		082E16191F8B880E00153855 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E16181F8B880E00153855 /* Constants.swift */; };
+		082E16231F8B8AFB00153855 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E16221F8B8AFB00153855 /* AlertUtil.swift */; };
 		D47F65B01F8AED98007A6C45 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F65AF1F8AED98007A6C45 /* LoadingViewController.swift */; };
 		D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */; };
 		D4958EB31F8A41D8004CE176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4958EB21F8A41D8004CE176 /* Assets.xcassets */; };
@@ -23,7 +30,6 @@
 		D4C0403B1F8AAC6B00179FB5 /* NSTableViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0403A1F8AAC6B00179FB5 /* NSTableViewAdditions.swift */; };
 		D4C040401F8AAE5D00179FB5 /* IBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0403F1F8AAE5D00179FB5 /* IBaseCell.swift */; };
 		D4C040421F8ABBC800179FB5 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */; };
-		D4C040441F8ABEAB00179FB5 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040431F8ABEAB00179FB5 /* CustomSegue.swift */; };
 		D4C040461F8AC6A400179FB5 /* IBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040451F8AC6A400179FB5 /* IBaseController.swift */; };
 		D4C040481F8AD25900179FB5 /* NSBezierPathAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040471F8AD25900179FB5 /* NSBezierPathAdditions.swift */; };
 		D4C0404A1F8AD40F00179FB5 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040491F8AD40F00179FB5 /* TableViewHeader.swift */; };
@@ -34,6 +40,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		082E15E61F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
+		082E15E81F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C7A1BC29950001F2B7A;
+			remoteInfo = "KeychainSwift-macOS";
+		};
+		082E15EA1F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C8A1BC29984001F2B7A;
+			remoteInfo = "KeychainSwift-watchOS";
+		};
+		082E15EC1F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23E785601BDA410C00B7564A;
+			remoteInfo = "KeychainSwift-tvOS";
+		};
+		082E15EE1F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C9771B1C118F00FE8090;
+			remoteInfo = KeychainSwiftTests;
+		};
+		082E15F01F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C99D1B1C133500FE8090;
+			remoteInfo = Demo;
+		};
+		082E15F21F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B601D3F62C2007C5B1F;
+			remoteInfo = "macOS Tests";
+		};
+		082E15F41F8B60F000153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B7B1D3F6779007C5B1F;
+			remoteInfo = "macOS Demo";
+		};
+		082E16051F8B717C00153855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 232B4C791BC29950001F2B7A;
+			remoteInfo = "KeychainSwift-macOS";
+		};
 		D4958EBD1F8A41D8004CE176 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4958EA01F8A41D8004CE176 /* Project object */;
@@ -43,7 +112,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		082E16071F8B717C00153855 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				082E16041F8B717C00153855 /* KeychainSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		082E15CD1F8B518D00153855 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		082E15D01F8B520C00153855 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		082E15D41F8B596300153855 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		082E15D61F8B5AFE00153855 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = KeychainSwift.xcodeproj; sourceTree = "<group>"; };
+		082E16181F8B880E00153855 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		082E16221F8B8AFB00153855 /* AlertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
 		D47F65AF1F8AED98007A6C45 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		D4958EA81F8A41D8004CE176 /* TesonetTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesonetTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +154,6 @@
 		D4C0403A1F8AAC6B00179FB5 /* NSTableViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTableViewAdditions.swift; sourceTree = "<group>"; };
 		D4C0403F1F8AAE5D00179FB5 /* IBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBaseCell.swift; sourceTree = "<group>"; };
 		D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		D4C040431F8ABEAB00179FB5 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSegue.swift; path = Login/CustomSegue.swift; sourceTree = "<group>"; };
 		D4C040451F8AC6A400179FB5 /* IBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBaseController.swift; sourceTree = "<group>"; };
 		D4C040471F8AD25900179FB5 /* NSBezierPathAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBezierPathAdditions.swift; sourceTree = "<group>"; };
 		D4C040491F8AD40F00179FB5 /* TableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
@@ -92,6 +181,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082E15CC1F8B513700153855 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				082E15D01F8B520C00153855 /* NetworkingManager.swift */,
+				082E15D41F8B596300153855 /* LoginRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		082E15CF1F8B51D500153855 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				082E15D61F8B5AFE00153855 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		082E15D81F8B607400153855 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				082E15D91F8B60DD00153855 /* Keychain */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		082E15D91F8B60DD00153855 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		082E15DB1F8B60F000153855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				082E15E71F8B60F000153855 /* KeychainSwift.framework */,
+				082E15E91F8B60F000153855 /* KeychainSwift.framework */,
+				082E15EB1F8B60F000153855 /* KeychainSwift.framework */,
+				082E15ED1F8B60F000153855 /* KeychainSwift.framework */,
+				082E15EF1F8B60F000153855 /* KeychainSwiftTests.xctest */,
+				082E15F11F8B60F000153855 /* Keychain Swift.app */,
+				082E15F31F8B60F000153855 /* macOS Tests.xctest */,
+				082E15F51F8B60F000153855 /* macOS Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D47F65AE1F8AED69007A6C45 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +259,9 @@
 		D4958EAA1F8A41D8004CE176 /* TesonetTask */ = {
 			isa = PBXGroup;
 			children = (
+				082E15D81F8B607400153855 /* 3rdParty */,
+				082E15CF1F8B51D500153855 /* Model */,
+				082E15CC1F8B513700153855 /* Networking */,
 				D4C0403E1F8AAE4400179FB5 /* Base */,
 				D4C040331F8A859E00179FB5 /* List */,
 				D4958ECB1F8A442E004CE176 /* Login */,
@@ -130,7 +270,6 @@
 				D4C040411F8ABBC800179FB5 /* ContainerViewController.swift */,
 				D4DC99621F8B08ED0098D992 /* ContainerViewControllerPresenter.swift */,
 				D4DC99641F8B09D40098D992 /* DataHandler.swift */,
-				D4C040431F8ABEAB00179FB5 /* CustomSegue.swift */,
 				D4958EB41F8A41D8004CE176 /* Main.storyboard */,
 				D4958ED31F8A69BE004CE176 /* Resources */,
 			);
@@ -160,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				D4958ED71F8A6A4C004CE176 /* Extensions */,
+				082E15CD1F8B518D00153855 /* CustomSegue.swift */,
+				082E16221F8B8AFB00153855 /* AlertUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -203,6 +344,7 @@
 			children = (
 				D4C0403F1F8AAE5D00179FB5 /* IBaseCell.swift */,
 				D4C040451F8AC6A400179FB5 /* IBaseController.swift */,
+				082E16181F8B880E00153855 /* Constants.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -217,10 +359,12 @@
 				D4958EA41F8A41D8004CE176 /* Sources */,
 				D4958EA51F8A41D8004CE176 /* Frameworks */,
 				D4958EA61F8A41D8004CE176 /* Resources */,
+				082E16071F8B717C00153855 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				082E16061F8B717C00153855 /* PBXTargetDependency */,
 			);
 			name = TesonetTask;
 			productName = TesonetTask;
@@ -279,6 +423,12 @@
 			mainGroup = D4958E9F1F8A41D7004CE176;
 			productRefGroup = D4958EA91F8A41D8004CE176 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 082E15DB1F8B60F000153855 /* Products */;
+					ProjectRef = 082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4958EA71F8A41D8004CE176 /* TesonetTask */,
@@ -286,6 +436,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		082E15E71F8B60F000153855 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 082E15E61F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		082E15E91F8B60F000153855 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 082E15E81F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		082E15EB1F8B60F000153855 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 082E15EA1F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		082E15ED1F8B60F000153855 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 082E15EC1F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		082E15EF1F8B60F000153855 /* KeychainSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KeychainSwiftTests.xctest;
+			remoteRef = 082E15EE1F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		082E15F11F8B60F000153855 /* Keychain Swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Keychain Swift.app";
+			remoteRef = 082E15F01F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		082E15F31F8B60F000153855 /* macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "macOS Tests.xctest";
+			remoteRef = 082E15F21F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		082E15F51F8B60F000153855 /* macOS Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "macOS Demo.app";
+			remoteRef = 082E15F41F8B60F000153855 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D4958EA61F8A41D8004CE176 /* Resources */ = {
@@ -315,8 +524,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C040371F8AAABD00179FB5 /* TableRowView.swift in Sources */,
+				082E16191F8B880E00153855 /* Constants.swift in Sources */,
+				082E15D71F8B5AFE00153855 /* UserModel.swift in Sources */,
 				D4C040401F8AAE5D00179FB5 /* IBaseCell.swift in Sources */,
 				D47F65B01F8AED98007A6C45 /* LoadingViewController.swift in Sources */,
+				082E15D51F8B596300153855 /* LoginRequest.swift in Sources */,
 				D4958EDB1F8A6C96004CE176 /* LoginButtonCell.swift in Sources */,
 				D4DC99651F8B09D40098D992 /* DataHandler.swift in Sources */,
 				D4958ED61F8A6A30004CE176 /* TesonetTask.xcdatamodeld in Sources */,
@@ -324,13 +536,15 @@
 				D4DC99631F8B08ED0098D992 /* ContainerViewControllerPresenter.swift in Sources */,
 				D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */,
 				D4C040461F8AC6A400179FB5 /* IBaseController.swift in Sources */,
+				082E15D11F8B520C00153855 /* NetworkingManager.swift in Sources */,
+				082E16231F8B8AFB00153855 /* AlertUtil.swift in Sources */,
 				D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */,
 				D4C0403B1F8AAC6B00179FB5 /* NSTableViewAdditions.swift in Sources */,
 				D4C040481F8AD25900179FB5 /* NSBezierPathAdditions.swift in Sources */,
 				D4C0404E1F8AD5B300179FB5 /* NSViewAdditions.swift in Sources */,
-				D4C040441F8ABEAB00179FB5 /* CustomSegue.swift in Sources */,
 				D4C0404A1F8AD40F00179FB5 /* TableViewHeader.swift in Sources */,
 				D4C040421F8ABBC800179FB5 /* ContainerViewController.swift in Sources */,
+				082E15CE1F8B518D00153855 /* CustomSegue.swift in Sources */,
 				D4C040351F8A87DD00179FB5 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +560,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		082E16061F8B717C00153855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KeychainSwift-macOS";
+			targetProxy = 082E16051F8B717C00153855 /* PBXContainerItemProxy */;
+		};
 		D4958EBE1F8A41D8004CE176 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4958EA71F8A41D8004CE176 /* TesonetTask */;
@@ -460,9 +679,11 @@
 		D4958EC61F8A41D8004CE176 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CDWC9M5VJC;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TesonetTask/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abelenkov.TesonetTask;
@@ -474,9 +695,11 @@
 		D4958EC71F8A41D8004CE176 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CDWC9M5VJC;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TesonetTask/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abelenkov.TesonetTask;

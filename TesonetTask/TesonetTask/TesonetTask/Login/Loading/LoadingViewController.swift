@@ -8,11 +8,6 @@
 
 import Cocoa
 
-protocol LoadingViewControllerDelegate : class {
-    func didLoadData(vc:LoadingViewController)
-    func didFailLoadData(vc:LoadingViewController)
-}
-
 class LoadingViewController: NSViewController {
 	
     @IBOutlet private weak var progressTextField: NSTextField!
@@ -21,15 +16,7 @@ class LoadingViewController: NSViewController {
     @IBOutlet fileprivate weak var backgroundHeightConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var backgroundWidthConstraint: NSLayoutConstraint!
     
-    private weak var delegate: LoadingViewControllerDelegate?
-    internal weak var containerViewController: ContainerViewController? {
-        get {
-            return delegate as? ContainerViewController
-        }
-        set {
-            delegate = newValue
-        }
-    }
+    internal weak var containerViewController: ContainerViewController?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +27,12 @@ class LoadingViewController: NSViewController {
     override func viewDidAppear() {
 		super.viewDidAppear()
         activityIndicator.spinClockwise(timeToRotate: 4.0)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
-        	self.activityIndicator.stopAnimations()
-            self.delegate?.didLoadData(vc: self)
-        }
 	}
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        self.activityIndicator.stopAnimations()
+    }
 }
 
 extension LoadingViewController : IBaseController {

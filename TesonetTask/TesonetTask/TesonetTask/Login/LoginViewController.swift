@@ -9,7 +9,7 @@
 import Cocoa
 
 protocol LoginViewControllerDelegate : class {
-    func didRequestLogin(vc:LoginViewController)
+    func loginViewControllerdidRequestLogin(vc:LoginViewController, username:String, password:String)
 }
 
 class LoginViewController: NSViewController {
@@ -23,6 +23,7 @@ class LoginViewController: NSViewController {
     @IBOutlet fileprivate weak var backgroundHeightConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var backgroundWidthConstraint: NSLayoutConstraint!
     
+    private var username : String?
     private weak var delegate : LoginViewControllerDelegate?
     internal weak var containerViewController: ContainerViewController? {
         get {
@@ -38,8 +39,29 @@ class LoginViewController: NSViewController {
         setupUI()
     }
     
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.fieldTextDidChange),
+            name: NSNotification.Name.NSTextDidChange, object: nil)
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    internal func setup(username:String) {
+        self.username = username
+    }
+    
+    @objc private func fieldTextDidChange(notification:NSNotification) {
+        loginButton.isEnabled = loginTextField.stringValue.characters.count > 0
+            && passwordTextField.stringValue.characters.count > 0
+    }
+    
     @IBAction private func loginAction(_ sender: NSButton) {
-        delegate?.didRequestLogin(vc: self)
+        delegate?.loginViewControllerdidRequestLogin(vc: self, username:loginTextField.stringValue,
+            password:passwordTextField.stringValue)
     }
     
     private func setupUI() {
@@ -54,6 +76,11 @@ class LoginViewController: NSViewController {
 		loginButton.title = NSLocalizedString("cLoginButtonTitle", comment: "")
         passwordTextField.placeholderString = NSLocalizedString("cPasswordPlaceholder", comment: "")
         loginTextField.placeholderString = NSLocalizedString("cUserNamePlaceholder", comment: "")
+        if let theUsername = username {
+            loginTextField.stringValue = theUsername
+            passwordTextField.stringValue = "********"
+            loginButton.isEnabled = true
+        }
     }
     
 }

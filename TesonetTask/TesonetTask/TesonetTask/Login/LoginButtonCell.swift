@@ -12,10 +12,12 @@ class LoginButtonCell: NSButtonCell {
     
     override func draw(withFrame cellFrame: NSRect, in controlView: NSView) {
         var backgroundColor : NSColor
-        if isHighlighted {
+        if isHighlighted && isEnabled {
             backgroundColor = NSColor.green
-        } else {
+        } else if isEnabled {
         	backgroundColor = NSColor.TNGreenColor
+        } else {
+            backgroundColor = NSColor.lightGray
         }
         
         let border = NSBezierPath(roundedRect: NSInsetRect(cellFrame, 0.5, 0.5), xRadius: 3, yRadius: 3)
