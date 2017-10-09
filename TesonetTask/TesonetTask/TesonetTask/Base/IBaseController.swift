@@ -10,6 +10,7 @@ import Cocoa
 
 protocol IBaseController: class {
 	var controller : NSViewController {get}
+    weak var containerViewController : ContainerViewController? {get set}
     func resetConstrains()
 }
 

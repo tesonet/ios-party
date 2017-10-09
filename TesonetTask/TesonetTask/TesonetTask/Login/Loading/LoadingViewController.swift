@@ -21,7 +21,15 @@ class LoadingViewController: NSViewController {
     @IBOutlet fileprivate weak var backgroundHeightConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var backgroundWidthConstraint: NSLayoutConstraint!
     
-    internal weak var delegate: LoadingViewControllerDelegate?
+    private weak var delegate: LoadingViewControllerDelegate?
+    internal weak var containerViewController: ContainerViewController? {
+        get {
+            return delegate as? ContainerViewController
+        }
+        set {
+            delegate = newValue
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +43,6 @@ class LoadingViewController: NSViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
         	self.activityIndicator.stopAnimations()
-            self.performSegue(withIdentifier:"listViewControllerSegue", sender: self)
             self.delegate?.didLoadData(vc: self)
         }
 	}

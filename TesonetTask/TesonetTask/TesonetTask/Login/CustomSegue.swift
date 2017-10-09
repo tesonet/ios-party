@@ -14,8 +14,7 @@ class CustomSegue: NSStoryboardSegue {
         let sourceViewController = self.sourceController as! IBaseController
         let destinationViewController = self.destinationController as! IBaseController
         let containerViewController = sourceViewController.controller.parent!
-//        destinationViewController.delegate = containerViewController as? ContainerViewController
-        
+        destinationViewController.containerViewController = containerViewController as? ContainerViewController
         containerViewController.insertChildViewController(destinationViewController.controller, at: 1)
         let targetSize = destinationViewController.controller.view.frame.size
         let targetWidth = destinationViewController.controller.view.frame.size.width

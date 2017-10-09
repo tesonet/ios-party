@@ -23,11 +23,23 @@ class LoginViewController: NSViewController {
     @IBOutlet fileprivate weak var backgroundHeightConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var backgroundWidthConstraint: NSLayoutConstraint!
     
-    internal weak var delegate : LoginViewControllerDelegate?
+    private weak var delegate : LoginViewControllerDelegate?
+    internal weak var containerViewController: ContainerViewController? {
+        get {
+            return delegate as? ContainerViewController
+        }
+        set {
+            delegate = newValue
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    @IBAction private func loginAction(_ sender: NSButton) {
+        delegate?.didRequestLogin(vc: self)
     }
     
     private func setupUI() {

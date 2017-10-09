@@ -10,20 +10,26 @@ import Cocoa
 
 class ContainerViewControllerPresenter: NSObject {
 	
-    internal func didRequestLogOut(vc: ListViewController) {
-		
+    internal func didRequestLogOut(vc: ContainerViewController) {
+        if let topController = vc.childViewControllers.first {
+            topController.performSegue(withIdentifier: "logoutSegue", sender: self)
+        }
 	}
     
-    internal func didLoadData(vc: LoadingViewController) {
+    internal func didLoadData(vc: ContainerViewController) {
+        if let topController = vc.childViewControllers.first {
+            topController.performSegue(withIdentifier: "listViewControllerSegue", sender: self)
+        }
+	}
+    
+    internal func didFailLoadData(vc: ContainerViewController) {
 
 	}
     
-    internal func didFailLoadData(vc: LoadingViewController) {
-
-	}
-    
-    func didRequestLogin(vc:LoginViewController) {
-    
+    func didRequestLogin(vc: ContainerViewController) {
+        if let topController = vc.childViewControllers.first {
+            topController.performSegue(withIdentifier: "loadingSegue", sender: self)
+        }
     }
     
 }

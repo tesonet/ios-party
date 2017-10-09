@@ -788,7 +788,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="WkM-NE-cwK" kind="custom" identifier="loadingViewControllerSegue" customClass="CustomSegue" customModule="TesonetTask" customModuleProvider="target" id="v9J-iZ-W9o"/>
+                                            <action selector="loginAction:" target="XfG-lQ-9wD" id="BQn-Yz-UtK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -828,6 +828,7 @@
                         <outlet property="loginViewContainer" destination="5jn-3U-1l5" id="SR4-ak-ELE"/>
                         <outlet property="passwordTextField" destination="cjb-4V-oqA" id="4Mw-iK-zoJ"/>
                         <outlet property="passwordViewContainer" destination="rIE-yu-pYS" id="1Ii-Wz-zP1"/>
+                        <segue destination="WkM-NE-cwK" kind="custom" identifier="loadingSegue" customClass="CustomSegue" customModule="TesonetTask" customModuleProvider="target" id="hSQ-6t-aaa"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

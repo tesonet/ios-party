@@ -21,7 +21,15 @@ class ListViewController: NSViewController {
     
     @IBOutlet private weak var tableView: NSTableView!
     
-    internal weak var delegate : ListViewControllerDelegate?
+    private weak var delegate : ListViewControllerDelegate?
+    internal weak var containerViewController: ContainerViewController? {
+        get {
+            return delegate as? ContainerViewController
+        }
+        set {
+            delegate = newValue
+        }
+    }
     	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +57,6 @@ class ListViewController: NSViewController {
     }
     
     @IBAction private func logoutAction(_ sender: NSButton) {
-    	performSegue(withIdentifier: "logoutSegue", sender: self)
         delegate?.didRequestLogOut(vc: self)
     }
     

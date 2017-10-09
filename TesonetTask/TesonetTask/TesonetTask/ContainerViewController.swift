@@ -15,7 +15,8 @@ class ContainerViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let loginViewController = mainStoryboard.instantiateController(withIdentifier: "loginViewController") as! NSViewController
+        let loginViewController = mainStoryboard.instantiateController(withIdentifier: "loginViewController") as! LoginViewController
+        loginViewController.containerViewController = self
         self.insertChildViewController(loginViewController, at: 0)
         self.view.addSubview(loginViewController.view)
         self.view.frame = loginViewController.view.frame
@@ -26,7 +27,7 @@ class ContainerViewController: NSViewController {
 extension ContainerViewController : ListViewControllerDelegate {
 	
     internal func didRequestLogOut(vc: ListViewController) {
-		presenter.didRequestLogOut(vc: vc)
+		presenter.didRequestLogOut(vc: self)
 	}
     
     internal func didRequestLoadData(vc:ListViewController) {
@@ -38,18 +39,18 @@ extension ContainerViewController : ListViewControllerDelegate {
 extension ContainerViewController : LoadingViewControllerDelegate {
 	
     internal func didLoadData(vc: LoadingViewController) {
-		presenter.didLoadData(vc: vc)
+		presenter.didLoadData(vc: self)
 	}
     
     internal func didFailLoadData(vc: LoadingViewController) {
-		presenter.didFailLoadData(vc: vc)
+		presenter.didFailLoadData(vc: self)
 	}
 }
 
 extension ContainerViewController : LoginViewControllerDelegate {
     
     func didRequestLogin(vc:LoginViewController) {
-    	presenter.didRequestLogin(vc: vc)
+    	presenter.didRequestLogin(vc: self)
     }
     
 }
