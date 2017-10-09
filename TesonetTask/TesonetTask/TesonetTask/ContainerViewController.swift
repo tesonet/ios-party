@@ -11,7 +11,7 @@ import Cocoa
 class ContainerViewController: NSViewController {
     private let mainStoryboard: NSStoryboard = NSStoryboard(name: "Main", bundle: nil)
     fileprivate let presenter: ContainerViewControllerPresenter = ContainerViewControllerPresenter()
-    fileprivate let dataHandler: DataHandler = DataHandler()
+    internal var dataHandler: DataHandler = DataHandler()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,13 @@ class ContainerViewController: NSViewController {
         self.insertChildViewController(loginViewController, at: 0)
         self.view.addSubview(loginViewController.view)
         self.view.frame = loginViewController.view.frame
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        if let _ = presenter.username, let _ = presenter.token {
+            presenter.containerVCdidRequestLogin(vc: self, username: "", password: "")
+        }
     }
     
 }

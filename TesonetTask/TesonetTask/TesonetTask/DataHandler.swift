@@ -10,6 +10,8 @@ import Cocoa
 
 class DataHandler: NSObject {
 	
+    internal var dataSource : [ServerModel] = []
+    
     internal func loadData() {
     
     }

@@ -14,6 +14,8 @@
 		082E16041F8B717C00153855 /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 082E15E91F8B60F000153855 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		082E16191F8B880E00153855 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E16181F8B880E00153855 /* Constants.swift */; };
 		082E16231F8B8AFB00153855 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E16221F8B8AFB00153855 /* AlertUtil.swift */; };
+		08B517AC1F8BA72500CC36C3 /* ServersListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B517AB1F8BA72500CC36C3 /* ServersListRequest.swift */; };
+		08B517B61F8BA80E00CC36C3 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B517B51F8BA80E00CC36C3 /* ServerModel.swift */; };
 		D47F65B01F8AED98007A6C45 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F65AF1F8AED98007A6C45 /* LoadingViewController.swift */; };
 		D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */; };
 		D4958EB31F8A41D8004CE176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4958EB21F8A41D8004CE176 /* Assets.xcassets */; };
@@ -134,6 +136,8 @@
 		082E15DA1F8B60F000153855 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = KeychainSwift.xcodeproj; sourceTree = "<group>"; };
 		082E16181F8B880E00153855 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		082E16221F8B8AFB00153855 /* AlertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
+		08B517AB1F8BA72500CC36C3 /* ServersListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListRequest.swift; sourceTree = "<group>"; };
+		08B517B51F8BA80E00CC36C3 /* ServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		D47F65AF1F8AED98007A6C45 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		D4958EA81F8A41D8004CE176 /* TesonetTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesonetTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4958EAB1F8A41D8004CE176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				082E15D01F8B520C00153855 /* NetworkingManager.swift */,
 				082E15D41F8B596300153855 /* LoginRequest.swift */,
+				08B517AB1F8BA72500CC36C3 /* ServersListRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				082E15D61F8B5AFE00153855 /* UserModel.swift */,
+				08B517B51F8BA80E00CC36C3 /* ServerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -535,12 +541,14 @@
 				D4958ECE1F8A444E004CE176 /* LoginViewController.swift in Sources */,
 				D4DC99631F8B08ED0098D992 /* ContainerViewControllerPresenter.swift in Sources */,
 				D4958EAC1F8A41D8004CE176 /* AppDelegate.swift in Sources */,
+				08B517B61F8BA80E00CC36C3 /* ServerModel.swift in Sources */,
 				D4C040461F8AC6A400179FB5 /* IBaseController.swift in Sources */,
 				082E15D11F8B520C00153855 /* NetworkingManager.swift in Sources */,
 				082E16231F8B8AFB00153855 /* AlertUtil.swift in Sources */,
 				D4958ED91F8A6A68004CE176 /* NSColorAdditions.swift in Sources */,
 				D4C0403B1F8AAC6B00179FB5 /* NSTableViewAdditions.swift in Sources */,
 				D4C040481F8AD25900179FB5 /* NSBezierPathAdditions.swift in Sources */,
+				08B517AC1F8BA72500CC36C3 /* ServersListRequest.swift in Sources */,
 				D4C0404E1F8AD5B300179FB5 /* NSViewAdditions.swift in Sources */,
 				D4C0404A1F8AD40F00179FB5 /* TableViewHeader.swift in Sources */,
 				D4C040421F8ABBC800179FB5 /* ContainerViewController.swift in Sources */,

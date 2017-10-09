@@ -9,6 +9,8 @@
 import Cocoa
 
 protocol ListViewControllerDelegate : class {
+    var dataHandler : DataHandler {get}
+    
     func didRequestLogOut(vc:ListViewController)
     func didRequestLoadData(vc:ListViewController)
 }
@@ -20,8 +22,14 @@ class ListViewController: NSViewController {
     private var tableViewHeader: NSView? = TableViewHeader.createFromNib()
     
     @IBOutlet private weak var tableView: NSTableView!
+    fileprivate var dataSource : [ServerModel] {
+        if let theDelegate = delegate {
+            return theDelegate.dataHandler.dataSource
+        }
+        return []
+    }
     
-    private weak var delegate : ListViewControllerDelegate?
+    fileprivate weak var delegate : ListViewControllerDelegate?
     internal weak var containerViewController: ContainerViewController? {
         get {
             return delegate as? ContainerViewController
@@ -69,7 +77,7 @@ extension ListViewController : IBaseController {
 extension ListViewController: NSTableViewDelegate, NSTableViewDataSource {
 	
     public func numberOfRows(in tableView: NSTableView) -> Int {
-    	return 50
+        return dataSource.count
     }
     
     public func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
@@ -79,6 +87,10 @@ extension ListViewController: NSTableViewDelegate, NSTableViewDataSource {
     public func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
     	guard let rowView : TableRowView = tableView.makeView(cellClass:TableRowView.self) else {
         	return nil
+        }
+        if dataSource.count > row {
+            let model = dataSource[row]
+            rowView.configure(model:model)
         }
         
     	return rowView

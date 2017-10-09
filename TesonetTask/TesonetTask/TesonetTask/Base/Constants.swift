@@ -12,4 +12,6 @@ class Constants {
     static let tokenKey = "token"
     static let messageKey = "message"
     static let userKey = "username"
+    static let nameKey = "name"
+    static let distanceKey = "distance"
 }

@@ -34,6 +34,7 @@ enum ServerError : Error {
 class NetworkingManager: NSObject {
     typealias kRequestCompletion = (Data?, URLResponse?, Error?) -> Void
     typealias kLoginCompletion = (UserModel?, Error?) -> Void
+    typealias kServersListCompletion = ([ServerModel]?, Error?) -> Void
     static let kBaseURLString = "http://playground.tesonet.lt/v1/"
     
     internal class func login(userName: String, password: String, completion:@escaping kLoginCompletion) -> URLSessionTask {
@@ -41,7 +42,7 @@ class NetworkingManager: NSObject {
         {(outData, outResponse, outError) in
             var theError : Error? = outError
             var theUser : UserModel?
-            if let JSONDict = JSONDict(from: outData) {
+            if let JSONDict = JSONModel(from: outData) as? [String:Any] {
                 if let token = JSONDict[Constants.tokenKey] as? String {
                     theUser = UserModel(token:token, username:userName)
                 } else {
@@ -53,16 +54,34 @@ class NetworkingManager: NSObject {
         return dataTask
     }
     
-    private class func JSONDict(from data:Data?) -> [String:Any]? {
-        var JSONDict : [String:Any]?
+    internal class func getServersList(token:String, completion:@escaping kServersListCompletion) -> URLSessionTask {
+        let dataTask = ServersListRequest.getServersList(token: token) { (outData, outResponse, outError) in
+            let theError : Error? = outError
+            var theServersList : [ServerModel] = []
+            if let JSONArray = JSONModel(from: outData) as? [[String:Any]] {
+                theServersList = JSONArray.flatMap({ (inRawModel) -> ServerModel? in
+                    guard let name = inRawModel[Constants.nameKey] as? String,
+                        let distance = inRawModel[Constants.distanceKey] as? UInt else {
+                        return nil
+                    }
+                    return ServerModel(name: name, distance: distance)
+                })
+            }
+            completion(theServersList, theError)
+        }
+        return dataTask
+    }
+    
+    private class func JSONModel(from data:Data?) -> Any? {
+        var JSONModel : Any?
         if let theData = data {
             do {
-                JSONDict = try JSONSerialization.jsonObject(with: theData, options: .allowFragments) as? [String:Any]
+                JSONModel = try JSONSerialization.jsonObject(with: theData, options: .allowFragments)
             } catch {
                 NSLog("Error on parsing JSON")
             }
         }
-        return JSONDict
+        return JSONModel
     }
     
 }

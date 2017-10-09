@@ -30,4 +30,9 @@ class TableRowView: NSTableRowView, IBaseCell {
         separatorView.layer?.backgroundColor = NSColor.TNSeparatorGrayColor.cgColor
 	}
     
+    internal func configure(model:ServerModel) {
+        serverTextField.stringValue = model.name
+        distanceTextField.stringValue = String(model.distance)
+    }
+    
 }
