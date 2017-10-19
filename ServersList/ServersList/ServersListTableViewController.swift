@@ -8,11 +8,26 @@
 
 import UIKit
 
-class ServersListTableViewController: UITableViewController {
-        
+class ServersListTableViewController: UITableViewController, TesonetAPIDelegate {    
+    
+    var servers = [Server]()
+    
+    func downloadedInfo(info: NSArray) {
+        for server in info{
+            if let serverDictionary = server as? NSDictionary{
+                servers.append(Server(name: serverDictionary.object(forKey: "name") as! String, distance:serverDictionary.object(forKey: "distance") as! Int ))
+            }
+            
+        }
+        self.tableView!.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        let api = TesonetAPI.sharedInstance
+        api.delegate = self;
+        api.getServers()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,24 +43,23 @@ class ServersListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.servers.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell : ServerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "serverCell", for: indexPath) as! ServerTableViewCell
+        
+        cell.serverName.text = self.servers[indexPath.row].name
+        cell.serverDistance.text = "\(self.servers[indexPath.row].distance)"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -37,7 +37,6 @@ class LoginViewController: UIViewController, TesonetAPIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func loginAction(_ sender: Any) {
         let api = TesonetAPI.sharedInstance
         api.delegate = self;
