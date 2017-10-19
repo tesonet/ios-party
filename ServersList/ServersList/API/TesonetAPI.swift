@@ -7,17 +7,20 @@
 //
 
 import Foundation
+import Alamofire
 
-protocol TesonetAPIDelegate {
-    func authenticated(success: Bool);
+@objc protocol TesonetAPIDelegate {
+    @objc optional func authenticated(success: Bool);
+    @objc optional func downloadedInfo(info: NSArray);
 }
 
 class TesonetAPI: API {
     
     var delegate : TesonetAPIDelegate?
     
-    let authUrl : String = "http://playground.tesonet.lt/v1/tokens";
-    var authToken : String = "";
+    let authUrl : String = "http://playground.tesonet.lt/v1/tokens"
+    let serversUrl : String = "http://playground.tesonet.lt/v1/servers"
+    var authToken : String = ""
     
     //Singleton approach
     static let sharedInstance = TesonetAPI()
@@ -28,11 +31,27 @@ class TesonetAPI: API {
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
                 if(self.checkIfAuthenticated(result: JSON)){
-                    self.delegate?.authenticated(success: true)
+                    self.authToken = JSON .object(forKey: "token") as! String
+                    self.delegate?.authenticated!(success: true)
                     return
                 }
             }
-            self.delegate?.authenticated(success: false)
+            self.delegate?.authenticated!(success: false)
+        }
+    }
+    
+    func getServers(){
+        if(self.authToken != ""){
+            let headers: HTTPHeaders = [
+                "Authorization": "Bearer " + self.authToken
+            ]
+            
+            self.makeRequest(method: "GET", url:self.serversUrl, parameters: [:], headers: headers).responseJSON { (response)  in
+                if let result = response.result.value {
+                    let JSON = result as! NSArray
+                    self.delegate?.downloadedInfo!(info: JSON)
+                }
+            }
         }
     }
     
