@@ -13,6 +13,7 @@ class ServerTableViewCell: UITableViewCell {
     @IBOutlet weak var serverName: UILabel!
     @IBOutlet weak var serverDistance: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

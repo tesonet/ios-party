@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ServersListTableViewController: UITableViewController, TesonetAPIDelegate {    
+class ServersListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TesonetAPIDelegate {
+    
+    
+    @IBOutlet weak var serversListTableView: UITableView!
     
     var servers = [Server]()
     
@@ -19,91 +22,54 @@ class ServersListTableViewController: UITableViewController, TesonetAPIDelegate 
             }
             
         }
-        self.tableView!.reloadData()
+        self.serversListTableView!.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setupTableViewHeader()
     
         let api = TesonetAPI.sharedInstance
         api.delegate = self;
         api.getServers()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func setupTableViewHeader(){
+        
+        let headerView = ServersTableViewHeader.instanceFromNib()
+    
+        self.serversListTableView.tableHeaderView = headerView
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.servers.count
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : ServerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "serverCell", for: indexPath) as! ServerTableViewCell
+    @IBAction func logout(_ sender: Any) {
+        let api = TesonetAPI.sharedInstance
         
+        api.cleanAuthorizationToken()
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : ServerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "serverCell", for: indexPath) as! ServerTableViewCell
+
         cell.serverName.text = self.servers[indexPath.row].name
-        cell.serverDistance.text = "\(self.servers[indexPath.row].distance)"
+        cell.serverDistance.text = "\(self.servers[indexPath.row].distance) km"
 
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
 }

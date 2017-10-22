@@ -63,4 +63,8 @@ class TesonetAPI: API {
         return false
     }
     
+    func cleanAuthorizationToken(){
+        self.authToken = ""
+    }
+    
 }
