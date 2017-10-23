@@ -20,6 +20,11 @@
 		6AA3073C1F9529BE00B10862 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3073B1F9529BE00B10862 /* API.swift */; };
 		6AA307401F96587C00B10862 /* TesonetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3073F1F96587C00B10862 /* TesonetAPI.swift */; };
 		6AA307421F99107400B10862 /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA307411F99107400B10862 /* ServerTableViewCell.swift */; };
+		6AA307461F9CE6E800B10862 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA307451F9CE6E800B10862 /* LoginButton.swift */; };
+		6AA307491F9CE84A00B10862 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA307481F9CE84A00B10862 /* CustomTextField.swift */; };
+		6AA3074F1F9D0B7A00B10862 /* ServersTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3074E1F9D0B7A00B10862 /* ServersTableViewHeader.swift */; };
+		6AA307511F9D0C5700B10862 /* ServersTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA307501F9D0C5700B10862 /* ServersTableViewHeader.xib */; };
+		6AA307551F9E557E00B10862 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA307541F9E557E00B10862 /* LoadingViewController.swift */; };
 		CCED9C735467D74909E5EC72 /* Pods_ServersListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF253BE0F7754598C624AD3F /* Pods_ServersListTests.framework */; };
 		CD2393005171668E42B393DF /* Pods_ServersListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5B0CBE2EE1F1A4ADE18662 /* Pods_ServersListUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +67,11 @@
 		6AA3073B1F9529BE00B10862 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		6AA3073F1F96587C00B10862 /* TesonetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetAPI.swift; sourceTree = "<group>"; };
 		6AA307411F99107400B10862 /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
+		6AA307451F9CE6E800B10862 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		6AA307481F9CE84A00B10862 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		6AA3074E1F9D0B7A00B10862 /* ServersTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersTableViewHeader.swift; sourceTree = "<group>"; };
+		6AA307501F9D0C5700B10862 /* ServersTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServersTableViewHeader.xib; sourceTree = "<group>"; };
+		6AA307541F9E557E00B10862 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		8E5B0CBE2EE1F1A4ADE18662 /* Pods_ServersListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ServersListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94266DC6AA78A7CF0BCC8EB9 /* Pods-ServersListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ServersListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ServersListTests/Pods-ServersListTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6CAAA189FD5A4C1B8E5D483 /* Pods_ServersList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ServersList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,16 +147,17 @@
 		6A54527D1F939D0B00907338 /* ServersList */ = {
 			isa = PBXGroup;
 			children = (
+				6AA307431F9CE6B500B10862 /* UIElements */,
 				6AA3073A1F95299900B10862 /* API */,
 				6A5452B41F9522FF00907338 /* Models */,
 				6A54527E1F939D0B00907338 /* AppDelegate.swift */,
-				6AA307411F99107400B10862 /* ServerTableViewCell.swift */,
 				6A5452801F939D0B00907338 /* ViewController.swift */,
 				6A5452AC1F939D4C00907338 /* LoginViewController.swift */,
 				6A5452B01F939DBA00907338 /* ServersListTableViewController.swift */,
 				6A5452821F939D0B00907338 /* Main.storyboard */,
 				6A5452851F939D0B00907338 /* Assets.xcassets */,
 				6A54528A1F939D0B00907338 /* Info.plist */,
+				6AA307541F9E557E00B10862 /* LoadingViewController.swift */,
 			);
 			path = ServersList;
 			sourceTree = "<group>";
@@ -184,6 +195,50 @@
 				6AA3073F1F96587C00B10862 /* TesonetAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		6AA307431F9CE6B500B10862 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				6AA3074B1F9D045200B10862 /* UIViews */,
+				6AA3074A1F9CFBD300B10862 /* Cells */,
+				6AA307471F9CE82E00B10862 /* TextFields */,
+				6AA307441F9CE6CE00B10862 /* Buttons */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		6AA307441F9CE6CE00B10862 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6AA307451F9CE6E800B10862 /* LoginButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		6AA307471F9CE82E00B10862 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				6AA307481F9CE84A00B10862 /* CustomTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		6AA3074A1F9CFBD300B10862 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6AA307411F99107400B10862 /* ServerTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6AA3074B1F9D045200B10862 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				6AA3074E1F9D0B7A00B10862 /* ServersTableViewHeader.swift */,
+				6AA307501F9D0C5700B10862 /* ServersTableViewHeader.xib */,
+			);
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		B33C8449EF10422958A5A0A3 /* Frameworks */ = {
@@ -313,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5452861F939D0B00907338 /* Assets.xcassets in Resources */,
+				6AA307511F9D0C5700B10862 /* ServersTableViewHeader.xib in Resources */,
 				6A5452841F939D0B00907338 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,13 +545,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5452B61F95237100907338 /* Server.swift in Sources */,
+				6AA307461F9CE6E800B10862 /* LoginButton.swift in Sources */,
 				6A5452B21F939DBA00907338 /* ServersListTableViewController.swift in Sources */,
 				6A5452AE1F939D4C00907338 /* LoginViewController.swift in Sources */,
+				6AA3074F1F9D0B7A00B10862 /* ServersTableViewHeader.swift in Sources */,
+				6AA307491F9CE84A00B10862 /* CustomTextField.swift in Sources */,
 				6A5452811F939D0B00907338 /* ViewController.swift in Sources */,
 				6AA3073C1F9529BE00B10862 /* API.swift in Sources */,
 				6A54527F1F939D0B00907338 /* AppDelegate.swift in Sources */,
 				6AA307421F99107400B10862 /* ServerTableViewCell.swift in Sources */,
 				6AA307401F96587C00B10862 /* TesonetAPI.swift in Sources */,
+				6AA307551F9E557E00B10862 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
