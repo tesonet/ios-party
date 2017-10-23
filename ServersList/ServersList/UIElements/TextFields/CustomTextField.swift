@@ -12,6 +12,9 @@ class CustomTextField: UITextField {
 
     let corner_radius : CGFloat =  5.0
     
+    /*
+     * Draws TextField with rounded corners and fixed height
+     */
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
@@ -21,14 +24,15 @@ class CustomTextField: UITextField {
         self.clipsToBounds = true
     }
     
+    /**
+     * Adds placeholder to textField
+     */
     func addPlaceholder(placeholder: String){
         self.placeholder = placeholder
     }
     
     /**
      * Adding icon for this textfield.
-     * @parames: icon - UIImage
-     * @return: void
      */
     func addIcon(icon: UIImage){
         self.leftViewMode = UITextFieldViewMode.always

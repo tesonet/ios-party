@@ -12,6 +12,9 @@ class LoginButton: UIButton {
 
     let corner_radius : CGFloat =  5.0
 
+    /*
+     * Draws login button with rounded corners and fixed height
+     */
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         

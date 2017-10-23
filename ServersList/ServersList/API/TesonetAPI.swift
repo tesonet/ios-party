@@ -25,6 +25,11 @@ class TesonetAPI: API {
     //Singleton approach
     static let sharedInstance = TesonetAPI()
     
+    /*
+     * Authenticates to API and calls TesonetAPIDelegate authenticated() method
+     * @param username - user name
+     * @param password - user password
+     */
     func authenticate(username:String, password:String) {
         self.makeRequest(method: "POST", url:self.authUrl, parameters: ["username":username, "password":password]).responseJSON { (response)  in
             
@@ -40,6 +45,9 @@ class TesonetAPI: API {
         }
     }
     
+    /*
+     * Gets servers list from API and calls TesonetAPIDelegate downloadedInfo() method
+     */
     func getServers(){
         if(self.authToken != ""){
             let headers: HTTPHeaders = [
@@ -55,6 +63,11 @@ class TesonetAPI: API {
         }
     }
     
+    /**
+     * Checks if EndPoint received "token"
+     * @param result - received result
+     * @return bool
+     */
     func checkIfAuthenticated(result : NSDictionary) -> Bool {
         if(result.object(forKey: "token") != nil){
             return true
@@ -63,6 +76,9 @@ class TesonetAPI: API {
         return false
     }
     
+    /**
+     * Cleans token on logout.
+     */
     func cleanAuthorizationToken(){
         self.authToken = ""
     }

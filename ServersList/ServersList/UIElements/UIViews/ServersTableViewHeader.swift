@@ -9,7 +9,10 @@
 import UIKit
 
 class ServersTableViewHeader: UIView {
-        
+    
+    /*
+     * Initiates ServerTableViewHeader from ServersTableViewHeader.xib
+     */
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "ServersTableViewHeader", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }

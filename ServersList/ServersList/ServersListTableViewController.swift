@@ -20,12 +20,6 @@ class ServersListViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.setupTableViewHeader()
     }
-    
-    func setupTableViewHeader(){
-        let headerView = ServersTableViewHeader.instanceFromNib()
-    
-        self.serversListTableView.tableHeaderView = headerView
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,6 +35,12 @@ class ServersListViewController: UIViewController, UITableViewDelegate, UITableV
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
         self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    func setupTableViewHeader(){
+        let headerView = ServersTableViewHeader.instanceFromNib()
+        
+        self.serversListTableView.tableHeaderView = headerView
     }
     
     // MARK: - Table view data source

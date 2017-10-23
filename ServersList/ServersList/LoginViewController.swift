@@ -18,6 +18,8 @@ class LoginViewController: UIViewController, TesonetAPIDelegate {
     
     var customModalViewController: UIViewController? = nil
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,19 +34,25 @@ class LoginViewController: UIViewController, TesonetAPIDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func loginAction(_ sender: Any) {
+        tesonetApi.authenticate(username: usernameTextField.text!, password: passwordTextField.text!)
+    }
+    
+    /*
+     * Initialize username text field
+     */
     func initUsernameTextField(){
         self.usernameTextField.addIcon(icon: UIImage(named: "ico-username")!)
         self.usernameTextField.addPlaceholder(placeholder: "Username")
     }
     
+    /*
+     * Initialize password text field
+     */
     func initPasswordTextField(){
         self.passwordTextField.addIcon(icon: UIImage(named: "ico-lock")!)
         self.passwordTextField.addPlaceholder(placeholder: "Password")
         self.passwordTextField.isSecureTextEntry = true
-    }
-    
-    @IBAction func loginAction(_ sender: Any) {
-        tesonetApi.authenticate(username: usernameTextField.text!, password: passwordTextField.text!)
     }
     
     // MARK: - API Delegate
