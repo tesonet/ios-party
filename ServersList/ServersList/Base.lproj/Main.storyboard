@@ -56,10 +56,6 @@
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBk-E7-2uP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loader" translatesAutoresizingMaskIntoConstraints="NO" id="K87-52-fgT" customClass="load">
-                                <rect key="frame" x="30" y="220" width="312" height="228"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -93,6 +89,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="90.404797601199405"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="otD-3E-EJm">
+            <objects>
+                <viewController storyboardIdentifier="loadingViewController" id="SEx-4M-Mn6" customClass="LoadingViewController" customModule="ServersList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dzy-mw-f8d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" highlightedImage="background" translatesAutoresizingMaskIntoConstraints="NO" id="coR-pi-ict">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loader" translatesAutoresizingMaskIntoConstraints="NO" id="K87-52-fgT">
+                                <rect key="frame" x="31" y="219" width="312" height="228"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching the list..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwv-Mj-4cM">
+                                <rect key="frame" x="31" y="484" width="312" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="coR-pi-ict" firstAttribute="leading" secondItem="BWQ-aV-wMY" secondAttribute="leading" id="0Nn-7B-xYr"/>
+                            <constraint firstItem="K87-52-fgT" firstAttribute="leading" secondItem="BWQ-aV-wMY" secondAttribute="leading" constant="31" id="28j-42-gYf"/>
+                            <constraint firstItem="BWQ-aV-wMY" firstAttribute="trailing" secondItem="Pwv-Mj-4cM" secondAttribute="trailing" constant="32" id="MkI-dh-k87"/>
+                            <constraint firstItem="coR-pi-ict" firstAttribute="top" secondItem="dzy-mw-f8d" secondAttribute="top" id="Mzb-Fx-MeY"/>
+                            <constraint firstItem="Pwv-Mj-4cM" firstAttribute="leading" secondItem="BWQ-aV-wMY" secondAttribute="leading" constant="31" id="NST-8T-W9f"/>
+                            <constraint firstItem="BWQ-aV-wMY" firstAttribute="bottom" secondItem="Pwv-Mj-4cM" secondAttribute="bottom" constant="162" id="Ocn-ai-Hvs"/>
+                            <constraint firstItem="BWQ-aV-wMY" firstAttribute="trailing" secondItem="K87-52-fgT" secondAttribute="trailing" constant="32" id="UZz-Os-FLD"/>
+                            <constraint firstItem="K87-52-fgT" firstAttribute="top" secondItem="BWQ-aV-wMY" secondAttribute="top" constant="199" id="fLH-tF-aAB"/>
+                            <constraint firstItem="coR-pi-ict" firstAttribute="bottom" secondItem="BWQ-aV-wMY" secondAttribute="bottom" id="oEY-vQ-Kj7"/>
+                            <constraint firstItem="Pwv-Mj-4cM" firstAttribute="top" secondItem="K87-52-fgT" secondAttribute="bottom" constant="37" id="wRX-bN-hpq"/>
+                            <constraint firstItem="BWQ-aV-wMY" firstAttribute="bottom" secondItem="K87-52-fgT" secondAttribute="bottom" constant="220" id="wRp-4e-D3h"/>
+                            <constraint firstItem="coR-pi-ict" firstAttribute="trailing" secondItem="BWQ-aV-wMY" secondAttribute="trailing" id="xxI-Jo-Dek"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BWQ-aV-wMY"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingImageView" destination="K87-52-fgT" id="aTT-dN-Cp7"/>
+                        <outlet property="loadingTextLabel" destination="Pwv-Mj-4cM" id="Om6-0y-8fu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UhN-s0-dkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896.79999999999995" y="83.208395802098963"/>
         </scene>
         <!--Servers List View Controller-->
         <scene sceneID="BXg-jM-huR">
@@ -195,13 +238,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gc-oR-h6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.60000000000002" y="89.505247376311857"/>
+            <point key="canvasLocation" x="1663" y="90"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="307" height="513"/>
         <image name="ico-logout" width="29" height="29"/>
-        <image name="loader" width="150" height="156"/>
+        <image name="loader" width="146" height="146"/>
         <image name="logo-dark" width="130" height="34"/>
         <image name="logo-white" width="246" height="64"/>
     </resources>

@@ -15,28 +15,13 @@ class ServersListViewController: UIViewController, UITableViewDelegate, UITableV
     
     var servers = [Server]()
     
-    func downloadedInfo(info: NSArray) {
-        for server in info{
-            if let serverDictionary = server as? NSDictionary{
-                servers.append(Server(name: serverDictionary.object(forKey: "name") as! String, distance:serverDictionary.object(forKey: "distance") as! Int ))
-            }
-            
-        }
-        self.serversListTableView!.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupTableViewHeader()
-    
-        let api = TesonetAPI.sharedInstance
-        api.delegate = self;
-        api.getServers()
     }
     
     func setupTableViewHeader(){
-        
         let headerView = ServersTableViewHeader.instanceFromNib()
     
         self.serversListTableView.tableHeaderView = headerView
@@ -44,11 +29,6 @@ class ServersListViewController: UIViewController, UITableViewDelegate, UITableV
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Table view data source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.servers.count
     }
 
     @IBAction func logout(_ sender: Any) {
@@ -61,6 +41,11 @@ class ServersListViewController: UIViewController, UITableViewDelegate, UITableV
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
         self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    // MARK: - Table view data source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.servers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

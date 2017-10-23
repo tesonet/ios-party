@@ -14,13 +14,18 @@ class LoginViewController: UIViewController, TesonetAPIDelegate {
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var submitButton: LoginButton!
     
+    var tesonetApi: TesonetAPI = TesonetAPI.sharedInstance;
+    
+    var customModalViewController: UIViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Initializing UI elements
         self.initUsernameTextField()
         self.initPasswordTextField()
-        // Do any additional setup after loading the view.
+        
+        tesonetApi.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,20 +44,42 @@ class LoginViewController: UIViewController, TesonetAPIDelegate {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        let api = TesonetAPI.sharedInstance
-        api.delegate = self;
-        api.authenticate(username: usernameTextField.text!, password: passwordTextField.text!)
+        tesonetApi.authenticate(username: usernameTextField.text!, password: passwordTextField.text!)
     }
     
     // MARK: - API Delegate
     func authenticated(success: Bool) {
         if(success){
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            self.customModalViewController = (
+                storyboard?.instantiateViewController(
+                    withIdentifier: "loadingViewController")
+                )!
             
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ServersListViewController") as! ServersListViewController
-            self.present(nextViewController, animated:true, completion:nil)
+            self.customModalViewController?.modalTransitionStyle = .crossDissolve
+            present(self.customModalViewController!, animated: true, completion: nil)
+            
+            tesonetApi.getServers()
         } else {
             print("TODO: Write error of unauthenticated")
         }
+    }
+    
+    func downloadedInfo(info: NSArray) {
+        var servers = [Server]()
+        
+        for server in info{
+            if let serverDictionary = server as? NSDictionary{
+                servers.append(Server(name: serverDictionary.object(forKey: "name") as! String, distance:serverDictionary.object(forKey: "distance") as! Int ))
+            }
+        }
+        
+        self.customModalViewController?.dismiss(animated: false, completion: {
+            //Loading servers tableviewcontroller
+            let nextViewController = self.storyboard?.instantiateViewController(
+                withIdentifier: "ServersListViewController") as! ServersListViewController
+            
+            nextViewController.servers = servers
+            self.present(nextViewController, animated:true, completion:nil)
+        })
     }
 }
