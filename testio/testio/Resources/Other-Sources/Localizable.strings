@@ -1,0 +1,7 @@
+"username_placeholder" = "Username";
+"password_placeholder" = "Password";
+"log_in" = "Log in";
+"fetching_servers" = "Fetching the list...";
+"invalid_credentials" = "Invalid username or password";
+"something_went_wrong" = "Something went wrong. Please try again.";
+"logging_in" = "Logging in";
