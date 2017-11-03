@@ -1,0 +1,6 @@
+framework module Pods_ServersListUITests {
+  umbrella header "Pods-ServersListUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
