@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingView" customModule="tesodemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-bg" translatesAutoresizingMaskIntoConstraints="NO" id="TpK-ON-i8w">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-circle" translatesAutoresizingMaskIntoConstraints="NO" id="4gW-OQ-Tyq">
+                    <rect key="frame" x="114.5" y="260.5" width="146" height="146"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="146" id="iLy-8b-en0"/>
+                        <constraint firstAttribute="width" constant="146" id="ked-YH-fvM"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el0-QM-evl">
+                    <rect key="frame" x="20" y="406.5" width="335" height="260.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="el0-QM-evl" secondAttribute="bottom" id="8P4-6s-RZH"/>
+                <constraint firstItem="TpK-ON-i8w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JUZ-nv-Q5o"/>
+                <constraint firstItem="TpK-ON-i8w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="M6V-t3-eVG"/>
+                <constraint firstItem="4gW-OQ-Tyq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MdS-mw-cUB"/>
+                <constraint firstAttribute="bottom" secondItem="TpK-ON-i8w" secondAttribute="bottom" id="RIr-qS-Z9b"/>
+                <constraint firstItem="el0-QM-evl" firstAttribute="top" secondItem="4gW-OQ-Tyq" secondAttribute="bottom" id="SBA-wE-Tf3"/>
+                <constraint firstItem="el0-QM-evl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="YAA-nA-TVr"/>
+                <constraint firstItem="4gW-OQ-Tyq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aIJ-dU-Xbf"/>
+                <constraint firstAttribute="trailing" secondItem="el0-QM-evl" secondAttribute="trailing" constant="20" id="jpQ-pX-d7C"/>
+                <constraint firstAttribute="trailing" secondItem="TpK-ON-i8w" secondAttribute="trailing" id="qoQ-Y3-lUW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="el0-QM-evl" id="hBq-z7-rmq"/>
+                <outlet property="loadingImage" destination="4gW-OQ-Tyq" id="E9S-mV-EDE"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="loading-bg" width="320" height="568"/>
+        <image name="loading-circle" width="146" height="146"/>
+    </resources>
+</document>
