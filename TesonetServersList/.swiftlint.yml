@@ -16,6 +16,9 @@ disabled_rules:
   - sorted_imports
   - unneeded_parentheses_in_closure_argument
   - explicit_top_level_acl
+  - vertical_parameter_alignment_on_call
+  - no_grouping_extension
+  - implicitly_unwrapped_optional
 
 opt_in_rules: # some rules are only opt-in
   - empty_count
@@ -55,10 +58,7 @@ opt_in_rules: # some rules are only opt-in
   - single_test_class
   - strict_fileprivate
   - trailing_closure
-  - vertical_parameter_alignment_on_call
   - vertical_parameter_alignment
-  - no_grouping_extension
-  - implicitly_unwrapped_optional
 
 force_cast: warning # implicitly
 

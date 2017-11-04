@@ -18,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
 		-> Bool
 	{
-		// Override point for customization after application launch.
+		
+		if TSLUser.current == nil {
+			TSLUISessionManager.shared.showLoginViewController()
+		}
+		
 		return true
 	}
 	
