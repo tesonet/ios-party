@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Delegate-->
+        <!--Login View Controller-->
         <scene sceneID="IbF-3p-3gs">
             <objects>
                 <viewController storyboardIdentifier="TSLLoginViewController" id="bMj-kw-NLh" customClass="TSLLoginViewController" customModule="TesonetServersList" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,9 +28,6 @@
                                     <constraint firstAttribute="width" constant="240" id="Jde-Kk-i9I"/>
                                     <constraint firstAttribute="height" constant="128" id="PyW-ON-A9A"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="bMj-kw-NLh" id="lcm-pk-Iaa"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,6 +41,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BAe-FJ-v6U"/>
                     </view>
+                    <connections>
+                        <outlet property="credentialsView" destination="4m4-yG-ydY" id="qpC-oJ-6yK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6v-8O-VKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

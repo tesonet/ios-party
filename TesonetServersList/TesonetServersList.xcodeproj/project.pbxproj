@@ -29,9 +29,33 @@
 		6852D9C11FADD7BB00F34D26 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6852D9C31FADD7BB00F34D26 /* Login.strings */; };
 		6852D9C41FADD7BF00F34D26 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6852D9C61FADD7BF00F34D26 /* Localized.strings */; };
 		6859C70D1FAF634800AA3DC4 /* TSLTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */; };
-		6859C70F1FAF658B00AA3DC4 /* TSLAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C70E1FAF658B00AA3DC4 /* TSLAuthorization.swift */; };
+		6859C70F1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C70E1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift */; };
 		6859C7121FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */; };
 		6859C7141FAF6D4A00AA3DC4 /* TSLKeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */; };
+		68C82EEF1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */; };
+		68C82EF31FB05FEF00306858 /* TSLServersListTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */; };
+		68C82EF51FB0690100306858 /* TSLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF41FB0690100306858 /* TSLProvider.swift */; };
+		68C82EF81FB078F400306858 /* AuthorizationAPIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */; };
+		68C82EFA1FB0790600306858 /* AuthorizationAPIModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */; };
+		68C82EFE1FB07DBE00306858 /* TSLServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */; };
+		68C82F001FB07DD900306858 /* TSLServersListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C82EFF1FB07DD900306858 /* TSLServersListViewController.storyboard */; };
+		68C82F051FB07E8900306858 /* TSLServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F031FB07E8900306858 /* TSLServerTableViewCell.swift */; };
+		68C82F061FB07E8900306858 /* TSLServerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F041FB07E8900306858 /* TSLServerTableViewCell.xib */; };
+		68C82F0B1FB07FF500306858 /* TesonetServersList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F091FB07FF500306858 /* TesonetServersList.xcdatamodeld */; };
+		68C82F0E1FB0809200306858 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F0D1FB0809200306858 /* CoreDataStack.swift */; };
+		68C82F101FB080C400306858 /* FileManager+Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F0F1FB080C400306858 /* FileManager+Directories.swift */; };
+		68C82F131FB0822700306858 /* NSManagedObjectContext+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F121FB0822700306858 /* NSManagedObjectContext+Utility.swift */; };
+		68C82F161FB0855900306858 /* ServersListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F151FB0855900306858 /* ServersListModule.swift */; };
+		68C82F181FB0998E00306858 /* TSLServersListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F171FB0998E00306858 /* TSLServersListSectionHeaderView.swift */; };
+		68C82F1A1FB099A400306858 /* TSLServersListSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F191FB099A400306858 /* TSLServersListSectionHeaderView.xib */; };
+		68C82F1C1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F1B1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift */; };
+		68C82F1F1FB0A3EA00306858 /* TSLServersListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */; };
+		68C82F231FB0A86700306858 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F221FB0A86700306858 /* Formatters.swift */; };
+		68C82F251FB0B7A800306858 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F241FB0B7A800306858 /* UIImage+Resize.swift */; };
+		68C82F2A1FB0BBAB00306858 /* ServersList.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F2C1FB0BBAB00306858 /* ServersList.strings */; };
+		68C82F311FB0DCDC00306858 /* TSLScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F301FB0DCDC00306858 /* TSLScaledFont.swift */; };
+		68C82F331FB0DF8200306858 /* LucidaGrande-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F321FB0DF8200306858 /* LucidaGrande-Regular.ttf */; };
+		68C82F351FB0E60400306858 /* LucidaGrande.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F341FB0E60400306858 /* LucidaGrande.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +77,7 @@
 		6852D9A41FADB99300F34D26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6852D9A51FADB99C00F34D26 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		6852D9A61FADB9A300F34D26 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
-		6852D9A71FADB9B100F34D26 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6852D9A71FADB9B100F34D26 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6852D9A81FADB9BB00F34D26 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		6852D9A91FADB9D500F34D26 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6852D9AB1FADBC3600F34D26 /* UIWindow+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Utils.swift"; sourceTree = "<group>"; };
@@ -66,9 +90,33 @@
 		6852D9C21FADD7BB00F34D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
 		6852D9C51FADD7BF00F34D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLTargetType.swift; sourceTree = "<group>"; };
-		6859C70E1FAF658B00AA3DC4 /* TSLAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLAuthorization.swift; sourceTree = "<group>"; };
+		6859C70E1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLAuthorizationAPITargets.swift; sourceTree = "<group>"; };
 		6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLUserSessionManager.swift; sourceTree = "<group>"; };
 		6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLKeychainManager.swift; sourceTree = "<group>"; };
+		68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TSLAuthorizationAPITargets+Credentials.swift"; sourceTree = "<group>"; };
+		68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListTarget.swift; sourceTree = "<group>"; };
+		68C82EF41FB0690100306858 /* TSLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLProvider.swift; sourceTree = "<group>"; };
+		68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIModule.swift; sourceTree = "<group>"; };
+		68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIModuleProtocol.swift; sourceTree = "<group>"; };
+		68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListViewController.swift; sourceTree = "<group>"; };
+		68C82EFF1FB07DD900306858 /* TSLServersListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSLServersListViewController.storyboard; sourceTree = "<group>"; };
+		68C82F031FB07E8900306858 /* TSLServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServerTableViewCell.swift; sourceTree = "<group>"; };
+		68C82F041FB07E8900306858 /* TSLServerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLServerTableViewCell.xib; sourceTree = "<group>"; };
+		68C82F0A1FB07FF500306858 /* TesonetServersList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TesonetServersList.xcdatamodel; sourceTree = "<group>"; };
+		68C82F0D1FB0809200306858 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		68C82F0F1FB080C400306858 /* FileManager+Directories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Directories.swift"; sourceTree = "<group>"; };
+		68C82F121FB0822700306858 /* NSManagedObjectContext+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utility.swift"; sourceTree = "<group>"; };
+		68C82F151FB0855900306858 /* ServersListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListModule.swift; sourceTree = "<group>"; };
+		68C82F171FB0998E00306858 /* TSLServersListSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListSectionHeaderView.swift; sourceTree = "<group>"; };
+		68C82F191FB099A400306858 /* TSLServersListSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLServersListSectionHeaderView.xib; sourceTree = "<group>"; };
+		68C82F1B1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLManagedObjectTableViewDataSource.swift; sourceTree = "<group>"; };
+		68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListDataSource.swift; sourceTree = "<group>"; };
+		68C82F221FB0A86700306858 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		68C82F241FB0B7A800306858 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		68C82F2B1FB0BBAB00306858 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ServersList.strings; sourceTree = "<group>"; };
+		68C82F301FB0DCDC00306858 /* TSLScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLScaledFont.swift; sourceTree = "<group>"; };
+		68C82F321FB0DF8200306858 /* LucidaGrande-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LucidaGrande-Regular.ttf"; sourceTree = "<group>"; };
+		68C82F341FB0E60400306858 /* LucidaGrande.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LucidaGrande.plist; sourceTree = "<group>"; };
 		AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetServersList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetServersList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +189,8 @@
 		682CFCAE1FAD1074003A16A6 /* TesonetServersList */ = {
 			isa = PBXGroup;
 			children = (
+				68C82F201FB0A85600306858 /* Utility */,
+				68C82F0C1FB0806B00306858 /* CoreData */,
 				6859C70B1FAF632500AA3DC4 /* API */,
 				680F13591FADEED30013A8CF /* Views */,
 				6852D9AD1FADC91400F34D26 /* Models */,
@@ -166,10 +216,12 @@
 		682CFCB01FAD1080003A16A6 /* TesonetServersList */ = {
 			isa = PBXGroup;
 			children = (
+				68C82F2D1FB0DB2800306858 /* Fonts */,
 				6852D9BA1FADD5C400F34D26 /* Localizations */,
 				6852D99A1FADB79900F34D26 /* Controllers */,
 				682CFCA11FAD0FF8003A16A6 /* Assets.xcassets */,
 				682CFCA31FAD0FF8003A16A6 /* LaunchScreen.storyboard */,
+				68C82F091FB07FF500306858 /* TesonetServersList.xcdatamodeld */,
 			);
 			name = TesonetServersList;
 			path = Resources/TesonetServersList;
@@ -178,6 +230,7 @@
 		682CFCB11FAD1098003A16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68C82EFC1FB07DA100306858 /* Servers list */,
 				6852D9B11FADCA9800F34D26 /* TSLBaseViewController.swift */,
 				6852D9B51FADD02900F34D26 /* Login */,
 			);
@@ -187,8 +240,8 @@
 		6852D9911FADAC1A00F34D26 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				6852D9941FADADB300F34D26 /* Session */,
 				6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */,
+				6852D9941FADADB300F34D26 /* Session */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -205,6 +258,7 @@
 		6852D9951FADADBD00F34D26 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				68C82F111FB0821900306858 /* CoreData */,
 				6852D9AA1FADBB8100F34D26 /* UIKit */,
 				6852D9961FADADC600F34D26 /* Foundation */,
 			);
@@ -215,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				6852D9971FADADE900F34D26 /* Notification.Name+TSLSession.swift */,
+				68C82F0F1FB080C400306858 /* FileManager+Directories.swift */,
 				6852D9BD1FADD71700F34D26 /* String+Localized.swift */,
 			);
 			path = Foundation;
@@ -232,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				6852D9991FADB79300F34D26 /* Login */,
+				68C82F081FB07F7F00306858 /* Servers list */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +343,7 @@
 				6852D9AB1FADBC3600F34D26 /* UIWindow+Utils.swift */,
 				6852D9B31FADCDA700F34D26 /* UIView+CornerRadius.swift */,
 				680F13531FADE8A80013A8CF /* UIImage+Images.swift */,
+				68C82F241FB0B7A800306858 /* UIImage+Resize.swift */,
 				680F13551FADE9150013A8CF /* UIColor+Colors.swift */,
 				680F13571FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift */,
 			);
@@ -313,8 +370,7 @@
 		6852D9B51FADD02900F34D26 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6852D9B61FADD08300F34D26 /* TSLCredentilasView.swift */,
-				6852D9B81FADD09500F34D26 /* TSLCredentilasView.xib */,
+				68C82EFB1FB07D8900306858 /* Credentilas view */,
 				6852D99D1FADB7CF00F34D26 /* TSLLoginViewController.swift */,
 			);
 			path = Login;
@@ -325,6 +381,7 @@
 			children = (
 				6852D9C31FADD7BB00F34D26 /* Login.strings */,
 				6852D9C61FADD7BF00F34D26 /* Localized.strings */,
+				68C82F2C1FB0BBAB00306858 /* ServersList.strings */,
 			);
 			path = Localizations;
 			sourceTree = "<group>";
@@ -333,7 +390,9 @@
 			isa = PBXGroup;
 			children = (
 				6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */,
-				6859C70E1FAF658B00AA3DC4 /* TSLAuthorization.swift */,
+				68C82EF41FB0690100306858 /* TSLProvider.swift */,
+				68C82EF01FB05FB800306858 /* Authorization */,
+				68C82EF11FB05FC700306858 /* Servers list */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -343,6 +402,123 @@
 			children = (
 			);
 			path = Token;
+			sourceTree = "<group>";
+		};
+		68C82EF01FB05FB800306858 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EF61FB078DA00306858 /* Target */,
+				68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */,
+				68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		68C82EF11FB05FC700306858 /* Servers list */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F141FB0853C00306858 /* Target */,
+				68C82F151FB0855900306858 /* ServersListModule.swift */,
+			);
+			path = "Servers list";
+			sourceTree = "<group>";
+		};
+		68C82EF61FB078DA00306858 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				6859C70E1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift */,
+				68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		68C82EFB1FB07D8900306858 /* Credentilas view */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9B61FADD08300F34D26 /* TSLCredentilasView.swift */,
+				6852D9B81FADD09500F34D26 /* TSLCredentilasView.xib */,
+			);
+			path = "Credentilas view";
+			sourceTree = "<group>";
+		};
+		68C82EFC1FB07DA100306858 /* Servers list */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */,
+				68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */,
+				68C82F1D1FB0A3D300306858 /* Section header */,
+				68C82F071FB07E8E00306858 /* Server cell */,
+			);
+			path = "Servers list";
+			sourceTree = "<group>";
+		};
+		68C82F071FB07E8E00306858 /* Server cell */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F031FB07E8900306858 /* TSLServerTableViewCell.swift */,
+				68C82F041FB07E8900306858 /* TSLServerTableViewCell.xib */,
+			);
+			path = "Server cell";
+			sourceTree = "<group>";
+		};
+		68C82F081FB07F7F00306858 /* Servers list */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EFF1FB07DD900306858 /* TSLServersListViewController.storyboard */,
+			);
+			path = "Servers list";
+			sourceTree = "<group>";
+		};
+		68C82F0C1FB0806B00306858 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F0D1FB0809200306858 /* CoreDataStack.swift */,
+				68C82F1B1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		68C82F111FB0821900306858 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F121FB0822700306858 /* NSManagedObjectContext+Utility.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		68C82F141FB0853C00306858 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		68C82F1D1FB0A3D300306858 /* Section header */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F171FB0998E00306858 /* TSLServersListSectionHeaderView.swift */,
+				68C82F191FB099A400306858 /* TSLServersListSectionHeaderView.xib */,
+			);
+			path = "Section header";
+			sourceTree = "<group>";
+		};
+		68C82F201FB0A85600306858 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F221FB0A86700306858 /* Formatters.swift */,
+				68C82F301FB0DCDC00306858 /* TSLScaledFont.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		68C82F2D1FB0DB2800306858 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F321FB0DF8200306858 /* LucidaGrande-Regular.ttf */,
+				68C82F341FB0E60400306858 /* LucidaGrande.plist */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		8F2C6DAE4FE1AFFB90704D5F /* Frameworks */ = {
@@ -430,12 +606,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C82F061FB07E8900306858 /* TSLServerTableViewCell.xib in Resources */,
+				68C82F1A1FB099A400306858 /* TSLServersListSectionHeaderView.xib in Resources */,
+				68C82F331FB0DF8200306858 /* LucidaGrande-Regular.ttf in Resources */,
 				6852D9C41FADD7BF00F34D26 /* Localized.strings in Resources */,
 				6852D9B91FADD09500F34D26 /* TSLCredentilasView.xib in Resources */,
 				682CFCA51FAD0FF8003A16A6 /* LaunchScreen.storyboard in Resources */,
+				68C82F2A1FB0BBAB00306858 /* ServersList.strings in Resources */,
 				6852D99C1FADB7B200F34D26 /* TSLLoginViewController.storyboard in Resources */,
+				68C82F001FB07DD900306858 /* TSLServersListViewController.storyboard in Resources */,
 				6852D9C11FADD7BB00F34D26 /* Login.strings in Resources */,
 				682CFCA21FAD0FF8003A16A6 /* Assets.xcassets in Resources */,
+				68C82F351FB0E60400306858 /* LucidaGrande.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,23 +708,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				680F13581FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift in Sources */,
+				68C82F1F1FB0A3EA00306858 /* TSLServersListDataSource.swift in Sources */,
 				6852D99E1FADB7CF00F34D26 /* TSLLoginViewController.swift in Sources */,
 				680F13561FADE9150013A8CF /* UIColor+Colors.swift in Sources */,
+				68C82F311FB0DCDC00306858 /* TSLScaledFont.swift in Sources */,
+				68C82F0E1FB0809200306858 /* CoreDataStack.swift in Sources */,
+				68C82EFA1FB0790600306858 /* AuthorizationAPIModuleProtocol.swift in Sources */,
+				68C82EF81FB078F400306858 /* AuthorizationAPIModule.swift in Sources */,
+				68C82F131FB0822700306858 /* NSManagedObjectContext+Utility.swift in Sources */,
 				6859C7121FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift in Sources */,
 				6859C70D1FAF634800AA3DC4 /* TSLTargetType.swift in Sources */,
+				68C82F1C1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift in Sources */,
+				68C82F181FB0998E00306858 /* TSLServersListSectionHeaderView.swift in Sources */,
 				680F135B1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift in Sources */,
-				6859C70F1FAF658B00AA3DC4 /* TSLAuthorization.swift in Sources */,
+				68C82F161FB0855900306858 /* ServersListModule.swift in Sources */,
+				68C82EEF1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift in Sources */,
+				68C82EFE1FB07DBE00306858 /* TSLServersListViewController.swift in Sources */,
+				68C82F231FB0A86700306858 /* Formatters.swift in Sources */,
+				6859C70F1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift in Sources */,
 				6852D9B01FADC92D00F34D26 /* TSLUser.swift in Sources */,
+				68C82EF51FB0690100306858 /* TSLProvider.swift in Sources */,
+				68C82EF31FB05FEF00306858 /* TSLServersListTarget.swift in Sources */,
 				6852D9B41FADCDA700F34D26 /* UIView+CornerRadius.swift in Sources */,
 				6852D9B21FADCA9800F34D26 /* TSLBaseViewController.swift in Sources */,
 				6852D9BE1FADD71700F34D26 /* String+Localized.swift in Sources */,
 				680F13541FADE8A80013A8CF /* UIImage+Images.swift in Sources */,
+				68C82F101FB080C400306858 /* FileManager+Directories.swift in Sources */,
 				6852D9981FADADE900F34D26 /* Notification.Name+TSLSession.swift in Sources */,
+				68C82F051FB07E8900306858 /* TSLServerTableViewCell.swift in Sources */,
+				68C82F251FB0B7A800306858 /* UIImage+Resize.swift in Sources */,
 				6859C7141FAF6D4A00AA3DC4 /* TSLKeychainManager.swift in Sources */,
 				6852D9AC1FADBC3600F34D26 /* UIWindow+Utils.swift in Sources */,
 				682CFC9B1FAD0FF8003A16A6 /* AppDelegate.swift in Sources */,
 				6852D9B71FADD08300F34D26 /* TSLCredentilasView.swift in Sources */,
 				6852D9931FADAC7B00F34D26 /* TSLUISessionManager.swift in Sources */,
+				68C82F0B1FB07FF500306858 /* TesonetServersList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +771,14 @@
 				6852D9C51FADD7BF00F34D26 /* en */,
 			);
 			name = Localized.strings;
+			sourceTree = "<group>";
+		};
+		68C82F2C1FB0BBAB00306858 /* ServersList.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68C82F2B1FB0BBAB00306858 /* en */,
+			);
+			name = ServersList.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -624,10 +832,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=200 -Xfrontend -warn-long-expression-type-checking=150";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -676,7 +884,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -740,6 +948,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68C82F091FB07FF500306858 /* TesonetServersList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68C82F0A1FB07FF500306858 /* TesonetServersList.xcdatamodel */,
+			);
+			currentVersion = 68C82F0A1FB07FF500306858 /* TesonetServersList.xcdatamodel */;
+			path = TesonetServersList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 682CFC8F1FAD0FF8003A16A6 /* Project object */;
 }

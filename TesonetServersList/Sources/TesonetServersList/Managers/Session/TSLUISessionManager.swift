@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Reusable
 
+/// Handles UI updates.
 final class TSLUISessionManager {
 	
 	static let shared: TSLUISessionManager = TSLUISessionManager()
@@ -18,8 +19,9 @@ final class TSLUISessionManager {
 	private var logoutObserver: NSObjectProtocol?
 	private var sessionExpiredObserver: NSObjectProtocol?
 	
+	/// Strong reference to key window.
 	private var window: UIWindow?
-	
+
 	// MARK: - Lifecycle
 	
 	private init() {
@@ -74,6 +76,9 @@ final class TSLUISessionManager {
 	
 	// MARK: - Notifications handlers
 	
+	/// Returns key window. If no key window exists - creates a new one.
+	///
+	/// - Returns: key window.
 	private func getWindow() -> UIWindow {
 		if let keyWindow = UIWindow.keyWindow {
 			return keyWindow
@@ -81,13 +86,22 @@ final class TSLUISessionManager {
 		if let keyWindow = self.window {
 			return keyWindow
 		}
+		
 		let newWindow = UIWindow(frame: UIScreen.main.bounds)
+		newWindow.windowLevel = UIWindowLevelStatusBar + 1
 		newWindow.makeKeyAndVisible()
 		self.window = newWindow
 		return newWindow
 	}
 	
 	final func showMainViewController() {
+		
+		let serversListVC: TSLServersListViewController = .instantiate()
+		let mainViewController = UINavigationController(rootViewController: serversListVC)
+		mainViewController.navigationBar.isTranslucent = false
+		mainViewController.navigationBar.barTintColor = .navigationBarBackground
+		mainViewController.navigationBar.shadowImage = UIImage()
+		getWindow().set(rootViewController: mainViewController)
 		
 	}
 	

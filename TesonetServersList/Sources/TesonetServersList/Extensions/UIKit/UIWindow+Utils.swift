@@ -28,7 +28,7 @@ extension UIWindow {
 		return visibleViewController(from: rootViewController)
 	}
 	
-	final private func visibleViewController(from viewController: UIViewController?) -> UIViewController? {
+	private func visibleViewController(from viewController: UIViewController?) -> UIViewController? {
 		
 		if let navigationController = viewController as? UINavigationController {
 			

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 import Result
 
-final class TSLUserSessionManager: PluginType {
+final class TSLUserSessionManager {
 	
 	static let shared: TSLUserSessionManager = TSLUserSessionManager()
 	
@@ -20,7 +20,28 @@ final class TSLUserSessionManager: PluginType {
 		
 	}
 	
-	func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+	final var isUserAuthorised: Bool {
+		return !keychainManager.accessToken.isEmpty
+	}
+	
+	final func updateAccessToken(_ accessToken: String) {
+		let previousToken = keychainManager.accessToken
+		keychainManager.accessToken = accessToken
+		if !accessToken.isEmpty && previousToken.isEmpty {
+			NotificationCenter.default.post(Notification(name: Notification.Name.tslLogin))
+		}
+	}
+	
+	final func logout() {
+		keychainManager.accessToken = ""
+		NotificationCenter.default.post(Notification(name: Notification.Name.tslLogout))
+	}
+	
+}
+
+extension TSLUserSessionManager: PluginType {
+	
+	final func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
 		
 		var request = request
 		
@@ -34,7 +55,7 @@ final class TSLUserSessionManager: PluginType {
 		
 	}
 	
-	func didReceive(_ result: Result<Moya.Response, MoyaError>, target: TargetType) {
+	final func didReceive(_ result: Result<Moya.Response, MoyaError>, target: TargetType) {
 		
 	}
 	

@@ -8,31 +8,40 @@
 
 import UIKit
 import Reusable
-import Moya
+import Alamofire
 
 final class TSLLoginViewController: TSLBaseViewController, StoryboardBased {
 	
-	private let provider: MoyaProvider<TSLAuthorization> = MoyaProvider<TSLAuthorization>()
+	private let authorizationModule: AuthorizationAPIModuleProtocol = AuthorizationAPIModule()
+	
+	@IBOutlet private var credentialsView: TSLCredentilasView! {
+		didSet {
+			credentialsView.delegate = self
+		}
+	}
 	
 }
 
 extension TSLLoginViewController: TSLCredentilasViewDelegate {
 	
-	func tslCredentilasViewDidPressLoginButton(_ credentialsView: TSLCredentilasView) {
+	func tslCredentilasViewDidPressLoginButton(
+		_ credentialsView: TSLCredentilasView,
+		with credentials: TSLAuthorizationAPITargets.Credentials)
+	{
 		
-		provider.request(.authorize) { [unowned self] (result) in
-			switch result {
-			case let .success(moyaResponse):
-				do {
-					let token = try moyaResponse.map(String.self, atKeyPath: "token")
-					let statusCode = moyaResponse.statusCode
-				} catch {
-					self.showError(error)
-				}
-			// do something with the response data or statusCode
-			case let .failure(error):
-				self.showError(error)
+		authorizationModule.authorize(with: credentials) { [unowned self] (result) in
+			// `unowned` because controller should & will be alive during the request.
+			
+			defer {
+				self.credentialsView.enableLoginButton()
 			}
+			
+			guard result.isSuccess
+				else {
+					self.showError(result.error!) // swiftlint:disable:this force_unwrapping
+					return
+			}
+			
 		}
 		
 	}

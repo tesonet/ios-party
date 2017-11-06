@@ -18,4 +18,12 @@ extension UIImage {
 		return #imageLiteral(resourceName: "login.Password")
 	}
 	
+	final class var logoutIcon: UIImage {
+		return #imageLiteral(resourceName: "logoutIcon").withRenderingMode(.alwaysOriginal)
+	}
+	
+	final class var logoDark: UIImage {
+		return #imageLiteral(resourceName: "logo.Dark").withRenderingMode(.alwaysOriginal)
+	}
+	
 }

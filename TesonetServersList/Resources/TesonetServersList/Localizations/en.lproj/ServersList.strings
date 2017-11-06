@@ -1,0 +1,13 @@
+/* 
+  ServersList.strings
+  TesonetServersList
+
+  Created by Vitalii Budnik on 11/6/17.
+  Copyright © 2017 Tesonet. All rights reserved.
+*/
+
+"HEADER.SERVER NAME" = "Server name";
+"HEADER.DISTANCE" = "Distance";
+
+"ERROR.CANT CAST SERVER RESPONSE.DESCR" = "Can't cast server response from %@ to expected %@";
+"ERROR.CANT CAST SERVER RESPONSE.SUGGEST" = "¯\_(ツ)_/¯";

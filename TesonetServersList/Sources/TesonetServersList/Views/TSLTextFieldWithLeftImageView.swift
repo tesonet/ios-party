@@ -8,9 +8,27 @@
 
 import UIKit
 
-class TSLTextFieldWithLeftImageView: UITextField {
+class TSLTextField: UITextField {
 	
-	override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
+	var placeholderFont: UIFont = TSLScaledFont.defalut.font(forTextStyle: .callout) {
+		didSet {
+			if let placeholder = placeholder ?? attributedPlaceholder?.string {
+				let attriutedString = attributedPlaceholder ?? NSAttributedString(string: placeholder)
+				let mutableAttributedString = NSMutableAttributedString(attributedString: attriutedString)
+				mutableAttributedString.addAttribute(.font,
+																						 value: placeholderFont,
+																						 range: NSRange(location: 0,
+																														length: placeholder.count))
+				self.attributedPlaceholder = attriutedString
+			}
+		}
+	}
+	
+}
+
+final class TSLTextFieldWithLeftImageView: TSLTextField {
+	
+	override final func leftViewRect(forBounds bounds: CGRect) -> CGRect {
 		let offset = UIOffset(horizontal: 15.0,
 													vertical: 10.0)
 		let imageViewSize: CGFloat = max(bounds.height - offset.vertical * 2, 0)

@@ -9,6 +9,13 @@
 import Foundation
 import KeychainAccess
 
+/// Keychain manager.
+///
+/// Stores bearer access token.
+/// - note: Personally I don't think it's right to store username/password anywhere.
+/// Usually OAuth has 2 tokens - access & refresh, and I'm storing both of them in the Keychain.
+/// On the first 401 status code response - there should be a request of a new access & refresh tokens,
+/// using current refresh.
 final class TSLKeychainManager {
 	
 	private let keychain: Keychain = {
@@ -21,7 +28,7 @@ final class TSLKeychainManager {
 		
 	}()
 	
-	var accessToken: String {
+	final var accessToken: String {
 		get {
 			do {
 				return try keychain.get(#function) ?? ""

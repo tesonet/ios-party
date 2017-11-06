@@ -16,7 +16,7 @@ protocol TSLTargetType: TargetType {
 extension TSLTargetType {
 	
 	var baseURL: URL {
-		return URL(string: "http://playground.tesonet.lt/")! // swiftlint:disable:this force_unwrapping
+		return URL(string: "http://playground.tesonet.lt/v1/")! // swiftlint:disable:this force_unwrapping
 	}
 	
 	var headers: [String : String]? {
@@ -25,18 +25,6 @@ extension TSLTargetType {
 	
 	var validate: Bool {
 		return true
-	}
-	
-}
-
-protocol TSLTargetTypeV1: TSLTargetType {
-	
-}
-
-extension TSLTargetTypeV1 {
-	
-	var baseURL: URL {
-		return URL(string: "http://playground.tesonet.lt/v1/")! // swiftlint:disable:this force_unwrapping
 	}
 	
 }

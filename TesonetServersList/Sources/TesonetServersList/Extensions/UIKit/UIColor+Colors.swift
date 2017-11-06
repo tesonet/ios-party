@@ -18,4 +18,20 @@ extension UIColor {
 		return .white
 	}
 	
+	final class var serversListHeaderBackground: UIColor {
+		return .white
+	}
+	
+	final class var navigationBarBackground: UIColor {
+		return #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+	}
+	
+	final class var serversListCellText: UIColor {
+		return #colorLiteral(red: 0.5647058824, green: 0.5647058824, blue: 0.5647058824, alpha: 1)
+	}
+	
+	final class var serversListHeaderText: UIColor {
+		return #colorLiteral(red: 0.6549019608, green: 0.6549019608, blue: 0.6549019608, alpha: 1)
+	}
+	
 }

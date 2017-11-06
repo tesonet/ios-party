@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		-> Bool
 	{
 		
-		if TSLUser.current == nil {
+		if TSLUserSessionManager.shared.isUserAuthorised {
+			TSLUISessionManager.shared.showMainViewController()
+		} else {
 			TSLUISessionManager.shared.showLoginViewController()
 		}
 		

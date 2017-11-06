@@ -54,12 +54,12 @@ class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 																	message: (error as NSError).localizedRecoverySuggestion,
 																	preferredStyle: .alert)
 		
-		let dismissAction = UIAlertAction(title: "DISMISS",
+		let dismissAction = UIAlertAction(title: "DISMISS".localized,
 																			style: .cancel) { (_) in handler?() }
 		
 		alert.addAction(dismissAction)
 		
-		show(alert, sender: self)
+		present(alert, animated: true, completion: .none)
 		
 	}
 	
