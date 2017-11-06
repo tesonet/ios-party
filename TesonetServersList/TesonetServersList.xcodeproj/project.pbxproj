@@ -28,6 +28,10 @@
 		6852D9BE1FADD71700F34D26 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9BD1FADD71700F34D26 /* String+Localized.swift */; };
 		6852D9C11FADD7BB00F34D26 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6852D9C31FADD7BB00F34D26 /* Login.strings */; };
 		6852D9C41FADD7BF00F34D26 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6852D9C61FADD7BF00F34D26 /* Localized.strings */; };
+		6859C70D1FAF634800AA3DC4 /* TSLTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */; };
+		6859C70F1FAF658B00AA3DC4 /* TSLAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C70E1FAF658B00AA3DC4 /* TSLAuthorization.swift */; };
+		6859C7121FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */; };
+		6859C7141FAF6D4A00AA3DC4 /* TSLKeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,10 @@
 		6852D9BD1FADD71700F34D26 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		6852D9C21FADD7BB00F34D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
 		6852D9C51FADD7BF00F34D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLTargetType.swift; sourceTree = "<group>"; };
+		6859C70E1FAF658B00AA3DC4 /* TSLAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLAuthorization.swift; sourceTree = "<group>"; };
+		6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLUserSessionManager.swift; sourceTree = "<group>"; };
+		6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLKeychainManager.swift; sourceTree = "<group>"; };
 		AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetServersList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetServersList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +141,7 @@
 		682CFCAE1FAD1074003A16A6 /* TesonetServersList */ = {
 			isa = PBXGroup;
 			children = (
+				6859C70B1FAF632500AA3DC4 /* API */,
 				680F13591FADEED30013A8CF /* Views */,
 				6852D9AD1FADC91400F34D26 /* Models */,
 				6852D9951FADADBD00F34D26 /* Extensions */,
@@ -179,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				6852D9941FADADB300F34D26 /* Session */,
+				6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 		6852D9941FADADB300F34D26 /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */,
 				6852D9921FADAC7B00F34D26 /* TSLUISessionManager.swift */,
 			);
 			path = Session;
@@ -285,6 +296,7 @@
 		6852D9AD1FADC91400F34D26 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6859C7101FAF6BE100AA3DC4 /* Token */,
 				6852D9AE1FADC91A00F34D26 /* User */,
 			);
 			path = Models;
@@ -315,6 +327,22 @@
 				6852D9C61FADD7BF00F34D26 /* Localized.strings */,
 			);
 			path = Localizations;
+			sourceTree = "<group>";
+		};
+		6859C70B1FAF632500AA3DC4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */,
+				6859C70E1FAF658B00AA3DC4 /* TSLAuthorization.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6859C7101FAF6BE100AA3DC4 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Token;
 			sourceTree = "<group>";
 		};
 		8F2C6DAE4FE1AFFB90704D5F /* Frameworks */ = {
@@ -500,13 +528,17 @@
 				680F13581FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift in Sources */,
 				6852D99E1FADB7CF00F34D26 /* TSLLoginViewController.swift in Sources */,
 				680F13561FADE9150013A8CF /* UIColor+Colors.swift in Sources */,
+				6859C7121FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift in Sources */,
+				6859C70D1FAF634800AA3DC4 /* TSLTargetType.swift in Sources */,
 				680F135B1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift in Sources */,
+				6859C70F1FAF658B00AA3DC4 /* TSLAuthorization.swift in Sources */,
 				6852D9B01FADC92D00F34D26 /* TSLUser.swift in Sources */,
 				6852D9B41FADCDA700F34D26 /* UIView+CornerRadius.swift in Sources */,
 				6852D9B21FADCA9800F34D26 /* TSLBaseViewController.swift in Sources */,
 				6852D9BE1FADD71700F34D26 /* String+Localized.swift in Sources */,
 				680F13541FADE8A80013A8CF /* UIImage+Images.swift in Sources */,
 				6852D9981FADADE900F34D26 /* Notification.Name+TSLSession.swift in Sources */,
+				6859C7141FAF6D4A00AA3DC4 /* TSLKeychainManager.swift in Sources */,
 				6852D9AC1FADBC3600F34D26 /* UIWindow+Utils.swift in Sources */,
 				682CFC9B1FAD0FF8003A16A6 /* AppDelegate.swift in Sources */,
 				6852D9B71FADD08300F34D26 /* TSLCredentilasView.swift in Sources */,
@@ -595,7 +627,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=50";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

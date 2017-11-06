@@ -43,6 +43,26 @@ class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 		removeKeyboardObservers()
 	}
 	
+	// MARK: - Error.
+	
+	func showError(
+		_ error: Error,
+		onDismiss handler: (() -> Void)? = .none)
+	{
+		
+		let alert = UIAlertController(title: (error as NSError).localizedDescription,
+																	message: (error as NSError).localizedRecoverySuggestion,
+																	preferredStyle: .alert)
+		
+		let dismissAction = UIAlertAction(title: "DISMISS",
+																			style: .cancel) { (_) in handler?() }
+		
+		alert.addAction(dismissAction)
+		
+		show(alert, sender: self)
+		
+	}
+	
 	// MARK: - Keyboard.
 	
 	// MARK: Keyboard. Notifications observers.

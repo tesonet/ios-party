@@ -130,7 +130,7 @@ extension TSLCredentilasView.Error: LocalizedError {
 		return "Login"
 	}
 	
-	var localizedDescription: String {
+	var errorDescription: String? {
 		return localizationKey.appending(".DESCR").localized(using: localizationTable)
 	}
 	
