@@ -11,13 +11,14 @@ import Moya
 import Result
 import Alamofire
 
+/// Authorization module.
 final class AuthorizationAPIModule: AuthorizationAPIModuleProtocol {
 	
 	private let provider: MoyaProvider<TSLAuthorizationAPITargets> = MoyaProvider<TSLAuthorizationAPITargets>()
 	
 	final func authorize(
 		with credentials: TSLAuthorizationAPITargets.Credentials,
-		completionHandler: @escaping (Alamofire.Result<Void>) -> Void)
+		completionHandler: @escaping (_ result: Alamofire.Result<Void>) -> Void)
 	{
 		
 		provider.request(.authorize(with: credentials)) { (result) in

@@ -41,12 +41,4 @@ extension ServerData {
 	
 	@NSManaged var searchString: String?
 	
-	
-	override func willSave() {
-		super.willSave()
-	}
-	
-	override func validateForDelete() throws {
-		try super.validateForDelete()
-	}
 }

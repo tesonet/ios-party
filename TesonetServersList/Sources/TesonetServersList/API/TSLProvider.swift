@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 
+/// Requests povider for non-auth targets.
 final class TSLProvider<Target: TargetType>: MoyaProvider<Target> {
 	
 	override init(

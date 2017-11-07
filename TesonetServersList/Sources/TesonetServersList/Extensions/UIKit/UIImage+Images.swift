@@ -19,11 +19,11 @@ extension UIImage {
 	}
 	
 	final class var logoutIcon: UIImage {
-		return #imageLiteral(resourceName: "logoutIcon").withRenderingMode(.alwaysOriginal)
+		return #imageLiteral(resourceName: "logoutIcon")
 	}
 	
 	final class var logoDark: UIImage {
-		return #imageLiteral(resourceName: "logo.Dark").withRenderingMode(.alwaysOriginal)
+		return #imageLiteral(resourceName: "logo.Dark")
 	}
 	
 }

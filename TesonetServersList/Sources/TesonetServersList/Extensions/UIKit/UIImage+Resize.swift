@@ -10,6 +10,10 @@ import UIKit
 
 extension UIImage {
 	
+	/// Returns resized image to desired `height`.
+	///
+	/// - Parameter height: new image height.
+	/// - Returns: resized image to desired `height`.
 	func scaled(changingHeightTo height: CGFloat) -> UIImage? {
 		
 		let size = self.size

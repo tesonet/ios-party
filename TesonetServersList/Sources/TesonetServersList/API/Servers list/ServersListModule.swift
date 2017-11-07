@@ -63,6 +63,9 @@ final class ServersListModule {
 
 private extension ServersListModule {
 	
+	/// Errors occured during response parsing.
+	///
+	/// - cantCastServerResponse: can't cast server response to the expected one.
 	enum Error: Swift.Error {
 		
 		case cantCastServerResponse(from: Any.Type, to: Any.Type)

@@ -10,6 +10,7 @@ import Foundation
 
 extension FileManager {
 	
+	/// Returns application support directory in user domain mask.
 	final var applicationSupportDirectory: URL {
 		
 		let urls = self.urls(for: .applicationSupportDirectory, in: .userDomainMask)

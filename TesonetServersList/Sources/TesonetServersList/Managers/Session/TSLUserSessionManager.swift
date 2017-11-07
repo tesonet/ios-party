@@ -9,6 +9,8 @@
 import Foundation
 import Moya
 import Result
+import protocol Alamofire.RequestAdapter
+import protocol Alamofire.RequestRetrier
 
 final class TSLUserSessionManager {
 	
@@ -55,8 +57,12 @@ extension TSLUserSessionManager: PluginType {
 		
 	}
 	
-	final func didReceive(_ result: Result<Moya.Response, MoyaError>, target: TargetType) {
-		
+	final func process(
+		_ result: Result<Response, MoyaError>,
+		target: TargetType)
+		-> Result<Response, MoyaError>
+	{
+		return result
 	}
 	
 }

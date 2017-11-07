@@ -10,6 +10,10 @@ import UIKit
 
 extension UIWindow {
 	
+	/// The app's key window.
+	///
+	/// This property holds the `UIWindow` object in the `windows` array
+	/// that is most recently sent the `makeKeyAndVisible()` message.
 	final class var keyWindow: UIWindow? {
 		return UIApplication.shared.keyWindow
 	}

@@ -15,7 +15,9 @@ import KeychainAccess
 /// - note: Personally I don't think it's right to store username/password anywhere.
 /// Usually OAuth has 2 tokens - access & refresh, and I'm storing both of them in the Keychain.
 /// On the first 401 status code response - there should be a request of a new access & refresh tokens,
-/// using current refresh.
+/// using current refresh one.
+/// Also, it should be retry on all `401` responses, also recieved during first `401` and
+/// response for the new access token request.
 final class TSLKeychainManager {
 	
 	private let keychain: Keychain = {

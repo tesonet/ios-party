@@ -8,36 +8,25 @@
 
 import UIKit
 
-class TSLTextField: UITextField {
-	
-	var placeholderFont: UIFont = TSLScaledFont.defalut.font(forTextStyle: .callout) {
-		didSet {
-			if let placeholder = placeholder ?? attributedPlaceholder?.string {
-				let attriutedString = attributedPlaceholder ?? NSAttributedString(string: placeholder)
-				let mutableAttributedString = NSMutableAttributedString(attributedString: attriutedString)
-				mutableAttributedString.addAttribute(.font,
-																						 value: placeholderFont,
-																						 range: NSRange(location: 0,
-																														length: placeholder.count))
-				self.attributedPlaceholder = attriutedString
-			}
-		}
-	}
-	
-}
-
-final class TSLTextFieldWithLeftImageView: TSLTextField {
+/// Text field with an image on the left side.
+final class TSLTextFieldWithLeftImageView: UITextField {
 	
 	override final func leftViewRect(forBounds bounds: CGRect) -> CGRect {
-		let offset = UIOffset(horizontal: 15.0,
-													vertical: 10.0)
-		let imageViewSize: CGFloat = max(bounds.height - offset.vertical * 2, 0)
+		
+		/// Offset for the left view from the top and the bottom of `TextFieldContentView`.
+		let verticalOffset: CGFloat = 10.0
+		
+		/// Left view height.
+		let leftViewHeight: CGFloat = max(bounds.height - verticalOffset * 2, 0)
+		
+		/// Additional left view width to make bigger distance from edges for the image.
+		let additionalLeftViewWidth: CGFloat = 15.0
 		
 		// 7.0 is the distance from left view's right margin to TextFieldContentView used by iOS
 		let origin: CGPoint = CGPoint(x: 7.0,
-																	y: offset.vertical)
-		let size: CGSize = CGSize(width: imageViewSize + offset.horizontal,
-															height: imageViewSize)
+																	y: verticalOffset)
+		let size: CGSize = CGSize(width: leftViewHeight + additionalLeftViewWidth,
+															height: leftViewHeight)
 		return CGRect(origin: origin,
 									size: size)
 		

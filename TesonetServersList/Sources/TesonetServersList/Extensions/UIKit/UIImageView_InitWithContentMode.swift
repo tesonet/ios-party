@@ -10,6 +10,13 @@ import UIKit
 
 extension UIImageView {
 	
+	/// Returns an image view initialized with the specified `image`
+	/// and `contentMode`.
+	///
+	/// - Parameters:
+	///   - image: The initial image to display in the image view.
+	///   - contentMode: A flag used to determine how a view lays out its content.
+	///  Default value: `.scaleAspectFit`.
 	convenience init(image: UIImage, contentMode: UIViewContentMode = .scaleAspectFit) {
 		self.init(image: .some(image))
 		self.contentMode = contentMode

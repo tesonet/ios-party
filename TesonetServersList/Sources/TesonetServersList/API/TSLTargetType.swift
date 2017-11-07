@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 
+/// Base target type.
 protocol TSLTargetType: TargetType {
 	
 }
