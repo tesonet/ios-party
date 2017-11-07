@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ServerData" representedClassName="ServerData" syncable="YES" codeGenerationType="class">
+    <entity name="ServerData" representedClassName="ServerData" syncable="YES">
         <attribute name="distance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="distance"/>
@@ -11,11 +11,12 @@
                 <entry key="mappedKeyName" value="name"/>
             </userInfo>
         </attribute>
+        <attribute name="searchString" attributeType="String" syncable="YES"/>
         <userInfo>
             <entry key="relatedByAttribute" value="name"/>
         </userInfo>
     </entity>
     <elements>
-        <element name="ServerData" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="ServerData" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>
