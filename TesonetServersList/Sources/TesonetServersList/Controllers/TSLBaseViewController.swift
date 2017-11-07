@@ -54,7 +54,7 @@ class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 																	message: (error as NSError).localizedRecoverySuggestion,
 																	preferredStyle: .alert)
 		
-		let dismissAction = UIAlertAction(title: "DISMISS".localized,
+		let dismissAction = UIAlertAction(title: "DISMISS".localized(),
 																			style: .cancel) { (_) in handler?() }
 		
 		alert.addAction(dismissAction)
@@ -70,25 +70,32 @@ class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 	var hidesKeyboardOnTap: Bool = true
 	
 	private var keyboardWillAppearObserver: NSObjectProtocol!
+	private var keyboardWillChangeFrameObserver: NSObjectProtocol!
 	private var keyboardWillDisappearObserver: NSObjectProtocol!
 	
 	private func addKeyboardObservers() {
 		
+		unowned let uSelf = self
 		if keyboardWillAppearObserver == nil {
 			keyboardWillAppearObserver = NotificationCenter.default
 				.addObserver(forName: .UIKeyboardWillShow,
 										 object: .none,
-										 queue: .main) { [unowned self] (notification) in
-											self.keyboardWillShow(notification)
-			}
+										 queue: .main,
+										 using: uSelf.handleKeyboardNotification)
+		}
+		if keyboardWillChangeFrameObserver == nil {
+			keyboardWillChangeFrameObserver = NotificationCenter.default
+				.addObserver(forName: .UIKeyboardWillChangeFrame,
+										 object: .none,
+										 queue: .main,
+										 using: uSelf.handleKeyboardNotification)
 		}
 		if keyboardWillDisappearObserver == nil {
 			keyboardWillDisappearObserver = NotificationCenter.default
 				.addObserver(forName: .UIKeyboardWillHide,
 										 object: .none,
-										 queue: .main) { [unowned self] (notification) in
-											self.keyboardWillHide(notification)
-			}
+										 queue: .main,
+										 using: uSelf.handleKeyboardNotification)
 		}
 		
 	}
@@ -98,6 +105,11 @@ class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 		if let keyboardWillAppearObserver = keyboardWillAppearObserver {
 			NotificationCenter.default.removeObserver(keyboardWillAppearObserver)
 			self.keyboardWillAppearObserver = .none
+		}
+		
+		if let keyboardWillChangeFrameObserver = keyboardWillChangeFrameObserver {
+			NotificationCenter.default.removeObserver(keyboardWillChangeFrameObserver)
+			self.keyboardWillChangeFrameObserver = .none
 		}
 		
 		if let keyboardWillDisappearObserver = keyboardWillDisappearObserver {
@@ -132,19 +144,113 @@ class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 	
 	// MARK: Keyboard. Notifications handling.
 	
-	@objc
-	func keyboardWillShow(_ notification: Notification) {
+	private func handleKeyboardNotification(_ notification: Notification) {
+		guard let parameters = KeyboardAppearanceParameters(notification: notification)
+			else {
+				return
+		}
 		
-		keyboadHidingTapGestureRecognizer.isEnabled = hidesKeyboardOnTap
-		keyboadHidingTapGestureRecognizer.cancelsTouchesInView = hidesKeyboardOnTap
+		switch notification.name {
+		case .UIKeyboardWillShow:
+			keyboardWillShow(parameters)
+		case .UIKeyboardWillChangeFrame:
+			keyboardWillChangeFrame(parameters)
+		case .UIKeyboardWillHide:
+			keyboardWillHide(parameters)
+		default:
+			return
+		}
+		handleKeyboardParameters(parameters)
+	}
+	
+	/// Executed immediately prior to the display of the keyboard.
+	/// - important: Subclasses should invoke super’s implementation
+	/// to make *hide keyboard on tap* feature properly working.
+	///
+	/// - Parameter parameters: keyboard appearance parameters.
+	func keyboardWillShow(_ parameters: KeyboardAppearanceParameters) {
+		
+		self.keyboadHidingTapGestureRecognizer.isEnabled = hidesKeyboardOnTap
+		self.keyboadHidingTapGestureRecognizer.cancelsTouchesInView = hidesKeyboardOnTap
 		
 	}
 	
-	@objc
-	func keyboardWillHide(_ notification: Notification) {
+	/// Executed immediately prior to a change in the keyboard’s frame.
+	///
+	/// - Parameter parameters: keyboard appearance parameters.
+	func keyboardWillChangeFrame(_ parameters: KeyboardAppearanceParameters) {
 		
-		keyboadHidingTapGestureRecognizer.isEnabled = false
-		keyboadHidingTapGestureRecognizer.cancelsTouchesInView = false
+	}
+	
+	/// Executed immediately prior to the dismissal of the keyboard.
+	/// - important: Subclasses should invoke super’s implementation
+	/// to make *hide keyboard on tap* feature properly working.
+	///
+	/// - Parameter parameters: keyboard appearance parameters.
+	func keyboardWillHide(_ parameters: KeyboardAppearanceParameters) {
+		
+		self.keyboadHidingTapGestureRecognizer.isEnabled = false
+		self.keyboadHidingTapGestureRecognizer.cancelsTouchesInView = false
+		
+	}
+	
+	/// Executed immediately after `keyboardWill(Show|ChangeFrame|Hide)` methods.
+	///
+	/// Default implementation of this method does nothing.
+	///
+	/// - Parameter parameters: keyboard appearance parameters.
+	func handleKeyboardParameters(_ parameters: KeyboardAppearanceParameters) {
+		
+	}
+	
+}
+
+extension TSLBaseViewController {
+	
+	/// A struct holding keyboard view information when it's being shown or hidden.
+	struct KeyboardAppearanceParameters {
+		
+		/// Starting frame rectangle of the keyboard in screen coordinates.
+		let startFrame: CGRect
+		/// Ending frame rectangle of the keyboard in screen coordinates.
+		let endFrame: CGRect
+		/// Keyboard notification name.
+		let notificationName: Notification.Name
+		/// The duration of the animation in seconds.
+		let animationDuration: TimeInterval
+		/// Defines how the keyboard will be animated onto or off the screen.
+		let animationCurve: UIViewAnimationCurve
+		
+		init?(notification: Notification) {
+			let availabaleNotifications: [Notification.Name] = [.UIKeyboardWillShow,
+																													.UIKeyboardWillChangeFrame,
+																													.UIKeyboardWillHide]
+			let userInfo = notification.userInfo! // swiftlint:disable:this force_unwrapping
+			
+			guard
+				// if keyboard belongs to the current app
+				userInfo[UIKeyboardIsLocalUserInfoKey] as! Bool, // swiftlint:disable:this force_cast
+				// and we can handle it
+				availabaleNotifications.contains(notification.name)
+				else {
+					return nil
+			}
+			
+			self.notificationName = notification.name
+			
+			self.startFrame = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
+			self.endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
+			
+			self.animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval ?? 0.0
+			let animationCurveRawValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UIViewAnimationCurve.RawValue ?? 0
+			self.animationCurve = UIViewAnimationCurve(rawValue: animationCurveRawValue) ?? .easeOut
+			
+		}
+		
+		/// Ending keyboard height.
+		var keyboardHeight: CGFloat {
+			return UIScreen.main.bounds.size.height - endFrame.origin.y
+		}
 		
 	}
 	

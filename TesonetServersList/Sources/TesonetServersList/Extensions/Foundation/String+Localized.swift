@@ -10,10 +10,19 @@ import Foundation
 
 extension String {
 	
-	var localized: String {
+	/// Returns the localized string for the receicer’s key in `Localized.strings` of main bundle.
+	///
+	/// - Returns: The localized string.
+	func localized() -> String {
 		return self.localized(using: "Localized", in: .main)
 	}
 	
+	/// Returns the localized string.
+	///
+	/// - Parameters:
+	///   - tableName: The receiver’s string table to search.
+	///   - bunlde:  The receiver’s bundle to search. Default value: `.main`.
+	/// - Returns: The localized string.
 	func localized(
 		using tableName: String,
 		in bunlde: Bundle = .main)

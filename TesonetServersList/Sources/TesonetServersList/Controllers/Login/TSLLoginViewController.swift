@@ -14,10 +14,46 @@ final class TSLLoginViewController: TSLBaseViewController, StoryboardBased {
 	
 	private let authorizationModule: AuthorizationAPIModuleProtocol = AuthorizationAPIModule()
 	
+	@IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
+	
 	@IBOutlet private var credentialsView: TSLCredentilasView! {
 		didSet {
 			credentialsView.delegate = self
 		}
+	}
+	
+	// MARK: - Keyboard
+	
+	override func handleKeyboardParameters(_ parameters: TSLBaseViewController.KeyboardAppearanceParameters) {
+		
+		let defaultBottomConstaint: CGFloat = 50.0
+		
+		let bottomInset: CGFloat = defaultBottomConstaint + parameters.keyboardHeight
+		
+		guard bottomConstraint.constant != bottomInset
+			else {
+				return
+		}
+		
+		bottomConstraint.constant = bottomInset
+		
+		animateLayout(duration: parameters.animationDuration, curve: parameters.animationCurve)
+		
+	}
+	
+	func animateLayout(
+		duration animationDuration: TimeInterval,
+		curve animationCurve: UIViewAnimationCurve)
+	{
+		
+		UIView.beginAnimations("Insets setup", context: .none)
+		UIView.setAnimationDuration(animationDuration)
+		UIView.setAnimationCurve(animationCurve)
+		UIView.setAnimationBeginsFromCurrentState(true)
+		view.layoutIfNeeded()
+		
+		UIView.commitAnimations()
+		
 	}
 	
 }
