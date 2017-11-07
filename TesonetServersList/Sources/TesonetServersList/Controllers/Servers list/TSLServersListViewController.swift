@@ -17,7 +17,7 @@ final class TSLServersListViewController: TSLBaseViewController,
 	@IBOutlet private weak var tableView: UITableView!
 	private weak var refreshControl: UIRefreshControl!
 	
-	private let serversListModule: ServersListModule = ServersListModule()
+	private let serversListModule: ServersListModuleProtocol = ServersListModule()
 	
 	private var dataSource: TSLServersListDataSource!
 	
@@ -35,8 +35,6 @@ final class TSLServersListViewController: TSLBaseViewController,
 		configureNavigationBarButtons()
 		
 		configureTableView()
-		
-		loadData()
 		
 	}
 	
@@ -117,15 +115,18 @@ final class TSLServersListViewController: TSLBaseViewController,
 	
 	// MARK: - Load data
 	
-	func loadData() {
+	func loadData(completion: (() -> Void)? = .none) {
 		
 		serversListModule.getServersList { [weak self] (result) in
-			defer {
-				self?.refreshControl?.endRefreshing()
-			}
+			
+			completion?()
+			self?.refreshControl?.endRefreshing()
+			
 			guard result.isSuccess
 				else {
-					self?.showError(result.error!) // swiftlint:disable:this force_unwrapping
+					DispatchQueue.main.async {
+						self?.showError(result.error!) // swiftlint:disable:this force_unwrapping
+					}
 					return
 			}
 			

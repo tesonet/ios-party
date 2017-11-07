@@ -30,13 +30,15 @@ final class TSLUserSessionManager {
 		let previousToken = keychainManager.accessToken
 		keychainManager.accessToken = accessToken
 		if !accessToken.isEmpty && previousToken.isEmpty {
-			NotificationCenter.default.post(Notification(name: Notification.Name.tslLogin))
+			DispatchQueue.main.async {
+				NotificationCenter.default.post(Notification(name: .tslLogin))
+			}
 		}
 	}
 	
 	final func logout() {
 		keychainManager.accessToken = ""
-		NotificationCenter.default.post(Notification(name: Notification.Name.tslLogout))
+		NotificationCenter.default.post(Notification(name: .tslLogout))
 	}
 	
 }
@@ -62,7 +64,22 @@ extension TSLUserSessionManager: PluginType {
 		target: TargetType)
 		-> Result<Response, MoyaError>
 	{
-		return result
+		
+		guard
+			let error = result.error,
+			case let .underlying(_, underlyingResponse) = error,
+			let response = underlyingResponse,
+			response.statusCode == 401
+			else {
+				return result
+		}
+		
+		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(950)) {
+			NotificationCenter.default.post(Notification(name: .tslSessionExpired))
+		}
+		
+		return .failure(.underlying(APIError.sessionExpired, underlyingResponse))
+		
 	}
 	
 }

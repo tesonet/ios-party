@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import enum Moya.MoyaError
 
 class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 	
@@ -50,8 +51,24 @@ class TSLBaseViewController: UIViewController, UIGestureRecognizerDelegate {
 		onDismiss handler: (() -> Void)? = .none)
 	{
 		
-		let alert = UIAlertController(title: (error as NSError).localizedDescription,
-																	message: (error as NSError).localizedRecoverySuggestion,
+		let recoverySuggestion: String?
+		if let error = error as? MoyaError {
+			recoverySuggestion = error.recoverySuggestion
+			if
+				// if thist is MoyaError for APIError.sessionExpired - dont show, if on dismiss
+				// handler not set
+				case let .underlying(underlyingError, _) = error,
+				let apiError = underlyingError as? APIError,
+				case APIError.sessionExpired = apiError,
+				handler == nil
+			{
+				return
+			}
+		} else {
+			recoverySuggestion = (error as? LocalizedError)?.recoverySuggestion
+		}
+		let alert = UIAlertController(title: error.localizedDescription,
+																	message: recoverySuggestion,
 																	preferredStyle: .alert)
 		
 		let dismissAction = UIAlertAction(title: "DISMISS".localized(),

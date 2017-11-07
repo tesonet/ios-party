@@ -9,12 +9,15 @@
 import UIKit
 import Reusable
 import Alamofire
+import NVActivityIndicatorView
 
 final class TSLLoginViewController: TSLBaseViewController, StoryboardBased {
 	
 	private let authorizationModule: AuthorizationAPIModuleProtocol = AuthorizationAPIModule()
 	
 	@IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
+	
+	@IBOutlet private weak var activityIndicatorView: NVActivityIndicatorView!
 	
 	@IBOutlet private var credentialsView: TSLCredentilasView! {
 		didSet {
@@ -65,11 +68,14 @@ extension TSLLoginViewController: TSLCredentilasViewDelegate {
 		with credentials: TSLAuthorizationAPITargets.Credentials)
 	{
 		
+		activityIndicatorView.startAnimating()
+		
 		authorizationModule.authorize(with: credentials) { [unowned self] (result) in
 			// `unowned` because controller should & will be alive during the request.
 			
 			defer {
 				self.credentialsView.enableLoginButton()
+				self.activityIndicatorView.stopAnimating()
 			}
 			
 			guard result.isSuccess

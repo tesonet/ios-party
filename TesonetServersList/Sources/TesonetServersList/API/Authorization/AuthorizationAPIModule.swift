@@ -14,7 +14,9 @@ import Alamofire
 /// Authorization module.
 final class AuthorizationAPIModule: AuthorizationAPIModuleProtocol {
 	
-	private let provider: MoyaProvider<TSLAuthorizationAPITargets> = MoyaProvider<TSLAuthorizationAPITargets>()
+	private let provider: MoyaProvider<TSLAuthorizationAPITargets> = {
+		MoyaProvider(plugins: [TSLServerMessageExtractor()])
+	}()
 	
 	final func authorize(
 		with credentials: TSLAuthorizationAPITargets.Credentials,

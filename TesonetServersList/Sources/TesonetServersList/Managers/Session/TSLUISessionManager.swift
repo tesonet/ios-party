@@ -97,11 +97,22 @@ final class TSLUISessionManager {
 	final func showMainViewController() {
 		
 		let serversListVC: TSLServersListViewController = .instantiate()
+		
 		let mainViewController = UINavigationController(rootViewController: serversListVC)
 		mainViewController.navigationBar.isTranslucent = false
 		mainViewController.navigationBar.barTintColor = .navigationBarBackground
 		mainViewController.navigationBar.shadowImage = UIImage()
+		
 		getWindow().set(rootViewController: mainViewController)
+		
+		let loadingVC: LoadingViewController = .instantiate()
+		serversListVC.present(loadingVC,
+													animated: false,
+													completion: .none)
+		loadingVC.loadDescriptor = "LOADER.TEXT".localized(using: "ServersList")
+		serversListVC.loadData { [weak loadingVC] in
+			loadingVC?.dismiss(animated: true, completion: .none)
+		}
 		
 	}
 	
@@ -110,6 +121,15 @@ final class TSLUISessionManager {
 	}
 	
 	final func showSessionExpiredMessage() {
+		
+		guard let viewController = UIWindow.visibleViewController() as? TSLBaseViewController
+			else {
+				return
+		}
+		
+		viewController.showError(APIError.sessionExpired) {
+			TSLUserSessionManager.shared.logout()
+		}
 		
 	}
 	

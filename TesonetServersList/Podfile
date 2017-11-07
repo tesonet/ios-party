@@ -11,6 +11,9 @@ target 'TesonetServersList' do
 	# Abstraction over Alamofire
 	pod 'Moya'
 	
+	# Activity indicator view
+	pod 'NVActivityIndicatorView'
+	
 	# Extensions for reusable UI(Table|Collection)ViewCell classes
 	pod 'Reusable'
 	

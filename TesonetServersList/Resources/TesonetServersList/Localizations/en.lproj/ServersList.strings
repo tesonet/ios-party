@@ -9,5 +9,4 @@
 "HEADER.SERVER NAME" = "Server";
 "HEADER.DISTANCE" = "Distance";
 
-"ERROR.CANT CAST SERVER RESPONSE.DESCR" = "Can't cast server response from %@ to expected %@";
-"ERROR.CANT CAST SERVER RESPONSE.SUGGEST" = "¯\_(ツ)_/¯";
+"LOADER.TEXT" = "Fetching the list...";

@@ -10,10 +10,13 @@ import Foundation
 import CoreData
 import MagicalRecord
 import Alamofire
+import Moya
 
-final class ServersListModule {
+final class ServersListModule: ServersListModuleProtocol {
 	
-	private let provider: TSLProvider<TSLServersListTarget> = TSLProvider<TSLServersListTarget>()
+	private let provider: MoyaProvider<TSLServersListTarget> = {
+		MoyaProvider(plugins: [TSLServerMessageExtractor(), TSLUserSessionManager.shared])
+	}()
 	
 	final func getServersList(completionHandler: @escaping (Alamofire.Result<Void>) -> Void) {
 		
@@ -36,8 +39,8 @@ final class ServersListModule {
 				let serversJSON: Any = try value.mapJSON()
 				guard let _serversListJSON = serversJSON as? [[AnyHashable : Any]]
 				else {
-					handler(.failure(Error.cantCastServerResponse(from: type(of: serversJSON),
-																																	to: [[AnyHashable : Any]].self)))
+					handler(.failure(APIError.cantCastServerResponse(from: type(of: serversJSON),
+																													 to: [[AnyHashable : Any]].self)))
 					return
 				}
 				serversListJSON = _serversListJSON
@@ -63,47 +66,6 @@ final class ServersListModule {
 			
 		}
 		
-	}
-	
-}
-
-private extension ServersListModule {
-	
-	/// Errors occured during response parsing.
-	///
-	/// - cantCastServerResponse: can't cast server response to the expected one.
-	enum Error: Swift.Error {
-		
-		case cantCastServerResponse(from: Any.Type, to: Any.Type)
-		
-	}
-	
-}
-
-extension ServersListModule.Error: LocalizedError {
-	
-	private var localizationKey: String {
-		switch self {
-		case .cantCastServerResponse:
-			return "ERROR.CANT CAST SERVER RESPONSE"
-		}
-	}
-	
-	private var localizationTable: String {
-		return "ServersList"
-	}
-	
-	var errorDescription: String? {
-		switch self {
-		case let .cantCastServerResponse(from: from, to: to):
-			return String(format: localizationKey.appending(".DESCR").localized(using: localizationTable),
-										String(describing: from),
-										String(describing: to))
-		}
-	}
-	
-	var recoverySuggestion: String? {
-		return localizationKey.appending(".SUGGEST").localized(using: localizationTable)
 	}
 	
 }

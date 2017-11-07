@@ -33,7 +33,6 @@
 		6859C7141FAF6D4A00AA3DC4 /* TSLKeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */; };
 		68C82EEF1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */; };
 		68C82EF31FB05FEF00306858 /* TSLServersListTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */; };
-		68C82EF51FB0690100306858 /* TSLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF41FB0690100306858 /* TSLProvider.swift */; };
 		68C82EF81FB078F400306858 /* AuthorizationAPIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */; };
 		68C82EFA1FB0790600306858 /* AuthorizationAPIModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */; };
 		68C82EFE1FB07DBE00306858 /* TSLServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */; };
@@ -58,6 +57,14 @@
 		68C82F3B1FB1D04700306858 /* String+Normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F3A1FB1D04700306858 /* String+Normalized.swift */; };
 		68C82F401FB1D13F00306858 /* ServerData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F3E1FB1D13F00306858 /* ServerData+CoreDataClass.swift */; };
 		68C82F411FB1D13F00306858 /* ServerData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F3F1FB1D13F00306858 /* ServerData+CoreDataProperties.swift */; };
+		68C82F461FB1FCC600306858 /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F451FB1FCC600306858 /* LoadingViewController.storyboard */; };
+		68C82F481FB1FCEE00306858 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F471FB1FCEE00306858 /* LoadingViewController.swift */; };
+		68FA594E1FB213DD00210E8C /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA594D1FB213DD00210E8C /* ServerError.swift */; };
+		68FA59501FB2144B00210E8C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA594F1FB2144B00210E8C /* APIError.swift */; };
+		68FA59521FB214C200210E8C /* APIErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68FA59511FB214C200210E8C /* APIErrors.strings */; };
+		68FA59541FB2178A00210E8C /* TSLServerMessageExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */; };
+		68FA59571FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */; };
+		68FA595A1FB2260900210E8C /* ServersListModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +103,6 @@
 		6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLKeychainManager.swift; sourceTree = "<group>"; };
 		68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TSLAuthorizationAPITargets+Credentials.swift"; sourceTree = "<group>"; };
 		68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListTarget.swift; sourceTree = "<group>"; };
-		68C82EF41FB0690100306858 /* TSLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLProvider.swift; sourceTree = "<group>"; };
 		68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIModule.swift; sourceTree = "<group>"; };
 		68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIModuleProtocol.swift; sourceTree = "<group>"; };
 		68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +127,14 @@
 		68C82F3A1FB1D04700306858 /* String+Normalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Normalized.swift"; sourceTree = "<group>"; };
 		68C82F3E1FB1D13F00306858 /* ServerData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68C82F3F1FB1D13F00306858 /* ServerData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		68C82F451FB1FCC600306858 /* LoadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
+		68C82F471FB1FCEE00306858 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		68FA594D1FB213DD00210E8C /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		68FA594F1FB2144B00210E8C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		68FA59511FB214C200210E8C /* APIErrors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = APIErrors.strings; sourceTree = "<group>"; };
+		68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServerMessageExtractor.swift; sourceTree = "<group>"; };
+		68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaError+RecoverySuggestion.swift"; sourceTree = "<group>"; };
+		68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListModuleProtocol.swift; sourceTree = "<group>"; };
 		AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetServersList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetServersList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +247,7 @@
 		682CFCB11FAD1098003A16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68C82F491FB1FCF500306858 /* Loading */,
 				68C82EFC1FB07DA100306858 /* Servers list */,
 				6852D9B11FADCA9800F34D26 /* TSLBaseViewController.swift */,
 				6852D9B51FADD02900F34D26 /* Login */,
@@ -261,6 +276,7 @@
 		6852D9951FADADBD00F34D26 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				68FA59551FB2248A00210E8C /* Moya */,
 				68C82F111FB0821900306858 /* CoreData */,
 				6852D9AA1FADBB8100F34D26 /* UIKit */,
 				6852D9961FADADC600F34D26 /* Foundation */,
@@ -290,6 +306,7 @@
 		6852D99A1FADB79900F34D26 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68C82F441FB1FC9C00306858 /* Loading */,
 				6852D9991FADB79300F34D26 /* Login */,
 				68C82F081FB07F7F00306858 /* Servers list */,
 			);
@@ -369,6 +386,7 @@
 				6852D9C31FADD7BB00F34D26 /* Login.strings */,
 				6852D9C61FADD7BF00F34D26 /* Localized.strings */,
 				68C82F2C1FB0BBAB00306858 /* ServersList.strings */,
+				68FA59511FB214C200210E8C /* APIErrors.strings */,
 			);
 			path = Localizations;
 			sourceTree = "<group>";
@@ -377,7 +395,8 @@
 			isa = PBXGroup;
 			children = (
 				6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */,
-				68C82EF41FB0690100306858 /* TSLProvider.swift */,
+				68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */,
+				68FA59581FB225A500210E8C /* Errors */,
 				68C82EF01FB05FB800306858 /* Authorization */,
 				68C82EF11FB05FC700306858 /* Servers list */,
 			);
@@ -399,6 +418,7 @@
 			children = (
 				68C82F141FB0853C00306858 /* Target */,
 				68C82F151FB0855900306858 /* ServersListModule.swift */,
+				68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */,
 			);
 			path = "Servers list";
 			sourceTree = "<group>";
@@ -519,6 +539,39 @@
 			path = ServerData;
 			sourceTree = "<group>";
 		};
+		68C82F441FB1FC9C00306858 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F451FB1FCC600306858 /* LoadingViewController.storyboard */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		68C82F491FB1FCF500306858 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F471FB1FCEE00306858 /* LoadingViewController.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		68FA59551FB2248A00210E8C /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		68FA59581FB225A500210E8C /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				68FA594D1FB213DD00210E8C /* ServerError.swift */,
+				68FA594F1FB2144B00210E8C /* APIError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		8F2C6DAE4FE1AFFB90704D5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,10 +663,12 @@
 				6852D9C41FADD7BF00F34D26 /* Localized.strings in Resources */,
 				6852D9B91FADD09500F34D26 /* TSLCredentilasView.xib in Resources */,
 				682CFCA51FAD0FF8003A16A6 /* LaunchScreen.storyboard in Resources */,
+				68FA59521FB214C200210E8C /* APIErrors.strings in Resources */,
 				68C82F2A1FB0BBAB00306858 /* ServersList.strings in Resources */,
 				6852D99C1FADB7B200F34D26 /* TSLLoginViewController.storyboard in Resources */,
 				68C82F001FB07DD900306858 /* TSLServersListViewController.storyboard in Resources */,
 				6852D9C11FADD7BB00F34D26 /* Login.strings in Resources */,
+				68C82F461FB1FCC600306858 /* LoadingViewController.storyboard in Resources */,
 				682CFCA21FAD0FF8003A16A6 /* Assets.xcassets in Resources */,
 				68C82F351FB0E60400306858 /* LucidaGrande.plist in Resources */,
 			);
@@ -681,6 +736,7 @@
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 			);
@@ -690,6 +746,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
@@ -712,13 +769,18 @@
 				680F13561FADE9150013A8CF /* UIColor+Colors.swift in Sources */,
 				68C82F311FB0DCDC00306858 /* TSLScaledFont.swift in Sources */,
 				68C82F0E1FB0809200306858 /* CoreDataStack.swift in Sources */,
+				68FA59571FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift in Sources */,
 				68C82EFA1FB0790600306858 /* AuthorizationAPIModuleProtocol.swift in Sources */,
+				68FA59541FB2178A00210E8C /* TSLServerMessageExtractor.swift in Sources */,
 				68C82EF81FB078F400306858 /* AuthorizationAPIModule.swift in Sources */,
 				68C82F131FB0822700306858 /* NSManagedObjectContext+Utility.swift in Sources */,
+				68FA594E1FB213DD00210E8C /* ServerError.swift in Sources */,
 				6859C7121FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift in Sources */,
+				68C82F481FB1FCEE00306858 /* LoadingViewController.swift in Sources */,
 				6859C70D1FAF634800AA3DC4 /* TSLTargetType.swift in Sources */,
 				68C82F1C1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift in Sources */,
 				68C82F181FB0998E00306858 /* TSLServersListSectionHeaderView.swift in Sources */,
+				68FA595A1FB2260900210E8C /* ServersListModuleProtocol.swift in Sources */,
 				680F135B1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift in Sources */,
 				68C82F161FB0855900306858 /* ServersListModule.swift in Sources */,
 				68C82F411FB1D13F00306858 /* ServerData+CoreDataProperties.swift in Sources */,
@@ -727,8 +789,8 @@
 				68C82EFE1FB07DBE00306858 /* TSLServersListViewController.swift in Sources */,
 				68C82F231FB0A86700306858 /* Formatters.swift in Sources */,
 				6859C70F1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift in Sources */,
-				68C82EF51FB0690100306858 /* TSLProvider.swift in Sources */,
 				68C82EF31FB05FEF00306858 /* TSLServersListTarget.swift in Sources */,
+				68FA59501FB2144B00210E8C /* APIError.swift in Sources */,
 				6852D9B41FADCDA700F34D26 /* UIView+CornerRadius.swift in Sources */,
 				6852D9B21FADCA9800F34D26 /* TSLBaseViewController.swift in Sources */,
 				6852D9BE1FADD71700F34D26 /* String+Localized.swift in Sources */,

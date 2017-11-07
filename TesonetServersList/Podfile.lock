@@ -9,6 +9,9 @@ PODS:
   - Moya/Core (10.0.0):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - NVActivityIndicatorView (4.0.0):
+    - NVActivityIndicatorView/Presenter (= 4.0.0)
+  - NVActivityIndicatorView/Presenter (4.0.0)
   - Result (3.2.4)
   - Reusable (4.0.0):
     - Reusable/Storyboard (= 4.0.0)
@@ -22,6 +25,7 @@ DEPENDENCIES:
   - KeychainAccess
   - MagicalRecord
   - Moya
+  - NVActivityIndicatorView
   - Reusable
   - SwiftLint
 
@@ -30,10 +34,11 @@ SPEC CHECKSUMS:
   KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Moya: adb58b0f4e58430db43cc6e2f6ebab1836501186
+  NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
 
-PODFILE CHECKSUM: ac3597bed643b87ba7922d82d874a149c0701dc4
+PODFILE CHECKSUM: 7507fcd30e0016fb5cab80e3d29f38f93c3d4b63
 
 COCOAPODS: 1.3.1
