@@ -13,17 +13,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TSLServersListSectionHeaderView" customModule="TesonetServersList" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="53"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyL-lb-GdQ">
-                    <rect key="frame" x="16" y="15" width="97" height="21"/>
+                    <rect key="frame" x="16" y="15" width="97" height="23"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU8-nf-Qwk">
-                    <rect key="frame" x="276" y="15" width="67" height="21"/>
+                    <rect key="frame" x="244" y="16.5" width="67" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -32,22 +32,18 @@
             <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="xU8-nf-Qwk" firstAttribute="centerY" secondItem="vyL-lb-GdQ" secondAttribute="centerY" id="1fy-81-sCy"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vyL-lb-GdQ" secondAttribute="bottom" constant="15" id="FVf-k6-kUB"/>
+                <constraint firstItem="vyL-lb-GdQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FXu-ho-dvO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xU8-nf-Qwk" secondAttribute="trailing" constant="32" id="QZn-ci-Zda"/>
-                <constraint firstItem="xU8-nf-Qwk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YCg-or-BZn"/>
                 <constraint firstItem="vyL-lb-GdQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="oHo-fL-0uw"/>
-                <constraint firstItem="vyL-lb-GdQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="uxo-cz-ZNh"/>
+                <constraint firstItem="vyL-lb-GdQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" constant="15" id="uxo-cz-ZNh"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="YCg-or-BZn"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="distanceLabel" destination="xU8-nf-Qwk" id="xpg-hC-9oP"/>
                 <outlet property="serverNameLabel" destination="vyL-lb-GdQ" id="WJf-nI-C4g"/>
             </connections>
+            <point key="canvasLocation" x="19.5" y="-183.5"/>
         </view>
     </objects>
 </document>

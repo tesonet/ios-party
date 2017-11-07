@@ -17,11 +17,17 @@ final class ServersListModule {
 	
 	final func getServersList(completionHandler: @escaping (Alamofire.Result<Void>) -> Void) {
 		
+		let handler: (Alamofire.Result<Void>) -> Void = { (result) in
+			DispatchQueue.main.async {
+				completionHandler(result)
+			}
+		}
+		
 		provider.request(.getServersList) { (result) in
 			
 			guard let value = result.value
 				else {
-					completionHandler(.failure(result.error!)) // swiftlint:disable:this force_unwrapping
+					handler(.failure(result.error!)) // swiftlint:disable:this force_unwrapping
 					return
 			}
 			
@@ -30,13 +36,13 @@ final class ServersListModule {
 				let serversJSON: Any = try value.mapJSON()
 				guard let _serversListJSON = serversJSON as? [[AnyHashable : Any]]
 				else {
-					completionHandler(.failure(Error.cantCastServerResponse(from: type(of: serversJSON),
+					handler(.failure(Error.cantCastServerResponse(from: type(of: serversJSON),
 																																	to: [[AnyHashable : Any]].self)))
 					return
 				}
 				serversListJSON = _serversListJSON
 			} catch {
-				completionHandler(.failure(error))
+				handler(.failure(error))
 				return
 			}
 			
@@ -51,7 +57,7 @@ final class ServersListModule {
 				
 			}.then { (savingResult) in
 				
-				completionHandler(savingResult.map { _ in () })
+				handler(savingResult.map { _ in () })
 				
 			}
 			
