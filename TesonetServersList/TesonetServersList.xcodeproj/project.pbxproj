@@ -65,6 +65,8 @@
 		68FA59541FB2178A00210E8C /* TSLServerMessageExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */; };
 		68FA59571FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */; };
 		68FA595A1FB2260900210E8C /* ServersListModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */; };
+		68FA595E1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */; };
+		68FA59601FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +137,8 @@
 		68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServerMessageExtractor.swift; sourceTree = "<group>"; };
 		68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaError+RecoverySuggestion.swift"; sourceTree = "<group>"; };
 		68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListModuleProtocol.swift; sourceTree = "<group>"; };
+		68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListSortFloatingView.swift; sourceTree = "<group>"; };
+		68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLServersListSortFloatingView.xib; sourceTree = "<group>"; };
 		AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetServersList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetServersList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -445,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */,
+				68FA59611FB2ED5F00210E8C /* Sort floating view */,
 				68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */,
 				68C82F1D1FB0A3D300306858 /* Section header */,
 				68C82F071FB07E8E00306858 /* Server cell */,
@@ -572,6 +577,15 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		68FA59611FB2ED5F00210E8C /* Sort floating view */ = {
+			isa = PBXGroup;
+			children = (
+				68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */,
+				68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */,
+			);
+			path = "Sort floating view";
+			sourceTree = "<group>";
+		};
 		8F2C6DAE4FE1AFFB90704D5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +671,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FA59601FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib in Resources */,
 				68C82F061FB07E8900306858 /* TSLServerTableViewCell.xib in Resources */,
 				68C82F1A1FB099A400306858 /* TSLServersListSectionHeaderView.xib in Resources */,
 				68C82F331FB0DF8200306858 /* LucidaGrande-Regular.ttf in Resources */,
@@ -784,6 +799,7 @@
 				680F135B1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift in Sources */,
 				68C82F161FB0855900306858 /* ServersListModule.swift in Sources */,
 				68C82F411FB1D13F00306858 /* ServerData+CoreDataProperties.swift in Sources */,
+				68FA595E1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift in Sources */,
 				68C82F3B1FB1D04700306858 /* String+Normalized.swift in Sources */,
 				68C82EEF1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift in Sources */,
 				68C82EFE1FB07DBE00306858 /* TSLServersListViewController.swift in Sources */,

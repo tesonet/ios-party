@@ -73,8 +73,8 @@ class ManagedObjectsDataSource<CoreDataObject: NSManagedObject>: NSObject,
 		}
 	}
 	
-	/// The fetch limit of the fetch request.
-	var fetchRequestFetchLimit: Int? {
+	/// The fetch batch size of the fetch request.
+	var fetchBatchSize: Int = 20 {
 		didSet {
 			configureFetchedResultsController(force: true)
 		}
@@ -126,13 +126,10 @@ class ManagedObjectsDataSource<CoreDataObject: NSManagedObject>: NSObject,
 			NSFetchedResultsController<CoreDataObject>.deleteCache(withName: cacheName)
 		}
 		
-		fetchedResultsController.fetchRequest.sortDescriptors = sortDescriptors
-		
-		fetchedResultsController.fetchRequest.predicate = predicate
-		
-		fetchedResultsController.fetchRequest.fetchLimit = self.fetchRequestFetchLimit ?? 15
+		configureFetchRequest(fetchedResultsController.fetchRequest)
 		
 		if force {
+			
 			do {
 				try fetchedResultsController.performFetch()
 			} catch {
@@ -158,16 +155,22 @@ class ManagedObjectsDataSource<CoreDataObject: NSManagedObject>: NSObject,
 		}
 		let fetchRequest: NSFetchRequest<CoreDataObject> = NSFetchRequest(entityName: entityName)
 		
-		fetchRequest.sortDescriptors = sortDescriptors
-		
-		fetchRequest.fetchBatchSize = 20
-		
-		if let fetchRequestFetchLimit = fetchRequestFetchLimit {
-			fetchRequest.fetchLimit = fetchRequestFetchLimit
-			fetchRequest.fetchBatchSize = min(fetchRequest.fetchBatchSize, fetchRequestFetchLimit)
-		}
+		configureFetchRequest(fetchRequest)
 		
 		return fetchRequest
+		
+	}
+	
+	/// Configures fetch request with sort descriptors, predicate & fetch batch size.
+	///
+	/// - Parameter fetchRequest: fetch request to configure.
+	private func configureFetchRequest(_ fetchRequest: NSFetchRequest<CoreDataObject>) {
+		
+		fetchRequest.sortDescriptors = sortDescriptors
+		
+		fetchRequest.fetchBatchSize = fetchBatchSize
+		
+		fetchRequest.predicate = predicate
 		
 	}
 	

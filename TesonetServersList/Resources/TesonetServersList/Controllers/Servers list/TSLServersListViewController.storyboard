@@ -18,15 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-px-brg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-px-brg">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="delegate" destination="V2P-Ec-EJl" id="bJe-wB-Xrz"/>
+                                </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7I-SN-Lvn" customClass="TSLServersListSortFloatingView" customModule="TesonetServersList" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="PaN-o6-4u8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NQd-px-brg" firstAttribute="trailing" secondItem="XCW-mu-nWB" secondAttribute="trailing" id="7oi-cS-n1Y"/>
                             <constraint firstItem="NQd-px-brg" firstAttribute="leading" secondItem="XCW-mu-nWB" secondAttribute="leading" id="bqw-pZ-s4A"/>
+                            <constraint firstItem="C7I-SN-Lvn" firstAttribute="width" secondItem="Tld-q6-kZk" secondAttribute="width" id="mnW-3Q-XNu"/>
+                            <constraint firstItem="C7I-SN-Lvn" firstAttribute="centerX" secondItem="Tld-q6-kZk" secondAttribute="centerX" id="vtD-dP-Wb3"/>
+                            <constraint firstItem="C7I-SN-Lvn" firstAttribute="top" secondItem="Tld-q6-kZk" secondAttribute="bottom" constant="-60" placeholder="YES" id="wiX-FZ-o4l"/>
                             <constraint firstItem="Tld-q6-kZk" firstAttribute="top" secondItem="NQd-px-brg" secondAttribute="top" id="x2T-Ca-61s"/>
                             <constraint firstItem="NQd-px-brg" firstAttribute="bottom" secondItem="XCW-mu-nWB" secondAttribute="bottom" id="ym6-b0-3r4"/>
                         </constraints>
@@ -37,6 +50,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="sortFloatingView" destination="C7I-SN-Lvn" id="FBJ-6E-fmK"/>
                         <outlet property="tableView" destination="NQd-px-brg" id="vhz-n4-8Uv"/>
                     </connections>
                 </viewController>

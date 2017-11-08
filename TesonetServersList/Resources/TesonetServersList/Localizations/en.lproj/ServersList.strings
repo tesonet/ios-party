@@ -10,3 +10,8 @@
 "HEADER.DISTANCE" = "Distance";
 
 "LOADER.TEXT" = "Fetching the list...";
+
+"SORT.BY NAME" = "Alphanumerical";
+"SORT.BY DISTANCE" = "By Distance";
+
+"SORT.LABEL TEXT" = "Sort";

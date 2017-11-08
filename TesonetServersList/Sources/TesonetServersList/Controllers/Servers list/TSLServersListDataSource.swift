@@ -15,13 +15,9 @@ private let kServersListSortOption: String = "kServersListSortOption"
 final class TSLServersListDataSource: ManagedObjectsDataSource<ServerData> {
 	
 	enum SortField: String {
+		
 		case name = "name"
 		case distance = "distance"
-		
-		static var current: SortField {
-			let storedRawValue = UserDefaults.standard.string(forKey: kServersListSortOption) ?? ""
-			return SortField(rawValue: storedRawValue) ?? .name
-		}
 		
 	}
 	
@@ -30,7 +26,7 @@ final class TSLServersListDataSource: ManagedObjectsDataSource<ServerData> {
 			sortDescriptors = [
 				NSSortDescriptor(key: sortBy.rawValue, ascending: true)
 			]
-			UserDefaults.standard.set(sortBy.rawValue, forKey: kServersListSortOption)
+			SortField.current = sortBy
 		}
 	}
 	
@@ -52,6 +48,29 @@ final class TSLServersListDataSource: ManagedObjectsDataSource<ServerData> {
 		
 		return serverCell
 		
+	}
+	
+}
+
+extension TSLServersListDataSource.SortField {
+	
+	static var all: [TSLServersListDataSource.SortField] = [.distance, .name]
+	
+	static fileprivate(set) var current: TSLServersListDataSource.SortField {
+		// swiftlint:disable:previous strict_fileprivate
+		get {
+			let storedRawValue = UserDefaults.standard.string(forKey: kServersListSortOption) ?? ""
+			return TSLServersListDataSource.SortField(rawValue: storedRawValue) ?? (all.first!)
+			// swiftlint:disable:previous force_unwrapping
+		}
+		set {
+			UserDefaults.standard.set(newValue.rawValue, forKey: kServersListSortOption)
+		}
+	}
+	
+	var humanDescription: String {
+		let localizedKey = "SORT.BY ".appending(self.rawValue.uppercased())
+		return localizedKey.localized(using: "ServersList")
 	}
 	
 }
