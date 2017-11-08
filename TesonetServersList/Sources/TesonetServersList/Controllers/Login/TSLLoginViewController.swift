@@ -25,6 +25,10 @@ final class TSLLoginViewController: TSLBaseViewController, StoryboardBased {
 		}
 	}
 	
+	override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+		return [.portrait]
+	}
+	
 	// MARK: - Keyboard
 	
 	override func handleKeyboardParameters(_ parameters: TSLBaseViewController.KeyboardAppearanceParameters) {

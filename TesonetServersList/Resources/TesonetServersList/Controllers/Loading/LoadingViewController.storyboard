@@ -63,9 +63,11 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="tjL-bY-p6j" id="rV9-Rn-421"/>
                         <outlet property="textLabel" destination="4aQ-SY-OmV" id="Akz-Rc-R8J"/>
+                        <segue destination="sIT-Ih-EtP" kind="unwind" identifier="unwind" unwindAction="unwindFromLoadingViewControllerWithSegue:" id="ydW-Wp-uZb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3BA-3j-pHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sIT-Ih-EtP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-332" y="151"/>
         </scene>

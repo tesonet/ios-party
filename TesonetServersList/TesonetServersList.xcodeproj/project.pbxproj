@@ -67,6 +67,7 @@
 		68FA595A1FB2260900210E8C /* ServersListModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */; };
 		68FA595E1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */; };
 		68FA59601FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */; };
+		68FA59671FB34D1C00210E8C /* TSLTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,7 @@
 		68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListModuleProtocol.swift; sourceTree = "<group>"; };
 		68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListSortFloatingView.swift; sourceTree = "<group>"; };
 		68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLServersListSortFloatingView.xib; sourceTree = "<group>"; };
+		68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSLTransitionManager.swift; sourceTree = "<group>"; };
 		AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetServersList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetServersList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -556,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				68C82F471FB1FCEE00306858 /* LoadingViewController.swift */,
+				68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				6852D9B41FADCDA700F34D26 /* UIView+CornerRadius.swift in Sources */,
 				6852D9B21FADCA9800F34D26 /* TSLBaseViewController.swift in Sources */,
 				6852D9BE1FADD71700F34D26 /* String+Localized.swift in Sources */,
+				68FA59671FB34D1C00210E8C /* TSLTransitionManager.swift in Sources */,
 				680F13541FADE8A80013A8CF /* UIImage+Images.swift in Sources */,
 				68C82F101FB080C400306858 /* FileManager+Directories.swift in Sources */,
 				6852D9981FADADE900F34D26 /* Notification.Name+TSLSession.swift in Sources */,
@@ -910,10 +914,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=200 -Xfrontend -warn-long-expression-type-checking=150";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=200 -Xfrontend -warn-long-expression-type-checking=200";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -962,7 +966,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -983,7 +987,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1000,7 +1004,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

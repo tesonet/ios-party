@@ -111,7 +111,7 @@ final class TSLUISessionManager {
 													completion: .none)
 		loadingVC.loadDescriptor = "LOADER.TEXT".localized(using: "ServersList")
 		serversListVC.loadData { [weak loadingVC] in
-			loadingVC?.dismiss(animated: true, completion: .none)
+			loadingVC?.performSegue(withIdentifier: "unwind", sender: .none)
 		}
 		
 	}

@@ -143,9 +143,18 @@ extension TSLServersListViewController: UIScrollViewDelegate {
 		
 		let floatingViewHeight: CGFloat = sortFloatingView.frame.height
 		
-		let viewHeight = min(
-			floatingViewHeight - max(tableView.contentOffset.y, 0),
-			floatingViewHeight)
+		let viewHeight: CGFloat
+		
+		if #available(iOS 11.0, *) {
+			viewHeight = min(
+				floatingViewHeight - max(tableView.contentOffset.y, 0),
+				floatingViewHeight)
+		} else {
+			let searchBarHeight = tableView.tableHeaderView?.frame.height ?? 0.0
+			viewHeight = min(
+				floatingViewHeight - max(tableView.contentOffset.y, 0) + searchBarHeight,
+				floatingViewHeight)
+		}
 		
 		// origin.y, because using conatraint & animating with layoutIfNeeded leads to animation of
 		// table view section header view.
@@ -364,6 +373,16 @@ extension TSLServersListViewController {
 			tableView.insertSubview(refreshControl, at: 0)
 		}
 		self.refreshControl = refreshControl
+	}
+	
+}
+
+// MARK: - Unwind from loading view
+
+extension TSLServersListViewController {
+	
+	@IBAction func unwindFromLoadingViewController(segue: UIStoryboardSegue) {
+		
 	}
 	
 }

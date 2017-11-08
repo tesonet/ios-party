@@ -12,6 +12,8 @@ import NVActivityIndicatorView
 
 final class LoadingViewController: TSLBaseViewController, StoryboardBased {
 	
+	private let transitionManager: TSLTransitionManager = TSLTransitionManager()
+	
 	@IBOutlet private weak var activityIndicatorView: NVActivityIndicatorView!
 	@IBOutlet private weak var textLabel: UILabel!
 	
@@ -38,6 +40,11 @@ final class LoadingViewController: TSLBaseViewController, StoryboardBased {
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		activityIndicatorView.stopAnimating()
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		segue.source.modalPresentationStyle = .custom
+		segue.source.transitioningDelegate = transitionManager
 	}
 	
 }
