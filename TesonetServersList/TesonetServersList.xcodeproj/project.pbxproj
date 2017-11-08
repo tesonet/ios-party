@@ -1,0 +1,1064 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6644D16D15EC233E33AD3D0D /* Pods_TesonetServersList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */; };
+		680F13541FADE8A80013A8CF /* UIImage+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680F13531FADE8A80013A8CF /* UIImage+Images.swift */; };
+		680F13561FADE9150013A8CF /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680F13551FADE9150013A8CF /* UIColor+Colors.swift */; };
+		680F13581FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680F13571FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift */; };
+		680F135B1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680F135A1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift */; };
+		682CFC9B1FAD0FF8003A16A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CFC9A1FAD0FF8003A16A6 /* AppDelegate.swift */; };
+		682CFCA21FAD0FF8003A16A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682CFCA11FAD0FF8003A16A6 /* Assets.xcassets */; };
+		682CFCA51FAD0FF8003A16A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682CFCA31FAD0FF8003A16A6 /* LaunchScreen.storyboard */; };
+		6852D9931FADAC7B00F34D26 /* TSLUISessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9921FADAC7B00F34D26 /* TSLUISessionManager.swift */; };
+		6852D9981FADADE900F34D26 /* Notification.Name+TSLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9971FADADE900F34D26 /* Notification.Name+TSLSession.swift */; };
+		6852D99C1FADB7B200F34D26 /* TSLLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6852D99B1FADB7B200F34D26 /* TSLLoginViewController.storyboard */; };
+		6852D99E1FADB7CF00F34D26 /* TSLLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D99D1FADB7CF00F34D26 /* TSLLoginViewController.swift */; };
+		6852D9AC1FADBC3600F34D26 /* UIWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9AB1FADBC3600F34D26 /* UIWindow+Utils.swift */; };
+		6852D9B21FADCA9800F34D26 /* TSLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9B11FADCA9800F34D26 /* TSLBaseViewController.swift */; };
+		6852D9B41FADCDA700F34D26 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9B31FADCDA700F34D26 /* UIView+CornerRadius.swift */; };
+		6852D9B71FADD08300F34D26 /* TSLCredentilasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9B61FADD08300F34D26 /* TSLCredentilasView.swift */; };
+		6852D9B91FADD09500F34D26 /* TSLCredentilasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6852D9B81FADD09500F34D26 /* TSLCredentilasView.xib */; };
+		6852D9BE1FADD71700F34D26 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852D9BD1FADD71700F34D26 /* String+Localized.swift */; };
+		6852D9C11FADD7BB00F34D26 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6852D9C31FADD7BB00F34D26 /* Login.strings */; };
+		6852D9C41FADD7BF00F34D26 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6852D9C61FADD7BF00F34D26 /* Localized.strings */; };
+		6859C70D1FAF634800AA3DC4 /* TSLTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */; };
+		6859C70F1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C70E1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift */; };
+		6859C7121FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */; };
+		6859C7141FAF6D4A00AA3DC4 /* TSLKeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */; };
+		68C82EEF1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */; };
+		68C82EF31FB05FEF00306858 /* TSLServersListTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */; };
+		68C82EF81FB078F400306858 /* AuthorizationAPIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */; };
+		68C82EFA1FB0790600306858 /* AuthorizationAPIModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */; };
+		68C82EFE1FB07DBE00306858 /* TSLServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */; };
+		68C82F001FB07DD900306858 /* TSLServersListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C82EFF1FB07DD900306858 /* TSLServersListViewController.storyboard */; };
+		68C82F051FB07E8900306858 /* TSLServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F031FB07E8900306858 /* TSLServerTableViewCell.swift */; };
+		68C82F061FB07E8900306858 /* TSLServerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F041FB07E8900306858 /* TSLServerTableViewCell.xib */; };
+		68C82F0B1FB07FF500306858 /* TesonetServersList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F091FB07FF500306858 /* TesonetServersList.xcdatamodeld */; };
+		68C82F0E1FB0809200306858 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F0D1FB0809200306858 /* CoreDataStack.swift */; };
+		68C82F101FB080C400306858 /* FileManager+Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F0F1FB080C400306858 /* FileManager+Directories.swift */; };
+		68C82F131FB0822700306858 /* NSManagedObjectContext+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F121FB0822700306858 /* NSManagedObjectContext+Utility.swift */; };
+		68C82F161FB0855900306858 /* ServersListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F151FB0855900306858 /* ServersListModule.swift */; };
+		68C82F181FB0998E00306858 /* TSLServersListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F171FB0998E00306858 /* TSLServersListSectionHeaderView.swift */; };
+		68C82F1A1FB099A400306858 /* TSLServersListSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F191FB099A400306858 /* TSLServersListSectionHeaderView.xib */; };
+		68C82F1C1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F1B1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift */; };
+		68C82F1F1FB0A3EA00306858 /* TSLServersListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */; };
+		68C82F231FB0A86700306858 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F221FB0A86700306858 /* Formatters.swift */; };
+		68C82F251FB0B7A800306858 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F241FB0B7A800306858 /* UIImage+Resize.swift */; };
+		68C82F2A1FB0BBAB00306858 /* ServersList.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F2C1FB0BBAB00306858 /* ServersList.strings */; };
+		68C82F311FB0DCDC00306858 /* TSLScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F301FB0DCDC00306858 /* TSLScaledFont.swift */; };
+		68C82F331FB0DF8200306858 /* LucidaGrande-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F321FB0DF8200306858 /* LucidaGrande-Regular.ttf */; };
+		68C82F351FB0E60400306858 /* LucidaGrande.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F341FB0E60400306858 /* LucidaGrande.plist */; };
+		68C82F3B1FB1D04700306858 /* String+Normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F3A1FB1D04700306858 /* String+Normalized.swift */; };
+		68C82F401FB1D13F00306858 /* ServerData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F3E1FB1D13F00306858 /* ServerData+CoreDataClass.swift */; };
+		68C82F411FB1D13F00306858 /* ServerData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F3F1FB1D13F00306858 /* ServerData+CoreDataProperties.swift */; };
+		68C82F461FB1FCC600306858 /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C82F451FB1FCC600306858 /* LoadingViewController.storyboard */; };
+		68C82F481FB1FCEE00306858 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C82F471FB1FCEE00306858 /* LoadingViewController.swift */; };
+		68FA594E1FB213DD00210E8C /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA594D1FB213DD00210E8C /* ServerError.swift */; };
+		68FA59501FB2144B00210E8C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA594F1FB2144B00210E8C /* APIError.swift */; };
+		68FA59521FB214C200210E8C /* APIErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68FA59511FB214C200210E8C /* APIErrors.strings */; };
+		68FA59541FB2178A00210E8C /* TSLServerMessageExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */; };
+		68FA59571FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */; };
+		68FA595A1FB2260900210E8C /* ServersListModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */; };
+		68FA595E1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */; };
+		68FA59601FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */; };
+		68FA59671FB34D1C00210E8C /* TSLTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5183404D31FD48AC0CAE2BA7 /* Pods-TesonetServersList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetServersList.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList.release.xcconfig"; sourceTree = "<group>"; };
+		680F13531FADE8A80013A8CF /* UIImage+Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Images.swift"; sourceTree = "<group>"; };
+		680F13551FADE9150013A8CF /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		680F13571FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView_InitWithContentMode.swift; sourceTree = "<group>"; };
+		680F135A1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLTextFieldWithLeftImageView.swift; sourceTree = "<group>"; };
+		682CFC971FAD0FF8003A16A6 /* TesonetServersList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesonetServersList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		682CFC9A1FAD0FF8003A16A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		682CFCA11FAD0FF8003A16A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		682CFCA61FAD0FF8003A16A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		682CFCB21FAD10DF003A16A6 /* TesonetServersList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TesonetServersList.entitlements; sourceTree = "<group>"; };
+		6852D98E1FAD11B900F34D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6852D9921FADAC7B00F34D26 /* TSLUISessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLUISessionManager.swift; sourceTree = "<group>"; };
+		6852D9971FADADE900F34D26 /* Notification.Name+TSLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+TSLSession.swift"; sourceTree = "<group>"; };
+		6852D99B1FADB7B200F34D26 /* TSLLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSLLoginViewController.storyboard; sourceTree = "<group>"; };
+		6852D99D1FADB7CF00F34D26 /* TSLLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLLoginViewController.swift; sourceTree = "<group>"; };
+		6852D9A41FADB99300F34D26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		6852D9A51FADB99C00F34D26 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		6852D9A61FADB9A300F34D26 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		6852D9A71FADB9B100F34D26 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6852D9A81FADB9BB00F34D26 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		6852D9A91FADB9D500F34D26 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6852D9AB1FADBC3600F34D26 /* UIWindow+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Utils.swift"; sourceTree = "<group>"; };
+		6852D9B11FADCA9800F34D26 /* TSLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLBaseViewController.swift; sourceTree = "<group>"; };
+		6852D9B31FADCDA700F34D26 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		6852D9B61FADD08300F34D26 /* TSLCredentilasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLCredentilasView.swift; sourceTree = "<group>"; };
+		6852D9B81FADD09500F34D26 /* TSLCredentilasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLCredentilasView.xib; sourceTree = "<group>"; };
+		6852D9BD1FADD71700F34D26 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		6852D9C21FADD7BB00F34D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
+		6852D9C51FADD7BF00F34D26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLTargetType.swift; sourceTree = "<group>"; };
+		6859C70E1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLAuthorizationAPITargets.swift; sourceTree = "<group>"; };
+		6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLUserSessionManager.swift; sourceTree = "<group>"; };
+		6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLKeychainManager.swift; sourceTree = "<group>"; };
+		68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TSLAuthorizationAPITargets+Credentials.swift"; sourceTree = "<group>"; };
+		68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListTarget.swift; sourceTree = "<group>"; };
+		68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIModule.swift; sourceTree = "<group>"; };
+		68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPIModuleProtocol.swift; sourceTree = "<group>"; };
+		68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListViewController.swift; sourceTree = "<group>"; };
+		68C82EFF1FB07DD900306858 /* TSLServersListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSLServersListViewController.storyboard; sourceTree = "<group>"; };
+		68C82F031FB07E8900306858 /* TSLServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServerTableViewCell.swift; sourceTree = "<group>"; };
+		68C82F041FB07E8900306858 /* TSLServerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLServerTableViewCell.xib; sourceTree = "<group>"; };
+		68C82F0A1FB07FF500306858 /* TesonetServersList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TesonetServersList.xcdatamodel; sourceTree = "<group>"; };
+		68C82F0D1FB0809200306858 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		68C82F0F1FB080C400306858 /* FileManager+Directories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Directories.swift"; sourceTree = "<group>"; };
+		68C82F121FB0822700306858 /* NSManagedObjectContext+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utility.swift"; sourceTree = "<group>"; };
+		68C82F151FB0855900306858 /* ServersListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListModule.swift; sourceTree = "<group>"; };
+		68C82F171FB0998E00306858 /* TSLServersListSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListSectionHeaderView.swift; sourceTree = "<group>"; };
+		68C82F191FB099A400306858 /* TSLServersListSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLServersListSectionHeaderView.xib; sourceTree = "<group>"; };
+		68C82F1B1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLManagedObjectTableViewDataSource.swift; sourceTree = "<group>"; };
+		68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListDataSource.swift; sourceTree = "<group>"; };
+		68C82F221FB0A86700306858 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		68C82F241FB0B7A800306858 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		68C82F2B1FB0BBAB00306858 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ServersList.strings; sourceTree = "<group>"; };
+		68C82F301FB0DCDC00306858 /* TSLScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLScaledFont.swift; sourceTree = "<group>"; };
+		68C82F321FB0DF8200306858 /* LucidaGrande-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LucidaGrande-Regular.ttf"; sourceTree = "<group>"; };
+		68C82F341FB0E60400306858 /* LucidaGrande.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LucidaGrande.plist; sourceTree = "<group>"; };
+		68C82F3A1FB1D04700306858 /* String+Normalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Normalized.swift"; sourceTree = "<group>"; };
+		68C82F3E1FB1D13F00306858 /* ServerData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		68C82F3F1FB1D13F00306858 /* ServerData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		68C82F451FB1FCC600306858 /* LoadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
+		68C82F471FB1FCEE00306858 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		68FA594D1FB213DD00210E8C /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		68FA594F1FB2144B00210E8C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		68FA59511FB214C200210E8C /* APIErrors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = APIErrors.strings; sourceTree = "<group>"; };
+		68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServerMessageExtractor.swift; sourceTree = "<group>"; };
+		68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaError+RecoverySuggestion.swift"; sourceTree = "<group>"; };
+		68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListModuleProtocol.swift; sourceTree = "<group>"; };
+		68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLServersListSortFloatingView.swift; sourceTree = "<group>"; };
+		68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSLServersListSortFloatingView.xib; sourceTree = "<group>"; };
+		68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSLTransitionManager.swift; sourceTree = "<group>"; };
+		AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetServersList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetServersList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		682CFC941FAD0FF8003A16A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6644D16D15EC233E33AD3D0D /* Pods_TesonetServersList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55C3006CFA99AE737E162BAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */,
+				5183404D31FD48AC0CAE2BA7 /* Pods-TesonetServersList.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		682CFC8E1FAD0FF8003A16A6 = {
+			isa = PBXGroup;
+			children = (
+				682CFCAC1FAD1027003A16A6 /* Sources */,
+				682CFCAD1FAD102F003A16A6 /* Resources */,
+				6852D99F1FADB95900F34D26 /* Metadata */,
+				682CFC981FAD0FF8003A16A6 /* Products */,
+				55C3006CFA99AE737E162BAA /* Pods */,
+				8F2C6DAE4FE1AFFB90704D5F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		682CFC981FAD0FF8003A16A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				682CFC971FAD0FF8003A16A6 /* TesonetServersList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		682CFCAC1FAD1027003A16A6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				682CFCAE1FAD1074003A16A6 /* TesonetServersList */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		682CFCAD1FAD102F003A16A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				682CFCB01FAD1080003A16A6 /* TesonetServersList */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		682CFCAE1FAD1074003A16A6 /* TesonetServersList */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F0C1FB0806B00306858 /* CoreData */,
+				6859C70B1FAF632500AA3DC4 /* API */,
+				6852D9911FADAC1A00F34D26 /* Managers */,
+				682CFCB11FAD1098003A16A6 /* Controllers */,
+				6852D9951FADADBD00F34D26 /* Extensions */,
+				68C82F201FB0A85600306858 /* Utility */,
+				682CFCAF1FAD1074003A16A6 /* Supporting Files */,
+			);
+			name = TesonetServersList;
+			path = Sources/TesonetServersList;
+			sourceTree = "<group>";
+		};
+		682CFCAF1FAD1074003A16A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				682CFC9A1FAD0FF8003A16A6 /* AppDelegate.swift */,
+				682CFCA61FAD0FF8003A16A6 /* Info.plist */,
+				682CFCB21FAD10DF003A16A6 /* TesonetServersList.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		682CFCB01FAD1080003A16A6 /* TesonetServersList */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F2D1FB0DB2800306858 /* Fonts */,
+				6852D9BA1FADD5C400F34D26 /* Localizations */,
+				6852D99A1FADB79900F34D26 /* Controllers */,
+				682CFCA11FAD0FF8003A16A6 /* Assets.xcassets */,
+				682CFCA31FAD0FF8003A16A6 /* LaunchScreen.storyboard */,
+				68C82F091FB07FF500306858 /* TesonetServersList.xcdatamodeld */,
+			);
+			name = TesonetServersList;
+			path = Resources/TesonetServersList;
+			sourceTree = "<group>";
+		};
+		682CFCB11FAD1098003A16A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F491FB1FCF500306858 /* Loading */,
+				68C82EFC1FB07DA100306858 /* Servers list */,
+				6852D9B11FADCA9800F34D26 /* TSLBaseViewController.swift */,
+				6852D9B51FADD02900F34D26 /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6852D9911FADAC1A00F34D26 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6859C7131FAF6D4A00AA3DC4 /* TSLKeychainManager.swift */,
+				6852D9941FADADB300F34D26 /* Session */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6852D9941FADADB300F34D26 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				6859C7111FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift */,
+				6852D9921FADAC7B00F34D26 /* TSLUISessionManager.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		6852D9951FADADBD00F34D26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68FA59551FB2248A00210E8C /* Moya */,
+				68C82F111FB0821900306858 /* CoreData */,
+				6852D9AA1FADBB8100F34D26 /* UIKit */,
+				6852D9961FADADC600F34D26 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6852D9961FADADC600F34D26 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9971FADADE900F34D26 /* Notification.Name+TSLSession.swift */,
+				68C82F0F1FB080C400306858 /* FileManager+Directories.swift */,
+				6852D9BD1FADD71700F34D26 /* String+Localized.swift */,
+				68C82F3A1FB1D04700306858 /* String+Normalized.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		6852D9991FADB79300F34D26 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6852D99B1FADB7B200F34D26 /* TSLLoginViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6852D99A1FADB79900F34D26 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F441FB1FC9C00306858 /* Loading */,
+				6852D9991FADB79300F34D26 /* Login */,
+				68C82F081FB07F7F00306858 /* Servers list */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6852D99F1FADB95900F34D26 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9A31FADB97D00F34D26 /* SwiftLint */,
+				6852D9A21FADB97200F34D26 /* Bundler */,
+				6852D9A11FADB96B00F34D26 /* git */,
+				6852D9A01FADB96100F34D26 /* CocoaPods */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+		6852D9A01FADB96100F34D26 /* CocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9A71FADB9B100F34D26 /* Podfile */,
+				6852D9A81FADB9BB00F34D26 /* Podfile.lock */,
+			);
+			name = CocoaPods;
+			sourceTree = "<group>";
+		};
+		6852D9A11FADB96B00F34D26 /* git */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9A91FADB9D500F34D26 /* .gitignore */,
+			);
+			name = git;
+			sourceTree = "<group>";
+		};
+		6852D9A21FADB97200F34D26 /* Bundler */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9A51FADB99C00F34D26 /* Gemfile */,
+				6852D9A61FADB9A300F34D26 /* Gemfile.lock */,
+			);
+			name = Bundler;
+			sourceTree = "<group>";
+		};
+		6852D9A31FADB97D00F34D26 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9A41FADB99300F34D26 /* .swiftlint.yml */,
+			);
+			name = SwiftLint;
+			sourceTree = "<group>";
+		};
+		6852D9AA1FADBB8100F34D26 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9AB1FADBC3600F34D26 /* UIWindow+Utils.swift */,
+				6852D9B31FADCDA700F34D26 /* UIView+CornerRadius.swift */,
+				680F13531FADE8A80013A8CF /* UIImage+Images.swift */,
+				68C82F241FB0B7A800306858 /* UIImage+Resize.swift */,
+				680F13551FADE9150013A8CF /* UIColor+Colors.swift */,
+				680F13571FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		6852D9B51FADD02900F34D26 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EFB1FB07D8900306858 /* Credentilas view */,
+				68FA59681FB36A7A00210E8C /* Text field with image */,
+				6852D99D1FADB7CF00F34D26 /* TSLLoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6852D9BA1FADD5C400F34D26 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9C31FADD7BB00F34D26 /* Login.strings */,
+				6852D9C61FADD7BF00F34D26 /* Localized.strings */,
+				68C82F2C1FB0BBAB00306858 /* ServersList.strings */,
+				68FA59511FB214C200210E8C /* APIErrors.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		6859C70B1FAF632500AA3DC4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6859C70C1FAF634800AA3DC4 /* TSLTargetType.swift */,
+				68FA59531FB2178A00210E8C /* TSLServerMessageExtractor.swift */,
+				68FA59581FB225A500210E8C /* Errors */,
+				68C82EF01FB05FB800306858 /* Authorization */,
+				68C82EF11FB05FC700306858 /* Servers list */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		68C82EF01FB05FB800306858 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EF61FB078DA00306858 /* Target */,
+				68C82EF71FB078F400306858 /* AuthorizationAPIModule.swift */,
+				68C82EF91FB0790600306858 /* AuthorizationAPIModuleProtocol.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		68C82EF11FB05FC700306858 /* Servers list */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F141FB0853C00306858 /* Target */,
+				68C82F151FB0855900306858 /* ServersListModule.swift */,
+				68FA59591FB2260900210E8C /* ServersListModuleProtocol.swift */,
+			);
+			path = "Servers list";
+			sourceTree = "<group>";
+		};
+		68C82EF61FB078DA00306858 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				6859C70E1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift */,
+				68C82EEE1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		68C82EFB1FB07D8900306858 /* Credentilas view */ = {
+			isa = PBXGroup;
+			children = (
+				6852D9B61FADD08300F34D26 /* TSLCredentilasView.swift */,
+				6852D9B81FADD09500F34D26 /* TSLCredentilasView.xib */,
+			);
+			path = "Credentilas view";
+			sourceTree = "<group>";
+		};
+		68C82EFC1FB07DA100306858 /* Servers list */ = {
+			isa = PBXGroup;
+			children = (
+				68FA59691FB36A9700210E8C /* Data source */,
+				68C82F1D1FB0A3D300306858 /* Section header */,
+				68C82F071FB07E8E00306858 /* Server cell */,
+				68FA59611FB2ED5F00210E8C /* Sort floating view */,
+				68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */,
+			);
+			path = "Servers list";
+			sourceTree = "<group>";
+		};
+		68C82F071FB07E8E00306858 /* Server cell */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F031FB07E8900306858 /* TSLServerTableViewCell.swift */,
+				68C82F041FB07E8900306858 /* TSLServerTableViewCell.xib */,
+			);
+			path = "Server cell";
+			sourceTree = "<group>";
+		};
+		68C82F081FB07F7F00306858 /* Servers list */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EFF1FB07DD900306858 /* TSLServersListViewController.storyboard */,
+			);
+			path = "Servers list";
+			sourceTree = "<group>";
+		};
+		68C82F0C1FB0806B00306858 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F3C1FB1D11E00306858 /* Classes */,
+				68C82F0D1FB0809200306858 /* CoreDataStack.swift */,
+				68C82F1B1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		68C82F111FB0821900306858 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F121FB0822700306858 /* NSManagedObjectContext+Utility.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		68C82F141FB0853C00306858 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				68C82EF21FB05FEF00306858 /* TSLServersListTarget.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		68C82F1D1FB0A3D300306858 /* Section header */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F171FB0998E00306858 /* TSLServersListSectionHeaderView.swift */,
+				68C82F191FB099A400306858 /* TSLServersListSectionHeaderView.xib */,
+			);
+			path = "Section header";
+			sourceTree = "<group>";
+		};
+		68C82F201FB0A85600306858 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F221FB0A86700306858 /* Formatters.swift */,
+				68C82F301FB0DCDC00306858 /* TSLScaledFont.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		68C82F2D1FB0DB2800306858 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F321FB0DF8200306858 /* LucidaGrande-Regular.ttf */,
+				68C82F341FB0E60400306858 /* LucidaGrande.plist */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		68C82F3C1FB1D11E00306858 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F3D1FB1D12600306858 /* ServerData */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		68C82F3D1FB1D12600306858 /* ServerData */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F3E1FB1D13F00306858 /* ServerData+CoreDataClass.swift */,
+				68C82F3F1FB1D13F00306858 /* ServerData+CoreDataProperties.swift */,
+			);
+			path = ServerData;
+			sourceTree = "<group>";
+		};
+		68C82F441FB1FC9C00306858 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F451FB1FCC600306858 /* LoadingViewController.storyboard */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		68C82F491FB1FCF500306858 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F471FB1FCEE00306858 /* LoadingViewController.swift */,
+				68FA596A1FB36AB200210E8C /* Transition manager */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		68FA59551FB2248A00210E8C /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				68FA59561FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		68FA59581FB225A500210E8C /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				68FA594D1FB213DD00210E8C /* ServerError.swift */,
+				68FA594F1FB2144B00210E8C /* APIError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		68FA59611FB2ED5F00210E8C /* Sort floating view */ = {
+			isa = PBXGroup;
+			children = (
+				68FA595D1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift */,
+				68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */,
+			);
+			path = "Sort floating view";
+			sourceTree = "<group>";
+		};
+		68FA59681FB36A7A00210E8C /* Text field with image */ = {
+			isa = PBXGroup;
+			children = (
+				680F135A1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift */,
+			);
+			path = "Text field with image";
+			sourceTree = "<group>";
+		};
+		68FA59691FB36A9700210E8C /* Data source */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */,
+			);
+			path = "Data source";
+			sourceTree = "<group>";
+		};
+		68FA596A1FB36AB200210E8C /* Transition manager */ = {
+			isa = PBXGroup;
+			children = (
+				68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */,
+			);
+			path = "Transition manager";
+			sourceTree = "<group>";
+		};
+		8F2C6DAE4FE1AFFB90704D5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF440FF868F96705D7E81573 /* Pods_TesonetServersList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		682CFC961FAD0FF8003A16A6 /* TesonetServersList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 682CFCA91FAD0FF8003A16A6 /* Build configuration list for PBXNativeTarget "TesonetServersList" */;
+			buildPhases = (
+				591D332C8003849A2E819ECC /* [CP] Check Pods Manifest.lock */,
+				6852D9901FADAA7700F34D26 /* SwiftLint by Realm */,
+				682CFC931FAD0FF8003A16A6 /* Sources */,
+				682CFC941FAD0FF8003A16A6 /* Frameworks */,
+				682CFC951FAD0FF8003A16A6 /* Resources */,
+				943132495CB2F5365731CFC2 /* [CP] Embed Pods Frameworks */,
+				1DD01FD26844B20FE47AE1AD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TesonetServersList;
+			productName = TesonetServersList;
+			productReference = 682CFC971FAD0FF8003A16A6 /* TesonetServersList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		682CFC8F1FAD0FF8003A16A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TSL;
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Tesonet;
+				TargetAttributes = {
+					682CFC961FAD0FF8003A16A6 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Multipath = {
+								enabled = 0;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 682CFC921FAD0FF8003A16A6 /* Build configuration list for PBXProject "TesonetServersList" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 682CFC8E1FAD0FF8003A16A6;
+			productRefGroup = 682CFC981FAD0FF8003A16A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				682CFC961FAD0FF8003A16A6 /* TesonetServersList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		682CFC951FAD0FF8003A16A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FA59601FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib in Resources */,
+				68C82F061FB07E8900306858 /* TSLServerTableViewCell.xib in Resources */,
+				68C82F1A1FB099A400306858 /* TSLServersListSectionHeaderView.xib in Resources */,
+				68C82F331FB0DF8200306858 /* LucidaGrande-Regular.ttf in Resources */,
+				6852D9C41FADD7BF00F34D26 /* Localized.strings in Resources */,
+				6852D9B91FADD09500F34D26 /* TSLCredentilasView.xib in Resources */,
+				682CFCA51FAD0FF8003A16A6 /* LaunchScreen.storyboard in Resources */,
+				68FA59521FB214C200210E8C /* APIErrors.strings in Resources */,
+				68C82F2A1FB0BBAB00306858 /* ServersList.strings in Resources */,
+				6852D99C1FADB7B200F34D26 /* TSLLoginViewController.storyboard in Resources */,
+				68C82F001FB07DD900306858 /* TSLServersListViewController.storyboard in Resources */,
+				6852D9C11FADD7BB00F34D26 /* Login.strings in Resources */,
+				68C82F461FB1FCC600306858 /* LoadingViewController.storyboard in Resources */,
+				682CFCA21FAD0FF8003A16A6 /* Assets.xcassets in Resources */,
+				68C82F351FB0E60400306858 /* LucidaGrande.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DD01FD26844B20FE47AE1AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		591D332C8003849A2E819ECC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesonetServersList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6852D9901FADAA7700F34D26 /* SwiftLint by Realm */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint by Realm";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+			showEnvVarsInLog = 0;
+		};
+		943132495CB2F5365731CFC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetServersList/Pods-TesonetServersList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		682CFC931FAD0FF8003A16A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				680F13581FADEEAD0013A8CF /* UIImageView_InitWithContentMode.swift in Sources */,
+				68C82F1F1FB0A3EA00306858 /* TSLServersListDataSource.swift in Sources */,
+				68C82F401FB1D13F00306858 /* ServerData+CoreDataClass.swift in Sources */,
+				6852D99E1FADB7CF00F34D26 /* TSLLoginViewController.swift in Sources */,
+				680F13561FADE9150013A8CF /* UIColor+Colors.swift in Sources */,
+				68C82F311FB0DCDC00306858 /* TSLScaledFont.swift in Sources */,
+				68C82F0E1FB0809200306858 /* CoreDataStack.swift in Sources */,
+				68FA59571FB224AF00210E8C /* MoyaError+RecoverySuggestion.swift in Sources */,
+				68C82EFA1FB0790600306858 /* AuthorizationAPIModuleProtocol.swift in Sources */,
+				68FA59541FB2178A00210E8C /* TSLServerMessageExtractor.swift in Sources */,
+				68C82EF81FB078F400306858 /* AuthorizationAPIModule.swift in Sources */,
+				68C82F131FB0822700306858 /* NSManagedObjectContext+Utility.swift in Sources */,
+				68FA594E1FB213DD00210E8C /* ServerError.swift in Sources */,
+				6859C7121FAF6CCA00AA3DC4 /* TSLUserSessionManager.swift in Sources */,
+				68C82F481FB1FCEE00306858 /* LoadingViewController.swift in Sources */,
+				6859C70D1FAF634800AA3DC4 /* TSLTargetType.swift in Sources */,
+				68C82F1C1FB09B9000306858 /* TSLManagedObjectTableViewDataSource.swift in Sources */,
+				68C82F181FB0998E00306858 /* TSLServersListSectionHeaderView.swift in Sources */,
+				68FA595A1FB2260900210E8C /* ServersListModuleProtocol.swift in Sources */,
+				680F135B1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift in Sources */,
+				68C82F161FB0855900306858 /* ServersListModule.swift in Sources */,
+				68C82F411FB1D13F00306858 /* ServerData+CoreDataProperties.swift in Sources */,
+				68FA595E1FB2E5B900210E8C /* TSLServersListSortFloatingView.swift in Sources */,
+				68C82F3B1FB1D04700306858 /* String+Normalized.swift in Sources */,
+				68C82EEF1FB0544300306858 /* TSLAuthorizationAPITargets+Credentials.swift in Sources */,
+				68C82EFE1FB07DBE00306858 /* TSLServersListViewController.swift in Sources */,
+				68C82F231FB0A86700306858 /* Formatters.swift in Sources */,
+				6859C70F1FAF658B00AA3DC4 /* TSLAuthorizationAPITargets.swift in Sources */,
+				68C82EF31FB05FEF00306858 /* TSLServersListTarget.swift in Sources */,
+				68FA59501FB2144B00210E8C /* APIError.swift in Sources */,
+				6852D9B41FADCDA700F34D26 /* UIView+CornerRadius.swift in Sources */,
+				6852D9B21FADCA9800F34D26 /* TSLBaseViewController.swift in Sources */,
+				6852D9BE1FADD71700F34D26 /* String+Localized.swift in Sources */,
+				68FA59671FB34D1C00210E8C /* TSLTransitionManager.swift in Sources */,
+				680F13541FADE8A80013A8CF /* UIImage+Images.swift in Sources */,
+				68C82F101FB080C400306858 /* FileManager+Directories.swift in Sources */,
+				6852D9981FADADE900F34D26 /* Notification.Name+TSLSession.swift in Sources */,
+				68C82F051FB07E8900306858 /* TSLServerTableViewCell.swift in Sources */,
+				68C82F251FB0B7A800306858 /* UIImage+Resize.swift in Sources */,
+				6859C7141FAF6D4A00AA3DC4 /* TSLKeychainManager.swift in Sources */,
+				6852D9AC1FADBC3600F34D26 /* UIWindow+Utils.swift in Sources */,
+				682CFC9B1FAD0FF8003A16A6 /* AppDelegate.swift in Sources */,
+				6852D9B71FADD08300F34D26 /* TSLCredentilasView.swift in Sources */,
+				6852D9931FADAC7B00F34D26 /* TSLUISessionManager.swift in Sources */,
+				68C82F0B1FB07FF500306858 /* TesonetServersList.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		682CFCA31FAD0FF8003A16A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6852D98E1FAD11B900F34D26 /* en */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6852D9C31FADD7BB00F34D26 /* Login.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6852D9C21FADD7BB00F34D26 /* en */,
+			);
+			name = Login.strings;
+			sourceTree = "<group>";
+		};
+		6852D9C61FADD7BF00F34D26 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6852D9C51FADD7BF00F34D26 /* en */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
+		68C82F2C1FB0BBAB00306858 /* ServersList.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68C82F2B1FB0BBAB00306858 /* en */,
+			);
+			name = ServersList.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		682CFCA71FAD0FF8003A16A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=200 -Xfrontend -warn-long-expression-type-checking=200";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		682CFCA81FAD0FF8003A16A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		682CFCAA1FAD0FF8003A16A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12869CEF54679928C9252B3 /* Pods-TesonetServersList.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Sources/TesonetServersList/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lt.tesonet.TesonetServersList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		682CFCAB1FAD0FF8003A16A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5183404D31FD48AC0CAE2BA7 /* Pods-TesonetServersList.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Sources/TesonetServersList/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lt.tesonet.TesonetServersList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		682CFC921FAD0FF8003A16A6 /* Build configuration list for PBXProject "TesonetServersList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682CFCA71FAD0FF8003A16A6 /* Debug */,
+				682CFCA81FAD0FF8003A16A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		682CFCA91FAD0FF8003A16A6 /* Build configuration list for PBXNativeTarget "TesonetServersList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682CFCAA1FAD0FF8003A16A6 /* Debug */,
+				682CFCAB1FAD0FF8003A16A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68C82F091FB07FF500306858 /* TesonetServersList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68C82F0A1FB07FF500306858 /* TesonetServersList.xcdatamodel */,
+			);
+			currentVersion = 68C82F0A1FB07FF500306858 /* TesonetServersList.xcdatamodel */;
+			path = TesonetServersList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 682CFC8F1FAD0FF8003A16A6 /* Project object */;
+}

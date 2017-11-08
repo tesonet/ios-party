@@ -1,0 +1,17 @@
+/* 
+  ServersList.strings
+  TesonetServersList
+
+  Created by Vitalii Budnik on 11/6/17.
+  Copyright © 2017 Tesonet. All rights reserved.
+*/
+
+"HEADER.SERVER NAME" = "Server";
+"HEADER.DISTANCE" = "Distance";
+
+"LOADER.TEXT" = "Fetching the list...";
+
+"SORT.BY NAME" = "Alphanumerical";
+"SORT.BY DISTANCE" = "By Distance";
+
+"SORT.LABEL TEXT" = "Sort";

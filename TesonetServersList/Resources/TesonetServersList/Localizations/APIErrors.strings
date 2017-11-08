@@ -1,0 +1,16 @@
+/* 
+  APIErrors.strings
+  TesonetServersList
+
+  Created by Vitalii Budnik on 11/7/17.
+  Copyright © 2017 Tesonet. All rights reserved.
+*/
+
+"CANT CAST SERVER RESPONSE.DESCR" = "Can't cast server response from %@ to expected %@";
+"CANT CAST SERVER RESPONSE.SUGGEST" = "¯\_(ツ)_/¯";
+
+"SERVER RETURNED ERROR.DESCR" = "Server returned error";
+"SERVER RETURNED ERROR.SUGGEST" = "Error message: \"%@\"";
+
+"SESSION EXPIRED.DESCR" = "Your session has expired";
+"SESSION EXPIRED.SUGGEST" = "Please, authenticate once again";
