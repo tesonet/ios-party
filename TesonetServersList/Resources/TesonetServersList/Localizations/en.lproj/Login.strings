@@ -1,0 +1,18 @@
+/* 
+  Login.strings
+  TesonetServersList
+
+  Created by Vitalii Budnik on 11/4/17.
+  Copyright © 2017 Tesonet. All rights reserved.
+*/
+
+"USERNAME.PLACEHOLDER" = "Username";
+"PASSWORD.PLACEHOLDER" = "Password";
+"LOGIN.TEXT" = "Log In";
+
+// Errors
+
+"ERROR.NO_USERNAME.DESCR" = "Username is empty";
+"ERROR.NO_PASSWORD.DESCR" = "Password is empty";
+"ERROR.NO_USERNAME.SUGGEST" = "Please, type your username";
+"ERROR.NO_PASSWORD.SUGGEST" = "Please, enter your password";

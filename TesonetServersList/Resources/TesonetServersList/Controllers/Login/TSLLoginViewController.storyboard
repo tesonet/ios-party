@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bMj-kw-NLh">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="IbF-3p-3gs">
+            <objects>
+                <viewController storyboardIdentifier="TSLLoginViewController" id="bMj-kw-NLh" customClass="TSLLoginViewController" customModule="TesonetServersList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kUf-Hf-NNx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login.Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-Gt-ZCd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4m4-yG-ydY" customClass="TSLCredentilasView" customModule="TesonetServersList" customModuleProvider="target">
+                                <rect key="frame" x="40" y="246" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Jde-Kk-i9I"/>
+                                    <constraint firstAttribute="height" constant="128" id="PyW-ON-A9A"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.White" translatesAutoresizingMaskIntoConstraints="NO" id="02w-Sk-45o">
+                                <rect key="frame" x="37" y="98" width="246" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="IgZ-Jw-RkN"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmt-Cf-K5s" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="143" y="382" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="8Es-Sx-jYp"/>
+                                    <constraint firstAttribute="width" secondItem="gmt-Cf-K5s" secondAttribute="height" multiplier="1:1" id="Mvb-an-tJd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleRippleMultiple"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="02w-Sk-45o" firstAttribute="top" secondItem="kUf-Hf-NNx" secondAttribute="top" priority="250" constant="125" id="0bR-yD-3lq"/>
+                            <constraint firstItem="Ije-Gt-ZCd" firstAttribute="height" secondItem="kUf-Hf-NNx" secondAttribute="height" id="4oe-5t-RpA"/>
+                            <constraint firstItem="4m4-yG-ydY" firstAttribute="centerX" secondItem="BAe-FJ-v6U" secondAttribute="centerX" id="56Y-Il-D0x"/>
+                            <constraint firstItem="Ije-Gt-ZCd" firstAttribute="centerX" secondItem="kUf-Hf-NNx" secondAttribute="centerX" id="GWf-UH-nkF"/>
+                            <constraint firstItem="02w-Sk-45o" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kUf-Hf-NNx" secondAttribute="top" constant="64" id="J3k-d8-063"/>
+                            <constraint firstItem="02w-Sk-45o" firstAttribute="centerX" secondItem="Ije-Gt-ZCd" secondAttribute="centerX" id="L16-73-baC"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4m4-yG-ydY" secondAttribute="bottom" id="LWb-em-Qj0"/>
+                            <constraint firstItem="gmt-Cf-K5s" firstAttribute="centerX" secondItem="4m4-yG-ydY" secondAttribute="centerX" id="Xv3-Xh-yQH"/>
+                            <constraint firstItem="4m4-yG-ydY" firstAttribute="centerY" secondItem="BAe-FJ-v6U" secondAttribute="centerY" priority="750" constant="16" id="YKW-WM-KVp"/>
+                            <constraint firstItem="gmt-Cf-K5s" firstAttribute="top" secondItem="4m4-yG-ydY" secondAttribute="bottom" constant="8" id="Z52-0g-XXK"/>
+                            <constraint firstItem="Ije-Gt-ZCd" firstAttribute="centerY" secondItem="kUf-Hf-NNx" secondAttribute="centerY" id="f7X-0Q-D8p"/>
+                            <constraint firstItem="4m4-yG-ydY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="02w-Sk-45o" secondAttribute="bottom" priority="750" constant="100" id="wDL-Y9-6c4"/>
+                            <constraint firstItem="Ije-Gt-ZCd" firstAttribute="width" secondItem="kUf-Hf-NNx" secondAttribute="width" id="wGm-g6-1n6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BAe-FJ-v6U"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="gmt-Cf-K5s" id="TSs-gD-AZP"/>
+                        <outlet property="bottomConstraint" destination="LWb-em-Qj0" id="AIX-Fh-fdO"/>
+                        <outlet property="credentialsView" destination="4m4-yG-ydY" id="qpC-oJ-6yK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6v-8O-VKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358.125" y="-132.04225352112675"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login.Background" width="320" height="568"/>
+        <image name="logo.White" width="246" height="64"/>
+    </resources>
+</document>

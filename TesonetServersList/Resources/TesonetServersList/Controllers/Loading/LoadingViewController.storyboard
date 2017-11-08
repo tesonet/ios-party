@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kr2-r5-Z6k">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="7Ot-7d-p8O">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="kr2-r5-Z6k" customClass="LoadingViewController" customModule="TesonetServersList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="edm-c2-4fD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login.Background" translatesAutoresizingMaskIntoConstraints="NO" id="7wd-UR-u5T">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjL-bY-p6j" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="109.5" y="234" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tjL-bY-p6j" secondAttribute="height" multiplier="1:1" id="3Pw-8y-0fm"/>
+                                    <constraint firstAttribute="width" constant="100" id="kwL-12-I5P"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleRippleMultiple"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aQ-SY-OmV">
+                                <rect key="frame" x="139" y="397" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tjL-bY-p6j" firstAttribute="centerX" secondItem="7wd-UR-u5T" secondAttribute="centerX" id="2ww-RJ-Yi3"/>
+                            <constraint firstItem="7wd-UR-u5T" firstAttribute="bottom" secondItem="edm-c2-4fD" secondAttribute="bottom" id="9pn-UW-Tqj"/>
+                            <constraint firstItem="4aQ-SY-OmV" firstAttribute="bottom" secondItem="VHO-b1-J1l" secondAttribute="bottom" constant="-150" id="Ejg-gv-Ak4"/>
+                            <constraint firstItem="7wd-UR-u5T" firstAttribute="top" secondItem="edm-c2-4fD" secondAttribute="top" id="G5y-er-rgi"/>
+                            <constraint firstItem="7wd-UR-u5T" firstAttribute="leading" secondItem="edm-c2-4fD" secondAttribute="leading" id="IAj-au-cpa"/>
+                            <constraint firstItem="tjL-bY-p6j" firstAttribute="centerY" secondItem="edm-c2-4fD" secondAttribute="centerY" id="Kgi-D7-v0l"/>
+                            <constraint firstItem="7wd-UR-u5T" firstAttribute="trailing" secondItem="edm-c2-4fD" secondAttribute="trailing" id="Mc5-OA-1Gh"/>
+                            <constraint firstItem="4aQ-SY-OmV" firstAttribute="centerX" secondItem="VHO-b1-J1l" secondAttribute="centerX" id="keH-Fb-gEa"/>
+                            <constraint firstItem="4aQ-SY-OmV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VHO-b1-J1l" secondAttribute="leading" constant="16" id="v6d-L0-ESM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VHO-b1-J1l"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="tjL-bY-p6j" id="rV9-Rn-421"/>
+                        <outlet property="textLabel" destination="4aQ-SY-OmV" id="Akz-Rc-R8J"/>
+                        <segue destination="sIT-Ih-EtP" kind="unwind" identifier="unwind" unwindAction="unwindFromLoadingViewControllerWithSegue:" id="ydW-Wp-uZb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BA-3j-pHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sIT-Ih-EtP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-332" y="151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login.Background" width="320" height="568"/>
+    </resources>
+</document>

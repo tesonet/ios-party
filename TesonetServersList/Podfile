@@ -1,0 +1,43 @@
+
+target 'TesonetServersList' do
+	
+	platform :ios, '10.0'
+	
+	use_frameworks!
+	
+	# Networking
+	pod 'Alamofire'
+	
+	# Abstraction over Alamofire
+	pod 'Moya'
+	
+	# Activity indicator view
+	pod 'NVActivityIndicatorView'
+	
+	# Extensions for reusable UI(Table|Collection)ViewCell classes
+	pod 'Reusable'
+	
+	# Wrapper on Keychain
+	pod 'KeychainAccess'
+	
+	# CoreData extensions
+	pod 'MagicalRecord', :inhibit_warnings => true
+	
+	# A tool to enforce Swift style and conventions
+	pod 'SwiftLint', :configurations => ['Debug']
+	
+end
+
+post_install do |installer|
+	
+	installer.pods_project.build_configurations.each do |configuration|
+		
+		# fix `SWIFT_OPTIMIZATION_LEVEL` build settings.
+		if configuration.name == "Release" then
+			configuration.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
+		else
+			configuration.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Onone'
+		end
+	end
+	
+end
