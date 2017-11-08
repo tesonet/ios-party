@@ -166,20 +166,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		680F13591FADEED30013A8CF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				680F135A1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		682CFC8E1FAD0FF8003A16A6 = {
 			isa = PBXGroup;
 			children = (
-				6852D99F1FADB95900F34D26 /* Metadata */,
-				682CFCAD1FAD102F003A16A6 /* Resources */,
 				682CFCAC1FAD1027003A16A6 /* Sources */,
+				682CFCAD1FAD102F003A16A6 /* Resources */,
+				6852D99F1FADB95900F34D26 /* Metadata */,
 				682CFC981FAD0FF8003A16A6 /* Products */,
 				55C3006CFA99AE737E162BAA /* Pods */,
 				8F2C6DAE4FE1AFFB90704D5F /* Frameworks */,
@@ -213,13 +205,12 @@
 		682CFCAE1FAD1074003A16A6 /* TesonetServersList */ = {
 			isa = PBXGroup;
 			children = (
-				68C82F201FB0A85600306858 /* Utility */,
 				68C82F0C1FB0806B00306858 /* CoreData */,
 				6859C70B1FAF632500AA3DC4 /* API */,
-				680F13591FADEED30013A8CF /* Views */,
-				6852D9951FADADBD00F34D26 /* Extensions */,
 				6852D9911FADAC1A00F34D26 /* Managers */,
 				682CFCB11FAD1098003A16A6 /* Controllers */,
+				6852D9951FADADBD00F34D26 /* Extensions */,
+				68C82F201FB0A85600306858 /* Utility */,
 				682CFCAF1FAD1074003A16A6 /* Supporting Files */,
 			);
 			name = TesonetServersList;
@@ -381,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				68C82EFB1FB07D8900306858 /* Credentilas view */,
+				68FA59681FB36A7A00210E8C /* Text field with image */,
 				6852D99D1FADB7CF00F34D26 /* TSLLoginViewController.swift */,
 			);
 			path = Login;
@@ -450,11 +442,11 @@
 		68C82EFC1FB07DA100306858 /* Servers list */ = {
 			isa = PBXGroup;
 			children = (
-				68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */,
-				68FA59611FB2ED5F00210E8C /* Sort floating view */,
-				68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */,
+				68FA59691FB36A9700210E8C /* Data source */,
 				68C82F1D1FB0A3D300306858 /* Section header */,
 				68C82F071FB07E8E00306858 /* Server cell */,
+				68FA59611FB2ED5F00210E8C /* Sort floating view */,
+				68C82EFD1FB07DBE00306858 /* TSLServersListViewController.swift */,
 			);
 			path = "Servers list";
 			sourceTree = "<group>";
@@ -558,7 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				68C82F471FB1FCEE00306858 /* LoadingViewController.swift */,
-				68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */,
+				68FA596A1FB36AB200210E8C /* Transition manager */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -587,6 +579,30 @@
 				68FA595F1FB2ED4C00210E8C /* TSLServersListSortFloatingView.xib */,
 			);
 			path = "Sort floating view";
+			sourceTree = "<group>";
+		};
+		68FA59681FB36A7A00210E8C /* Text field with image */ = {
+			isa = PBXGroup;
+			children = (
+				680F135A1FADEEDF0013A8CF /* TSLTextFieldWithLeftImageView.swift */,
+			);
+			path = "Text field with image";
+			sourceTree = "<group>";
+		};
+		68FA59691FB36A9700210E8C /* Data source */ = {
+			isa = PBXGroup;
+			children = (
+				68C82F1E1FB0A3EA00306858 /* TSLServersListDataSource.swift */,
+			);
+			path = "Data source";
+			sourceTree = "<group>";
+		};
+		68FA596A1FB36AB200210E8C /* Transition manager */ = {
+			isa = PBXGroup;
+			children = (
+				68FA59661FB34D1C00210E8C /* TSLTransitionManager.swift */,
+			);
+			path = "Transition manager";
 			sourceTree = "<group>";
 		};
 		8F2C6DAE4FE1AFFB90704D5F /* Frameworks */ = {
