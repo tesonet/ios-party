@@ -24,6 +24,8 @@
 		7AD65AA91FCB4F80006D508F /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD65AA71FCB4F80006D508F /* LoaderViewController.xib */; };
 		7AD65AAB1FCB5081006D508F /* ServersListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65AAA1FCB5081006D508F /* ServersListDataSource.swift */; };
 		7AD65AAF1FCB51A5006D508F /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65AAE1FCB51A5006D508F /* Server.swift */; };
+		7AD65AB11FCB5F4D006D508F /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65AB01FCB5F4D006D508F /* ServerCell.swift */; };
+		7AD65AB31FCB5F70006D508F /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD65AB21FCB5F70006D508F /* ServerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		7AD65AA71FCB4F80006D508F /* LoaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		7AD65AAA1FCB5081006D508F /* ServersListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListDataSource.swift; sourceTree = "<group>"; };
 		7AD65AAE1FCB51A5006D508F /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		7AD65AB01FCB5F4D006D508F /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
+		7AD65AB21FCB5F70006D508F /* ServerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +126,11 @@
 		7AD65A941FCB2BD5006D508F /* Servers list view controller */ = {
 			isa = PBXGroup;
 			children = (
-				7AD65A951FCB2BFA006D508F /* ServersListViewController.swift */,
 				7AD65AAA1FCB5081006D508F /* ServersListDataSource.swift */,
+				7AD65A951FCB2BFA006D508F /* ServersListViewController.swift */,
 				7AD65A971FCB2C18006D508F /* ServersListViewController.xib */,
+				7AD65AB01FCB5F4D006D508F /* ServerCell.swift */,
+				7AD65AB21FCB5F70006D508F /* ServerCell.xib */,
 			);
 			path = "Servers list view controller";
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD65AB31FCB5F70006D508F /* ServerCell.xib in Resources */,
 				7AD65AA91FCB4F80006D508F /* LoaderViewController.xib in Resources */,
 				7AD65A8D1FCB2319006D508F /* AuthViewController.xib in Resources */,
 				7AD65A7C1FCB21AA006D508F /* Assets.xcassets in Resources */,
@@ -231,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD65A921FCB29AE006D508F /* TokenService.swift in Sources */,
+				7AD65AB11FCB5F4D006D508F /* ServerCell.swift in Sources */,
 				7AD65A9A1FCB2E08006D508F /* APIService.swift in Sources */,
 				7AD65A8B1FCB230E006D508F /* AuthViewController.swift in Sources */,
 				7AD65A9D1FCB3086006D508F /* Authorization.swift in Sources */,
