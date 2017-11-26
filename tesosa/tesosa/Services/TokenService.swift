@@ -11,7 +11,7 @@ struct TokenService {
         UserDefaults.standard.set(token, forKey: TokenDefaultsKey)
     }
     
-    static func removeToke() {
+    static func removeToken() {
         UserDefaults.standard.removeObject(forKey: TokenDefaultsKey)
     }
 }

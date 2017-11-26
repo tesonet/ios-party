@@ -1,4 +1,4 @@
 import Foundation
 public protocol Parsable {
-    init(data: Data)
+    init?(data: Data)
 }

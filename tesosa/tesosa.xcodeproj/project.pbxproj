@@ -16,8 +16,10 @@
 		7AD65A961FCB2BFA006D508F /* ServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A951FCB2BFA006D508F /* ServersListViewController.swift */; };
 		7AD65A981FCB2C19006D508F /* ServersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD65A971FCB2C18006D508F /* ServersListViewController.xib */; };
 		7AD65A9A1FCB2E08006D508F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A991FCB2E08006D508F /* APIService.swift */; };
-		7AD65A9D1FCB3086006D508F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A9C1FCB3086006D508F /* Token.swift */; };
+		7AD65A9D1FCB3086006D508F /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A9C1FCB3086006D508F /* Authorization.swift */; };
 		7AD65A9F1FCB30AE006D508F /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A9E1FCB30AE006D508F /* Parsable.swift */; };
+		7AD65AA21FCB348C006D508F /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65AA11FCB348C006D508F /* UIAlertController+Error.swift */; };
+		7AD65AA41FCB34D0006D508F /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65AA31FCB34D0006D508F /* LocalizationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,10 @@
 		7AD65A951FCB2BFA006D508F /* ServersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListViewController.swift; sourceTree = "<group>"; };
 		7AD65A971FCB2C18006D508F /* ServersListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersListViewController.xib; sourceTree = "<group>"; };
 		7AD65A991FCB2E08006D508F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		7AD65A9C1FCB3086006D508F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		7AD65A9C1FCB3086006D508F /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		7AD65A9E1FCB30AE006D508F /* Parsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
+		7AD65AA11FCB348C006D508F /* UIAlertController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Error.swift"; sourceTree = "<group>"; };
+		7AD65AA31FCB34D0006D508F /* LocalizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		7AD65A731FCB21AA006D508F /* tesosa */ = {
 			isa = PBXGroup;
 			children = (
+				7AD65AA01FCB346C006D508F /* Helpers */,
 				7AD65A9B1FCB3071006D508F /* API Models */,
 				7AD65A901FCB2992006D508F /* Services */,
 				7AD65A881FCB22EA006D508F /* View controllers */,
@@ -100,6 +105,7 @@
 			children = (
 				7AD65A911FCB29AE006D508F /* TokenService.swift */,
 				7AD65A991FCB2E08006D508F /* APIService.swift */,
+				7AD65AA31FCB34D0006D508F /* LocalizationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -116,10 +122,18 @@
 		7AD65A9B1FCB3071006D508F /* API Models */ = {
 			isa = PBXGroup;
 			children = (
-				7AD65A9C1FCB3086006D508F /* Token.swift */,
+				7AD65A9C1FCB3086006D508F /* Authorization.swift */,
 				7AD65A9E1FCB30AE006D508F /* Parsable.swift */,
 			);
 			path = "API Models";
+			sourceTree = "<group>";
+		};
+		7AD65AA01FCB346C006D508F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7AD65AA11FCB348C006D508F /* UIAlertController+Error.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,10 +212,12 @@
 				7AD65A921FCB29AE006D508F /* TokenService.swift in Sources */,
 				7AD65A9A1FCB2E08006D508F /* APIService.swift in Sources */,
 				7AD65A8B1FCB230E006D508F /* AuthViewController.swift in Sources */,
-				7AD65A9D1FCB3086006D508F /* Token.swift in Sources */,
+				7AD65A9D1FCB3086006D508F /* Authorization.swift in Sources */,
 				7AD65A9F1FCB30AE006D508F /* Parsable.swift in Sources */,
 				7AD65A751FCB21AA006D508F /* AppDelegate.swift in Sources */,
 				7AD65A961FCB2BFA006D508F /* ServersListViewController.swift in Sources */,
+				7AD65AA21FCB348C006D508F /* UIAlertController+Error.swift in Sources */,
+				7AD65AA41FCB34D0006D508F /* LocalizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
