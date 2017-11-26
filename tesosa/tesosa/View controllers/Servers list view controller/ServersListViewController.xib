@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServersListViewController" customModule="tesosa" customModuleProvider="target">
             <connections>
-                <outlet property="tablView" destination="tTC-1I-eo1" id="bfq-Eb-nhu"/>
+                <outlet property="tableView" destination="tTC-1I-eo1" id="7ch-Co-fjR"/>
                 <outlet property="view" destination="qsR-Kc-LyG" id="06Z-4Z-Sna"/>
             </connections>
         </placeholder>

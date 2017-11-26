@@ -7,13 +7,12 @@ public struct Authorization: Parsable {
     
     public init?(data: Data) {
         do {
-            if let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: []) as? [String : String],
-                let fetchedToken = jsonSerialized[TokenValueKey] {
-                token = fetchedToken
-            } else {
-                return nil
+            guard let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: []) as? [String : String],
+                let fetchedToken = jsonSerialized[TokenValueKey] else {
+                    return nil
             }
-        }  catch let error as NSError {
+            token = fetchedToken
+        } catch {
             return nil
         }
     }

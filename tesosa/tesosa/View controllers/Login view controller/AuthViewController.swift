@@ -3,7 +3,6 @@ import UIKit
 class AuthViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    let serversListViewController = ServersListViewController()
     let authorizationService = APIService()
     
     // MARK: - View life cycle
@@ -36,7 +35,7 @@ class AuthViewController: UIViewController {
     
     private func presentServersListIfPossible() {
         if TokenService.token() != nil {
-            present(serversListViewController, animated: false, completion: nil)
+            present(ServersListViewController(), animated: false, completion: nil)
         }
     }
 }

@@ -1,14 +1,18 @@
 import Foundation
 
 public typealias APIServiceAuthorizationSuccess = (_ authorization: Authorization) -> ()
+public typealias APIServiceServersSuccess = (_ servers: Servers) -> ()
 public typealias APIServiceFailure = (Error) -> ()
 
 public let TesonetErrorDomain = "TesonetErrorDomain"
 public let TesonetDefaultErrorCode = 100
 private let UsernameParamName = "username"
 private let PasswordParamName = "password"
+private let AuthorizationHeaderName = "Authorization"
+private let AuthorizationHeaderTokenPrefix = "Bearer "
 private let TesonetHost = "http://playground.tesonet.lt/v1"
 private let TokensPath = "/tokens"
+private let ServersPath = "/servers"
 
 enum UrlRequestType: String {
     case get = "GET"
@@ -34,6 +38,15 @@ struct APIService {
         requestAPI(request: request, success: success, failure: failure)
     }
     
+    func fetchServers(success: @escaping APIServiceServersSuccess, failure: @escaping APIServiceFailure) {
+        guard let url = URL(string: TesonetHost + ServersPath) else {
+            failure(APIService.generalError())
+            return
+        }
+        let request = urlRequest(type: .get, url: url)
+        requestAPI(request: request, success: success, failure: failure)
+    }
+    
     private func requestAPI<U: Parsable>(request: NSURLRequest, success: @escaping ((U) -> ()), failure: @escaping APIServiceFailure) {
         let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
             DispatchQueue.main.async {
@@ -54,12 +67,15 @@ struct APIService {
         task.resume()
     }
     
-    private func urlRequest(type: UrlRequestType, url: URL, body: Data?) -> NSURLRequest {
+    private func urlRequest(type: UrlRequestType, url: URL, body: Data? = nil) -> NSURLRequest {
         let request = NSMutableURLRequest(url: url)
         if let body = body {
             request.httpBody = body
         }
-        request.httpMethod = UrlRequestType.post.rawValue
+        if let token = TokenService.token() {
+            request.addValue(AuthorizationHeaderTokenPrefix + token, forHTTPHeaderField: AuthorizationHeaderName)
+        }
+        request.httpMethod = type.rawValue
         return request
     }
     
