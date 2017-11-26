@@ -5,8 +5,13 @@ let ServerCellIdentifier = "ServerCell"
 class ServerListDataSource: NSObject, UITableViewDataSource {
     private var servers = [Server]()
     
-    func update(serversDTO: Servers) {
-        servers = serversDTO.servers
+    func update(fetchedServers: [Server], sorting: ServersSortingType) {
+        switch sorting {
+        case .name:
+            servers = fetchedServers.sorted(by: { $0.name < $1.name })
+        case .distance:
+            servers = fetchedServers.sorted(by: { $0.distance < $1.distance })
+        }
     }
     
     // MARK: - UITableViewDataSource

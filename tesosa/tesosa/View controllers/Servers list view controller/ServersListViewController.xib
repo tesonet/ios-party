@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-1I-eo1">
-                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                    <rect key="frame" x="0.0" y="50" width="375" height="587"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-OD-ww7">
@@ -35,15 +35,28 @@
                         <action selector="logoutButtonTapped" destination="-1" eventType="touchUpInside" id="VS1-gw-2so"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g37-uC-e5i">
+                    <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ApC-yG-Ucj"/>
+                    </constraints>
+                    <state key="normal" title="Sort"/>
+                    <connections>
+                        <action selector="sortButtonTapped" destination="-1" eventType="touchUpInside" id="GWk-eu-k7R"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="IbJ-xz-QaK" firstAttribute="trailing" secondItem="Z3H-OD-ww7" secondAttribute="trailing" id="A5d-Zj-82f"/>
                 <constraint firstItem="Z3H-OD-ww7" firstAttribute="top" secondItem="IbJ-xz-QaK" secondAttribute="top" id="BwK-lc-1mJ"/>
                 <constraint firstItem="tTC-1I-eo1" firstAttribute="leading" secondItem="IbJ-xz-QaK" secondAttribute="leading" id="Ih5-Iz-tq2"/>
+                <constraint firstItem="g37-uC-e5i" firstAttribute="bottom" secondItem="IbJ-xz-QaK" secondAttribute="bottom" id="JeQ-mV-NyG"/>
+                <constraint firstItem="g37-uC-e5i" firstAttribute="leading" secondItem="IbJ-xz-QaK" secondAttribute="leading" id="aTQ-3o-L5j"/>
+                <constraint firstItem="IbJ-xz-QaK" firstAttribute="trailing" secondItem="g37-uC-e5i" secondAttribute="trailing" id="az0-Za-Lfh"/>
                 <constraint firstItem="IbJ-xz-QaK" firstAttribute="trailing" secondItem="tTC-1I-eo1" secondAttribute="trailing" id="exe-NB-jjy"/>
                 <constraint firstItem="Z3H-OD-ww7" firstAttribute="leading" secondItem="IbJ-xz-QaK" secondAttribute="leading" id="f6w-7b-kXe"/>
-                <constraint firstItem="IbJ-xz-QaK" firstAttribute="bottom" secondItem="tTC-1I-eo1" secondAttribute="bottom" id="t8P-4u-efD"/>
+                <constraint firstItem="g37-uC-e5i" firstAttribute="top" secondItem="tTC-1I-eo1" secondAttribute="bottom" id="pyd-eH-VWi"/>
                 <constraint firstItem="tTC-1I-eo1" firstAttribute="top" secondItem="Z3H-OD-ww7" secondAttribute="bottom" id="ygm-sf-L3y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="IbJ-xz-QaK"/>
