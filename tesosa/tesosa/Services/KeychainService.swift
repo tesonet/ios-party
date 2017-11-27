@@ -10,19 +10,14 @@ struct KeychainService {
             let query = [kSecClass: kSecClassGenericPassword,
                          kSecAttrService: serviceIdentifier,
                          kSecAttrAccount: accountIdentifier,
-                         kSecValueData: data] as [CFString : Any]
-            SecItemDelete(query as CFDictionary)
-            SecItemAdd(query as CFDictionary, nil)
+                         kSecValueData: data] as CFDictionary
+            SecItemDelete(query)
+            SecItemAdd(query, nil)
         }
     }
     
     public static func deleteToken() {
-        let query = [kSecClass: kSecClassGenericPassword,
-                     kSecAttrService: serviceIdentifier,
-                     kSecAttrAccount: accountIdentifier,
-                     kSecReturnData: kCFBooleanTrue,
-                     kSecMatchLimit: kSecMatchLimitOne] as [CFString : Any]
-        SecItemDelete(query as CFDictionary)
+        SecItemDelete([kSecClass: kSecClassGenericPassword] as CFDictionary)
     }
     
     public static func token() -> String? {
@@ -30,9 +25,9 @@ struct KeychainService {
                      kSecAttrService: serviceIdentifier,
                      kSecAttrAccount: accountIdentifier,
                      kSecReturnData: kCFBooleanTrue,
-                     kSecMatchLimit: kSecMatchLimitOne] as [CFString : Any]
+                     kSecMatchLimit: kSecMatchLimitOne] as CFDictionary
         var dataTypeRef: AnyObject?
-        let status = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+        let status = SecItemCopyMatching(query, &dataTypeRef)
         if let retrievedData = dataTypeRef as? NSData, status == errSecSuccess {
             return String(data: retrievedData as Data, encoding: .utf8)
         }

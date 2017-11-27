@@ -15,6 +15,12 @@ struct LocalizationService {
             return "Alphanumerical"
         case "cancel_button_title":
             return "Cancel"
+        case "username_input_placeholder":
+            return "Username"
+        case "password_input_placeholder":
+            return "Password"
+        case "login_button_title":
+            return "Log In"
         default: 
             assertionFailure("Using untranslated string")
             return "__UNTRANSLATED__"
