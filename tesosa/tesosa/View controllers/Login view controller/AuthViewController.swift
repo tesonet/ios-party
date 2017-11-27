@@ -24,7 +24,7 @@ class AuthViewController: UIViewController {
             username: usernameTextField.text ?? "",
             password: passwordTextField.text ?? "",
             success: { [weak self] authorization in
-                TokenService.saveToken(token: authorization.token)
+                KeychainService.save(token: authorization.token)
                 self?.presentServersListIfPossible()
             },
             failure: { error in
@@ -34,7 +34,7 @@ class AuthViewController: UIViewController {
     }
     
     private func presentServersListIfPossible() {
-        if TokenService.token() != nil {
+        if KeychainService.token() != nil {
             present(ServersListViewController(), animated: false, completion: nil)
         }
     }

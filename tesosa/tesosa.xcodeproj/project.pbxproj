@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A44D8131FCC866300D54430 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44D8121FCC866300D54430 /* KeychainService.swift */; };
 		7AD65A751FCB21AA006D508F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A741FCB21AA006D508F /* AppDelegate.swift */; };
 		7AD65A7C1FCB21AA006D508F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD65A7B1FCB21AA006D508F /* Assets.xcassets */; };
 		7AD65A8B1FCB230E006D508F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A8A1FCB230E006D508F /* AuthViewController.swift */; };
 		7AD65A8D1FCB2319006D508F /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD65A8C1FCB2319006D508F /* AuthViewController.xib */; };
 		7AD65A8F1FCB23AE006D508F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AD65A8E1FCB23AE006D508F /* Default-568h@2x.png */; };
-		7AD65A921FCB29AE006D508F /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A911FCB29AE006D508F /* TokenService.swift */; };
 		7AD65A961FCB2BFA006D508F /* ServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A951FCB2BFA006D508F /* ServersListViewController.swift */; };
 		7AD65A981FCB2C19006D508F /* ServersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD65A971FCB2C18006D508F /* ServersListViewController.xib */; };
 		7AD65A9A1FCB2E08006D508F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD65A991FCB2E08006D508F /* APIService.swift */; };
@@ -29,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A44D8121FCC866300D54430 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		7AD65A711FCB21AA006D508F /* tesosa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tesosa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD65A741FCB21AA006D508F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AD65A7B1FCB21AA006D508F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		7AD65A8A1FCB230E006D508F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		7AD65A8C1FCB2319006D508F /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		7AD65A8E1FCB23AE006D508F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7AD65A911FCB29AE006D508F /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		7AD65A951FCB2BFA006D508F /* ServersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListViewController.swift; sourceTree = "<group>"; };
 		7AD65A971FCB2C18006D508F /* ServersListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersListViewController.xib; sourceTree = "<group>"; };
 		7AD65A991FCB2E08006D508F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 		7AD65A901FCB2992006D508F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7AD65A911FCB29AE006D508F /* TokenService.swift */,
 				7AD65A991FCB2E08006D508F /* APIService.swift */,
+				7A44D8121FCC866300D54430 /* KeychainService.swift */,
 				7AD65AA31FCB34D0006D508F /* LocalizationService.swift */,
 			);
 			path = Services;
@@ -237,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AD65A921FCB29AE006D508F /* TokenService.swift in Sources */,
 				7AD65AB11FCB5F4D006D508F /* ServerCell.swift in Sources */,
 				7AD65A9A1FCB2E08006D508F /* APIService.swift in Sources */,
 				7AD65A8B1FCB230E006D508F /* AuthViewController.swift in Sources */,
@@ -248,6 +247,7 @@
 				7AD65A751FCB21AA006D508F /* AppDelegate.swift in Sources */,
 				7AD65A961FCB2BFA006D508F /* ServersListViewController.swift in Sources */,
 				7AD65AA21FCB348C006D508F /* UIAlertController+Error.swift in Sources */,
+				7A44D8131FCC866300D54430 /* KeychainService.swift in Sources */,
 				7AD65AAF1FCB51A5006D508F /* Server.swift in Sources */,
 				7AD65AA41FCB34D0006D508F /* LocalizationService.swift in Sources */,
 			);

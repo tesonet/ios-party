@@ -72,7 +72,7 @@ struct APIService {
         if let body = body {
             request.httpBody = body
         }
-        if let token = TokenService.token() {
+        if let token = KeychainService.token() {
             request.addValue(AuthorizationHeaderTokenPrefix + token, forHTTPHeaderField: AuthorizationHeaderName)
         }
         request.httpMethod = type.rawValue

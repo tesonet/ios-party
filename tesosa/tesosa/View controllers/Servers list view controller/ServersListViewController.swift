@@ -30,7 +30,7 @@ class ServersListViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func logoutButtonTapped() {
-        TokenService.removeToken()
+        KeychainService.deleteToken()
         dismiss(animated: true, completion: nil)
     }
     
