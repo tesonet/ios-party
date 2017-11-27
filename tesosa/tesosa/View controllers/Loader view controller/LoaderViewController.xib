@@ -20,17 +20,27 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="KaW-zP-dkU">
-                    <rect key="frame" x="177" y="323" width="20" height="20"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="IFZ-V7-nK3" userLabel="Background Image">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KaW-zP-dkU">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="IFZ-V7-nK3" firstAttribute="trailing" secondItem="IbJ-xz-QaK" secondAttribute="trailing" id="0ef-sr-tjm"/>
+                <constraint firstItem="IFZ-V7-nK3" firstAttribute="top" secondItem="qsR-Kc-LyG" secondAttribute="top" id="4UY-Q9-kB3"/>
                 <constraint firstItem="KaW-zP-dkU" firstAttribute="centerX" secondItem="qsR-Kc-LyG" secondAttribute="centerX" id="ao4-Vf-DcQ"/>
+                <constraint firstItem="IbJ-xz-QaK" firstAttribute="bottom" secondItem="IFZ-V7-nK3" secondAttribute="bottom" id="sQx-ti-5YG"/>
                 <constraint firstItem="KaW-zP-dkU" firstAttribute="centerY" secondItem="qsR-Kc-LyG" secondAttribute="centerY" id="sq6-Om-MNs"/>
+                <constraint firstItem="IFZ-V7-nK3" firstAttribute="leading" secondItem="IbJ-xz-QaK" secondAttribute="leading" id="x2i-M6-lrj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="IbJ-xz-QaK"/>
             <point key="canvasLocation" x="33.5" y="58.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg" width="1920" height="1080"/>
+    </resources>
 </document>

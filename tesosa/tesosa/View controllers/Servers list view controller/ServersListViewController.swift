@@ -72,7 +72,9 @@ class ServersListViewController: UIViewController {
     private func loadData() {
         loaderController.modalPresentationStyle = .custom
         loaderController.modalTransitionStyle = .crossDissolve
-        present(loaderController, animated: true, completion: nil)
+        present(loaderController, animated: true, completion: { [weak self] in
+          self?.view.alpha = 1
+        })
         apiService.fetchServers(
             success: { [weak self] serversDTO in
                 guard let strongSelf = self else {
@@ -92,5 +94,9 @@ class ServersListViewController: UIViewController {
     private func updateList() {
         dataSource.update(fetchedServers: servers, sorting: selectedSorting)
         tableView.reloadData()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }
