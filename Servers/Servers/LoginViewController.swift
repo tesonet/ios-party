@@ -53,7 +53,11 @@ class LoginViewController: UIViewController {
         
         APIClient.shared.obtainTokenWith(username: username,
                                          password: password) { (success) in
-            
+                                            if success {
+                                                DispatchQueue.main.async {
+                                                    self.performSegue(withIdentifier: "fetch", sender: nil)
+                                                }
+                                            }
         }
     }
 }
