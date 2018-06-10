@@ -14,6 +14,7 @@
 		4DBDF82D20CD1E1E0019F9C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDF82C20CD1E1E0019F9C6 /* Assets.xcassets */; };
 		4DBDF83020CD1E1E0019F9C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDF82E20CD1E1E0019F9C6 /* LaunchScreen.storyboard */; };
 		4DBDF83B20CD1E1E0019F9C6 /* ServersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF83A20CD1E1E0019F9C6 /* ServersTests.swift */; };
+		4DBDF84620CD2E630019F9C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF84520CD2E630019F9C6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4DBDF83620CD1E1E0019F9C6 /* ServersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBDF83A20CD1E1E0019F9C6 /* ServersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersTests.swift; sourceTree = "<group>"; };
 		4DBDF83C20CD1E1E0019F9C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DBDF84520CD2E630019F9C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				4DBDF82E20CD1E1E0019F9C6 /* LaunchScreen.storyboard */,
 				4DBDF83120CD1E1E0019F9C6 /* Info.plist */,
 				4DBDF82920CD1E1C0019F9C6 /* Servers.xcdatamodeld */,
+				4DBDF84520CD2E630019F9C6 /* LoginViewController.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DBDF84620CD2E630019F9C6 /* LoginViewController.swift in Sources */,
 				4DBDF82B20CD1E1C0019F9C6 /* Servers.xcdatamodeld in Sources */,
 				4DBDF82520CD1E1C0019F9C6 /* ViewController.swift in Sources */,
 				4DBDF82320CD1E1C0019F9C6 /* AppDelegate.swift in Sources */,
@@ -365,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AWB3N3D5T;
 				INFOPLIST_FILE = Servers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AWB3N3D5T;
 				INFOPLIST_FILE = Servers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
