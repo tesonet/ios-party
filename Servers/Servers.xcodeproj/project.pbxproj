@@ -14,6 +14,7 @@
 		4DBDF83020CD1E1E0019F9C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDF82E20CD1E1E0019F9C6 /* LaunchScreen.storyboard */; };
 		4DBDF83B20CD1E1E0019F9C6 /* ServersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF83A20CD1E1E0019F9C6 /* ServersTests.swift */; };
 		4DBDF84620CD2E630019F9C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF84520CD2E630019F9C6 /* LoginViewController.swift */; };
+		4DBDF84820CD34510019F9C6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF84720CD34510019F9C6 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4DBDF83A20CD1E1E0019F9C6 /* ServersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersTests.swift; sourceTree = "<group>"; };
 		4DBDF83C20CD1E1E0019F9C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DBDF84520CD2E630019F9C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4DBDF84720CD34510019F9C6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				4DBDF83120CD1E1E0019F9C6 /* Info.plist */,
 				4DBDF82920CD1E1C0019F9C6 /* Servers.xcdatamodeld */,
 				4DBDF84520CD2E630019F9C6 /* LoginViewController.swift */,
+				4DBDF84720CD34510019F9C6 /* APIClient.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				4DBDF84620CD2E630019F9C6 /* LoginViewController.swift in Sources */,
 				4DBDF82B20CD1E1C0019F9C6 /* Servers.xcdatamodeld in Sources */,
 				4DBDF82320CD1E1C0019F9C6 /* AppDelegate.swift in Sources */,
+				4DBDF84820CD34510019F9C6 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

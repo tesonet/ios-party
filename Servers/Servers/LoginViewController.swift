@@ -38,4 +38,22 @@ class LoginViewController: UIViewController {
         self.loginButton.layer.cornerRadius = 4.0
     }
 
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        guard let username = self.usernameTextField.text else {
+            return
+        }
+        
+        guard let password = self.passwordTextField.text else {
+            return
+        }
+        
+        if username.count == 0 || password.count == 0 {
+            return
+        }
+        
+        APIClient.shared.obtainTokenWith(username: username,
+                                         password: password) { (success) in
+            
+        }
+    }
 }
