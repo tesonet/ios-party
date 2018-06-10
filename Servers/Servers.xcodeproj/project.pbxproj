@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4DBDF82320CD1E1C0019F9C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF82220CD1E1C0019F9C6 /* AppDelegate.swift */; };
-		4DBDF82520CD1E1C0019F9C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF82420CD1E1C0019F9C6 /* ViewController.swift */; };
 		4DBDF82820CD1E1C0019F9C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDF82620CD1E1C0019F9C6 /* Main.storyboard */; };
 		4DBDF82B20CD1E1C0019F9C6 /* Servers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF82920CD1E1C0019F9C6 /* Servers.xcdatamodeld */; };
 		4DBDF82D20CD1E1E0019F9C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDF82C20CD1E1E0019F9C6 /* Assets.xcassets */; };
@@ -30,7 +29,6 @@
 /* Begin PBXFileReference section */
 		4DBDF81F20CD1E1C0019F9C6 /* Servers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Servers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBDF82220CD1E1C0019F9C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DBDF82420CD1E1C0019F9C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DBDF82720CD1E1C0019F9C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DBDF82A20CD1E1C0019F9C6 /* Servers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Servers.xcdatamodel; sourceTree = "<group>"; };
 		4DBDF82C20CD1E1E0019F9C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				4DBDF82220CD1E1C0019F9C6 /* AppDelegate.swift */,
-				4DBDF82420CD1E1C0019F9C6 /* ViewController.swift */,
 				4DBDF82620CD1E1C0019F9C6 /* Main.storyboard */,
 				4DBDF82C20CD1E1E0019F9C6 /* Assets.xcassets */,
 				4DBDF82E20CD1E1E0019F9C6 /* LaunchScreen.storyboard */,
@@ -205,7 +202,6 @@
 			files = (
 				4DBDF84620CD2E630019F9C6 /* LoginViewController.swift in Sources */,
 				4DBDF82B20CD1E1C0019F9C6 /* Servers.xcdatamodeld in Sources */,
-				4DBDF82520CD1E1C0019F9C6 /* ViewController.swift in Sources */,
 				4DBDF82320CD1E1C0019F9C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
