@@ -50,6 +50,8 @@ class ServerListViewController: UIViewController, UITableViewDataSource {
                                              cacheName: nil)
         
         self.fetchResultsController = frc
+        
+        tableView?.allowsSelection = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
