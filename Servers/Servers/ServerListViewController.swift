@@ -41,7 +41,7 @@ class ServerListViewController: UIViewController, UITableViewDataSource {
         
         let request = NSFetchRequest<Server>(entityName: "Server")
         
-        var sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         request.sortDescriptors = [ sortDescriptor ]
         
         let frc = NSFetchedResultsController(fetchRequest: request,
@@ -68,5 +68,34 @@ class ServerListViewController: UIViewController, UITableViewDataSource {
         APIClient.shared.forgetToken()
         
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    private func resortBy(key: String) {
+        let sortDescriptor = NSSortDescriptor(key: key, ascending: true)
+        
+        self.fetchResultsController?.fetchRequest.sortDescriptors = [ sortDescriptor ]
+        
+        self.reloadTableContent()
+    }
+    
+    @IBAction func sortButtonTapped(_ sender: Any) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let actionByDistance = UIAlertAction(title: "By Distance", style: .default) { (action) in
+            self.resortBy(key: "distance")
+        }
+        actionSheet.addAction(actionByDistance)
+        
+        let actionAlphanum = UIAlertAction(title: "Alphanumerical", style: .default) { (action) in
+            self.resortBy(key: "name")
+        }
+        actionSheet.addAction(actionAlphanum)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        }
+        actionSheet.addAction(cancelAction)
+        
+        present(actionSheet, animated: true, completion: nil)
     }
 }
