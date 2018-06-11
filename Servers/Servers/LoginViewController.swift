@@ -38,6 +38,19 @@ class LoginViewController: UIViewController {
         self.loginButton.layer.cornerRadius = 4.0
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let (success, username, password) = KeychainHelper().getCredentials()
+        
+        if success && username != nil && password != nil {
+            self.usernameTextField.text = username
+            self.passwordTextField.text = password
+            
+            self.buttonTapped(self.loginButton)
+        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.usernameTextField.text = nil
         self.passwordTextField.text = nil
@@ -62,6 +75,8 @@ class LoginViewController: UIViewController {
                                          password: password) { (success) in
                                             if success {
                                                 DispatchQueue.main.async {
+                                                    _ = KeychainHelper().saveCredentials(username: username, password: password)
+                                                    
                                                     self.performSegue(withIdentifier: "fetch", sender: nil)
                                                 }
                                             }

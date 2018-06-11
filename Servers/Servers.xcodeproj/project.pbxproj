@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8F8EA620CEA26E0080FCA8 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F8EA520CEA26E0080FCA8 /* KeychainHelper.swift */; };
 		4DBDF82320CD1E1C0019F9C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF82220CD1E1C0019F9C6 /* AppDelegate.swift */; };
 		4DBDF82820CD1E1C0019F9C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDF82620CD1E1C0019F9C6 /* Main.storyboard */; };
 		4DBDF82B20CD1E1C0019F9C6 /* Servers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF82920CD1E1C0019F9C6 /* Servers.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		24F6440F15887ACBB76FF755 /* Pods-Servers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Servers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Servers/Pods-Servers.release.xcconfig"; sourceTree = "<group>"; };
+		4D8F8EA520CEA26E0080FCA8 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		4DBDF81F20CD1E1C0019F9C6 /* Servers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Servers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBDF82220CD1E1C0019F9C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DBDF82720CD1E1C0019F9C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				4DBDF84E20CD81B00019F9C6 /* DownloadViewController.swift */,
 				4DBDF85420CE72F30019F9C6 /* ServerListViewController.swift */,
 				4DBDF85620CE74070019F9C6 /* ServerCell.swift */,
+				4D8F8EA520CEA26E0080FCA8 /* KeychainHelper.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				4DBDF84620CD2E630019F9C6 /* LoginViewController.swift in Sources */,
 				4DBDF82B20CD1E1C0019F9C6 /* Servers.xcdatamodeld in Sources */,
 				4DBDF82320CD1E1C0019F9C6 /* AppDelegate.swift in Sources */,
+				4D8F8EA620CEA26E0080FCA8 /* KeychainHelper.swift in Sources */,
 				4DBDF85520CE72F30019F9C6 /* ServerListViewController.swift in Sources */,
 				4DBDF84F20CD81B00019F9C6 /* DownloadViewController.swift in Sources */,
 				4DBDF85720CE74070019F9C6 /* ServerCell.swift in Sources */,

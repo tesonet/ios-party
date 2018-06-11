@@ -70,6 +70,7 @@ class ServerListViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
         APIClient.shared.forgetToken()
+        _ = KeychainHelper().deleteCredentials()
         
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
