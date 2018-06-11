@@ -22,6 +22,12 @@ class DownloadViewController: UIViewController {
         
         APIClient.shared.downloadAndSaveData { (success) in
             print("success = \(success)")
+            
+            if (success) {
+                self.performSegue(withIdentifier: "showlist", sender: self)
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
 }
