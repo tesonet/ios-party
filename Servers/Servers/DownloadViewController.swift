@@ -19,5 +19,9 @@ class DownloadViewController: UIViewController {
         SVProgressHUD.setForegroundColor(UIColor.white)
         
         SVProgressHUD.show()
+        
+        APIClient.shared.downloadAndSaveData { (success) in
+            print("success = \(success)")
+        }
     }
 }

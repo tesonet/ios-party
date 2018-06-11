@@ -17,6 +17,8 @@
 		4DBDF84820CD34510019F9C6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF84720CD34510019F9C6 /* APIClient.swift */; };
 		4DBDF84D20CD53410019F9C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBDF84C20CD53410019F9C6 /* CoreGraphics.framework */; };
 		4DBDF84F20CD81B00019F9C6 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF84E20CD81B00019F9C6 /* DownloadViewController.swift */; };
+		4DBDF85220CE5DB50019F9C6 /* Server+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF85020CE5DB50019F9C6 /* Server+CoreDataProperties.swift */; };
+		4DBDF85320CE5DB50019F9C6 /* Server+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDF85120CE5DB50019F9C6 /* Server+CoreDataClass.swift */; };
 		591EDBA2DDCDF6C2D12D1FC4 /* Pods_Servers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E7CFC43FB4F7681A331235 /* Pods_Servers.framework */; };
 		F1EE6BC5A16C567B3BA90DC5 /* Pods_ServersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED6BDE8A8D7FDE760ECB554 /* Pods_ServersTests.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		4DBDF84720CD34510019F9C6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4DBDF84C20CD53410019F9C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4DBDF84E20CD81B00019F9C6 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		4DBDF85020CE5DB50019F9C6 /* Server+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Server+CoreDataProperties.swift"; path = "/Users/rimantasl/src/ios-party/Servers/Servers/Server+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		4DBDF85120CE5DB50019F9C6 /* Server+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Server+CoreDataClass.swift"; path = "/Users/rimantasl/src/ios-party/Servers/Servers/Server+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		6ED6BDE8A8D7FDE760ECB554 /* Pods_ServersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ServersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC9B6CD322CBB87BE3EF2CF /* Pods-Servers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Servers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Servers/Pods-Servers.debug.xcconfig"; sourceTree = "<group>"; };
 		93BB03794C7345A5058E4998 /* Pods-ServersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ServersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ServersTests/Pods-ServersTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		4DBDF82120CD1E1C0019F9C6 /* Servers */ = {
 			isa = PBXGroup;
 			children = (
+				4DBDF85120CE5DB50019F9C6 /* Server+CoreDataClass.swift */,
+				4DBDF85020CE5DB50019F9C6 /* Server+CoreDataProperties.swift */,
 				4DBDF82220CD1E1C0019F9C6 /* AppDelegate.swift */,
 				4DBDF82620CD1E1C0019F9C6 /* Main.storyboard */,
 				4DBDF82C20CD1E1E0019F9C6 /* Assets.xcassets */,
@@ -302,9 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DBDF85220CE5DB50019F9C6 /* Server+CoreDataProperties.swift in Sources */,
 				4DBDF84620CD2E630019F9C6 /* LoginViewController.swift in Sources */,
 				4DBDF82B20CD1E1C0019F9C6 /* Servers.xcdatamodeld in Sources */,
 				4DBDF82320CD1E1C0019F9C6 /* AppDelegate.swift in Sources */,
+				4DBDF85320CE5DB50019F9C6 /* Server+CoreDataClass.swift in Sources */,
 				4DBDF84F20CD81B00019F9C6 /* DownloadViewController.swift in Sources */,
 				4DBDF84820CD34510019F9C6 /* APIClient.swift in Sources */,
 			);
