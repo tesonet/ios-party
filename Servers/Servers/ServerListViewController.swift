@@ -63,4 +63,10 @@ class ServerListViewController: UIViewController, UITableViewDataSource {
         
         tableView?.reloadData()
     }
+    
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        APIClient.shared.forgetToken()
+        
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
 }

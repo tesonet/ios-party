@@ -76,6 +76,10 @@ class APIClient: NSObject {
         task.resume()
     }
     
+    func forgetToken() {
+        self.token = nil
+    }
+    
     private func saveServerFromAPItoDB(_ serversFromAPI : [ServerFromAPI],
                                        completion: @escaping (_ success: Bool) -> Void) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

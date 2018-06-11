@@ -38,6 +38,13 @@ class LoginViewController: UIViewController {
         self.loginButton.layer.cornerRadius = 4.0
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.usernameTextField.text = nil
+        self.passwordTextField.text = nil
+        
+        super.viewWillDisappear(animated)
+    }
+    
     @IBAction func buttonTapped(_ sender: UIButton) {
         guard let username = self.usernameTextField.text else {
             return

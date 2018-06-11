@@ -177,6 +177,9 @@
                                             <constraint firstAttribute="width" secondItem="tv3-6H-l1P" secondAttribute="height" multiplier="1:1" id="q2I-e7-D6x"/>
                                         </constraints>
                                         <state key="normal" image="ico-logout"/>
+                                        <connections>
+                                            <action selector="logoutButtonPressed:" destination="lzA-Wv-hza" eventType="touchUpInside" id="rpI-FT-wpt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
