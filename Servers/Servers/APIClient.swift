@@ -81,7 +81,7 @@ class APIClient: NSObject {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Employee")
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Server")
         let request = NSBatchDeleteRequest(fetchRequest: fetch)
         
         guard ((try? context.execute(request)) != nil) else {
