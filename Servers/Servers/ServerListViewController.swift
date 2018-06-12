@@ -54,6 +54,10 @@ class ServerListViewController: UIViewController, UITableViewDataSource {
         tableView?.allowsSelection = false
         
         tableView?.separatorStyle = .none
+        
+        tableView?.tableHeaderView?.layer.shadowOpacity = 1.0
+        tableView?.tableHeaderView?.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        tableView?.tableHeaderView?.layer.shadowRadius = 10.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
