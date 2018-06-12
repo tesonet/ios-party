@@ -80,6 +80,10 @@ class APIClient: NSObject {
         self.token = nil
     }
     
+    func hasToken() -> Bool {
+        return self.token != nil
+    }
+    
     private func saveServerFromAPItoDB(_ serversFromAPI : [ServerFromAPI],
                                        completion: @escaping (_ success: Bool) -> Void) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -136,6 +140,20 @@ class APIClient: NSObject {
             
             guard resp != nil else {
                 print("Error: no response from /v1/servers/")
+                completion(false)
+                return
+            }
+            
+            guard let resp = resp as? HTTPURLResponse else {
+                print("Error: unrecognized response class")
+                completion(false)
+                return
+            }
+            
+            let statusCode = resp.statusCode
+            
+            guard statusCode == 200 else {
+                print("Error: HTTP status \(statusCode)")
                 completion(false)
                 return
             }

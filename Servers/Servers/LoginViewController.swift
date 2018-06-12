@@ -41,6 +41,10 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if APIClient.shared.hasToken() {
+            return
+        }
+        
         let (success, username, password) = KeychainHelper().getCredentials()
         
         if success && username != nil && password != nil {
