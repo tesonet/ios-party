@@ -49,6 +49,11 @@
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkc-jH-wT5"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="wqu-90-Wi8">
+                                        <rect key="frame" x="177" y="396" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -84,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="2t6-5K-a3S" id="jH5-Nh-lsJ"/>
+                        <outlet property="loginSpinner" destination="wqu-90-Wi8" id="gR2-xl-WIY"/>
                         <outlet property="passwordTextField" destination="pmJ-Qk-vPk" id="0Sf-99-l7F"/>
                         <outlet property="usernameTextField" destination="sFb-KK-5gc" id="11N-ae-ncn"/>
                         <segue destination="vBP-6l-4fA" kind="show" identifier="fetch" id="ryr-v7-aWl"/>

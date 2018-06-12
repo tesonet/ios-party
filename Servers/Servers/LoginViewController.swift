@@ -9,21 +9,22 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginSpinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         self.usernameTextField.leftViewMode = .always
         self.usernameTextField.leftView =
             UIImageView.init(frame: CGRect(x: 0.0, y: 0.0,
-                                          width: self.usernameTextField.bounds.size.height,
-                                          height: self.usernameTextField.bounds.size.height))
+                                           width: self.usernameTextField.bounds.size.height,
+                                           height: self.usernameTextField.bounds.size.height))
         (self.usernameTextField.leftView as! UIImageView).image = UIImage(named: "ico-username")
         self.usernameTextField.leftView?.contentMode = .center
         
@@ -37,7 +38,7 @@ class LoginViewController: UIViewController {
         
         self.loginButton.layer.cornerRadius = 4.0
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -75,12 +76,17 @@ class LoginViewController: UIViewController {
             return
         }
         
+        loginSpinner.startAnimating()
+        loginButton.setTitle("", for: .normal)
+        
         APIClient.shared.obtainTokenWith(username: username,
                                          password: password) { (success) in
-                                            if success {
-                                                DispatchQueue.main.async {
+                                            DispatchQueue.main.async {
+                                                self.loginSpinner.stopAnimating()
+                                                self.loginButton.setTitle("Log In", for: .normal)
+                                                
+                                                if success {
                                                     _ = KeychainHelper().saveCredentials(username: username, password: password)
-                                                    
                                                     self.performSegue(withIdentifier: "fetch", sender: nil)
                                                 }
                                             }
