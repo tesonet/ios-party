@@ -1,11 +1,3 @@
-//
-//  ProducersTableCell.swift
-//  FarmDrop
-//
-//  Created by Robertas Baronas on 04/02/2017.
-//  Copyright © 2017 Robertas Baronas. All rights reserved.
-//
-
 import UIKit
 
 class ServersTableCell: UITableViewCell {

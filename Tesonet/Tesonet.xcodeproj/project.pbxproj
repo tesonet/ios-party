@@ -196,12 +196,12 @@
 		67C7108320FBC69000D17F55 /* Servers */ = {
 			isa = PBXGroup;
 			children = (
+				67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */,
 				67C7108D20FBCB7A00D17F55 /* ServersTableCell.swift */,
-				67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */,
-				67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */,
 				67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */,
 				67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */,
-				67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */,
+				67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */,
+				67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
