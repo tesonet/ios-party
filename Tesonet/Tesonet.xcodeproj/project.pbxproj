@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3736007BFB39F22DB9DEF1B6 /* Pods_TesonetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */; };
+		37BB1B0ACA7FCC125A27E2AA /* Pods_TesonetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */; };
 		67C7101B20FB949F00D17F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7101A20FB949F00D17F55 /* AppDelegate.swift */; };
 		67C7101D20FB949F00D17F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7101C20FB949F00D17F55 /* ViewController.swift */; };
 		67C7102020FB949F00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C7101E20FB949F00D17F55 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		67C7102520FB949F00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102320FB949F00D17F55 /* LaunchScreen.storyboard */; };
 		67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7102F20FB949F00D17F55 /* TesonetTests.swift */; };
 		67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7103A20FB949F00D17F55 /* TesonetUITests.swift */; };
+		D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tesonet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C7101A20FB949F00D17F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67C7101C20FB949F00D17F55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		67C7103620FB949F00D17F55 /* TesonetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C7103A20FB949F00D17F55 /* TesonetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetUITests.swift; sourceTree = "<group>"; };
 		67C7103C20FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.release.xcconfig"; sourceTree = "<group>"; };
+		8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.release.xcconfig"; sourceTree = "<group>"; };
+		C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.debug.xcconfig"; sourceTree = "<group>"; };
+		EB71163AD4EBB6F00F1EA28C /* Pods-TesonetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F43176E0218A021830D014C9 /* Pods-TesonetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3736007BFB39F22DB9DEF1B6 /* Pods_TesonetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BB1B0ACA7FCC125A27E2AA /* Pods_TesonetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60257A6846800EFE3F33EA16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */,
+				8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */,
+				6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */,
+				78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */,
+				F43176E0218A021830D014C9 /* Pods-TesonetUITests.debug.xcconfig */,
+				EB71163AD4EBB6F00F1EA28C /* Pods-TesonetUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		67C7100E20FB949F00D17F55 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				67C7102E20FB949F00D17F55 /* TesonetTests */,
 				67C7103920FB949F00D17F55 /* TesonetUITests */,
 				67C7101820FB949F00D17F55 /* Products */,
+				60257A6846800EFE3F33EA16 /* Pods */,
+				83C6B233EED77F9D24CB08EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = TesonetUITests;
 			sourceTree = "<group>";
 		};
+		83C6B233EED77F9D24CB08EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */,
+				47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */,
+				5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67C7103F20FB949F00D17F55 /* Build configuration list for PBXNativeTarget "Tesonet" */;
 			buildPhases = (
+				9ABC736F1F99E8B9333E9E5B /* [CP] Check Pods Manifest.lock */,
 				67C7101320FB949F00D17F55 /* Sources */,
 				67C7101420FB949F00D17F55 /* Frameworks */,
 				67C7101520FB949F00D17F55 /* Resources */,
+				CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */,
+				F288D98544DE59355E018C33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67C7104220FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetTests" */;
 			buildPhases = (
+				40CF6EB5E788A6889BF87459 /* [CP] Check Pods Manifest.lock */,
 				67C7102720FB949F00D17F55 /* Sources */,
 				67C7102820FB949F00D17F55 /* Frameworks */,
 				67C7102920FB949F00D17F55 /* Resources */,
+				CD2A76A29A744A50D171841B /* [CP] Embed Pods Frameworks */,
+				43D33A54F78F27A33F7785C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67C7104520FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetUITests" */;
 			buildPhases = (
+				5ED1DBBC9D0B6F73F1E13ACF /* [CP] Check Pods Manifest.lock */,
 				67C7103220FB949F00D17F55 /* Sources */,
 				67C7103320FB949F00D17F55 /* Frameworks */,
 				67C7103420FB949F00D17F55 /* Resources */,
+				E207D52BEB12394C96685B93 /* [CP] Embed Pods Frameworks */,
+				0849BF25A177EF1D8403776B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +299,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0849BF25A177EF1D8403776B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40CF6EB5E788A6889BF87459 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesonetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43D33A54F78F27A33F7785C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED1DBBC9D0B6F73F1E13ACF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesonetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ABC736F1F99E8B9333E9E5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tesonet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD2A76A29A744A50D171841B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E207D52BEB12394C96685B93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F288D98544DE59355E018C33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67C7101320FB949F00D17F55 /* Sources */ = {
@@ -428,6 +624,7 @@
 		};
 		67C7104020FB949F00D17F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +643,7 @@
 		};
 		67C7104120FB949F00D17F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +662,7 @@
 		};
 		67C7104320FB949F00D17F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +684,7 @@
 		};
 		67C7104420FB949F00D17F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +706,7 @@
 		};
 		67C7104620FB949F00D17F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F43176E0218A021830D014C9 /* Pods-TesonetUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +727,7 @@
 		};
 		67C7104720FB949F00D17F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB71163AD4EBB6F00F1EA28C /* Pods-TesonetUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
