@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67C7101B20FB949F00D17F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7101A20FB949F00D17F55 /* AppDelegate.swift */; };
+		67C7101D20FB949F00D17F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7101C20FB949F00D17F55 /* ViewController.swift */; };
+		67C7102020FB949F00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C7101E20FB949F00D17F55 /* Main.storyboard */; };
+		67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102120FB949F00D17F55 /* Assets.xcassets */; };
+		67C7102520FB949F00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102320FB949F00D17F55 /* LaunchScreen.storyboard */; };
+		67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7102F20FB949F00D17F55 /* TesonetTests.swift */; };
+		67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7103A20FB949F00D17F55 /* TesonetUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67C7102C20FB949F00D17F55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67C7100F20FB949F00D17F55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67C7101620FB949F00D17F55;
+			remoteInfo = Tesonet;
+		};
+		67C7103720FB949F00D17F55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67C7100F20FB949F00D17F55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67C7101620FB949F00D17F55;
+			remoteInfo = Tesonet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7101A20FB949F00D17F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67C7101C20FB949F00D17F55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		67C7101F20FB949F00D17F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67C7102120FB949F00D17F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67C7102420FB949F00D17F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67C7102620FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C7102B20FB949F00D17F55 /* TesonetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7102F20FB949F00D17F55 /* TesonetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetTests.swift; sourceTree = "<group>"; };
+		67C7103120FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C7103620FB949F00D17F55 /* TesonetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7103A20FB949F00D17F55 /* TesonetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetUITests.swift; sourceTree = "<group>"; };
+		67C7103C20FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67C7101420FB949F00D17F55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7102820FB949F00D17F55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7103320FB949F00D17F55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67C7100E20FB949F00D17F55 = {
+			isa = PBXGroup;
+			children = (
+				67C7101920FB949F00D17F55 /* Tesonet */,
+				67C7102E20FB949F00D17F55 /* TesonetTests */,
+				67C7103920FB949F00D17F55 /* TesonetUITests */,
+				67C7101820FB949F00D17F55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67C7101820FB949F00D17F55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67C7101720FB949F00D17F55 /* Tesonet.app */,
+				67C7102B20FB949F00D17F55 /* TesonetTests.xctest */,
+				67C7103620FB949F00D17F55 /* TesonetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67C7101920FB949F00D17F55 /* Tesonet */ = {
+			isa = PBXGroup;
+			children = (
+				67C7101A20FB949F00D17F55 /* AppDelegate.swift */,
+				67C7101C20FB949F00D17F55 /* ViewController.swift */,
+				67C7101E20FB949F00D17F55 /* Main.storyboard */,
+				67C7102120FB949F00D17F55 /* Assets.xcassets */,
+				67C7102320FB949F00D17F55 /* LaunchScreen.storyboard */,
+				67C7102620FB949F00D17F55 /* Info.plist */,
+			);
+			path = Tesonet;
+			sourceTree = "<group>";
+		};
+		67C7102E20FB949F00D17F55 /* TesonetTests */ = {
+			isa = PBXGroup;
+			children = (
+				67C7102F20FB949F00D17F55 /* TesonetTests.swift */,
+				67C7103120FB949F00D17F55 /* Info.plist */,
+			);
+			path = TesonetTests;
+			sourceTree = "<group>";
+		};
+		67C7103920FB949F00D17F55 /* TesonetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67C7103A20FB949F00D17F55 /* TesonetUITests.swift */,
+				67C7103C20FB949F00D17F55 /* Info.plist */,
+			);
+			path = TesonetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67C7101620FB949F00D17F55 /* Tesonet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C7103F20FB949F00D17F55 /* Build configuration list for PBXNativeTarget "Tesonet" */;
+			buildPhases = (
+				67C7101320FB949F00D17F55 /* Sources */,
+				67C7101420FB949F00D17F55 /* Frameworks */,
+				67C7101520FB949F00D17F55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tesonet;
+			productName = Tesonet;
+			productReference = 67C7101720FB949F00D17F55 /* Tesonet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67C7102A20FB949F00D17F55 /* TesonetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C7104220FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetTests" */;
+			buildPhases = (
+				67C7102720FB949F00D17F55 /* Sources */,
+				67C7102820FB949F00D17F55 /* Frameworks */,
+				67C7102920FB949F00D17F55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67C7102D20FB949F00D17F55 /* PBXTargetDependency */,
+			);
+			name = TesonetTests;
+			productName = TesonetTests;
+			productReference = 67C7102B20FB949F00D17F55 /* TesonetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67C7103520FB949F00D17F55 /* TesonetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C7104520FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetUITests" */;
+			buildPhases = (
+				67C7103220FB949F00D17F55 /* Sources */,
+				67C7103320FB949F00D17F55 /* Frameworks */,
+				67C7103420FB949F00D17F55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67C7103820FB949F00D17F55 /* PBXTargetDependency */,
+			);
+			name = TesonetUITests;
+			productName = TesonetUITests;
+			productReference = 67C7103620FB949F00D17F55 /* TesonetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67C7100F20FB949F00D17F55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Robertas Baronas";
+				TargetAttributes = {
+					67C7101620FB949F00D17F55 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					67C7102A20FB949F00D17F55 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 67C7101620FB949F00D17F55;
+					};
+					67C7103520FB949F00D17F55 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 67C7101620FB949F00D17F55;
+					};
+				};
+			};
+			buildConfigurationList = 67C7101220FB949F00D17F55 /* Build configuration list for PBXProject "Tesonet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67C7100E20FB949F00D17F55;
+			productRefGroup = 67C7101820FB949F00D17F55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67C7101620FB949F00D17F55 /* Tesonet */,
+				67C7102A20FB949F00D17F55 /* TesonetTests */,
+				67C7103520FB949F00D17F55 /* TesonetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67C7101520FB949F00D17F55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7102520FB949F00D17F55 /* LaunchScreen.storyboard in Resources */,
+				67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */,
+				67C7102020FB949F00D17F55 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7102920FB949F00D17F55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7103420FB949F00D17F55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67C7101320FB949F00D17F55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7101D20FB949F00D17F55 /* ViewController.swift in Sources */,
+				67C7101B20FB949F00D17F55 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7102720FB949F00D17F55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7103220FB949F00D17F55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67C7102D20FB949F00D17F55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67C7101620FB949F00D17F55 /* Tesonet */;
+			targetProxy = 67C7102C20FB949F00D17F55 /* PBXContainerItemProxy */;
+		};
+		67C7103820FB949F00D17F55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67C7101620FB949F00D17F55 /* Tesonet */;
+			targetProxy = 67C7103720FB949F00D17F55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67C7101E20FB949F00D17F55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67C7101F20FB949F00D17F55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67C7102320FB949F00D17F55 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67C7102420FB949F00D17F55 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67C7103D20FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67C7103E20FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67C7104020FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = Tesonet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.Tesonet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67C7104120FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = Tesonet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.Tesonet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67C7104320FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tesonet.app/Tesonet";
+			};
+			name = Debug;
+		};
+		67C7104420FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tesonet.app/Tesonet";
+			};
+			name = Release;
+		};
+		67C7104620FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tesonet;
+			};
+			name = Debug;
+		};
+		67C7104720FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tesonet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67C7101220FB949F00D17F55 /* Build configuration list for PBXProject "Tesonet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7103D20FB949F00D17F55 /* Debug */,
+				67C7103E20FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C7103F20FB949F00D17F55 /* Build configuration list for PBXNativeTarget "Tesonet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7104020FB949F00D17F55 /* Debug */,
+				67C7104120FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C7104220FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7104320FB949F00D17F55 /* Debug */,
+				67C7104420FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C7104520FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7104620FB949F00D17F55 /* Debug */,
+				67C7104720FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67C7100F20FB949F00D17F55 /* Project object */;
+}
