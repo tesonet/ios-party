@@ -21,3 +21,27 @@ class LoginViewController: UIViewController {
     
 }
 
+// MARK: - IBActions
+
+extension LoginViewController {
+    
+    @IBAction fileprivate func loginPressed() {
+        self.performSegue(withIdentifier: "SegueToServers", sender: self)
+    }
+    
+}
+
+// MARK: - Navigation
+
+extension LoginViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueToServers" {
+            if let serversViewController = segue.destination as? ServersViewController {
+                serversViewController.username =  "tesonet" // passwordTextField.text
+                serversViewController.password =  "partyanimal" // passwordTextField.text
+            }
+        }
+    }
+    
+}

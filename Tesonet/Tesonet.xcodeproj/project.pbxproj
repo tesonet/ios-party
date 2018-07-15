@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3736007BFB39F22DB9DEF1B6 /* Pods_TesonetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */; };
 		37BB1B0ACA7FCC125A27E2AA /* Pods_TesonetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */; };
-		67C7101B20FB949F00D17F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7101A20FB949F00D17F55 /* AppDelegate.swift */; };
 		67C7102020FB949F00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C7101E20FB949F00D17F55 /* Main.storyboard */; };
 		67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102120FB949F00D17F55 /* Assets.xcassets */; };
 		67C7102520FB949F00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102320FB949F00D17F55 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,18 @@
 		67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7103A20FB949F00D17F55 /* TesonetUITests.swift */; };
 		67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108620FBC7DF00D17F55 /* LoginViewController.swift */; };
 		67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */; };
+		67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */; };
+		67C7109320FBCB7A00D17F55 /* ServersTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108D20FBCB7A00D17F55 /* ServersTableCell.swift */; };
+		67C7109420FBCB7A00D17F55 /* ServersTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */; };
+		67C7109520FBCB7A00D17F55 /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */; };
+		67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */; };
+		67C7109720FBCB7A00D17F55 /* ServersTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */; };
+		67C7109920FBCBE500D17F55 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109820FBCBE500D17F55 /* DownloadManager.swift */; };
+		67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */; };
+		67C7109E20FBCC6900D17F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109D20FBCC6900D17F55 /* Constants.swift */; };
+		67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */; };
+		67C710A520FBD16800D17F55 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A420FBD16800D17F55 /* ServerModel.swift */; };
+		67C710A720FBD6F600D17F55 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A620FBD6F600D17F55 /* Token.swift */; };
 		D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +54,6 @@
 		5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		67C7101A20FB949F00D17F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67C7101F20FB949F00D17F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67C7102120FB949F00D17F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67C7102420FB949F00D17F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +66,18 @@
 		67C7103C20FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67C7108620FBC7DF00D17F55 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersTableHeaderView.swift; sourceTree = "<group>"; };
+		67C7108D20FBCB7A00D17F55 /* ServersTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersTableCell.swift; sourceTree = "<group>"; };
+		67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersTableHeaderView.xib; sourceTree = "<group>"; };
+		67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersTableFooterView.swift; sourceTree = "<group>"; };
+		67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersTableFooterView.xib; sourceTree = "<group>"; };
+		67C7109820FBCBE500D17F55 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67C7109D20FBCC6900D17F55 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
+		67C710A420FBD16800D17F55 /* ServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		67C710A620FBD6F600D17F55 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.release.xcconfig"; sourceTree = "<group>"; };
 		8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.release.xcconfig"; sourceTree = "<group>"; };
 		C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,13 +151,14 @@
 		67C7101920FB949F00D17F55 /* Tesonet */ = {
 			isa = PBXGroup;
 			children = (
+				67C7109A20FBCC1A00D17F55 /* App */,
 				67C7108220FBC66900D17F55 /* Login */,
 				67C7108320FBC69000D17F55 /* Servers */,
+				67C710A320FBD12500D17F55 /* DataModels */,
 				67C7108520FBC6E800D17F55 /* Networking */,
 				67C7108420FBC6B700D17F55 /* Persistance */,
 				67C7108820FBC87500D17F55 /* UI */,
 				67C7108920FBC87D00D17F55 /* Extensions */,
-				67C7101A20FB949F00D17F55 /* AppDelegate.swift */,
 				67C7101E20FB949F00D17F55 /* Main.storyboard */,
 				67C7102120FB949F00D17F55 /* Assets.xcassets */,
 				67C7102320FB949F00D17F55 /* LaunchScreen.storyboard */,
@@ -173,6 +196,12 @@
 		67C7108320FBC69000D17F55 /* Servers */ = {
 			isa = PBXGroup;
 			children = (
+				67C7108D20FBCB7A00D17F55 /* ServersTableCell.swift */,
+				67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */,
+				67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */,
+				67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */,
+				67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */,
+				67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -187,6 +216,8 @@
 		67C7108520FBC6E800D17F55 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				67C7109820FBCBE500D17F55 /* DownloadManager.swift */,
+				67C710A620FBD6F600D17F55 /* Token.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -195,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */,
+				67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -204,6 +236,23 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		67C7109A20FBCC1A00D17F55 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */,
+				67C7109D20FBCC6900D17F55 /* Constants.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		67C710A320FBD12500D17F55 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				67C710A420FBD16800D17F55 /* ServerModel.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		83C6B233EED77F9D24CB08EC /* Frameworks */ = {
@@ -330,7 +379,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67C7102520FB949F00D17F55 /* LaunchScreen.storyboard in Resources */,
+				67C7109420FBCB7A00D17F55 /* ServersTableHeaderView.xib in Resources */,
 				67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */,
+				67C7109720FBCB7A00D17F55 /* ServersTableFooterView.xib in Resources */,
 				67C7102020FB949F00D17F55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,9 +508,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,9 +561,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */,
 				67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */,
+				67C7109320FBCB7A00D17F55 /* ServersTableCell.swift in Sources */,
+				67C710A720FBD6F600D17F55 /* Token.swift in Sources */,
+				67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */,
+				67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */,
+				67C710A520FBD16800D17F55 /* ServerModel.swift in Sources */,
+				67C7109920FBCBE500D17F55 /* DownloadManager.swift in Sources */,
+				67C7109520FBCB7A00D17F55 /* ServersViewController.swift in Sources */,
 				67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */,
-				67C7101B20FB949F00D17F55 /* AppDelegate.swift in Sources */,
+				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
+				67C7109E20FBCC6900D17F55 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
