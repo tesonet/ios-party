@@ -1,6 +1,6 @@
 import Foundation
 
-enum BackendError: Error, CustomStringConvertible {
+enum DataError: Error, CustomStringConvertible {
     case urlError(reason: String)
     case noDataError(reason: String)
     case serializationError(reason: String)
@@ -20,13 +20,10 @@ enum BackendError: Error, CustomStringConvertible {
 // Add required response codes
 enum ResponseStatusCodeError: Error, CustomStringConvertible {
     case error401(reason: String)
-    case error403(reason: String)
     
     var description: String {
         switch self {
         case let .error401(reason):
-            return reason
-        case let .error403(reason):
             return reason
         }
     }
@@ -39,11 +36,7 @@ final class DownloadManager {
     fileprivate init() {}
     
     //
-    //
-    //
     // TODO: refactor both requestToken() and requestServersData()
-    //
-    //
     //
     
     func requestToken(from urlString: String,
@@ -51,7 +44,7 @@ final class DownloadManager {
                       completionHandler: @escaping (_ token: String?, _ error: Error?) -> ()) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
-            let error = BackendError.urlError(reason: "Could not create URL with " + urlString)
+            let error = DataError.urlError(reason: "Could not create URL with " + urlString)
             completionHandler(nil, error)
             return
         }
@@ -75,10 +68,6 @@ final class DownloadManager {
                     let error = ResponseStatusCodeError.error401(reason: "Response: 401 Unauthorized")
                     completionHandler(nil, error)
                     return
-                case 403:
-                    let error = ResponseStatusCodeError.error401(reason: "Response: 403 Forbidden")
-                    completionHandler(nil, error)
-                    return
                 default:
                     break
                 }
@@ -86,7 +75,7 @@ final class DownloadManager {
             
             // Make sure we got data
             guard let data = data else {
-                let error = BackendError.noDataError(reason: "No data received")
+                let error = DataError.noDataError(reason: "No data received")
                 completionHandler(nil, error)
                 return
             }
@@ -96,18 +85,19 @@ final class DownloadManager {
                 let json = try decoder.decode(Token.self, from: data)
                 completionHandler(json.token, nil)
             } catch {
-                let error = BackendError.serializationError(reason: "Serialization error for data from URL " + urlString)
+                let error = DataError.serializationError(reason: "Serialization error for data from URL " + urlString)
                 completionHandler(nil, error)
             }
         }.resume()
     }
     
+    // Here we assume that we have correct token so no need to check for 401
     func requestServersData(from urlString: String,
                         with token: String,
                         completionHandler: @escaping (_ jsondta: [Server]?, _ error: Error?) -> ()) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
-            let error = BackendError.urlError(reason: "Could not create URL with " + urlString)
+            let error = DataError.urlError(reason: "Could not create URL with " + urlString)
             completionHandler(nil, error)
             return
         }
@@ -124,25 +114,9 @@ final class DownloadManager {
                 return
             }
             
-            // Check response status code
-            if let httpResponse = response as? HTTPURLResponse {
-                switch httpResponse.statusCode {
-                case 401:
-                    let error = ResponseStatusCodeError.error401(reason: "Response: 401 Unauthorized")
-                    completionHandler(nil, error)
-                    return
-                case 403:
-                    let error = ResponseStatusCodeError.error401(reason: "Response: 403 Forbidden")
-                    completionHandler(nil, error)
-                    return
-                default:
-                    break
-                }
-            }
-            
             // Make sure we got data
             guard let data = data else {
-                let error = BackendError.noDataError(reason: "No data for URL received")
+                let error = DataError.noDataError(reason: "No data for URL received")
                 completionHandler(nil, error)
                 return
             }
@@ -152,7 +126,7 @@ final class DownloadManager {
                 let jsonData = try decoder.decode([Server].self, from: data)
                 completionHandler(jsonData, nil)
             } catch {
-                let error = BackendError.serializationError(reason: "Serialization error for data from URL " + urlString)
+                let error = DataError.serializationError(reason: "Serialization error for data from URL " + urlString)
                 completionHandler(nil, error)
             }
         }.resume()

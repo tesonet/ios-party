@@ -37,6 +37,10 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
         return serverCell(atIndexPath: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50.0
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
