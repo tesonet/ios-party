@@ -29,7 +29,7 @@ class DiskPersistance: Persistance {
         
         var servers = [Server]()
         let decoder = JSONDecoder()
-        if let serversDecoded = try? decoder.decode(Array.self, from: serversData) as [Server] {
+        if let serversDecoded = try? decoder.decode([Server].self, from: serversData) as [Server] {
             servers = serversDecoded
         }
         return servers

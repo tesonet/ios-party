@@ -84,10 +84,10 @@ extension ServersViewController: ServersTableFooterDelegate {
     
     func sortWasPressed() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let distanceSortButton = UIAlertAction(title: "By Distance", style: .default) { _ in
+        let distanceSortButton = UIAlertAction(title: "By Distance", style: .default) { [unowned self] _ in
             self.serversList = self.serversList.sorted(by: { $0.distance < $1.distance })
         }
-        let  alphanumericalSortButton = UIAlertAction(title: "Alphanumerical", style: .default) { _ in
+        let  alphanumericalSortButton = UIAlertAction(title: "Alphanumerical", style: .default) { [unowned self] _ in
             self.serversList = self.serversList.sorted(by: { $0.name < $1.name })
         }
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
