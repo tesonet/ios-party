@@ -7,6 +7,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        style()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +43,16 @@ extension LoginViewController {
                 serversViewController.password =  "partyanimal" // passwordTextField.text
             }
         }
+    }
+    
+}
+
+// MARK: Private Methods
+
+extension LoginViewController {
+    
+    fileprivate func style() {
+        
     }
     
 }

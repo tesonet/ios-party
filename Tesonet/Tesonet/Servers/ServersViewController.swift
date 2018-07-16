@@ -16,6 +16,7 @@ class ServersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        style()
         fetchData()
     }
     
@@ -134,6 +135,10 @@ extension ServersViewController {
     fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
         let userDefaultsPersistance = PersistanceFactory.producePersistanceType(type: persistanceType)
         userDefaultsPersistance.write(servers: data)
+    }
+    
+    fileprivate func style() {
+        
     }
     
 }

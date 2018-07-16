@@ -10,6 +10,8 @@ final class ServersTableFooterView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        style()
     }
     
 }
@@ -20,6 +22,16 @@ extension ServersTableFooterView {
     
     @IBAction fileprivate func sortPressed() {
         delegate?.sortWasPressed()
+    }
+    
+}
+
+// MARK: Private Methods
+
+extension ServersTableFooterView {
+    
+    fileprivate func style() {
+        
     }
     
 }
