@@ -126,14 +126,14 @@ extension ServersViewController {
                 
                 self.serversList = result
                 
-                //self.saveData(with: result, using: .userDefaultsPersistance)
+                //self.save(data: result, using: .userDefaultsPersistance)
             }
         }
     }
     
-    fileprivate func saveData(with servers: [Server], using: PersistanceType) {
-        let userDefaultsPersistance = PersistanceFactory.producePersistanceType(type: .userDefaultsPersistance)
-        userDefaultsPersistance.write(servers: servers)
+    fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
+        let userDefaultsPersistance = PersistanceFactory.producePersistanceType(type: persistanceType)
+        userDefaultsPersistance.write(servers: data)
     }
     
 }

@@ -16,12 +16,14 @@ protocol Persistance {
 
 class DiskPersistance: Persistance {
     
+    fileprivate let serversDataFileName = "ServersData"
+    
     func write(servers: [Server]) {
-        NSKeyedArchiver.archiveRootObject(servers, toFile: "ServersData")
+        NSKeyedArchiver.archiveRootObject(servers, toFile: serversDataFileName)
     }
     
     func read() -> [Server] {
-        guard let serversData = NSKeyedUnarchiver.unarchiveObject(withFile: "ServersData") as? Data else {
+        guard let serversData = NSKeyedUnarchiver.unarchiveObject(withFile: serversDataFileName) as? Data else {
             return [Server]()
         }
         
@@ -39,15 +41,17 @@ class DiskPersistance: Persistance {
 
 class UserDefaultsPersistance: Persistance {
     
+    fileprivate let serversDataKey = "ServersDataKey"
+    
     func write(servers: [Server]) {
         if let encoded = try? JSONEncoder().encode(servers) {
-            UserDefaults.standard.set(encoded, forKey: "ServersData")
+            UserDefaults.standard.set(encoded, forKey: serversDataKey)
         }
     }
     
     func read() -> [Server] {
         var servers = [Server]()
-        if let serversData = UserDefaults.standard.value(forKey: "ServersData") as? Data {
+        if let serversData = UserDefaults.standard.value(forKey: serversDataKey) as? Data {
             let decoder = JSONDecoder()
             if let serversDecoded = try? decoder.decode([Server].self, from: serversData) as [Server] {
                 servers = serversDecoded
