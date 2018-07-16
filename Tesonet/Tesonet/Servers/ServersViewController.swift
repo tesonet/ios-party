@@ -64,7 +64,7 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
     
     fileprivate func serverCell(atIndexPath indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServerCell", for: indexPath) as? ServersTableCell else {
-            fatalError("Could not dequeue cell of type AddonsTableViewCell")
+            fatalError("Could not dequeue cell of type ServerCell")
         }
         let server = serversList[indexPath.row]
         cell.configure(with: server)
@@ -105,11 +105,12 @@ extension ServersViewController {
                 return
             }
             
-            guard let result = result else {
+            guard let token = result else {
                 return
             }
             
-            DownloadManager.shared.requestServersData(from: URLs.Tesonet.dataURL, with: result) { result, error in
+            DownloadManager.shared.requestServersData(from: URLs.Tesonet.dataURL, with: token) { [weak self] result, error in
+                guard let `self` = self else { return }
                 if let error = error {
                     print(error)
                     return
@@ -120,8 +121,15 @@ extension ServersViewController {
                 }
                 
                 self.serversList = result
+                
+                //self.saveData(with: result, using: .userDefaultsPersistance)
             }
         }
+    }
+    
+    fileprivate func saveData(with servers: [Server], using: PersistanceType) {
+        let userDefaultsPersistance = PersistanceFactory.producePersistanceType(type: .userDefaultsPersistance)
+        userDefaultsPersistance.write(servers: servers)
     }
     
 }

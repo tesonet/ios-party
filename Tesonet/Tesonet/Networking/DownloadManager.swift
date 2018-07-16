@@ -1,5 +1,4 @@
 import Foundation
-import Reachability
 
 enum BackendError: Error, CustomStringConvertible {
     case urlError(reason: String)
@@ -57,7 +56,7 @@ final class DownloadManager {
             return
         }
 
-        let request = NSMutableURLRequest.init(url: url)
+        var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -87,7 +86,7 @@ final class DownloadManager {
             
             // Make sure we got data
             guard let data = data else {
-                let error = BackendError.noDataError(reason: "No data for URL " + urlString)
+                let error = BackendError.noDataError(reason: "No data received")
                 completionHandler(nil, error)
                 return
             }
@@ -113,7 +112,7 @@ final class DownloadManager {
             return
         }
 
-        let request = NSMutableURLRequest.init(url: url)
+        var request = URLRequest.init(url: url)
         request.httpMethod = "GET"
         request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -143,7 +142,7 @@ final class DownloadManager {
             
             // Make sure we got data
             guard let data = data else {
-                let error = BackendError.noDataError(reason: "No data for URL " + urlString)
+                let error = BackendError.noDataError(reason: "No data for URL received")
                 completionHandler(nil, error)
                 return
             }

@@ -28,6 +28,7 @@
 		67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */; };
 		67C710A520FBD16800D17F55 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A420FBD16800D17F55 /* ServerModel.swift */; };
 		67C710A720FBD6F600D17F55 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A620FBD6F600D17F55 /* Token.swift */; };
+		67C710A920FD1A8800D17F55 /* PesistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A820FD1A8800D17F55 /* PesistanceManager.swift */; };
 		D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
 		67C710A420FBD16800D17F55 /* ServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		67C710A620FBD6F600D17F55 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		67C710A820FD1A8800D17F55 /* PesistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PesistanceManager.swift; sourceTree = "<group>"; };
 		78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.release.xcconfig"; sourceTree = "<group>"; };
 		8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.release.xcconfig"; sourceTree = "<group>"; };
 		C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		67C7108420FBC6B700D17F55 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				67C710A820FD1A8800D17F55 /* PesistanceManager.swift */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				67C7109520FBCB7A00D17F55 /* ServersViewController.swift in Sources */,
 				67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */,
 				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
+				67C710A920FD1A8800D17F55 /* PesistanceManager.swift in Sources */,
 				67C7109E20FBCC6900D17F55 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
