@@ -4,8 +4,7 @@ class ServersViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
 
-    var username: String!
-    var password: String!
+    var accessToken = String()
     var serversList = [Server]() {
         didSet {
             DispatchQueue.main.async { [unowned self] in
@@ -104,31 +103,19 @@ extension ServersViewController: ServersTableFooterDelegate {
 extension ServersViewController {
     
     fileprivate func fetchData() {
-        DownloadManager.shared.requestToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { result, error in
+        DownloadManager.shared.requestServersData(from: URLs.Tesonet.dataURL, with: accessToken) { [weak self] result, error in
+            guard let `self` = self else { return }
             if let error = error {
                 print(error)
                 return
             }
             
-            guard let token = result else {
+            guard let result = result else {
                 return
             }
             
-            DownloadManager.shared.requestServersData(from: URLs.Tesonet.dataURL, with: token) { [weak self] result, error in
-                guard let `self` = self else { return }
-                if let error = error {
-                    print(error)
-                    return
-                }
-                
-                guard let result = result else {
-                    return
-                }
-                
-                self.serversList = result
-                
-                //self.save(data: result, using: .userDefaultsPersistance)
-            }
+            self.serversList = result
+            //self.save(data: result, using: .userDefaultsPersistance)
         }
     }
     

@@ -5,6 +5,8 @@ class LoginViewController: UIViewController {
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
     
+    fileprivate var accessToken: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -27,9 +29,26 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction fileprivate func loginPressed() {
-        self.performSegue(withIdentifier: "SegueToServers", sender: self)
+        let username = "tesonet" // usernameTextField.text
+        let password = "partyanimal" // passwordTextField.text
+        
+        DownloadManager.shared.requestToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
+            guard let `self` = self else { return }
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let accessToken = result else {
+                return
+            }
+            
+            self.accessToken = accessToken
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "SegueToServers", sender: self)
+            }
+        }
     }
-    
 }
 
 // MARK: - Navigation
@@ -39,8 +58,7 @@ extension LoginViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToServers" {
             if let serversViewController = segue.destination as? ServersViewController {
-                serversViewController.username =  "tesonet" // passwordTextField.text
-                serversViewController.password =  "partyanimal" // passwordTextField.text
+                serversViewController.accessToken = accessToken!
             }
         }
     }

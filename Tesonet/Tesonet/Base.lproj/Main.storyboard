@@ -47,7 +47,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ico-lock"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
@@ -106,7 +106,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="dVE-XS-RiW" id="bkt-1n-fxz"/>
                         <outlet property="usernameTextField" destination="MPg-f6-YLR" id="4dT-WD-3mR"/>
-                        <segue destination="5tB-lo-E4v" kind="show" identifier="SegueToServers" id="aUE-zX-VYj"/>
+                        <segue destination="5tB-lo-E4v" kind="show" identifier="SegueToServers" animates="NO" id="aUE-zX-VYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvO-my-hmP" sceneMemberID="firstResponder"/>
