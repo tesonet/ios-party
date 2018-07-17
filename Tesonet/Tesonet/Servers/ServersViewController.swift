@@ -133,8 +133,8 @@ extension ServersViewController {
     }
     
     fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
-        let userDefaultsPersistance = PersistanceFactory.producePersistanceType(type: persistanceType)
-        userDefaultsPersistance.write(servers: data)
+        let persistance = PersistanceFactory.producePersistanceType(type: persistanceType)
+        persistance.write(servers: data)
     }
     
     fileprivate func style() {
