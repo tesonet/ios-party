@@ -63,7 +63,7 @@ class UserDefaultsPersistance: Persistance {
 }
 
 // MARK: Realm Persistance
-// TODO: Add operations with Realm
+// TODO: Add class for Realm
 
 // MARK: Persistance Factory
 

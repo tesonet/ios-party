@@ -14,12 +14,13 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        setupLogin()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        usernameTextField.text = nil
+        passwordTextField.text = nil
     }
     
 }
@@ -29,6 +30,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction fileprivate func loginPressed() {
+        
         let username = "tesonet" // usernameTextField.text
         let password = "partyanimal" // passwordTextField.text
         
@@ -44,11 +46,15 @@ extension LoginViewController {
             }
             
             self.accessToken = accessToken
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "SegueToServers", sender: self)
-            }
+            self.saveSession(accessToken: accessToken, username: username, password: password)
+            self.performSegue(withIdentifier: "SegueToServers", sender: self)
         }
     }
+    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        
+    }
+    
 }
 
 // MARK: - Navigation
@@ -57,7 +63,8 @@ extension LoginViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToServers" {
-            if let serversViewController = segue.destination as? ServersViewController {
+            let destinationNavigationController = segue.destination as! UINavigationController
+            if let serversViewController = destinationNavigationController.topViewController as? ServersViewController {
                 serversViewController.accessToken = accessToken!
             }
         }
@@ -68,6 +75,18 @@ extension LoginViewController {
 // MARK: Private Methods
 
 extension LoginViewController {
+    
+    fileprivate func setupLogin() {
+        if UserSession.shared.signInDetails != nil {
+            usernameTextField.text = UserSession.shared.signInDetails?.username
+            passwordTextField.text = UserSession.shared.signInDetails?.password
+        }
+    }
+    
+    fileprivate func saveSession(accessToken: String, username: String, password: String) {
+        UserSession.shared.token = accessToken
+        UserSession.shared.signInDetails = (username, password)
+    }
     
     fileprivate func style() {
         

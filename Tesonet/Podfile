@@ -9,6 +9,7 @@ target 'Tesonet' do
   pod 'ReachabilitySwift'
   pod 'KeychainSwift'
   pod 'NVActivityIndicatorView'
+  # pod 'RealmSwift'
 
   target 'TesonetTests' do
     inherit! :search_paths

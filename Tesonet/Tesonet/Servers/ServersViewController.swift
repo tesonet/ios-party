@@ -3,7 +3,7 @@ import UIKit
 class ServersViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
-
+    
     var accessToken = String()
     var serversList = [Server]() {
         didSet {
@@ -12,10 +12,9 @@ class ServersViewController: UIViewController {
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        style()
         fetchData()
     }
     
@@ -115,6 +114,7 @@ extension ServersViewController {
             }
             
             self.serversList = result
+            
             //self.save(data: result, using: .userDefaultsPersistance)
         }
     }
@@ -124,8 +124,29 @@ extension ServersViewController {
         persistance.write(servers: data)
     }
     
-    fileprivate func style() {
-        
-    }
+}
+
+// MARK: - IBActions
+
+extension ServersViewController {
     
+    @IBAction fileprivate func logoutPressed() {
+        let alertController = UIAlertController(title: "Sign out",
+                                                message: "Are you sure you want to sign out?",
+                                                preferredStyle: .actionSheet)
+        let signOutButton = UIAlertAction(title: "Yes", style: .default) { [unowned self] _ in
+            UserSession.shared.signOut(forgetLogin: false)
+            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
+        }
+        let  signOutAndForgetButton = UIAlertAction(title: "Yes and forget sign-in details", style: .default) { [unowned self] _ in
+            UserSession.shared.signOut(forgetLogin: true)
+            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
+        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(signOutButton)
+        alertController.addAction(signOutAndForgetButton)
+        alertController.addAction(cancelButton)
+        navigationController?.present(alertController, animated: true, completion: nil)
+    }
+
 }
