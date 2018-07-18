@@ -115,7 +115,7 @@ extension ServersViewController {
             
             self.serversList = result
             
-            //self.save(data: result, using: .userDefaultsPersistance)
+            //self.save(data: result, using: .filePersistance)
         }
     }
     

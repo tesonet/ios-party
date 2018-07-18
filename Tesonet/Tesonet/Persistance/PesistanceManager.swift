@@ -2,7 +2,7 @@ import Foundation
 
 enum PersistanceType {
     case userDefaultsPersistance
-    case diskPersistance
+    case filePersistance
 }
 
 protocol Persistance {
@@ -12,46 +12,61 @@ protocol Persistance {
     
 }
 
-// MARK: Disk Persistance
+// MARK: File Persistance
 
-class DiskPersistance: Persistance {
-    
-    fileprivate let serversDataFileName = "ServersData"
+class FilePersistance: Persistance {
     
     func write(servers: [Server]) {
-        NSKeyedArchiver.archiveRootObject(servers, toFile: serversDataFileName)
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(servers)
+            let documentDirectory = try FileManager.default.url(for: .documentDirectory,
+                                                                in: .userDomainMask,
+                                                                appropriateFor: nil,
+                                                                create: false)
+            let url = documentDirectory.appendingPathComponent(String(describing: Server.self))
+            try data.write(to: url)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func read() -> [Server] {
-        guard let serversData = NSKeyedUnarchiver.unarchiveObject(withFile: serversDataFileName) as? Data else {
-            return [Server]()
+        var servers = [Server]()
+        do {
+            let documentDirectory = try FileManager.default.url(for: .documentDirectory,
+                                                                in: .userDomainMask,
+                                                                appropriateFor: nil,
+                                                                create: false)
+            let url = documentDirectory.appendingPathComponent(String(describing: Server.self))
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            servers = try decoder.decode([Server].self, from: data)
+        } catch {
+            print(error.localizedDescription)
         }
         
-        var servers = [Server]()
-        let decoder = JSONDecoder()
-        if let serversDecoded = try? decoder.decode([Server].self, from: serversData) as [Server] {
-            servers = serversDecoded
-        }
         return servers
     }
+    
     
 }
 
 // MARK: User Defaults Persistance
 
+// We don't want to save [Server] in UserDefaults -
+// UserDefaults persistance type added just as another type of persistance in persistance layer
 class UserDefaultsPersistance: Persistance {
-    
-    fileprivate let serversDataKey = "ServersDataKey"
     
     func write(servers: [Server]) {
         if let encoded = try? JSONEncoder().encode(servers) {
-            UserDefaults.standard.set(encoded, forKey: serversDataKey)
+            UserDefaults.standard.set(encoded, forKey: String(describing: Server.self))
         }
     }
     
     func read() -> [Server] {
         var servers = [Server]()
-        if let serversData = UserDefaults.standard.value(forKey: serversDataKey) as? Data {
+        if let serversData = UserDefaults.standard.value(forKey: String(describing: Server.self)) as? Data {
             let decoder = JSONDecoder()
             if let serversDecoded = try? decoder.decode([Server].self, from: serversData) as [Server] {
                 servers = serversDecoded
@@ -73,8 +88,8 @@ class PersistanceFactory {
         switch type {
         case .userDefaultsPersistance:
             return UserDefaultsPersistance()
-        case .diskPersistance:
-            return DiskPersistance()
+        case .filePersistance:
+            return FilePersistance()
         }
     }
     
