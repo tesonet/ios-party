@@ -121,7 +121,8 @@ extension ServersViewController {
     
     fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
         let persistance = PersistanceFactory.producePersistanceType(type: persistanceType)
-        persistance.write(servers: data)
+        persistance.write(items: data)
+        //let servers = persistance.read() as [Server]
     }
     
 }

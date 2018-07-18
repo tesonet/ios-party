@@ -7,8 +7,8 @@ enum PersistanceType {
 
 protocol Persistance {
     
-    func write(servers: [Server])
-    func read() -> [Server]
+    func write<T: Codable>(items: T)
+    func read<T: Codable>() -> [T]
     
 }
 
@@ -16,39 +16,38 @@ protocol Persistance {
 
 class FilePersistance: Persistance {
     
-    func write(servers: [Server]) {
+    func write<T: Codable>(items: T) {
         let encoder = JSONEncoder()
         do {
-            let data = try encoder.encode(servers)
+            let data = try encoder.encode(items)
             let documentDirectory = try FileManager.default.url(for: .documentDirectory,
                                                                 in: .userDomainMask,
                                                                 appropriateFor: nil,
                                                                 create: false)
-            let url = documentDirectory.appendingPathComponent(String(describing: Server.self))
+            let url = documentDirectory.appendingPathComponent(String(describing: T.self))
             try data.write(to: url)
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    func read() -> [Server] {
-        var servers = [Server]()
+    func read<T: Codable>() -> [T] {
+        var items = [T]()
         do {
             let documentDirectory = try FileManager.default.url(for: .documentDirectory,
                                                                 in: .userDomainMask,
                                                                 appropriateFor: nil,
                                                                 create: false)
-            let url = documentDirectory.appendingPathComponent(String(describing: Server.self))
+            let url = documentDirectory.appendingPathComponent(String(describing: T.self))
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            servers = try decoder.decode([Server].self, from: data)
+            items = try decoder.decode([T].self, from: data)
         } catch {
             print(error.localizedDescription)
         }
         
-        return servers
+        return items
     }
-    
     
 }
 
@@ -58,21 +57,21 @@ class FilePersistance: Persistance {
 // UserDefaults persistance type added just as another type of persistance in persistance layer
 class UserDefaultsPersistance: Persistance {
     
-    func write(servers: [Server]) {
-        if let encoded = try? JSONEncoder().encode(servers) {
-            UserDefaults.standard.set(encoded, forKey: String(describing: Server.self))
+    func write<T: Codable>(items: T) {
+        if let encoded = try? JSONEncoder().encode(items) {
+            UserDefaults.standard.set(encoded, forKey: String(describing: T.self))
         }
     }
     
-    func read() -> [Server] {
-        var servers = [Server]()
-        if let serversData = UserDefaults.standard.value(forKey: String(describing: Server.self)) as? Data {
+    func read<T: Codable>() -> [T] {
+        var items = [T]()
+        if let itemsData = UserDefaults.standard.value(forKey: String(describing: T.self)) as? Data {
             let decoder = JSONDecoder()
-            if let serversDecoded = try? decoder.decode([Server].self, from: serversData) as [Server] {
-                servers = serversDecoded
+            if let itemsDecoded = try? decoder.decode([T].self, from: itemsData) {
+                items = itemsDecoded
             }
         }
-        return servers
+        return items
     }
     
 }
