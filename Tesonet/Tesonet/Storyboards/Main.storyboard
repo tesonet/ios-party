@@ -213,7 +213,7 @@
                         <barButtonItem key="leftBarButtonItem" image="logo-dark" id="T6V-zc-0Ko"/>
                         <barButtonItem key="rightBarButtonItem" image="ico-logout" id="ShN-dR-PGH">
                             <connections>
-                                <action selector="logoutPressed:" destination="5tB-lo-E4v" id="vNt-Cx-8N9"/>
+                                <action selector="logoutPressed:" destination="5tB-lo-E4v" id="kAf-Jq-cEn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

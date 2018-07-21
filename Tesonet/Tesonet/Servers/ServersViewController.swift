@@ -117,7 +117,7 @@ extension ServersViewController {
         DownloadManager.shared.loadData(from: URLs.Tesonet.dataURL, with: accessToken) { [weak self] result, error in
             guard let `self` = self else { return }
             if let error = error {
-                print(error)
+                self.print(items: error)
                 return
             }
             
@@ -127,14 +127,15 @@ extension ServersViewController {
             
             self.serversList = result
             
-            // self.save(data: result, using: .userDefaultsPersistance)
+            self.save(data: result, using: .userDefaultsPersistance)
         }
     }
     
     fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
         let persistance = PersistanceFactory.producePersistanceType(type: persistanceType)
         persistance.write(items: data)
-        // let servers = persistance.read() as [Server]
+        let servers = persistance.read() as [Server]
+        self.print(items:servers)
     }
     
 }

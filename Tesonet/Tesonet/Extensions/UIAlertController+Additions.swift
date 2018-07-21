@@ -2,7 +2,7 @@ import UIKit
 
 typealias AlertCompletion = () -> Void
 
-public extension UIAlertController {
+extension UIAlertController {
     
     public enum CancelButton {
         case none

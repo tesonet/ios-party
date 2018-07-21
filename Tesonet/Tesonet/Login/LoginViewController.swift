@@ -35,15 +35,17 @@ extension LoginViewController {
         let username = "tesonet"
         let password = "partyanimal"
         #else
-        let username = usernameTextField.text
-        let password = passwordTextField.text
+        let username = usernameTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
         #endif
         
         DownloadManager.shared.loadToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
             guard let `self` = self else { return }
             if let error = error {
-                print(error)
-                self.handleLoginError(error: error)
+                self.print(items: error)
+                DispatchQueue.main.async {
+                    self.handleLoginError(error: error)
+                }
                 return
             }
             
@@ -53,7 +55,9 @@ extension LoginViewController {
             
             self.accessToken = accessToken
             self.saveSession(accessToken: accessToken, username: username, password: password)
-            self.performSegue(withIdentifier: "SegueToServers", sender: self)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "SegueToServers", sender: self)
+            }
         }
     }
     
@@ -96,9 +100,10 @@ extension LoginViewController {
     
     fileprivate func handleLoginError(error: Error) {
         if let responseStatusCodeError = error as? HTTPError {
-            self.presentSimpleAlert(title: responseStatusCodeError.statusCode,
-                                    message: responseStatusCodeError.description) {
-                                        self.usernameTextField.text = nil
+            let allertTitle = "Error"
+            let allertMeassage = "Login Error\n" + responseStatusCodeError.statusCode + ": " + responseStatusCodeError.description
+            self.presentSimpleAlert(title: allertTitle, message: allertMeassage) {
+                self.passwordTextField.text = nil
             }
         }
     }
