@@ -16,7 +16,7 @@ final class ServersTableFooterView: UIView {
     
 }
 
-// MARK: - IBActions
+// MARK: - Navigation
 
 extension ServersTableFooterView {
     

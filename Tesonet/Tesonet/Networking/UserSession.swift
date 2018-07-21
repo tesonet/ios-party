@@ -12,10 +12,8 @@ final class UserSession {
     // Singelton
     static let shared = UserSession()
     fileprivate init() {}
-	
-    /**
-     URLRequest Bearer authorization token.
-     */
+
+    /// URLRequest Bearer authorization token.
     var token: String? {
 		set {
             KeychainSwift().set(newValue ?? "", forKey: accessTokenKey)
@@ -28,13 +26,7 @@ final class UserSession {
         }
 	}
     
-    /**
-     User sign in crudentils tuple.
-     
-     username - sign in username.
-     
-     password - sign in password.
-     */
+    /// User sign in crudentials (username, password) tuple.
     var signInDetails: (username: String, password: String)? {
         set {
             KeychainSwift().set(newValue?.username ?? "", forKey: LoginKeys.username)

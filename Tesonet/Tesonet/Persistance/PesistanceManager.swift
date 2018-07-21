@@ -1,7 +1,9 @@
 import Foundation
 
 enum PersistanceType {
+    /// Persist in User Defaults
     case userDefaultsPersistance
+    /// Persist in file. File name matches model name.
     case filePersistance
 }
 
@@ -96,9 +98,7 @@ class UserDefaultsPersistance: Persistance {
 
 // MARK: - Persistance Factory
 
-/**
- Simple Factory.
- */
+/// Simple Factory.
 class PersistanceFactory {
     
     /**

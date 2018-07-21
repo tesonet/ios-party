@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     
 }
 
-// MARK: - IBActions
+// MARK: - Navigation
 
 extension LoginViewController {
     
@@ -65,12 +65,6 @@ extension LoginViewController {
     @IBAction func prepareForUnwind(_ segue: UIStoryboardSegue) {
         
     }
-    
-}
-
-// MARK: - Navigation
-
-extension LoginViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToServers" {

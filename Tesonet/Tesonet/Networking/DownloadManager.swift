@@ -1,47 +1,5 @@
 import Foundation
 
-/**
- Data error.
- */
-enum DataError: Error, CustomStringConvertible {
-    case urlError(reason: String)
-    case noDataError(reason: String)
-    case serializationError(reason: String)
-    
-    var description: String {
-        switch self {
-        case let .urlError(reason):
-            return reason
-        case let .noDataError(reason):
-            return reason
-        case let .serializationError(reason):
-            return reason
-        }
-    }
-}
-
-/**
- HTTP error.
- */
-enum HTTPError: Error, CustomStringConvertible {
-    case error401(reason: String)
-    // Add more status codes if required
-    
-    var description: String {
-        switch self {
-        case let .error401(reason):
-            return reason
-        }
-    }
-    
-    var statusCode: String {
-        switch self {
-        case .error401(_):
-            return "401"
-        }
-    }
-}
-
 final class DownloadManager {
     
     // Singelton

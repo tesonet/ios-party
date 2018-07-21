@@ -109,7 +109,32 @@ extension ServersViewController: ServersTableFooterDelegate {
     
 }
 
-// MARK: Private Methods
+// MARK: - Navigation
+
+extension ServersViewController {
+    
+    @IBAction fileprivate func logoutPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: "Sign out",
+                                                message: "Are you sure you want to sign out?",
+                                                preferredStyle: .actionSheet)
+        let signOutButton = UIAlertAction(title: "Yes", style: .default) { [unowned self] _ in
+            UserSession.shared.signOut(forgetLogin: false)
+            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
+        }
+        let  signOutAndForgetButton = UIAlertAction(title: "Yes and forget sign-in details", style: .default) { [unowned self] _ in
+            UserSession.shared.signOut(forgetLogin: true)
+            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
+        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(signOutButton)
+        alertController.addAction(signOutAndForgetButton)
+        alertController.addAction(cancelButton)
+        navigationController?.present(alertController, animated: true, completion: nil)
+    }
+
+}
+
+// MARK: - Private Methods
 
 extension ServersViewController {
     
@@ -140,29 +165,4 @@ extension ServersViewController {
         #endif
     }
     
-}
-
-// MARK: - IBActions
-
-extension ServersViewController {
-    
-    @IBAction fileprivate func logoutPressed(_ sender: Any) {
-        let alertController = UIAlertController(title: "Sign out",
-                                                message: "Are you sure you want to sign out?",
-                                                preferredStyle: .actionSheet)
-        let signOutButton = UIAlertAction(title: "Yes", style: .default) { [unowned self] _ in
-            UserSession.shared.signOut(forgetLogin: false)
-            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
-        }
-        let  signOutAndForgetButton = UIAlertAction(title: "Yes and forget sign-in details", style: .default) { [unowned self] _ in
-            UserSession.shared.signOut(forgetLogin: true)
-            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
-        }
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(signOutButton)
-        alertController.addAction(signOutAndForgetButton)
-        alertController.addAction(cancelButton)
-        navigationController?.present(alertController, animated: true, completion: nil)
-    }
-
 }
