@@ -118,12 +118,10 @@ extension ServersViewController {
                                                 message: "Are you sure you want to sign out?",
                                                 preferredStyle: .actionSheet)
         let signOutButton = UIAlertAction(title: "Yes", style: .default) { [unowned self] _ in
-            UserSession.shared.signOut(forgetLogin: false)
-            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
+            self.signOut(forgetLogin: false)
         }
         let  signOutAndForgetButton = UIAlertAction(title: "Yes and forget sign-in details", style: .default) { [unowned self] _ in
-            UserSession.shared.signOut(forgetLogin: true)
-            self.performSegue(withIdentifier: "UnwindToLogin", sender: self)
+            self.signOut(forgetLogin: true)
         }
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(signOutButton)
@@ -163,6 +161,11 @@ extension ServersViewController {
         let servers = persistance.read() as [Server]
         self.print(items:servers)
         #endif
+    }
+    
+    fileprivate func signOut(forgetLogin: Bool) {
+        UserSession.shared.signOut(forgetLogin: forgetLogin)
+        self.performSegue(withIdentifier: "SequeToLogin", sender: self)
     }
     
 }

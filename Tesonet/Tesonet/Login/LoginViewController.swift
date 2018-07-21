@@ -61,11 +61,6 @@ extension LoginViewController {
         }
     }
     
-    // Very usefull with long navigation stack
-    @IBAction func prepareForUnwind(_ segue: UIStoryboardSegue) {
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToServers" {
             let destinationNavigationController = segue.destination as! UINavigationController

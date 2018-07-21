@@ -35,6 +35,7 @@
 		67C710D22103898B00D17F55 /* DebugOptions.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D12103898B00D17F55 /* DebugOptions.swift.swift */; };
 		67C710D62103D87700D17F55 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D52103D87700D17F55 /* TokenModel.swift */; };
 		67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D72103D8C500D17F55 /* TasonetError.swift */; };
+		67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */; };
 		D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		67C710D12103898B00D17F55 /* DebugOptions.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugOptions.swift.swift; sourceTree = "<group>"; };
 		67C710D52103D87700D17F55 /* TokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		67C710D72103D8C500D17F55 /* TasonetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasonetError.swift; sourceTree = "<group>"; };
+		67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNoAnimationSegue.swift; sourceTree = "<group>"; };
 		78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.release.xcconfig"; sourceTree = "<group>"; };
 		8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.release.xcconfig"; sourceTree = "<group>"; };
 		C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		67C7108820FBC87500D17F55 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */,
 				67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */,
 				67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */,
 			);
@@ -617,6 +620,7 @@
 				67C7109520FBCB7A00D17F55 /* ServersViewController.swift in Sources */,
 				67C710D22103898B00D17F55 /* DebugOptions.swift.swift in Sources */,
 				67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */,
+				67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */,
 				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
 				67C710A920FD1A8800D17F55 /* PesistanceManager.swift in Sources */,
 				67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */,
