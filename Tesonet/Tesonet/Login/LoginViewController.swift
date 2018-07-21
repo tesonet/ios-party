@@ -9,6 +9,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         style()
     }
     
@@ -30,14 +31,19 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction fileprivate func loginPressed() {
+        #if DEBUG
+        let username = "tesonet"
+        let password = "partyanimal"
+        #else
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        #endif
         
-        let username = "tesonet" // usernameTextField.text
-        let password = "partyanimal" // passwordTextField.text
-        
-        DownloadManager.shared.requestToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
+        DownloadManager.shared.loadToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
             guard let `self` = self else { return }
             if let error = error {
                 print(error)
+                self.handleLoginError(error: error)
                 return
             }
             
@@ -86,6 +92,15 @@ extension LoginViewController {
     fileprivate func saveSession(accessToken: String, username: String, password: String) {
         UserSession.shared.token = accessToken
         UserSession.shared.signInDetails = (username, password)
+    }
+    
+    fileprivate func handleLoginError(error: Error) {
+        if let responseStatusCodeError = error as? HTTPError {
+            self.presentSimpleAlert(title: responseStatusCodeError.statusCode,
+                                    message: responseStatusCodeError.description) {
+                                        self.usernameTextField.text = nil
+            }
+        }
     }
     
     fileprivate func style() {

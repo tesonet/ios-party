@@ -27,7 +27,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.10807291666666667" blue="0.44859483506944442" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.2627450980392157" green="0.27450980392156865" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="3QG-PB-Nl2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jXk-P7-gI3"/>
                 <constraint firstItem="3QG-PB-Nl2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vYt-Qq-2LY"/>

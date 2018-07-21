@@ -17,14 +17,21 @@ enum DataError: Error, CustomStringConvertible {
     }
 }
 
-// Add required response codes
-enum ResponseStatusCodeError: Error, CustomStringConvertible {
+enum HTTPError: Error, CustomStringConvertible {
     case error401(reason: String)
+    // Add more status codes if required
     
     var description: String {
         switch self {
         case let .error401(reason):
             return reason
+        }
+    }
+    
+    var statusCode: String {
+        switch self {
+        case .error401(_):
+            return "401"
         }
     }
 }
@@ -35,11 +42,7 @@ final class DownloadManager {
     static var shared = DownloadManager()
     fileprivate init() {}
     
-    //
-    // TODO: refactor both requestToken() and requestServersData()
-    //
-    
-    func requestToken(from urlString: String,
+    func loadToken(from urlString: String,
                       withParams params: [String : String],
                       completionHandler: @escaping (_ token: String?, _ error: Error?) -> ()) {
         // Check if URL can be created
@@ -65,7 +68,7 @@ final class DownloadManager {
             if let httpResponse = response as? HTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 401:
-                    let error = ResponseStatusCodeError.error401(reason: "Response: 401 Unauthorized")
+                    let error = HTTPError.error401(reason: "Unauthorized")
                     completionHandler(nil, error)
                     return
                 default:
@@ -92,7 +95,7 @@ final class DownloadManager {
     }
     
     // Here we assume that we have correct token so no need to check for 401
-    func requestServersData(from urlString: String,
+    func loadData(from urlString: String,
                         with token: String,
                         completionHandler: @escaping (_ jsondta: [Server]?, _ error: Error?) -> ()) {
         // Check if URL can be created

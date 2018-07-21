@@ -7,7 +7,7 @@ enum PersistanceType {
 
 protocol Persistance {
     
-    func write<T: Codable>(items: T)
+    func write<T: Codable>(items: [T])
     func read<T: Codable>() -> [T]
     
 }
@@ -16,7 +16,7 @@ protocol Persistance {
 
 class FilePersistance: Persistance {
     
-    func write<T: Codable>(items: T) {
+    func write<T: Codable>(items: [T]) {
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(items)
@@ -57,7 +57,7 @@ class FilePersistance: Persistance {
 // UserDefaults persistance type added just as another type of persistance in persistance layer
 class UserDefaultsPersistance: Persistance {
     
-    func write<T: Codable>(items: T) {
+    func write<T: Codable>(items: [T]) {
         if let encoded = try? JSONEncoder().encode(items) {
             UserDefaults.standard.set(encoded, forKey: String(describing: T.self))
         }
