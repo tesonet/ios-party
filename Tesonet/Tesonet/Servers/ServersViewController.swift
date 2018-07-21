@@ -83,7 +83,7 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-// MARK: ServersTableFooterDelegate
+// MARK: - ServersTableFooterDelegate
 
 extension ServersViewController: ServersTableFooterDelegate {
     
@@ -127,15 +127,17 @@ extension ServersViewController {
             
             self.serversList = result
             
-            self.save(data: result, using: .userDefaultsPersistance)
+            self.save(data: result, using: .filePersistance)
         }
     }
     
     fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
         let persistance = PersistanceFactory.producePersistanceType(type: persistanceType)
         persistance.write(items: data)
+        #if DEBUG
         let servers = persistance.read() as [Server]
         self.print(items:servers)
+        #endif
     }
     
 }

@@ -230,8 +230,8 @@
 		67C7108520FBC6E800D17F55 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				67C7109820FBCBE500D17F55 /* DownloadManager.swift */,
 				67C710A620FBD6F600D17F55 /* Token.swift */,
+				67C7109820FBCBE500D17F55 /* DownloadManager.swift */,
 				67C710B020FFB31200D17F55 /* UserSession.swift */,
 			);
 			path = Networking;

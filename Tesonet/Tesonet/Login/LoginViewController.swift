@@ -61,7 +61,8 @@ extension LoginViewController {
         }
     }
     
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+    // Very usefull with long navigation stack
+    @IBAction func prepareForUnwind(_ segue: UIStoryboardSegue) {
         
     }
     
@@ -82,7 +83,7 @@ extension LoginViewController {
     
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 extension LoginViewController {
     

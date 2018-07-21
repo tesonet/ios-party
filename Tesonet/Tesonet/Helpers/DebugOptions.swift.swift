@@ -1,4 +1,4 @@
-// stackoverflow.com/questions/26913799/remove-println-for-release-version-ios-swift
+// *** stackoverflow.com/questions/26913799/remove-println-for-release-version-ios-swift ***
 
 import UIKit
 

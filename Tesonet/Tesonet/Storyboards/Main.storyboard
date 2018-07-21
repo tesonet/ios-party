@@ -213,14 +213,14 @@
                         <barButtonItem key="leftBarButtonItem" image="logo-dark" id="T6V-zc-0Ko"/>
                         <barButtonItem key="rightBarButtonItem" image="ico-logout" id="ShN-dR-PGH">
                             <connections>
-                                <action selector="logoutPressed:" destination="5tB-lo-E4v" id="kAf-Jq-cEn"/>
+                                <action selector="logoutPressed:" destination="5tB-lo-E4v" id="ghP-7M-z1M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="sA6-5g-huS" id="zie-Qb-Kvm"/>
-                        <segue destination="4P4-q6-YIW" kind="unwind" identifier="UnwindToLogin" animates="NO" unwindAction="prepareForUnwindWithSegue:" id="Y2m-5h-Gwk"/>
+                        <segue destination="4P4-q6-YIW" kind="unwind" identifier="UnwindToLogin" animates="NO" unwindAction="prepareForUnwind:" id="lf9-ym-PcX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmm-o1-cTG" userLabel="First Responder" sceneMemberID="firstResponder"/>

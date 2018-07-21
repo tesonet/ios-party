@@ -13,7 +13,7 @@ extension UIViewController {
     
 }
 
-// holko.pl/2017/06/26/checking-uiviewcontroller-deallocation/
+// *** holko.pl/2017/06/26/checking-uiviewcontroller-deallocation ***
 // Very usefull for checking view controller dealocation.
 // In this project navigation stack is very small, so it's not used,
 // but with another screen in navigation stack it should be added in UIViewController.viewDidDisappear(_:)

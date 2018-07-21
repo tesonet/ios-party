@@ -13,6 +13,9 @@ final class UserSession {
     static let shared = UserSession()
     fileprivate init() {}
 	
+    /**
+     URLRequest Bearer authorization token.
+     */
     var token: String? {
 		set {
             KeychainSwift().set(newValue ?? "", forKey: accessTokenKey)
@@ -25,6 +28,13 @@ final class UserSession {
         }
 	}
     
+    /**
+     User sign in crudentils tuple.
+     
+     username - sign in username.
+     
+     password - sign in password.
+     */
     var signInDetails: (username: String, password: String)? {
         set {
             KeychainSwift().set(newValue?.username ?? "", forKey: LoginKeys.username)
@@ -40,6 +50,11 @@ final class UserSession {
         }
     }
 	
+    /**
+     Sign out.
+     
+     - parameter forgetLogin: true if login crudentials to be deleted from memory.
+     */
     func signOut(forgetLogin: Bool) {
         token = nil
         if forgetLogin {

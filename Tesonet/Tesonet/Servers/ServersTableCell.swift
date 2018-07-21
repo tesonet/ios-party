@@ -17,7 +17,7 @@ class ServersTableCell: UITableViewCell {
     }
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 extension ServersTableCell {
     

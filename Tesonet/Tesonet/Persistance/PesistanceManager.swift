@@ -7,12 +7,27 @@ enum PersistanceType {
 
 protocol Persistance {
     
+    /**
+     Persist array of items.
+     
+     - parameter items: array of items to persist.
+     */
     func write<T: Codable>(items: [T])
+    
+    /**
+     Read and return persisted array of items.
+
+     Type is determined at runtime so cast result to [T].
+     
+     (example: let servers = persistance.read() as [Server])
+     
+     - returns: Persisted array of items.
+     */
     func read<T: Codable>() -> [T]
     
 }
 
-// MARK: File Persistance
+// MARK: - File Persistance
 
 class FilePersistance: Persistance {
     
@@ -51,7 +66,7 @@ class FilePersistance: Persistance {
     
 }
 
-// MARK: User Defaults Persistance
+// MARK: - User Defaults Persistance
 
 // We don't want to save [Server] in UserDefaults -
 // UserDefaults persistance type added just as another type of persistance in persistance layer
@@ -76,13 +91,23 @@ class UserDefaultsPersistance: Persistance {
     
 }
 
-// MARK: Realm Persistance
+// MARK: - Realm Persistance
 // TODO: Add class for Realm
 
-// MARK: Persistance Factory
+// MARK: - Persistance Factory
 
+/**
+ Simple Factory.
+ */
 class PersistanceFactory {
     
+    /**
+     Factory method for creating persistancrpPersistance object of required type.
+     
+     - parameter type: persistance type.
+     
+     - returns: Persistance object of required type.
+     */
     static func producePersistanceType(type: PersistanceType) -> Persistance {
         switch type {
         case .userDefaultsPersistance:

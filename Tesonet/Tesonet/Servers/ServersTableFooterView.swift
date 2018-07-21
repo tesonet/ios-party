@@ -26,7 +26,7 @@ extension ServersTableFooterView {
     
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 extension ServersTableFooterView {
     

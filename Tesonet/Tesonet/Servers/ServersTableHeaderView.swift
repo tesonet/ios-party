@@ -10,7 +10,7 @@ final class ServersTableHeaderView: UIView {
     
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 extension ServersTableHeaderView {
     

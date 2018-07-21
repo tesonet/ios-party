@@ -100,7 +100,7 @@ extension UIViewController {
         UIViewController.presentNextAlertIfAvailable()
     }
     
-    // MARK: Private methods and variables
+    // MARK: - Private methods and variables
     
     typealias PresenterPresentee = (presenter: UIViewController?, presentee: UIViewController)
     
