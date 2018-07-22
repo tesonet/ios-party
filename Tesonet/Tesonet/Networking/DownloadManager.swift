@@ -68,7 +68,18 @@ final class DownloadManager {
     /**
      Obtain data.
      
-     We assume that we have correct token so no 401.
+     - note: We are loged in, so we have correct access token. Since no refresh token required - access token does not expire.
+     Hence - no 401. In real service access token would expire.
+     
+     - parameter from:       data url string.
+     - parameter token:      Bearer authorization token.
+     - parameter completion: The block that should be called. It is passed either received data or error.
+     */
+    
+    /**
+     Obtain data.
+     
+     - parameter We assume that we have correct token so no 401.
      
      - parameter from:       data url string.
      - parameter token:      Bearer authorization token.

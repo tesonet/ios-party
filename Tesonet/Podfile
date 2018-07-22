@@ -6,9 +6,8 @@ target 'Tesonet' do
   use_frameworks!
 
   # Pods for Tesonet
-  pod 'ReachabilitySwift'
   pod 'KeychainSwift'
-  pod 'NVActivityIndicatorView'
+  pod 'ReachabilitySwift'
   pod 'RealmSwift'
 
   target 'TesonetTests' do
