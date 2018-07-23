@@ -77,15 +77,14 @@ extension LoginViewController {
 extension LoginViewController {
     
     fileprivate func setupLogin() {
-        if UserSession.shared.signInDetails != nil {
+        if UserSession.shared.isCrudentialsSaved() {
             usernameTextField.text = UserSession.shared.signInDetails?.username
             passwordTextField.text = UserSession.shared.signInDetails?.password
         }
     }
     
     fileprivate func saveSession(accessToken: String, username: String, password: String) {
-        UserSession.shared.token = accessToken
-        UserSession.shared.signInDetails = (username, password)
+        UserSession.shared.save(token: accessToken, username: username, password: password)
     }
     
     fileprivate func handleLoginError(error: Error) {

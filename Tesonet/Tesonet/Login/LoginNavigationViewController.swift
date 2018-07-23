@@ -33,7 +33,7 @@ extension LoginNavigationViewController {
 extension LoginNavigationViewController {
 
     fileprivate func moveToNextScreen() {
-        if let accessToken = UserSession.shared.token, !accessToken.isEmpty {
+        if UserSession.shared.isLogedIn() {
             self.performSegue(withIdentifier: "SegueNavigationToServers", sender: self)
         } else {
             self.performSegue(withIdentifier: "SegueNavigationToLogin", sender: self)
