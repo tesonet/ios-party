@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		033C909D2109EB4600C9C0BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C909C2109EB4600C9C0BF /* AppDelegate.swift */; };
-		033C909F2109EB4600C9C0BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C909E2109EB4600C9C0BF /* ViewController.swift */; };
-		033C90A22109EB4600C9C0BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033C90A02109EB4600C9C0BF /* Main.storyboard */; };
 		033C90A42109EB4700C9C0BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033C90A32109EB4700C9C0BF /* Assets.xcassets */; };
 		033C90A72109EB4700C9C0BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033C90A52109EB4700C9C0BF /* LaunchScreen.storyboard */; };
 		033C90B22109EB4700C9C0BF /* TestioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90B12109EB4700C9C0BF /* TestioTests.swift */; };
+		033C90BD2109EC2100C9C0BF /* TestioNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90BC2109EC2100C9C0BF /* TestioNetworkService.swift */; };
+		033C90BF2109EC2E00C9C0BF /* TestioUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90BE2109EC2E00C9C0BF /* TestioUser.swift */; };
+		033C90C12109EC3A00C9C0BF /* TestioToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90C02109EC3A00C9C0BF /* TestioToken.swift */; };
+		033C90C3210A116400C9C0BF /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90C2210A116400C9C0BF /* Codable+Extensions.swift */; };
+		033C90C5210A161B00C9C0BF /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90C4210A161B00C9C0BF /* AppFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +31,17 @@
 /* Begin PBXFileReference section */
 		033C90992109EB4600C9C0BF /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033C909C2109EB4600C9C0BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		033C909E2109EB4600C9C0BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		033C90A12109EB4600C9C0BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		033C90A32109EB4700C9C0BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		033C90A62109EB4700C9C0BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		033C90A82109EB4700C9C0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		033C90AD2109EB4700C9C0BF /* TestioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		033C90B12109EB4700C9C0BF /* TestioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioTests.swift; sourceTree = "<group>"; };
 		033C90B32109EB4700C9C0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		033C90BC2109EC2100C9C0BF /* TestioNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioNetworkService.swift; sourceTree = "<group>"; };
+		033C90BE2109EC2E00C9C0BF /* TestioUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioUser.swift; sourceTree = "<group>"; };
+		033C90C02109EC3A00C9C0BF /* TestioToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioToken.swift; sourceTree = "<group>"; };
+		033C90C2210A116400C9C0BF /* Codable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
+		033C90C4210A161B00C9C0BF /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				033C909C2109EB4600C9C0BF /* AppDelegate.swift */,
-				033C909E2109EB4600C9C0BF /* ViewController.swift */,
-				033C90A02109EB4600C9C0BF /* Main.storyboard */,
 				033C90A32109EB4700C9C0BF /* Assets.xcassets */,
 				033C90A52109EB4700C9C0BF /* LaunchScreen.storyboard */,
 				033C90A82109EB4700C9C0BF /* Info.plist */,
+				033C90BC2109EC2100C9C0BF /* TestioNetworkService.swift */,
+				033C90BE2109EC2E00C9C0BF /* TestioUser.swift */,
+				033C90C02109EC3A00C9C0BF /* TestioToken.swift */,
+				033C90C2210A116400C9C0BF /* Codable+Extensions.swift */,
+				033C90C4210A161B00C9C0BF /* AppFlowCoordinator.swift */,
 			);
 			path = Testio;
 			sourceTree = "<group>";
@@ -179,7 +188,6 @@
 			files = (
 				033C90A72109EB4700C9C0BF /* LaunchScreen.storyboard in Resources */,
 				033C90A42109EB4700C9C0BF /* Assets.xcassets in Resources */,
-				033C90A22109EB4600C9C0BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033C909F2109EB4600C9C0BF /* ViewController.swift in Sources */,
+				033C90C3210A116400C9C0BF /* Codable+Extensions.swift in Sources */,
+				033C90C12109EC3A00C9C0BF /* TestioToken.swift in Sources */,
+				033C90C5210A161B00C9C0BF /* AppFlowCoordinator.swift in Sources */,
 				033C909D2109EB4600C9C0BF /* AppDelegate.swift in Sources */,
+				033C90BF2109EC2E00C9C0BF /* TestioUser.swift in Sources */,
+				033C90BD2109EC2100C9C0BF /* TestioNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +233,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		033C90A02109EB4600C9C0BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				033C90A12109EB4600C9C0BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		033C90A52109EB4700C9C0BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
