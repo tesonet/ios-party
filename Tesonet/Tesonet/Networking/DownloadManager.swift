@@ -75,16 +75,6 @@ final class DownloadManager {
      - parameter token:      Bearer authorization token.
      - parameter completion: The block that should be called. It is passed either received data or error.
      */
-    
-    /**
-     Obtain data.
-     
-     - parameter We assume that we have correct token so no 401.
-     
-     - parameter from:       data url string.
-     - parameter token:      Bearer authorization token.
-     - parameter completion: The block that should be called. It is passed either received data or error.
-     */
     func loadData(from urlString: String,
                   with token: String,
                   completion: @escaping (_ jsondta: [Server]?, _ error: Error?) -> ()) {
