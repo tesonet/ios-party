@@ -29,23 +29,11 @@ class TestioNetworkService: NSObject {
 
     typealias AuthenticationHandler = (Result<TestioToken, TestioError>) -> ()
     
-    private let decoder: JSONDecoder = {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        return decoder
-    }()
-    
-    private let encoder: JSONEncoder = {
-        let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .iso8601
-        return encoder
-    }()
-    
     func authenticate(user: TestioUser, handler: @escaping AuthenticationHandler) {
 
         let endpointString = String.init(format: TestioAPIURLStringFormat, TestioEndpoint.tokens.rawValue)
         
-        guard let encodedCredentials = try? encoder.encode(user),
+        guard let encodedCredentials = try? user.encode(),
             let endpointURL = URL(string: endpointString) else {
             handler(.failure(.unknown))
             return
@@ -57,17 +45,17 @@ class TestioNetworkService: NSObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
-        let authenticationTask = session.dataTask(with: request) { [unowned self] data, response, error in
+        let authenticationTask = session.dataTask(with: request) { data, response, error in
             
             guard let httpResponse = response as? HTTPURLResponse,
                 httpResponse.statusCode != 401 else {
                 handler(.failure(.unauthorized))
                 return
             }
-            
+
             guard error == nil,
                 let data = data,
-                let token = try? self.decoder.decode(TestioToken.self, from: data) else {
+                let token = try? TestioToken.decode(fromData: data) else {
                 handler(.failure(.unknown))
                 return
             }
