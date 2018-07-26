@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1110793821099587002F82FD /* ServersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1110793721099587002F82FD /* ServersListTVC.swift */; };
+		1129A4D02108F17D006EB84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129A4CF2108F17D006EB84F /* AppDelegate.swift */; };
+		1129A4D22108F17D006EB84F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129A4D12108F17D006EB84F /* LoginVC.swift */; };
+		1129A4D52108F17D006EB84F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1129A4D32108F17D006EB84F /* Main.storyboard */; };
+		1129A4DA2108F17F006EB84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1129A4D82108F17F006EB84F /* LaunchScreen.storyboard */; };
+		1129A4E32108F2CE006EB84F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129A4E22108F2CE006EB84F /* APIManager.swift */; };
+		1129A4E52108FF3F006EB84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1129A4E42108FF3F006EB84F /* Assets.xcassets */; };
+		112EEE4921090EE4008816CE /* TesioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EEE4821090EE4008816CE /* TesioHelper.swift */; };
+		112EEE4B210910F7008816CE /* TodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EEE4A210910F7008816CE /* TodoRouter.swift */; };
+		112EEE4E2109137B008816CE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EEE4D2109137B008816CE /* String+Extensions.swift */; };
+		7F07E94036070DC2FD8EA21E /* Pods_Tesio_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EC44DA621D07DBBAD65DAE /* Pods_Tesio_App.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1110793721099587002F82FD /* ServersListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListTVC.swift; sourceTree = "<group>"; };
+		1129A4CC2108F17D006EB84F /* Tesio App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesio App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1129A4CF2108F17D006EB84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1129A4D12108F17D006EB84F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1129A4D42108F17D006EB84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1129A4D92108F17F006EB84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1129A4DB2108F17F006EB84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1129A4E22108F2CE006EB84F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "API Manager/APIManager.swift"; sourceTree = "<group>"; };
+		1129A4E42108FF3F006EB84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Assets.xcassets; sourceTree = "<group>"; };
+		112EEE4821090EE4008816CE /* TesioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TesioHelper.swift; path = Helper/TesioHelper.swift; sourceTree = "<group>"; };
+		112EEE4A210910F7008816CE /* TodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodoRouter.swift; path = "API Manager/TodoRouter.swift"; sourceTree = "<group>"; };
+		112EEE4D2109137B008816CE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		BB316F0BF05E8F45381FD574 /* Pods-Tesio App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesio App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tesio App/Pods-Tesio App.debug.xcconfig"; sourceTree = "<group>"; };
+		E1EC44DA621D07DBBAD65DAE /* Pods_Tesio_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tesio_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5877AE09062FC4D0E9C05A1 /* Pods-Tesio App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesio App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesio App/Pods-Tesio App.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1129A4C92108F17D006EB84F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F07E94036070DC2FD8EA21E /* Pods_Tesio_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1129A4C32108F17D006EB84F = {
+			isa = PBXGroup;
+			children = (
+				1129A4CE2108F17D006EB84F /* Tesio App */,
+				1129A4CD2108F17D006EB84F /* Products */,
+				2BD30BB7D8BCB6BE69EFE1D3 /* Pods */,
+				895B0C692B87863000F8DB06 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1129A4CD2108F17D006EB84F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1129A4CC2108F17D006EB84F /* Tesio App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1129A4CE2108F17D006EB84F /* Tesio App */ = {
+			isa = PBXGroup;
+			children = (
+				1129A4CF2108F17D006EB84F /* AppDelegate.swift */,
+				112EEE4C21091355008816CE /* Extensions */,
+				112EEE4721090EAE008816CE /* Helper */,
+				1129A4E12108F23D006EB84F /* API Manager */,
+				112EEE4621090C44008816CE /* Controllers */,
+				1129A4D32108F17D006EB84F /* Main.storyboard */,
+				1129A4E42108FF3F006EB84F /* Assets.xcassets */,
+				1129A4D82108F17F006EB84F /* LaunchScreen.storyboard */,
+				1129A4DB2108F17F006EB84F /* Info.plist */,
+			);
+			path = "Tesio App";
+			sourceTree = "<group>";
+		};
+		1129A4E12108F23D006EB84F /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1129A4E22108F2CE006EB84F /* APIManager.swift */,
+				112EEE4A210910F7008816CE /* TodoRouter.swift */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		112EEE4621090C44008816CE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1129A4D12108F17D006EB84F /* LoginVC.swift */,
+				1110793721099587002F82FD /* ServersListTVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		112EEE4721090EAE008816CE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				112EEE4821090EE4008816CE /* TesioHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		112EEE4C21091355008816CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				112EEE4D2109137B008816CE /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BD30BB7D8BCB6BE69EFE1D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB316F0BF05E8F45381FD574 /* Pods-Tesio App.debug.xcconfig */,
+				E5877AE09062FC4D0E9C05A1 /* Pods-Tesio App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		895B0C692B87863000F8DB06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1EC44DA621D07DBBAD65DAE /* Pods_Tesio_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1129A4CB2108F17D006EB84F /* Tesio App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1129A4DE2108F17F006EB84F /* Build configuration list for PBXNativeTarget "Tesio App" */;
+			buildPhases = (
+				36A29CA0EA59B7BD8007B0F3 /* [CP] Check Pods Manifest.lock */,
+				1129A4C82108F17D006EB84F /* Sources */,
+				1129A4C92108F17D006EB84F /* Frameworks */,
+				1129A4CA2108F17D006EB84F /* Resources */,
+				0A14BE27403220A1258DDD69 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tesio App";
+			productName = "Tesio App";
+			productReference = 1129A4CC2108F17D006EB84F /* Tesio App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1129A4C42108F17D006EB84F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Eimantas Kudarauskas";
+				TargetAttributes = {
+					1129A4CB2108F17D006EB84F = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 1129A4C72108F17D006EB84F /* Build configuration list for PBXProject "Tesio App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1129A4C32108F17D006EB84F;
+			productRefGroup = 1129A4CD2108F17D006EB84F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1129A4CB2108F17D006EB84F /* Tesio App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1129A4CA2108F17D006EB84F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1129A4DA2108F17F006EB84F /* LaunchScreen.storyboard in Resources */,
+				1129A4E52108FF3F006EB84F /* Assets.xcassets in Resources */,
+				1129A4D52108F17D006EB84F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A14BE27403220A1258DDD69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tesio App/Pods-Tesio App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesio App/Pods-Tesio App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36A29CA0EA59B7BD8007B0F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tesio App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1129A4C82108F17D006EB84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112EEE4921090EE4008816CE /* TesioHelper.swift in Sources */,
+				112EEE4B210910F7008816CE /* TodoRouter.swift in Sources */,
+				1129A4E32108F2CE006EB84F /* APIManager.swift in Sources */,
+				1110793821099587002F82FD /* ServersListTVC.swift in Sources */,
+				1129A4D22108F17D006EB84F /* LoginVC.swift in Sources */,
+				112EEE4E2109137B008816CE /* String+Extensions.swift in Sources */,
+				1129A4D02108F17D006EB84F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1129A4D32108F17D006EB84F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1129A4D42108F17D006EB84F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1129A4D82108F17F006EB84F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1129A4D92108F17F006EB84F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1129A4DC2108F17F006EB84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1129A4DD2108F17F006EB84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1129A4DF2108F17F006EB84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB316F0BF05E8F45381FD574 /* Pods-Tesio App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5LF9UZEXQ;
+				INFOPLIST_FILE = "Tesio App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tesio.task.Tesio-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1129A4E02108F17F006EB84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5877AE09062FC4D0E9C05A1 /* Pods-Tesio App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5LF9UZEXQ;
+				INFOPLIST_FILE = "Tesio App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tesio.task.Tesio-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1129A4C72108F17D006EB84F /* Build configuration list for PBXProject "Tesio App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1129A4DC2108F17F006EB84F /* Debug */,
+				1129A4DD2108F17F006EB84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1129A4DE2108F17F006EB84F /* Build configuration list for PBXNativeTarget "Tesio App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1129A4DF2108F17F006EB84F /* Debug */,
+				1129A4E02108F17F006EB84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1129A4C42108F17D006EB84F /* Project object */;
+}

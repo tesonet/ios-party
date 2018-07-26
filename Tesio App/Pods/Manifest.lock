@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.7.2)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
+  - SwiftKeychainWrapper (3.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - NVActivityIndicatorView
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - NVActivityIndicatorView
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+
+PODFILE CHECKSUM: 9fa4eb6fb5cd2cb330dd74fc57a4fc9c94acae8b
+
+COCOAPODS: 1.5.3
