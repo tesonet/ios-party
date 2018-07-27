@@ -42,7 +42,7 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType {
     private var loginTokenSubject = PublishSubject<TestioToken>()
     
     var loginToken: Observable<TestioToken> {
-        return .empty()
+        return loginTokenSubject.asObservable()
     }
     
     //MARK: - LoginViewModelType

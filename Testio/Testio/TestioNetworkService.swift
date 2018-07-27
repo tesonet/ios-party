@@ -21,6 +21,8 @@ private enum TestioEndpoint: String {
 }
 
 protocol ServersRetrievingType {
+
+    func servers(withToken: TestioToken, handler: @escaping AuthenticationHandler)
     
 }
 
@@ -80,6 +82,10 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
         }
         
         authenticationTask.resume()
+    }
+    
+    func servers(withToken: TestioToken, handler: @escaping AuthenticationHandler) {
+        
     }
     
 }

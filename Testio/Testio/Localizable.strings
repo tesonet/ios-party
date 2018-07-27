@@ -6,6 +6,8 @@
   Copyright © 2018 Mindaugas Jucius. All rights reserved.
 */
 
+// Login screen
+
 "USERNAME_PLACEHOLDER" = "Username";
 "PASSWORD_PLACEHOLDER" = "Password";
 
@@ -15,3 +17,7 @@
 "ALERT_UNAUTHORIZED" = "Unauthorized access.";
 "ALERT_UNKNOWN" = "Unknown issue occured.";
 "ALERT_ACKNOWLEDGE" = "Got it";
+
+// Loading screen
+
+"LOADING_STATUS" = "Fetching the list...";
