@@ -9,13 +9,7 @@
 import UIKit
 import RxSwift
 
-class LoadingViewController: UIViewController, BindableType {
-
-    typealias ViewModelType = LoadingViewModelType
-
-    var viewModel: LoadingViewModelType
-    
-    private let disposeBag = DisposeBag()
+class LoadingViewController: UIViewController {
     
     @IBOutlet private var loadingTextLabel: UILabel!
     @IBOutlet private var loadingIndicatorImageView: UIImageView!
@@ -23,44 +17,46 @@ class LoadingViewController: UIViewController, BindableType {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
-    init(viewModel: ViewModelType) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+
+    var loadingStatusText: String? {
+        set {
+            loadingTextLabel.text = newValue
+        }
+        get {
+            return loadingTextLabel.text
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAppearance()
+        loadingTextLabel.textColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startIndicatorAnimation()
     }
 
-    func bindViewModel() {
-        rx.methodInvoked(#selector(UIViewController.viewDidAppear(_:)))
-            .take(1)
-            .flatMap { _ in
-                self.viewModel.load.execute(())
-            }
-            .subscribe()
-            .disposed(by: disposeBag)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopIndicatorAnimation()
     }
 
 }
 
 extension LoadingViewController {
     
-    private func setupAppearance() {
-        loadingTextLabel.textColor = .white
-        loadingTextLabel.text = NSLocalizedString("LOADING_STATUS", comment: "")
+    private func startIndicatorAnimation() {
         
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotation.toValue = -(Double.pi * 2)
         rotation.duration = 3
         rotation.repeatCount = .infinity
         loadingIndicatorImageView.layer.add(rotation, forKey: nil)
+    }
+    
+    private func stopIndicatorAnimation() {
+        loadingIndicatorImageView.layer.removeAllAnimations()
     }
     
 }
