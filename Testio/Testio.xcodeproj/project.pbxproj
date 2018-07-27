@@ -23,6 +23,8 @@
 		033C90D0210AF68200C9C0BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 033C90CF210AF68200C9C0BF /* Localizable.strings */; };
 		033C90D2210AFB0700C9C0BF /* TestioUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */; };
 		03AB04A8210B0BEA0030F9D1 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */; };
+		0FAE61829C405A30D81AF4EE /* Pods_Testio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0C89648A297B6718535E7B /* Pods_Testio.framework */; };
+		5ED4629093F4262A4D625435 /* Pods_TestioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77E54F8220EA837131700CE /* Pods_TestioTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A6506068624A087A3BBCF8 /* Pods-Testio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Testio/Pods-Testio.release.xcconfig"; sourceTree = "<group>"; };
 		033C90992109EB4600C9C0BF /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033C909C2109EB4600C9C0BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		033C90A32109EB4700C9C0BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +59,11 @@
 		033C90CF210AF68200C9C0BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioUIConstants.swift; sourceTree = "<group>"; };
 		03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		2532897CBAEB0592729F6347 /* Pods-TestioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestioTests/Pods-TestioTests.release.xcconfig"; sourceTree = "<group>"; };
+		8864E48ADB39D0930799CEA2 /* Pods-Testio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Testio/Pods-Testio.debug.xcconfig"; sourceTree = "<group>"; };
+		AC0C89648A297B6718535E7B /* Pods_Testio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Testio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E77E54F8220EA837131700CE /* Pods_TestioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F787B62FAA29D4C8267B9AF2 /* Pods-TestioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestioTests/Pods-TestioTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FAE61829C405A30D81AF4EE /* Pods_Testio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED4629093F4262A4D625435 /* Pods_TestioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +92,8 @@
 				033C909B2109EB4600C9C0BF /* Testio */,
 				033C90B02109EB4700C9C0BF /* TestioTests */,
 				033C909A2109EB4600C9C0BF /* Products */,
+				51071163B4CB45868130C9B6 /* Pods */,
+				387FA796AC775225A61F89A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +146,26 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		387FA796AC775225A61F89A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC0C89648A297B6718535E7B /* Pods_Testio.framework */,
+				E77E54F8220EA837131700CE /* Pods_TestioTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51071163B4CB45868130C9B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8864E48ADB39D0930799CEA2 /* Pods-Testio.debug.xcconfig */,
+				00A6506068624A087A3BBCF8 /* Pods-Testio.release.xcconfig */,
+				F787B62FAA29D4C8267B9AF2 /* Pods-TestioTests.debug.xcconfig */,
+				2532897CBAEB0592729F6347 /* Pods-TestioTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 033C90B62109EB4700C9C0BF /* Build configuration list for PBXNativeTarget "Testio" */;
 			buildPhases = (
+				B5AABA2B31DB1F9C5753D512 /* [CP] Check Pods Manifest.lock */,
 				033C90952109EB4600C9C0BF /* Sources */,
 				033C90962109EB4600C9C0BF /* Frameworks */,
 				033C90972109EB4600C9C0BF /* Resources */,
+				F30711C078224083C7148B80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 033C90B92109EB4700C9C0BF /* Build configuration list for PBXNativeTarget "TestioTests" */;
 			buildPhases = (
+				824DF2D3A3A2F3793FC8F455 /* [CP] Check Pods Manifest.lock */,
 				033C90A92109EB4700C9C0BF /* Sources */,
 				033C90AA2109EB4700C9C0BF /* Frameworks */,
 				033C90AB2109EB4700C9C0BF /* Resources */,
@@ -230,6 +265,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		824DF2D3A3A2F3793FC8F455 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5AABA2B31DB1F9C5753D512 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Testio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F30711C078224083C7148B80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Testio/Pods-Testio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Testio/Pods-Testio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		033C90952109EB4600C9C0BF /* Sources */ = {
@@ -396,6 +492,7 @@
 		};
 		033C90B72109EB4700C9C0BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8864E48ADB39D0930799CEA2 /* Pods-Testio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +511,7 @@
 		};
 		033C90B82109EB4700C9C0BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A6506068624A087A3BBCF8 /* Pods-Testio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -432,6 +530,7 @@
 		};
 		033C90BA2109EB4700C9C0BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F787B62FAA29D4C8267B9AF2 /* Pods-TestioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -453,6 +552,7 @@
 		};
 		033C90BB2109EB4700C9C0BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2532897CBAEB0592729F6347 /* Pods-TestioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
