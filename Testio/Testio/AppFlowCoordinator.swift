@@ -61,7 +61,8 @@ extension AppFlowCoordinator {
     }
     
     func loadingViewController(forToken token: TestioToken) -> LoadingViewController {
-        let loadingViewModel = LoadingViewModel(serverRetriever: networkService,
+        let loadingViewModel = LoadingViewModel(token: token,
+                                                serverRetriever: networkService,
                                                 promptCoordinator: self)
         let loadingViewController = LoadingViewController(viewModel: loadingViewModel)
         loadingViewController.setupForViewModel()

@@ -52,15 +52,24 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
         request.httpMethod = "POST"
         request.httpBody = encodedCredentials
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        performDataTask(withRequest: request, handler: handler)
+    }
+    
+    func servers(withToken: TestioToken, handler: @escaping AuthenticationHandler) {
+        let endpointString = String.init(format: TestioAPIURLStringFormat, TestioEndpoint.servers.rawValue)
         
+    }
+    
+    private func performDataTask<Type: Codable>(withRequest request: URLRequest, handler: @escaping (Result<Type, TestioError>) -> ()) {
         let session = URLSession(configuration: URLSessionConfiguration.default)
-        let authenticationTask = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             
             if let error = error {
                 handler(.failure(.unknown(error.localizedDescription)))
                 return
             }
-
+            
             guard let httpResponse = response as? HTTPURLResponse else {
                 handler(.failure(.unknown(nil)))
                 return
@@ -73,19 +82,15 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
             }
             
             guard let data = data,
-                let token = try? TestioToken.decode(fromData: data) else {
-                handler(.failure(.unknown(nil)))
-                return
+                let decodedType = try? Type.decode(fromData: data) else {
+                    handler(.failure(.unknown(nil)))
+                    return
             }
             
-            handler(.success(token))
+            handler(.success(decodedType))
         }
         
-        authenticationTask.resume()
-    }
-    
-    func servers(withToken: TestioToken, handler: @escaping AuthenticationHandler) {
-        
+        task.resume()
     }
     
 }

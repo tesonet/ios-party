@@ -13,11 +13,14 @@ class LoadingViewModel {
 
     private let serverRetriever: ServersRetrievingType
     private let promptCoordinator: PromptCoordinatingType
+    private let token: TestioToken
 
-    init(serverRetriever: ServersRetrievingType,
+    init(token: TestioToken,
+         serverRetriever: ServersRetrievingType,
          promptCoordinator: PromptCoordinatingType) {
         self.serverRetriever = serverRetriever
         self.promptCoordinator = promptCoordinator
+        self.token = token
     }
     
 }
