@@ -46,8 +46,7 @@ class AppFlowCoordinator: UINavigationController {
     }
     
     func startFlow() {
-        let loginViewModel = LoginViewModel(authorizationPerformer: networkService,
-                                            promptCoordinator: self)
+        let loginViewModel = LoginViewModel(authorizationPerformer: networkService)
         currentTaskPerformer = loginViewModel
         tokenProvider = loginViewModel
         

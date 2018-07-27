@@ -11,13 +11,6 @@ import RxSwift
 import RxCocoa
 import Action
 
-protocol ViewModelTaskPerformingType {
-
-    var errors: Observable<ActionError> { get }
-    var executing: Observable<Bool> { get }
-
-}
-
 protocol LoginViewModelType {
     
     var authorize: Action<Void, TestioToken> { get }
@@ -36,7 +29,6 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     private let disposeBag = DisposeBag()
     
     private let authorizationPerformer: AuthorizationPerformingType
-    private let promptCoordinator: PromptCoordinatingType
 
     //MARK: - ViewModelTaskPerformingType
     
@@ -72,11 +64,8 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
         return credentialsSubject.asObserver()
     }
     
-    init(authorizationPerformer: AuthorizationPerformingType,
-         promptCoordinator: PromptCoordinatingType) {
+    init(authorizationPerformer: AuthorizationPerformingType) {
         self.authorizationPerformer = authorizationPerformer
-        self.promptCoordinator = promptCoordinator
-        
         addActionHandlers()
     }
     

@@ -22,19 +22,32 @@ protocol ServersResultType {
     
 }
 
-class ServersViewModel: LoadingViewModelType, ServersResultType {
+class ServersViewModel: LoadingViewModelType, ServersResultType, ViewModelTaskPerformingType {
     
     private let serverRetriever: ServersRetrievingType
-    private let promptCoordinator: PromptCoordinatingType
     private let token: TestioToken
     
     private let disposeBag = DisposeBag()
 
+    //MARK: - ViewModelTaskPerformingType
+    
+    var errors: Observable<ActionError> {
+        return load.errors
+    }
+    
+    var executing: Observable<Bool> {
+        return load.executing
+    }
+    
+    //MARK: - ServersResultType
+    
     private let serversSubject = PublishSubject<[TestioServer]>()
     
     var servers: Observable<[TestioServer]> {
         return serversSubject.asObservable()
     }
+    
+    //MARK: - LoadingViewModelType
     
     lazy var load: Action<Void, [TestioServer]> = {
         return Action(workFactory: { [unowned self] _ in
@@ -43,27 +56,14 @@ class ServersViewModel: LoadingViewModelType, ServersResultType {
     }()
     
     init(token: TestioToken,
-         serverRetriever: ServersRetrievingType,
-         promptCoordinator: PromptCoordinatingType) {
+         serverRetriever: ServersRetrievingType) {
         self.serverRetriever = serverRetriever
-        self.promptCoordinator = promptCoordinator
         self.token = token
 
         addActionHandlers()
     }
     
     private func addActionHandlers() {
-        load.errors
-            .map { actionError -> Error in
-                if case ActionError.underlyingError(let error) = actionError {
-                    return error
-                }
-                return actionError
-            }
-            .flatMap { self.promptCoordinator.prompt(forError: $0) }
-            .subscribe()
-            .disposed(by: disposeBag)
-        
         load.elements
             .bind(to: serversSubject.asObserver())
             .disposed(by: disposeBag)
