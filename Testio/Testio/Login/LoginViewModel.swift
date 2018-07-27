@@ -14,6 +14,10 @@ class LoginViewModel {
     
     init(authorizationPerformer: AuthorizationPerformingType) {
         self.authorizationPerformer = authorizationPerformer
+        
+        authorizationPerformer.authenticate(user: .testUser) { _ in
+            
+        }
     }
     
 }

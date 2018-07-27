@@ -21,6 +21,7 @@ class AppFlowCoordinator: UINavigationController {
     func startFlow() {
         let loginViewModel = LoginViewModel(authorizationPerformer: networkService)
         let loginViewController = LoginViewController(viewModel: loginViewModel)
+        loginViewController.bindViewModel()
         setViewControllers([loginViewController], animated: false)
     }
     

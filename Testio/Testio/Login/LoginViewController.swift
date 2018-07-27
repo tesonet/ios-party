@@ -14,6 +14,10 @@ final class LoginViewController: UIViewController, BindableType {
     
     var viewModel: ViewModelType
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     init(viewModel: ViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -32,4 +36,12 @@ final class LoginViewController: UIViewController, BindableType {
         
     }
 
+}
+
+extension LoginViewController {
+    
+    private func setupAppearance() {
+        
+    }
+    
 }
