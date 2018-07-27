@@ -8,12 +8,16 @@
 
 import UIKit
 import Action
+import RxSwift
+import RxOptional
 
 final class LoginViewController: UIViewController, BindableType {
     
     typealias ViewModelType = LoginViewModelType
     
     var viewModel: ViewModelType
+    
+    private var disposeBag = DisposeBag()
     
     @IBOutlet private var usernameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
@@ -40,6 +44,12 @@ final class LoginViewController: UIViewController, BindableType {
     
     func bindViewModel() {
         logInButton.rx.action = viewModel.authorize
+
+        let credentialsObservable = Observable.combineLatest(usernameTextField.rx.text.filterNil(),
+                                                             passwordTextField.rx.text.filterNil())
+        credentialsObservable
+            .bind(to: viewModel.credentialsObserver)
+            .disposed(by: disposeBag)
     }
 
 }
@@ -47,19 +57,27 @@ final class LoginViewController: UIViewController, BindableType {
 extension LoginViewController {
     
     private func setupAppearance() {
+        setupTextFields()
+        setupButton()
+    }
+    
+    private func setupTextFields() {
         let usernamePlaceholder = NSLocalizedString("USERNAME_PLACEHOLDER", comment: "")
         usernameTextField.placeholder = usernamePlaceholder
+        usernameTextField.clearButtonMode = .whileEditing
+        image(#imageLiteral(resourceName: "ico-username"), forTextField: usernameTextField)
         
-        let usernameImage = #imageLiteral(resourceName: "ico-username")
-        image(usernameImage, forTextField: usernameTextField)
-
         let passwordPlaceholder = NSLocalizedString("PASSWORD_PLACEHOLDER", comment: "")
         passwordTextField.placeholder = passwordPlaceholder
-        setupButton()
+        passwordTextField.clearButtonMode = .whileEditing
+        passwordTextField.textContentType = .password
+        passwordTextField.isSecureTextEntry = true
+        image(#imageLiteral(resourceName: "ico-lock"), forTextField: passwordTextField)
         
-        let passwordImage = #imageLiteral(resourceName: "ico-lock")
-        image(passwordImage, forTextField: passwordTextField)
-        
+        #if DEBUG
+            usernameTextField.text = TestioUser.testUser.username
+            passwordTextField.text = TestioUser.testUser.password
+        #endif
     }
     
     private func image(_ image: UIImage, forTextField textField: UITextField) {
