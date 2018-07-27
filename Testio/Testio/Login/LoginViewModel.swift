@@ -8,20 +8,36 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 import Action
 
 protocol LoginViewModelType {
     
     var authorize: CocoaAction { get }
+    var credentialsObserver: AnyObserver<(String, String)> { get }
     
 }
 
 class LoginViewModel: LoginViewModelType {
     
+   private var areCredentialsFilled: Observable<Bool> {
+        return credentialsSubject
+            .map { credentials in
+                !credentials.0.trimmingCharacters(in: .whitespaces).isEmpty &&
+                !credentials.1.trimmingCharacters(in: .whitespaces).isEmpty
+            }
+    }
+    
     var authorize: CocoaAction {
-        return CocoaAction(enabledIf: .just(true), workFactory: { [unowned self] in
+        return CocoaAction(enabledIf: areCredentialsFilled, workFactory: { [unowned self] in
             return self.authorizationObservable()
         })
+    }
+    
+    var credentialsSubject = ReplaySubject<(String, String)>.create(bufferSize: 1)
+    
+    var credentialsObserver: AnyObserver<(String, String)> {
+        return credentialsSubject.asObserver()
     }
     
     private let disposeBag = DisposeBag()
@@ -36,8 +52,21 @@ class LoginViewModel: LoginViewModelType {
     }
     
     private func authorizationObservable() -> Observable<Void> {
+        return credentialsSubject
+            .map { TestioUser.init(username: $0, password: $1) }
+            .flatMap { [unowned self] user in
+                return self.authorize(user: user)
+            }
+            .map { _ in }
+            .catchError { [unowned self] error in
+                return self.prompt(forError: error)
+            }
+            .take(1)
+    }
+    
+    private func authorize(user: TestioUser) -> Observable<TestioToken> {
         return Observable<TestioToken>.create { [unowned self] observer -> Disposable in
-            self.authorizationPerformer.authenticate(user: .testUser) { result in
+            self.authorizationPerformer.authorize(user: user) { result in
                 switch result {
                 case .failure(let error):
                     observer.onError(error)
@@ -48,11 +77,6 @@ class LoginViewModel: LoginViewModelType {
             }
             return Disposables.create()
         }
-        .map { _ in }
-        .catchError { [unowned self] error in
-            return self.prompt(forError: error)
-        }
-        .take(1)
     }
     
     private func prompt(forError error: Error) -> Observable<()> {

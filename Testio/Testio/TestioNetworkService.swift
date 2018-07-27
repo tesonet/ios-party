@@ -28,7 +28,7 @@ typealias AuthenticationHandler = (Result<TestioToken, TestioError>) -> ()
 
 protocol AuthorizationPerformingType {
 
-    func authenticate(user: TestioUser, handler: @escaping AuthenticationHandler)
+    func authorize(user: TestioUser, handler: @escaping AuthenticationHandler)
     
 }
 
@@ -36,7 +36,7 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
 
     private var acceptableStatusCodes: Range<Int> { return 200..<300 }
     
-    func authenticate(user: TestioUser, handler: @escaping AuthenticationHandler) {
+    func authorize(user: TestioUser, handler: @escaping AuthenticationHandler) {
 
         let endpointString = String.init(format: TestioAPIURLStringFormat, TestioEndpoint.tokens.rawValue)
         
