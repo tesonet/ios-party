@@ -20,17 +20,18 @@ private enum TestioEndpoint: String {
     case servers
 }
 
+typealias AuthorizationHandler = (Result<TestioToken, TestioError>) -> ()
+typealias ServerRetrievalHandler = (Result<[TestioServer], TestioError>) -> ()
+
 protocol ServersRetrievingType {
 
-    func servers(withToken: TestioToken, handler: @escaping AuthenticationHandler)
+    func servers(withToken token: TestioToken, handler: @escaping ServerRetrievalHandler)
     
 }
 
-typealias AuthenticationHandler = (Result<TestioToken, TestioError>) -> ()
-
 protocol AuthorizationPerformingType {
 
-    func authorize(user: TestioUser, handler: @escaping AuthenticationHandler)
+    func authorize(user: TestioUser, handler: @escaping AuthorizationHandler)
     
 }
 
@@ -38,8 +39,7 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
 
     private var acceptableStatusCodes: Range<Int> { return 200..<300 }
     
-    func authorize(user: TestioUser, handler: @escaping AuthenticationHandler) {
-
+    func authorize(user: TestioUser, handler: @escaping AuthorizationHandler) {
         let endpointString = String.init(format: TestioAPIURLStringFormat, TestioEndpoint.tokens.rawValue)
         
         guard let encodedCredentials = try? user.encode(),
@@ -50,15 +50,26 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
         
         var request = URLRequest(url: endpointURL)
         request.httpMethod = "POST"
-        request.httpBody = encodedCredentials
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = encodedCredentials
 
         performDataTask(withRequest: request, handler: handler)
     }
     
-    func servers(withToken: TestioToken, handler: @escaping AuthenticationHandler) {
+    func servers(withToken token: TestioToken, handler: @escaping ServerRetrievalHandler) {
         let endpointString = String.init(format: TestioAPIURLStringFormat, TestioEndpoint.servers.rawValue)
         
+        guard let endpointURL = URL(string: endpointString) else {
+            handler(.failure(.unknown(nil)))
+            return
+        }
+
+        var request = URLRequest(url: endpointURL)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token.token)", forHTTPHeaderField: "Authorization")
+        
+        performDataTask(withRequest: request, handler: handler)
     }
     
     private func performDataTask<Type: Codable>(withRequest request: URLRequest, handler: @escaping (Result<Type, TestioError>) -> ()) {
@@ -80,7 +91,7 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
                 handler(.failure(customError))
                 return
             }
-            
+
             guard let data = data,
                 let decodedType = try? Type.decode(fromData: data) else {
                     handler(.failure(.unknown(nil)))

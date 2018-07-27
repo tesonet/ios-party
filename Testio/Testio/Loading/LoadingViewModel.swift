@@ -21,6 +21,15 @@ class LoadingViewModel {
         self.serverRetriever = serverRetriever
         self.promptCoordinator = promptCoordinator
         self.token = token
+        
+        serverRetriever.servers(withToken: token) { result in
+            switch result {
+            case .success(let servers):
+                print(servers)
+            case .failure(let error):
+                print("error")
+            }
+        }
     }
     
 }
