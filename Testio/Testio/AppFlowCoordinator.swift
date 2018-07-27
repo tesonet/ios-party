@@ -8,20 +8,34 @@
 
 import UIKit
 import RxSwift
+import Action
 
 protocol PromptCoordinatingType {
     
     func promptFor<Action : CustomStringConvertible>(_ message: String, cancelAction: Action, actions: [Action]?) -> Observable<Action>
-    func prompt(forError error: Error) -> Observable<()>
+    func prompt(forError error: Error) -> Observable <String>
 
 }
 
 class AppFlowCoordinator: UINavigationController {
 
     private let networkService = TestioNetworkService()
+    
     private var tokenProvider: LoginTokenProviding?
     
+    private var currentTaskPerformer: ViewModelTaskPerformingType? {
+        didSet {
+            addTaskPerformerObservables()
+        }
+    }
+    
     private let disposeBag = DisposeBag()
+    
+    lazy var loadingViewController: LoadingViewController = {
+        let viewController = LoadingViewController()
+        viewController.loadViewIfNeeded()
+        return viewController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +46,50 @@ class AppFlowCoordinator: UINavigationController {
     }
     
     func startFlow() {
-        setViewControllers([loginViewController()], animated: false)
-        observeLoginTokenProvider()
+        let loginViewModel = LoginViewModel(authorizationPerformer: networkService,
+                                            promptCoordinator: self)
+        currentTaskPerformer = loginViewModel
+        tokenProvider = loginViewModel
+        
+        let loginViewController = LoginViewController(viewModel: loginViewModel)
+        loginViewController.setupForViewModel()
+        
+        setViewControllers([loginViewController], animated: false)
+        //observeLoginTokenProvider()
     }
 
     private func observeLoginTokenProvider() {
+        //NSLocalizedString("LOADING_STATUS", comment: "")
         tokenProvider?.loginToken
             .observeOn(MainScheduler.instance)
             .do(onNext: { [unowned self ] token in
-                let loadingViewController = self.loadingViewController(forToken: token)
-                self.setViewControllers([loadingViewController], animated: true)
+                //let loadingViewController = self.loadingViewController(forToken: token)
+                //self.setViewControllers([loadingViewController], animated: true)
+            })
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+    
+    private func addTaskPerformerObservables() {
+        currentTaskPerformer?.errors
+            .map { actionError -> Error in
+                if case ActionError.underlyingError(let error) = actionError {
+                    return error
+                }
+                return actionError
+            }
+            .flatMap { self.prompt(forError: $0) }
+            .do(onNext: { [unowned self] _ in
+                self.popViewController(animated: true)
+            })
+            .subscribe()
+            .disposed(by: disposeBag)
+        
+        currentTaskPerformer?.executing
+            .filter { $0 }
+            .do(onNext: { [unowned self] _ in
+                self.loadingViewController.loadingStatusText = "yeyeyeye"
+                self.pushViewController(self.loadingViewController, animated: true)
             })
             .subscribe()
             .disposed(by: disposeBag)
@@ -49,33 +97,11 @@ class AppFlowCoordinator: UINavigationController {
     
 }
 
-extension AppFlowCoordinator {
-    
-    func loginViewController() -> LoginViewController {
-        let loginViewModel = LoginViewModel(authorizationPerformer: networkService,
-                                            promptCoordinator: self)
-        tokenProvider = loginViewModel
-        let loginViewController = LoginViewController(viewModel: loginViewModel)
-        loginViewController.setupForViewModel()
-        return loginViewController
-    }
-    
-    func loadingViewController(forToken token: TestioToken) -> LoadingViewController {
-        let loadingViewModel = LoadingViewModel(token: token,
-                                                serverRetriever: networkService,
-                                                promptCoordinator: self)
-        let loadingViewController = LoadingViewController(viewModel: loadingViewModel)
-        loadingViewController.setupForViewModel()
-        return loadingViewController
-    }
-    
-}
-
 extension AppFlowCoordinator: PromptCoordinatingType {
     
-    func prompt(forError error: Error) -> Observable<()> {
+    func prompt(forError error: Error) -> Observable<String> {
         let cancelTitle = NSLocalizedString("ALERT_ACKNOWLEDGE", comment: "")
-        return promptFor(error.localizedDescription, cancelAction: cancelTitle, actions: nil).map { _ in }
+        return promptFor(error.localizedDescription, cancelAction: cancelTitle, actions: nil)
     }
     
     func promptFor<Action : CustomStringConvertible>(_ message: String, cancelAction: Action, actions: [Action]?) -> Observable<Action> {

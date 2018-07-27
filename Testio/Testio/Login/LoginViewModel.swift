@@ -11,6 +11,13 @@ import RxSwift
 import RxCocoa
 import Action
 
+protocol ViewModelTaskPerformingType {
+
+    var errors: Observable<ActionError> { get }
+    var executing: Observable<Bool> { get }
+
+}
+
 protocol LoginViewModelType {
     
     var authorize: Action<Void, TestioToken> { get }
@@ -24,13 +31,23 @@ protocol LoginTokenProviding {
 
 }
 
-class LoginViewModel: LoginTokenProviding, LoginViewModelType {
-    
+class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerformingType {
+
     private let disposeBag = DisposeBag()
     
     private let authorizationPerformer: AuthorizationPerformingType
     private let promptCoordinator: PromptCoordinatingType
 
+    //MARK: - ViewModelTaskPerformingType
+    
+    var errors: Observable<ActionError> {
+        return authorize.errors
+    }
+    
+    var executing: Observable<Bool> {
+        return authorize.executing
+    }
+    
     //MARK: - LoginTokenProviding
     
     private var loginTokenSubject = PublishSubject<TestioToken>()
@@ -64,17 +81,6 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType {
     }
     
     private func addActionHandlers() {
-        authorize.errors
-            .map { actionError -> Error in
-                if case ActionError.underlyingError(let error) = actionError {
-                    return error
-                }
-                return actionError
-            }
-            .flatMap { self.promptCoordinator.prompt(forError: $0) }
-            .subscribe()
-            .disposed(by: disposeBag)
-        
         authorize.elements
             .bind(to: loginTokenSubject.asObserver())
             .disposed(by: disposeBag)
@@ -87,7 +93,7 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType {
             .map { credentials in
                 !credentials.0.trimmingCharacters(in: .whitespaces).isEmpty &&
                 !credentials.1.trimmingCharacters(in: .whitespaces).isEmpty
-        }
+            }
     }
     
     private func authorize(user: TestioUser) -> Observable<TestioToken> {

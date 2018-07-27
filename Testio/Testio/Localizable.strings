@@ -20,4 +20,5 @@
 
 // Loading screen
 
-"LOADING_STATUS" = "Fetching the list...";
+"LOADING_AUTHENTICATE" = "Authenticating...";
+"LOADING_RETRIEVING_SERVERS" = "Fetching the list...";
