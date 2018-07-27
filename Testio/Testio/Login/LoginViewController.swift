@@ -43,7 +43,10 @@ final class LoginViewController: UIViewController, BindableType {
     }
     
     func bindViewModel() {
-        logInButton.rx.action = viewModel.authorize
+        logInButton.rx.tap.asObservable()
+            .flatMap { self.viewModel.authorize.execute(()) }
+            .subscribe()
+            .disposed(by: disposeBag)
 
         let credentialsObservable = Observable.combineLatest(usernameTextField.rx.text.filterNil(),
                                                              passwordTextField.rx.text.filterNil())
