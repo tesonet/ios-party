@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 
 class LoadingViewController: UIViewController, BindableType {
 
-    typealias ViewModelType = LoadingViewModel
+    typealias ViewModelType = LoadingViewModelType
 
-    var viewModel: LoadingViewModel
+    var viewModel: LoadingViewModelType
+    
+    private let disposeBag = DisposeBag()
     
     @IBOutlet private var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet private var loadingTextLabel: UILabel!
@@ -36,7 +39,14 @@ class LoadingViewController: UIViewController, BindableType {
     }
 
     func bindViewModel() {
-        
+        rx.methodInvoked(#selector(UIViewController.viewDidAppear(_:)))
+            .take(1)
+            .debug("hip", trimOutput: true)
+            .flatMap { _ in
+                self.viewModel.load.execute(())
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
     }
 
 }
