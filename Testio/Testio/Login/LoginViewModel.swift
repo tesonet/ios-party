@@ -32,6 +32,8 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
 
     //MARK: - ViewModelTaskPerformingType
     
+    var taskType: TaskType = .authentication
+    
     var errors: Observable<ActionError> {
         return authorize.errors
     }
@@ -53,6 +55,7 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     lazy var authorize: Action<Void, TestioToken> = {
         return Action(enabledIf: areCredentialsFilled, workFactory: { [unowned self] in
             self.credentialsSubject
+                .delay(0.5, scheduler: MainScheduler.instance)
                 .map { TestioUser.init(username: $0, password: $1) }
                 .flatMap { self.authorize(user: $0) }
         })

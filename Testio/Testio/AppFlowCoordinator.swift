@@ -22,6 +22,7 @@ class AppFlowCoordinator: UINavigationController {
     private let networkService = TestioNetworkService()
     
     private var tokenProvider: LoginTokenProviding?
+    private var serverResultsProvider: ServersResultProviding?
     
     private var currentTaskPerformer: ViewModelTaskPerformingType? {
         didSet {
@@ -46,28 +47,41 @@ class AppFlowCoordinator: UINavigationController {
     }
     
     func startFlow() {
+        setViewControllers([loginStack()], animated: false)
+        observeLoginTokenProvider()
+    }
+
+    private func observeLoginTokenProvider() {
+        tokenProvider?.loginToken
+            .flatMap { [unowned self] token -> Observable<[TestioServer]> in
+                let serversViewModel = self.serversViewModel(withToken: token)
+                return serversViewModel.load.execute(())
+            }
+            .take(1)
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+    
+    private func loginStack() -> LoginViewController {
         let loginViewModel = LoginViewModel(authorizationPerformer: networkService)
         currentTaskPerformer = loginViewModel
         tokenProvider = loginViewModel
         
         let loginViewController = LoginViewController(viewModel: loginViewModel)
         loginViewController.setupForViewModel()
-        
-        setViewControllers([loginViewController], animated: false)
-        //observeLoginTokenProvider()
+        return loginViewController
     }
+    
+    private func serversViewModel(withToken token: TestioToken) -> ServersViewModel {
+        let serversViewModel = ServersViewModel(token: token, serverRetriever: networkService)
+        currentTaskPerformer = serversViewModel
+        serverResultsProvider = serversViewModel
+        return serversViewModel
+    }
+    
+}
 
-    private func observeLoginTokenProvider() {
-        //NSLocalizedString("LOADING_STATUS", comment: "")
-        tokenProvider?.loginToken
-            .observeOn(MainScheduler.instance)
-            .do(onNext: { [unowned self ] token in
-                //let loadingViewController = self.loadingViewController(forToken: token)
-                //self.setViewControllers([loadingViewController], animated: true)
-            })
-            .subscribe()
-            .disposed(by: disposeBag)
-    }
+extension AppFlowCoordinator {
     
     private func addTaskPerformerObservables() {
         currentTaskPerformer?.errors
@@ -85,15 +99,26 @@ class AppFlowCoordinator: UINavigationController {
             .disposed(by: disposeBag)
         
         currentTaskPerformer?.executing
+            .observeOn(MainScheduler.instance)
             .filter { $0 }
-            .do(onNext: { [unowned self] _ in
-                self.loadingViewController.loadingStatusText = "yeyeyeye"
-                self.pushViewController(self.loadingViewController, animated: true)
+            .map { [unowned self] _ in self.currentTaskPerformer?.taskType }
+            .do(onNext: { [unowned self] taskType in
+                self.pushLoadingViewController(withMessage: taskType?.description)
             })
             .subscribe()
             .disposed(by: disposeBag)
     }
     
+    private func pushLoadingViewController(withMessage message: String?) {
+        loadingViewController.loadingStatusText = message
+        
+        guard loadingViewController.parent == nil else {
+            return
+        }
+        
+        self.pushViewController(loadingViewController, animated: true)
+    }
+
 }
 
 extension AppFlowCoordinator: PromptCoordinatingType {
@@ -105,8 +130,10 @@ extension AppFlowCoordinator: PromptCoordinatingType {
     
     func promptFor<Action : CustomStringConvertible>(_ message: String, cancelAction: Action, actions: [Action]?) -> Observable<Action> {
         return Observable.create { [unowned self] observer in
+            
             let alertTitle = NSLocalizedString("ALERT", comment: "")
             let alertView = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
+            
             alertView.addAction(UIAlertAction(title: cancelAction.description, style: .cancel) { _ in
                 observer.on(.next(cancelAction))
             })

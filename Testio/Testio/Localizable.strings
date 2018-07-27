@@ -20,5 +20,5 @@
 
 // Loading screen
 
-"LOADING_AUTHENTICATE" = "Authenticating...";
-"LOADING_RETRIEVING_SERVERS" = "Fetching the list...";
+"TASK_AUTHENTICATION" = "Authenticating...";
+"TASK_RETRIEVING_SERVERS" = "Fetching the list...";

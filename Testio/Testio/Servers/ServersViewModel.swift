@@ -16,13 +16,13 @@ protocol LoadingViewModelType {
     
 }
 
-protocol ServersResultType {
+protocol ServersResultProviding {
     
     var servers: Observable<[TestioServer]> { get }
     
 }
 
-class ServersViewModel: LoadingViewModelType, ServersResultType, ViewModelTaskPerformingType {
+class ServersViewModel: LoadingViewModelType, ServersResultProviding, ViewModelTaskPerformingType {
     
     private let serverRetriever: ServersRetrievingType
     private let token: TestioToken
@@ -30,6 +30,8 @@ class ServersViewModel: LoadingViewModelType, ServersResultType, ViewModelTaskPe
     private let disposeBag = DisposeBag()
 
     //MARK: - ViewModelTaskPerformingType
+    
+    var taskType: TaskType = .serverRetrieval
     
     var errors: Observable<ActionError> {
         return load.errors
@@ -55,11 +57,9 @@ class ServersViewModel: LoadingViewModelType, ServersResultType, ViewModelTaskPe
         })
     }()
     
-    init(token: TestioToken,
-         serverRetriever: ServersRetrievingType) {
+    init(token: TestioToken, serverRetriever: ServersRetrievingType) {
         self.serverRetriever = serverRetriever
         self.token = token
-
         addActionHandlers()
     }
     
