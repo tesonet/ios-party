@@ -1,5 +1,5 @@
 //
-//  LoadingViewModel.swift
+//  ServersViewModel.swift
 //  Testio
 //
 //  Created by Mindaugas on 27/07/2018.
@@ -22,7 +22,7 @@ protocol ServersResultType {
     
 }
 
-class LoadingViewModel: LoadingViewModelType, ServersResultType {
+class ServersViewModel: LoadingViewModelType, ServersResultType {
     
     private let serverRetriever: ServersRetrievingType
     private let promptCoordinator: PromptCoordinatingType
