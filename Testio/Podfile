@@ -6,7 +6,9 @@ target 'Testio' do
   use_frameworks!
   
   pod 'RxSwift'
+  pod 'RxOptional'
   pod 'Action'
+
 
   # Pods for Testio
 
