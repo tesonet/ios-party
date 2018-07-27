@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Testio
+
+  Created by Mindaugas on 27/07/2018.
+  Copyright © 2018 Mindaugas Jucius. All rights reserved.
+*/
+
+"USERNAME_PLACEHOLDER" = "Username";
+"PASSWORD_PLACEHOLDER" = "Password";
+
+"PERFORM_LOG_IN" = "Log In";

@@ -20,6 +20,9 @@
 		033C90C9210A172800C9C0BF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033C90C7210A172800C9C0BF /* LoginViewController.xib */; };
 		033C90CB210AE27000C9C0BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90CA210AE27000C9C0BF /* LoginViewModel.swift */; };
 		033C90CE210AE58E00C9C0BF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90CD210AE58E00C9C0BF /* BindableType.swift */; };
+		033C90D0210AF68200C9C0BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 033C90CF210AF68200C9C0BF /* Localizable.strings */; };
+		033C90D2210AFB0700C9C0BF /* TestioUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */; };
+		03AB04A8210B0BEA0030F9D1 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		033C90C7210A172800C9C0BF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		033C90CA210AE27000C9C0BF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		033C90CD210AE58E00C9C0BF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		033C90CF210AF68200C9C0BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioUIConstants.swift; sourceTree = "<group>"; };
+		03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				033C90C4210A161B00C9C0BF /* AppFlowCoordinator.swift */,
 				033C90CC210AE27B00C9C0BF /* Login */,
 				033C90CD210AE58E00C9C0BF /* BindableType.swift */,
+				033C90CF210AF68200C9C0BF /* Localizable.strings */,
+				033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */,
+				03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */,
 			);
 			path = Testio;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				033C90A72109EB4700C9C0BF /* LaunchScreen.storyboard in Resources */,
+				033C90D0210AF68200C9C0BF /* Localizable.strings in Resources */,
 				033C90A42109EB4700C9C0BF /* Assets.xcassets in Resources */,
 				033C90C9210A172800C9C0BF /* LoginViewController.xib in Resources */,
 			);
@@ -229,8 +239,10 @@
 				033C90C8210A172800C9C0BF /* LoginViewController.swift in Sources */,
 				033C90CE210AE58E00C9C0BF /* BindableType.swift in Sources */,
 				033C90C3210A116400C9C0BF /* Codable+Extensions.swift in Sources */,
+				03AB04A8210B0BEA0030F9D1 /* PaddedTextField.swift in Sources */,
 				033C90C12109EC3A00C9C0BF /* TestioToken.swift in Sources */,
 				033C90C5210A161B00C9C0BF /* AppFlowCoordinator.swift in Sources */,
+				033C90D2210AFB0700C9C0BF /* TestioUIConstants.swift in Sources */,
 				033C90CB210AE27000C9C0BF /* LoginViewModel.swift in Sources */,
 				033C909D2109EB4600C9C0BF /* AppDelegate.swift in Sources */,
 				033C90BF2109EC2E00C9C0BF /* TestioUser.swift in Sources */,
