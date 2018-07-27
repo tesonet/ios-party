@@ -10,3 +10,7 @@
 "PASSWORD_PLACEHOLDER" = "Password";
 
 "PERFORM_LOG_IN" = "Log In";
+
+"ALERT" = "Alert";
+"ALERT_UNAUTHORIZED" = "Unauthorized access.";
+"ALERT_UNKNOWN" = "Unknown issue occured.";

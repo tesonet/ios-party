@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum TestioError: Error {
-    case unauthorized
-    case unknown
-}
-
 enum Result<Value, Error: Swift.Error> {
     case success(Value)
     case failure(Error)
@@ -39,13 +34,15 @@ protocol AuthorizationPerformingType {
 
 class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
 
+    var acceptableStatusCodes: Range<Int> { return 200..<300 }
+    
     func authenticate(user: TestioUser, handler: @escaping AuthenticationHandler) {
 
         let endpointString = String.init(format: TestioAPIURLStringFormat, TestioEndpoint.tokens.rawValue)
         
         guard let encodedCredentials = try? user.encode(),
             let endpointURL = URL(string: endpointString) else {
-            handler(.failure(.unknown))
+            handler(.failure(.unknown(nil)))
             return
         }
         
@@ -57,16 +54,25 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let authenticationTask = session.dataTask(with: request) { data, response, error in
             
-            guard let httpResponse = response as? HTTPURLResponse,
-                httpResponse.statusCode != 401 else {
-                handler(.failure(.unauthorized))
+            if let error = error {
+                handler(.failure(.unknown(error.localizedDescription)))
                 return
             }
 
-            guard error == nil,
-                let data = data,
+            guard let httpResponse = response as? HTTPURLResponse else {
+                handler(.failure(.unknown(nil)))
+                return
+            }
+            
+            guard self.acceptableStatusCodes ~= httpResponse.statusCode else {
+                let customError = TestioError.error(forStatusCode: httpResponse.statusCode)
+                handler(.failure(customError))
+                return
+            }
+            
+            guard let data = data,
                 let token = try? TestioToken.decode(fromData: data) else {
-                handler(.failure(.unknown))
+                handler(.failure(.unknown(nil)))
                 return
             }
             
