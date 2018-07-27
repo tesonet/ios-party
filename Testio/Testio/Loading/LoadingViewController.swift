@@ -17,8 +17,8 @@ class LoadingViewController: UIViewController, BindableType {
     
     private let disposeBag = DisposeBag()
     
-    @IBOutlet private var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet private var loadingTextLabel: UILabel!
+    @IBOutlet private var loadingIndicatorImageView: UIImageView!
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -41,7 +41,6 @@ class LoadingViewController: UIViewController, BindableType {
     func bindViewModel() {
         rx.methodInvoked(#selector(UIViewController.viewDidAppear(_:)))
             .take(1)
-            .debug("hip", trimOutput: true)
             .flatMap { _ in
                 self.viewModel.load.execute(())
             }
@@ -54,11 +53,14 @@ class LoadingViewController: UIViewController, BindableType {
 extension LoadingViewController {
     
     private func setupAppearance() {
-        loadingIndicator.activityIndicatorViewStyle = .whiteLarge
-        loadingIndicator.startAnimating()
-        
         loadingTextLabel.textColor = .white
         loadingTextLabel.text = NSLocalizedString("LOADING_STATUS", comment: "")
+        
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotation.toValue = -(Double.pi * 2)
+        rotation.duration = 3
+        rotation.repeatCount = .infinity
+        loadingIndicatorImageView.layer.add(rotation, forKey: nil)
     }
     
 }

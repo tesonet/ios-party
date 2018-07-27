@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewController" customModule="Testio" customModuleProvider="target">
             <connections>
-                <outlet property="loadingIndicator" destination="DWr-eA-3Db" id="VHy-Ge-SaS"/>
+                <outlet property="loadingIndicatorImageView" destination="5mZ-vT-oRZ" id="gq5-iO-Kfl"/>
                 <outlet property="loadingTextLabel" destination="YC0-bx-Ae0" id="56N-QR-Xih"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,33 +26,38 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="UrR-Fw-1Nh">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-eA-3Db">
-                    <rect key="frame" x="178" y="324" width="20" height="20"/>
-                </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC0-bx-Ae0">
                     <rect key="frame" x="166" y="571" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-indicator" translatesAutoresizingMaskIntoConstraints="NO" id="5mZ-vT-oRZ">
+                    <rect key="frame" x="99.5" y="245.5" width="175" height="175"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="5mZ-vT-oRZ" secondAttribute="height" multiplier="1:1" id="Jt5-r7-Bpr"/>
+                        <constraint firstAttribute="width" constant="175" id="hXJ-c1-3rN"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="5mZ-vT-oRZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="49k-lB-Gbm"/>
+                <constraint firstItem="5mZ-vT-oRZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="B5b-Bf-X2c"/>
                 <constraint firstItem="UrR-Fw-1Nh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MIx-qI-kUj"/>
                 <constraint firstItem="UrR-Fw-1Nh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bZv-8Z-57m"/>
-                <constraint firstItem="DWr-eA-3Db" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cn6-hY-9Cs"/>
                 <constraint firstItem="UrR-Fw-1Nh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="jXk-FG-pFj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YC0-bx-Ae0" secondAttribute="bottom" constant="75" id="kaa-16-Bg5"/>
                 <constraint firstItem="YC0-bx-Ae0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="nAx-6X-28G"/>
                 <constraint firstItem="YC0-bx-Ae0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qNZ-ZO-2H8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YC0-bx-Ae0" secondAttribute="trailing" constant="15" id="uwv-Rx-XlE"/>
                 <constraint firstItem="UrR-Fw-1Nh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="yxu-gA-IaR"/>
-                <constraint firstItem="DWr-eA-3Db" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zh0-ay-gIw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
     <resources>
         <image name="bg" width="640" height="360"/>
+        <image name="loading-indicator" width="293" height="293"/>
     </resources>
 </document>
