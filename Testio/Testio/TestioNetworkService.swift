@@ -34,7 +34,7 @@ protocol AuthorizationPerformingType {
 
 class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
 
-    var acceptableStatusCodes: Range<Int> { return 200..<300 }
+    private var acceptableStatusCodes: Range<Int> { return 200..<300 }
     
     func authenticate(user: TestioUser, handler: @escaping AuthenticationHandler) {
 

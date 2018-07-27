@@ -14,3 +14,4 @@
 "ALERT" = "Alert";
 "ALERT_UNAUTHORIZED" = "Unauthorized access.";
 "ALERT_UNKNOWN" = "Unknown issue occured.";
+"ALERT_ACKNOWLEDGE" = "Got it";

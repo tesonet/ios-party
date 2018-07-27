@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Action
 
 final class LoginViewController: UIViewController, BindableType {
     
-    typealias ViewModelType = LoginViewModel
+    typealias ViewModelType = LoginViewModelType
     
     var viewModel: ViewModelType
     
@@ -38,7 +39,7 @@ final class LoginViewController: UIViewController, BindableType {
     }
     
     func bindViewModel() {
-        
+        logInButton.rx.action = viewModel.authorize
     }
 
 }

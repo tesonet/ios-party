@@ -14,7 +14,6 @@ protocol LoginViewModelType {
     
     var authorize: CocoaAction { get }
     
-    
 }
 
 class LoginViewModel: LoginViewModelType {
@@ -28,10 +27,10 @@ class LoginViewModel: LoginViewModelType {
     private let disposeBag = DisposeBag()
     
     private let authorizationPerformer: AuthorizationPerformingType
-    private let promptCoordinator: PromptCoordinating
+    private let promptCoordinator: PromptCoordinatingType
     
     init(authorizationPerformer: AuthorizationPerformingType,
-         promptCoordinator: PromptCoordinating) {
+         promptCoordinator: PromptCoordinatingType) {
         self.authorizationPerformer = authorizationPerformer
         self.promptCoordinator = promptCoordinator
     }
@@ -57,7 +56,8 @@ class LoginViewModel: LoginViewModelType {
     }
     
     private func prompt(forError error: Error) -> Observable<()> {
-        return promptCoordinator.promptFor(error.localizedDescription, cancelAction: "lol", actions: nil).map { _ in }
+        let cancelTitle = NSLocalizedString("ALERT_ACKNOWLEDGE", comment: "")
+        return promptCoordinator.promptFor(error.localizedDescription, cancelAction: cancelTitle, actions: nil).map { _ in }
     }
     
 }
