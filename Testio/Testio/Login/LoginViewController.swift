@@ -93,6 +93,7 @@ extension LoginViewController {
         logInButton.setTitle(loginButtonTitle, for: .normal)
         logInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         logInButton.setTitleColor(.white, for: .normal)
+        logInButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .disabled)
         logInButton.backgroundColor = Colors.actionColor
         logInButton.layer.cornerRadius = 5
     }

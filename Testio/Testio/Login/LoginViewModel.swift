@@ -38,6 +38,8 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType {
     }
     
     //MARK: - LoginTokenProviding
+
+    private var loginTokenSubject = PublishSubject<TestioToken>()
     
     var loginToken: Observable<TestioToken> {
         return .empty()
@@ -51,7 +53,7 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType {
         })
     }
     
-    var credentialsSubject = ReplaySubject<(String, String)>.create(bufferSize: 1)
+    private var credentialsSubject = ReplaySubject<(String, String)>.create(bufferSize: 1)
     
     var credentialsObserver: AnyObserver<(String, String)> {
         return credentialsSubject.asObserver()
@@ -73,6 +75,9 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType {
             .flatMap { [unowned self] user in
                 return self.authorize(user: user)
             }
+            .do(onNext: { [unowned self] token in
+                self.loginTokenSubject.onNext(token)
+            })
             .map { _ in }
             .catchError { [unowned self] error in
                 return self.promptCoordinator.prompt(forError: error)
