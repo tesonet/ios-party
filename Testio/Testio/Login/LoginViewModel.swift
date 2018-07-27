@@ -18,19 +18,36 @@ protocol LoginViewModelType {
     
 }
 
-class LoginViewModel: LoginViewModelType {
+protocol LoginTokenProviding {
     
-   private var areCredentialsFilled: Observable<Bool> {
-        return credentialsSubject
-            .map { credentials in
-                !credentials.0.trimmingCharacters(in: .whitespaces).isEmpty &&
-                !credentials.1.trimmingCharacters(in: .whitespaces).isEmpty
-            }
+    var loginToken: Observable<TestioToken> { get }
+
+}
+
+class LoginViewModel: LoginTokenProviding, LoginViewModelType {
+    
+    private let disposeBag = DisposeBag()
+    
+    private let authorizationPerformer: AuthorizationPerformingType
+    private let promptCoordinator: PromptCoordinatingType
+
+    init(authorizationPerformer: AuthorizationPerformingType,
+         promptCoordinator: PromptCoordinatingType) {
+        self.authorizationPerformer = authorizationPerformer
+        self.promptCoordinator = promptCoordinator
     }
+    
+    //MARK: - LoginTokenProviding
+    
+    var loginToken: Observable<TestioToken> {
+        return .empty()
+    }
+    
+    //MARK: - LoginViewModelType
     
     var authorize: CocoaAction {
         return CocoaAction(enabledIf: areCredentialsFilled, workFactory: { [unowned self] in
-            return self.authorizationObservable()
+            return self.authorizationWorkFactory()
         })
     }
     
@@ -40,18 +57,17 @@ class LoginViewModel: LoginViewModelType {
         return credentialsSubject.asObserver()
     }
     
-    private let disposeBag = DisposeBag()
+    //MARK: - Authorization helpers
     
-    private let authorizationPerformer: AuthorizationPerformingType
-    private let promptCoordinator: PromptCoordinatingType
-    
-    init(authorizationPerformer: AuthorizationPerformingType,
-         promptCoordinator: PromptCoordinatingType) {
-        self.authorizationPerformer = authorizationPerformer
-        self.promptCoordinator = promptCoordinator
+    private var areCredentialsFilled: Observable<Bool> {
+        return credentialsSubject
+            .map { credentials in
+                !credentials.0.trimmingCharacters(in: .whitespaces).isEmpty &&
+                !credentials.1.trimmingCharacters(in: .whitespaces).isEmpty
+        }
     }
     
-    private func authorizationObservable() -> Observable<Void> {
+    private func authorizationWorkFactory() -> Observable<Void> {
         return credentialsSubject
             .map { TestioUser.init(username: $0, password: $1) }
             .flatMap { [unowned self] user in
@@ -59,7 +75,7 @@ class LoginViewModel: LoginViewModelType {
             }
             .map { _ in }
             .catchError { [unowned self] error in
-                return self.prompt(forError: error)
+                return self.promptCoordinator.prompt(forError: error)
             }
             .take(1)
     }
@@ -77,11 +93,6 @@ class LoginViewModel: LoginViewModelType {
             }
             return Disposables.create()
         }
-    }
-    
-    private func prompt(forError error: Error) -> Observable<()> {
-        let cancelTitle = NSLocalizedString("ALERT_ACKNOWLEDGE", comment: "")
-        return promptCoordinator.promptFor(error.localizedDescription, cancelAction: cancelTitle, actions: nil).map { _ in }
     }
     
 }
