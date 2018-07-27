@@ -11,10 +11,12 @@ import UIKit
 class AppFlowCoordinator: UINavigationController {
 
     private let networkService = TestioNetworkService()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarHidden(true, animated: false)
+        
+        UIView.appearance().tintColor = Colors.actionColor
         startFlow()
     }
     

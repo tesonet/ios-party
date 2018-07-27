@@ -14,6 +14,10 @@ final class LoginViewController: UIViewController, BindableType {
     
     var viewModel: ViewModelType
     
+    @IBOutlet private var usernameTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var logInButton: UIButton!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -21,6 +25,7 @@ final class LoginViewController: UIViewController, BindableType {
     init(viewModel: ViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +34,7 @@ final class LoginViewController: UIViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearance()
     }
     
     func bindViewModel() {
@@ -41,7 +46,36 @@ final class LoginViewController: UIViewController, BindableType {
 extension LoginViewController {
     
     private func setupAppearance() {
+        let usernamePlaceholder = NSLocalizedString("USERNAME_PLACEHOLDER", comment: "")
+        usernameTextField.placeholder = usernamePlaceholder
         
+        let usernameImage = #imageLiteral(resourceName: "ico-username")
+        image(usernameImage, forTextField: usernameTextField)
+
+        let passwordPlaceholder = NSLocalizedString("PASSWORD_PLACEHOLDER", comment: "")
+        passwordTextField.placeholder = passwordPlaceholder
+        setupButton()
+        
+        let passwordImage = #imageLiteral(resourceName: "ico-lock")
+        image(passwordImage, forTextField: passwordTextField)
+        
+    }
+    
+    private func image(_ image: UIImage, forTextField textField: UITextField) {
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: 0, y: 0, width: 45, height: 13)
+        imageView.contentMode = .scaleAspectFit
+        textField.leftViewMode = .always
+        textField.leftView = imageView
+    }
+    
+    private func setupButton() {
+        let loginButtonTitle = NSLocalizedString("PERFORM_LOG_IN", comment: "")
+        logInButton.setTitle(loginButtonTitle, for: .normal)
+        logInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        logInButton.setTitleColor(.white, for: .normal)
+        logInButton.backgroundColor = Colors.actionColor
+        logInButton.layer.cornerRadius = 5
     }
     
 }

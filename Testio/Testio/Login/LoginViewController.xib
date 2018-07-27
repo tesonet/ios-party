@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="landscape">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Testio" customModuleProvider="target">
             <connections>
+                <outlet property="logInButton" destination="VHk-5f-sW0" id="Xjr-da-G0m"/>
+                <outlet property="passwordTextField" destination="LmC-AI-N5l" id="l5f-2C-ya4"/>
+                <outlet property="usernameTextField" destination="BBP-JC-9LS" id="OmV-14-8lL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,16 +29,16 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JeQ-sT-S1Z">
                     <rect key="frame" x="69.999999999999986" y="291.66666666666669" width="235.66666666666663" height="185"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-JC-9LS">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-JC-9LS" customClass="PaddedTextField" customModule="Testio" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="235.66666666666666" height="55"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="55" id="jZf-7i-Rpb"/>
+                                <constraint firstAttribute="height" constant="55" id="Wvi-Hc-kaA"/>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LmC-AI-N5l">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LmC-AI-N5l" customClass="PaddedTextField" customModule="Testio" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="65" width="235.66666666666666" height="55"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,7 +51,7 @@
                     </subviews>
                 </stackView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="hvK-Lb-sWM">
-                    <rect key="frame" x="112" y="120" width="150" height="64"/>
+                    <rect key="frame" x="112" y="164" width="150" height="64"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="Rs7-Ul-WnL"/>
                     </constraints>
