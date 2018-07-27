@@ -10,4 +10,10 @@ import Foundation
 
 class LoginViewModel {
 
+    private let authorizationPerformer: AuthorizationPerformingType
+    
+    init(authorizationPerformer: AuthorizationPerformingType) {
+        self.authorizationPerformer = authorizationPerformer
+    }
+    
 }

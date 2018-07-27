@@ -12,11 +12,13 @@ class AppFlowCoordinator: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBarHidden(true, animated: false)
         startFlow()
     }
     
     func startFlow() {
-        
+        let loginViewController = LoginViewController(nibName: nil, bundle: nil)
+        setViewControllers([loginViewController], animated: false)
     }
     
 }

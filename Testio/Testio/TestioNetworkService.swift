@@ -25,10 +25,20 @@ private enum TestioEndpoint: String {
     case servers
 }
 
-class TestioNetworkService: NSObject {
-
-    typealias AuthenticationHandler = (Result<TestioToken, TestioError>) -> ()
+protocol ServersRetrievingType {
     
+}
+
+typealias AuthenticationHandler = (Result<TestioToken, TestioError>) -> ()
+
+protocol AuthorizationPerformingType {
+
+    func authenticate(user: TestioUser, handler: @escaping AuthenticationHandler)
+    
+}
+
+class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
+
     func authenticate(user: TestioUser, handler: @escaping AuthenticationHandler) {
 
         let endpointString = String.init(format: TestioAPIURLStringFormat, TestioEndpoint.tokens.rawValue)
