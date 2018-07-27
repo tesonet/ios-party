@@ -10,6 +10,8 @@ import UIKit
 
 class AppFlowCoordinator: UINavigationController {
 
+    private let networkService = TestioNetworkService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarHidden(true, animated: false)
@@ -17,7 +19,8 @@ class AppFlowCoordinator: UINavigationController {
     }
     
     func startFlow() {
-        let loginViewController = LoginViewController(nibName: nil, bundle: nil)
+        let loginViewModel = LoginViewModel(authorizationPerformer: networkService)
+        let loginViewController = LoginViewController(viewModel: loginViewModel)
         setViewControllers([loginViewController], animated: false)
     }
     

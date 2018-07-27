@@ -19,6 +19,7 @@
 		033C90C8210A172800C9C0BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90C6210A172800C9C0BF /* LoginViewController.swift */; };
 		033C90C9210A172800C9C0BF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033C90C7210A172800C9C0BF /* LoginViewController.xib */; };
 		033C90CB210AE27000C9C0BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90CA210AE27000C9C0BF /* LoginViewModel.swift */; };
+		033C90CE210AE58E00C9C0BF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90CD210AE58E00C9C0BF /* BindableType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		033C90C6210A172800C9C0BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		033C90C7210A172800C9C0BF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		033C90CA210AE27000C9C0BF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		033C90CD210AE58E00C9C0BF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				033C90C2210A116400C9C0BF /* Codable+Extensions.swift */,
 				033C90C4210A161B00C9C0BF /* AppFlowCoordinator.swift */,
 				033C90CC210AE27B00C9C0BF /* Login */,
+				033C90CD210AE58E00C9C0BF /* BindableType.swift */,
 			);
 			path = Testio;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				033C90C8210A172800C9C0BF /* LoginViewController.swift in Sources */,
+				033C90CE210AE58E00C9C0BF /* BindableType.swift in Sources */,
 				033C90C3210A116400C9C0BF /* Codable+Extensions.swift in Sources */,
 				033C90C12109EC3A00C9C0BF /* TestioToken.swift in Sources */,
 				033C90C5210A161B00C9C0BF /* AppFlowCoordinator.swift in Sources */,
