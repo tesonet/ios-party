@@ -9,6 +9,8 @@
 import UIKit
 
 class ServersTableViewHeader: UIView {
+
+    private static let defaultHeight: CGFloat = 50
     
     private let leftLabel: UILabel = ServersTableViewHeader.createHeaderLabel()
     private let rightLabel: UILabel = ServersTableViewHeader.createHeaderLabel()
@@ -27,7 +29,7 @@ class ServersTableViewHeader: UIView {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 13, weight: .thin)
-        label.textColor = .gray
+        label.textColor = .lightGray
         return label
     }
     
@@ -51,7 +53,7 @@ class ServersTableViewHeader: UIView {
             centerXAnchor.constraint(equalTo: superview.centerXAnchor),
             widthAnchor.constraint(equalTo: superview.widthAnchor),
             topAnchor.constraint(equalTo: superview.topAnchor),
-            heightAnchor.constraint(equalToConstant: 50)
+            heightAnchor.constraint(equalToConstant: ServersTableViewHeader.defaultHeight)
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -68,6 +70,7 @@ extension ServersTableViewHeader {
     }
 
     private func addLabelConstraints() {
+        
         let leftLabelConstraints = [
             leftLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             leftLabel.leadingAnchor.constraintEqualToSystemSpacingAfter(leadingAnchor, multiplier: 2)

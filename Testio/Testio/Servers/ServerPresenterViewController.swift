@@ -37,10 +37,14 @@ class ServerPresenterViewController: UIViewController, BindableType {
 
     func bindViewModel() {
         viewModel.serverResults.drive(tableView.rx.items) { (tableView: UITableView, index: Int, element: TestioServer) in
-            let cell = UITableViewCell(style: UITableViewCellStyle.value2, reuseIdentifier: nil)
-            cell.textLabel?.text = element.name
-            cell.detailTextLabel?.text = "\(element.distance)"
-            return cell
+            let indexPath = IndexPath(item: index, section: 0)
+            let cell = tableView.dequeueReusableCell(withIdentifier: ServerTableViewCell.reuseIdentifier, for: indexPath)
+
+            guard let serverCell = cell as? ServerTableViewCell else {
+                return cell
+            }
+            serverCell.update(withLeftLabelText: element.name, rightLabelText: "\(element.distance)")
+            return serverCell
         }
         .disposed(by: disposeBag)
     }
@@ -53,6 +57,17 @@ extension ServerPresenterViewController {
         headerView.backgroundColor = Colors.backgroundColor
         view.backgroundColor = Colors.backgroundColor
 
+        setupTableViewAppearance()
+        setupTableViewHeader()
+    }
+    
+    private func setupTableViewAppearance()  {
+        tableView.allowsSelection = false
+        tableView.register(ServerTableViewCell.self, forCellReuseIdentifier: ServerTableViewCell.reuseIdentifier)
+        tableView.separatorColor = .gray
+    }
+
+    private func setupTableViewHeader() {
         let header = ServersTableViewHeader()
         tableView.tableHeaderView = header
         header.addConstraints()

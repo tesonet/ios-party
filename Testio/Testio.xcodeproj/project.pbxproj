@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0329376B210CCC8100815827 /* ServersTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329376A210CCC8100815827 /* ServersTableViewHeader.swift */; };
+		0329376D210CD91C00815827 /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329376C210CD91C00815827 /* ServerTableViewCell.swift */; };
+		0329376F210CDDC400815827 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329376E210CDDC400815827 /* ReusableView.swift */; };
 		033C909D2109EB4600C9C0BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C909C2109EB4600C9C0BF /* AppDelegate.swift */; };
 		033C90A42109EB4700C9C0BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033C90A32109EB4700C9C0BF /* Assets.xcassets */; };
 		033C90A72109EB4700C9C0BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033C90A52109EB4700C9C0BF /* LaunchScreen.storyboard */; };
@@ -54,6 +56,8 @@
 /* Begin PBXFileReference section */
 		00A6506068624A087A3BBCF8 /* Pods-Testio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Testio/Pods-Testio.release.xcconfig"; sourceTree = "<group>"; };
 		0329376A210CCC8100815827 /* ServersTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersTableViewHeader.swift; sourceTree = "<group>"; };
+		0329376C210CD91C00815827 /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
+		0329376E210CDDC400815827 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		033C90992109EB4600C9C0BF /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033C909C2109EB4600C9C0BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		033C90A32109EB4700C9C0BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */,
 				03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */,
 				03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */,
+				0329376E210CDDC400815827 /* ReusableView.swift */,
 			);
 			path = Testio;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				033E4F0C210C7D890039167F /* ServerPresenterViewController.xib */,
 				033E4F09210C7CDC0039167F /* ServerPresenterViewModel.swift */,
 				0329376A210CCC8100815827 /* ServersTableViewHeader.swift */,
+				0329376C210CD91C00815827 /* ServerTableViewCell.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				03AB04A8210B0BEA0030F9D1 /* PaddedTextField.swift in Sources */,
 				033E4F17210CC1890039167F /* TestioServerPersistence.swift in Sources */,
 				033C90C12109EC3A00C9C0BF /* TestioToken.swift in Sources */,
+				0329376F210CDDC400815827 /* ReusableView.swift in Sources */,
 				033C90C5210A161B00C9C0BF /* AppFlowCoordinator.swift in Sources */,
 				033C90D2210AFB0700C9C0BF /* TestioUIConstants.swift in Sources */,
 				033C90CB210AE27000C9C0BF /* LoginViewModel.swift in Sources */,
@@ -440,6 +447,7 @@
 				0329376B210CCC8100815827 /* ServersTableViewHeader.swift in Sources */,
 				033C90BF2109EC2E00C9C0BF /* TestioUser.swift in Sources */,
 				033E4F11210C89F90039167F /* KeychainPasswordItem.swift in Sources */,
+				0329376D210CD91C00815827 /* ServerTableViewCell.swift in Sources */,
 				033E4F13210C8A500039167F /* TestioKeychainConfiguration.swift in Sources */,
 				03B556A0210B2844004F0F49 /* TestioError.swift in Sources */,
 				03B556A4210B47FD004F0F49 /* LoadingViewController.swift in Sources */,
