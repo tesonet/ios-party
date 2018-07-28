@@ -32,7 +32,7 @@ class AppFlowCoordinator: UINavigationController {
     
     private let disposeBag = DisposeBag()
     
-    lazy var loadingViewController: LoadingViewController = {
+    private lazy var loadingViewController: LoadingViewController = {
         let viewController = LoadingViewController()
         viewController.loadViewIfNeeded()
         return viewController
@@ -48,19 +48,10 @@ class AppFlowCoordinator: UINavigationController {
     
     func startFlow() {
         setViewControllers([loginStack()], animated: false)
-        observeLoginTokenProvider()
+        prepareToRetrieveServers()
     }
 
-    private func observeLoginTokenProvider() {
-        tokenProvider?.loginToken
-            .flatMap { [unowned self] token -> Observable<[TestioServer]> in
-                let serversViewModel = self.serversViewModel(withToken: token)
-                return serversViewModel.load.execute(())
-            }
-            .take(1)
-            .subscribe()
-            .disposed(by: disposeBag)
-    }
+    // MARK: - Login stack
     
     private func loginStack() -> LoginViewController {
         let loginViewModel = LoginViewModel(authorizationPerformer: networkService)
@@ -71,12 +62,17 @@ class AppFlowCoordinator: UINavigationController {
         loginViewController.setupForViewModel()
         return loginViewController
     }
-    
-    private func serversViewModel(withToken token: TestioToken) -> ServersViewModel {
-        let serversViewModel = ServersViewModel(token: token, serverRetriever: networkService)
-        currentTaskPerformer = serversViewModel
-        serverResultsProvider = serversViewModel
-        return serversViewModel
+
+    private func prepareToRetrieveServers() {
+        let serversViewModel = ServersViewModel(serverRetriever: networkService)
+        
+        tokenProvider?.loginToken
+            .do(onNext: { [unowned self] _ in
+                self.currentTaskPerformer = serversViewModel
+                self.serverResultsProvider = serversViewModel
+            })
+            .subscribe(serversViewModel.load.inputs)
+            .disposed(by: disposeBag)
     }
     
 }

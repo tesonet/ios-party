@@ -12,7 +12,7 @@ import Action
 
 protocol LoadingViewModelType {
     
-    var load: Action<Void, [TestioServer]> { get }
+    var load: Action<TestioToken, [TestioServer]> { get }
     
 }
 
@@ -25,7 +25,6 @@ protocol ServersResultProviding {
 class ServersViewModel: LoadingViewModelType, ServersResultProviding, ViewModelTaskPerformingType {
     
     private let serverRetriever: ServersRetrievingType
-    private let token: TestioToken
     
     private let disposeBag = DisposeBag()
 
@@ -51,15 +50,14 @@ class ServersViewModel: LoadingViewModelType, ServersResultProviding, ViewModelT
     
     //MARK: - LoadingViewModelType
     
-    lazy var load: Action<Void, [TestioServer]> = {
-        return Action(workFactory: { [unowned self] _ in
-            return self.servers(withToken: self.token)
+    lazy var load: Action<TestioToken, [TestioServer]> = {
+        return Action(workFactory: { [unowned self] token in
+            return self.servers(withToken: token)
         })
     }()
     
-    init(token: TestioToken, serverRetriever: ServersRetrievingType) {
+    init(serverRetriever: ServersRetrievingType) {
         self.serverRetriever = serverRetriever
-        self.token = token
         addActionHandlers()
     }
     
