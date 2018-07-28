@@ -15,7 +15,19 @@ enum TestioKeychainError: Error {
     case credentialDeleteFailed
 }
 
-class TestioKeychainWrapper {
+protocol CredentialsManaging {
+
+    func save(testioUser: TestioUser) throws
+    func retrieveUser() throws -> TestioUser
+}
+
+protocol CredentialsRemoving {
+    
+    func deleteCredentials() throws
+    
+}
+
+class TestioKeychainWrapper: CredentialsManaging {
     
     private let usernameDefaultsKey = "username-key"
     
@@ -47,11 +59,15 @@ class TestioKeychainWrapper {
         return TestioUser(username: username, password: keychainPassword)
     }
     
+}
+
+extension TestioKeychainWrapper: CredentialsRemoving {
+    
     func deleteCredentials() throws {
         guard let username = UserDefaults.standard.value(forKey: usernameDefaultsKey) as? String else {
             throw TestioKeychainError.noUsernameSet
         }
-
+        
         let passwordItem = KeychainPasswordItem(service: TestioKeychainConfiguration.serviceName,
                                                 account: username,
                                                 accessGroup: TestioKeychainConfiguration.accessGroup)
