@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import RxSwift
+
+protocol ServerResultsConsuming {
+    
+    var servers: AnyObserver<[TestioServer]> { get }
+    
+}
+
+class ServerPresenterViewModel: ServerResultsConsuming {
+    
+    var servers: AnyObserver<[TestioServer]> {
+        return serversSubject.asObserver()
+    }
+    
+    private let serversSubject = BehaviorSubject<[TestioServer]>(value: [])
+    
+}

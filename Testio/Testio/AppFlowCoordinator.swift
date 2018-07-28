@@ -71,7 +71,15 @@ class AppFlowCoordinator: UINavigationController {
     }
     
     private func prepareToPresentServerList() {
-        
+        let serverPresenterViewController = serverPresenterStack()
+
+        serverResultsProvider?.servers
+            .observeOn(MainScheduler.instance)
+            .do(onNext: { [unowned self] _ in
+                self.pushViewController(serverPresenterViewController, animated: true)
+            })
+            .subscribe(serverPresenterViewController.viewModel.servers)
+            .disposed(by: disposeBag)
     }
     
     //MARK: - Login stack
@@ -86,8 +94,11 @@ class AppFlowCoordinator: UINavigationController {
         return loginViewController
     }
     
-    private func serverPresenterStack() {
-        
+    private func serverPresenterStack() -> ServerPresenterViewController {
+        let serverPresenterViewModel = ServerPresenterViewModel()
+        let serverPresenterViewController = ServerPresenterViewController(viewModel: serverPresenterViewModel)
+        serverPresenterViewController.setupForViewModel()
+        return serverPresenterViewController
     }
     
 }

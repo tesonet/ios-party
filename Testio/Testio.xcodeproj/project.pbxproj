@@ -22,11 +22,15 @@
 		033C90CE210AE58E00C9C0BF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90CD210AE58E00C9C0BF /* BindableType.swift */; };
 		033C90D0210AF68200C9C0BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 033C90CF210AF68200C9C0BF /* Localizable.strings */; };
 		033C90D2210AFB0700C9C0BF /* TestioUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */; };
+		033E4F0A210C7CDC0039167F /* ServerPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E4F09210C7CDC0039167F /* ServerPresenterViewModel.swift */; };
+		033E4F0D210C7D890039167F /* ServerPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E4F0B210C7D890039167F /* ServerPresenterViewController.swift */; };
+		033E4F0E210C7D890039167F /* ServerPresenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033E4F0C210C7D890039167F /* ServerPresenterViewController.xib */; };
+		03782E82210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */; };
 		03AB04A8210B0BEA0030F9D1 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */; };
 		03B556A0210B2844004F0F49 /* TestioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5569F210B2844004F0F49 /* TestioError.swift */; };
 		03B556A4210B47FD004F0F49 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B556A2210B47FD004F0F49 /* LoadingViewController.swift */; };
 		03B556A5210B47FD004F0F49 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B556A3210B47FD004F0F49 /* LoadingViewController.xib */; };
-		03B556A7210B4812004F0F49 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B556A6210B4812004F0F49 /* ServersViewModel.swift */; };
+		03B556A7210B4812004F0F49 /* ServerRetrieverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B556A6210B4812004F0F49 /* ServerRetrieverViewModel.swift */; };
 		03D94BB0210B67D400C7E7E8 /* TestioServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D94BAF210B67D400C7E7E8 /* TestioServer.swift */; };
 		0FAE61829C405A30D81AF4EE /* Pods_Testio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0C89648A297B6718535E7B /* Pods_Testio.framework */; };
 		5ED4629093F4262A4D625435 /* Pods_TestioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77E54F8220EA837131700CE /* Pods_TestioTests.framework */; };
@@ -63,11 +67,15 @@
 		033C90CD210AE58E00C9C0BF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		033C90CF210AF68200C9C0BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioUIConstants.swift; sourceTree = "<group>"; };
+		033E4F09210C7CDC0039167F /* ServerPresenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPresenterViewModel.swift; sourceTree = "<group>"; };
+		033E4F0B210C7D890039167F /* ServerPresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPresenterViewController.swift; sourceTree = "<group>"; };
+		033E4F0C210C7D890039167F /* ServerPresenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerPresenterViewController.xib; sourceTree = "<group>"; };
+		03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTaskPerformingType.swift; sourceTree = "<group>"; };
 		03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		03B5569F210B2844004F0F49 /* TestioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioError.swift; sourceTree = "<group>"; };
 		03B556A2210B47FD004F0F49 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		03B556A3210B47FD004F0F49 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
-		03B556A6210B4812004F0F49 /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		03B556A6210B4812004F0F49 /* ServerRetrieverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRetrieverViewModel.swift; sourceTree = "<group>"; };
 		03D94BAF210B67D400C7E7E8 /* TestioServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioServer.swift; sourceTree = "<group>"; };
 		2532897CBAEB0592729F6347 /* Pods-TestioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestioTests/Pods-TestioTests.release.xcconfig"; sourceTree = "<group>"; };
 		8864E48ADB39D0930799CEA2 /* Pods-Testio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Testio/Pods-Testio.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 				033C90CF210AF68200C9C0BF /* Localizable.strings */,
 				033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */,
 				03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */,
+				03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */,
 			);
 			path = Testio;
 			sourceTree = "<group>";
@@ -160,7 +169,10 @@
 		03782E80210BA08300EAAFB0 /* Servers */ = {
 			isa = PBXGroup;
 			children = (
-				03B556A6210B4812004F0F49 /* ServersViewModel.swift */,
+				03B556A6210B4812004F0F49 /* ServerRetrieverViewModel.swift */,
+				033E4F0B210C7D890039167F /* ServerPresenterViewController.swift */,
+				033E4F0C210C7D890039167F /* ServerPresenterViewController.xib */,
+				033E4F09210C7CDC0039167F /* ServerPresenterViewModel.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -291,6 +303,7 @@
 			files = (
 				033C90A72109EB4700C9C0BF /* LaunchScreen.storyboard in Resources */,
 				033C90D0210AF68200C9C0BF /* Localizable.strings in Resources */,
+				033E4F0E210C7D890039167F /* ServerPresenterViewController.xib in Resources */,
 				033C90A42109EB4700C9C0BF /* Assets.xcassets in Resources */,
 				03B556A5210B47FD004F0F49 /* LoadingViewController.xib in Resources */,
 				033C90C9210A172800C9C0BF /* LoginViewController.xib in Resources */,
@@ -374,11 +387,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033E4F0D210C7D890039167F /* ServerPresenterViewController.swift in Sources */,
+				033E4F0A210C7CDC0039167F /* ServerPresenterViewModel.swift in Sources */,
 				03D94BB0210B67D400C7E7E8 /* TestioServer.swift in Sources */,
 				033C90C8210A172800C9C0BF /* LoginViewController.swift in Sources */,
+				03782E82210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift in Sources */,
 				033C90CE210AE58E00C9C0BF /* BindableType.swift in Sources */,
 				033C90C3210A116400C9C0BF /* Codable+Extensions.swift in Sources */,
-				03B556A7210B4812004F0F49 /* ServersViewModel.swift in Sources */,
+				03B556A7210B4812004F0F49 /* ServerRetrieverViewModel.swift in Sources */,
 				03AB04A8210B0BEA0030F9D1 /* PaddedTextField.swift in Sources */,
 				033C90C12109EC3A00C9C0BF /* TestioToken.swift in Sources */,
 				033C90C5210A161B00C9C0BF /* AppFlowCoordinator.swift in Sources */,
