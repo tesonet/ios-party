@@ -14,8 +14,10 @@ import Action
 protocol LoginViewModelType {
     
     var authorize: Action<Void, TestioToken> { get }
-    var credentialsObserver: AnyObserver<(String, String)> { get }
-    
+    var credentialsConsumer: AnyObserver<(String, String)> { get }
+    var initialCredentials: TestioUser? { get }
+    var areCredentialsValidForSubmit: Observable<Bool> { get }
+
 }
 
 protocol LoginTokenProviding {
@@ -29,6 +31,7 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     private let disposeBag = DisposeBag()
     
     private let authorizationPerformer: AuthorizationPerformingType
+    private let credentialsManager: CredentialsManaging
 
     //MARK: - ViewModelTaskPerformingType
     
@@ -53,40 +56,70 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     //MARK: - LoginViewModelType
     
     lazy var authorize: Action<Void, TestioToken> = {
-        return Action(enabledIf: areCredentialsFilled, workFactory: { [unowned self] in
-            self.credentialsSubject
+        return Action(workFactory: { [unowned self] in
+            self.credentialsObservable
                 .delay(0.5, scheduler: MainScheduler.instance)
-                .map { TestioUser.init(username: $0, password: $1) }
                 .flatMap { self.authorize(user: $0) }
         })
     }()
     
-    private var credentialsSubject = ReplaySubject<(String, String)>.create(bufferSize: 1)
+    //MARK: - Credentials
+
+    var initialCredentials: TestioUser?
     
-    var credentialsObserver: AnyObserver<(String, String)> {
-        return credentialsSubject.asObserver()
+    let credentialsConsumingSubject = ReplaySubject<(String, String)>.create(bufferSize: 1)
+    
+    private var credentialsObservable: Observable<TestioUser> {
+        return credentialsConsumingSubject.asObservable()
+            .map { TestioUser.init(username: $0, password: $1) }
     }
     
-    init(authorizationPerformer: AuthorizationPerformingType) {
+    var credentialsConsumer: AnyObserver<(String, String)> {
+        return credentialsConsumingSubject.asObserver()
+    }
+    
+    var areCredentialsValidForSubmit: Observable<Bool> {
+        return credentialsObservable
+            .map { credentials in
+                !credentials.username.trimmingCharacters(in: .whitespaces).isEmpty &&
+                !credentials.password.trimmingCharacters(in: .whitespaces).isEmpty
+        }
+    }
+    
+    //MARK: - Initialization
+    
+    init(authorizationPerformer: AuthorizationPerformingType,
+         credentialsManager: CredentialsManaging) {
         self.authorizationPerformer = authorizationPerformer
-        addActionHandlers()
+        self.credentialsManager = credentialsManager
+        addAuthorizeActionResultHandlers()
+        resolveCredentials()
     }
     
-    private func addActionHandlers() {
+    private func resolveCredentials() {
+        guard let user = try? credentialsManager.retrieveUser() else {
+            initialCredentials = nil
+            return
+        }
+        
+        initialCredentials = user
+        credentialsConsumingSubject.onNext((user.username, user.password))
+    }
+    
+    private func addAuthorizeActionResultHandlers() {
         authorize.elements
             .bind(to: loginTokenSubject.asObserver())
+            .disposed(by: disposeBag)
+        
+        //Only store credentials to Keychain if authorization returned no errors
+        authorize.elements
+            .flatMap { [unowned self] _ in self.credentialsObservable }
+            .flatMap { [unowned self] user in self.storeToKeychain(user: user) }
+            .subscribe()
             .disposed(by: disposeBag)
     }
     
     //MARK: - Authorization helpers
-    
-    private var areCredentialsFilled: Observable<Bool> {
-        return credentialsSubject
-            .map { credentials in
-                !credentials.0.trimmingCharacters(in: .whitespaces).isEmpty &&
-                !credentials.1.trimmingCharacters(in: .whitespaces).isEmpty
-            }
-    }
     
     private func authorize(user: TestioUser) -> Observable<TestioToken> {
         return Observable<TestioToken>.create { [unowned self] observer -> Disposable in
@@ -99,6 +132,21 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
                 }
                 observer.onCompleted()
             }
+            return Disposables.create()
+        }
+    }
+    
+    //MARK: - Keychain reactive wrapper
+    
+    private func storeToKeychain(user: TestioUser) -> Observable<TestioUser> {
+        return Observable<TestioUser>.create { [unowned self] observer -> Disposable in
+            do {
+                try self.credentialsManager.save(testioUser: user)
+                observer.onNext(user)
+            } catch let error {
+                observer.onError(error)
+            }
+            observer.onCompleted()
             return Disposables.create()
         }
     }

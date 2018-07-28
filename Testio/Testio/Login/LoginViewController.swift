@@ -43,14 +43,22 @@ final class LoginViewController: UIViewController, BindableType {
     }
     
     func bindViewModel() {
-        logInButton.rx.tap.asObservable()
+        
+        usernameTextField.text = viewModel.initialCredentials?.username
+        passwordTextField.text = viewModel.initialCredentials?.password
+        
+        logInButton.rx.tap
             .subscribe(viewModel.authorize.inputs)
             .disposed(by: disposeBag)
 
-        let credentialsObservable = Observable.combineLatest(usernameTextField.rx.text.filterNil(),
-                                                             passwordTextField.rx.text.filterNil())
+        viewModel.areCredentialsValidForSubmit
+            .bind(to: logInButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        let credentialsObservable = Observable.combineLatest(usernameTextField.rx.text.filterNil().distinctUntilChanged(),
+                                                             passwordTextField.rx.text.filterNil().distinctUntilChanged())
         credentialsObservable
-            .bind(to: viewModel.credentialsObserver)
+            .bind(to: viewModel.credentialsConsumer)
             .disposed(by: disposeBag)
     }
 
@@ -75,11 +83,6 @@ extension LoginViewController {
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
         image(#imageLiteral(resourceName: "ico-lock"), forTextField: passwordTextField)
-        
-        #if DEBUG
-            usernameTextField.text = TestioUser.testUser.username
-            passwordTextField.text = TestioUser.testUser.password
-        #endif
     }
     
     private func image(_ image: UIImage, forTextField textField: UITextField) {

@@ -20,6 +20,7 @@ protocol PromptCoordinatingType {
 class AppFlowCoordinator: UINavigationController {
 
     private let networkService = TestioNetworkService()
+    private let keychainWrapper = TestioKeychainWrapper()
     
     private var tokenProvider: LoginTokenProviding?
     
@@ -85,7 +86,8 @@ class AppFlowCoordinator: UINavigationController {
     //MARK: - Login stack
     
     private func loginStack() -> LoginViewController {
-        let loginViewModel = LoginViewModel(authorizationPerformer: networkService)
+        let loginViewModel = LoginViewModel(authorizationPerformer: networkService,
+                                            credentialsManager: keychainWrapper)
         currentTaskPerformer = loginViewModel
         tokenProvider = loginViewModel
         
