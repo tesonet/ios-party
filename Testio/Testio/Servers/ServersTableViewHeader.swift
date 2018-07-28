@@ -46,7 +46,7 @@ class ServersTableViewHeader: UIView {
     
     func addConstraints() {
         guard let superview = self.superview else {
-            fatalError("header should have a superview")
+            fatalError("view should have a superview")
         }
         
         let constraints = [

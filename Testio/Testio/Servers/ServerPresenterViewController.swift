@@ -59,12 +59,20 @@ extension ServerPresenterViewController {
 
         setupTableViewAppearance()
         setupTableViewHeader()
+        setupSortView()
+    }
+    
+    private func setupSortView() {
+        let sortView = SortSelectionView()
+        view.addSubview(sortView)
+        sortView.addConstraints()
     }
     
     private func setupTableViewAppearance()  {
         tableView.allowsSelection = false
         tableView.register(ServerTableViewCell.self, forCellReuseIdentifier: ServerTableViewCell.reuseIdentifier)
         tableView.separatorColor = .gray
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, SortSelectionView.defaultHeight, 0)
     }
 
     private func setupTableViewHeader() {
