@@ -18,7 +18,7 @@ protocol LoadingViewModelType {
 
 protocol ServerResultsProviding {
     
-    var servers: Observable<[TestioServer]> { get }
+    var serverResults: Observable<[TestioServer]> { get }
     
 }
 
@@ -44,7 +44,7 @@ class ServerRetrieverViewModel: LoadingViewModelType, ServerResultsProviding, Vi
     
     private let serversSubject = PublishSubject<[TestioServer]>()
     
-    var servers: Observable<[TestioServer]> {
+    var serverResults: Observable<[TestioServer]> {
         return serversSubject.asObservable()
     }
     

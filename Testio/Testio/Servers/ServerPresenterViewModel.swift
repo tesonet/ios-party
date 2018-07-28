@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 protocol ServerResultsConsuming {
     
@@ -15,10 +16,20 @@ protocol ServerResultsConsuming {
     
 }
 
-class ServerPresenterViewModel: ServerResultsConsuming {
+protocol ServerResultsPresenting {
     
+    var serverResults: Driver<[TestioServer]> { get }
+    
+}
+
+class ServerPresenterViewModel: ServerResultsConsuming, ServerResultsPresenting {
+
     var servers: AnyObserver<[TestioServer]> {
         return serversSubject.asObserver()
+    }
+    
+    var serverResults: Driver<[TestioServer]> {
+        return serversSubject.asDriver(onErrorJustReturn: [])
     }
     
     private let serversSubject = BehaviorSubject<[TestioServer]>(value: [])

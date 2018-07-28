@@ -63,6 +63,7 @@ class AppFlowCoordinator: UINavigationController {
         let serversViewModel = ServerRetrieverViewModel(serverRetriever: networkService)
         
         tokenProvider?.loginToken
+            .observeOn(MainScheduler.instance)
             .do(onNext: { [unowned self] _ in
                 self.currentTaskPerformer = serversViewModel
                 self.serverResultsProvider = serversViewModel
@@ -74,7 +75,7 @@ class AppFlowCoordinator: UINavigationController {
     private func prepareToPresentServerList() {
         let serverPresenterViewController = serverPresenterStack()
 
-        serverResultsProvider?.servers
+        serverResultsProvider?.serverResults
             .observeOn(MainScheduler.instance)
             .do(onNext: { [unowned self] _ in
                 self.pushViewController(serverPresenterViewController, animated: true)
