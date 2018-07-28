@@ -25,6 +25,7 @@
 		033E4F0A210C7CDC0039167F /* ServerPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E4F09210C7CDC0039167F /* ServerPresenterViewModel.swift */; };
 		033E4F0D210C7D890039167F /* ServerPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E4F0B210C7D890039167F /* ServerPresenterViewController.swift */; };
 		033E4F0E210C7D890039167F /* ServerPresenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033E4F0C210C7D890039167F /* ServerPresenterViewController.xib */; };
+		033E4F11210C89F90039167F /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E4F10210C89F90039167F /* KeychainPasswordItem.swift */; };
 		03782E82210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */; };
 		03AB04A8210B0BEA0030F9D1 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */; };
 		03B556A0210B2844004F0F49 /* TestioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5569F210B2844004F0F49 /* TestioError.swift */; };
@@ -70,6 +71,7 @@
 		033E4F09210C7CDC0039167F /* ServerPresenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPresenterViewModel.swift; sourceTree = "<group>"; };
 		033E4F0B210C7D890039167F /* ServerPresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPresenterViewController.swift; sourceTree = "<group>"; };
 		033E4F0C210C7D890039167F /* ServerPresenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerPresenterViewController.xib; sourceTree = "<group>"; };
+		033E4F10210C89F90039167F /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTaskPerformingType.swift; sourceTree = "<group>"; };
 		03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		03B5569F210B2844004F0F49 /* TestioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestioError.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */,
 				03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */,
 				03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */,
+				033E4F0F210C89E40039167F /* Keychain */,
 			);
 			path = Testio;
 			sourceTree = "<group>";
@@ -164,6 +167,14 @@
 				033C90C6210A172800C9C0BF /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		033E4F0F210C89E40039167F /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				033E4F10210C89F90039167F /* KeychainPasswordItem.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		03782E80210BA08300EAAFB0 /* Servers */ = {
@@ -402,6 +413,7 @@
 				033C90CB210AE27000C9C0BF /* LoginViewModel.swift in Sources */,
 				033C909D2109EB4600C9C0BF /* AppDelegate.swift in Sources */,
 				033C90BF2109EC2E00C9C0BF /* TestioUser.swift in Sources */,
+				033E4F11210C89F90039167F /* KeychainPasswordItem.swift in Sources */,
 				03B556A0210B2844004F0F49 /* TestioError.swift in Sources */,
 				03B556A4210B47FD004F0F49 /* LoadingViewController.swift in Sources */,
 				033C90BD2109EC2100C9C0BF /* TestioNetworkService.swift in Sources */,
