@@ -19,6 +19,7 @@ class ServerPresenterViewController: UIViewController, BindableType {
     var viewModel: ViewModelType
     
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var headerView: UIView!
     
     init(viewModel: ViewModelType) {
         self.viewModel = viewModel
@@ -31,11 +32,10 @@ class ServerPresenterViewController: UIViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupAppearance()
     }
 
     func bindViewModel() {
-        
         viewModel.serverResults.drive(tableView.rx.items) { (tableView: UITableView, index: Int, element: TestioServer) in
             let cell = UITableViewCell(style: UITableViewCellStyle.value2, reuseIdentifier: nil)
             cell.textLabel?.text = element.name
@@ -43,6 +43,24 @@ class ServerPresenterViewController: UIViewController, BindableType {
             return cell
         }
         .disposed(by: disposeBag)
+    }
+    
+}
+
+extension ServerPresenterViewController {
+    
+    private func setupAppearance() {
+        headerView.backgroundColor = Colors.backgroundColor
+        view.backgroundColor = Colors.backgroundColor
+
+        let header = ServersTableViewHeader()
+        tableView.tableHeaderView = header
+        header.addConstraints()
+        
+        let leftLabelText = NSLocalizedString("SERVER_NAME", comment: "").uppercased()
+        let rightLabelText = NSLocalizedString("SERVER_DISTANCE", comment: "").uppercased()
+        header.update(withLeftLabelText: leftLabelText,
+                      rightLabelText: rightLabelText)
     }
     
 }

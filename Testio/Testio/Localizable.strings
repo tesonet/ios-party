@@ -22,3 +22,8 @@
 
 "TASK_AUTHENTICATION" = "Authenticating...";
 "TASK_RETRIEVING_SERVERS" = "Fetching the list...";
+
+// Servers table view
+
+"SERVER_DISTANCE" = "Distance";
+"SERVER_NAME" = "Server";

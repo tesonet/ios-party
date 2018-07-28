@@ -11,6 +11,7 @@ import UIKit
 struct Colors {
     
     static let actionColor = UIColor.rgbColor(red: 159, green: 214, blue: 51, alpha: 1)
+    static let backgroundColor = UIColor.rgbColor(red: 240, green: 240, blue: 240, alpha: 1)
     
 }
 
