@@ -10,7 +10,7 @@ import UIKit
 
 class SortSelectionView: UIView {
 
-    static let defaultHeight: CGFloat = 60
+    static let defaultHeight: CGFloat = 50
     
     private lazy var blurEffectView: UIVisualEffectView = {
         let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
@@ -18,7 +18,7 @@ class SortSelectionView: UIView {
         return blurEffectView
     }()
     
-    private lazy var sortButton: UIButton = {
+    lazy var sortButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(#imageLiteral(resourceName: "ico-sort-light"), for: .normal)
         button.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0)

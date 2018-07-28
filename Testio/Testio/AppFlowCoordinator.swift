@@ -12,7 +12,12 @@ import Action
 
 protocol PromptCoordinatingType {
     
-    func promptFor<Action : CustomStringConvertible>(_ message: String, cancelAction: Action, actions: [Action]?) -> Observable<Action>
+    func promptFor<Action : CustomStringConvertible>(title: String?,
+                                                     message: String?,
+                                                     cancelAction: Action,
+                                                     actions: [Action]?,
+                                                     style: UIAlertControllerStyle) -> Observable<Action>
+    
     func prompt(forError error: Error) -> Observable <String>
 
 }
@@ -98,7 +103,7 @@ class AppFlowCoordinator: UINavigationController {
     }
     
     private func serverPresenterStack() -> ServerPresenterViewController {
-        let serverPresenterViewModel = ServerPresenterViewModel()
+        let serverPresenterViewModel = ServerPresenterViewModel(promptCoordinator: self)
         let serverPresenterViewController = ServerPresenterViewController(viewModel: serverPresenterViewModel)
         serverPresenterViewController.setupForViewModel()
         return serverPresenterViewController
@@ -150,14 +155,19 @@ extension AppFlowCoordinator: PromptCoordinatingType {
     
     func prompt(forError error: Error) -> Observable<String> {
         let cancelTitle = NSLocalizedString("ALERT_ACKNOWLEDGE", comment: "")
-        return promptFor(error.localizedDescription, cancelAction: cancelTitle, actions: nil)
+        let alertTitle = NSLocalizedString("ALERT", comment: "")
+        
+        return promptFor(title: alertTitle, message: error.localizedDescription, cancelAction: cancelTitle, actions: nil)
     }
     
-    func promptFor<Action : CustomStringConvertible>(_ message: String, cancelAction: Action, actions: [Action]?) -> Observable<Action> {
+    func promptFor<Action : CustomStringConvertible>(title: String? = nil,
+                                                     message: String? = nil,
+                                                     cancelAction: Action,
+                                                     actions: [Action]?,
+                                                     style: UIAlertControllerStyle = .alert) -> Observable<Action> {
         return Observable.create { [unowned self] observer in
             
-            let alertTitle = NSLocalizedString("ALERT", comment: "")
-            let alertView = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
+            let alertView = UIAlertController(title: title, message: message, preferredStyle: style)
             
             alertView.addAction(UIAlertAction(title: cancelAction.description, style: .cancel) { _ in
                 observer.on(.next(cancelAction))

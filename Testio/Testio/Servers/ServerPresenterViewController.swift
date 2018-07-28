@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import Action
 
 class ServerPresenterViewController: UIViewController, BindableType {
     
@@ -20,6 +21,8 @@ class ServerPresenterViewController: UIViewController, BindableType {
     
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var headerView: UIView!
+    
+    private let sortView = SortSelectionView()
     
     init(viewModel: ViewModelType) {
         self.viewModel = viewModel
@@ -37,16 +40,20 @@ class ServerPresenterViewController: UIViewController, BindableType {
 
     func bindViewModel() {
         viewModel.serverResults.drive(tableView.rx.items) { (tableView: UITableView, index: Int, element: TestioServer) in
-            let indexPath = IndexPath(item: index, section: 0)
-            let cell = tableView.dequeueReusableCell(withIdentifier: ServerTableViewCell.reuseIdentifier, for: indexPath)
+                let indexPath = IndexPath(item: index, section: 0)
+                let cell = tableView.dequeueReusableCell(withIdentifier: ServerTableViewCell.reuseIdentifier, for: indexPath)
 
-            guard let serverCell = cell as? ServerTableViewCell else {
-                return cell
+                guard let serverCell = cell as? ServerTableViewCell else {
+                    return cell
+                }
+                serverCell.update(withLeftLabelText: element.name, rightLabelText: "\(element.distance)")
+                return serverCell
             }
-            serverCell.update(withLeftLabelText: element.name, rightLabelText: "\(element.distance)")
-            return serverCell
-        }
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
+        
+        sortView.sortButton.rx.tap
+            .subscribe(viewModel.sortSelection.inputs)
+            .disposed(by: disposeBag)
     }
     
 }
@@ -63,7 +70,6 @@ extension ServerPresenterViewController {
     }
     
     private func setupSortView() {
-        let sortView = SortSelectionView()
         view.addSubview(sortView)
         sortView.addConstraints()
     }
