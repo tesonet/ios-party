@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServerPresenterViewController" customModule="Testio" customModuleProvider="target">
             <connections>
                 <outlet property="headerView" destination="IaY-bA-atG" id="8Tv-B4-Yer"/>
+                <outlet property="logoutButton" destination="8KW-9q-SuF" id="1h0-c1-Jdr"/>
                 <outlet property="tableView" destination="eja-mL-Jth" id="SZu-yo-ief"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

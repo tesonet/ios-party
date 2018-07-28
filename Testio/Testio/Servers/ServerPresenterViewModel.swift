@@ -56,9 +56,17 @@ protocol ServerResultsPresenting {
     
 }
 
-class ServerPresenterViewModel: ServerResultsConsuming, ServerResultsPresenting {
+protocol LogoutPerforming {
+    
+    var logout: CocoaAction { get }
+    
+}
+
+class ServerPresenterViewModel: ServerResultsConsuming, ServerResultsPresenting, LogoutPerforming {
 
     private let disposeBag = DisposeBag()
+
+    var logout: CocoaAction
     
     var servers: AnyObserver<[TestioServer]> {
         return serversSubject.asObserver()
@@ -85,7 +93,9 @@ class ServerPresenterViewModel: ServerResultsConsuming, ServerResultsPresenting 
     
     private var promptCoordinator: PromptCoordinatingType
     
-    init(promptCoordinator: PromptCoordinatingType) {
+    init(promptCoordinator: PromptCoordinatingType,
+         logout: CocoaAction) {
+        self.logout = logout
         self.promptCoordinator = promptCoordinator
         
         sortSelection.elements

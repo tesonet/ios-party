@@ -53,12 +53,10 @@ class AppFlowCoordinator: UINavigationController {
         super.viewDidLoad()
         setNavigationBarHidden(true, animated: false)
         UIView.appearance().tintColor = Colors.actionColor
-        
-        startFlow()
     }
     
     func startFlow() {
-        setViewControllers([loginStack()], animated: false)
+        setViewControllers([loginStack()], animated: true)
         prepareToRetrieveServers()
     }
 
@@ -103,10 +101,20 @@ class AppFlowCoordinator: UINavigationController {
     }
     
     private func serverPresenterStack() -> ServerPresenterViewController {
-        let serverPresenterViewModel = ServerPresenterViewModel(promptCoordinator: self)
+        let serverPresenterViewModel = ServerPresenterViewModel(promptCoordinator: self, logout: logout())
         let serverPresenterViewController = ServerPresenterViewController(viewModel: serverPresenterViewModel)
         serverPresenterViewController.setupForViewModel()
         return serverPresenterViewController
+    }
+    
+    //MARK: - Logout
+    
+    func logout() -> CocoaAction {
+        return CocoaAction(workFactory: { [unowned self] _ -> Observable<Void> in
+            try? self.keychainWrapper.deleteCredentials()
+            self.startFlow()
+            return .empty()
+        })
     }
     
 }

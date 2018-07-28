@@ -21,6 +21,7 @@ class ServerPresenterViewController: UIViewController, BindableType {
     
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var headerView: UIView!
+    @IBOutlet private var logoutButton: UIButton!
     
     private let sortView = SortSelectionView()
     
@@ -54,6 +55,8 @@ class ServerPresenterViewController: UIViewController, BindableType {
         sortView.sortButton.rx.tap
             .subscribe(viewModel.sortSelection.inputs)
             .disposed(by: disposeBag)
+        
+        logoutButton.rx.action = viewModel.logout
     }
     
 }
