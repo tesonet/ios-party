@@ -7,10 +7,22 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct TestioServer: Codable {
+@objcMembers
+class TestioServer: Object, Codable {
     
-    let name: String
-    let distance: Double
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case distance
+    }
+    
+    dynamic var uuid = NSUUID().uuidString
+    dynamic var name = ""
+    dynamic var distance = 0.0
+    
+    override class func primaryKey() -> String? {
+        return "uuid"
+    }
     
 }

@@ -25,6 +25,7 @@ protocol ServerResultsProviding {
 class ServerRetrieverViewModel: LoadingViewModelType, ServerResultsProviding, ViewModelTaskPerformingType {
     
     private let serverRetriever: ServersRetrievingType
+    private let serverPersister: ServerPersisting
     
     private let disposeBag = DisposeBag()
 
@@ -52,17 +53,26 @@ class ServerRetrieverViewModel: LoadingViewModelType, ServerResultsProviding, Vi
     
     lazy var load: Action<TestioToken, [TestioServer]> = {
         return Action(workFactory: { [unowned self] token in
-            return self.servers(withToken: token)
+            return self.serverPersister.servers
+                .flatMap { persistedServers -> Observable<[TestioServer]> in
+                    if !persistedServers.isEmpty {
+                        return .just(persistedServers)
+                    }
+                    return self.servers(withToken: token)
+                }
         })
     }()
     
-    init(serverRetriever: ServersRetrievingType) {
+    init(serverRetriever: ServersRetrievingType,
+         serverPersister: ServerPersisting) {
+        self.serverPersister = serverPersister
         self.serverRetriever = serverRetriever
         addActionHandlers()
     }
     
     private func addActionHandlers() {
         load.elements
+            .flatMap { self.serverPersister.store(servers: $0) }
             .bind(to: serversSubject.asObserver())
             .disposed(by: disposeBag)
     }

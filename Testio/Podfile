@@ -8,7 +8,7 @@ target 'Testio' do
   pod 'RxSwift'
   pod 'RxOptional'
   pod 'Action'
-
+  pod 'RealmSwift'
 
   # Pods for Testio
 

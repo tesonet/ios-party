@@ -26,6 +26,7 @@ class AppFlowCoordinator: UINavigationController {
 
     private let networkService = TestioNetworkService()
     private let keychainWrapper = TestioKeychainWrapper()
+    private let serverPersistence = TestioServerPersistence()
     
     private var tokenProvider: LoginTokenProviding?
     
@@ -63,7 +64,8 @@ class AppFlowCoordinator: UINavigationController {
     //MARK: - Flow adjust helpers
     
     private func prepareToRetrieveServers() {
-        let serversViewModel = ServerRetrieverViewModel(serverRetriever: networkService)
+        let serversViewModel = ServerRetrieverViewModel(serverRetriever: networkService,
+                                                        serverPersister: serverPersistence)
         
         tokenProvider?.loginToken
             .observeOn(MainScheduler.instance)
@@ -111,9 +113,11 @@ class AppFlowCoordinator: UINavigationController {
     
     func logout() -> CocoaAction {
         return CocoaAction(workFactory: { [unowned self] _ -> Observable<Void> in
-            try? self.keychainWrapper.deleteCredentials()
-            self.startFlow()
-            return .empty()
+            self.serverPersistence.deleteServers()
+                .do(onCompleted: {
+                    try? self.keychainWrapper.deleteCredentials()
+                    self.startFlow()
+                })
         })
     }
     
