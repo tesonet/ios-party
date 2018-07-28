@@ -22,7 +22,12 @@ class AppFlowCoordinator: UINavigationController {
     private let networkService = TestioNetworkService()
     
     private var tokenProvider: LoginTokenProviding?
-    private var serverResultsProvider: ServersResultProviding?
+    
+    private var serverResultsProvider: ServerResultsProviding? {
+        didSet {
+            prepareToPresentServerList()
+        }
+    }
     
     private var currentTaskPerformer: ViewModelTaskPerformingType? {
         didSet {
@@ -51,7 +56,25 @@ class AppFlowCoordinator: UINavigationController {
         prepareToRetrieveServers()
     }
 
-    // MARK: - Login stack
+    //MARK: - Flow adjust helpers
+    
+    private func prepareToRetrieveServers() {
+        let serversViewModel = ServerRetrieverViewModel(serverRetriever: networkService)
+        
+        tokenProvider?.loginToken
+            .do(onNext: { [unowned self] _ in
+                self.currentTaskPerformer = serversViewModel
+                self.serverResultsProvider = serversViewModel
+            })
+            .subscribe(serversViewModel.load.inputs)
+            .disposed(by: disposeBag)
+    }
+    
+    private func prepareToPresentServerList() {
+        
+    }
+    
+    //MARK: - Login stack
     
     private func loginStack() -> LoginViewController {
         let loginViewModel = LoginViewModel(authorizationPerformer: networkService)
@@ -62,17 +85,9 @@ class AppFlowCoordinator: UINavigationController {
         loginViewController.setupForViewModel()
         return loginViewController
     }
-
-    private func prepareToRetrieveServers() {
-        let serversViewModel = ServersViewModel(serverRetriever: networkService)
+    
+    private func serverPresenterStack() {
         
-        tokenProvider?.loginToken
-            .do(onNext: { [unowned self] _ in
-                self.currentTaskPerformer = serversViewModel
-                self.serverResultsProvider = serversViewModel
-            })
-            .subscribe(serversViewModel.load.inputs)
-            .disposed(by: disposeBag)
     }
     
 }

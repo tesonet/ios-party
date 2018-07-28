@@ -1,5 +1,5 @@
 //
-//  ServersViewModel.swift
+//  ServerRetrieverViewModel.swift
 //  Testio
 //
 //  Created by Mindaugas on 27/07/2018.
@@ -16,13 +16,13 @@ protocol LoadingViewModelType {
     
 }
 
-protocol ServersResultProviding {
+protocol ServerResultsProviding {
     
     var servers: Observable<[TestioServer]> { get }
     
 }
 
-class ServersViewModel: LoadingViewModelType, ServersResultProviding, ViewModelTaskPerformingType {
+class ServerRetrieverViewModel: LoadingViewModelType, ServerResultsProviding, ViewModelTaskPerformingType {
     
     private let serverRetriever: ServersRetrievingType
     
