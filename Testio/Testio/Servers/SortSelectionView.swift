@@ -10,7 +10,7 @@ import UIKit
 
 class SortSelectionView: UIView {
 
-    static let defaultHeight: CGFloat = 50
+    static let defaultHeight: CGFloat = 40
     
     private lazy var blurEffectView: UIVisualEffectView = {
         let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
@@ -52,7 +52,7 @@ class SortSelectionView: UIView {
             rightAnchor.constraint(equalTo: superview.rightAnchor),
             leftAnchor.constraint(equalTo: superview.leftAnchor),
             bottomAnchor.constraint(equalTo: superview.bottomAnchor),
-            heightAnchor.constraint(equalToConstant: SortSelectionView.defaultHeight)
+            heightAnchor.constraint(equalToConstant: SortSelectionView.defaultHeight + superview.safeAreaInsets.bottom)
         ]
         
         NSLayoutConstraint.activate(constraints)

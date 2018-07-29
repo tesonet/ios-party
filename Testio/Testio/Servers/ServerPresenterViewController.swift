@@ -36,7 +36,12 @@ class ServerPresenterViewController: UIViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(sortView)
         setupAppearance()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        sortView.addConstraints()
     }
 
     func bindViewModel() {
@@ -69,19 +74,13 @@ extension ServerPresenterViewController {
 
         setupTableViewAppearance()
         setupTableViewHeader()
-        setupSortView()
-    }
-    
-    private func setupSortView() {
-        view.addSubview(sortView)
-        sortView.addConstraints()
     }
     
     private func setupTableViewAppearance()  {
         tableView.allowsSelection = false
         tableView.register(ServerTableViewCell.self, forCellReuseIdentifier: ServerTableViewCell.reuseIdentifier)
-        tableView.separatorColor = .gray
         tableView.contentInset = UIEdgeInsetsMake(0, 0, SortSelectionView.defaultHeight, 0)
+        tableView.separatorColor = .gray
     }
 
     private func setupTableViewHeader() {
