@@ -10,7 +10,7 @@ import UIKit
 
 class SortSelectionView: UIView {
 
-    static let defaultHeight: CGFloat = 40
+    static let defaultHeight: CGFloat = 50
     
     private lazy var blurEffectView: UIVisualEffectView = {
         let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))

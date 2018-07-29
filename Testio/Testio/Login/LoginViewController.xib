@@ -13,7 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Testio" customModuleProvider="target">
             <connections>
                 <outlet property="logInButton" destination="VHk-5f-sW0" id="Xjr-da-G0m"/>
+                <outlet property="loginControlStackView" destination="JeQ-sT-S1Z" id="VUc-bI-Rhx"/>
                 <outlet property="passwordTextField" destination="LmC-AI-N5l" id="l5f-2C-ya4"/>
+                <outlet property="stackViewCenterConstraint" destination="30I-aZ-IT5" id="j3a-Bi-rn8"/>
                 <outlet property="usernameTextField" destination="BBP-JC-9LS" id="OmV-14-8lL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -60,12 +62,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hMd-e2-O1a" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="2Vu-tN-jlG"/>
+                <constraint firstItem="JeQ-sT-S1Z" firstAttribute="top" secondItem="hvK-Lb-sWM" secondAttribute="bottom" constant="63.666666666666686" id="2bg-n7-i6r"/>
                 <constraint firstItem="JeQ-sT-S1Z" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="50" id="30I-aZ-IT5"/>
                 <constraint firstItem="hMd-e2-O1a" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="K6U-5i-ano"/>
                 <constraint firstItem="hMd-e2-O1a" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Nxh-Ym-tne"/>
                 <constraint firstItem="hMd-e2-O1a" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="PZB-St-Rei"/>
                 <constraint firstItem="JeQ-sT-S1Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="UWk-D5-RHI"/>
-                <constraint firstItem="hvK-Lb-sWM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="aeR-74-4jO"/>
                 <constraint firstItem="JeQ-sT-S1Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c9d-T5-EyG"/>
                 <constraint firstItem="hvK-Lb-sWM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f09-pp-LNk"/>
             </constraints>
@@ -76,7 +78,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bg" width="640" height="360"/>
+        <image name="bg" width="960" height="540"/>
         <image name="logo-white" width="246" height="64"/>
     </resources>
 </document>

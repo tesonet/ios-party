@@ -22,6 +22,10 @@ final class LoginViewController: UIViewController, BindableType {
     @IBOutlet private var usernameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var logInButton: UIButton!
+    @IBOutlet private var loginControlStackView: UIStackView!
+    @IBOutlet private var stackViewCenterConstraint: NSLayoutConstraint!
+    
+    private var loginControlReferenceFrame: CGRect = .zero
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -30,7 +34,6 @@ final class LoginViewController: UIViewController, BindableType {
     init(viewModel: ViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,17 +43,28 @@ final class LoginViewController: UIViewController, BindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearance()
+        bindKeyboardNotification()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        guard loginControlReferenceFrame == .zero else {
+            return
+        }
+        loginControlReferenceFrame = loginControlStackView.frame
     }
     
     func bindViewModel() {
-        
         usernameTextField.text = viewModel.initialCredentials?.username
         passwordTextField.text = viewModel.initialCredentials?.password
         
-        logInButton.rx.tap
+        logInButton.rx.tap.asObservable()
+            .do(onNext: { [unowned self] _ in
+                self.usernameTextField.resignFirstResponder()
+                self.passwordTextField.resignFirstResponder()
+            })
             .subscribe(viewModel.authorize.inputs)
             .disposed(by: disposeBag)
-
+        
         viewModel.areCredentialsValidForSubmit
             .bind(to: logInButton.rx.isEnabled)
             .disposed(by: disposeBag)
@@ -61,7 +75,41 @@ final class LoginViewController: UIViewController, BindableType {
             .bind(to: viewModel.credentialsConsumer)
             .disposed(by: disposeBag)
     }
+    
+    
 
+}
+
+extension LoginViewController {
+    
+    private func bindKeyboardNotification() {
+        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillChangeFrame)
+            .map { [unowned self] notification -> (CGFloat, TimeInterval)? in
+                let userInfo = notification.userInfo
+                guard let endFrame = userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect,
+                    let duration = userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else {
+                        return nil
+                }
+                let intersection = self.loginControlReferenceFrame.intersection(endFrame)
+                let heightOffset = intersection.isNull ? 0 : intersection.height
+                return (heightOffset, duration)
+            }
+            .filterNil()
+            .do(onNext: { [unowned self] animationProperties in
+                self.animateStackViewCenter(toOffset: animationProperties.0,
+                                            animationDuration: animationProperties.1)
+            })
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+    
+    private func animateStackViewCenter(toOffset offset: CGFloat, animationDuration: TimeInterval) {
+        self.stackViewCenterConstraint.constant = -offset
+        UIView.animate(withDuration: animationDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
 }
 
 extension LoginViewController {
