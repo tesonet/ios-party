@@ -58,7 +58,9 @@ final class AppFlowCoordinator: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarHidden(true, animated: false)
+        delegate = self
         UIView.appearance().tintColor = Colors.actionColor
+        view.backgroundColor = .lightGray
     }
     
     func startFlow() {
@@ -124,6 +126,22 @@ final class AppFlowCoordinator: UINavigationController {
                     self.startFlow()
                 })
         })
+    }
+    
+}
+
+extension AppFlowCoordinator: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let duration = TimeInterval(UINavigationControllerHideShowBarDuration) * 2
+        switch operation {
+        case .push:
+            return AppFlowAnimator(duration: duration, isPresenting: true)
+        case .pop:
+            return AppFlowAnimator(duration: duration, isPresenting: false)
+        case .none:
+            return nil
+        }
     }
     
 }
