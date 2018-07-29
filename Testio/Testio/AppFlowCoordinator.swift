@@ -55,12 +55,18 @@ final class AppFlowCoordinator: UINavigationController {
         return viewController
     }()
     
+    private lazy var backgroundImageView: UIImageView = {
+        let image = UIImage(named: "background")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBarHidden(true, animated: false)
         delegate = self
-        UIView.appearance().tintColor = Colors.actionColor
-        view.backgroundColor = .lightGray
+        setupAppearance()
     }
     
     func startFlow() {
@@ -126,6 +132,26 @@ final class AppFlowCoordinator: UINavigationController {
                     self.startFlow()
                 })
         })
+    }
+    
+}
+
+extension AppFlowCoordinator {
+
+    private func setupAppearance() {
+        setNavigationBarHidden(true, animated: false)
+        UIView.appearance().tintColor = Colors.actionColor
+        view.backgroundColor = .lightGray
+        addImageView()
+    }
+    
+    private func addImageView() {
+        view.insertSubview(backgroundImageView, at: 0)
+        let constraints = [backgroundImageView.leftAnchor.constraint(equalTo: view.leftAnchor),
+                           backgroundImageView.rightAnchor.constraint(equalTo: view.rightAnchor),
+                           backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+                           backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)]
+        NSLayoutConstraint.activate(constraints)
     }
     
 }

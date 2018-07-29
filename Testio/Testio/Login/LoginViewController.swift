@@ -113,6 +113,7 @@ extension LoginViewController {
 extension LoginViewController {
     
     private func setupAppearance() {
+        view.backgroundColor = .clear
         setupTextFields()
         setupButton()
     }

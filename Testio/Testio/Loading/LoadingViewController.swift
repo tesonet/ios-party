@@ -30,6 +30,7 @@ final class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingTextLabel.textColor = .white
+        view.backgroundColor = .clear
     }
     
     override func viewWillAppear(_ animated: Bool) {
