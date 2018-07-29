@@ -24,9 +24,14 @@ protocol PromptCoordinatingType {
 
 final class AppFlowCoordinator: UINavigationController {
 
+    // Helper services are injected into appropriate view models
+    
     private let networkService = TestioNetworkService()
     private let keychainWrapper = TestioKeychainWrapper()
     private let serverPersistence = TestioServerPersistence()
+    
+    // Every data task performing view model exposes
+    // itself through `ViewModelTaskPerformingType` and a domain specific protocol.
     
     private var tokenProvider: LoginTokenProviding?
     
