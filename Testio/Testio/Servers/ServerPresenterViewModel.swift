@@ -101,7 +101,9 @@ class ServerPresenterViewModel: ServerResultsConsuming, ServerResultsPresenting,
         sortSelection.elements
             .map { ServerSortType.from(translationString: $0) }
             .filterNil()
-            .flatMap { self.sortServers(byType: $0) }
+            .flatMap { [unowned self] servers in
+                self.sortServers(byType: servers)
+            }
             .bind(to: serversSubject)
             .disposed(by: disposeBag)
     }

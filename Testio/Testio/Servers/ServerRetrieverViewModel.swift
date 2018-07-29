@@ -72,7 +72,9 @@ class ServerRetrieverViewModel: LoadingViewModelType, ServerResultsProviding, Vi
     
     private func addActionHandlers() {
         load.elements
-            .flatMap { self.serverPersister.store(servers: $0) }
+            .flatMap { [unowned self] servers in
+                self.serverPersister.store(servers: servers)
+            }
             .bind(to: serversSubject.asObserver())
             .disposed(by: disposeBag)
     }

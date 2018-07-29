@@ -144,24 +144,20 @@
 			isa = PBXGroup;
 			children = (
 				033C909C2109EB4600C9C0BF /* AppDelegate.swift */,
+				033C90C4210A161B00C9C0BF /* AppFlowCoordinator.swift */,
 				033C90A32109EB4700C9C0BF /* Assets.xcassets */,
 				033C90A52109EB4700C9C0BF /* LaunchScreen.storyboard */,
 				033C90A82109EB4700C9C0BF /* Info.plist */,
-				033C90BC2109EC2100C9C0BF /* TestioNetworkService.swift */,
 				03D94BB1210B6C3C00C7E7E8 /* Testio Entities */,
-				033C90C2210A116400C9C0BF /* Codable+Extensions.swift */,
-				033C90C4210A161B00C9C0BF /* AppFlowCoordinator.swift */,
 				03782E80210BA08300EAAFB0 /* Servers */,
 				03B556A1210B47E3004F0F49 /* Loading */,
 				033C90CC210AE27B00C9C0BF /* Login */,
 				033E4F0F210C89E40039167F /* Keychain */,
-				033E4F18210CC1960039167F /* Persistence */,
-				033C90CD210AE58E00C9C0BF /* BindableType.swift */,
+				033E4F18210CC1960039167F /* Services */,
+				03421C91210DAFAF00A0F384 /* Common Protocols */,
+				03421C92210DAFEA00A0F384 /* Common UI Elements */,
 				033C90CF210AF68200C9C0BF /* Localizable.strings */,
 				033C90D1210AFB0700C9C0BF /* TestioUIConstants.swift */,
-				03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */,
-				03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */,
-				0329376E210CDDC400815827 /* ReusableView.swift */,
 			);
 			path = Testio;
 			sourceTree = "<group>";
@@ -195,12 +191,32 @@
 			path = Keychain;
 			sourceTree = "<group>";
 		};
-		033E4F18210CC1960039167F /* Persistence */ = {
+		033E4F18210CC1960039167F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				033C90BC2109EC2100C9C0BF /* TestioNetworkService.swift */,
 				033E4F16210CC1890039167F /* TestioServerPersistence.swift */,
 			);
-			path = Persistence;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		03421C91210DAFAF00A0F384 /* Common Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0329376E210CDDC400815827 /* ReusableView.swift */,
+				033C90CD210AE58E00C9C0BF /* BindableType.swift */,
+				03782E81210BAF3D00EAAFB0 /* ViewModelTaskPerformingType.swift */,
+			);
+			path = "Common Protocols";
+			sourceTree = "<group>";
+		};
+		03421C92210DAFEA00A0F384 /* Common UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				03293770210CDE9800815827 /* SortSelectionView.swift */,
+				03AB04A7210B0BEA0030F9D1 /* PaddedTextField.swift */,
+			);
+			path = "Common UI Elements";
 			sourceTree = "<group>";
 		};
 		03782E80210BA08300EAAFB0 /* Servers */ = {
@@ -212,7 +228,6 @@
 				033E4F09210C7CDC0039167F /* ServerPresenterViewModel.swift */,
 				0329376A210CCC8100815827 /* ServersTableViewHeader.swift */,
 				0329376C210CD91C00815827 /* ServerTableViewCell.swift */,
-				03293770210CDE9800815827 /* SortSelectionView.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -229,6 +244,7 @@
 		03D94BB1210B6C3C00C7E7E8 /* Testio Entities */ = {
 			isa = PBXGroup;
 			children = (
+				033C90C2210A116400C9C0BF /* Codable+Extensions.swift */,
 				033C90BE2109EC2E00C9C0BF /* TestioUser.swift */,
 				03D94BAF210B67D400C7E7E8 /* TestioServer.swift */,
 				03B5569F210B2844004F0F49 /* TestioError.swift */,

@@ -75,8 +75,6 @@ final class LoginViewController: UIViewController, BindableType {
             .bind(to: viewModel.credentialsConsumer)
             .disposed(by: disposeBag)
     }
-    
-    
 
 }
 

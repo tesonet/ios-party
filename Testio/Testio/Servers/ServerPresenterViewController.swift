@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import Action
 
-class ServerPresenterViewController: UIViewController, BindableType {
+final class ServerPresenterViewController: UIViewController, BindableType {
     
     typealias ViewModelType = ServerPresenterViewModel
     

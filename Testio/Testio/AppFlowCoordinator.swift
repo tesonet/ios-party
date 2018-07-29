@@ -22,7 +22,7 @@ protocol PromptCoordinatingType {
 
 }
 
-class AppFlowCoordinator: UINavigationController {
+final class AppFlowCoordinator: UINavigationController {
 
     private let networkService = TestioNetworkService()
     private let keychainWrapper = TestioKeychainWrapper()
@@ -145,13 +145,13 @@ extension AppFlowCoordinator {
             .filter { $0 }
             .map { [unowned self] _ in self.currentTaskPerformer?.taskType }
             .do(onNext: { [unowned self] taskType in
-                self.pushLoadingViewController(withMessage: taskType?.description)
+                self.updateLoadingViewController(withMessage: taskType?.description)
             })
             .subscribe()
             .disposed(by: disposeBag)
     }
     
-    private func pushLoadingViewController(withMessage message: String?) {
+    private func updateLoadingViewController(withMessage message: String?) {
         loadingViewController.loadingStatusText = message
         
         guard loadingViewController.parent == nil else {
@@ -196,7 +196,7 @@ extension AppFlowCoordinator: PromptCoordinatingType {
             self.present(alertView, animated: true, completion: nil)
             
             return Disposables.create {
-                alertView.dismiss(animated:false, completion: nil)
+                alertView.dismiss(animated: false, completion: nil)
             }
         }
     }

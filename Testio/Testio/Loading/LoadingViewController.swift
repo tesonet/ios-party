@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class LoadingViewController: UIViewController {
+final class LoadingViewController: UIViewController {
     
     @IBOutlet private var loadingTextLabel: UILabel!
     @IBOutlet private var loadingIndicatorImageView: UIImageView!

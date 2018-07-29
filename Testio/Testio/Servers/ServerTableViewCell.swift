@@ -39,7 +39,6 @@ class ServerTableViewCell: UITableViewCell, ReusableView {
     
 }
 
-
 extension ServerTableViewCell {
 
     func update(withLeftLabelText leftText: String, rightLabelText rightText: String) {
