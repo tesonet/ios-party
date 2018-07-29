@@ -58,7 +58,6 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     lazy var authorize: Action<Void, TestioToken> = {
         return Action(workFactory: { [unowned self] in
             self.credentialsObservable
-                .delay(0.5, scheduler: MainScheduler.instance)
                 .flatMap { self.authorize(user: $0) }
         })
     }()
