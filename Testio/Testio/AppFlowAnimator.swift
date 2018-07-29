@@ -10,11 +10,10 @@ import UIKit
 
 class AppFlowAnimator : NSObject, UIViewControllerAnimatedTransitioning {
     
-    var duration: TimeInterval
+    var duration: TimeInterval = 0.4
     var isPresenting: Bool
     
-    init(duration: TimeInterval, isPresenting: Bool) {
-        self.duration = duration
+    init(isPresenting: Bool) {
         self.isPresenting = isPresenting
     }
     

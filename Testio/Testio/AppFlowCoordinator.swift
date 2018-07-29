@@ -159,12 +159,12 @@ extension AppFlowCoordinator {
 extension AppFlowCoordinator: UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let duration = TimeInterval(UINavigationControllerHideShowBarDuration) * 2
+
         switch operation {
         case .push:
-            return AppFlowAnimator(duration: duration, isPresenting: true)
+            return AppFlowAnimator(isPresenting: true)
         case .pop:
-            return AppFlowAnimator(duration: duration, isPresenting: false)
+            return AppFlowAnimator(isPresenting: false)
         case .none:
             return nil
         }
