@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Testio
+
+  Created by Mindaugas on 27/07/2018.
+  Copyright © 2018 Mindaugas Jucius. All rights reserved.
+*/
+
+// Errors
+
+"ALERT_UNAUTHORIZED" = "Unauthorized access.";
+"ALERT_UNKNOWN" = "Unknown issue occured.";
+
+"ALERT_INVALID_CREDENTIALS" = "Please enter username and password.";
+
+
+// Login screen
+
+"USERNAME_PLACEHOLDER" = "Username";
+"PASSWORD_PLACEHOLDER" = "Password";
+
+"PERFORM_LOG_IN" = "Log In";
+
+"ALERT" = "Alert";
+"ALERT_ACKNOWLEDGE" = "Got it";
+"ALERT_CANCEL" = "Cancel";
+
+// Loading screen
+
+"TASK_AUTHENTICATION" = "Authenticating...";
+"TASK_RETRIEVING_SERVERS" = "Fetching the list...";
+
+// Servers table view
+
+"SERVER_DISTANCE" = "Distance";
+"SERVER_NAME" = "Server";
+
+"SORT" = "Sort";
+"SORT_DISTANCE" = "By Distance";
+"SORT_ALPHANUMERICAL" = "Alphanumerical";
