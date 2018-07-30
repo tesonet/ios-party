@@ -54,26 +54,18 @@ final class LoginViewController: UIViewController, BindableType {
     }
     
     func bindViewModel() {
-        usernameTextField.text = viewModel.initialCredentials?.username
-        passwordTextField.text = viewModel.initialCredentials?.password
         
         logInButton.rx.tap.asObservable()
+            .map { [unowned self] _ -> (String?, String?) in
+                (self.usernameTextField.text, self.passwordTextField.text)
+            }
             .do(onNext: { [unowned self] _ in
                 self.usernameTextField.resignFirstResponder()
                 self.passwordTextField.resignFirstResponder()
             })
             .subscribe(viewModel.authorize.inputs)
             .disposed(by: disposeBag)
-        
-        viewModel.areCredentialsValidForSubmit
-            .bind(to: logInButton.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
-        let credentialsObservable = Observable.combineLatest(usernameTextField.rx.text.filterNil().distinctUntilChanged(),
-                                                             passwordTextField.rx.text.filterNil().distinctUntilChanged())
-        credentialsObservable
-            .bind(to: viewModel.credentialsConsumer)
-            .disposed(by: disposeBag)
+
     }
 
 }

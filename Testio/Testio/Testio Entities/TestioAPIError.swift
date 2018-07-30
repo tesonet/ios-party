@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum TestioError: Error {
+enum TestioAPIError: Error {
     case unauthorized
     case unknown(String?)
 }
 
-extension TestioError: LocalizedError {
+extension TestioAPIError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
@@ -27,9 +27,9 @@ extension TestioError: LocalizedError {
     
 }
 
-extension TestioError {
+extension TestioAPIError {
     
-    static func error(forStatusCode code: Int) -> TestioError {
+    static func error(forStatusCode code: Int) -> TestioAPIError {
         switch code {
         case 401:
             return .unauthorized

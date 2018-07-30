@@ -20,8 +20,8 @@ private enum TestioEndpoint: String {
     case servers
 }
 
-typealias AuthorizationHandler = (Result<TestioToken, TestioError>) -> ()
-typealias ServerRetrievalHandler = (Result<[TestioServer], TestioError>) -> ()
+typealias AuthorizationHandler = (Result<TestioToken, TestioAPIError>) -> ()
+typealias ServerRetrievalHandler = (Result<[TestioServer], TestioAPIError>) -> ()
 
 protocol ServersRetrievingType {
 
@@ -72,7 +72,7 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
         performDataTask(withRequest: request, handler: handler)
     }
     
-    private func performDataTask<Type: Codable>(withRequest request: URLRequest, handler: @escaping (Result<Type, TestioError>) -> ()) {
+    private func performDataTask<Type: Codable>(withRequest request: URLRequest, handler: @escaping (Result<Type, TestioAPIError>) -> ()) {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: request) { data, response, error in
             
@@ -87,7 +87,7 @@ class TestioNetworkService: AuthorizationPerformingType, ServersRetrievingType {
             }
             
             guard self.acceptableStatusCodes ~= httpResponse.statusCode else {
-                let customError = TestioError.error(forStatusCode: httpResponse.statusCode)
+                let customError = TestioAPIError.error(forStatusCode: httpResponse.statusCode)
                 handler(.failure(customError))
                 return
             }

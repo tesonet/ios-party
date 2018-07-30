@@ -11,12 +11,24 @@ import RxSwift
 import RxCocoa
 import Action
 
+enum TestioLoginError: Error {
+    case invalidCredentials
+}
+
+extension TestioLoginError: LocalizedError {
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidCredentials:
+            return NSLocalizedString("ALERT_INVALID_CREDENTIALS", comment: "")
+        }
+    }
+    
+}
+
 protocol LoginViewModelType {
     
-    var authorize: Action<Void, TestioToken> { get }
-    var credentialsConsumer: AnyObserver<(String, String)> { get }
-    var initialCredentials: TestioUser? { get }
-    var areCredentialsValidForSubmit: Observable<Bool> { get }
+    var authorize: Action<(String?, String?), (TestioUser, TestioToken)> { get }
 
 }
 
@@ -55,34 +67,24 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     
     //MARK: - LoginViewModelType
     
-    lazy var authorize: Action<Void, TestioToken> = {
-        return Action(workFactory: { [unowned self] in
-            self.credentialsObservable
-                .flatMap { self.authorize(user: $0) }
+    lazy var authorize: Action<(String?, String?), (TestioUser, TestioToken)> = {
+        return Action(workFactory: { [unowned self] (username, password) in
+            guard self.areCredentialsValidForSubmit(credentials: (username, password)) else {
+                return .error(TestioLoginError.invalidCredentials)
+            }
+            let userToAuthorize = TestioUser.init(username: username!, password: password!)
+            return self.authorize(user: userToAuthorize).map { (userToAuthorize, $0) }
         })
     }()
     
     //MARK: - Credentials
 
-    var initialCredentials: TestioUser?
-    
-    let credentialsConsumingSubject = ReplaySubject<(String, String)>.create(bufferSize: 1)
-    
-    private var credentialsObservable: Observable<TestioUser> {
-        return credentialsConsumingSubject.asObservable()
-            .map { TestioUser.init(username: $0, password: $1) }
-    }
-    
-    var credentialsConsumer: AnyObserver<(String, String)> {
-        return credentialsConsumingSubject.asObserver()
-    }
-    
-    var areCredentialsValidForSubmit: Observable<Bool> {
-        return credentialsObservable
-            .map { credentials in
-                !credentials.username.trimmingCharacters(in: .whitespaces).isEmpty &&
-                !credentials.password.trimmingCharacters(in: .whitespaces).isEmpty
+    private func areCredentialsValidForSubmit(credentials: (String?, String?)) -> Bool {
+        guard let username = credentials.0, let password = credentials.1 else {
+            return false
         }
+        return !username.trimmingCharacters(in: .whitespaces).isEmpty &&
+            !password.trimmingCharacters(in: .whitespaces).isEmpty
     }
     
     //MARK: - Initialization
@@ -92,27 +94,17 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
         self.authorizationPerformer = authorizationPerformer
         self.credentialsManager = credentialsManager
         addAuthorizeActionResultHandlers()
-        resolveCredentials()
-    }
-    
-    private func resolveCredentials() {
-        guard let user = try? credentialsManager.retrieveUser() else {
-            initialCredentials = nil
-            return
-        }
-        
-        initialCredentials = user
-        credentialsConsumingSubject.onNext((user.username, user.password))
     }
     
     private func addAuthorizeActionResultHandlers() {
         authorize.elements
+            .map { $0.1 }
             .bind(to: loginTokenSubject.asObserver())
             .disposed(by: disposeBag)
         
         //Only store credentials to Keychain if authorization returned no errors
         authorize.elements
-            .flatMap { [unowned self] _ in self.credentialsObservable }
+            .map { $0.0 }
             .flatMap { [unowned self] user in self.storeToKeychain(user: user) }
             .subscribe()
             .disposed(by: disposeBag)

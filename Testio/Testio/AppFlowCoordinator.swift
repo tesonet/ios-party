@@ -70,7 +70,17 @@ final class AppFlowCoordinator: UINavigationController {
     }
     
     func startFlow() {
-        setViewControllers([loginStack()], animated: true)
+        let viewModel = loginViewModel()
+        if let user = try? keychainWrapper.retrieveUser() {
+            viewModel.authorize
+                .execute((user.username, user.password))
+                .subscribe()
+                .disposed(by: disposeBag)
+        } else {
+            let loginViewController = self.loginViewController(withViewModel: viewModel)
+            setViewControllers([loginViewController], animated: true)
+        }
+        
         prepareToRetrieveServers()
     }
 
@@ -104,16 +114,22 @@ final class AppFlowCoordinator: UINavigationController {
     
     //MARK: - Login stack
     
-    private func loginStack() -> LoginViewController {
+    private func loginViewModel() -> LoginViewModelType & LoginTokenProviding {
         let loginViewModel = LoginViewModel(authorizationPerformer: networkService,
                                             credentialsManager: keychainWrapper)
         currentTaskPerformer = loginViewModel
         tokenProvider = loginViewModel
-        
-        let loginViewController = LoginViewController(viewModel: loginViewModel)
+        return loginViewModel
+    }
+    
+    
+    private func loginViewController(withViewModel viewModel: LoginViewController.ViewModelType) -> LoginViewController {
+        let loginViewController = LoginViewController(viewModel: viewModel)
         loginViewController.setupForViewModel()
         return loginViewController
     }
+    
+    //MARK: - Server presenter stack
     
     private func serverPresenterStack() -> ServerPresenterViewController {
         let serverPresenterViewModel = ServerPresenterViewModel(promptCoordinator: self, logout: logout())

@@ -6,6 +6,14 @@
   Copyright © 2018 Mindaugas Jucius. All rights reserved.
 */
 
+// Errors
+
+"ALERT_UNAUTHORIZED" = "Unauthorized access.";
+"ALERT_UNKNOWN" = "Unknown issue occured.";
+
+"ALERT_INVALID_CREDENTIALS" = "Please enter username and password.";
+
+
 // Login screen
 
 "USERNAME_PLACEHOLDER" = "Username";
@@ -14,8 +22,6 @@
 "PERFORM_LOG_IN" = "Log In";
 
 "ALERT" = "Alert";
-"ALERT_UNAUTHORIZED" = "Unauthorized access.";
-"ALERT_UNKNOWN" = "Unknown issue occured.";
 "ALERT_ACKNOWLEDGE" = "Got it";
 "ALERT_CANCEL" = "Cancel";
 
