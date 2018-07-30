@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D890AC00E77F096E9464BD7E18F79636"
+               BlueprintIdentifier = "B7FF140175135FD373999DAC4691872A"
                BuildableName = "Pods_Tesio_App.framework"
                BlueprintName = "Pods-Tesio App"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D890AC00E77F096E9464BD7E18F79636"
+            BlueprintIdentifier = "B7FF140175135FD373999DAC4691872A"
             BuildableName = "Pods_Tesio_App.framework"
             BlueprintName = "Pods-Tesio App"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -7,5 +7,6 @@ target 'Tesio App' do
   pod 'Alamofire'
   pod 'SwiftKeychainWrapper'
   pod 'NVActivityIndicatorView'
+  pod 'RealmSwift'
 
 end

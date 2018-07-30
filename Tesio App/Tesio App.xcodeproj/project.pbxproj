@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1110793821099587002F82FD /* ServersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1110793721099587002F82FD /* ServersListTVC.swift */; };
+		1117A373210A41E900039EFC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117A372210A41E900039EFC /* Server.swift */; };
+		1117A375210A44B200039EFC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117A374210A44B200039EFC /* Token.swift */; };
+		111D9D70210A636D0093E910 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111D9D6F210A636D0093E910 /* ServerCell.swift */; };
 		1129A4D02108F17D006EB84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129A4CF2108F17D006EB84F /* AppDelegate.swift */; };
 		1129A4D22108F17D006EB84F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129A4D12108F17D006EB84F /* LoginVC.swift */; };
 		1129A4D52108F17D006EB84F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1129A4D32108F17D006EB84F /* Main.storyboard */; };
@@ -15,13 +18,22 @@
 		1129A4E32108F2CE006EB84F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129A4E22108F2CE006EB84F /* APIManager.swift */; };
 		1129A4E52108FF3F006EB84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1129A4E42108FF3F006EB84F /* Assets.xcassets */; };
 		112EEE4921090EE4008816CE /* TesioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EEE4821090EE4008816CE /* TesioHelper.swift */; };
-		112EEE4B210910F7008816CE /* TodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EEE4A210910F7008816CE /* TodoRouter.swift */; };
+		112EEE4B210910F7008816CE /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EEE4A210910F7008816CE /* APIRouter.swift */; };
 		112EEE4E2109137B008816CE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EEE4D2109137B008816CE /* String+Extensions.swift */; };
+		1144DAC3210AD90200E76650 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144DAC2210AD90200E76650 /* HeaderView.swift */; };
+		1144DAC6210ADA0500E76650 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1144DAC5210ADA0500E76650 /* HeaderView.xib */; };
+		1144DAC8210ADB9900E76650 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144DAC7210ADB9900E76650 /* UIView+Extensions.swift */; };
+		1144DACA210AE2E900E76650 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144DAC9210AE2E900E76650 /* SortView.swift */; };
+		1144DACC210AE30D00E76650 /* SortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1144DACB210AE30D00E76650 /* SortView.xib */; };
+		1144DACE210CF98300E76650 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144DACD210CF98300E76650 /* UITableView+Extensions.swift */; };
 		7F07E94036070DC2FD8EA21E /* Pods_Tesio_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EC44DA621D07DBBAD65DAE /* Pods_Tesio_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1110793721099587002F82FD /* ServersListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListTVC.swift; sourceTree = "<group>"; };
+		1117A372210A41E900039EFC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Server.swift; path = Models/Server.swift; sourceTree = "<group>"; };
+		1117A374210A44B200039EFC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Token.swift; path = Models/Token.swift; sourceTree = "<group>"; };
+		111D9D6F210A636D0093E910 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerCell.swift; path = UI/ServerCell.swift; sourceTree = "<group>"; };
 		1129A4CC2108F17D006EB84F /* Tesio App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesio App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1129A4CF2108F17D006EB84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1129A4D12108F17D006EB84F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -31,8 +43,14 @@
 		1129A4E22108F2CE006EB84F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "API Manager/APIManager.swift"; sourceTree = "<group>"; };
 		1129A4E42108FF3F006EB84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Assets.xcassets; sourceTree = "<group>"; };
 		112EEE4821090EE4008816CE /* TesioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TesioHelper.swift; path = Helper/TesioHelper.swift; sourceTree = "<group>"; };
-		112EEE4A210910F7008816CE /* TodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodoRouter.swift; path = "API Manager/TodoRouter.swift"; sourceTree = "<group>"; };
+		112EEE4A210910F7008816CE /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIRouter.swift; path = "API Manager/APIRouter.swift"; sourceTree = "<group>"; };
 		112EEE4D2109137B008816CE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		1144DAC2210AD90200E76650 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = UI/HeaderView.swift; sourceTree = "<group>"; };
+		1144DAC5210ADA0500E76650 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		1144DAC7210ADB9900E76650 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		1144DAC9210AE2E900E76650 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SortView.swift; path = UI/SortView.swift; sourceTree = "<group>"; };
+		1144DACB210AE30D00E76650 /* SortView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortView.xib; sourceTree = "<group>"; };
+		1144DACD210CF98300E76650 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITableView+Extensions.swift"; path = "Extensions/UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		BB316F0BF05E8F45381FD574 /* Pods-Tesio App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesio App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tesio App/Pods-Tesio App.debug.xcconfig"; sourceTree = "<group>"; };
 		E1EC44DA621D07DBBAD65DAE /* Pods_Tesio_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tesio_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5877AE09062FC4D0E9C05A1 /* Pods-Tesio App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesio App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesio App/Pods-Tesio App.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +68,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1117A371210A40DA00039EFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1117A372210A41E900039EFC /* Server.swift */,
+				1117A374210A44B200039EFC /* Token.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		111D9D6E210A633B0093E910 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				1144DAC4210AD9CB00E76650 /* Xibs */,
+				111D9D6F210A636D0093E910 /* ServerCell.swift */,
+				1144DAC2210AD90200E76650 /* HeaderView.swift */,
+				1144DAC9210AE2E900E76650 /* SortView.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
 		1129A4C32108F17D006EB84F = {
 			isa = PBXGroup;
 			children = (
@@ -72,9 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				1129A4CF2108F17D006EB84F /* AppDelegate.swift */,
+				111D9D6E210A633B0093E910 /* UI Elements */,
 				112EEE4C21091355008816CE /* Extensions */,
 				112EEE4721090EAE008816CE /* Helper */,
 				1129A4E12108F23D006EB84F /* API Manager */,
+				1117A371210A40DA00039EFC /* Models */,
 				112EEE4621090C44008816CE /* Controllers */,
 				1129A4D32108F17D006EB84F /* Main.storyboard */,
 				1129A4E42108FF3F006EB84F /* Assets.xcassets */,
@@ -88,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				1129A4E22108F2CE006EB84F /* APIManager.swift */,
-				112EEE4A210910F7008816CE /* TodoRouter.swift */,
+				112EEE4A210910F7008816CE /* APIRouter.swift */,
 			);
 			path = "API Manager";
 			sourceTree = "<group>";
@@ -96,8 +136,8 @@
 		112EEE4621090C44008816CE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1129A4D12108F17D006EB84F /* LoginVC.swift */,
-				1110793721099587002F82FD /* ServersListTVC.swift */,
+				11FA5362210ACFA700A20C74 /* Login */,
+				11FA5363210ACFB100A20C74 /* Servers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,8 +154,35 @@
 			isa = PBXGroup;
 			children = (
 				112EEE4D2109137B008816CE /* String+Extensions.swift */,
+				1144DAC7210ADB9900E76650 /* UIView+Extensions.swift */,
+				1144DACD210CF98300E76650 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1144DAC4210AD9CB00E76650 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				1144DAC5210ADA0500E76650 /* HeaderView.xib */,
+				1144DACB210AE30D00E76650 /* SortView.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		11FA5362210ACFA700A20C74 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1129A4D12108F17D006EB84F /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		11FA5363210ACFB100A20C74 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				1110793721099587002F82FD /* ServersListTVC.swift */,
+			);
+			path = Servers;
 			sourceTree = "<group>";
 		};
 		2BD30BB7D8BCB6BE69EFE1D3 /* Pods */ = {
@@ -196,8 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1129A4DA2108F17F006EB84F /* LaunchScreen.storyboard in Resources */,
+				1144DACC210AE30D00E76650 /* SortView.xib in Resources */,
 				1129A4E52108FF3F006EB84F /* Assets.xcassets in Resources */,
 				1129A4D52108F17D006EB84F /* Main.storyboard in Resources */,
+				1144DAC6210ADA0500E76650 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,12 +282,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tesio App/Pods-Tesio App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111D9D70210A636D0093E910 /* ServerCell.swift in Sources */,
+				1144DACE210CF98300E76650 /* UITableView+Extensions.swift in Sources */,
+				1117A375210A44B200039EFC /* Token.swift in Sources */,
 				112EEE4921090EE4008816CE /* TesioHelper.swift in Sources */,
-				112EEE4B210910F7008816CE /* TodoRouter.swift in Sources */,
+				112EEE4B210910F7008816CE /* APIRouter.swift in Sources */,
 				1129A4E32108F2CE006EB84F /* APIManager.swift in Sources */,
 				1110793821099587002F82FD /* ServersListTVC.swift in Sources */,
+				1144DAC8210ADB9900E76650 /* UIView+Extensions.swift in Sources */,
 				1129A4D22108F17D006EB84F /* LoginVC.swift in Sources */,
+				1144DACA210AE2E900E76650 /* SortView.swift in Sources */,
+				1144DAC3210AD90200E76650 /* HeaderView.swift in Sources */,
 				112EEE4E2109137B008816CE /* String+Extensions.swift in Sources */,
+				1117A373210A41E900039EFC /* Server.swift in Sources */,
 				1129A4D02108F17D006EB84F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
