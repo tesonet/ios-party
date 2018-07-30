@@ -71,14 +71,16 @@ final class AppFlowCoordinator: UINavigationController {
     
     func startFlow() {
         let viewModel = loginViewModel()
+        let loginViewController = self.loginViewController(withViewModel: viewModel)
+        setViewControllers([loginViewController], animated: true)
+        
         if let user = try? keychainWrapper.retrieveUser() {
+            updateLoadingViewController(withMessage: viewModel.taskType.description,
+                                        animated: false)
             viewModel.authorize
                 .execute((user.username, user.password))
                 .subscribe()
                 .disposed(by: disposeBag)
-        } else {
-            let loginViewController = self.loginViewController(withViewModel: viewModel)
-            setViewControllers([loginViewController], animated: true)
         }
         
         prepareToRetrieveServers()
@@ -114,14 +116,13 @@ final class AppFlowCoordinator: UINavigationController {
     
     //MARK: - Login stack
     
-    private func loginViewModel() -> LoginViewModelType & LoginTokenProviding {
+    private func loginViewModel() -> LoginViewModel {
         let loginViewModel = LoginViewModel(authorizationPerformer: networkService,
                                             credentialsManager: keychainWrapper)
         currentTaskPerformer = loginViewModel
         tokenProvider = loginViewModel
         return loginViewModel
     }
-    
     
     private func loginViewController(withViewModel viewModel: LoginViewController.ViewModelType) -> LoginViewController {
         let loginViewController = LoginViewController(viewModel: viewModel)
@@ -192,6 +193,7 @@ extension AppFlowCoordinator {
     
     private func addTaskPerformerObservables() {
         currentTaskPerformer?.errors
+            .observeOn(MainScheduler.instance)
             .map { actionError -> Error in
                 if case ActionError.underlyingError(let error) = actionError {
                     return error
@@ -216,14 +218,14 @@ extension AppFlowCoordinator {
             .disposed(by: disposeBag)
     }
     
-    private func updateLoadingViewController(withMessage message: String?) {
+    private func updateLoadingViewController(withMessage message: String?, animated: Bool = true) {
         loadingViewController.loadingStatusText = message
         
         guard loadingViewController.parent == nil else {
             return
         }
         
-        self.pushViewController(loadingViewController, animated: true)
+        self.pushViewController(loadingViewController, animated: animated)
     }
 
 }
