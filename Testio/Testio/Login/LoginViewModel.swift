@@ -29,7 +29,7 @@ extension TestioLoginError: LocalizedError {
 protocol LoginViewModelType {
     
     var authorize: Action<(String?, String?), (TestioUser, TestioToken)> { get }
-
+    var initialCredentials: Observable<TestioUser> { get }
 }
 
 protocol LoginTokenProviding {
@@ -79,6 +79,16 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     
     //MARK: - Credentials
 
+    private var initialCredentialsSubject = PublishSubject<TestioUser>()
+    
+    var initialCredentials: Observable<TestioUser> {
+        return initialCredentialsSubject.asObservable()
+    }
+    
+    var initialCredentialsConsumer: AnyObserver<TestioUser> {
+        return initialCredentialsSubject.asObserver()
+    }
+    
     private func areCredentialsValidForSubmit(credentials: (String?, String?)) -> Bool {
         guard let username = credentials.0, let password = credentials.1 else {
             return false

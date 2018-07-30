@@ -81,6 +81,7 @@ final class AppFlowCoordinator: UINavigationController {
             // Credentials are stored in keychain. Immediatelly push loading screen
             updateLoadingViewController(withMessage: viewModel.taskType.description,
                                         animated: false)
+            viewModel.initialCredentialsConsumer.onNext(user)
             viewModel.authorize
                 .execute((user.username, user.password))
                 .subscribe()

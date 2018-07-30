@@ -55,6 +55,14 @@ final class LoginViewController: UIViewController, BindableType {
     
     func bindViewModel() {
         
+        viewModel.initialCredentials
+            .do(onNext: { [unowned self] user in
+                self.usernameTextField.text = user.username
+                self.passwordTextField.text = user.password
+            })
+            .subscribe()
+            .disposed(by: disposeBag)
+        
         logInButton.rx.tap.asObservable()
             .map { [unowned self] _ -> (String?, String?) in
                 (self.usernameTextField.text, self.passwordTextField.text)
