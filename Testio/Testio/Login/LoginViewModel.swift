@@ -43,7 +43,7 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     private let disposeBag = DisposeBag()
     
     private let authorizationPerformer: AuthorizationPerformingType
-    private let credentialsManager: CredentialsManaging
+    private let credentialsStorer: CredentialsStoring
 
     //MARK: - ViewModelTaskPerformingType
     
@@ -90,9 +90,9 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     //MARK: - Initialization
     
     init(authorizationPerformer: AuthorizationPerformingType,
-         credentialsManager: CredentialsManaging) {
+         credentialsManager: CredentialsStoring) {
         self.authorizationPerformer = authorizationPerformer
-        self.credentialsManager = credentialsManager
+        self.credentialsStorer = credentialsManager
         addAuthorizeActionResultHandlers()
     }
     
@@ -132,7 +132,7 @@ class LoginViewModel: LoginTokenProviding, LoginViewModelType, ViewModelTaskPerf
     private func storeToKeychain(user: TestioUser) -> Observable<TestioUser> {
         return Observable<TestioUser>.create { [unowned self] observer -> Disposable in
             do {
-                try self.credentialsManager.save(testioUser: user)
+                try self.credentialsStorer.save(testioUser: user)
                 observer.onNext(user)
             } catch let error {
                 observer.onError(error)

@@ -15,19 +15,12 @@ enum TestioKeychainError: Error {
     case credentialDeleteFailed
 }
 
-protocol CredentialsManaging {
+protocol CredentialsStoring {
 
     func save(testioUser: TestioUser) throws
-    func retrieveUser() throws -> TestioUser
 }
 
-protocol CredentialsRemoving {
-    
-    func deleteCredentials() throws
-    
-}
-
-class TestioKeychainWrapper: CredentialsManaging {
+class TestioKeychainWrapper: CredentialsStoring {
     
     private let usernameDefaultsKey = "username-key"
     
@@ -44,25 +37,6 @@ class TestioKeychainWrapper: CredentialsManaging {
         }
     }
     
-    func retrieveUser() throws -> TestioUser {
-        guard let username = UserDefaults.standard.value(forKey: usernameDefaultsKey) as? String else {
-            throw TestioKeychainError.noUsernameSet
-        }
-        
-        let passwordItem = KeychainPasswordItem(service: TestioKeychainConfiguration.serviceName,
-                                                account: username,
-                                                accessGroup: TestioKeychainConfiguration.accessGroup)
-        guard let keychainPassword = try? passwordItem.readPassword() else {
-            throw TestioKeychainError.passwordReadFailed
-        }
-        
-        return TestioUser(username: username, password: keychainPassword)
-    }
-    
-}
-
-extension TestioKeychainWrapper: CredentialsRemoving {
-    
     func deleteCredentials() throws {
         guard let username = UserDefaults.standard.value(forKey: usernameDefaultsKey) as? String else {
             throw TestioKeychainError.noUsernameSet
@@ -78,6 +52,21 @@ extension TestioKeychainWrapper: CredentialsRemoving {
         } catch {
             throw TestioKeychainError.credentialDeleteFailed
         }
+    }
+    
+    func retrieveUser() throws -> TestioUser {
+        guard let username = UserDefaults.standard.value(forKey: usernameDefaultsKey) as? String else {
+            throw TestioKeychainError.noUsernameSet
+        }
+        
+        let passwordItem = KeychainPasswordItem(service: TestioKeychainConfiguration.serviceName,
+                                                account: username,
+                                                accessGroup: TestioKeychainConfiguration.accessGroup)
+        guard let keychainPassword = try? passwordItem.readPassword() else {
+            throw TestioKeychainError.passwordReadFailed
+        }
+        
+        return TestioUser(username: username, password: keychainPassword)
     }
     
 }

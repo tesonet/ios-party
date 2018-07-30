@@ -72,9 +72,13 @@ final class AppFlowCoordinator: UINavigationController {
     func startFlow() {
         let viewModel = loginViewModel()
         let loginViewController = self.loginViewController(withViewModel: viewModel)
+        
+        // LoginViewController is always in the navigation stack in case
+        // an error occurs when authorizing
         setViewControllers([loginViewController], animated: true)
         
         if let user = try? keychainWrapper.retrieveUser() {
+            // Credentials are stored in keychain. Immediatelly push loading screen
             updateLoadingViewController(withMessage: viewModel.taskType.description,
                                         animated: false)
             viewModel.authorize
