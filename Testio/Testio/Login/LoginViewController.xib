@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Testio" customModuleProvider="target">
+            <connections>
+                <outlet property="logInButton" destination="VHk-5f-sW0" id="Xjr-da-G0m"/>
+                <outlet property="loginControlStackView" destination="JeQ-sT-S1Z" id="VUc-bI-Rhx"/>
+                <outlet property="passwordTextField" destination="LmC-AI-N5l" id="l5f-2C-ya4"/>
+                <outlet property="stackViewCenterConstraint" destination="30I-aZ-IT5" id="j3a-Bi-rn8"/>
+                <outlet property="usernameTextField" destination="BBP-JC-9LS" id="OmV-14-8lL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JeQ-sT-S1Z">
+                    <rect key="frame" x="70" y="291" width="235" height="185"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-JC-9LS" customClass="PaddedTextField" customModule="Testio" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="235" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="Wvi-Hc-kaA"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LmC-AI-N5l" customClass="PaddedTextField" customModule="Testio" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="65" width="235" height="55"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHk-5f-sW0">
+                            <rect key="frame" x="0.0" y="130" width="235" height="55"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="hvK-Lb-sWM">
+                    <rect key="frame" x="112.66666666666669" y="163.33333333333334" width="150" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Rs7-Ul-WnL"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JeQ-sT-S1Z" firstAttribute="top" secondItem="hvK-Lb-sWM" secondAttribute="bottom" constant="63.666666666666686" id="2bg-n7-i6r"/>
+                <constraint firstItem="JeQ-sT-S1Z" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="50" id="30I-aZ-IT5"/>
+                <constraint firstItem="JeQ-sT-S1Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="UWk-D5-RHI"/>
+                <constraint firstItem="JeQ-sT-S1Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c9d-T5-EyG"/>
+                <constraint firstItem="hvK-Lb-sWM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f09-pp-LNk"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo-white" width="246" height="64"/>
+    </resources>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServerPresenterViewController" customModule="Testio" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="IaY-bA-atG" id="8Tv-B4-Yer"/>
+                <outlet property="logoutButton" destination="8KW-9q-SuF" id="1h0-c1-Jdr"/>
+                <outlet property="tableView" destination="eja-mL-Jth" id="SZu-yo-ief"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eja-mL-Jth">
+                    <rect key="frame" x="0.0" y="94" width="375" height="684"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaY-bA-atG">
+                    <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-dark" translatesAutoresizingMaskIntoConstraints="NO" id="kGM-wo-IE3">
+                            <rect key="frame" x="15" y="12.666666666666664" width="80" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="xYC-2U-1mc"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KW-9q-SuF">
+                            <rect key="frame" x="335" y="12.666666666666664" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="8KW-9q-SuF" secondAttribute="height" multiplier="1:1" id="Wwc-YK-7dc"/>
+                            </constraints>
+                            <state key="normal" image="ico-logout"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="kGM-wo-IE3" firstAttribute="centerY" secondItem="IaY-bA-atG" secondAttribute="centerY" id="56C-bi-Wfx"/>
+                        <constraint firstItem="8KW-9q-SuF" firstAttribute="centerY" secondItem="kGM-wo-IE3" secondAttribute="centerY" id="7ZT-NH-uN6"/>
+                        <constraint firstItem="kGM-wo-IE3" firstAttribute="height" secondItem="IaY-bA-atG" secondAttribute="height" multiplier="0.5" id="8EO-An-egF"/>
+                        <constraint firstItem="8KW-9q-SuF" firstAttribute="height" secondItem="kGM-wo-IE3" secondAttribute="height" id="Pur-Dk-bm0"/>
+                        <constraint firstAttribute="trailing" secondItem="8KW-9q-SuF" secondAttribute="trailing" constant="15" id="a4J-iP-TSn"/>
+                        <constraint firstItem="kGM-wo-IE3" firstAttribute="leading" secondItem="IaY-bA-atG" secondAttribute="leading" constant="15" id="aLe-7y-yOW"/>
+                        <constraint firstAttribute="height" constant="50" id="sPt-xW-xbQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eja-mL-Jth" secondAttribute="bottom" id="0JG-wK-5Sy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eja-mL-Jth" secondAttribute="trailing" id="avZ-y6-u2N"/>
+                <constraint firstItem="IaY-bA-atG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dYW-iD-cMX"/>
+                <constraint firstItem="eja-mL-Jth" firstAttribute="top" secondItem="IaY-bA-atG" secondAttribute="bottom" id="fbM-qw-HV7"/>
+                <constraint firstItem="eja-mL-Jth" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pjp-6E-nlq"/>
+                <constraint firstItem="IaY-bA-atG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wKN-V5-SO8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="IaY-bA-atG" secondAttribute="top" id="wuv-Md-Mh1"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico-logout" width="29" height="29"/>
+        <image name="logo-dark" width="130" height="34"/>
+    </resources>
+</document>
