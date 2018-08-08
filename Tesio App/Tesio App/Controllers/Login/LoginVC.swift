@@ -38,6 +38,9 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
         
         usernameTextField.text = "tesonet"
         passwordTextField.text = "partyanimal"
+        
+        // Add gesture recognizer to hide keyboard on tap
+        setupGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +64,9 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
     
     // MARK: - Methods
     func login() {
+        
+        // Hide keyboard if needed
+        hideKeyboardOnTap()
 
         // Start loading animation
         startAnimating(sizeOfLoadingIndicator, message: Strings.loginText, type: .orbit, fadeInAnimation: nil)
@@ -108,6 +114,15 @@ class LoginVC: UIViewController, NVActivityIndicatorViewable {
                                           message: TesioHelper.LoginError.EmptyPassword.description, vc: self)
             }
         }
+    }
+    
+    func setupGestureRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboardOnTap() {
+        view.endEditing(true)
     }
 
 }
