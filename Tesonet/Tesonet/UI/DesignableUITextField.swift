@@ -26,7 +26,7 @@ class DesignableUITextField: UITextField {
     
     func updateView() {
         if let image = leftImage {
-            leftViewMode = UITextFieldViewMode.always
+            leftViewMode = UITextField.ViewMode.always
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
             imageView.contentMode = .scaleAspectFit
             imageView.image = image
@@ -34,11 +34,11 @@ class DesignableUITextField: UITextField {
             imageView.tintColor = color
             leftView = imageView
         } else {
-            leftViewMode = UITextFieldViewMode.never
+            leftViewMode = UITextField.ViewMode.never
             leftView = nil
         }
         
         // Placeholder text color
-        attributedPlaceholder = NSAttributedString(string: placeholder != nil ?  placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: color])
+        attributedPlaceholder = NSAttributedString(string: placeholder != nil ?  placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: color])
     }
 }

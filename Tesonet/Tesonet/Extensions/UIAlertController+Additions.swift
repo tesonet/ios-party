@@ -34,7 +34,7 @@ extension UIAlertController {
                                         onOK completion: AlertCompletion?) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { [weak alertController] _ in
+        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [weak alertController] _ in
             alertController?.dismiss(animated: true)
             UIAlertController.anAlertIsVisible = false
             UIViewController.presentNextAlertIfAvailable()
@@ -57,14 +57,14 @@ extension UIAlertController {
     static fileprivate func simpleAlertWithSettings(_ title: String, message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let settingsAction = UIAlertAction(title: "Settings", style: UIAlertActionStyle.default) { _ in
-            guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else { return }
+        let settingsAction = UIAlertAction(title: "Settings", style: UIAlertAction.Style.default) { _ in
+            guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return }
             DispatchQueue.main.async {
                 UIApplication.shared.open(settingsURL)
             }
         }
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { [weak alertController] _ in
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [weak alertController] _ in
             alertController?.dismiss(animated: true)
             UIAlertController.anAlertIsVisible = false
             UIViewController.presentNextAlertIfAvailable()

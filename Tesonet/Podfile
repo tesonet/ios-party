@@ -8,7 +8,6 @@ target 'Tesonet' do
   # Pods for Tesonet
   pod 'KeychainSwift'
   pod 'ReachabilitySwift'
-  pod 'RealmSwift'
 
   target 'TesonetTests' do
     inherit! :search_paths
