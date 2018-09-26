@@ -15,14 +15,24 @@ class LoginNavigationViewController: UIViewController {
 
 // MARK: - Navigation
 
-extension LoginNavigationViewController {
+extension LoginNavigationViewController: SegueHandler {
+    
+    enum SegueIdentifier: String {
+        case
+        SegueNavigationToServers
+        case
+        SegueNavigationToLogin
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SegueNavigationToServers" {
-            let destinationNavigationController = segue.destination as! UINavigationController
-            if let serversViewController = destinationNavigationController.topViewController as? ServersViewController {
+        switch identifierForSegue(segue: segue) {
+        case .SegueNavigationToServers:
+            if let destination = segue.destination as? UINavigationController,
+                let serversViewController = destination.topViewController as? ServersViewController {
                 serversViewController.accessToken = UserSession.shared.token!
             }
+        default:
+            break
         }
     }
     
@@ -34,9 +44,9 @@ extension LoginNavigationViewController {
 
     fileprivate func moveToNextScreen() {
         if UserSession.shared.isLogedIn() {
-            self.performSegue(withIdentifier: "SegueNavigationToServers", sender: self)
+            self.performSegueWithIdentifier(identifier: .SegueNavigationToServers, sender: self)
         } else {
-            self.performSegue(withIdentifier: "SegueNavigationToLogin", sender: self)
+            self.performSegueWithIdentifier(identifier: .SegueNavigationToLogin, sender: self)
         }
     }
     

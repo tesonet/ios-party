@@ -10,7 +10,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        style()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,7 +27,7 @@ class LoginViewController: UIViewController {
 
 // MARK: - Navigation
 
-extension LoginViewController {
+extension LoginViewController: SegueHandler {
     
     @IBAction fileprivate func loginPressed() {
         #if DEBUG
@@ -60,17 +59,25 @@ extension LoginViewController {
             }
         }
     }
-    
+
+    enum SegueIdentifier: String {
+        case
+        SegueToServers
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SegueToServers" {
-            let destinationNavigationController = segue.destination as! UINavigationController
-            if let serversViewController = destinationNavigationController.topViewController as? ServersViewController {
-                serversViewController.accessToken = accessToken!
+        switch identifierForSegue(segue: segue) {
+        case .SegueToServers:
+            if let destination = segue.destination as? UINavigationController,
+                let serversViewController = destination.topViewController as? ServersViewController {
+                serversViewController.accessToken = UserSession.shared.token!
             }
         }
     }
     
 }
+
+
 
 // MARK: - Private Methods
 
@@ -95,10 +102,6 @@ extension LoginViewController {
                 self.passwordTextField.text = nil
             }
         }
-    }
-    
-    fileprivate func style() {
-        
     }
     
 }

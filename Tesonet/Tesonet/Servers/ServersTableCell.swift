@@ -7,8 +7,6 @@ class ServersTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        style()
     }
     
     func configure(with item: Server) {
@@ -16,15 +14,3 @@ class ServersTableCell: UITableViewCell {
         distanceLabel.text = String(item.distance)
     }
 }
-
-// MARK: - Private Methods
-
-extension ServersTableCell {
-    
-    fileprivate func style() {
-        
-    }
-    
-}
-
-

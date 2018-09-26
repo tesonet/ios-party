@@ -2,6 +2,9 @@ import Foundation
 
 final class DownloadManager {
     
+    typealias TokenAndErrorClosure = (_ token: String?, _ error: Error?) -> ()
+    typealias DataAndErrorClosure = (_ jsondta: [Server]?, _ error: Error?) -> ()
+    
     // Singelton
     static var shared = DownloadManager()
     fileprivate init() {}
@@ -15,7 +18,7 @@ final class DownloadManager {
      */
     func loadToken(from urlString: String,
                    withParams params: [String : String],
-                   completion: @escaping (_ token: String?, _ error: Error?) -> ()) {
+                   completion: @escaping TokenAndErrorClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
             let error = DataError.urlError(reason: "Could not create URL with " + urlString)
@@ -23,8 +26,7 @@ final class DownloadManager {
             return
         }
 
-        var request = URLRequest.init(url: url)
-        request.httpMethod = "POST"
+        var request = URLRequestCreator.request(method: .POST, url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try! JSONSerialization.data(withJSONObject: params, options: [])
@@ -77,7 +79,7 @@ final class DownloadManager {
      */
     func loadData(from urlString: String,
                   with token: String,
-                  completion: @escaping (_ jsondta: [Server]?, _ error: Error?) -> ()) {
+                  completion: @escaping DataAndErrorClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
             let error = DataError.urlError(reason: "Could not create URL with " + urlString)
@@ -85,8 +87,7 @@ final class DownloadManager {
             return
         }
 
-        var request = URLRequest.init(url: url)
-        request.httpMethod = "GET"
+        var request = URLRequestCreator.request(method: .GET, url: url)
         request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
