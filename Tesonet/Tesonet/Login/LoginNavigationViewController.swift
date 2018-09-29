@@ -23,24 +23,6 @@ extension LoginNavigationViewController: SegueHandler {
         case
         SegueNavigationToLogin
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch identifierForSegue(segue: segue) {
-        case .SegueNavigationToServers:
-            if let destination = segue.destination as? UINavigationController,
-                let serversViewController = destination.topViewController as? ServersViewController {
-                serversViewController.accessToken = UserSession.shared.token!
-            }
-        default:
-            break
-        }
-    }
-    
-}
-
-// MARK: - Private Methods
-
-extension LoginNavigationViewController {
 
     fileprivate func moveToNextScreen() {
         if UserSession.shared.isLogedIn() {

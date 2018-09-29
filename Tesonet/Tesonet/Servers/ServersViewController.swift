@@ -4,10 +4,9 @@ class ServersViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
     
-    var accessToken = String()
     var serversList = [Server]() {
         didSet {
-            DispatchQueue.main.async { [unowned self] in
+            DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
@@ -137,6 +136,9 @@ extension ServersViewController {
 extension ServersViewController {
     
     fileprivate func fetchData() {
+        guard let accessToken = UserSession.shared.token else {
+            return
+        }
         DownloadManager.shared.loadData(from: URLs.Tesonet.dataURL, with: accessToken) { [weak self] result, error in
             guard let `self` = self else { return }
             if let error = error {
@@ -159,7 +161,7 @@ extension ServersViewController {
         persistance.write(items: data)
         #if DEBUG
         let servers = persistance.read() as [Server]
-        self.print(items:servers)
+        self.print(items: servers)
         #endif
     }
     

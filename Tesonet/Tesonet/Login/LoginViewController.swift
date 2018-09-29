@@ -5,8 +5,6 @@ class LoginViewController: UIViewController {
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
     
-    fileprivate var accessToken: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -27,16 +25,16 @@ class LoginViewController: UIViewController {
 
 // MARK: - Navigation
 
-extension LoginViewController: SegueHandler {
+extension LoginViewController {
     
     @IBAction fileprivate func loginPressed() {
-        #if DEBUG
+    #if DEBUG
         let username = "tesonet"
         let password = "partyanimal"
-        #else
+    #else
         let username = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        #endif
+    #endif
         
         DownloadManager.shared.loadToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
             guard let `self` = self else { return }
@@ -52,32 +50,14 @@ extension LoginViewController: SegueHandler {
                 return
             }
             
-            self.accessToken = accessToken
             self.saveSession(accessToken: accessToken, username: username, password: password)
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "SegueToServers", sender: self)
             }
         }
     }
-
-    enum SegueIdentifier: String {
-        case
-        SegueToServers
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch identifierForSegue(segue: segue) {
-        case .SegueToServers:
-            if let destination = segue.destination as? UINavigationController,
-                let serversViewController = destination.topViewController as? ServersViewController {
-                serversViewController.accessToken = UserSession.shared.token!
-            }
-        }
-    }
     
 }
-
-
 
 // MARK: - Private Methods
 

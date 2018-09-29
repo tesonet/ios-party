@@ -323,6 +323,7 @@
 				67C7101420FB949F00D17F55 /* Frameworks */,
 				67C7101520FB949F00D17F55 /* Resources */,
 				CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */,
+				DB2365FD60A0FFD07FE63048 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,6 +342,8 @@
 				67C7102720FB949F00D17F55 /* Sources */,
 				67C7102820FB949F00D17F55 /* Frameworks */,
 				67C7102920FB949F00D17F55 /* Resources */,
+				336796DFBFCE27221DE06858 /* [CP] Embed Pods Frameworks */,
+				BC99549224E24DA1C5ACB08A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +363,8 @@
 				67C7103220FB949F00D17F55 /* Sources */,
 				67C7103320FB949F00D17F55 /* Frameworks */,
 				67C7103420FB949F00D17F55 /* Resources */,
+				DD454964805B99485C0C2F3E /* [CP] Embed Pods Frameworks */,
+				BA203127910F1C8399DA42DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -446,6 +451,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		336796DFBFCE27221DE06858 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		40CF6EB5E788A6889BF87459 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,6 +520,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA203127910F1C8399DA42DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC99549224E24DA1C5ACB08A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +568,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2365FD60A0FFD07FE63048 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD454964805B99485C0C2F3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
