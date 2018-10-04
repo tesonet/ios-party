@@ -1,5 +1,7 @@
 import UIKit
 
+// TODO: refactor into view model
+
 class LoginViewController: UIViewController {
     
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
@@ -28,18 +30,18 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction fileprivate func loginPressed() {
-    #if DEBUG
+        #if DEBUG
         let username = "tesonet"
         let password = "partyanimal"
-    #else
+        #else
         let username = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-    #endif
-        
-        DownloadManager.shared.loadToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
+        #endif
+
+        NetworkClient.shared.loadToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
             guard let `self` = self else { return }
             if let error = error {
-                self.print(items: error)
+                print(error)
                 DispatchQueue.main.async {
                     self.handleLoginError(error: error)
                 }

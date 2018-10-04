@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3736007BFB39F22DB9DEF1B6 /* Pods_TesonetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */; };
 		37BB1B0ACA7FCC125A27E2AA /* Pods_TesonetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */; };
+		64268423216621B100E64BE0 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64268422216621B100E64BE0 /* ServersViewModel.swift */; };
+		64268425216621B900E64BE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64268424216621B900E64BE0 /* LoginViewModel.swift */; };
+		642684272166222F00E64BE0 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642684262166222F00E64BE0 /* NetworkClient.swift */; };
 		643D9902215A910100A4EFA2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D9901215A910000A4EFA2 /* Configuration.swift */; };
 		643D9904215A916100A4EFA2 /* URLRequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D9903215A916100A4EFA2 /* URLRequestCreator.swift */; };
 		643D9906215A956000A4EFA2 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D9905215A956000A4EFA2 /* SegueHandler.swift */; };
@@ -23,7 +26,6 @@
 		67C7109520FBCB7A00D17F55 /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */; };
 		67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */; };
 		67C7109720FBCB7A00D17F55 /* ServersTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */; };
-		67C7109920FBCBE500D17F55 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109820FBCBE500D17F55 /* DownloadManager.swift */; };
 		67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */; };
 		67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */; };
 		67C710A520FBD16800D17F55 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A420FBD16800D17F55 /* ServerModel.swift */; };
@@ -34,7 +36,6 @@
 		67C710C821035F6B00D17F55 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710C721035F6B00D17F55 /* UIViewController+Extensions.swift */; };
 		67C710CC2103787B00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */; };
 		67C710CD2103787B00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CB2103787B00D17F55 /* Main.storyboard */; };
-		67C710D22103898B00D17F55 /* DebugOptions.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D12103898B00D17F55 /* DebugOptions.swift.swift */; };
 		67C710D62103D87700D17F55 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D52103D87700D17F55 /* TokenModel.swift */; };
 		67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D72103D8C500D17F55 /* TasonetError.swift */; };
 		67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */; };
@@ -63,6 +64,9 @@
 		47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64268422216621B100E64BE0 /* ServersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		64268424216621B900E64BE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		642684262166222F00E64BE0 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		643D9901215A910000A4EFA2 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		643D9903215A916100A4EFA2 /* URLRequestCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestCreator.swift; sourceTree = "<group>"; };
 		643D9905215A956000A4EFA2 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
@@ -83,7 +87,6 @@
 		67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
 		67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersTableFooterView.swift; sourceTree = "<group>"; };
 		67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersTableFooterView.xib; sourceTree = "<group>"; };
-		67C7109820FBCBE500D17F55 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
 		67C710A420FBD16800D17F55 /* ServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
@@ -94,7 +97,6 @@
 		67C710C721035F6B00D17F55 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C710CB2103787B00D17F55 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		67C710D12103898B00D17F55 /* DebugOptions.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugOptions.swift.swift; sourceTree = "<group>"; };
 		67C710D52103D87700D17F55 /* TokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		67C710D72103D8C500D17F55 /* TasonetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasonetError.swift; sourceTree = "<group>"; };
 		67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNoAnimationSegue.swift; sourceTree = "<group>"; };
@@ -180,7 +182,6 @@
 				67C710C92103782900D17F55 /* Storyboards */,
 				67C7108820FBC87500D17F55 /* UI */,
 				67C7108920FBC87D00D17F55 /* Extensions */,
-				67C710D02103895600D17F55 /* Helpers */,
 				67C7102120FB949F00D17F55 /* Assets.xcassets */,
 				67C7102620FB949F00D17F55 /* Info.plist */,
 			);
@@ -210,6 +211,7 @@
 			children = (
 				67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */,
 				67C7108620FBC7DF00D17F55 /* LoginViewController.swift */,
+				64268424216621B900E64BE0 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				67C7108F20FBCB7A00D17F55 /* ServersViewController.swift */,
+				64268422216621B100E64BE0 /* ServersViewModel.swift */,
 				67C7108D20FBCB7A00D17F55 /* ServersTableCell.swift */,
 				67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */,
 				67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */,
@@ -240,7 +243,7 @@
 			children = (
 				67C710D52103D87700D17F55 /* TokenModel.swift */,
 				67C710D72103D8C500D17F55 /* TasonetError.swift */,
-				67C7109820FBCBE500D17F55 /* DownloadManager.swift */,
+				642684262166222F00E64BE0 /* NetworkClient.swift */,
 				67C710B020FFB31200D17F55 /* UserSession.swift */,
 				643D9903215A916100A4EFA2 /* URLRequestCreator.swift */,
 			);
@@ -293,14 +296,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		67C710D02103895600D17F55 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				67C710D12103898B00D17F55 /* DebugOptions.swift.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		83C6B233EED77F9D24CB08EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,7 +318,6 @@
 				67C7101420FB949F00D17F55 /* Frameworks */,
 				67C7101520FB949F00D17F55 /* Resources */,
 				CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */,
-				DB2365FD60A0FFD07FE63048 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,8 +336,6 @@
 				67C7102720FB949F00D17F55 /* Sources */,
 				67C7102820FB949F00D17F55 /* Frameworks */,
 				67C7102920FB949F00D17F55 /* Resources */,
-				336796DFBFCE27221DE06858 /* [CP] Embed Pods Frameworks */,
-				BC99549224E24DA1C5ACB08A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -363,8 +355,6 @@
 				67C7103220FB949F00D17F55 /* Sources */,
 				67C7103320FB949F00D17F55 /* Frameworks */,
 				67C7103420FB949F00D17F55 /* Resources */,
-				DD454964805B99485C0C2F3E /* [CP] Embed Pods Frameworks */,
-				BA203127910F1C8399DA42DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -451,21 +441,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		336796DFBFCE27221DE06858 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		40CF6EB5E788A6889BF87459 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -520,36 +495,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA203127910F1C8399DA42DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC99549224E24DA1C5ACB08A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -570,36 +515,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB2365FD60A0FFD07FE63048 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD454964805B99485C0C2F3E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -613,19 +528,20 @@
 				67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */,
 				67C7109320FBCB7A00D17F55 /* ServersTableCell.swift in Sources */,
 				67C710B120FFB31300D17F55 /* UserSession.swift in Sources */,
+				642684272166222F00E64BE0 /* NetworkClient.swift in Sources */,
 				67C710C821035F6B00D17F55 /* UIViewController+Extensions.swift in Sources */,
 				67C710B320FFB65B00D17F55 /* LoginNavigationViewController.swift in Sources */,
 				67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */,
 				643D9902215A910100A4EFA2 /* Configuration.swift in Sources */,
 				67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */,
 				67C710A520FBD16800D17F55 /* ServerModel.swift in Sources */,
-				67C7109920FBCBE500D17F55 /* DownloadManager.swift in Sources */,
+				64268423216621B100E64BE0 /* ServersViewModel.swift in Sources */,
 				643D9904215A916100A4EFA2 /* URLRequestCreator.swift in Sources */,
 				67C7109520FBCB7A00D17F55 /* ServersViewController.swift in Sources */,
-				67C710D22103898B00D17F55 /* DebugOptions.swift.swift in Sources */,
 				67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */,
 				67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */,
 				643D9906215A956000A4EFA2 /* SegueHandler.swift in Sources */,
+				64268425216621B900E64BE0 /* LoginViewModel.swift in Sources */,
 				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
 				67C710A920FD1A8800D17F55 /* PesistanceManager.swift in Sources */,
 				67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */,

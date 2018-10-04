@@ -1,12 +1,12 @@
 import Foundation
 
-final class DownloadManager {
+final class NetworkClient {
     
     typealias TokenAndErrorClosure = (_ token: String?, _ error: Error?) -> ()
     typealias DataAndErrorClosure = (_ jsondta: [Server]?, _ error: Error?) -> ()
     
     // Singelton
-    static var shared = DownloadManager()
+    static var shared = NetworkClient()
     fileprivate init() {}
     
     /**

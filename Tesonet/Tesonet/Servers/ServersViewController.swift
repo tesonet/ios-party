@@ -4,13 +4,7 @@ class ServersViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
     
-    var serversList = [Server]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    var serversViewModel: ServersViewModelType!
     fileprivate lazy var footerView: ServersTableFooterView = {
         let footerView = ServersTableFooterView.loadFromNib()
         footerView.delegate = self
@@ -21,10 +15,11 @@ class ServersViewController: UIViewController {
         return headerView
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData()
+        serversViewModel = ServersViewModel()
+        serversViewModel.delegate = self
+        serversViewModel.fetchData()
     }
     
 }
@@ -38,7 +33,7 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return serversList.count
+        return serversViewModel.serversList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,9 +70,21 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServerCell", for: indexPath) as? ServersTableCell else {
             fatalError("Could not dequeue cell of type ServerCell")
         }
-        let server = serversList[indexPath.row]
+        let server = serversViewModel.serversList[indexPath.row]
         cell.configure(with: server)
         return cell
+    }
+    
+}
+
+// MARK: - ViewModelDelegate
+
+extension ServersViewController: ServersViewControllerDelegate {
+    
+    func serversListDidChanged() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
 }
@@ -91,11 +98,11 @@ extension ServersViewController: ServersTableFooterDelegate {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let distanceSortButton = UIAlertAction(title: "By Distance", style: .default) { [unowned self] _ in
             self.footerView.isHidden = false
-            self.serversList = self.serversList.sorted(by: { $0.distance < $1.distance })
+            self.serversViewModel.serversList = self.serversViewModel.serversList.sorted(by: { $0.distance < $1.distance })
         }
         let  alphanumericalSortButton = UIAlertAction(title: "Alphanumerical", style: .default) { [unowned self] _ in
             self.footerView.isHidden = false
-            self.serversList = self.serversList.sorted(by: { $0.name < $1.name })
+            self.serversViewModel.serversList = self.serversViewModel.serversList.sorted(by: { $0.name < $1.name })
         }
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { [unowned self] _ in
             self.footerView.isHidden = false
@@ -128,42 +135,12 @@ extension ServersViewController {
         alertController.addAction(cancelButton)
         navigationController?.present(alertController, animated: true, completion: nil)
     }
-
+    
 }
 
 // MARK: - Private Methods
 
 extension ServersViewController {
-    
-    fileprivate func fetchData() {
-        guard let accessToken = UserSession.shared.token else {
-            return
-        }
-        DownloadManager.shared.loadData(from: URLs.Tesonet.dataURL, with: accessToken) { [weak self] result, error in
-            guard let `self` = self else { return }
-            if let error = error {
-                self.print(items: error)
-                return
-            }
-            
-            guard let result = result else {
-                return
-            }
-            
-            self.serversList = result
-            
-            self.save(data: result, using: .filePersistance)
-        }
-    }
-    
-    fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
-        let persistance = PersistanceFactory.producePersistanceType(type: persistanceType)
-        persistance.write(items: data)
-        #if DEBUG
-        let servers = persistance.read() as [Server]
-        self.print(items: servers)
-        #endif
-    }
     
     fileprivate func signOut(forgetLogin: Bool) {
         UserSession.shared.signOut(forgetLogin: forgetLogin)
