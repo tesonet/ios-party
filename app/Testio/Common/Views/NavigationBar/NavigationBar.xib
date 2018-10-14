@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBar" customModule="Testio" customModuleProvider="target">
+            <connections>
+                <outlet property="logoImageView" destination="z6y-uQ-xM3" id="C76-GG-OFT"/>
+                <outlet property="rightButton" destination="IzP-ee-lmt" id="WRG-Hf-Eo1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z6y-uQ-xM3">
+                    <rect key="frame" x="16" y="5" width="130" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="g2c-BH-aLx"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-ee-lmt">
+                    <rect key="frame" x="329" y="5" width="30" height="34"/>
+                    <connections>
+                        <action selector="onRightButtonTap:" destination="-1" eventType="touchUpInside" id="apJ-v0-TeH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IzP-ee-lmt" secondAttribute="bottom" constant="5" id="D3b-EI-eNm"/>
+                <constraint firstItem="IzP-ee-lmt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="K50-bO-bHb"/>
+                <constraint firstItem="z6y-uQ-xM3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="TMV-Xa-EcQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="z6y-uQ-xM3" secondAttribute="bottom" constant="5" id="Vg9-oh-T3b"/>
+                <constraint firstItem="z6y-uQ-xM3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="nwA-RX-AVa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IzP-ee-lmt" secondAttribute="trailing" constant="16" id="vnd-RK-GGU"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="53.600000000000001" y="-166.41679160419793"/>
+        </view>
+    </objects>
+</document>
