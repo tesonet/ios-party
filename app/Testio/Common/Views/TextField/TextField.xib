@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextField" customModule="Testio" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="ee2-2l-gHr"/>
+                <outlet property="iconImageView" destination="Saa-o7-pwh" id="61X-kc-ZcD"/>
+                <outlet property="textField" destination="D3G-Iy-n10" id="C24-Vp-Jz3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Saa-o7-pwh">
+                    <rect key="frame" x="16" y="20" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Sjx-2q-esH"/>
+                        <constraint firstAttribute="height" constant="20" id="b2x-qG-LcJ"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3G-Iy-n10">
+                    <rect key="frame" x="52" y="15" width="307" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="xee-AL-tQU"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="D3G-Iy-n10" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3Dj-0Y-eBV"/>
+                <constraint firstItem="D3G-Iy-n10" firstAttribute="leading" secondItem="Saa-o7-pwh" secondAttribute="trailing" constant="16" id="4Fj-F9-YIj"/>
+                <constraint firstItem="Saa-o7-pwh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Cag-cr-BOk"/>
+                <constraint firstItem="Saa-o7-pwh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="P34-4E-ajZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D3G-Iy-n10" secondAttribute="trailing" constant="16" id="Tpj-e8-OuD"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="-116.94152923538232"/>
+        </view>
+    </objects>
+</document>

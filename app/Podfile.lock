@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.7.3)
+  - GSMessages (1.6.1)
+  - PromiseKit (6.5.2):
+    - PromiseKit/CorePromise (= 6.5.2)
+    - PromiseKit/Foundation (= 6.5.2)
+    - PromiseKit/UIKit (= 6.5.2)
+  - PromiseKit/CorePromise (6.5.2)
+  - PromiseKit/Foundation (6.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.5.2):
+    - PromiseKit/CorePromise
+  - Realm (3.11.0):
+    - Realm/Headers (= 3.11.0)
+  - Realm/Headers (3.11.0)
+  - RealmSwift (3.11.0):
+    - Realm (= 3.11.0)
+  - SAMKeychain (1.5.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - GSMessages
+  - PromiseKit (~> 6.0)
+  - RealmSwift
+  - SAMKeychain
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - GSMessages
+    - PromiseKit
+    - Realm
+    - RealmSwift
+    - SAMKeychain
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  GSMessages: 870aa0fc8cf39bea0026535ea195376d4040313e
+  PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
+  Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
+  RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+
+PODFILE CHECKSUM: 46ac682cc14f3b690f23cfb5667a4493d65acd40
+
+COCOAPODS: 1.5.3

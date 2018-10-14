@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServersListSectionHeaderView" customModule="Testio" customModuleProvider="target">
+            <connections>
+                <outlet property="distanceLabel" destination="Sff-u2-yXk" id="vBl-1D-LVa"/>
+                <outlet property="serverLabel" destination="zhO-JK-qHj" id="GlO-bu-Gn3"/>
+                <outlet property="shadowView" destination="z0f-xW-wpF" id="ht2-Bs-c9j"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54x-vp-cwf" userLabel="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0f-xW-wpF" userLabel="Shadow View">
+                    <rect key="frame" x="0.0" y="35" width="375" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83c-4d-Hab" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="10" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhO-JK-qHj">
+                            <rect key="frame" x="16" y="17" width="50.5" height="16.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-u2-yXk">
+                            <rect key="frame" x="294" y="17" width="65" height="16.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Sff-u2-yXk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zhO-JK-qHj" secondAttribute="trailing" id="B2f-SI-Gvb"/>
+                        <constraint firstItem="zhO-JK-qHj" firstAttribute="leading" secondItem="83c-4d-Hab" secondAttribute="leading" constant="16" id="muJ-91-xfS"/>
+                        <constraint firstAttribute="height" constant="50" id="nrz-7Z-hVA"/>
+                        <constraint firstItem="zhO-JK-qHj" firstAttribute="centerY" secondItem="83c-4d-Hab" secondAttribute="centerY" id="tHe-nT-YYW"/>
+                        <constraint firstItem="Sff-u2-yXk" firstAttribute="centerY" secondItem="83c-4d-Hab" secondAttribute="centerY" id="uiv-8a-Rfo"/>
+                        <constraint firstAttribute="trailing" secondItem="Sff-u2-yXk" secondAttribute="trailing" constant="16" id="w9a-Sd-Udp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="z0f-xW-wpF" firstAttribute="bottom" secondItem="83c-4d-Hab" secondAttribute="bottom" id="1Cv-av-y2E"/>
+                <constraint firstItem="54x-vp-cwf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2oJ-Pd-cdy"/>
+                <constraint firstItem="z0f-xW-wpF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ggl-1g-dtB"/>
+                <constraint firstItem="83c-4d-Hab" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HSX-Mt-l57"/>
+                <constraint firstItem="54x-vp-cwf" firstAttribute="bottom" secondItem="83c-4d-Hab" secondAttribute="bottom" id="Kxd-w4-nYa"/>
+                <constraint firstItem="83c-4d-Hab" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="UqN-sh-6mv"/>
+                <constraint firstItem="83c-4d-Hab" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YCQ-dz-qKi"/>
+                <constraint firstItem="54x-vp-cwf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gds-Mh-nWD"/>
+                <constraint firstItem="z0f-xW-wpF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="rtr-Rf-Azk"/>
+                <constraint firstItem="z0f-xW-wpF" firstAttribute="height" secondItem="83c-4d-Hab" secondAttribute="height" multiplier="1/2" id="x8K-Zo-Jg3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="54x-vp-cwf" secondAttribute="trailing" id="zsA-V4-EY0"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="-136.73163418290855"/>
+        </view>
+    </objects>
+</document>
