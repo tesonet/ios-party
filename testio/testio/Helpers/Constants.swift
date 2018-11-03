@@ -9,15 +9,39 @@
 import Foundation
 
 struct StoryboardID {
+    private init() {}
+    
     static let logInVC = "LogInVC"
     static let serverListVC = "ServerListVC"
 }
 
 struct TesonetAPI {
+    private init() {}
+    
     static let baseUrl = "http://playground.tesonet.lt/v1/"
     static let serversUrl = baseUrl+"servers"
     static let tokensUrl = baseUrl+"tokens"
-    static let authToken = "f9731b590611a5a9377fbd02f247fcdf"
+    static let header = ["Content-Type":"application/json; charset=utf-8"]
+    static let bearer_header = ["Authorization": "Bearer \(DataService.instance.authToken ?? "")",
+                                "Content-Type":"application/json; charset=utf-8"]
+    
 }
 
+struct Schema {
+    private init() {}
+    
+    struct Authorization {
+        static let username = "username"
+        static let password = "password"
+    }
+    
+    struct Server {
+        static let distance = "distance"
+        static let name = "name"
+    }
+    
+}
 
+struct Cell {
+    static let serverCell = "ServerCell"
+}
