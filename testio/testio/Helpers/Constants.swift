@@ -8,6 +8,10 @@
 
 import Foundation
 
+let USER_LOGGED_IN = "USER_LOGGED_IN"
+let MY_PASSWORD = "MY_PASSWORD"
+let MY_USERNAME = "MY_USERNAME"
+
 struct StoryboardID {
     private init() {}
     

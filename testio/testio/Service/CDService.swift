@@ -12,12 +12,7 @@ import CoreData
 class CDService {
     
     static let instance = CDService()
-    
-    enum SortMethod: String {
-        case byName = "name"
-        case alphanumeric = "distance"
-    }
-    
+        
     private var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "testio")
@@ -30,7 +25,7 @@ class CDService {
         return container
     }()
     
-    public var context: NSManagedObjectContext {
+    var context: NSManagedObjectContext {
         get {
             return persistentContainer.viewContext
         }
@@ -38,14 +33,14 @@ class CDService {
     
     private init() {}
     
-    public func delete(objects: [NSManagedObject]) {
+    func delete(objects: [NSManagedObject]) {
         for object in objects {
             context.delete(object)
         }
         save()
     }
     
-    public func save() {
+    func save() {
         if context.hasChanges {
             do {
                 try context.save()
@@ -56,27 +51,18 @@ class CDService {
         }
     }
     
-    func fetch(sortBy: SortMethod) -> NSFetchedResultsController<Server>? {
+    func fetch(sortBy: String) -> NSFetchedResultsController<NSFetchRequestResult>? {
         
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Server.fetchRequest()
-        let sortDescriptor = configureSortDescriptor(sortBy: sortBy)
+        let fetchRequest: NSFetchRequest<Server> = Server.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: sortBy, ascending: true)]
         
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        guard let controller = configureController(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>, sectionNameKeyPath: nil, cacheName: nil) else { return nil }
         
-        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        
-        do {
-            try controller.performFetch()
-            return controller as? NSFetchedResultsController<Server>
-        } catch {
-            let error = error as NSError
-            debugPrint("\(error)")
-            return nil
-        }
+        return controller
         
     }
     
-    public func recordExists(serverName: String) -> Bool {
+    func recordExists(serverName: String) -> Bool {
         
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Server.fetchRequest()
         let namePredicate = NSPredicate(format: "\(Schema.Server.name) == %@", serverName)
@@ -109,10 +95,6 @@ class CDService {
         
         return controller
         
-    }
-    
-    private func configureSortDescriptor(sortBy: SortMethod) -> NSSortDescriptor {
-        return NSSortDescriptor(key: sortBy.rawValue, ascending: true)
     }
     
 }

@@ -73,10 +73,10 @@ class DataService {
                 return .token
             }
             debugPrint("failed to save token value, but got a valid json: ", json)
-            return .token
+            return .unauthorized
         }
         debugPrint("failed to save token value and got no cigar")
-        return .token
+        return .unauthorized
         
     }
     

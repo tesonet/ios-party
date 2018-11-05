@@ -10,17 +10,15 @@ import UIKit
 
 class ServerCell: UITableViewCell {
     
-    private var serverNameLabel = FancyLabel()
-    private var serverDistanceLabel = FancyLabel()
-
+    private let serverNameLabel = FancyLabel()
+    private let serverDistanceLabel = FancyLabel()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        contentView.addSubview(serverNameLabel)
+        contentView.addSubview(serverDistanceLabel)
         setupConstraints()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
     
     public func configureCell(withServer server: Server) {
@@ -32,12 +30,9 @@ class ServerCell: UITableViewCell {
         selectionStyle = .none
         backgroundColor = .clear
         contentView.backgroundColor = .clear
-        contentView.addSubview(serverNameLabel)
-        contentView.addSubview(serverDistanceLabel)
         serverDistanceLabel.textAlignment = .left
-        
     }
-    
+
     private func setupConstraints() {
         serverNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.0).isActive = true
         serverNameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true

@@ -7,4 +7,6 @@ target 'testio' do
 
   # Pods for testio
   pod 'Alamofire', '~> 4.7'
+  pod 'SpinnerView'
+  pod 'SwiftKeychainWrapper', '~> 3.0'
 end
