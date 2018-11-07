@@ -73,6 +73,7 @@ class LogInVC: UIViewController {
         
         if let username = KeychainWrapper.standard.string(forKey: MY_USERNAME), let password = KeychainWrapper.standard.string(forKey: MY_PASSWORD) {
             debugPrint("Found some saved credentials. Should use?")
+            debugPrint("Username/Password ",username, password)
             restoreCredentialsAlert(username: username, password: password)
         }
         
@@ -118,7 +119,7 @@ class LogInVC: UIViewController {
                                         self.loginStatusLabel.text = LoginStatus.completed.rawValue
                                         
                                         if self.credentialsDidChange(username: username, password: password) {
-                                            self.savePasswordAlert(username: username, password: username, completion: { (success) in
+                                            self.savePasswordAlert(username: username, password: password, completion: { (success) in
                                                 if success {
                                                     self.loginStatus(result: true)
                                                 }
