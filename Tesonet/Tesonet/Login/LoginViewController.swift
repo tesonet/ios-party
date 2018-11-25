@@ -66,7 +66,7 @@ extension LoginViewController {
 extension LoginViewController {
     
     fileprivate func setupLogin() {
-        if UserSession.shared.isCrudentialsSaved() {
+        if UserSession.shared.isCrudentialsSaved {
             usernameTextField.text = UserSession.shared.signInDetails?.username
             passwordTextField.text = UserSession.shared.signInDetails?.password
         }

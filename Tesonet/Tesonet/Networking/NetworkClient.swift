@@ -18,7 +18,7 @@ final class NetworkClient {
      */
     func loadToken(from urlString: String,
                    withParams params: [String : String],
-                   completion: @escaping TokenAndErrorClosure) {
+                   then completion: @escaping TokenAndErrorClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
             let error = DataError.urlError(reason: "Could not create URL with " + urlString)
@@ -79,7 +79,7 @@ final class NetworkClient {
      */
     func loadData(from urlString: String,
                   with token: String,
-                  completion: @escaping DataAndErrorClosure) {
+                  then completion: @escaping DataAndErrorClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
             let error = DataError.urlError(reason: "Could not create URL with " + urlString)

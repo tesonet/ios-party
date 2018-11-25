@@ -41,6 +41,24 @@ final class UserSession {
             return (username, password)
         }
     }
+    
+    /// Check if user is loged in.
+    var isLogedIn: Bool {
+        if let token = token, !token.isEmpty {
+            return true
+        }
+        
+        return false
+    }
+    
+    /// Check if login crudentials are saved.
+    var isCrudentialsSaved: Bool {
+        if signInDetails != nil {
+            return true
+        }
+        
+        return false
+    }
 	
     /**
      Sign out.
@@ -65,32 +83,6 @@ final class UserSession {
     func save(token: String, username: String, password: String) {
         self.token = token
         signInDetails = (username, password)
-    }
-    
-    /**
-     Check if user is loged in.
-     
-     - returns: true if user is loged in.
-     */
-    func isLogedIn() -> Bool {
-        if let token = token, !token.isEmpty {
-            return true
-        }
-        
-        return false
-    }
-    
-    /**
-     Check if login crudentials are saved.
-     
-     - returns: true if login crudentials are saved.
-     */
-    func isCrudentialsSaved() -> Bool {
-        if signInDetails != nil {
-            return true
-        }
-        
-        return false
     }
     
 }

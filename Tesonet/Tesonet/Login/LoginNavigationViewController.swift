@@ -25,7 +25,7 @@ extension LoginNavigationViewController: SegueHandler {
     }
 
     fileprivate func moveToNextScreen() {
-        if UserSession.shared.isLogedIn() {
+        if UserSession.shared.isLogedIn {
             self.performSegueWithIdentifier(identifier: .SegueNavigationToServers, sender: self)
         } else {
             self.performSegueWithIdentifier(identifier: .SegueNavigationToLogin, sender: self)
