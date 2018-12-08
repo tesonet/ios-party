@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  testio
+
+  Created by Edvinas Sabaliauskas on 06/12/2018.
+  Copyright © 2018 Edvinas Sabaliauskas. All rights reserved.
+*/
+
+// MARK: - Generic strings
+
+"ok" = "Ok";
+"cancel" = "Cancel";
+"error" = "Error";
+
+// MARK: - LoginViewController
+
+"username.placeholder" = "Username";
+"username.empty" = "Please enter your username!";
+"password.placeholder" = "Password";
+"password.empty" = "Please enter your password!";
+"loginButton.title" = "Log In";
+"login.failed" = "Login failed...";
+
+// MARK: - ServersViewController
+
+"sortButton.title" = "Sort";
+"sort.byDistance" = "By Distance";
+"sort.alphanumerical" = "Alphanumerical";
