@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '12.0'
+
+target 'testio' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for testio
+
+  pod 'Alamofire', '~> 4.8'
+  pod 'Moya', '~> 12.0'
+  pod 'KeychainSwift', '~> 13.0'
+  pod 'IQKeyboardManagerSwift', '~> 6.2'
+
+end

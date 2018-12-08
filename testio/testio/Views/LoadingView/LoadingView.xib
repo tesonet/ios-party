@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingView" customModule="testio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pd4-G0-Bay">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-loading" translatesAutoresizingMaskIntoConstraints="NO" id="vvE-wV-NUa">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spinner" translatesAutoresizingMaskIntoConstraints="NO" id="CJ4-AP-Xz9">
+                            <rect key="frame" x="87" y="211" width="146.5" height="146.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="CJ4-AP-Xz9" secondAttribute="height" multiplier="1:1" id="ayi-j6-2ty"/>
+                            </constraints>
+                        </imageView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uku-CO-Qmh" userLabel="Label layoutGuide">
+                            <rect key="frame" x="159.5" y="357.5" width="1" height="105"/>
+                            <color key="backgroundColor" red="0.99215686270000003" green="0.1306662965" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="105" id="bZ5-nB-xvh"/>
+                                <constraint firstAttribute="width" constant="1" id="rji-xS-pYo"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching the list..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kb-gi-9qr">
+                            <rect key="frame" x="114" y="451" width="92" height="15"/>
+                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vvE-wV-NUa" firstAttribute="leading" secondItem="Pd4-G0-Bay" secondAttribute="leading" id="3oL-DK-1vU"/>
+                        <constraint firstItem="CJ4-AP-Xz9" firstAttribute="width" secondItem="Pd4-G0-Bay" secondAttribute="width" multiplier="146.5:320" id="Adb-3s-0Yo"/>
+                        <constraint firstAttribute="trailing" secondItem="vvE-wV-NUa" secondAttribute="trailing" id="H9c-kg-mML"/>
+                        <constraint firstAttribute="bottom" secondItem="vvE-wV-NUa" secondAttribute="bottom" id="Mq0-6P-NlX"/>
+                        <constraint firstItem="CJ4-AP-Xz9" firstAttribute="centerY" secondItem="Pd4-G0-Bay" secondAttribute="centerY" id="VbN-3P-qxu"/>
+                        <constraint firstItem="uku-CO-Qmh" firstAttribute="top" secondItem="CJ4-AP-Xz9" secondAttribute="bottom" id="azH-hc-nJf"/>
+                        <constraint firstItem="vvE-wV-NUa" firstAttribute="top" secondItem="Pd4-G0-Bay" secondAttribute="top" id="dvn-Gn-UMq"/>
+                        <constraint firstItem="6kb-gi-9qr" firstAttribute="baseline" secondItem="uku-CO-Qmh" secondAttribute="bottom" id="jAM-Js-gCy"/>
+                        <constraint firstItem="CJ4-AP-Xz9" firstAttribute="centerX" secondItem="Pd4-G0-Bay" secondAttribute="centerX" id="otp-f5-r6d"/>
+                        <constraint firstItem="uku-CO-Qmh" firstAttribute="centerX" secondItem="Pd4-G0-Bay" secondAttribute="centerX" id="u6Q-dl-0cc"/>
+                        <constraint firstItem="6kb-gi-9qr" firstAttribute="centerX" secondItem="Pd4-G0-Bay" secondAttribute="centerX" id="xj3-Bd-MsN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Pd4-G0-Bay" secondAttribute="trailing" id="VOx-D7-0Kl"/>
+                <constraint firstItem="Pd4-G0-Bay" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bjC-7p-cqj"/>
+                <constraint firstItem="Pd4-G0-Bay" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eHQ-M0-wpL"/>
+                <constraint firstAttribute="bottom" secondItem="Pd4-G0-Bay" secondAttribute="bottom" id="lPB-vY-U41"/>
+            </constraints>
+            <connections>
+                <outlet property="spinnerImage" destination="CJ4-AP-Xz9" id="Hx6-8V-ACm"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg-loading" width="640" height="1136"/>
+        <image name="spinner" width="293" height="293"/>
+    </resources>
+</document>
