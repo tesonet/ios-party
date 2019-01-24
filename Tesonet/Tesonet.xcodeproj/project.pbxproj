@@ -10,11 +10,13 @@
 		3736007BFB39F22DB9DEF1B6 /* Pods_TesonetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */; };
 		37BB1B0ACA7FCC125A27E2AA /* Pods_TesonetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */; };
 		64268423216621B100E64BE0 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64268422216621B100E64BE0 /* ServersViewModel.swift */; };
-		64268425216621B900E64BE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64268424216621B900E64BE0 /* LoginViewModel.swift */; };
 		642684272166222F00E64BE0 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642684262166222F00E64BE0 /* NetworkClient.swift */; };
 		643D9902215A910100A4EFA2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D9901215A910000A4EFA2 /* Configuration.swift */; };
 		643D9904215A916100A4EFA2 /* URLRequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D9903215A916100A4EFA2 /* URLRequestCreator.swift */; };
 		643D9906215A956000A4EFA2 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D9905215A956000A4EFA2 /* SegueHandler.swift */; };
+		678F464621FA183200B95538 /* RMServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464521FA183200B95538 /* RMServer.swift */; };
+		678F464821FA185100B95538 /* Server+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464721FA185100B95538 /* Server+Mapping.swift */; };
+		678F464A21FA18C000B95538 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464921FA18C000B95538 /* Realm+Ext.swift */; };
 		67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102120FB949F00D17F55 /* Assets.xcassets */; };
 		67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7102F20FB949F00D17F55 /* TesonetTests.swift */; };
 		67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7103A20FB949F00D17F55 /* TesonetUITests.swift */; };
@@ -28,15 +30,15 @@
 		67C7109720FBCB7A00D17F55 /* ServersTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */; };
 		67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */; };
 		67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */; };
-		67C710A520FBD16800D17F55 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A420FBD16800D17F55 /* ServerModel.swift */; };
-		67C710A920FD1A8800D17F55 /* PesistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A820FD1A8800D17F55 /* PesistanceManager.swift */; };
+		67C710A520FBD16800D17F55 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A420FBD16800D17F55 /* Server.swift */; };
+		67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A820FD1A8800D17F55 /* RealmStore.swift */; };
 		67C710B120FFB31300D17F55 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B020FFB31200D17F55 /* UserSession.swift */; };
 		67C710B320FFB65B00D17F55 /* LoginNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */; };
 		67C710B621011D3D00D17F55 /* UIAlertController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B521011D3D00D17F55 /* UIAlertController+Additions.swift */; };
-		67C710C821035F6B00D17F55 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710C721035F6B00D17F55 /* UIViewController+Extensions.swift */; };
+		67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */; };
 		67C710CC2103787B00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */; };
 		67C710CD2103787B00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CB2103787B00D17F55 /* Main.storyboard */; };
-		67C710D62103D87700D17F55 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D52103D87700D17F55 /* TokenModel.swift */; };
+		67C710D62103D87700D17F55 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D52103D87700D17F55 /* Token.swift */; };
 		67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D72103D8C500D17F55 /* TasonetError.swift */; };
 		67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */; };
 		D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */; };
@@ -65,11 +67,13 @@
 		5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64268422216621B100E64BE0 /* ServersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
-		64268424216621B900E64BE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		642684262166222F00E64BE0 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		643D9901215A910000A4EFA2 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		643D9903215A916100A4EFA2 /* URLRequestCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestCreator.swift; sourceTree = "<group>"; };
 		643D9905215A956000A4EFA2 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		678F464521FA183200B95538 /* RMServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMServer.swift; sourceTree = "<group>"; };
+		678F464721FA185100B95538 /* Server+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Mapping.swift"; sourceTree = "<group>"; };
+		678F464921FA18C000B95538 /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C7102120FB949F00D17F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67C7102620FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,15 +93,15 @@
 		67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersTableFooterView.xib; sourceTree = "<group>"; };
 		67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
-		67C710A420FBD16800D17F55 /* ServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
-		67C710A820FD1A8800D17F55 /* PesistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PesistanceManager.swift; sourceTree = "<group>"; };
+		67C710A420FBD16800D17F55 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		67C710A820FD1A8800D17F55 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		67C710B020FFB31200D17F55 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationViewController.swift; sourceTree = "<group>"; };
 		67C710B521011D3D00D17F55 /* UIAlertController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Additions.swift"; sourceTree = "<group>"; };
-		67C710C721035F6B00D17F55 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C710CB2103787B00D17F55 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		67C710D52103D87700D17F55 /* TokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		67C710D52103D87700D17F55 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		67C710D72103D8C500D17F55 /* TasonetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasonetError.swift; sourceTree = "<group>"; };
 		67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNoAnimationSegue.swift; sourceTree = "<group>"; };
 		78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,12 +180,11 @@
 				67C7109A20FBCC1A00D17F55 /* App */,
 				67C7108220FBC66900D17F55 /* Login */,
 				67C7108320FBC69000D17F55 /* Servers */,
-				67C710A320FBD12500D17F55 /* DataModels */,
+				67C710A320FBD12500D17F55 /* Data */,
 				67C7108520FBC6E800D17F55 /* Networking */,
 				67C7108420FBC6B700D17F55 /* Persistance */,
 				67C710C92103782900D17F55 /* Storyboards */,
-				67C7108820FBC87500D17F55 /* UI */,
-				67C7108920FBC87D00D17F55 /* Extensions */,
+				67C7108920FBC87D00D17F55 /* Helpers */,
 				67C7102120FB949F00D17F55 /* Assets.xcassets */,
 				67C7102620FB949F00D17F55 /* Info.plist */,
 			);
@@ -211,7 +214,6 @@
 			children = (
 				67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */,
 				67C7108620FBC7DF00D17F55 /* LoginViewController.swift */,
-				64268424216621B900E64BE0 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -233,7 +235,7 @@
 		67C7108420FBC6B700D17F55 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
-				67C710A820FD1A8800D17F55 /* PesistanceManager.swift */,
+				67C710A820FD1A8800D17F55 /* RealmStore.swift */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -241,7 +243,7 @@
 		67C7108520FBC6E800D17F55 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				67C710D52103D87700D17F55 /* TokenModel.swift */,
+				67C710D52103D87700D17F55 /* Token.swift */,
 				67C710D72103D8C500D17F55 /* TasonetError.swift */,
 				642684262166222F00E64BE0 /* NetworkClient.swift */,
 				67C710B020FFB31200D17F55 /* UserSession.swift */,
@@ -250,24 +252,18 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		67C7108820FBC87500D17F55 /* UI */ = {
+		67C7108920FBC87D00D17F55 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */,
 				67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */,
 				67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		67C7108920FBC87D00D17F55 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
 				67C710B521011D3D00D17F55 /* UIAlertController+Additions.swift */,
-				67C710C721035F6B00D17F55 /* UIViewController+Extensions.swift */,
+				67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */,
+				678F464921FA18C000B95538 /* Realm+Ext.swift */,
 				643D9905215A956000A4EFA2 /* SegueHandler.swift */,
 			);
-			path = Extensions;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		67C7109A20FBCC1A00D17F55 /* App */ = {
@@ -279,12 +275,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		67C710A320FBD12500D17F55 /* DataModels */ = {
+		67C710A320FBD12500D17F55 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				67C710A420FBD16800D17F55 /* ServerModel.swift */,
+				67C710A420FBD16800D17F55 /* Server.swift */,
+				678F464721FA185100B95538 /* Server+Mapping.swift */,
+				678F464521FA183200B95538 /* RMServer.swift */,
 			);
-			path = DataModels;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		67C710C92103782900D17F55 /* Storyboards */ = {
@@ -569,11 +567,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -602,28 +604,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C710D62103D87700D17F55 /* TokenModel.swift in Sources */,
+				678F464621FA183200B95538 /* RMServer.swift in Sources */,
+				67C710D62103D87700D17F55 /* Token.swift in Sources */,
 				67C710B621011D3D00D17F55 /* UIAlertController+Additions.swift in Sources */,
 				67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */,
 				67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */,
 				67C7109320FBCB7A00D17F55 /* ServersTableCell.swift in Sources */,
 				67C710B120FFB31300D17F55 /* UserSession.swift in Sources */,
 				642684272166222F00E64BE0 /* NetworkClient.swift in Sources */,
-				67C710C821035F6B00D17F55 /* UIViewController+Extensions.swift in Sources */,
+				67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */,
+				678F464821FA185100B95538 /* Server+Mapping.swift in Sources */,
 				67C710B320FFB65B00D17F55 /* LoginNavigationViewController.swift in Sources */,
 				67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */,
 				643D9902215A910100A4EFA2 /* Configuration.swift in Sources */,
 				67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */,
-				67C710A520FBD16800D17F55 /* ServerModel.swift in Sources */,
+				67C710A520FBD16800D17F55 /* Server.swift in Sources */,
 				64268423216621B100E64BE0 /* ServersViewModel.swift in Sources */,
 				643D9904215A916100A4EFA2 /* URLRequestCreator.swift in Sources */,
 				67C7109520FBCB7A00D17F55 /* ServersViewController.swift in Sources */,
 				67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */,
 				67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */,
 				643D9906215A956000A4EFA2 /* SegueHandler.swift in Sources */,
-				64268425216621B900E64BE0 /* LoginViewModel.swift in Sources */,
+				678F464A21FA18C000B95538 /* Realm+Ext.swift in Sources */,
 				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
-				67C710A920FD1A8800D17F55 /* PesistanceManager.swift in Sources */,
+				67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */,
 				67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

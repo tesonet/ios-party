@@ -1,5 +1,3 @@
-import Foundation
-
 enum DataError: Error, CustomStringConvertible {
     /// url could not be creaded from given string.
     case urlError(reason: String)

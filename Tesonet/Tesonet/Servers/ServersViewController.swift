@@ -1,7 +1,6 @@
 import UIKit
 
 class ServersViewController: UIViewController {
-    
     @IBOutlet fileprivate weak var tableView: UITableView!
     
     var serversViewModel: ServersViewModelType!
@@ -21,13 +20,11 @@ class ServersViewController: UIViewController {
         serversViewModel.delegate = self
         serversViewModel.fetchData()
     }
-    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -74,35 +71,35 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: server)
         return cell
     }
-    
 }
 
 // MARK: - ViewModelDelegate
 
 extension ServersViewController: ServersViewControllerDelegate {
-    
     func serversListDidChanged() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
-    
 }
 
 // MARK: - ServersTableFooterDelegate
 
 extension ServersViewController: ServersTableFooterDelegate {
-    
     func sortWasPressed() {
         footerView.isHidden = true
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let distanceSortButton = UIAlertAction(title: "By Distance", style: .default) { [unowned self] _ in
             self.footerView.isHidden = false
-            self.serversViewModel.serversList = self.serversViewModel.serversList.sorted(by: { $0.distance < $1.distance })
+            self.serversViewModel.serversList = self.serversViewModel.serversList.sorted(by: {
+                $0.distance ?? -1 < $1.distance ?? -1
+            })
         }
         let  alphanumericalSortButton = UIAlertAction(title: "Alphanumerical", style: .default) { [unowned self] _ in
             self.footerView.isHidden = false
-            self.serversViewModel.serversList = self.serversViewModel.serversList.sorted(by: { $0.name < $1.name })
+            self.serversViewModel.serversList = self.serversViewModel.serversList.sorted(by: {
+                $0.name ?? "Error" < $1.name ?? "Error"
+            })
         }
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { [unowned self] _ in
             self.footerView.isHidden = false
@@ -112,13 +109,11 @@ extension ServersViewController: ServersTableFooterDelegate {
         alertController.addAction(cancelButton)
         navigationController?.present(alertController, animated: true, completion: nil)
     }
-    
 }
 
 // MARK: - Navigation
 
 extension ServersViewController {
-    
     @IBAction fileprivate func logoutPressed(_ sender: Any) {
         let alertController = UIAlertController(title: "Sign out",
                                                 message: "Are you sure you want to sign out?",
@@ -135,16 +130,13 @@ extension ServersViewController {
         alertController.addAction(cancelButton)
         navigationController?.present(alertController, animated: true, completion: nil)
     }
-    
 }
 
 // MARK: - Private Methods
 
 extension ServersViewController {
-    
     fileprivate func signOut(forgetLogin: Bool) {
         UserSession.shared.signOut(forgetLogin: forgetLogin)
         self.performSegue(withIdentifier: "SequeToLogin", sender: self)
     }
-    
 }

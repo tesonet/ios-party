@@ -1,8 +1,6 @@
-import Foundation
 import KeychainSwift
 
 final class UserSession {
-	
     private let accessTokenKey = "UserSession_accessToken"
     private struct LoginKeys {
         static let username = "UserSession_username"
@@ -84,5 +82,4 @@ final class UserSession {
         self.token = token
         signInDetails = (username, password)
     }
-    
 }

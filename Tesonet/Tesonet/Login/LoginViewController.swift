@@ -3,7 +3,6 @@ import UIKit
 // TODO: refactor into view model
 
 class LoginViewController: UIViewController {
-    
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
     
@@ -22,13 +21,11 @@ class LoginViewController: UIViewController {
         usernameTextField.text = nil
         passwordTextField.text = nil
     }
-    
 }
 
 // MARK: - Navigation
 
 extension LoginViewController {
-    
     @IBAction fileprivate func loginPressed() {
         #if DEBUG
         let username = "tesonet"
@@ -58,13 +55,11 @@ extension LoginViewController {
             }
         }
     }
-    
 }
 
 // MARK: - Private Methods
 
 extension LoginViewController {
-    
     fileprivate func setupLogin() {
         if UserSession.shared.isCrudentialsSaved {
             usernameTextField.text = UserSession.shared.signInDetails?.username
@@ -85,5 +80,4 @@ extension LoginViewController {
             }
         }
     }
-    
 }

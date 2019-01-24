@@ -1,5 +1,3 @@
-import Foundation
-
 protocol ServersViewControllerDelegate: class {
     func serversListDidChanged()
 }
@@ -11,7 +9,6 @@ protocol ServersViewModelType {
 }
 
 class ServersViewModel: ServersViewModelType {
-    
     weak var delegate: ServersViewControllerDelegate?
     var serversList: [Server] = [] {
         didSet {
@@ -36,23 +33,19 @@ class ServersViewModel: ServersViewModelType {
             
             self.serversList = result
             
-            self.save(data: result, using: .filePersistance)
+            self.save(data: result)
         }
     }
-
 }
 
 // MARK: - Privates
 
 extension ServersViewModel {
-    
-    fileprivate func save(data: [Server], using persistanceType: PersistanceType) {
-        let persistance = PersistanceFactory.producePersistanceType(type: persistanceType)
-        persistance.write(items: data)
+    fileprivate func save(data: [Server]) {
+        RealmStore.shared.add(items: data)
     #if DEBUG
-        let servers = persistance.read() as [Server]
-        print(servers)
+        let servers = RealmStore.shared.retrieve()
+        print("---> ", servers, " <---")
     #endif
     }
-    
 }

@@ -8,7 +8,6 @@ extension UIView : UIViewLoading {}
 
 /// Protocol implementation
 extension UIViewLoading where Self : UIView {
-    
     /**
      Creates a new instance of the class on which this method is invoked,
      instantiated from a nib of the given name. If no nib name is given
@@ -30,5 +29,4 @@ extension UIViewLoading where Self : UIView {
         let components = className.split {$0 == "."}.map ( String.init )
         return components.last!
     }
-    
 }

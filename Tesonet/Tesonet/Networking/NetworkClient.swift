@@ -1,7 +1,6 @@
 import Foundation
 
 final class NetworkClient {
-    
     typealias TokenAndErrorClosure = (_ token: String?, _ error: Error?) -> ()
     typealias DataAndErrorClosure = (_ jsondta: [Server]?, _ error: Error?) -> ()
     

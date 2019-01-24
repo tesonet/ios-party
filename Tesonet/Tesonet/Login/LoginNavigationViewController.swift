@@ -1,7 +1,6 @@
 import UIKit
 
 class LoginNavigationViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()  
     }
@@ -10,13 +9,11 @@ class LoginNavigationViewController: UIViewController {
         super.viewDidAppear(animated)
         moveToNextScreen()
     }
-    
 }
 
 // MARK: - Navigation
 
 extension LoginNavigationViewController: SegueHandler {
-    
     enum SegueIdentifier: String {
         case
         SegueNavigationToServers
@@ -31,6 +28,5 @@ extension LoginNavigationViewController: SegueHandler {
             self.performSegueWithIdentifier(identifier: .SegueNavigationToLogin, sender: self)
         }
     }
-    
 }
 
