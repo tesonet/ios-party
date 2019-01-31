@@ -1,6 +1,6 @@
 import UIKit
 
-class ServersTableCell: UITableViewCell {
+class ServersListTableCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     

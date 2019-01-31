@@ -1,4 +1,6 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol ServersTableFooterDelegate: class {
     func sortWasPressed()

@@ -1,9 +1,10 @@
 import UIKit
 
-class ServersViewController: UIViewController {
+class ServersListViewController: UIViewController {
     @IBOutlet fileprivate weak var tableView: UITableView!
     
-    var serversViewModel: ServersViewModelType!
+    fileprivate var serversViewModel: ServersViewModelType =
+        ServersViewModel(serversListInteractor: ServersDependanciesProvider.shared.getListInteractor())
     fileprivate lazy var footerView: ServersTableFooterView = {
         let footerView = ServersTableFooterView.loadFromNib()
         footerView.delegate = self
@@ -16,7 +17,6 @@ class ServersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        serversViewModel = ServersViewModel()
         serversViewModel.delegate = self
         serversViewModel.fetchData()
     }
@@ -24,7 +24,7 @@ class ServersViewController: UIViewController {
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
+extension ServersListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -64,7 +64,8 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     fileprivate func serverCell(atIndexPath indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServerCell", for: indexPath) as? ServersTableCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServersListTableCell",
+                                                       for: indexPath) as? ServersListTableCell else {
             fatalError("Could not dequeue cell of type ServerCell")
         }
         let server = serversViewModel.serversList[indexPath.row]
@@ -75,7 +76,7 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - ViewModelDelegate
 
-extension ServersViewController: ServersViewControllerDelegate {
+extension ServersListViewController: ServersListViewControllerDelegate {
     func serversListDidChanged() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -85,7 +86,7 @@ extension ServersViewController: ServersViewControllerDelegate {
 
 // MARK: - ServersTableFooterDelegate
 
-extension ServersViewController: ServersTableFooterDelegate {
+extension ServersListViewController: ServersTableFooterDelegate {
     func sortWasPressed() {
         footerView.isHidden = true
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -113,7 +114,7 @@ extension ServersViewController: ServersTableFooterDelegate {
 
 // MARK: - Navigation
 
-extension ServersViewController {
+extension ServersListViewController {
     @IBAction fileprivate func logoutPressed(_ sender: Any) {
         let alertController = UIAlertController(title: "Sign out",
                                                 message: "Are you sure you want to sign out?",
@@ -134,7 +135,7 @@ extension ServersViewController {
 
 // MARK: - Private Methods
 
-extension ServersViewController {
+extension ServersListViewController {
     fileprivate func signOut(forgetLogin: Bool) {
         UserSession.shared.signOut(forgetLogin: forgetLogin)
         self.performSegue(withIdentifier: "SequeToLogin", sender: self)

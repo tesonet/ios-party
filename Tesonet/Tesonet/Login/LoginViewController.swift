@@ -35,7 +35,8 @@ extension LoginViewController {
         let password = passwordTextField.text ?? ""
         #endif
 
-        NetworkClient.shared.loadToken(from: URLs.Tesonet.tokenURL, withParams: ["username": username, "password": password]) { [weak self] result, error in
+        HTTPClient.shared.loadToken(from: URLs.Tesonet.tokenURL,
+                                    withParams: ["username": username, "password": password]) { [weak self] result, error in
             guard let `self` = self else { return }
             if let error = error {
                 print(error)

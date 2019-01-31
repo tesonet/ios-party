@@ -5,6 +5,8 @@ enum DataError: Error, CustomStringConvertible {
     case noDataError(reason: String)
     /// json parsing error.
     case serializationError(reason: String)
+    /// unknown error.
+    case unknownError(reason: String)
     
     /// A description of the error.
     var description: String {
@@ -14,6 +16,8 @@ enum DataError: Error, CustomStringConvertible {
         case let .noDataError(reason):
             return reason
         case let .serializationError(reason):
+            return reason
+        case let .unknownError(reason):
             return reason
         }
     }

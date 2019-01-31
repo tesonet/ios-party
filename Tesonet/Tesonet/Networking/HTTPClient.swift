@@ -1,11 +1,11 @@
 import Foundation
 
-final class NetworkClient {
+final class HTTPClient {
     typealias TokenAndErrorClosure = (_ token: String?, _ error: Error?) -> ()
     typealias DataAndErrorClosure = (_ jsondta: [Server]?, _ error: Error?) -> ()
     
     // Singelton
-    static var shared = NetworkClient()
+    static var shared = HTTPClient()
     fileprivate init() {}
     
     /**
