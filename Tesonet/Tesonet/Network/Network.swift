@@ -26,7 +26,7 @@ final class Network {
                         return
                     }
                     guard let result = result else {
-                        observer(.error(DataError.unknownError(reason: "Something went wrong.")))
+                        observer(.error(DataError.unknownError))
                         return
                     }
                     RealmStore.shared.add(items: result)
@@ -51,7 +51,7 @@ final class Network {
                         return
                     }
                     guard let result = result else {
-                        observer(.error(DataError.unknownError(reason: "Something went wrong.")))
+                        observer(.error(DataError.unknownError))
                         return
                     }
                     observer(.success(result))

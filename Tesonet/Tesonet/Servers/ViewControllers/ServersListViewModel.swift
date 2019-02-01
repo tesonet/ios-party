@@ -32,12 +32,12 @@ class ServersViewModel: ServersViewModelType {
             .subscribe(
                 onSuccess: { [weak self] servers in
                     guard let `self` = self else { return }
+                    ErrorMessage.showErrorHud(with: "")
                     self.serversList = servers
                     self.save(data: servers)
                 },
-                onError: { [weak self] error in
-                    guard let `self` = self else { return }
-                    // self.errorMessage.value = error.localizedDescription
+                onError: { error in
+                    ErrorMessage.showErrorHud(with: error.localizedDescription)
                 }
             )
             .disposed(by: disposeBag)

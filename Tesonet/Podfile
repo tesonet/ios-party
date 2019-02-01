@@ -6,10 +6,11 @@ target 'Tesonet' do
   use_frameworks!
 
   pod 'KeychainSwift'
-  pod 'ReachabilitySwift'
   pod 'RealmSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'ReachabilitySwift'
+  pod 'SwiftMessages'
 
   target 'TesonetTests' do
     inherit! :search_paths

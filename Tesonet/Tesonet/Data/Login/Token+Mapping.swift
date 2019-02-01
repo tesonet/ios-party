@@ -1,10 +1,10 @@
 extension Token: Decodable {
     private enum CodingKeys: String, CodingKey {
-        case value
+        case token
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        value = try container.decode(String.self, forKey: .value)
+        token = try container.decode(String.self, forKey: .token)
     }
 }

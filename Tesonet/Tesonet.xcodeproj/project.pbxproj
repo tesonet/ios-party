@@ -30,6 +30,8 @@
 		678F466922035C1200B95538 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466822035C1200B95538 /* ServerRepository.swift */; };
 		678F466B22035C6900B95538 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466A22035C6900B95538 /* LoginService.swift */; };
 		678F466C2203601F00B95538 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466322034A1500B95538 /* LoginInteractor.swift */; };
+		678F466F220474EC00B95538 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466E220474EC00B95538 /* ReachabilityManager.swift */; };
+		678F46712204781000B95538 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46702204780F00B95538 /* ErrorMessage.swift */; };
 		67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102120FB949F00D17F55 /* Assets.xcassets */; };
 		67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7102F20FB949F00D17F55 /* TesonetTests.swift */; };
 		67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7103A20FB949F00D17F55 /* TesonetUITests.swift */; };
@@ -52,7 +54,7 @@
 		67C710CC2103787B00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */; };
 		67C710CD2103787B00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CB2103787B00D17F55 /* Main.storyboard */; };
 		67C710D62103D87700D17F55 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D52103D87700D17F55 /* Token.swift */; };
-		67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D72103D8C500D17F55 /* TasonetError.swift */; };
+		67C710D82103D8C600D17F55 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D72103D8C500D17F55 /* Error.swift */; };
 		67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */; };
 		D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +102,8 @@
 		678F466622034C2C00B95538 /* Token+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Mapping.swift"; sourceTree = "<group>"; };
 		678F466822035C1200B95538 /* ServerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
 		678F466A22035C6900B95538 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		678F466E220474EC00B95538 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		678F46702204780F00B95538 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C7102120FB949F00D17F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67C7102620FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,7 +132,7 @@
 		67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C710CB2103787B00D17F55 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		67C710D52103D87700D17F55 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		67C710D72103D8C500D17F55 /* TasonetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasonetError.swift; sourceTree = "<group>"; };
+		67C710D72103D8C500D17F55 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNoAnimationSegue.swift; sourceTree = "<group>"; };
 		78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.release.xcconfig"; sourceTree = "<group>"; };
 		8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +233,27 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		678F46722204A72300B95538 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				678F466822035C1200B95538 /* ServerRepository.swift */,
+				67C710A420FBD16800D17F55 /* Server.swift */,
+				678F464721FA185100B95538 /* Server+Mapping.swift */,
+				678F464521FA183200B95538 /* RMServer.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		678F46732204A72600B95538 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				678F464E2200B7E600B95538 /* LoginRepository.swift */,
+				67C710D52103D87700D17F55 /* Token.swift */,
+				678F466622034C2C00B95538 /* Token+Mapping.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		67C7100E20FB949F00D17F55 = {
 			isa = PBXGroup;
 			children = (
@@ -259,7 +284,7 @@
 				67C7108320FBC69000D17F55 /* Servers */,
 				67C710A320FBD12500D17F55 /* Data */,
 				678F46502200B86900B95538 /* Services */,
-				67C7108520FBC6E800D17F55 /* Networking */,
+				67C7108520FBC6E800D17F55 /* Network */,
 				67C7108420FBC6B700D17F55 /* Persistance */,
 				67C710C92103782900D17F55 /* Storyboards */,
 				67C7108920FBC87D00D17F55 /* Helpers */,
@@ -315,16 +340,18 @@
 			path = Persistance;
 			sourceTree = "<group>";
 		};
-		67C7108520FBC6E800D17F55 /* Networking */ = {
+		67C7108520FBC6E800D17F55 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				67C710D72103D8C500D17F55 /* TasonetError.swift */,
+				67C710D72103D8C500D17F55 /* Error.swift */,
 				678F465A220213AB00B95538 /* Network.swift */,
 				642684262166222F00E64BE0 /* HTTPClient.swift */,
 				67C710B020FFB31200D17F55 /* UserSession.swift */,
 				643D9903215A916100A4EFA2 /* URLRequestCreator.swift */,
+				678F466E220474EC00B95538 /* ReachabilityManager.swift */,
+				678F46702204780F00B95538 /* ErrorMessage.swift */,
 			);
-			path = Networking;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		67C7108920FBC87D00D17F55 /* Helpers */ = {
@@ -353,13 +380,8 @@
 		67C710A320FBD12500D17F55 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				67C710D52103D87700D17F55 /* Token.swift */,
-				678F466622034C2C00B95538 /* Token+Mapping.swift */,
-				678F464E2200B7E600B95538 /* LoginRepository.swift */,
-				678F466822035C1200B95538 /* ServerRepository.swift */,
-				67C710A420FBD16800D17F55 /* Server.swift */,
-				678F464721FA185100B95538 /* Server+Mapping.swift */,
-				678F464521FA183200B95538 /* RMServer.swift */,
+				678F46732204A72600B95538 /* Login */,
+				678F46722204A72300B95538 /* Server */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -658,6 +680,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -668,6 +691,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -708,7 +732,9 @@
 				678F465B220213AB00B95538 /* Network.swift in Sources */,
 				67C710B120FFB31300D17F55 /* UserSession.swift in Sources */,
 				642684272166222F00E64BE0 /* HTTPClient.swift in Sources */,
+				678F46712204781000B95538 /* ErrorMessage.swift in Sources */,
 				678F466922035C1200B95538 /* ServerRepository.swift in Sources */,
+				678F466F220474EC00B95538 /* ReachabilityManager.swift in Sources */,
 				67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */,
 				678F464F2200B7E600B95538 /* LoginRepository.swift in Sources */,
 				678F464821FA185100B95538 /* Server+Mapping.swift in Sources */,
@@ -733,7 +759,7 @@
 				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
 				67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */,
 				678F46612203445000B95538 /* LoginDependanciesProvider.swift in Sources */,
-				67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */,
+				67C710D82103D8C600D17F55 /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,7 +915,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LEQ4G2BEZ;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
 				INFOPLIST_FILE = Tesonet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -909,7 +935,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LEQ4G2BEZ;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
 				INFOPLIST_FILE = Tesonet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

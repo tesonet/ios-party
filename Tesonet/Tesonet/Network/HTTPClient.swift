@@ -20,8 +20,7 @@ final class HTTPClient {
                    then completion: @escaping TokenAndErrorClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
-            let error = DataError.urlError(reason: "Could not create URL with " + urlString)
-            completion(nil, error)
+            completion(nil, DataError.urlError)
             return
         }
 
@@ -36,32 +35,18 @@ final class HTTPClient {
                 return
             }
             
-            // Check response status code
-            if let httpResponse = response as? HTTPURLResponse {
-                switch httpResponse.statusCode {
-                case 401:
-                    let error = HTTPError.error401(reason: "Unauthorized")
-                    completion(nil, error)
-                    return
-                default:
-                    break
-                }
-            }
-            
             // Make sure we got data
             guard let data = data else {
-                let error = DataError.noDataError(reason: "No data received")
-                completion(nil, error)
+                completion(nil, DataError.noDataError)
                 return
             }
 
             let decoder = JSONDecoder()
             do {
-                let token = try decoder.decode(Token.self, from: data)
-                completion(token.value, nil)
+                let tokenData = try decoder.decode(Token.self, from: data)
+                completion(tokenData.token, nil)
             } catch {
-                let error = DataError.serializationError(reason: "Serialization error for data from URL " + urlString)
-                completion(nil, error)
+                completion(nil, DataError.serializationError)
             }
         }.resume()
     }
@@ -69,8 +54,9 @@ final class HTTPClient {
     /**
      Obtain data.
      
-     - note: We are loged in, so we have correct access token. Since no refresh token required - access token does not expire.
-     Hence - no 401. In real service access token would expire.
+     - note: We are loged in, so we have correct access token.
+     Since no refresh token required - access token does not expire. Hence - no 401.
+     In real service access token would expire.
      
      - parameter from:       data url string.
      - parameter token:      Bearer authorization token.
@@ -81,8 +67,7 @@ final class HTTPClient {
                   then completion: @escaping DataAndErrorClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
-            let error = DataError.urlError(reason: "Could not create URL with " + urlString)
-            completion(nil, error)
+            completion(nil, DataError.urlError)
             return
         }
 
@@ -99,18 +84,16 @@ final class HTTPClient {
             
             // Make sure we got data
             guard let data = data else {
-                let error = DataError.noDataError(reason: "No data for URL received")
-                completion(nil, error)
+                completion(nil, DataError.noDataError)
                 return
             }
             
             let decoder = JSONDecoder()
             do {
-                let servers = try decoder.decode([Server].self, from: data)
-                completion(servers, nil)
+                let serversData = try decoder.decode([Server].self, from: data)
+                completion(serversData, nil)
             } catch {
-                let error = DataError.serializationError(reason: "Serialization error for data from URL " + urlString)
-                completion(nil, error)
+                completion(nil, DataError.serializationError)
             }
         }.resume()
     }

@@ -3,7 +3,6 @@ import RxSwift
 import RxCocoa
 
 protocol LoginViewControllerDelegate: class {
-    func handleLoginError(error: Error)
     func moveToServersList()
 }
 
@@ -21,28 +20,25 @@ class LoginViewModel: LoginViewModelType {
         self.loginInteractor = loginInteractor
     }
     
-    func retrieveToken(with params: LoginData) {        
-        HTTPClient.shared
-            .loadToken(from: URLs.Tesonet.tokenURL,
-                       withParams: params.toJson()) { [weak self] result, error in
-                        guard let `self` = self else { return }
-                        if let error = error {
-                            print(error)
-                            DispatchQueue.main.async {
-                                self.delegate?.handleLoginError(error: error)
-                            }
-                            return
-                        }
-                        
-                        guard let accessToken = result else {
-                            return
-                        }
-                        
-                        self.saveSession(accessToken: accessToken, username: params.username, password: params.password)
-                        DispatchQueue.main.async {
-                            self.delegate?.moveToServersList()
-                        }
-        }
+    func retrieveToken(with params: LoginData) {
+        loginInteractor
+            .request(with: params)
+            .subscribe(
+                onSuccess: { [weak self] accessToken in
+                    guard let `self` = self else { return }
+                    ErrorMessage.showErrorHud(with: "")
+                    self.saveSession(accessToken: accessToken,
+                                     username: params.username,
+                                     password: params.password)
+                    DispatchQueue.main.async {
+                        self.delegate?.moveToServersList()
+                    }
+                },
+                onError: { error in
+                    ErrorMessage.showErrorHud(with: error.localizedDescription)
+                }
+            )
+            .disposed(by: disposeBag)
     }
 }
 

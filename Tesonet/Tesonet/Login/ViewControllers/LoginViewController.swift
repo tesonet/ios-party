@@ -45,16 +45,6 @@ extension LoginViewController {
 // MARK: - LoginViewControllerDelegate
 
 extension LoginViewController: LoginViewControllerDelegate {
-    func handleLoginError(error: Error) {
-        if let responseStatusCodeError = error as? HTTPError {
-            let allertTitle = "Error"
-            let allertMeassage = "Login Error\n" + responseStatusCodeError.statusCode + ": " + responseStatusCodeError.description
-            self.presentSimpleAlert(title: allertTitle, message: allertMeassage) {
-                self.passwordTextField.text = nil
-            }
-        }
-    }
-    
     func moveToServersList() {
         self.performSegue(withIdentifier: "SegueToServers", sender: self)
     }
