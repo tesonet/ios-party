@@ -8,6 +8,6 @@ class ServersListInteractor {
     }
 
     func request() -> Single<[Server]> {
-        return repository.retrieveAll()
+        return repository.retrieveAllServers()
     }
 }

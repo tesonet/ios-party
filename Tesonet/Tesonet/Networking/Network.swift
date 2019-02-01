@@ -11,7 +11,7 @@ final class Network {
         return false
     }
     
-    func retrieveAll() -> Single<[Server]> {
+    func retrieveAllServers() -> Single<[Server]> {
         return Single.create{ [isOnline] observer in
             if !isOnline {
                 return Disposables.create {}
@@ -30,6 +30,30 @@ final class Network {
                         return
                     }
                     RealmStore.shared.add(items: result)
+                    observer(.success(result))
+                }
+            }
+            
+            return Disposables.create {}
+        }
+    }
+    
+    func retrieveToken(with params: LoginData) -> Single<String> {
+        return Single.create{ [isOnline] observer in
+            if !isOnline {
+                return Disposables.create {}
+            } else {
+                HTTPClient.shared
+                    .loadToken(from: URLs.Tesonet.tokenURL,
+                               withParams: params.toJson()) { result, error in
+                    if let error = error {
+                        observer(.error(error))
+                        return
+                    }
+                    guard let result = result else {
+                        observer(.error(DataError.unknownError(reason: "Something went wrong.")))
+                        return
+                    }
                     observer(.success(result))
                 }
             }

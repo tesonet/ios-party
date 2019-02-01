@@ -7,7 +7,7 @@ class ServerService {
         self.network = network
     }
     
-    func retrieveAll() -> Single<[Server]> {
-        return network.retrieveAll()
+    func retrieveAllServers() -> Single<[Server]> {
+        return network.retrieveAllServers()
     }
 }

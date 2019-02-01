@@ -33,7 +33,7 @@ final class ServersDependanciesProvider: NSObject {
         return serverService!
     }
     
-    // ListInteractor
+    // Interactor
     
     func getListInteractor() -> ServersListInteractor {
         return serversListInteractor ?? setupListInteractor()

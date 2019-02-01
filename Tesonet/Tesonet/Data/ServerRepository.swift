@@ -7,7 +7,7 @@ class ServerRepository {
         self.service = service
     }
     
-    func retrieveAll() -> Single<[Server]> {
-        return service.retrieveAll()
+    func retrieveAllServers() -> Single<[Server]> {
+        return service.retrieveAllServers()
     }
 }

@@ -18,7 +18,7 @@ class ServersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         serversViewModel.delegate = self
-        serversViewModel.fetchData()
+        serversViewModel.retrieveAllServers()
     }
 }
 
@@ -133,7 +133,7 @@ extension ServersListViewController {
     }
 }
 
-// MARK: - Private Methods
+// MARK: - Privates
 
 extension ServersListViewController {
     fileprivate func signOut(forgetLogin: Bool) {

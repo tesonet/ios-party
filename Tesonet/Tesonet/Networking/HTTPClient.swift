@@ -57,8 +57,8 @@ final class HTTPClient {
 
             let decoder = JSONDecoder()
             do {
-                let json = try decoder.decode(Token.self, from: data)
-                completion(json.token, nil)
+                let token = try decoder.decode(Token.self, from: data)
+                completion(token.value, nil)
             } catch {
                 let error = DataError.serializationError(reason: "Serialization error for data from URL " + urlString)
                 completion(nil, error)
@@ -106,8 +106,8 @@ final class HTTPClient {
             
             let decoder = JSONDecoder()
             do {
-                let jsonData = try decoder.decode([Server].self, from: data)
-                completion(jsonData, nil)
+                let servers = try decoder.decode([Server].self, from: data)
+                completion(servers, nil)
             } catch {
                 let error = DataError.serializationError(reason: "Serialization error for data from URL " + urlString)
                 completion(nil, error)

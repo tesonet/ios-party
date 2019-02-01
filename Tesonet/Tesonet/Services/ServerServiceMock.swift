@@ -1,7 +1,7 @@
 import RxSwift
 
 class ServerServiceMock: ServerService {
-    override func retrieveAll() -> Single<[Server]> {
+    override func retrieveAllServers() -> Single<[Server]> {
         let json = """
 [
     {

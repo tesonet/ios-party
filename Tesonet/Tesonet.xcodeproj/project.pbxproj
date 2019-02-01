@@ -17,12 +17,19 @@
 		678F464621FA183200B95538 /* RMServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464521FA183200B95538 /* RMServer.swift */; };
 		678F464821FA185100B95538 /* Server+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464721FA185100B95538 /* Server+Mapping.swift */; };
 		678F464A21FA18C000B95538 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464921FA18C000B95538 /* Realm+Ext.swift */; };
-		678F464F2200B7E600B95538 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464E2200B7E600B95538 /* ServerRepository.swift */; };
+		678F464F2200B7E600B95538 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464E2200B7E600B95538 /* LoginRepository.swift */; };
 		678F46522200B8C700B95538 /* ServersDependanciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46512200B8C700B95538 /* ServersDependanciesProvider.swift */; };
 		678F46552200B9D700B95538 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46532200B9D700B95538 /* ServerService.swift */; };
 		678F46562200B9D700B95538 /* ServerServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46542200B9D700B95538 /* ServerServiceMock.swift */; };
 		678F46592200C6A400B95538 /* ServersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46582200C6A400B95538 /* ServersListInteractor.swift */; };
 		678F465B220213AB00B95538 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F465A220213AB00B95538 /* Network.swift */; };
+		678F465F2203282B00B95538 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F465E2203282B00B95538 /* LoginViewModel.swift */; };
+		678F46612203445000B95538 /* LoginDependanciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46602203445000B95538 /* LoginDependanciesProvider.swift */; };
+		678F466522034B1300B95538 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466422034B1300B95538 /* LoginData.swift */; };
+		678F466722034C2C00B95538 /* Token+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466622034C2C00B95538 /* Token+Mapping.swift */; };
+		678F466922035C1200B95538 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466822035C1200B95538 /* ServerRepository.swift */; };
+		678F466B22035C6900B95538 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466A22035C6900B95538 /* LoginService.swift */; };
+		678F466C2203601F00B95538 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466322034A1500B95538 /* LoginInteractor.swift */; };
 		67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102120FB949F00D17F55 /* Assets.xcassets */; };
 		67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7102F20FB949F00D17F55 /* TesonetTests.swift */; };
 		67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7103A20FB949F00D17F55 /* TesonetUITests.swift */; };
@@ -80,12 +87,19 @@
 		678F464521FA183200B95538 /* RMServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMServer.swift; sourceTree = "<group>"; };
 		678F464721FA185100B95538 /* Server+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Mapping.swift"; sourceTree = "<group>"; };
 		678F464921FA18C000B95538 /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
-		678F464E2200B7E600B95538 /* ServerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
+		678F464E2200B7E600B95538 /* LoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		678F46512200B8C700B95538 /* ServersDependanciesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersDependanciesProvider.swift; sourceTree = "<group>"; };
 		678F46532200B9D700B95538 /* ServerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
 		678F46542200B9D700B95538 /* ServerServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerServiceMock.swift; sourceTree = "<group>"; };
 		678F46582200C6A400B95538 /* ServersListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListInteractor.swift; sourceTree = "<group>"; };
 		678F465A220213AB00B95538 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		678F465E2203282B00B95538 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		678F46602203445000B95538 /* LoginDependanciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDependanciesProvider.swift; sourceTree = "<group>"; };
+		678F466322034A1500B95538 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		678F466422034B1300B95538 /* LoginData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		678F466622034C2C00B95538 /* Token+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Mapping.swift"; sourceTree = "<group>"; };
+		678F466822035C1200B95538 /* ServerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
+		678F466A22035C6900B95538 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C7102120FB949F00D17F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67C7102620FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +181,7 @@
 		678F46502200B86900B95538 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				678F466A22035C6900B95538 /* LoginService.swift */,
 				678F46532200B9D700B95538 /* ServerService.swift */,
 				678F46542200B9D700B95538 /* ServerServiceMock.swift */,
 			);
@@ -191,6 +206,25 @@
 				67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */,
 				67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */,
 				67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		678F466222034A0400B95538 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				678F466322034A1500B95538 /* LoginInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		678F466D22046A5F00B95538 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */,
+				67C7108620FBC7DF00D17F55 /* LoginViewController.swift */,
+				678F465E2203282B00B95538 /* LoginViewModel.swift */,
+				678F466422034B1300B95538 /* LoginData.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -256,8 +290,9 @@
 		67C7108220FBC66900D17F55 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */,
-				67C7108620FBC7DF00D17F55 /* LoginViewController.swift */,
+				678F46602203445000B95538 /* LoginDependanciesProvider.swift */,
+				678F466222034A0400B95538 /* Interactors */,
+				678F466D22046A5F00B95538 /* ViewControllers */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -283,7 +318,6 @@
 		67C7108520FBC6E800D17F55 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				67C710D52103D87700D17F55 /* Token.swift */,
 				67C710D72103D8C500D17F55 /* TasonetError.swift */,
 				678F465A220213AB00B95538 /* Network.swift */,
 				642684262166222F00E64BE0 /* HTTPClient.swift */,
@@ -319,7 +353,10 @@
 		67C710A320FBD12500D17F55 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				678F464E2200B7E600B95538 /* ServerRepository.swift */,
+				67C710D52103D87700D17F55 /* Token.swift */,
+				678F466622034C2C00B95538 /* Token+Mapping.swift */,
+				678F464E2200B7E600B95538 /* LoginRepository.swift */,
+				678F466822035C1200B95538 /* ServerRepository.swift */,
 				67C710A420FBD16800D17F55 /* Server.swift */,
 				678F464721FA185100B95538 /* Server+Mapping.swift */,
 				678F464521FA183200B95538 /* RMServer.swift */,
@@ -666,20 +703,26 @@
 				678F46552200B9D700B95538 /* ServerService.swift in Sources */,
 				67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */,
 				67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */,
+				678F465F2203282B00B95538 /* LoginViewModel.swift in Sources */,
 				67C7109320FBCB7A00D17F55 /* ServersListTableCell.swift in Sources */,
 				678F465B220213AB00B95538 /* Network.swift in Sources */,
 				67C710B120FFB31300D17F55 /* UserSession.swift in Sources */,
 				642684272166222F00E64BE0 /* HTTPClient.swift in Sources */,
+				678F466922035C1200B95538 /* ServerRepository.swift in Sources */,
 				67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */,
-				678F464F2200B7E600B95538 /* ServerRepository.swift in Sources */,
+				678F464F2200B7E600B95538 /* LoginRepository.swift in Sources */,
 				678F464821FA185100B95538 /* Server+Mapping.swift in Sources */,
 				67C710B320FFB65B00D17F55 /* LoginNavigationViewController.swift in Sources */,
 				67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */,
 				643D9902215A910100A4EFA2 /* Configuration.swift in Sources */,
 				67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */,
+				678F466C2203601F00B95538 /* LoginInteractor.swift in Sources */,
+				678F466522034B1300B95538 /* LoginData.swift in Sources */,
 				67C710A520FBD16800D17F55 /* Server.swift in Sources */,
 				64268423216621B100E64BE0 /* ServersListViewModel.swift in Sources */,
 				678F46522200B8C700B95538 /* ServersDependanciesProvider.swift in Sources */,
+				678F466722034C2C00B95538 /* Token+Mapping.swift in Sources */,
+				678F466B22035C6900B95538 /* LoginService.swift in Sources */,
 				643D9904215A916100A4EFA2 /* URLRequestCreator.swift in Sources */,
 				67C7109520FBCB7A00D17F55 /* ServersListViewController.swift in Sources */,
 				678F46592200C6A400B95538 /* ServersListInteractor.swift in Sources */,
@@ -689,6 +732,7 @@
 				678F464A21FA18C000B95538 /* Realm+Ext.swift in Sources */,
 				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
 				67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */,
+				678F46612203445000B95538 /* LoginDependanciesProvider.swift in Sources */,
 				67C710D82103D8C600D17F55 /* TasonetError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

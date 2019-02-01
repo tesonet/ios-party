@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login Navigation View Controller-->
+        <!--Login Router View Controller-->
         <scene sceneID="JgP-bg-y0N">
             <objects>
-                <viewController id="wX9-wf-eka" customClass="LoginNavigationViewController" customModule="Tesonet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wX9-wf-eka" customClass="LoginRouterViewController" customModule="Tesonet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zh9-4t-TGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +255,7 @@
         <image name="logo-white" width="246" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4FS-nw-LDY"/>
-        <segue reference="Sft-OQ-CZF"/>
+        <segue reference="VfP-sc-yK1"/>
+        <segue reference="Edv-ke-3IH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,7 @@ protocol ServersListViewControllerDelegate: class {
 protocol ServersViewModelType {
     var delegate: ServersListViewControllerDelegate? { get set }
     var serversList: [Server] { get set }
-    func fetchData()
+    func retrieveAllServers()
 }
 
 class ServersViewModel: ServersViewModelType {
@@ -26,17 +26,18 @@ class ServersViewModel: ServersViewModelType {
         self.serversListInteractor = serversListInteractor
     }
     
-    func fetchData() {
+    func retrieveAllServers() {
         serversListInteractor
             .request()
             .subscribe(
                 onSuccess: { [weak self] servers in
                     guard let `self` = self else { return }
                     self.serversList = servers
+                    self.save(data: servers)
                 },
                 onError: { [weak self] error in
                     guard let `self` = self else { return }
-                    //                    self.errorMessage.value = error.localizedDescription
+                    // self.errorMessage.value = error.localizedDescription
                 }
             )
             .disposed(by: disposeBag)
