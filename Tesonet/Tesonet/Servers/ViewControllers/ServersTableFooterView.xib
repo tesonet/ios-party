@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ServersTableFooterView" customModule="Tesonet" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QG-PB-Nl2">
-                    <rect key="frame" x="165.5" y="-4.5" width="44" height="44"/>
+                    <rect key="frame" x="165.5" y="3" width="44" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="YhX-6S-n2C"/>
                         <constraint firstAttribute="width" constant="44" id="ekc-U9-rMb"/>

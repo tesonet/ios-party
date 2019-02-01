@@ -5,6 +5,8 @@ class ServersListViewController: UIViewController {
     
     fileprivate var serversViewModel: ServersViewModelType =
         ServersViewModel(serversListInteractor: ServersDependanciesProvider.shared.getListInteractor())
+    
+    // Good way to create header/footer which you can hide/show anytime
     fileprivate lazy var footerView: ServersTableFooterView = {
         let footerView = ServersTableFooterView.loadFromNib()
         footerView.delegate = self
@@ -37,14 +39,10 @@ extension ServersListViewController: UITableViewDelegate, UITableViewDataSource 
         return serverCell(atIndexPath: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
-    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 40
     }
-    
+
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
     }
