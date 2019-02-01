@@ -364,10 +364,10 @@
 			children = (
 				678F465A220213AB00B95538 /* Network.swift */,
 				642684262166222F00E64BE0 /* HTTPClient.swift */,
-				67C710D72103D8C500D17F55 /* Error.swift */,
-				67C710B020FFB31200D17F55 /* UserSession.swift */,
 				643D9903215A916100A4EFA2 /* URLRequestCreator.swift */,
 				678F466E220474EC00B95538 /* ReachabilityManager.swift */,
+				67C710B020FFB31200D17F55 /* UserSession.swift */,
+				67C710D72103D8C500D17F55 /* Error.swift */,
 				678F46702204780F00B95538 /* ErrorMessage.swift */,
 			);
 			path = Network;

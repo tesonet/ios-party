@@ -1,4 +1,3 @@
-import Foundation
 import SwiftMessages
 
 enum DataError: Error {
