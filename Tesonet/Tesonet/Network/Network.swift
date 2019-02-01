@@ -1,6 +1,5 @@
 import Reachability
 import RxSwift
-import RxCocoa
 
 final class Network {
     private var isOnline: Bool  {

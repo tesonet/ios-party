@@ -1,5 +1,4 @@
 import RxSwift
-import RxCocoa
 
 protocol ServersListViewControllerDelegate: class {
     func serversListDidChanged()

@@ -1,5 +1,4 @@
 import RxSwift
-import RxCocoa
 
 protocol LoginViewControllerDelegate: class {
     func moveToServersList()
