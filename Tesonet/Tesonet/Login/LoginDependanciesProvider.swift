@@ -29,8 +29,7 @@ final class LoginDependanciesProvider: NSObject {
     
     fileprivate func setupService() -> LoginService {
         let network = Network()
-//        loginService = useMock ? LoginServiceMock(network: network) : LoginService(network: network)
-        loginService = LoginService(network: network)
+        loginService = useMock ? LoginServiceMock(network: network) : LoginService(network: network)
         return loginService!
     }
     
