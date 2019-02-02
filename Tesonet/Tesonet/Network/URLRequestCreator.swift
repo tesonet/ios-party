@@ -1,6 +1,6 @@
 import Foundation
 
-final class URLRequestCreator {
+struct URLRequestCreator {
     enum Method: String {
         case GET
         case POST

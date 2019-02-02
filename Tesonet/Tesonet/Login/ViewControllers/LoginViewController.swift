@@ -1,16 +1,20 @@
 import UIKit
+import RxSwift
+import RxKeyboard
 
 class LoginViewController: UIViewController {
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
+    @IBOutlet fileprivate weak var scrollView: UIScrollView!
     
     fileprivate var loginViewModel: LoginViewModelType =
         LoginViewModel(loginInteractor: LoginDependanciesProvider.shared.getLoginInteractor())
+    fileprivate let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginViewModel.delegate = self
-        hideKeyboardWhenTappedAround()
+        setupKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,8 +41,7 @@ extension LoginViewController {
         let password = params.password ?? ""
         #endif
         
-        let loginData = LoginData(username: username, password: password)
-        loginViewModel.retrieveToken(with: loginData)
+        loginViewModel.retrieveToken(with: LoginData(username: username, password: password))
     }
 }
 
@@ -58,5 +61,14 @@ extension LoginViewController {
             usernameTextField.text = UserSession.shared.signInDetails?.username
             passwordTextField.text = UserSession.shared.signInDetails?.password
         }
+    }
+    
+    fileprivate func setupKeyboard() {
+        hideKeyboardWhenTappedAround()
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [scrollView] keyboardVisibleHeight in
+                scrollView?.contentInset.bottom = keyboardVisibleHeight
+            })
+            .disposed(by: disposeBag)
     }
 }

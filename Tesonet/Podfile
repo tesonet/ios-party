@@ -11,6 +11,7 @@ target 'Tesonet' do
   pod 'RxCocoa'
   pod 'ReachabilitySwift'
   pod 'SwiftMessages'
+  pod 'RxKeyboard'
 
   target 'TesonetTests' do
     inherit! :search_paths
