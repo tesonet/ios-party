@@ -42,7 +42,7 @@ final class HTTPClient {
                 let tokenData = try decoder.decode(Token.self, from: data)
                 completion(tokenData.token, nil)
             } catch {
-                completion(nil, DataError.serializationError)
+                completion(nil, DataError.serializationError(reason: "crudentials"))
             }
         }.resume()
     }
@@ -89,7 +89,7 @@ final class HTTPClient {
                 let serversData = try decoder.decode([Server].self, from: data)
                 completion(serversData, nil)
             } catch {
-                completion(nil, DataError.serializationError)
+                completion(nil, DataError.serializationError(reason: "servers data"))
             }
         }.resume()
     }

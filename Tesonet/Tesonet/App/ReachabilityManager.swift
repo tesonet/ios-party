@@ -1,6 +1,6 @@
 import Reachability
 
-class ReachabilityManager {
+final class ReachabilityManager {
     static let sharedInstance = ReachabilityManager()
     private var reachability : Reachability!
     

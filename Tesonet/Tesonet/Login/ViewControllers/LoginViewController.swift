@@ -37,8 +37,8 @@ extension LoginViewController {
         let username = "tesonet"
         let password = "partyanimal"
         #else
-        let username = params.username ?? ""
-        let password = params.password ?? ""
+        let username = usernameTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
         #endif
         
         loginViewModel.retrieveToken(with: LoginData(username: username, password: password))
