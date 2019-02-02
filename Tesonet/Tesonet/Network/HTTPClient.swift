@@ -1,12 +1,8 @@
 import Foundation
 
 final class HTTPClient {
-    typealias TokenAndErrorClosure = (_ token: String?, _ error: Error?) -> ()
-    typealias DataAndErrorClosure = (_ jsondta: [Server]?, _ error: Error?) -> ()
-    
-    // Singelton
-    static var shared = HTTPClient()
-    fileprivate init() {}
+    typealias TokenClosure = (_ token: String?, _ error: Error?) -> ()
+    typealias DataClosure = (_ jsondta: [Server]?, _ error: Error?) -> ()
     
     /**
      Obtain token.
@@ -17,10 +13,10 @@ final class HTTPClient {
      */
     func loadToken(from urlString: String,
                    withParams params: [String : String],
-                   then completion: @escaping TokenAndErrorClosure) {
+                   then completion: @escaping TokenClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
-            completion(nil, DataError.urlError)
+            completion(nil, DataError.urlError(url: urlString))
             return
         }
 
@@ -52,7 +48,7 @@ final class HTTPClient {
     }
     
     /**
-     Obtain data.
+     Obtain servers.
      
      - note: We are loged in, so we have correct access token.
      Since no refresh token required - access token does not expire. Hence - no 401.
@@ -64,10 +60,10 @@ final class HTTPClient {
      */
     func loadData(from urlString: String,
                   with token: String,
-                  then completion: @escaping DataAndErrorClosure) {
+                  then completion: @escaping DataClosure) {
         // Check if URL can be created
         guard let url = URL(string: urlString) else {
-            completion(nil, DataError.urlError)
+            completion(nil, DataError.urlError(url: urlString))
             return
         }
 

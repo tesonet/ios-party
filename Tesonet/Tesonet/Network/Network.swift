@@ -9,6 +9,11 @@ final class Network {
         return false
     }
     
+    /**
+     Obtain servers.
+     
+     - returns: Single observable with array of server objects.
+     */
     func retrieveAllServers() -> Single<[Server]> {
         return Single.create{ [isOnline] observer in
             if !isOnline {
@@ -18,7 +23,7 @@ final class Network {
                     return Disposables.create {}
                 }
 
-                HTTPClient.shared.loadData(from: URLs.Tesonet.dataURL, with: accessToken) { result, error in
+                HTTPClient().loadData(from: URLs.Tesonet.dataURL, with: accessToken) { result, error in
                     if let error = error {
                         observer(.error(error))
                         return
@@ -36,12 +41,18 @@ final class Network {
         }
     }
     
+    /**
+     Obtain token.
+     
+     - parameter params: structure holding login data - username and password.
+     - returns: Single observable with token.
+     */
     func retrieveToken(with params: LoginData) -> Single<String> {
         return Single.create{ [isOnline] observer in
             if !isOnline {
                 return Disposables.create {}
             } else {
-                HTTPClient.shared
+                HTTPClient()
                     .loadToken(from: URLs.Tesonet.tokenURL,
                                withParams: params.toJson()) { result, error in
                     if let error = error {

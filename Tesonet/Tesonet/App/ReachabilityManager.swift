@@ -24,9 +24,9 @@ class ReachabilityManager {
         
         switch reachability.connection {
         case .none:
-            ErrorMessage.showErrorHud(with: "No connection.")
+            ErrorMessageHud.showError(with: "No connection.")
         default:
-            ErrorMessage.showErrorHud(with: "")
+            ErrorMessageHud.showError(with: "")
         }
     }
 }

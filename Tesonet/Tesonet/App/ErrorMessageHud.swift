@@ -1,7 +1,7 @@
 import SwiftMessages
 
-final class ErrorMessage {
-    static func showErrorHud(with message: String) {
+final class ErrorMessageHud {
+    static func showError(with message: String) {
         if message.isEmpty {
             SwiftMessages.hide()
         } else {

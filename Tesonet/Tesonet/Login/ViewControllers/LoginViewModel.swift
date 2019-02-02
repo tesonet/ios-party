@@ -24,7 +24,9 @@ class LoginViewModel: LoginViewModelType {
             .subscribe(
                 onSuccess: { [weak self] accessToken in
                     guard let `self` = self else { return }
-                    ErrorMessage.showErrorHud(with: "")
+                    DispatchQueue.main.async {
+                        ErrorMessageHud.showError(with: "")
+                    }
                     self.saveSession(accessToken: accessToken,
                                      username: params.username,
                                      password: params.password)
@@ -33,7 +35,9 @@ class LoginViewModel: LoginViewModelType {
                     }
                 },
                 onError: { error in
-                    ErrorMessage.showErrorHud(with: error.localizedDescription)
+                    DispatchQueue.main.async {
+                        ErrorMessageHud.showError(with: error.localizedDescription)
+                    }
                 }
             )
             .disposed(by: disposeBag)

@@ -31,7 +31,7 @@
 		678F466B22035C6900B95538 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466A22035C6900B95538 /* LoginService.swift */; };
 		678F466C2203601F00B95538 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466322034A1500B95538 /* LoginInteractor.swift */; };
 		678F466F220474EC00B95538 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466E220474EC00B95538 /* ReachabilityManager.swift */; };
-		678F46712204781000B95538 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46702204780F00B95538 /* ErrorMessage.swift */; };
+		678F46712204781000B95538 /* ErrorMessageHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46702204780F00B95538 /* ErrorMessageHud.swift */; };
 		678F46752204C0DD00B95538 /* ServerServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46742204C0DD00B95538 /* ServerServiceMock.swift */; };
 		67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102120FB949F00D17F55 /* Assets.xcassets */; };
 		67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7102F20FB949F00D17F55 /* TesonetTests.swift */; };
@@ -50,7 +50,6 @@
 		67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A820FD1A8800D17F55 /* RealmStore.swift */; };
 		67C710B120FFB31300D17F55 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B020FFB31200D17F55 /* UserSession.swift */; };
 		67C710B320FFB65B00D17F55 /* LoginNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */; };
-		67C710B621011D3D00D17F55 /* UIAlertController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B521011D3D00D17F55 /* UIAlertController+Additions.swift */; };
 		67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */; };
 		67C710CC2103787B00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */; };
 		67C710CD2103787B00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CB2103787B00D17F55 /* Main.storyboard */; };
@@ -104,7 +103,7 @@
 		678F466822035C1200B95538 /* ServerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
 		678F466A22035C6900B95538 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		678F466E220474EC00B95538 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
-		678F46702204780F00B95538 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		678F46702204780F00B95538 /* ErrorMessageHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessageHud.swift; sourceTree = "<group>"; };
 		678F46742204C0DD00B95538 /* ServerServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceMock.swift; sourceTree = "<group>"; };
 		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C7102120FB949F00D17F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 		67C710A820FD1A8800D17F55 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		67C710B020FFB31200D17F55 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationViewController.swift; sourceTree = "<group>"; };
-		67C710B521011D3D00D17F55 /* UIAlertController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Additions.swift"; sourceTree = "<group>"; };
 		67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C710CB2103787B00D17F55 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -355,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				67C710A820FD1A8800D17F55 /* RealmStore.swift */,
+				67C710B020FFB31200D17F55 /* UserSession.swift */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -365,10 +364,7 @@
 				678F465A220213AB00B95538 /* Network.swift */,
 				642684262166222F00E64BE0 /* HTTPClient.swift */,
 				643D9903215A916100A4EFA2 /* URLRequestCreator.swift */,
-				678F466E220474EC00B95538 /* ReachabilityManager.swift */,
-				67C710B020FFB31200D17F55 /* UserSession.swift */,
 				67C710D72103D8C500D17F55 /* Error.swift */,
-				678F46702204780F00B95538 /* ErrorMessage.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -376,13 +372,12 @@
 		67C7108920FBC87D00D17F55 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				678F464921FA18C000B95538 /* Realm+Ext.swift */,
+				643D9905215A956000A4EFA2 /* SegueHandler.swift */,
 				67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */,
 				67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */,
 				67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */,
-				67C710B521011D3D00D17F55 /* UIAlertController+Additions.swift */,
 				67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */,
-				678F464921FA18C000B95538 /* Realm+Ext.swift */,
-				643D9905215A956000A4EFA2 /* SegueHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -392,6 +387,8 @@
 			children = (
 				67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */,
 				643D9901215A910000A4EFA2 /* Configuration.swift */,
+				678F466E220474EC00B95538 /* ReachabilityManager.swift */,
+				678F46702204780F00B95538 /* ErrorMessageHud.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -742,7 +739,6 @@
 				678F464621FA183200B95538 /* RMServer.swift in Sources */,
 				678F46562200B9D700B95538 /* LoginServiceMock.swift in Sources */,
 				67C710D62103D87700D17F55 /* Token.swift in Sources */,
-				67C710B621011D3D00D17F55 /* UIAlertController+Additions.swift in Sources */,
 				678F46552200B9D700B95538 /* ServerService.swift in Sources */,
 				67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */,
 				67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */,
@@ -751,7 +747,7 @@
 				678F465B220213AB00B95538 /* Network.swift in Sources */,
 				67C710B120FFB31300D17F55 /* UserSession.swift in Sources */,
 				642684272166222F00E64BE0 /* HTTPClient.swift in Sources */,
-				678F46712204781000B95538 /* ErrorMessage.swift in Sources */,
+				678F46712204781000B95538 /* ErrorMessageHud.swift in Sources */,
 				678F466922035C1200B95538 /* ServerRepository.swift in Sources */,
 				678F466F220474EC00B95538 /* ReachabilityManager.swift in Sources */,
 				67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */,
