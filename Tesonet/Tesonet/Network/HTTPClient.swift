@@ -4,13 +4,6 @@ final class HTTPClient {
     typealias TokenClosure = (_ token: String?, _ error: Error?) -> ()
     typealias DataClosure = (_ jsondta: [Server]?, _ error: Error?) -> ()
     
-    /**
-     Obtain token.
-     
-     - parameter from:       token url string.
-     - parameter params:     json for URLRequest httpBody.
-     - parameter completion: The block that should be called. It is passed either received token or error.
-     */
     func loadToken(from urlString: String,
                    withParams params: [String : String],
                    then completion: @escaping TokenClosure) {
@@ -47,17 +40,6 @@ final class HTTPClient {
         }.resume()
     }
     
-    /**
-     Obtain servers.
-     
-     - note: We are loged in, so we have correct access token.
-     Since no refresh token required - access token does not expire. Hence - no 401.
-     In real service access token would expire.
-     
-     - parameter from:       data url string.
-     - parameter token:      Bearer authorization token.
-     - parameter completion: The block that should be called. It is passed either received data or error.
-     */
     func loadData(from urlString: String,
                   with token: String,
                   then completion: @escaping DataClosure) {

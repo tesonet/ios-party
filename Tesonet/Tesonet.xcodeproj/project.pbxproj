@@ -49,7 +49,7 @@
 		67C710A520FBD16800D17F55 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A420FBD16800D17F55 /* Server.swift */; };
 		67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A820FD1A8800D17F55 /* RealmStore.swift */; };
 		67C710B120FFB31300D17F55 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B020FFB31200D17F55 /* UserSession.swift */; };
-		67C710B320FFB65B00D17F55 /* LoginNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */; };
+		67C710B320FFB65B00D17F55 /* LoginRouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B220FFB65B00D17F55 /* LoginRouterViewController.swift */; };
 		67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */; };
 		67C710CC2103787B00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */; };
 		67C710CD2103787B00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CB2103787B00D17F55 /* Main.storyboard */; };
@@ -127,7 +127,7 @@
 		67C710A420FBD16800D17F55 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		67C710A820FD1A8800D17F55 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		67C710B020FFB31200D17F55 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
-		67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationViewController.swift; sourceTree = "<group>"; };
+		67C710B220FFB65B00D17F55 /* LoginRouterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterViewController.swift; sourceTree = "<group>"; };
 		67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C710CB2103787B00D17F55 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 		678F466D22046A5F00B95538 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				67C710B220FFB65B00D17F55 /* LoginNavigationViewController.swift */,
+				67C710B220FFB65B00D17F55 /* LoginRouterViewController.swift */,
 				67C7108620FBC7DF00D17F55 /* LoginViewController.swift */,
 				678F465E2203282B00B95538 /* LoginViewModel.swift */,
 				678F466422034B1300B95538 /* LoginData.swift */,
@@ -755,7 +755,7 @@
 				67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */,
 				678F464F2200B7E600B95538 /* LoginRepository.swift in Sources */,
 				678F464821FA185100B95538 /* Server+Mapping.swift in Sources */,
-				67C710B320FFB65B00D17F55 /* LoginNavigationViewController.swift in Sources */,
+				67C710B320FFB65B00D17F55 /* LoginRouterViewController.swift in Sources */,
 				67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */,
 				643D9902215A910100A4EFA2 /* Configuration.swift in Sources */,
 				67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */,
