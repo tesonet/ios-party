@@ -4,12 +4,7 @@ protocol LoginViewControllerDelegate: class {
     func moveToServersList()
 }
 
-protocol LoginViewModelType {
-    var delegate: LoginViewControllerDelegate? { get set }
-    func retrieveToken(with params: LoginData)
-}
-
-class LoginViewModel: LoginViewModelType {
+class LoginViewModel {
     weak var delegate: LoginViewControllerDelegate?
     private let loginInteractor: LoginInteractor
     private let disposeBag = DisposeBag()

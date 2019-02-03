@@ -17,15 +17,15 @@ extension DataError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .urlError(let url):
-            return NSLocalizedString("Error: " + url + " 🙀", comment: "")
+            return NSLocalizedString("Error: " + url + ". 🙀", comment: "")
         case .noDataError:
-            return NSLocalizedString("No data received Error. 🙀", comment: "")
+            return NSLocalizedString("Error: no data.  🙀", comment: "")
         case .serializationError(let reason):
-            return NSLocalizedString("Error: " + reason + " 🙀", comment: "")
+            return NSLocalizedString("Error: " + reason + ". 🙀", comment: "")
         case .databaseError:
-            return NSLocalizedString("Database Error. 🙀", comment: "")
+            return NSLocalizedString("Error: database. 🙀", comment: "")
         case .unknownError:
-            return NSLocalizedString("Unknown Error. 🙀", comment: "")
+            return NSLocalizedString("Error: unknown. 🙀", comment: "")
         }
     }
 }

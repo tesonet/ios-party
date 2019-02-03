@@ -7,7 +7,7 @@ class LoginViewController: UIViewController {
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
     @IBOutlet fileprivate weak var scrollView: UIScrollView!
     
-    fileprivate var loginViewModel: LoginViewModelType =
+    fileprivate var loginViewModel =
         LoginViewModel(loginInteractor: LoginDependanciesProvider.shared.getLoginInteractor())
     fileprivate let disposeBag = DisposeBag()
     
@@ -33,15 +33,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     @IBAction fileprivate func loginPressed() {
-        #if DEBUG
-        let username = "tesonet"
-        let password = "partyanimal"
-        #else
-        let username = usernameTextField.text ?? ""
-        let password = passwordTextField.text ?? ""
-        #endif
-        
-        loginViewModel.retrieveToken(with: LoginData(username: username, password: password))
+        loginViewModel.retrieveToken(with: createLoginData())
     }
 }
 
@@ -70,5 +62,17 @@ extension LoginViewController {
                 scrollView?.contentInset.bottom = keyboardVisibleHeight
             })
             .disposed(by: disposeBag)
+    }
+    
+    fileprivate func createLoginData() -> LoginData {
+        #if DEBUG
+        let username = "tesonet"
+        let password = "partyanimal"
+        #else
+        let username = usernameTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        #endif
+        
+        return LoginData(username: username, password: password)
     }
 }

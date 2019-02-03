@@ -3,10 +3,10 @@ import UIKit
 class ServersListViewController: UIViewController {
     @IBOutlet fileprivate weak var tableView: UITableView!
     
-    fileprivate var serversViewModel: ServersViewModelType =
+    fileprivate var serversViewModel =
         ServersViewModel(serversListInteractor: ServersDependanciesProvider.shared.getListInteractor())
     
-    // Good way to create header/footer which you can hide/show anytime
+    // Gere we create header/footer which you we hide/show anytime
     fileprivate lazy var footerView: ServersTableFooterView = {
         let footerView = ServersTableFooterView.loadFromNib()
         footerView.delegate = self

@@ -4,13 +4,7 @@ protocol ServersListViewControllerDelegate: class {
     func serversListDidChanged()
 }
 
-protocol ServersViewModelType {
-    var delegate: ServersListViewControllerDelegate? { get set }
-    var serversList: [Server] { get set }
-    func retrieveAllServers()
-}
-
-class ServersViewModel: ServersViewModelType {
+class ServersViewModel {
     weak var delegate: ServersListViewControllerDelegate?
     var serversList: [Server] = [] {
         didSet {
