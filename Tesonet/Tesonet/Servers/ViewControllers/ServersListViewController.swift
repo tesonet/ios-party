@@ -22,6 +22,11 @@ class ServersListViewController: UIViewController {
         serversViewModel.delegate = self
         serversViewModel.retrieveAllServers()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        dch_checkDeallocation()
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource

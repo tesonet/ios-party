@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        dch_checkDeallocation()
         usernameTextField.text = nil
         passwordTextField.text = nil
     }
