@@ -12,6 +12,7 @@ target 'Tesonet' do
   pod 'ReachabilitySwift'
   pod 'SwiftMessages'
   pod 'RxKeyboard'
+  pod 'Alamofire', '~> 5.0.0.beta.1'
 
   target 'TesonetTests' do
     inherit! :search_paths
