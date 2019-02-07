@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83A7866E2204ADD700BF6BAC /* DataSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A7866D2204ADD700BF6BAC /* DataSynchronizer.swift */; };
+		83A786702204B62B00BF6BAC /* ServerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A7866F2204B62B00BF6BAC /* ServerTableViewCell.xib */; };
+		83A786722204B72900BF6BAC /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A786712204B72900BF6BAC /* ServerTableViewCell.swift */; };
+		AD15809F2201DEED001EF2CC /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD15809E2201DEED001EF2CC /* Const.swift */; };
+		AD1580A12201E141001EF2CC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1580A02201E141001EF2CC /* Api.swift */; };
+		AD23D9A3220C8D4D00431333 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD23D9A2220C8D4C00431333 /* Roboto-Medium.ttf */; };
+		AD23D9A5220C8D5200431333 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD23D9A4220C8D5200431333 /* Roboto-Regular.ttf */; };
+		AD4A69B8220B56E00062F7AF /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD4A69B7220B56E00062F7AF /* Roboto-Light.ttf */; };
+		AD4A69BA220B59DE0062F7AF /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD4A69B9220B59DD0062F7AF /* Roboto-Bold.ttf */; };
+		AD78B64B21FF09750086ED9A /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78B64A21FF09750086ED9A /* LoginTextField.swift */; };
+		ADA55ACF22099C4300FED8A2 /* LoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA55ACE22099C4300FED8A2 /* LoaderController.swift */; };
+		ADD9C75221F8972D0051ADC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9C75121F8972D0051ADC8 /* AppDelegate.swift */; };
+		ADD9C75421F8972D0051ADC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9C75321F8972D0051ADC8 /* LoginViewController.swift */; };
+		ADD9C75721F8972D0051ADC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD9C75521F8972D0051ADC8 /* Main.storyboard */; };
+		ADD9C75A21F8972D0051ADC8 /* Hwork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADD9C75821F8972D0051ADC8 /* Hwork.xcdatamodeld */; };
+		ADD9C75C21F8972E0051ADC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD9C75B21F8972E0051ADC8 /* Assets.xcassets */; };
+		ADD9C75F21F8972E0051ADC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD9C75D21F8972E0051ADC8 /* LaunchScreen.storyboard */; };
+		ADD9C76721F897B40051ADC8 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9C76621F897B40051ADC8 /* PersistenceManager.swift */; };
+		ADD9C76921F898A40051ADC8 /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9C76821F898A40051ADC8 /* ServersViewController.swift */; };
+		B8E4C5A3AA46A190196F0EE7 /* Pods_Hwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A29D96A31C5DDFA01BD2F31 /* Pods_Hwork.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83A7866D2204ADD700BF6BAC /* DataSynchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSynchronizer.swift; sourceTree = "<group>"; };
+		83A7866F2204B62B00BF6BAC /* ServerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerTableViewCell.xib; sourceTree = "<group>"; };
+		83A786712204B72900BF6BAC /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
+		9A29D96A31C5DDFA01BD2F31 /* Pods_Hwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD15809E2201DEED001EF2CC /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		AD1580A02201E141001EF2CC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		AD23D9A2220C8D4C00431333 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		AD23D9A4220C8D5200431333 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		AD4A69B7220B56E00062F7AF /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		AD4A69B9220B59DD0062F7AF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		AD78B64A21FF09750086ED9A /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		ADA55ACE22099C4300FED8A2 /* LoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderController.swift; sourceTree = "<group>"; };
+		ADD9C74E21F8972D0051ADC8 /* Hwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD9C75121F8972D0051ADC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADD9C75321F8972D0051ADC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ADD9C75621F8972D0051ADC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADD9C75921F8972D0051ADC8 /* Hwork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hwork.xcdatamodel; sourceTree = "<group>"; };
+		ADD9C75B21F8972E0051ADC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADD9C75E21F8972E0051ADC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADD9C76021F8972E0051ADC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADD9C76621F897B40051ADC8 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		ADD9C76821F898A40051ADC8 /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		B55343FBF4CE364FAF56B821 /* Pods-Hwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hwork/Pods-Hwork.release.xcconfig"; sourceTree = "<group>"; };
+		FB030AEBA7CEF9F4FAAED60F /* Pods-Hwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hwork/Pods-Hwork.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADD9C74B21F8972D0051ADC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E4C5A3AA46A190196F0EE7 /* Pods_Hwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		737BAEB053C0F5A772412E9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A29D96A31C5DDFA01BD2F31 /* Pods_Hwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADD9C74521F8972D0051ADC8 = {
+			isa = PBXGroup;
+			children = (
+				ADD9C75021F8972D0051ADC8 /* Hwork */,
+				ADD9C74F21F8972D0051ADC8 /* Products */,
+				B9585C2A7F637D033FB3E7D8 /* Pods */,
+				737BAEB053C0F5A772412E9A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ADD9C74F21F8972D0051ADC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADD9C74E21F8972D0051ADC8 /* Hwork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADD9C75021F8972D0051ADC8 /* Hwork */ = {
+			isa = PBXGroup;
+			children = (
+				ADD9C75121F8972D0051ADC8 /* AppDelegate.swift */,
+				ADD9C75321F8972D0051ADC8 /* LoginViewController.swift */,
+				ADD9C76821F898A40051ADC8 /* ServersViewController.swift */,
+				ADA55ACE22099C4300FED8A2 /* LoaderController.swift */,
+				83A7866D2204ADD700BF6BAC /* DataSynchronizer.swift */,
+				AD15809E2201DEED001EF2CC /* Const.swift */,
+				AD1580A02201E141001EF2CC /* Api.swift */,
+				ADD9C76621F897B40051ADC8 /* PersistenceManager.swift */,
+				AD78B64A21FF09750086ED9A /* LoginTextField.swift */,
+				ADD9C75521F8972D0051ADC8 /* Main.storyboard */,
+				83A7866F2204B62B00BF6BAC /* ServerTableViewCell.xib */,
+				83A786712204B72900BF6BAC /* ServerTableViewCell.swift */,
+				ADD9C75D21F8972E0051ADC8 /* LaunchScreen.storyboard */,
+				ADFB6C0E220CD1030093DB63 /* Resources */,
+				ADD9C75821F8972D0051ADC8 /* Hwork.xcdatamodeld */,
+			);
+			path = Hwork;
+			sourceTree = "<group>";
+		};
+		ADFB6C0E220CD1030093DB63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADD9C75B21F8972E0051ADC8 /* Assets.xcassets */,
+				ADD9C76021F8972E0051ADC8 /* Info.plist */,
+				AD4A69B9220B59DD0062F7AF /* Roboto-Bold.ttf */,
+				AD23D9A2220C8D4C00431333 /* Roboto-Medium.ttf */,
+				AD23D9A4220C8D5200431333 /* Roboto-Regular.ttf */,
+				AD4A69B7220B56E00062F7AF /* Roboto-Light.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9585C2A7F637D033FB3E7D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB030AEBA7CEF9F4FAAED60F /* Pods-Hwork.debug.xcconfig */,
+				B55343FBF4CE364FAF56B821 /* Pods-Hwork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADD9C74D21F8972D0051ADC8 /* Hwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADD9C76321F8972E0051ADC8 /* Build configuration list for PBXNativeTarget "Hwork" */;
+			buildPhases = (
+				9169CC65F0115DE39B8755CE /* [CP] Check Pods Manifest.lock */,
+				ADD9C74A21F8972D0051ADC8 /* Sources */,
+				ADD9C74B21F8972D0051ADC8 /* Frameworks */,
+				ADD9C74C21F8972D0051ADC8 /* Resources */,
+				22E0BCEC0EF1ECEB5745217B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hwork;
+			productName = Hwork;
+			productReference = ADD9C74E21F8972D0051ADC8 /* Hwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADD9C74621F8972D0051ADC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Robert P.";
+				TargetAttributes = {
+					ADD9C74D21F8972D0051ADC8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = ADD9C74921F8972D0051ADC8 /* Build configuration list for PBXProject "Hwork" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADD9C74521F8972D0051ADC8;
+			productRefGroup = ADD9C74F21F8972D0051ADC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADD9C74D21F8972D0051ADC8 /* Hwork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADD9C74C21F8972D0051ADC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD23D9A3220C8D4D00431333 /* Roboto-Medium.ttf in Resources */,
+				AD4A69BA220B59DE0062F7AF /* Roboto-Bold.ttf in Resources */,
+				ADD9C75F21F8972E0051ADC8 /* LaunchScreen.storyboard in Resources */,
+				ADD9C75C21F8972E0051ADC8 /* Assets.xcassets in Resources */,
+				AD4A69B8220B56E00062F7AF /* Roboto-Light.ttf in Resources */,
+				83A786702204B62B00BF6BAC /* ServerTableViewCell.xib in Resources */,
+				AD23D9A5220C8D5200431333 /* Roboto-Regular.ttf in Resources */,
+				ADD9C75721F8972D0051ADC8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22E0BCEC0EF1ECEB5745217B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hwork/Pods-Hwork-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hwork/Pods-Hwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9169CC65F0115DE39B8755CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADD9C74A21F8972D0051ADC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A786722204B72900BF6BAC /* ServerTableViewCell.swift in Sources */,
+				ADD9C75A21F8972D0051ADC8 /* Hwork.xcdatamodeld in Sources */,
+				ADA55ACF22099C4300FED8A2 /* LoaderController.swift in Sources */,
+				ADD9C75421F8972D0051ADC8 /* LoginViewController.swift in Sources */,
+				83A7866E2204ADD700BF6BAC /* DataSynchronizer.swift in Sources */,
+				ADD9C75221F8972D0051ADC8 /* AppDelegate.swift in Sources */,
+				AD78B64B21FF09750086ED9A /* LoginTextField.swift in Sources */,
+				AD15809F2201DEED001EF2CC /* Const.swift in Sources */,
+				ADD9C76921F898A40051ADC8 /* ServersViewController.swift in Sources */,
+				AD1580A12201E141001EF2CC /* Api.swift in Sources */,
+				ADD9C76721F897B40051ADC8 /* PersistenceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ADD9C75521F8972D0051ADC8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADD9C75621F8972D0051ADC8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADD9C75D21F8972E0051ADC8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADD9C75E21F8972E0051ADC8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADD9C76121F8972E0051ADC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADD9C76221F8972E0051ADC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADD9C76421F8972E0051ADC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB030AEBA7CEF9F4FAAED60F /* Pods-Hwork.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62NM6MGNHC;
+				INFOPLIST_FILE = Hwork/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = R.P.Hwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADD9C76521F8972E0051ADC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55343FBF4CE364FAF56B821 /* Pods-Hwork.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62NM6MGNHC;
+				INFOPLIST_FILE = Hwork/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = R.P.Hwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADD9C74921F8972D0051ADC8 /* Build configuration list for PBXProject "Hwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD9C76121F8972E0051ADC8 /* Debug */,
+				ADD9C76221F8972E0051ADC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADD9C76321F8972E0051ADC8 /* Build configuration list for PBXNativeTarget "Hwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD9C76421F8972E0051ADC8 /* Debug */,
+				ADD9C76521F8972E0051ADC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ADD9C75821F8972D0051ADC8 /* Hwork.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ADD9C75921F8972D0051ADC8 /* Hwork.xcdatamodel */,
+			);
+			currentVersion = ADD9C75921F8972D0051ADC8 /* Hwork.xcdatamodel */;
+			path = Hwork.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ADD9C74621F8972D0051ADC8 /* Project object */;
+}
