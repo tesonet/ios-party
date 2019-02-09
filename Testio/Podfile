@@ -6,4 +6,5 @@ target 'Testio' do
   pod 'Alamofire', '~>4.8.0'
   pod 'Realm', '~> 3.13'
   pod 'KeychainAccess', '~> 3.1'
+  pod 'SwiftLint'
 end
