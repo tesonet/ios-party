@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.8.1)
+  - KeychainAccess (3.1.2)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.0)
+  - KeychainAccess (~> 3.1)
+  - Realm (~> 3.13)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - KeychainAccess
+    - Realm
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+
+PODFILE CHECKSUM: 2c4535291081dafed6fccb2a9e64985bca209037
+
+COCOAPODS: 1.6.0
