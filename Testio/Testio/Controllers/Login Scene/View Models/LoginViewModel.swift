@@ -13,6 +13,10 @@ class LoginViewModel: NSObject {
     typealias LoginResponseHandler = (Bool, String?) -> Void
     let loginService: LoginService
     
+    var isLoggedIn: Bool {
+        return ApiSessionHandler.sharedInstance.isLoggedIn
+    }
+    
     override init() {
         self.loginService = LoginService()
         super.init()

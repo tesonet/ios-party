@@ -7,21 +7,54 @@
 //
 
 import Foundation
+import UIKit
 
-class ServerListViewModel {
+class ServerListViewModel: NSObject {
     private let serverListService: ServerListService
+    private let serverRepository: ServerRespository
+    var servers: [Server] = [] {
+        didSet {
+            didFetchServers?()
+        }
+    }
+    var didFetchServers: (() -> Void)?
     
-    init() {
+    override init() {
         self.serverListService = ServerListService()
-        fetchServerList()
+        self.serverRepository = ServerRespository()
+        super.init()
+        importServers()
+        fetchServers()
     }
     
-    // Load data from API in background
-    // For UI use the data from Realm
-    // Should I use RxRealm
-    func fetchServerList() {
-        serverListService.fetch { (servers, error) in
-            print(servers)
+    func cleanup() {
+        serverRepository.wipeUserData()
+    }
+
+    private func importServers() {
+        serverListService.fetch { [unowned self] (servers, _) in
+            guard let servers = servers else { return }
+            self.serverRepository.save(servers)
+            self.fetchServers()
         }
+    }
+    
+    func fetchServers(sortedBy sortType: ServerRespository.ServerSorting = .name) {
+        servers = serverRepository.fetchAll(sortedBy: sortType, ascending: true)
+    }
+}
+
+extension ServerListViewModel: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return servers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ServerViewCell.identifier(), for: indexPath) as? ServerViewCell else {
+            fatalError()
+        }
+        let server = servers[indexPath.row]
+        cell.setupView(with: server)
+        return cell
     }
 }

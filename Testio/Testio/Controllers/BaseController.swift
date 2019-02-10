@@ -14,11 +14,23 @@ class BaseController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         addBackground()
         self.hideKeyboardWhenTappedAround()
-        //        NotificationCenter.default.addObserver(self, selector: #selector(userLoggedOut), name: Notification.UserLoggedOut, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(userLoggedOut), name: Notification.Name.UserLoggedOut, object: nil)
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func userLoggedOut() {
+        openLoginView()
+    }
+    
+    func openLoginView() {
+        let storyboard = UIStoryboard.main
+        guard let controller = storyboard.instantiateInitialViewController() else {
+            return
+        }
+        present(controller, animated: true)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

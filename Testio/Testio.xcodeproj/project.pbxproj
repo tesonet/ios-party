@@ -24,6 +24,13 @@
 		138F657022101BFF00AAD07B /* ServerListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F656F22101BFF00AAD07B /* ServerListService.swift */; };
 		138F6572221020A100AAD07B /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F6571221020A100AAD07B /* Integer.swift */; };
 		138F657422102D8100AAD07B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657322102D8100AAD07B /* UITableView.swift */; };
+		138F65762210660E00AAD07B /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F65752210660E00AAD07B /* UITableViewCell.swift */; };
+		138F657B221066F700AAD07B /* ServerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657A221066F700AAD07B /* ServerViewCell.swift */; };
+		138F657D2210678800AAD07B /* ServerListViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657C2210678800AAD07B /* ServerListViewHeader.swift */; };
+		138F657F221074F600AAD07B /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657E221074F600AAD07B /* Realm.swift */; };
+		138F65812210767C00AAD07B /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F65802210767C00AAD07B /* Server.swift */; };
+		138F65842210783000AAD07B /* ServerRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F65832210783000AAD07B /* ServerRespository.swift */; };
+		138F658622108BB400AAD07B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F658522108BB400AAD07B /* UIView.swift */; };
 		13DE6878220EC20000587E69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6877220EC20000587E69 /* AppDelegate.swift */; };
 		13DE687A220EC20000587E69 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6879220EC20000587E69 /* ServerListViewController.swift */; };
 		13DE687D220EC20000587E69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DE687B220EC20000587E69 /* Main.storyboard */; };
@@ -50,6 +57,13 @@
 		138F656F22101BFF00AAD07B /* ServerListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListService.swift; sourceTree = "<group>"; };
 		138F6571221020A100AAD07B /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		138F657322102D8100AAD07B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		138F65752210660E00AAD07B /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		138F657A221066F700AAD07B /* ServerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewCell.swift; sourceTree = "<group>"; };
+		138F657C2210678800AAD07B /* ServerListViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewHeader.swift; sourceTree = "<group>"; };
+		138F657E221074F600AAD07B /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		138F65802210767C00AAD07B /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		138F65832210783000AAD07B /* ServerRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRespository.swift; sourceTree = "<group>"; };
+		138F658522108BB400AAD07B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		13DE6874220EC20000587E69 /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DE6877220EC20000587E69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13DE6879220EC20000587E69 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
@@ -113,17 +127,11 @@
 		138F6545220EE07E00AAD07B /* Server List Scene */ = {
 			isa = PBXGroup;
 			children = (
+				138F6577221066C100AAD07B /* Views */,
 				138F6551220EE64300AAD07B /* View Models */,
 				13DE6879220EC20000587E69 /* ServerListViewController.swift */,
 			);
 			path = "Server List Scene";
-			sourceTree = "<group>";
-		};
-		138F6546220EE09600AAD07B /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		138F6547220EE09F00AAD07B /* Extensions */ = {
@@ -133,6 +141,9 @@
 				138F6569220F2FA800AAD07B /* UIStoryboard.swift */,
 				138F6571221020A100AAD07B /* Integer.swift */,
 				138F657322102D8100AAD07B /* UITableView.swift */,
+				138F65752210660E00AAD07B /* UITableViewCell.swift */,
+				138F657E221074F600AAD07B /* Realm.swift */,
+				138F658522108BB400AAD07B /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				138F655A220EEA8A00AAD07B /* Credentials.swift */,
+				138F65802210767C00AAD07B /* Server.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +192,23 @@
 				138F6563220F1EF700AAD07B /* LoginResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		138F6577221066C100AAD07B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				138F657A221066F700AAD07B /* ServerViewCell.swift */,
+				138F657C2210678800AAD07B /* ServerListViewHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		138F65822210780E00AAD07B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				138F65832210783000AAD07B /* ServerRespository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		13DE686B220EC20000587E69 = {
@@ -203,13 +232,13 @@
 		13DE6876220EC20000587E69 /* Testio */ = {
 			isa = PBXGroup;
 			children = (
-				138F6546220EE09600AAD07B /* Coordinators */,
 				138F6543220EE03900AAD07B /* Controllers */,
 				138F6542220EE03000AAD07B /* Storyboards */,
 				138F6547220EE09F00AAD07B /* Extensions */,
 				138F6559220EEA7100AAD07B /* Models */,
 				138F6556220EE9AE00AAD07B /* Api */,
 				138F6541220EE02000AAD07B /* Resources */,
+				138F65822210780E00AAD07B /* Repositories */,
 				13DE6877220EC20000587E69 /* AppDelegate.swift */,
 			);
 			path = Testio;
@@ -390,17 +419,24 @@
 				138F654D220EE61600AAD07B /* LoginViewController.swift in Sources */,
 				13DE687A220EC20000587E69 /* ServerListViewController.swift in Sources */,
 				138F655B220EEA8A00AAD07B /* Credentials.swift in Sources */,
+				138F657F221074F600AAD07B /* Realm.swift in Sources */,
 				13DE6878220EC20000587E69 /* AppDelegate.swift in Sources */,
 				138F6572221020A100AAD07B /* Integer.swift in Sources */,
+				138F65762210660E00AAD07B /* UITableViewCell.swift in Sources */,
 				138F657422102D8100AAD07B /* UITableView.swift in Sources */,
 				138F6553220EE65900AAD07B /* ServerListViewModel.swift in Sources */,
+				138F65812210767C00AAD07B /* Server.swift in Sources */,
+				138F657D2210678800AAD07B /* ServerListViewHeader.swift in Sources */,
 				138F656C220F3A6E00AAD07B /* BaseController.swift in Sources */,
+				138F65842210783000AAD07B /* ServerRespository.swift in Sources */,
+				138F657B221066F700AAD07B /* ServerViewCell.swift in Sources */,
 				138F657022101BFF00AAD07B /* ServerListService.swift in Sources */,
 				138F6550220EE62E00AAD07B /* LoginViewModel.swift in Sources */,
 				138F656A220F2FA800AAD07B /* UIStoryboard.swift in Sources */,
 				138F6558220EE9C600AAD07B /* ApiUrlRouter.swift in Sources */,
 				138F6566220F1FA500AAD07B /* LoginService.swift in Sources */,
 				138F6568220F204C00AAD07B /* ServiceError.swift in Sources */,
+				138F658622108BB400AAD07B /* UIView.swift in Sources */,
 				138F6549220EE27D00AAD07B /* UIViewController.swift in Sources */,
 				138F655F220EF10300AAD07B /* ApiSessionHandler.swift in Sources */,
 				138F6564220F1EF700AAD07B /* LoginResponse.swift in Sources */,

@@ -18,3 +18,7 @@ enum AppConfig {
         static let authorizationToken = "kAuthorizationToken"
     }
 }
+
+extension Notification.Name {
+    static let UserLoggedOut = NSNotification.Name("UserLoggedOut")
+}

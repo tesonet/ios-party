@@ -31,12 +31,32 @@ final class LoginViewController: BaseController {
         }
     }
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView! {
+        didSet {
+            loadingIndicator.startAnimating()
+            loadingIndicator.hidesWhenStopped = true
+        }
+    }
+    @IBOutlet weak var contentContainer: UIView! {
+        didSet {
+            contentContainer.isHidden = true
+        }
+    }
     var viewModel: LoginViewModel = {
         return LoginViewModel()
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if viewModel.isLoggedIn {
+            openServerList()
+        } else {
+            loadingIndicator.isHidden = true
+            contentContainer.isHidden = false
+        }
     }
     
     @IBAction func loginAction() {
@@ -48,12 +68,7 @@ final class LoginViewController: BaseController {
             viewModel.login(with: credentials) { [weak self] (success, errorMessage) in
                 self?.showLoader(false)
                 if success {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    guard let controller = storyboard.instantiateViewController(withIdentifier: ServerListViewController.indentifier()) as? ServerListViewController else {
-                        return
-                    }
-                    controller.viewModel = ServerListViewModel()
-                    self?.show(controller, sender: nil)
+                    self?.openServerList()
                     return
                 } else {
                     self?.passwordField.text = ""
@@ -74,6 +89,15 @@ final class LoginViewController: BaseController {
         if show {
             activityIndicator.startAnimating()
         }
+    }
+    
+    private func openServerList() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: ServerListViewController.indentifier()) as? ServerListViewController else {
+            return
+        }
+        controller.viewModel = ServerListViewModel()
+        show(controller, sender: nil)
     }
 }
 
