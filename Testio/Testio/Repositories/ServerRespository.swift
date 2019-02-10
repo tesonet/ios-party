@@ -8,7 +8,6 @@
 
 import Foundation
 import RealmSwift
-import RxRealm
 
 class ServerRespository {
     

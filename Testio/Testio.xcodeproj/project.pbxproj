@@ -23,7 +23,6 @@
 		138F656C220F3A6E00AAD07B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F656B220F3A6E00AAD07B /* BaseController.swift */; };
 		138F657022101BFF00AAD07B /* ServerListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F656F22101BFF00AAD07B /* ServerListService.swift */; };
 		138F6572221020A100AAD07B /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F6571221020A100AAD07B /* Integer.swift */; };
-		138F657422102D8100AAD07B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657322102D8100AAD07B /* UITableView.swift */; };
 		138F65762210660E00AAD07B /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F65752210660E00AAD07B /* UITableViewCell.swift */; };
 		138F657B221066F700AAD07B /* ServerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657A221066F700AAD07B /* ServerViewCell.swift */; };
 		138F657D2210678800AAD07B /* ServerListViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657C2210678800AAD07B /* ServerListViewHeader.swift */; };
@@ -56,7 +55,6 @@
 		138F656B220F3A6E00AAD07B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		138F656F22101BFF00AAD07B /* ServerListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListService.swift; sourceTree = "<group>"; };
 		138F6571221020A100AAD07B /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
-		138F657322102D8100AAD07B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		138F65752210660E00AAD07B /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		138F657A221066F700AAD07B /* ServerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewCell.swift; sourceTree = "<group>"; };
 		138F657C2210678800AAD07B /* ServerListViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewHeader.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				138F6548220EE27D00AAD07B /* UIViewController.swift */,
 				138F6569220F2FA800AAD07B /* UIStoryboard.swift */,
 				138F6571221020A100AAD07B /* Integer.swift */,
-				138F657322102D8100AAD07B /* UITableView.swift */,
 				138F65752210660E00AAD07B /* UITableViewCell.swift */,
 				138F657E221074F600AAD07B /* Realm.swift */,
 				138F658522108BB400AAD07B /* UIView.swift */,
@@ -363,6 +360,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -373,6 +371,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,7 +414,6 @@
 				13DE6878220EC20000587E69 /* AppDelegate.swift in Sources */,
 				138F6572221020A100AAD07B /* Integer.swift in Sources */,
 				138F65762210660E00AAD07B /* UITableViewCell.swift in Sources */,
-				138F657422102D8100AAD07B /* UITableView.swift in Sources */,
 				138F6553220EE65900AAD07B /* ServerListViewModel.swift in Sources */,
 				138F65812210767C00AAD07B /* Server.swift in Sources */,
 				138F657D2210678800AAD07B /* ServerListViewHeader.swift in Sources */,

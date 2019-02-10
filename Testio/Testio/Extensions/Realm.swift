@@ -60,3 +60,13 @@ extension Realm {
         }
     }
 }
+
+extension Results {
+    func toArray() -> [Element] {
+        var array: [Element] = []
+        for obj in self {
+            array.append(obj)
+        }
+        return array
+    }
+}

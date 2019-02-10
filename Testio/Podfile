@@ -7,6 +7,7 @@ target 'Testio' do
   pod 'AlamofireNetworkActivityLogger', '~> 2.3'
   
   pod 'Realm', '~> 3.13'
+  pod 'RealmSwift'
   pod 'KeychainAccess', '~> 3.1'
   pod 'SwiftLint'
   pod 'IQKeyboardManager'
