@@ -12,6 +12,7 @@ class BaseController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBackground()
         self.hideKeyboardWhenTappedAround()
         //        NotificationCenter.default.addObserver(self, selector: #selector(userLoggedOut), name: Notification.UserLoggedOut, object: nil)
     }
@@ -24,7 +25,18 @@ class BaseController: UIViewController, UIGestureRecognizerDelegate {
         return .lightContent
     }
     
-    // Autorotation
+    private func addBackground() {
+        let background = UIImageView(image: UIImage(named: "background"))
+        background.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(background)
+        self.view.sendSubviewToBack(background)
+        background.contentMode = .scaleAspectFill
+        background.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        background.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        background.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        background.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
     }

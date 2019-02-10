@@ -34,9 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1er-YI-mLO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTK-lU-w53">
                                 <rect key="frame" x="55" y="263.66666666666669" width="304" height="369.00000000000006"/>
                                 <subviews>
@@ -139,14 +136,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1er-YI-mLO" firstAttribute="top" secondItem="YLn-uK-wtX" secondAttribute="top" id="A0T-ao-gY6"/>
                             <constraint firstItem="WgL-5R-a4m" firstAttribute="trailing" secondItem="jTK-lU-w53" secondAttribute="trailing" constant="55" id="Fz9-TY-GGH"/>
                             <constraint firstItem="jTK-lU-w53" firstAttribute="leading" secondItem="WgL-5R-a4m" secondAttribute="leading" constant="55" id="G72-4N-dNL"/>
                             <constraint firstItem="jTK-lU-w53" firstAttribute="centerX" secondItem="YLn-uK-wtX" secondAttribute="centerX" id="Q4N-Dd-EX3"/>
-                            <constraint firstItem="1er-YI-mLO" firstAttribute="leading" secondItem="YLn-uK-wtX" secondAttribute="leading" id="VwG-xc-SwS"/>
-                            <constraint firstItem="1er-YI-mLO" firstAttribute="trailing" secondItem="YLn-uK-wtX" secondAttribute="trailing" id="jqS-M2-VmQ"/>
                             <constraint firstItem="jTK-lU-w53" firstAttribute="centerY" secondItem="YLn-uK-wtX" secondAttribute="centerY" id="neY-Bb-duQ"/>
-                            <constraint firstItem="1er-YI-mLO" firstAttribute="bottom" secondItem="YLn-uK-wtX" secondAttribute="bottom" id="zCR-TV-TeK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WgL-5R-a4m"/>
                     </view>
@@ -166,7 +159,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="1920" height="1080"/>
         <image name="lock-icon" width="16" height="20"/>
         <image name="logo-light" width="246" height="64"/>
         <image name="username-icon" width="18" height="20"/>
