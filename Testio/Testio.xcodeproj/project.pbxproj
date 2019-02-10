@@ -21,6 +21,9 @@
 		138F6568220F204C00AAD07B /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F6567220F204C00AAD07B /* ServiceError.swift */; };
 		138F656A220F2FA800AAD07B /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F6569220F2FA800AAD07B /* UIStoryboard.swift */; };
 		138F656C220F3A6E00AAD07B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F656B220F3A6E00AAD07B /* BaseController.swift */; };
+		138F657022101BFF00AAD07B /* ServerListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F656F22101BFF00AAD07B /* ServerListService.swift */; };
+		138F6572221020A100AAD07B /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F6571221020A100AAD07B /* Integer.swift */; };
+		138F657422102D8100AAD07B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F657322102D8100AAD07B /* UITableView.swift */; };
 		13DE6878220EC20000587E69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6877220EC20000587E69 /* AppDelegate.swift */; };
 		13DE687A220EC20000587E69 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6879220EC20000587E69 /* ServerListViewController.swift */; };
 		13DE687D220EC20000587E69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DE687B220EC20000587E69 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		138F6567220F204C00AAD07B /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		138F6569220F2FA800AAD07B /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		138F656B220F3A6E00AAD07B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		138F656F22101BFF00AAD07B /* ServerListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListService.swift; sourceTree = "<group>"; };
+		138F6571221020A100AAD07B /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
+		138F657322102D8100AAD07B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		13DE6874220EC20000587E69 /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DE6877220EC20000587E69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13DE6879220EC20000587E69 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 			children = (
 				138F6548220EE27D00AAD07B /* UIViewController.swift */,
 				138F6569220F2FA800AAD07B /* UIStoryboard.swift */,
+				138F6571221020A100AAD07B /* Integer.swift */,
+				138F657322102D8100AAD07B /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 				138F655E220EF10300AAD07B /* ApiSessionHandler.swift */,
 				138F6565220F1FA500AAD07B /* LoginService.swift */,
 				138F6567220F204C00AAD07B /* ServiceError.swift */,
+				138F656F22101BFF00AAD07B /* ServerListService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -325,6 +334,10 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -335,6 +348,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,8 +391,11 @@
 				13DE687A220EC20000587E69 /* ServerListViewController.swift in Sources */,
 				138F655B220EEA8A00AAD07B /* Credentials.swift in Sources */,
 				13DE6878220EC20000587E69 /* AppDelegate.swift in Sources */,
+				138F6572221020A100AAD07B /* Integer.swift in Sources */,
+				138F657422102D8100AAD07B /* UITableView.swift in Sources */,
 				138F6553220EE65900AAD07B /* ServerListViewModel.swift in Sources */,
 				138F656C220F3A6E00AAD07B /* BaseController.swift in Sources */,
+				138F657022101BFF00AAD07B /* ServerListService.swift in Sources */,
 				138F6550220EE62E00AAD07B /* LoginViewModel.swift in Sources */,
 				138F656A220F2FA800AAD07B /* UIStoryboard.swift in Sources */,
 				138F6558220EE9C600AAD07B /* ApiUrlRouter.swift in Sources */,

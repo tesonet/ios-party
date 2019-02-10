@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class ServerListViewModel {
+    private let serverListService: ServerListService
+    
+    init() {
+        self.serverListService = ServerListService()
+        fetchServerList()
+    }
+    
+    // Load data from API in background
+    // For UI use the data from Realm
+    // Should I use RxRealm
+    func fetchServerList() {
+        serverListService.fetch { (servers, error) in
+            print(servers)
+        }
+    }
+}

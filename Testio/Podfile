@@ -10,5 +10,6 @@ target 'Testio' do
   pod 'KeychainAccess', '~> 3.1'
   pod 'SwiftLint'
   pod 'IQKeyboardManager'
-
+  
+  pod 'RxRealm'
 end

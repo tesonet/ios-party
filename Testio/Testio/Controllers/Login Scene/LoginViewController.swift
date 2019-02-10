@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: BaseController {
+final class LoginViewController: BaseController {
     @IBOutlet var roundedViews: [UIView]! {
         didSet {
             roundedViews.forEach { $0.layer.cornerRadius = 5 }
@@ -52,6 +52,7 @@ class LoginViewController: BaseController {
                     guard let controller = storyboard.instantiateViewController(withIdentifier: ServerListViewController.indentifier()) as? ServerListViewController else {
                         return
                     }
+                    controller.viewModel = ServerListViewModel()
                     self?.show(controller, sender: nil)
                     return
                 } else {

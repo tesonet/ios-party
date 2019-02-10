@@ -25,6 +25,7 @@ enum HttpHeaderName {
 
 enum ApiUrlRouter: URLRequestConvertible {
     case login(Credentials)
+    case serverList
     
     static let baseUrlString = (Bundle.main.infoDictionary![AppConfig.InfoPlistKeys.ApiHost]) as! String
     
@@ -33,6 +34,8 @@ enum ApiUrlRouter: URLRequestConvertible {
             switch self {
             case .login:
                 return .post
+            case .serverList:
+                return .get
             }
         }
         let params = parameters()
@@ -42,6 +45,8 @@ enum ApiUrlRouter: URLRequestConvertible {
         switch self {
         case .login:
             urlRequest.setValue(HttpHeaderName.ContentType.name, forHTTPHeaderField: HttpHeaderName.ContentType.wildcard)
+        default:
+            break
         }
         
         // Encoding
@@ -63,6 +68,8 @@ enum ApiUrlRouter: URLRequestConvertible {
         switch self {
         case .login:
             relativePath = "/tokens"
+        case .serverList:
+            relativePath = "/servers"
         }
         
         var url = URL(string: baseUrl())!
@@ -83,6 +90,8 @@ enum ApiUrlRouter: URLRequestConvertible {
         switch self {
         case .login(let credentials):
             return credentials.asDict
+        default:
+            return nil
         }
     }
 }
