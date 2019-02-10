@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.8.1)
+  - AlamofireNetworkActivityLogger (2.3.0):
+    - Alamofire (~> 4.6)
+  - IQKeyboardManager (6.2.0)
   - KeychainAccess (3.1.2)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
@@ -8,6 +11,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
+  - AlamofireNetworkActivityLogger (~> 2.3)
+  - IQKeyboardManager
   - KeychainAccess (~> 3.1)
   - Realm (~> 3.13)
   - SwiftLint
@@ -15,16 +20,20 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireNetworkActivityLogger
+    - IQKeyboardManager
     - KeychainAccess
     - Realm
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireNetworkActivityLogger: 6f3076652ab7fa6c819b59be08ea038d339e36d8
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
 
-PODFILE CHECKSUM: e966dd4b2cea91067701745c8de6b1e9dbe01a62
+PODFILE CHECKSUM: ab8ca1b796c03fc6451df6f9f8f0060c9ec4dceb
 
 COCOAPODS: 1.6.0

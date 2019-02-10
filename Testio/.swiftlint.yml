@@ -1,4 +1,5 @@
 disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
 opt_in_rules: # some rules are only opt-in
   - empty_count
 included: # paths to include during linting. `--path` is ignored if present.
@@ -34,7 +35,7 @@ type_name:
   excluded: iPhone # excluded via string
 identifier_name:
   min_length: # only min_length
-    error: 4 # only error
+    error: 3 # only error
   excluded: # excluded via string array
     - id
     - URL

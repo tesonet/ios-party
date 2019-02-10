@@ -4,7 +4,11 @@ target 'Testio' do
   use_frameworks!
 
   pod 'Alamofire', '~>4.8.0'
+  pod 'AlamofireNetworkActivityLogger', '~> 2.3'
+  
   pod 'Realm', '~> 3.13'
   pod 'KeychainAccess', '~> 3.1'
   pod 'SwiftLint'
+  pod 'IQKeyboardManager'
+
 end

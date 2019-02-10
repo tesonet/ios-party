@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import IQKeyboardManager
+import AlamofireNetworkActivityLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        Alamofire.SessionManager.default.adapter = ApiSessionHandler.sharedInstance
+        Alamofire.SessionManager.default.retrier = ApiSessionHandler.sharedInstance
+        IQKeyboardManager.shared().isEnabled = true
+        
+        #if DEBUG
+            NetworkActivityLogger.shared.startLogging()
+            NetworkActivityLogger.shared.level = .debug
+        #endif
+        
         return true
     }
 
