@@ -1,6 +1,6 @@
 import UIKit
 
-class ServersListViewController: UIViewController {
+class ServersListViewController: BaseViewController {
     @IBOutlet fileprivate weak var tableView: UITableView!
     
     fileprivate var serversViewModel =

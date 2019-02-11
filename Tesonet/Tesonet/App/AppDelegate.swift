@@ -19,9 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
         })
         print("Realm location: ", Realm.Configuration.defaultConfiguration.fileURL!)
-        
-        // Show "No connection." hud if needed
-        ReachabilityManager.sharedInstance.observeReachability()
 
         return true
     }

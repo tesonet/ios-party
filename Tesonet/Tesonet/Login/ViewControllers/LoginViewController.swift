@@ -2,14 +2,13 @@ import UIKit
 import RxSwift
 import RxKeyboard
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
     @IBOutlet fileprivate weak var scrollView: UIScrollView!
     
     fileprivate var loginViewModel =
         LoginViewModel(loginInteractor: LoginDependanciesProvider.shared.getLoginInteractor())
-    fileprivate let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()

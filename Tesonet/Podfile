@@ -9,7 +9,7 @@ target 'Tesonet' do
   pod 'RealmSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'ReachabilitySwift'
+  pod 'RxReachability'
   pod 'SwiftMessages'
   pod 'RxKeyboard'
   pod 'Alamofire', '~> 5.0.0.beta.1'
