@@ -1,0 +1,1099 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3736007BFB39F22DB9DEF1B6 /* Pods_TesonetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */; };
+		37BB1B0ACA7FCC125A27E2AA /* Pods_TesonetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */; };
+		64268423216621B100E64BE0 /* ServersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64268422216621B100E64BE0 /* ServersListViewModel.swift */; };
+		643D9906215A956000A4EFA2 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D9905215A956000A4EFA2 /* SegueHandler.swift */; };
+		671D750C220B3D8900038A09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671D7509220B3D8900038A09 /* Constants.swift */; };
+		671D750D220B3D8900038A09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671D750A220B3D8900038A09 /* Router.swift */; };
+		678F464621FA183200B95538 /* RMServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464521FA183200B95538 /* RMServer.swift */; };
+		678F464821FA185100B95538 /* Server+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464721FA185100B95538 /* Server+Mapping.swift */; };
+		678F464A21FA18C000B95538 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464921FA18C000B95538 /* Realm+Ext.swift */; };
+		678F464F2200B7E600B95538 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F464E2200B7E600B95538 /* LoginRepository.swift */; };
+		678F46522200B8C700B95538 /* ServersDependanciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46512200B8C700B95538 /* ServersDependanciesProvider.swift */; };
+		678F46552200B9D700B95538 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46532200B9D700B95538 /* ServerService.swift */; };
+		678F46562200B9D700B95538 /* LoginServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46542200B9D700B95538 /* LoginServiceMock.swift */; };
+		678F46592200C6A400B95538 /* ServersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46582200C6A400B95538 /* ServersListInteractor.swift */; };
+		678F465B220213AB00B95538 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F465A220213AB00B95538 /* Network.swift */; };
+		678F465F2203282B00B95538 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F465E2203282B00B95538 /* LoginViewModel.swift */; };
+		678F46612203445000B95538 /* LoginDependanciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46602203445000B95538 /* LoginDependanciesProvider.swift */; };
+		678F466522034B1300B95538 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466422034B1300B95538 /* LoginData.swift */; };
+		678F466722034C2C00B95538 /* Token+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466622034C2C00B95538 /* Token+Mapping.swift */; };
+		678F466922035C1200B95538 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466822035C1200B95538 /* ServerRepository.swift */; };
+		678F466B22035C6900B95538 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466A22035C6900B95538 /* LoginService.swift */; };
+		678F466C2203601F00B95538 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F466322034A1500B95538 /* LoginInteractor.swift */; };
+		678F46712204781000B95538 /* ErrorMessageHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46702204780F00B95538 /* ErrorMessageHud.swift */; };
+		678F46752204C0DD00B95538 /* ServerServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F46742204C0DD00B95538 /* ServerServiceMock.swift */; };
+		67B066122211EB9000626621 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B066112211EB9000626621 /* BaseViewController.swift */; };
+		67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7102120FB949F00D17F55 /* Assets.xcassets */; };
+		67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7102F20FB949F00D17F55 /* TesonetTests.swift */; };
+		67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7103A20FB949F00D17F55 /* TesonetUITests.swift */; };
+		67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108620FBC7DF00D17F55 /* LoginViewController.swift */; };
+		67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */; };
+		67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */; };
+		67C7109320FBCB7A00D17F55 /* ServersListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108D20FBCB7A00D17F55 /* ServersListTableCell.swift */; };
+		67C7109420FBCB7A00D17F55 /* ServersTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */; };
+		67C7109520FBCB7A00D17F55 /* ServersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7108F20FBCB7A00D17F55 /* ServersListViewController.swift */; };
+		67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */; };
+		67C7109720FBCB7A00D17F55 /* ServersTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */; };
+		67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */; };
+		67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */; };
+		67C710A520FBD16800D17F55 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A420FBD16800D17F55 /* Server.swift */; };
+		67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710A820FD1A8800D17F55 /* RealmStore.swift */; };
+		67C710B120FFB31300D17F55 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B020FFB31200D17F55 /* UserSession.swift */; };
+		67C710B320FFB65B00D17F55 /* LoginRouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710B220FFB65B00D17F55 /* LoginRouterViewController.swift */; };
+		67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */; };
+		67C710CC2103787B00D17F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */; };
+		67C710CD2103787B00D17F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C710CB2103787B00D17F55 /* Main.storyboard */; };
+		67C710D62103D87700D17F55 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D52103D87700D17F55 /* Token.swift */; };
+		67C710D82103D8C600D17F55 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D72103D8C500D17F55 /* Error.swift */; };
+		67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */; };
+		D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67C7102C20FB949F00D17F55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67C7100F20FB949F00D17F55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67C7101620FB949F00D17F55;
+			remoteInfo = Tesonet;
+		};
+		67C7103720FB949F00D17F55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67C7100F20FB949F00D17F55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67C7101620FB949F00D17F55;
+			remoteInfo = Tesonet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tesonet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64268422216621B100E64BE0 /* ServersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListViewModel.swift; sourceTree = "<group>"; };
+		643D9905215A956000A4EFA2 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		671D7509220B3D8900038A09 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		671D750A220B3D8900038A09 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		678F464521FA183200B95538 /* RMServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMServer.swift; sourceTree = "<group>"; };
+		678F464721FA185100B95538 /* Server+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Mapping.swift"; sourceTree = "<group>"; };
+		678F464921FA18C000B95538 /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
+		678F464E2200B7E600B95538 /* LoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		678F46512200B8C700B95538 /* ServersDependanciesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersDependanciesProvider.swift; sourceTree = "<group>"; };
+		678F46532200B9D700B95538 /* ServerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
+		678F46542200B9D700B95538 /* LoginServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceMock.swift; sourceTree = "<group>"; };
+		678F46582200C6A400B95538 /* ServersListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListInteractor.swift; sourceTree = "<group>"; };
+		678F465A220213AB00B95538 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		678F465E2203282B00B95538 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		678F46602203445000B95538 /* LoginDependanciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDependanciesProvider.swift; sourceTree = "<group>"; };
+		678F466322034A1500B95538 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		678F466422034B1300B95538 /* LoginData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		678F466622034C2C00B95538 /* Token+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Mapping.swift"; sourceTree = "<group>"; };
+		678F466822035C1200B95538 /* ServerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
+		678F466A22035C6900B95538 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		678F46702204780F00B95538 /* ErrorMessageHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessageHud.swift; sourceTree = "<group>"; };
+		678F46742204C0DD00B95538 /* ServerServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceMock.swift; sourceTree = "<group>"; };
+		67B066112211EB9000626621 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		67C7101720FB949F00D17F55 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7102120FB949F00D17F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67C7102620FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C7102B20FB949F00D17F55 /* TesonetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7102F20FB949F00D17F55 /* TesonetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetTests.swift; sourceTree = "<group>"; };
+		67C7103120FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C7103620FB949F00D17F55 /* TesonetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7103A20FB949F00D17F55 /* TesonetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetUITests.swift; sourceTree = "<group>"; };
+		67C7103C20FB949F00D17F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C7108620FBC7DF00D17F55 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersTableHeaderView.swift; sourceTree = "<group>"; };
+		67C7108D20FBCB7A00D17F55 /* ServersListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListTableCell.swift; sourceTree = "<group>"; };
+		67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersTableHeaderView.xib; sourceTree = "<group>"; };
+		67C7108F20FBCB7A00D17F55 /* ServersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersListViewController.swift; sourceTree = "<group>"; };
+		67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersTableFooterView.swift; sourceTree = "<group>"; };
+		67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServersTableFooterView.xib; sourceTree = "<group>"; };
+		67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
+		67C710A420FBD16800D17F55 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		67C710A820FD1A8800D17F55 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
+		67C710B020FFB31200D17F55 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		67C710B220FFB65B00D17F55 /* LoginRouterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterViewController.swift; sourceTree = "<group>"; };
+		67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67C710CB2103787B00D17F55 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		67C710D52103D87700D17F55 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		67C710D72103D8C500D17F55 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNoAnimationSegue.swift; sourceTree = "<group>"; };
+		78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests.release.xcconfig"; sourceTree = "<group>"; };
+		8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.release.xcconfig"; sourceTree = "<group>"; };
+		C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesonet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet.debug.xcconfig"; sourceTree = "<group>"; };
+		EB71163AD4EBB6F00F1EA28C /* Pods-TesonetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F43176E0218A021830D014C9 /* Pods-TesonetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67C7101420FB949F00D17F55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F0743AEFE561A3BCACE386 /* Pods_Tesonet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7102820FB949F00D17F55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3736007BFB39F22DB9DEF1B6 /* Pods_TesonetTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7103320FB949F00D17F55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37BB1B0ACA7FCC125A27E2AA /* Pods_TesonetUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60257A6846800EFE3F33EA16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */,
+				8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */,
+				6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */,
+				78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */,
+				F43176E0218A021830D014C9 /* Pods-TesonetUITests.debug.xcconfig */,
+				EB71163AD4EBB6F00F1EA28C /* Pods-TesonetUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		678F46502200B86900B95538 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				678F46772204C32A00B95538 /* Login */,
+				678F46762204C32800B95538 /* Server */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		678F465C22031BC000B95538 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				678F46582200C6A400B95538 /* ServersListInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		678F465D22031BE500B95538 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				67C7108F20FBCB7A00D17F55 /* ServersListViewController.swift */,
+				64268422216621B100E64BE0 /* ServersListViewModel.swift */,
+				67C7108D20FBCB7A00D17F55 /* ServersListTableCell.swift */,
+				67C7108C20FBCB7A00D17F55 /* ServersTableHeaderView.swift */,
+				67C7108E20FBCB7A00D17F55 /* ServersTableHeaderView.xib */,
+				67C7109020FBCB7A00D17F55 /* ServersTableFooterView.swift */,
+				67C7109120FBCB7A00D17F55 /* ServersTableFooterView.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		678F466222034A0400B95538 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				678F466322034A1500B95538 /* LoginInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		678F466D22046A5F00B95538 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				67C710B220FFB65B00D17F55 /* LoginRouterViewController.swift */,
+				67C7108620FBC7DF00D17F55 /* LoginViewController.swift */,
+				678F465E2203282B00B95538 /* LoginViewModel.swift */,
+				678F466422034B1300B95538 /* LoginData.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		678F46722204A72300B95538 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				678F466822035C1200B95538 /* ServerRepository.swift */,
+				67C710A420FBD16800D17F55 /* Server.swift */,
+				678F464721FA185100B95538 /* Server+Mapping.swift */,
+				678F464521FA183200B95538 /* RMServer.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		678F46732204A72600B95538 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				678F464E2200B7E600B95538 /* LoginRepository.swift */,
+				67C710D52103D87700D17F55 /* Token.swift */,
+				678F466622034C2C00B95538 /* Token+Mapping.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		678F46762204C32800B95538 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				678F46532200B9D700B95538 /* ServerService.swift */,
+				678F46742204C0DD00B95538 /* ServerServiceMock.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		678F46772204C32A00B95538 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				678F466A22035C6900B95538 /* LoginService.swift */,
+				678F46542200B9D700B95538 /* LoginServiceMock.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		67C7100E20FB949F00D17F55 = {
+			isa = PBXGroup;
+			children = (
+				67C7101920FB949F00D17F55 /* Tesonet */,
+				67C7102E20FB949F00D17F55 /* TesonetTests */,
+				67C7103920FB949F00D17F55 /* TesonetUITests */,
+				67C7101820FB949F00D17F55 /* Products */,
+				60257A6846800EFE3F33EA16 /* Pods */,
+				83C6B233EED77F9D24CB08EC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		67C7101820FB949F00D17F55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67C7101720FB949F00D17F55 /* Tesonet.app */,
+				67C7102B20FB949F00D17F55 /* TesonetTests.xctest */,
+				67C7103620FB949F00D17F55 /* TesonetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67C7101920FB949F00D17F55 /* Tesonet */ = {
+			isa = PBXGroup;
+			children = (
+				67C7109A20FBCC1A00D17F55 /* App */,
+				67C7108220FBC66900D17F55 /* Login */,
+				67C7108320FBC69000D17F55 /* Servers */,
+				67C710A320FBD12500D17F55 /* Data */,
+				678F46502200B86900B95538 /* Services */,
+				67C7108520FBC6E800D17F55 /* Network */,
+				67C7108420FBC6B700D17F55 /* Persistance */,
+				67C710C92103782900D17F55 /* Storyboards */,
+				67C7108920FBC87D00D17F55 /* Helpers */,
+				67C7102120FB949F00D17F55 /* Assets.xcassets */,
+				67C7102620FB949F00D17F55 /* Info.plist */,
+			);
+			path = Tesonet;
+			sourceTree = "<group>";
+		};
+		67C7102E20FB949F00D17F55 /* TesonetTests */ = {
+			isa = PBXGroup;
+			children = (
+				67C7102F20FB949F00D17F55 /* TesonetTests.swift */,
+				67C7103120FB949F00D17F55 /* Info.plist */,
+			);
+			path = TesonetTests;
+			sourceTree = "<group>";
+		};
+		67C7103920FB949F00D17F55 /* TesonetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67C7103A20FB949F00D17F55 /* TesonetUITests.swift */,
+				67C7103C20FB949F00D17F55 /* Info.plist */,
+			);
+			path = TesonetUITests;
+			sourceTree = "<group>";
+		};
+		67C7108220FBC66900D17F55 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				678F46602203445000B95538 /* LoginDependanciesProvider.swift */,
+				678F466222034A0400B95538 /* Interactors */,
+				678F466D22046A5F00B95538 /* ViewControllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		67C7108320FBC69000D17F55 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				678F46512200B8C700B95538 /* ServersDependanciesProvider.swift */,
+				678F465C22031BC000B95538 /* Interactors */,
+				678F465D22031BE500B95538 /* ViewControllers */,
+			);
+			path = Servers;
+			sourceTree = "<group>";
+		};
+		67C7108420FBC6B700D17F55 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				67C710A820FD1A8800D17F55 /* RealmStore.swift */,
+				67C710B020FFB31200D17F55 /* UserSession.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		67C7108520FBC6E800D17F55 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				671D7509220B3D8900038A09 /* Constants.swift */,
+				671D750A220B3D8900038A09 /* Router.swift */,
+				678F465A220213AB00B95538 /* Network.swift */,
+				67C710D72103D8C500D17F55 /* Error.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		67C7108920FBC87D00D17F55 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				678F464921FA18C000B95538 /* Realm+Ext.swift */,
+				643D9905215A956000A4EFA2 /* SegueHandler.swift */,
+				67C710D92103F35E00D17F55 /* PushNoAnimationSegue.swift */,
+				67C7108A20FBC8DE00D17F55 /* DesignableUITextField.swift */,
+				67C710A120FBCF1100D17F55 /* UIView+NibLoading.swift */,
+				67C710C721035F6B00D17F55 /* UIViewController+Ext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		67C7109A20FBCC1A00D17F55 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				67C7109B20FBCC5C00D17F55 /* AppDelegate.swift */,
+				67B066112211EB9000626621 /* BaseViewController.swift */,
+				678F46702204780F00B95538 /* ErrorMessageHud.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		67C710A320FBD12500D17F55 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				678F46732204A72600B95538 /* Login */,
+				678F46722204A72300B95538 /* Server */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		67C710C92103782900D17F55 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				67C710CA2103787B00D17F55 /* LaunchScreen.storyboard */,
+				67C710CB2103787B00D17F55 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		83C6B233EED77F9D24CB08EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452A4F26EE210FEB88C9D6B9 /* Pods_Tesonet.framework */,
+				47B9E4A180C8635D2440346A /* Pods_TesonetTests.framework */,
+				5E1E1468CFFF235A8B703624 /* Pods_TesonetUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67C7101620FB949F00D17F55 /* Tesonet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C7103F20FB949F00D17F55 /* Build configuration list for PBXNativeTarget "Tesonet" */;
+			buildPhases = (
+				9ABC736F1F99E8B9333E9E5B /* [CP] Check Pods Manifest.lock */,
+				67C7101320FB949F00D17F55 /* Sources */,
+				67C7101420FB949F00D17F55 /* Frameworks */,
+				67C7101520FB949F00D17F55 /* Resources */,
+				CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */,
+				E3B9142A2CF5A8A16A6DCBBE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tesonet;
+			productName = Tesonet;
+			productReference = 67C7101720FB949F00D17F55 /* Tesonet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67C7102A20FB949F00D17F55 /* TesonetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C7104220FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetTests" */;
+			buildPhases = (
+				40CF6EB5E788A6889BF87459 /* [CP] Check Pods Manifest.lock */,
+				67C7102720FB949F00D17F55 /* Sources */,
+				67C7102820FB949F00D17F55 /* Frameworks */,
+				67C7102920FB949F00D17F55 /* Resources */,
+				8F36D088A77834F34F1A4A8A /* [CP] Embed Pods Frameworks */,
+				7440670BD0639ECFF8EDBA90 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67C7102D20FB949F00D17F55 /* PBXTargetDependency */,
+			);
+			name = TesonetTests;
+			productName = TesonetTests;
+			productReference = 67C7102B20FB949F00D17F55 /* TesonetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67C7103520FB949F00D17F55 /* TesonetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C7104520FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetUITests" */;
+			buildPhases = (
+				5ED1DBBC9D0B6F73F1E13ACF /* [CP] Check Pods Manifest.lock */,
+				67C7103220FB949F00D17F55 /* Sources */,
+				67C7103320FB949F00D17F55 /* Frameworks */,
+				67C7103420FB949F00D17F55 /* Resources */,
+				51460DF6BF6007A435AEBD28 /* [CP] Embed Pods Frameworks */,
+				A3C5F13E5495CFF79AD0D825 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67C7103820FB949F00D17F55 /* PBXTargetDependency */,
+			);
+			name = TesonetUITests;
+			productName = TesonetUITests;
+			productReference = 67C7103620FB949F00D17F55 /* TesonetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67C7100F20FB949F00D17F55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Robertas Baronas";
+				TargetAttributes = {
+					67C7101620FB949F00D17F55 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					67C7102A20FB949F00D17F55 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						TestTargetID = 67C7101620FB949F00D17F55;
+					};
+					67C7103520FB949F00D17F55 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						TestTargetID = 67C7101620FB949F00D17F55;
+					};
+				};
+			};
+			buildConfigurationList = 67C7101220FB949F00D17F55 /* Build configuration list for PBXProject "Tesonet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67C7100E20FB949F00D17F55;
+			productRefGroup = 67C7101820FB949F00D17F55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67C7101620FB949F00D17F55 /* Tesonet */,
+				67C7102A20FB949F00D17F55 /* TesonetTests */,
+				67C7103520FB949F00D17F55 /* TesonetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67C7101520FB949F00D17F55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7109420FBCB7A00D17F55 /* ServersTableHeaderView.xib in Resources */,
+				67C710CD2103787B00D17F55 /* Main.storyboard in Resources */,
+				67C710CC2103787B00D17F55 /* LaunchScreen.storyboard in Resources */,
+				67C7102220FB949F00D17F55 /* Assets.xcassets in Resources */,
+				67C7109720FBCB7A00D17F55 /* ServersTableFooterView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7102920FB949F00D17F55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7103420FB949F00D17F55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40CF6EB5E788A6889BF87459 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesonetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51460DF6BF6007A435AEBD28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED1DBBC9D0B6F73F1E13ACF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesonetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7440670BD0639ECFF8EDBA90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F36D088A77834F34F1A4A8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTests/Pods-TesonetTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ABC736F1F99E8B9333E9E5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tesonet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C5F13E5495CFF79AD0D825 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetUITests/Pods-TesonetUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE55E6EF881F0AA0389623B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
+				"${BUILT_PRODUCTS_DIR}/RxReachability/RxReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxReachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B9142A2CF5A8A16A6DCBBE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tesonet/Pods-Tesonet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67C7101320FB949F00D17F55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				678F464621FA183200B95538 /* RMServer.swift in Sources */,
+				678F46562200B9D700B95538 /* LoginServiceMock.swift in Sources */,
+				67C710D62103D87700D17F55 /* Token.swift in Sources */,
+				678F46552200B9D700B95538 /* ServerService.swift in Sources */,
+				67C7109C20FBCC5C00D17F55 /* AppDelegate.swift in Sources */,
+				67C7108B20FBC8DE00D17F55 /* DesignableUITextField.swift in Sources */,
+				678F465F2203282B00B95538 /* LoginViewModel.swift in Sources */,
+				671D750D220B3D8900038A09 /* Router.swift in Sources */,
+				67C7109320FBCB7A00D17F55 /* ServersListTableCell.swift in Sources */,
+				678F465B220213AB00B95538 /* Network.swift in Sources */,
+				67C710B120FFB31300D17F55 /* UserSession.swift in Sources */,
+				678F46712204781000B95538 /* ErrorMessageHud.swift in Sources */,
+				678F466922035C1200B95538 /* ServerRepository.swift in Sources */,
+				67C710C821035F6B00D17F55 /* UIViewController+Ext.swift in Sources */,
+				678F464F2200B7E600B95538 /* LoginRepository.swift in Sources */,
+				678F464821FA185100B95538 /* Server+Mapping.swift in Sources */,
+				67C710B320FFB65B00D17F55 /* LoginRouterViewController.swift in Sources */,
+				67C710A220FBCF1100D17F55 /* UIView+NibLoading.swift in Sources */,
+				67C7109220FBCB7A00D17F55 /* ServersTableHeaderView.swift in Sources */,
+				678F466C2203601F00B95538 /* LoginInteractor.swift in Sources */,
+				678F466522034B1300B95538 /* LoginData.swift in Sources */,
+				67C710A520FBD16800D17F55 /* Server.swift in Sources */,
+				671D750C220B3D8900038A09 /* Constants.swift in Sources */,
+				64268423216621B100E64BE0 /* ServersListViewModel.swift in Sources */,
+				678F46522200B8C700B95538 /* ServersDependanciesProvider.swift in Sources */,
+				678F466722034C2C00B95538 /* Token+Mapping.swift in Sources */,
+				67B066122211EB9000626621 /* BaseViewController.swift in Sources */,
+				678F466B22035C6900B95538 /* LoginService.swift in Sources */,
+				678F46752204C0DD00B95538 /* ServerServiceMock.swift in Sources */,
+				67C7109520FBCB7A00D17F55 /* ServersListViewController.swift in Sources */,
+				678F46592200C6A400B95538 /* ServersListInteractor.swift in Sources */,
+				67C7108720FBC7DF00D17F55 /* LoginViewController.swift in Sources */,
+				67C710DA2103F35E00D17F55 /* PushNoAnimationSegue.swift in Sources */,
+				643D9906215A956000A4EFA2 /* SegueHandler.swift in Sources */,
+				678F464A21FA18C000B95538 /* Realm+Ext.swift in Sources */,
+				67C7109620FBCB7A00D17F55 /* ServersTableFooterView.swift in Sources */,
+				67C710A920FD1A8800D17F55 /* RealmStore.swift in Sources */,
+				678F46612203445000B95538 /* LoginDependanciesProvider.swift in Sources */,
+				67C710D82103D8C600D17F55 /* Error.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7102720FB949F00D17F55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7103020FB949F00D17F55 /* TesonetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C7103220FB949F00D17F55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7103B20FB949F00D17F55 /* TesonetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67C7102D20FB949F00D17F55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67C7101620FB949F00D17F55 /* Tesonet */;
+			targetProxy = 67C7102C20FB949F00D17F55 /* PBXContainerItemProxy */;
+		};
+		67C7103820FB949F00D17F55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67C7101620FB949F00D17F55 /* Tesonet */;
+			targetProxy = 67C7103720FB949F00D17F55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		67C7103D20FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67C7103E20FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67C7104020FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C931E8DC8A0A082704B673EF /* Pods-Tesonet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = Tesonet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.Tesonet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67C7104120FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8437A8A217F5F46177477F19 /* Pods-Tesonet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = Tesonet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.Tesonet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67C7104320FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6271A2694FE1F5E300A5BA88 /* Pods-TesonetTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tesonet.app/Tesonet";
+			};
+			name = Debug;
+		};
+		67C7104420FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CDB1976CA1EB9755E45136 /* Pods-TesonetTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tesonet.app/Tesonet";
+			};
+			name = Release;
+		};
+		67C7104620FB949F00D17F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F43176E0218A021830D014C9 /* Pods-TesonetUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tesonet;
+			};
+			name = Debug;
+		};
+		67C7104720FB949F00D17F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB71163AD4EBB6F00F1EA28C /* Pods-TesonetUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WVXMKT8E7;
+				INFOPLIST_FILE = TesonetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redcamelstudios.TesonetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tesonet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67C7101220FB949F00D17F55 /* Build configuration list for PBXProject "Tesonet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7103D20FB949F00D17F55 /* Debug */,
+				67C7103E20FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C7103F20FB949F00D17F55 /* Build configuration list for PBXNativeTarget "Tesonet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7104020FB949F00D17F55 /* Debug */,
+				67C7104120FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C7104220FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7104320FB949F00D17F55 /* Debug */,
+				67C7104420FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C7104520FB949F00D17F55 /* Build configuration list for PBXNativeTarget "TesonetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C7104620FB949F00D17F55 /* Debug */,
+				67C7104720FB949F00D17F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67C7100F20FB949F00D17F55 /* Project object */;
+}

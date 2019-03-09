@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Tesonet' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'KeychainSwift'
+  pod 'RealmSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxReachability'
+  pod 'SwiftMessages'
+  pod 'RxKeyboard'
+  pod 'Alamofire', '~> 5.0.0.beta.1'
+
+  target 'TesonetTests' do
+    inherit! :search_paths
+    pod 'RxSwift'
+    pod 'RxCocoa'
+  end
+
+  target 'TesonetUITests' do
+    inherit! :search_paths
+  end
+
+end
