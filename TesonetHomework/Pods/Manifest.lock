@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.8.2)
+  - IQKeyboardManager (6.2.1)
+  - KeychainAccess (3.1.2)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - ObjectMapper (3.4.2)
+  - Realm (3.14.0):
+    - Realm/Headers (= 3.14.0)
+  - Realm/Headers (3.14.0)
+  - RealmSwift (3.14.0):
+    - Realm (= 3.14.0)
+  - RxAlamofire (4.4.0):
+    - RxAlamofire/Core (= 4.4.0)
+  - RxAlamofire/Core (4.4.0):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 4.4)
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - IQKeyboardManager (~> 6.2.1)
+  - KeychainAccess (~> 3.1.2)
+  - NVActivityIndicatorView (~> 4.6.1)
+  - ObjectMapper (~> 3.4.2)
+  - RealmSwift (~> 3.14.0)
+  - RxAlamofire (~> 4.4.0)
+  - RxCocoa (~> 4.4.2)
+  - RxSwift (~> 4.4.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - IQKeyboardManager
+    - KeychainAccess
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - Realm
+    - RealmSwift
+    - RxAlamofire
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Realm: 221b25919bb5a010a3c597d707f8df3492dcd93a
+  RealmSwift: 28f22dfa6a27b9a778cfb09471558b6afcf1022c
+  RxAlamofire: ecc5e458ee11250938d23360179eb3a37cd3ee1e
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+
+PODFILE CHECKSUM: 17a2a57a773493a40a7dbc537369bbfe86b8ec80
+
+COCOAPODS: 1.5.3
