@@ -23,6 +23,18 @@
 		9A40E778225179BA00D22886 /* DataPersistant.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A40E776225179BA00D22886 /* DataPersistant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A40E77B225179BA00D22886 /* DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A40E774225179BA00D22886 /* DataPersistant.framework */; };
 		9A40E77C225179BA00D22886 /* DataPersistant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A40E774225179BA00D22886 /* DataPersistant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A40E78322517C5100D22886 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E78222517C5100D22886 /* Login.swift */; };
+		9A40E78722517C8B00D22886 /* Login+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E78622517C8B00D22886 /* Login+Mapping.swift */; };
+		9A40E78A22517CEE00D22886 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E78922517CEE00D22886 /* Server.swift */; };
+		9A40E78D22517D5200D22886 /* Server+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E78C22517D5200D22886 /* Server+Mapping.swift */; };
+		9A40E79122517DDC00D22886 /* AuthorizationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E79022517DDC00D22886 /* AuthorizationUseCase.swift */; };
+		9A40E79322517E3700D22886 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E79222517E3700D22886 /* UseCaseProvider.swift */; };
+		9A40E79C225182EA00D22886 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E79B225182EA00D22886 /* Authorization.storyboard */; };
+		9A40E79F2251831E00D22886 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E79E2251831E00D22886 /* LoginViewController.swift */; };
+		9A40E7A32251839D00D22886 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A02251839D00D22886 /* Strings.swift */; };
+		9A40E7A42251839D00D22886 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A12251839D00D22886 /* Assets.swift */; };
+		9A40E7A52251839D00D22886 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A22251839D00D22886 /* Storyboards.swift */; };
+		9A40E7A72251854B00D22886 /* PlaygroundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A62251854B00D22886 /* PlaygroundUseCase.swift */; };
 		D4F95B91E15288AE9487B18D /* Pods_DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7512D31384C395D14505F5 /* Pods_DataPersistant.framework */; };
 		DA8C9AE110D327D9E809AF3E /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD29CE3AD3A897CE92F996 /* Pods_NetworkPlatform.framework */; };
 		E050C7CF3BC6B250C26D4481 /* Pods_TesonetHomework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69977654FFF52807D4D1DC8F /* Pods_TesonetHomework.framework */; };
@@ -92,6 +104,19 @@
 		9A40E774225179BA00D22886 /* DataPersistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataPersistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40E776225179BA00D22886 /* DataPersistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPersistant.h; sourceTree = "<group>"; };
 		9A40E777225179BA00D22886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A40E78222517C5100D22886 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		9A40E78622517C8B00D22886 /* Login+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Mapping.swift"; sourceTree = "<group>"; };
+		9A40E78922517CEE00D22886 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		9A40E78C22517D5200D22886 /* Server+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Mapping.swift"; sourceTree = "<group>"; };
+		9A40E79022517DDC00D22886 /* AuthorizationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationUseCase.swift; sourceTree = "<group>"; };
+		9A40E79222517E3700D22886 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		9A40E7972251827500D22886 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "/Users/cheskapac/Development/tesonet-homework/ios-party/TesonetHomework/TesonetHomework/Assets/Localizable.strings"; sourceTree = "<absolute>"; };
+		9A40E79B225182EA00D22886 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		9A40E79E2251831E00D22886 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9A40E7A02251839D00D22886 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		9A40E7A12251839D00D22886 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		9A40E7A22251839D00D22886 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		9A40E7A62251854B00D22886 /* PlaygroundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundUseCase.swift; sourceTree = "<group>"; };
 		A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6118DD9176BC0B7C5DDCB8 /* Pods-TesonetHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework/Pods-TesonetHomework.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F555E9064EEF01666B9D9 /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +229,8 @@
 		9A40E751225178D100D22886 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				9A40E78022517BB400D22886 /* Entries */,
+				9A40E78E22517DAD00D22886 /* UseCases */,
 				9A40E752225178D100D22886 /* Domain.h */,
 				9A40E753225178D100D22886 /* Info.plist */,
 			);
@@ -213,6 +240,7 @@
 		9A40E7632251790000D22886 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				9A40E78422517C7200D22886 /* Entries */,
 				9A40E7642251790000D22886 /* NetworkPlatform.h */,
 				9A40E7652251790000D22886 /* Info.plist */,
 			);
@@ -226,6 +254,121 @@
 				9A40E777225179BA00D22886 /* Info.plist */,
 			);
 			path = DataPersistant;
+			sourceTree = "<group>";
+		};
+		9A40E78022517BB400D22886 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E78822517CDC00D22886 /* Playground */,
+				9A40E78122517C4300D22886 /* Authorization */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		9A40E78122517C4300D22886 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E78222517C5100D22886 /* Login.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		9A40E78422517C7200D22886 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E78B22517D3B00D22886 /* Playground */,
+				9A40E78522517C7B00D22886 /* Authorization */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		9A40E78522517C7B00D22886 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E78622517C8B00D22886 /* Login+Mapping.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		9A40E78822517CDC00D22886 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E78922517CEE00D22886 /* Server.swift */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
+		9A40E78B22517D3B00D22886 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E78C22517D5200D22886 /* Server+Mapping.swift */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
+		9A40E78E22517DAD00D22886 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E78F22517DB900D22886 /* Provider */,
+				9A40E79022517DDC00D22886 /* AuthorizationUseCase.swift */,
+				9A40E7A62251854B00D22886 /* PlaygroundUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		9A40E78F22517DB900D22886 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E79222517E3700D22886 /* UseCaseProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		9A40E7962251820F00D22886 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7982251829600D22886 /* Generated */,
+				9A40E740225175BC00D22886 /* Assets.xcassets */,
+				9A40E742225175BC00D22886 /* LaunchScreen.storyboard */,
+				9A40E7972251827500D22886 /* Localizable.strings */,
+				9A40E73D225175B900D22886 /* Main.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9A40E7982251829600D22886 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7A12251839D00D22886 /* Assets.swift */,
+				9A40E7A22251839D00D22886 /* Storyboards.swift */,
+				9A40E7A02251839D00D22886 /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		9A40E799225182D300D22886 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E79A225182DC00D22886 /* Authorization */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9A40E79A225182DC00D22886 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E79D2251830D00D22886 /* Login */,
+				9A40E79B225182EA00D22886 /* Authorization.storyboard */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		9A40E79D2251830D00D22886 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E79E2251831E00D22886 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,6 +752,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A40E7A72251854B00D22886 /* PlaygroundUseCase.swift in Sources */,
+				9A40E79322517E3700D22886 /* UseCaseProvider.swift in Sources */,
+				9A40E79122517DDC00D22886 /* AuthorizationUseCase.swift in Sources */,
+				9A40E78A22517CEE00D22886 /* Server.swift in Sources */,
+				9A40E78322517C5100D22886 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +764,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A40E78722517C8B00D22886 /* Login+Mapping.swift in Sources */,
+				9A40E78D22517D5200D22886 /* Server+Mapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
