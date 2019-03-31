@@ -21,6 +21,8 @@ PODS:
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
+  - SwiftGen (6.1.0)
+  - SwiftLint (0.31.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
@@ -32,6 +34,8 @@ DEPENDENCIES:
   - RxAlamofire (~> 4.4.0)
   - RxCocoa (~> 4.4.2)
   - RxSwift (~> 4.4.2)
+  - SwiftGen (~> 6.1.0)
+  - SwiftLint (~> 0.31.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -46,6 +50,8 @@ SPEC REPOS:
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - SwiftGen
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -59,7 +65,9 @@ SPEC CHECKSUMS:
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: 17a2a57a773493a40a7dbc537369bbfe86b8ec80
+PODFILE CHECKSUM: 98947e41c5804bc9aebaa23ae8344864562aa964
 
 COCOAPODS: 1.5.3

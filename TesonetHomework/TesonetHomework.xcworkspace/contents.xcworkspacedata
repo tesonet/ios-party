@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/cheskapac/Development/tesonet-homework/ios-party/TesonetHomework/TesonetHomework/Assets/Localizable.strings">
+   </FileRef>
+   <FileRef
       location = "group:TesonetHomework.xcodeproj">
    </FileRef>
    <FileRef

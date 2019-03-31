@@ -1,0 +1,76 @@
+# List of rules with definitions
+# https://github.com/realm/SwiftLint/blob/master/Rules.md
+
+# Find all the available rules by running:
+# 1. With terminal navigate to project folder
+# 2. Write: swiftlint rules
+
+# rule identifiers to exclude from running
+disabled_rules:
+  - todo
+  - function_body_length
+  - closure_parameter_position
+  - attributes
+  - empty_count
+
+opt_in_rules:
+ - closure_spacing
+ - conditional_returns_on_newline
+ - empty_count
+ - explicit_init
+ - force_unwrapping
+ - nimble_operator
+ - operator_usage_whitespace
+ - overridden_super_call
+ - private_outlet
+ - prohibited_super_call
+ - redundant_nil_coalescing
+ - switch_case_on_newline
+ - closure_end_indentation
+ - multiline_parameters
+ - vertical_parameter_alignment_on_call
+ - object_literal
+ - line_length
+
+# rules with additional configuration
+
+line_length:
+ ignores_urls: true
+ ignores_comments: true
+ ignores_function_declarations: true
+
+function_parameter_count:
+ warning: 5
+ error: 7
+
+type_name:
+ min_length: 2
+ max_length: 60
+
+identifier_name:
+ min_length: 2
+ max_length: 60
+
+type_body_length:
+ warning: 400
+ error: 450
+
+cyclomatic_complexity:
+ ignores_case_statements: true
+
+private_outlet:
+ allow_private_set: true
+
+trailing_whitespace:
+ ignores_empty_lines: true
+ ignores_comments: true
+
+object_literal:
+ color_literal: false
+
+warning_threshold: 15
+
+excluded:
+  - ./Pods
+  
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
