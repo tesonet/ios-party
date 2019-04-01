@@ -35,6 +35,17 @@
 		9A40E7A42251839D00D22886 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A12251839D00D22886 /* Assets.swift */; };
 		9A40E7A52251839D00D22886 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A22251839D00D22886 /* Storyboards.swift */; };
 		9A40E7A72251854B00D22886 /* PlaygroundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A62251854B00D22886 /* PlaygroundUseCase.swift */; };
+		9A40E7AA225187B400D22886 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7A9225187B400D22886 /* APIConfig.swift */; };
+		9A40E7AE2251883600D22886 /* ObservableType+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7AD2251883600D22886 /* ObservableType+Validation.swift */; };
+		9A40E7B02251888800D22886 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7AF2251888800D22886 /* NetworkError.swift */; };
+		9A40E7B322518F4100D22886 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7B222518F4100D22886 /* Networking.swift */; };
+		9A40E7B52251915500D22886 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7B42251915500D22886 /* Network.swift */; };
+		9A40E7B82251D7F500D22886 /* AuthorizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7B72251D7F500D22886 /* AuthorizationAPI.swift */; };
+		9A40E7BA2251D8E600D22886 /* PlaygroundAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7B92251D8E600D22886 /* PlaygroundAPI.swift */; };
+		9A40E7BD2251F13700D22886 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7BC2251F13700D22886 /* NetworkProvider.swift */; };
+		9A40E7C12251F1DD00D22886 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7C02251F1DD00D22886 /* UseCaseProvider.swift */; };
+		9A40E7C32251F1F000D22886 /* AuthorizationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7C22251F1F000D22886 /* AuthorizationUseCase.swift */; };
+		9A40E7C52251F1FF00D22886 /* PlaygroundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7C42251F1FF00D22886 /* PlaygroundUseCase.swift */; };
 		D4F95B91E15288AE9487B18D /* Pods_DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7512D31384C395D14505F5 /* Pods_DataPersistant.framework */; };
 		DA8C9AE110D327D9E809AF3E /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD29CE3AD3A897CE92F996 /* Pods_NetworkPlatform.framework */; };
 		E050C7CF3BC6B250C26D4481 /* Pods_TesonetHomework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69977654FFF52807D4D1DC8F /* Pods_TesonetHomework.framework */; };
@@ -117,6 +128,17 @@
 		9A40E7A12251839D00D22886 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9A40E7A22251839D00D22886 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		9A40E7A62251854B00D22886 /* PlaygroundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundUseCase.swift; sourceTree = "<group>"; };
+		9A40E7A9225187B400D22886 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		9A40E7AD2251883600D22886 /* ObservableType+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Validation.swift"; sourceTree = "<group>"; };
+		9A40E7AF2251888800D22886 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9A40E7B222518F4100D22886 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		9A40E7B42251915500D22886 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		9A40E7B72251D7F500D22886 /* AuthorizationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPI.swift; sourceTree = "<group>"; };
+		9A40E7B92251D8E600D22886 /* PlaygroundAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundAPI.swift; sourceTree = "<group>"; };
+		9A40E7BC2251F13700D22886 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		9A40E7C02251F1DD00D22886 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		9A40E7C22251F1F000D22886 /* AuthorizationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationUseCase.swift; sourceTree = "<group>"; };
+		9A40E7C42251F1FF00D22886 /* PlaygroundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundUseCase.swift; sourceTree = "<group>"; };
 		A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6118DD9176BC0B7C5DDCB8 /* Pods-TesonetHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework/Pods-TesonetHomework.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F555E9064EEF01666B9D9 /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,7 +262,11 @@
 		9A40E7632251790000D22886 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				9A40E7B62251D7D200D22886 /* API */,
+				9A40E7A82251879B00D22886 /* Common */,
 				9A40E78422517C7200D22886 /* Entries */,
+				9A40E7B122518F2D00D22886 /* Network */,
+				9A40E7BE2251F1B900D22886 /* UseCases */,
 				9A40E7642251790000D22886 /* NetworkPlatform.h */,
 				9A40E7652251790000D22886 /* Info.plist */,
 			);
@@ -278,6 +304,7 @@
 			children = (
 				9A40E78B22517D3B00D22886 /* Playground */,
 				9A40E78522517C7B00D22886 /* Authorization */,
+				9A40E7AF2251888800D22886 /* NetworkError.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -369,6 +396,60 @@
 				9A40E79E2251831E00D22886 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		9A40E7A82251879B00D22886 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7A9225187B400D22886 /* APIConfig.swift */,
+				9A40E7AD2251883600D22886 /* ObservableType+Validation.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9A40E7B122518F2D00D22886 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7BB2251F11900D22886 /* Provider */,
+				9A40E7B222518F4100D22886 /* Networking.swift */,
+				9A40E7B42251915500D22886 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9A40E7B62251D7D200D22886 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7B72251D7F500D22886 /* AuthorizationAPI.swift */,
+				9A40E7B92251D8E600D22886 /* PlaygroundAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9A40E7BB2251F11900D22886 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7BC2251F13700D22886 /* NetworkProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		9A40E7BE2251F1B900D22886 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7BF2251F1C700D22886 /* Provider */,
+				9A40E7C22251F1F000D22886 /* AuthorizationUseCase.swift */,
+				9A40E7C42251F1FF00D22886 /* PlaygroundUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		9A40E7BF2251F1C700D22886 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7C02251F1DD00D22886 /* UseCaseProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -765,7 +846,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A40E78722517C8B00D22886 /* Login+Mapping.swift in Sources */,
+				9A40E7AA225187B400D22886 /* APIConfig.swift in Sources */,
+				9A40E7BA2251D8E600D22886 /* PlaygroundAPI.swift in Sources */,
+				9A40E7C32251F1F000D22886 /* AuthorizationUseCase.swift in Sources */,
+				9A40E7C12251F1DD00D22886 /* UseCaseProvider.swift in Sources */,
+				9A40E7B322518F4100D22886 /* Networking.swift in Sources */,
+				9A40E7C52251F1FF00D22886 /* PlaygroundUseCase.swift in Sources */,
 				9A40E78D22517D5200D22886 /* Server+Mapping.swift in Sources */,
+				9A40E7B82251D7F500D22886 /* AuthorizationAPI.swift in Sources */,
+				9A40E7AE2251883600D22886 /* ObservableType+Validation.swift in Sources */,
+				9A40E7B52251915500D22886 /* Network.swift in Sources */,
+				9A40E7B02251888800D22886 /* NetworkError.swift in Sources */,
+				9A40E7BD2251F13700D22886 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
