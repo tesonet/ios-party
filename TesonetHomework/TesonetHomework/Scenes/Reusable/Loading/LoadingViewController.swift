@@ -5,26 +5,22 @@ import UIKit
 class LoadingViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private(set) weak var indicatorImageView: UIImageView!
-    @IBOutlet private(set) weak var titleLabel: UILabel!
+    @IBOutlet private(set) weak var stateLabel: UILabel!
     
     // MARK: - Variables
-    private var titleText: String?
+    private var state: String?
 
     // MARK: - Methods -
-    class func present(in viewController: UIViewController, withTitle title: String? = nil) -> LoadingViewController {
-        let loadingViewController = LoadingViewController()
-        loadingViewController.modalPresentationStyle = .overFullScreen
-        loadingViewController.modalTransitionStyle = .crossDissolve
-        loadingViewController.titleText = title
-        viewController.present(
-            loadingViewController,
-            animated: true)
-        return loadingViewController
+    convenience init(state: String? = nil) {
+        self.init()
+        modalPresentationStyle = .overFullScreen
+        modalTransitionStyle = .crossDissolve
+        self.state = state
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateTitle(titleText)
+        updateState(state)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,8 +29,12 @@ class LoadingViewController: UIViewController {
     }
 
     // MARK: - Populate
-    func populateTitle(_ title: String?) {
-        titleText = title
-        titleLabel.text = titleText
+    func updateState(_ state: String?) {
+        guard isViewLoaded else {
+            return
+        }
+        
+        self.state = state
+        stateLabel.text = state
     }
 }

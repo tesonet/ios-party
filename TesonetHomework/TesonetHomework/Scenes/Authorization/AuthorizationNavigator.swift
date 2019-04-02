@@ -3,7 +3,8 @@
 import UIKit
 import Domain
 
-protocol AuthorizationNavigator {
+protocol AuthorizationNavigator: Navigatable {
+    func navigateToLogin()
     func navigateToServerList()
 }
 
@@ -16,7 +17,17 @@ class DefaultAuthorizationNavigator: AuthorizationNavigator {
         self.useCaseProvider = useCaseProvider
     }
     
+    func navigateToLogin() {
+        let viewModel = LoginViewModel(with: useCaseProvider.makeAuthorizationUseCase())
+        let viewController = LoginViewController.initialiaze(with: viewModel)
+        rootNavigationController.isNavigationBarHidden = true
+        rootNavigationController.setViewControllers(
+            [viewController],
+            animated: false)
+    }
+    
     func navigateToServerList() {
-        
+        let navigator = Application.shared.serversNavigator
+        navigator.navigateToServerList(animated: false)
     }
 }

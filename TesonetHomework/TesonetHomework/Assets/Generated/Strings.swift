@@ -49,6 +49,13 @@ internal enum L10n {
       internal static let username = L10n.tr("Localizable", "Login.Placeholder.username")
     }
   }
+
+  internal enum ServerList {
+    /// Fetching the list...
+    internal static let loading = L10n.tr("Localizable", "ServerList.loading")
+    /// 
+    internal static let title = L10n.tr("Localizable", "ServerList.title")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

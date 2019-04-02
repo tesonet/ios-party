@@ -3,7 +3,7 @@
 import Foundation
 import Domain
 
-protocol RootNavigator {
+protocol RootNavigator: Navigatable {
     func navigateToLogin()
 }
 
@@ -20,24 +20,17 @@ class DefaultRootNavigator: RootNavigator {
         guard let window = UIApplication.shared.keyWindow else {
             fatalError("`UIApplication.shared.keyWindow` must be configured")
         }
-        guard Thread.isMainThread else {
-            DispatchQueue.main.async {
-                self.navigateToLogin()
-            }
-            return
-        }
         
-        let viewModel = LoginViewModel(with: useCaseProvider.makeAuthorizationUseCase())
-        let viewController = LoginViewController.initialiaze(with: viewModel)
-        if window.rootViewController == nil {
-            window.rootViewController = viewController
+        let navigator = Application.shared.authorizationNavigator
+        if rootNavigationController.viewControllers.isEmpty {
+            navigator.navigateToLogin()
         } else {
             UIView.transition(
                 with: window,
                 duration: 0.3,
                 options: .transitionFlipFromLeft,
                 animations: {
-                    window.rootViewController = viewController
+                    navigator.navigateToLogin()
                 })
         }
     }

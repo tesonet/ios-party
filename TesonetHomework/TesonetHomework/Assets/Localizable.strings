@@ -14,3 +14,7 @@
 "Login.Error.unauthorized" = "Wrong credentials";
 "Login.Error.unacceptableResponse" = "Something went wrong. Please try again.";
 "Login.loading" = "";
+
+// MARK: - Server List
+"ServerList.title" = "";
+"ServerList.loading" = "Fetching the list...";

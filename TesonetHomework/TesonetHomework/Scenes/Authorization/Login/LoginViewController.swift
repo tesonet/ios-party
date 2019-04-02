@@ -19,7 +19,9 @@ class LoginViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var input: LoginViewModel.Input!
     private var output: LoginViewModel.Output!
-    private var loadingViewController: LoadingViewController?
+    private lazy var loadingViewController: LoadingViewController = {
+        return LoadingViewController(state: L10n.Login.loading)
+    }()
     
     // MARK: - Methods -
     class func initialiaze(with viewModel: LoginViewModel) -> LoginViewController {
@@ -65,6 +67,9 @@ class LoginViewController: UIViewController {
     }
     
     private func setupUsernameTextField() {
+        #if DEBUG
+        usernameTextField.text = "tesonet"
+        #endif
         usernameTextField.placeholder = L10n.Login.Placeholder.username
         usernameTextField.rx
             .controlEvent(.editingDidEndOnExit)
@@ -76,6 +81,9 @@ class LoginViewController: UIViewController {
     }
 
     private func setupPasswordTextField() {
+        #if DEBUG
+        passwordTextField.text = "partyanimal"
+        #endif
         passwordTextField.placeholder = L10n.Login.Placeholder.password
         passwordTextField.rx
             .controlEvent(.editingDidEndOnExit)
@@ -84,7 +92,6 @@ class LoginViewController: UIViewController {
                 self.submitLogin()
             }
             .disposed(by: disposeBag)
-
     }
 
     private func setupLoginButton() {
@@ -132,11 +139,10 @@ class LoginViewController: UIViewController {
     // MARK: - Helpers
     private func updateLoadingState(_ isLoading: Bool) {
         guard isLoading else {
-            hideLoading()
             return
         }
         
-        showLoading()
+        showLoading(animated: true)
     }
     
     private func handleError(_ error: Error) {
@@ -156,7 +162,6 @@ class LoginViewController: UIViewController {
     }
     
     private func showError(message: String) {
-        hideLoading()
         let alertController = UIAlertController(
             title: L10n.Common.Error.title,
             message: message,
@@ -166,9 +171,11 @@ class LoginViewController: UIViewController {
                 title: L10n.Common.Button.ok,
                 style: .default,
                 handler: nil))
-        present(
-            alertController,
-            animated: true)
+        hideLoading(animated: false) { [weak self] in
+            self?.navigationController?.present(
+                alertController,
+                animated: true)
+        }
     }
     
     private func submitLogin() {
@@ -189,14 +196,21 @@ class LoginViewController: UIViewController {
         self.login.onNext(credentials)
     }
     
-    private func showLoading() {
-        loadingViewController?.dismiss(animated: true)
-        loadingViewController = LoadingViewController.present(
-            in: self,
-            withTitle: L10n.Login.loading)
+    private func showLoading(animated: Bool) {
+        loadingViewController.updateState(L10n.Login.loading)
+        guard !loadingViewController.isBeingPresented else {
+            return
+        }
+        
+        navigationController?.present(
+            loadingViewController,
+            animated: animated)
     }
     
-    private func hideLoading() {
-        loadingViewController?.dismiss(animated: true)
+    private func hideLoading(animated: Bool,
+                             completion: (() -> Void)? = nil) {
+        loadingViewController.dismiss(
+            animated: animated,
+            completion: completion)
     }
 }
