@@ -23,6 +23,7 @@ internal enum Asset {
   internal static let icoLogout = ImageAsset(name: "ico-logout")
   internal static let icoSortLight = ImageAsset(name: "ico-sort-light")
   internal static let icoUsername = ImageAsset(name: "ico-username")
+  internal static let loader = ImageAsset(name: "loader")
   internal static let logoDark = ImageAsset(name: "logo-dark")
   internal static let logoWhite = ImageAsset(name: "logo-white")
 }

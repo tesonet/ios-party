@@ -77,6 +77,9 @@
 		9A40E84A225387A000D22886 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E83D225387A000D22886 /* Roboto-Thin.ttf */; };
 		9A40E84B225387A000D22886 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E83E225387A000D22886 /* Roboto-Black.ttf */; };
 		9A40E84F22538F1100D22886 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E84E22538F1100D22886 /* PrimaryTextField.swift */; };
+		9A40E85622539A6C00D22886 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E85422539A6C00D22886 /* LoadingViewController.swift */; };
+		9A40E85722539A6C00D22886 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E85522539A6C00D22886 /* LoadingViewController.xib */; };
+		9A40E85922539EEE00D22886 /* UIView+RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E85822539EED00D22886 /* UIView+RotationAnimation.swift */; };
 		D4F95B91E15288AE9487B18D /* Pods_DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7512D31384C395D14505F5 /* Pods_DataPersistant.framework */; };
 		DA8C9AE110D327D9E809AF3E /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD29CE3AD3A897CE92F996 /* Pods_NetworkPlatform.framework */; };
 		E050C7CF3BC6B250C26D4481 /* Pods_TesonetHomework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69977654FFF52807D4D1DC8F /* Pods_TesonetHomework.framework */; };
@@ -201,6 +204,9 @@
 		9A40E83D225387A000D22886 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		9A40E83E225387A000D22886 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		9A40E84E22538F1100D22886 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
+		9A40E85422539A6C00D22886 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		9A40E85522539A6C00D22886 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		9A40E85822539EED00D22886 /* UIView+RotationAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RotationAnimation.swift"; sourceTree = "<group>"; };
 		A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6118DD9176BC0B7C5DDCB8 /* Pods-TesonetHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework/Pods-TesonetHomework.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F555E9064EEF01666B9D9 /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -440,6 +446,7 @@
 		9A40E799225182D300D22886 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9A40E85022539A2E00D22886 /* Reusable */,
 				9A40E79A225182DC00D22886 /* Authorization */,
 			);
 			path = Scenes;
@@ -577,10 +584,11 @@
 		9A40E8112252BDDA00D22886 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9A40E8122252BDE700D22886 /* Observable+Mapping.swift */,
-				9A40E8222252CE7000D22886 /* UITextField+Shorthands.swift */,
 				9A40E8282253766300D22886 /* Keychain+Bundle.swift */,
 				9A40E82A225376D500D22886 /* Login+Storage.swift */,
+				9A40E8122252BDE700D22886 /* Observable+Mapping.swift */,
+				9A40E8222252CE7000D22886 /* UITextField+Shorthands.swift */,
+				9A40E85822539EED00D22886 /* UIView+RotationAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -647,6 +655,23 @@
 				9A40E84E22538F1100D22886 /* PrimaryTextField.swift */,
 			);
 			path = PrimaryTextField;
+			sourceTree = "<group>";
+		};
+		9A40E85022539A2E00D22886 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E85322539A4800D22886 /* Loading */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		9A40E85322539A4800D22886 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E85422539A6C00D22886 /* LoadingViewController.swift */,
+				9A40E85522539A6C00D22886 /* LoadingViewController.xib */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -821,6 +846,7 @@
 				9A40E84B225387A000D22886 /* Roboto-Black.ttf in Resources */,
 				9A40E848225387A000D22886 /* Roboto-BlackItalic.ttf in Resources */,
 				9A40E841225387A000D22886 /* Roboto-Regular.ttf in Resources */,
+				9A40E85722539A6C00D22886 /* LoadingViewController.xib in Resources */,
 				9A40E8262252D7EF00D22886 /* Localizable.strings in Resources */,
 				9A40E840225387A000D22886 /* Roboto-Light.ttf in Resources */,
 				9A40E842225387A000D22886 /* Roboto-MediumItalic.ttf in Resources */,
@@ -1040,6 +1066,7 @@
 				9A40E79F2251831E00D22886 /* LoginViewController.swift in Sources */,
 				9A40E8102252BD8300D22886 /* ErrorTracker.swift in Sources */,
 				9A40E8252252D15A00D22886 /* RootNavigator.swift in Sources */,
+				9A40E85622539A6C00D22886 /* LoadingViewController.swift in Sources */,
 				9A40E7A32251839D00D22886 /* Strings.swift in Sources */,
 				9A40E8292253766300D22886 /* Keychain+Bundle.swift in Sources */,
 				9A40E8232252CE7000D22886 /* UITextField+Shorthands.swift in Sources */,
@@ -1047,6 +1074,7 @@
 				9A40E8212252C5DF00D22886 /* WebServiceConstants+Development.swift in Sources */,
 				9A40E8062252BADA00D22886 /* CommonConstants.swift in Sources */,
 				9A40E80D2252BCCB00D22886 /* ViewModelType.swift in Sources */,
+				9A40E85922539EEE00D22886 /* UIView+RotationAnimation.swift in Sources */,
 				9A40E7A42251839D00D22886 /* Assets.swift in Sources */,
 				9A40E8002252B83100D22886 /* UIFont+Constants.swift in Sources */,
 				9A40E73A225175B900D22886 /* AppDelegate.swift in Sources */,

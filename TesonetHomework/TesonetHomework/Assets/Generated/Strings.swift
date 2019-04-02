@@ -26,6 +26,8 @@ internal enum L10n {
   }
 
   internal enum Login {
+    /// 
+    internal static let loading = L10n.tr("Localizable", "Login.loading")
     internal enum Button {
       /// Log In
       internal static let login = L10n.tr("Localizable", "Login.Button.login")

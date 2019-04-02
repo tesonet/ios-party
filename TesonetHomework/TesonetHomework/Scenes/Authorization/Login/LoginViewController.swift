@@ -5,9 +5,8 @@ import Domain
 import NetworkPlatform
 import RxSwift
 import RxCocoa
-import NVActivityIndicatorView
 
-class LoginViewController: UIViewController, NVActivityIndicatorViewable {
+class LoginViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private(set) weak var logoImageView: UIImageView!
     @IBOutlet private(set) weak var usernameTextField: UITextField!
@@ -20,6 +19,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     private let disposeBag = DisposeBag()
     private var input: LoginViewModel.Input!
     private var output: LoginViewModel.Output!
+    private var loadingViewController: LoadingViewController?
     
     // MARK: - Methods -
     class func initialiaze(with viewModel: LoginViewModel) -> LoginViewController {
@@ -131,11 +131,12 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
 
     // MARK: - Helpers
     private func updateLoadingState(_ isLoading: Bool) {
-        if isLoading {
-            startAnimating()
-        } else {
-            stopAnimating()
+        guard isLoading else {
+            hideLoading()
+            return
         }
+        
+        showLoading()
     }
     
     private func handleError(_ error: Error) {
@@ -155,6 +156,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     private func showError(message: String) {
+        hideLoading()
         let alertController = UIAlertController(
             title: L10n.Common.Error.title,
             message: message,
@@ -185,5 +187,16 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
             username: usernameTextField.textOrEmpty,
             password: passwordTextField.textOrEmpty)
         self.login.onNext(credentials)
+    }
+    
+    private func showLoading() {
+        loadingViewController?.dismiss(animated: true)
+        loadingViewController = LoadingViewController.present(
+            in: self,
+            withTitle: L10n.Login.loading)
+    }
+    
+    private func hideLoading() {
+        loadingViewController?.dismiss(animated: true)
     }
 }

@@ -13,3 +13,4 @@
 "Login.Error.emptyPassword" = "Password is required";
 "Login.Error.unauthorized" = "Wrong credentials";
 "Login.Error.unacceptableResponse" = "Something went wrong. Please try again.";
+"Login.loading" = "";
