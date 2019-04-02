@@ -9,15 +9,9 @@ import NVActivityIndicatorView
 
 class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     // MARK: - Outlets
-    @IBOutlet private(set) weak var headerLabel: UILabel!
-    @IBOutlet private(set) weak var usernameCaptionLabel: UILabel!
+    @IBOutlet private(set) weak var logoImageView: UIImageView!
     @IBOutlet private(set) weak var usernameTextField: UITextField!
-    @IBOutlet private(set) weak var usernameTextFieldSeparator: UIView!
-    @IBOutlet private(set) weak var usernameTextFieldSeparatorHeightConstraint: NSLayoutConstraint!
-    @IBOutlet private(set) weak var passwordCaptionLabel: UILabel!
     @IBOutlet private(set) weak var passwordTextField: UITextField!
-    @IBOutlet private(set) weak var passwordTextFieldSeparator: UIView!
-    @IBOutlet private(set) weak var passwordTextFieldSeparatorHeightConstraint: NSLayoutConstraint!
     @IBOutlet private(set) weak var loginButton: UIButton!
 
     // MARK: - Variables
@@ -60,31 +54,18 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     // MARK: - Setup
     private func setupUI() {
-        setupHeader()
-        setupUsernameCaption()
+        setupLogo()
         setupUsernameTextField()
-        setupPasswordCaption()
         setupPasswordTextField()
         setupLoginButton()
     }
     
-    private func setupHeader() {
-        headerLabel.font = .header
-        headerLabel.textColor = .header
-        headerLabel.text = L10n.Login.header
-    }
-    
-    private func setupUsernameCaption() {
-        usernameCaptionLabel.font = .caption
-        usernameCaptionLabel.textColor = .caption
-        usernameCaptionLabel.text = L10n.Login.Caption.username
+    private func setupLogo() {
+        logoImageView.image = Asset.logoWhite.image
     }
     
     private func setupUsernameTextField() {
-        usernameTextField.font = .input
-        usernameTextField.textColor = .input
-        usernameTextFieldSeparator.backgroundColor = .inputSeparator
-        usernameTextFieldSeparatorHeightConstraint.constant = Constants.inputSeparatorHeight
+        usernameTextField.placeholder = L10n.Login.Placeholder.username
         usernameTextField.rx
             .controlEvent(.editingDidEndOnExit)
             .bind { [unowned self] (_) in
@@ -94,17 +75,8 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
             .disposed(by: disposeBag)
     }
 
-    private func setupPasswordCaption() {
-        passwordCaptionLabel.font = .caption
-        passwordCaptionLabel.textColor = .caption
-        passwordCaptionLabel.text = L10n.Login.Caption.password
-    }
-
     private func setupPasswordTextField() {
-        passwordTextField.font = .input
-        passwordTextField.textColor = .input
-        passwordTextFieldSeparator.backgroundColor = .inputSeparator
-        passwordTextFieldSeparatorHeightConstraint.constant = Constants.inputSeparatorHeight
+        passwordTextField.placeholder = L10n.Login.Placeholder.password
         passwordTextField.rx
             .controlEvent(.editingDidEndOnExit)
             .bind { [unowned self] (_) in

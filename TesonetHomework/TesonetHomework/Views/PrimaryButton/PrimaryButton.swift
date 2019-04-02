@@ -7,11 +7,9 @@ class PrimaryButton: UIButton {
     override open var isEnabled: Bool {
         didSet {
             if isEnabled {
-                backgroundColor = UIColor.primary
-                imageView?.tintColor = UIColor.secondary
+                backgroundColor = UIColor.Button.background
             } else {
-                backgroundColor = UIColor.primary.withAlphaComponent(Constants.disabledAlpha)
-                imageView?.tintColor = UIColor.secondary.withAlphaComponent(Constants.disabledAlpha)
+                backgroundColor = UIColor.Button.background.withAlphaComponent(Constants.disabledAlpha)
             }
         }
     }
@@ -27,28 +25,16 @@ class PrimaryButton: UIButton {
         setupUI()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateCornerRadius()
-    }
-    
     // MARK: - Setup
     private func setupUI() {
-        backgroundColor = UIColor.primary
+        backgroundColor = UIColor.Button.background
         setTitleColor(
-            UIColor.secondary,
+            UIColor.Button.foreground,
             for: .normal)
         setTitleColor(
-            UIColor.secondary.withAlphaComponent(Constants.disabledAlpha),
+            UIColor.Button.foreground.withAlphaComponent(Constants.disabledAlpha),
             for: .disabled)
-        imageView?.tintColor = UIColor.secondary
-        titleLabel?.font = UIFont.button
-        updateCornerRadius()
-    }
-    
-    // MARK: - Helpers
-    private func updateCornerRadius() {
-        let cornerRadius = bounds.size.height / 2
-        layer.cornerRadius = cornerRadius
+        titleLabel?.font = UIFont.buttonTitle
+        layer.cornerRadius = Constants.cornerRadius
     }
 }

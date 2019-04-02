@@ -6,10 +6,9 @@
 "Common.Button.cancel" = "Cancel";
 
 // MARK: - Login
-"Login.header" = "Login";
-"Login.Caption.username" = "Username";
-"Login.Caption.password" = "Password";
-"Login.Button.login" = "LOGIN";
+"Login.Placeholder.username" = "Username";
+"Login.Placeholder.password" = "Password";
+"Login.Button.login" = "Log In";
 "Login.Error.emptyUsername" = "Username is required";
 "Login.Error.emptyPassword" = "Password is required";
 "Login.Error.unauthorized" = "Wrong credentials";

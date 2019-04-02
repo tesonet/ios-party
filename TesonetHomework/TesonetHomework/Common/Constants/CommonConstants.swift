@@ -3,6 +3,8 @@
 import UIKit
 
 enum Constants {
-    static let disabledAlpha: CGFloat = 0.7
-    static let inputSeparatorHeight: CGFloat = 1
+    static let disabledAlpha: CGFloat = 0.25
+    static let separatorThickness: CGFloat = 1
+    static let cornerRadius: CGFloat = 2.5
+    static let textFieldLeftViewAspectRatio: CGFloat = 0.875
 }

@@ -26,17 +26,9 @@ internal enum L10n {
   }
 
   internal enum Login {
-    /// Login
-    internal static let header = L10n.tr("Localizable", "Login.header")
     internal enum Button {
-      /// LOGIN
+      /// Log In
       internal static let login = L10n.tr("Localizable", "Login.Button.login")
-    }
-    internal enum Caption {
-      /// Password
-      internal static let password = L10n.tr("Localizable", "Login.Caption.password")
-      /// Username
-      internal static let username = L10n.tr("Localizable", "Login.Caption.username")
     }
     internal enum Error {
       /// Password is required
@@ -47,6 +39,12 @@ internal enum L10n {
       internal static let unacceptableResponse = L10n.tr("Localizable", "Login.Error.unacceptableResponse")
       /// Wrong credentials
       internal static let unauthorized = L10n.tr("Localizable", "Login.Error.unauthorized")
+    }
+    internal enum Placeholder {
+      /// Password
+      internal static let password = L10n.tr("Localizable", "Login.Placeholder.password")
+      /// Username
+      internal static let username = L10n.tr("Localizable", "Login.Placeholder.username")
     }
   }
 }
