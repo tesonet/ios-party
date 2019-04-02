@@ -1,7 +1,16 @@
-/* 
-  Localizable.strings
-  
+// Created by Paulius Cesekas on 01/04/2019.
 
-  Created by Paulius Cesekas on 01/04/2019.
-  
-*/
+// MARK: - Common
+"Common.Error.title" = "Error";
+"Common.Button.ok" = "Ok";
+"Common.Button.cancel" = "Cancel";
+
+// MARK: - Login
+"Login.header" = "Login";
+"Login.Caption.username" = "Username";
+"Login.Caption.password" = "Password";
+"Login.Button.login" = "LOGIN";
+"Login.Error.emptyUsername" = "Username is required";
+"Login.Error.emptyPassword" = "Password is required";
+"Login.Error.unauthorized" = "Wrong credentials";
+"Login.Error.unacceptableResponse" = "Something went wrong. Please try again.";

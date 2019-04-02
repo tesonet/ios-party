@@ -8,7 +8,7 @@ final class NetworkProvider {
     private let config: APIConfig
     
     // MARK: - Methods -
-    public init(config: APIConfig) {
+    public init(with config: APIConfig) {
         self.config = config
     }
     

@@ -13,9 +13,7 @@ final class AuthorizationUseCase: Domain.AuthorizationUseCase {
         self.api = api
     }
     
-    func login(withUsername username: String, password: String) -> Observable<Login> {
-        return api.login(
-            withUsername: username,
-            password: password)
+    func login(with credentials: LoginCredentials) -> Observable<Login> {
+        return api.login(with: credentials)
     }
 }

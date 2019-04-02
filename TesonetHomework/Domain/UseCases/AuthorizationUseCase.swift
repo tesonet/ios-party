@@ -4,5 +4,5 @@ import Foundation
 import RxSwift
 
 public protocol AuthorizationUseCase {
-    func login(withUsername username: String, password: String) -> Observable<Login>
+    func login(with credentials: LoginCredentials) -> Observable<Login>
 }

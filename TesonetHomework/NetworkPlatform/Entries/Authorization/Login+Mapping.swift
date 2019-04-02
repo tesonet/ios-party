@@ -9,3 +9,9 @@ extension Login: ImmutableMappable {
             token: try map.value("token"))
     }
 }
+
+extension Login: BaseMappable {
+    public mutating func mapping(map: Map) {
+        token >>> map["token"]
+    }
+}

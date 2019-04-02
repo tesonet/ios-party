@@ -11,6 +11,44 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
+
+  internal enum Common {
+    internal enum Button {
+      /// Cancel
+      internal static let cancel = L10n.tr("Localizable", "Common.Button.cancel")
+      /// Ok
+      internal static let ok = L10n.tr("Localizable", "Common.Button.ok")
+    }
+    internal enum Error {
+      /// Error
+      internal static let title = L10n.tr("Localizable", "Common.Error.title")
+    }
+  }
+
+  internal enum Login {
+    /// Login
+    internal static let header = L10n.tr("Localizable", "Login.header")
+    internal enum Button {
+      /// LOGIN
+      internal static let login = L10n.tr("Localizable", "Login.Button.login")
+    }
+    internal enum Caption {
+      /// Password
+      internal static let password = L10n.tr("Localizable", "Login.Caption.password")
+      /// Username
+      internal static let username = L10n.tr("Localizable", "Login.Caption.username")
+    }
+    internal enum Error {
+      /// Password is required
+      internal static let emptyPassword = L10n.tr("Localizable", "Login.Error.emptyPassword")
+      /// Username is required
+      internal static let emptyUsername = L10n.tr("Localizable", "Login.Error.emptyUsername")
+      /// Something went wrong. Please try again.
+      internal static let unacceptableResponse = L10n.tr("Localizable", "Login.Error.unacceptableResponse")
+      /// Wrong credentials
+      internal static let unauthorized = L10n.tr("Localizable", "Login.Error.unauthorized")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

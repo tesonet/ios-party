@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		67523D3253C7F5945577D790 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */; };
 		9A40E73A225175B900D22886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E739225175B900D22886 /* AppDelegate.swift */; };
-		9A40E73C225175B900D22886 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E73B225175B900D22886 /* ViewController.swift */; };
-		9A40E73F225175B900D22886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E73D225175B900D22886 /* Main.storyboard */; };
 		9A40E741225175BC00D22886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E740225175BC00D22886 /* Assets.xcassets */; };
 		9A40E744225175BC00D22886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E742225175BC00D22886 /* LaunchScreen.storyboard */; };
 		9A40E754225178D100D22886 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A40E752225178D100D22886 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +44,26 @@
 		9A40E7C12251F1DD00D22886 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7C02251F1DD00D22886 /* UseCaseProvider.swift */; };
 		9A40E7C32251F1F000D22886 /* AuthorizationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7C22251F1F000D22886 /* AuthorizationUseCase.swift */; };
 		9A40E7C52251F1FF00D22886 /* PlaygroundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7C42251F1FF00D22886 /* PlaygroundUseCase.swift */; };
+		9A40E7FE2252B81E00D22886 /* UIColor+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7FD2252B81E00D22886 /* UIColor+Constants.swift */; };
+		9A40E8002252B83100D22886 /* UIFont+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E7FF2252B83100D22886 /* UIFont+Constants.swift */; };
+		9A40E8042252BA8900D22886 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8032252BA8900D22886 /* PrimaryButton.swift */; };
+		9A40E8062252BADA00D22886 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8052252BADA00D22886 /* CommonConstants.swift */; };
+		9A40E8082252BC1F00D22886 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8072252BC1F00D22886 /* LoginCredentials.swift */; };
+		9A40E80A2252BC8900D22886 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8092252BC8900D22886 /* LoginViewModel.swift */; };
+		9A40E80D2252BCCB00D22886 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E80C2252BCCB00D22886 /* ViewModelType.swift */; };
+		9A40E8102252BD8300D22886 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E80F2252BD8300D22886 /* ErrorTracker.swift */; };
+		9A40E8132252BDE700D22886 /* Observable+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8122252BDE700D22886 /* Observable+Mapping.swift */; };
+		9A40E8152252BE1300D22886 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8142252BE1300D22886 /* ActivityIndicator.swift */; };
+		9A40E8172252BF2C00D22886 /* AuthorizationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8162252BF2C00D22886 /* AuthorizationNavigator.swift */; };
+		9A40E81A2252BFEC00D22886 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8192252BFEC00D22886 /* Application.swift */; };
+		9A40E81C2252C0F700D22886 /* LoginCredentials+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E81B2252C0F700D22886 /* LoginCredentials+Mapping.swift */; };
+		9A40E81E2252C4E500D22886 /* WebServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E81D2252C4E500D22886 /* WebServiceConstants.swift */; };
+		9A40E8212252C5DF00D22886 /* WebServiceConstants+Development.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8202252C5DF00D22886 /* WebServiceConstants+Development.swift */; };
+		9A40E8232252CE7000D22886 /* UITextField+Shorthands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8222252CE7000D22886 /* UITextField+Shorthands.swift */; };
+		9A40E8252252D15A00D22886 /* RootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8242252D15A00D22886 /* RootNavigator.swift */; };
+		9A40E8262252D7EF00D22886 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E7972251827500D22886 /* Localizable.strings */; };
+		9A40E8292253766300D22886 /* Keychain+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8282253766300D22886 /* Keychain+Bundle.swift */; };
+		9A40E82B225376D500D22886 /* Login+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E82A225376D500D22886 /* Login+Storage.swift */; };
 		D4F95B91E15288AE9487B18D /* Pods_DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7512D31384C395D14505F5 /* Pods_DataPersistant.framework */; };
 		DA8C9AE110D327D9E809AF3E /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD29CE3AD3A897CE92F996 /* Pods_NetworkPlatform.framework */; };
 		E050C7CF3BC6B250C26D4481 /* Pods_TesonetHomework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69977654FFF52807D4D1DC8F /* Pods_TesonetHomework.framework */; };
@@ -99,13 +117,11 @@
 		69977654FFF52807D4D1DC8F /* Pods_TesonetHomework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetHomework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7149B8393A167164907921 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		77440ACED8D971A04B3D3511 /* Pods-NetworkPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.release.xcconfig"; sourceTree = "<group>"; };
-		9A40E736225175B900D22886 /* TesonetHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesonetHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A40E736225175B900D22886 /* TesonetHomework-Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TesonetHomework-Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40E739225175B900D22886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A40E73B225175B900D22886 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9A40E73E225175B900D22886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A40E740225175BC00D22886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A40E743225175BC00D22886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9A40E745225175BC00D22886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A40E745225175BC00D22886 /* TesonetHomework-Development-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TesonetHomework-Development-Info.plist"; sourceTree = "<group>"; };
 		9A40E750225178D100D22886 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40E752225178D100D22886 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		9A40E753225178D100D22886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,7 +137,7 @@
 		9A40E78C22517D5200D22886 /* Server+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Mapping.swift"; sourceTree = "<group>"; };
 		9A40E79022517DDC00D22886 /* AuthorizationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationUseCase.swift; sourceTree = "<group>"; };
 		9A40E79222517E3700D22886 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
-		9A40E7972251827500D22886 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "/Users/cheskapac/Development/tesonet-homework/ios-party/TesonetHomework/TesonetHomework/Assets/Localizable.strings"; sourceTree = "<absolute>"; };
+		9A40E7972251827500D22886 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9A40E79B225182EA00D22886 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		9A40E79E2251831E00D22886 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9A40E7A02251839D00D22886 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -139,6 +155,25 @@
 		9A40E7C02251F1DD00D22886 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		9A40E7C22251F1F000D22886 /* AuthorizationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationUseCase.swift; sourceTree = "<group>"; };
 		9A40E7C42251F1FF00D22886 /* PlaygroundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundUseCase.swift; sourceTree = "<group>"; };
+		9A40E7FD2252B81E00D22886 /* UIColor+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Constants.swift"; sourceTree = "<group>"; };
+		9A40E7FF2252B83100D22886 /* UIFont+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Constants.swift"; sourceTree = "<group>"; };
+		9A40E8032252BA8900D22886 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		9A40E8052252BADA00D22886 /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		9A40E8072252BC1F00D22886 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		9A40E8092252BC8900D22886 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9A40E80C2252BCCB00D22886 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		9A40E80F2252BD8300D22886 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		9A40E8122252BDE700D22886 /* Observable+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Mapping.swift"; sourceTree = "<group>"; };
+		9A40E8142252BE1300D22886 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		9A40E8162252BF2C00D22886 /* AuthorizationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationNavigator.swift; sourceTree = "<group>"; };
+		9A40E8192252BFEC00D22886 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		9A40E81B2252C0F700D22886 /* LoginCredentials+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginCredentials+Mapping.swift"; sourceTree = "<group>"; };
+		9A40E81D2252C4E500D22886 /* WebServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConstants.swift; sourceTree = "<group>"; };
+		9A40E8202252C5DF00D22886 /* WebServiceConstants+Development.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebServiceConstants+Development.swift"; sourceTree = "<group>"; };
+		9A40E8222252CE7000D22886 /* UITextField+Shorthands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Shorthands.swift"; sourceTree = "<group>"; };
+		9A40E8242252D15A00D22886 /* RootNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigator.swift; sourceTree = "<group>"; };
+		9A40E8282253766300D22886 /* Keychain+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+Bundle.swift"; sourceTree = "<group>"; };
+		9A40E82A225376D500D22886 /* Login+Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Storage.swift"; sourceTree = "<group>"; };
 		A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6118DD9176BC0B7C5DDCB8 /* Pods-TesonetHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework/Pods-TesonetHomework.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F555E9064EEF01666B9D9 /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,7 +263,7 @@
 		9A40E737225175B900D22886 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A40E736225175B900D22886 /* TesonetHomework.app */,
+				9A40E736225175B900D22886 /* TesonetHomework-Development.app */,
 				9A40E750225178D100D22886 /* Domain.framework */,
 				9A40E7622251790000D22886 /* NetworkPlatform.framework */,
 				9A40E774225179BA00D22886 /* DataPersistant.framework */,
@@ -239,11 +274,11 @@
 		9A40E738225175B900D22886 /* TesonetHomework */ = {
 			isa = PBXGroup;
 			children = (
-				9A40E799225182D300D22886 /* Scenes */,
+				9A40E8182252BFDF00D22886 /* Application */,
 				9A40E7962251820F00D22886 /* Assets */,
-				9A40E739225175B900D22886 /* AppDelegate.swift */,
-				9A40E73B225175B900D22886 /* ViewController.swift */,
-				9A40E745225175BC00D22886 /* Info.plist */,
+				9A40E7FB2252B7EF00D22886 /* Common */,
+				9A40E799225182D300D22886 /* Scenes */,
+				9A40E8012252BA5B00D22886 /* Views */,
 			);
 			path = TesonetHomework;
 			sourceTree = "<group>";
@@ -295,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				9A40E78222517C5100D22886 /* Login.swift */,
+				9A40E8072252BC1F00D22886 /* LoginCredentials.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -312,6 +348,7 @@
 		9A40E78522517C7B00D22886 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				9A40E81B2252C0F700D22886 /* LoginCredentials+Mapping.swift */,
 				9A40E78622517C8B00D22886 /* Login+Mapping.swift */,
 			);
 			path = Authorization;
@@ -358,7 +395,6 @@
 				9A40E740225175BC00D22886 /* Assets.xcassets */,
 				9A40E742225175BC00D22886 /* LaunchScreen.storyboard */,
 				9A40E7972251827500D22886 /* Localizable.strings */,
-				9A40E73D225175B900D22886 /* Main.storyboard */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -386,6 +422,7 @@
 			children = (
 				9A40E79D2251830D00D22886 /* Login */,
 				9A40E79B225182EA00D22886 /* Authorization.storyboard */,
+				9A40E8162252BF2C00D22886 /* AuthorizationNavigator.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -394,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				9A40E79E2251831E00D22886 /* LoginViewController.swift */,
+				9A40E8092252BC8900D22886 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -452,6 +490,100 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		9A40E7FB2252B7EF00D22886 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E7FC2252B80900D22886 /* Constants */,
+				9A40E8112252BDDA00D22886 /* Extensions */,
+				9A40E80B2252BCB100D22886 /* Protocols */,
+				9A40E80E2252BD6000D22886 /* Utilities */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9A40E7FC2252B80900D22886 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E81F2252C5AE00D22886 /* Webservice */,
+				9A40E8052252BADA00D22886 /* CommonConstants.swift */,
+				9A40E7FD2252B81E00D22886 /* UIColor+Constants.swift */,
+				9A40E7FF2252B83100D22886 /* UIFont+Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9A40E8012252BA5B00D22886 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E8022252BA7D00D22886 /* PrimaryButton */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A40E8022252BA7D00D22886 /* PrimaryButton */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E8032252BA8900D22886 /* PrimaryButton.swift */,
+			);
+			path = PrimaryButton;
+			sourceTree = "<group>";
+		};
+		9A40E80B2252BCB100D22886 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E80C2252BCCB00D22886 /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9A40E80E2252BD6000D22886 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E80F2252BD8300D22886 /* ErrorTracker.swift */,
+				9A40E8142252BE1300D22886 /* ActivityIndicator.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9A40E8112252BDDA00D22886 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E8122252BDE700D22886 /* Observable+Mapping.swift */,
+				9A40E8222252CE7000D22886 /* UITextField+Shorthands.swift */,
+				9A40E8282253766300D22886 /* Keychain+Bundle.swift */,
+				9A40E82A225376D500D22886 /* Login+Storage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9A40E8182252BFDF00D22886 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E82722536FAD00D22886 /* Targets */,
+				9A40E739225175B900D22886 /* AppDelegate.swift */,
+				9A40E8192252BFEC00D22886 /* Application.swift */,
+				9A40E8242252D15A00D22886 /* RootNavigator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9A40E81F2252C5AE00D22886 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E81D2252C4E500D22886 /* WebServiceConstants.swift */,
+				9A40E8202252C5DF00D22886 /* WebServiceConstants+Development.swift */,
+			);
+			path = Webservice;
+			sourceTree = "<group>";
+		};
+		9A40E82722536FAD00D22886 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E745225175BC00D22886 /* TesonetHomework-Development-Info.plist */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -482,9 +614,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9A40E735225175B900D22886 /* TesonetHomework */ = {
+		9A40E735225175B900D22886 /* TesonetHomework-Development */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A40E748225175BC00D22886 /* Build configuration list for PBXNativeTarget "TesonetHomework" */;
+			buildConfigurationList = 9A40E748225175BC00D22886 /* Build configuration list for PBXNativeTarget "TesonetHomework-Development" */;
 			buildPhases = (
 				000849C7BF5F580D390E69A6 /* [CP] Check Pods Manifest.lock */,
 				9A40E795225181F200D22886 /* SwiftGen */,
@@ -502,9 +634,9 @@
 				9A40E7682251790000D22886 /* PBXTargetDependency */,
 				9A40E77A225179BA00D22886 /* PBXTargetDependency */,
 			);
-			name = TesonetHomework;
+			name = "TesonetHomework-Development";
 			productName = TesonetHomework;
-			productReference = 9A40E736225175B900D22886 /* TesonetHomework.app */;
+			productReference = 9A40E736225175B900D22886 /* TesonetHomework-Development.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9A40E74F225178D100D22886 /* Domain */ = {
@@ -603,7 +735,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9A40E735225175B900D22886 /* TesonetHomework */,
+				9A40E735225175B900D22886 /* TesonetHomework-Development */,
 				9A40E74F225178D100D22886 /* Domain */,
 				9A40E7612251790000D22886 /* NetworkPlatform */,
 				9A40E773225179BA00D22886 /* DataPersistant */,
@@ -616,10 +748,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A40E8262252D7EF00D22886 /* Localizable.strings in Resources */,
 				9A40E79C225182EA00D22886 /* Authorization.storyboard in Resources */,
 				9A40E744225175BC00D22886 /* LaunchScreen.storyboard in Resources */,
 				9A40E741225175BC00D22886 /* Assets.xcassets in Resources */,
-				9A40E73F225175B900D22886 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,12 +952,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A40E8042252BA8900D22886 /* PrimaryButton.swift in Sources */,
+				9A40E8152252BE1300D22886 /* ActivityIndicator.swift in Sources */,
+				9A40E81A2252BFEC00D22886 /* Application.swift in Sources */,
 				9A40E7A52251839D00D22886 /* Storyboards.swift in Sources */,
+				9A40E81E2252C4E500D22886 /* WebServiceConstants.swift in Sources */,
+				9A40E82B225376D500D22886 /* Login+Storage.swift in Sources */,
+				9A40E8172252BF2C00D22886 /* AuthorizationNavigator.swift in Sources */,
+				9A40E80A2252BC8900D22886 /* LoginViewModel.swift in Sources */,
 				9A40E79F2251831E00D22886 /* LoginViewController.swift in Sources */,
-				9A40E73C225175B900D22886 /* ViewController.swift in Sources */,
+				9A40E8102252BD8300D22886 /* ErrorTracker.swift in Sources */,
+				9A40E8252252D15A00D22886 /* RootNavigator.swift in Sources */,
 				9A40E7A32251839D00D22886 /* Strings.swift in Sources */,
+				9A40E8292253766300D22886 /* Keychain+Bundle.swift in Sources */,
+				9A40E8232252CE7000D22886 /* UITextField+Shorthands.swift in Sources */,
+				9A40E7FE2252B81E00D22886 /* UIColor+Constants.swift in Sources */,
+				9A40E8212252C5DF00D22886 /* WebServiceConstants+Development.swift in Sources */,
+				9A40E8062252BADA00D22886 /* CommonConstants.swift in Sources */,
+				9A40E80D2252BCCB00D22886 /* ViewModelType.swift in Sources */,
 				9A40E7A42251839D00D22886 /* Assets.swift in Sources */,
+				9A40E8002252B83100D22886 /* UIFont+Constants.swift in Sources */,
 				9A40E73A225175B900D22886 /* AppDelegate.swift in Sources */,
+				9A40E8132252BDE700D22886 /* Observable+Mapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +981,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A40E8082252BC1F00D22886 /* LoginCredentials.swift in Sources */,
 				9A40E7A72251854B00D22886 /* PlaygroundUseCase.swift in Sources */,
 				9A40E79322517E3700D22886 /* UseCaseProvider.swift in Sources */,
 				9A40E79122517DDC00D22886 /* AuthorizationUseCase.swift in Sources */,
@@ -850,6 +999,7 @@
 				9A40E7BA2251D8E600D22886 /* PlaygroundAPI.swift in Sources */,
 				9A40E7C32251F1F000D22886 /* AuthorizationUseCase.swift in Sources */,
 				9A40E7C12251F1DD00D22886 /* UseCaseProvider.swift in Sources */,
+				9A40E81C2252C0F700D22886 /* LoginCredentials+Mapping.swift in Sources */,
 				9A40E7B322518F4100D22886 /* Networking.swift in Sources */,
 				9A40E7C52251F1FF00D22886 /* PlaygroundUseCase.swift in Sources */,
 				9A40E78D22517D5200D22886 /* Server+Mapping.swift in Sources */,
@@ -889,14 +1039,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A40E73D225175B900D22886 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A40E73E225175B900D22886 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9A40E742225175BC00D22886 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1032,7 +1174,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9NALPA32S;
-				INFOPLIST_FILE = TesonetHomework/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TesonetHomework/Application/Targets/TesonetHomework-Development-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1052,7 +1194,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9NALPA32S;
-				INFOPLIST_FILE = TesonetHomework/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TesonetHomework/Application/Targets/TesonetHomework-Development-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1256,7 +1398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A40E748225175BC00D22886 /* Build configuration list for PBXNativeTarget "TesonetHomework" */ = {
+		9A40E748225175BC00D22886 /* Build configuration list for PBXNativeTarget "TesonetHomework-Development" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A40E749225175BC00D22886 /* Debug */,

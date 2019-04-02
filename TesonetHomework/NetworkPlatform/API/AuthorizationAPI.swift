@@ -11,11 +11,11 @@ class AuthorizationAPI {
         self.network = network
     }
     
-    public func login(withUsername ussername: String, password: String) -> Observable<Login> {
+    public func login(with credentials: LoginCredentials) -> Observable<Login> {
         let path = "v1/tokens"
         return network.postItem(
             path,
-            parameters: nil,
+            parameters: credentials.toJSON(),
             headers: nil)
     }
 }
