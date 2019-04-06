@@ -16,12 +16,108 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="sDK-85-AXC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-4r-qAj">
+                                <rect key="frame" x="64.5" y="135" width="246" height="64"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-KJ-gM1">
+                                <rect key="frame" x="20" y="252.5" width="335" height="182"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIb-wl-ti4" customClass="RoundedView" customModule="Mobile_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-xQ-EWj">
+                                                <rect key="frame" x="20" y="0.0" width="295" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-username" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-54-W1X">
+                                                        <rect key="frame" x="0.0" y="15" width="18" height="20"/>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-hw-lZa">
+                                                        <rect key="frame" x="32" y="0.0" width="263" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="UDC-VK-xXE"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="oG1-xQ-EWj" secondAttribute="trailing" constant="20" id="GR2-OS-ugZ"/>
+                                            <constraint firstItem="oG1-xQ-EWj" firstAttribute="leading" secondItem="SIb-wl-ti4" secondAttribute="leading" constant="20" id="TqN-Oy-SGL"/>
+                                            <constraint firstAttribute="height" constant="50" id="eBj-u9-5Bz"/>
+                                            <constraint firstItem="oG1-xQ-EWj" firstAttribute="centerY" secondItem="SIb-wl-ti4" secondAttribute="centerY" id="r0c-bf-TaP"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGr-a0-PTj" customClass="RoundedView" customModule="Mobile_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="335" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="GMh-2q-LSR">
+                                                <rect key="frame" x="20" y="0.0" width="295" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-lock" translatesAutoresizingMaskIntoConstraints="NO" id="AoF-WI-6RM">
+                                                        <rect key="frame" x="0.0" y="15" width="16" height="20"/>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-ff-C1X">
+                                                        <rect key="frame" x="30" y="0.0" width="265" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="gjX-VD-MRp"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="GMh-2q-LSR" firstAttribute="centerY" secondItem="HGr-a0-PTj" secondAttribute="centerY" id="H9r-Gl-idL"/>
+                                            <constraint firstItem="GMh-2q-LSR" firstAttribute="leading" secondItem="HGr-a0-PTj" secondAttribute="leading" constant="20" id="nUZ-l0-6Uk"/>
+                                            <constraint firstAttribute="trailing" secondItem="GMh-2q-LSR" secondAttribute="trailing" constant="20" id="vQN-ml-JFb"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4d-ID-bdu" customClass="LoadingButton" customModule="Mobile_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="132" width="335" height="50"/>
+                                        <color key="backgroundColor" red="0.66666666666666663" green="0.82352941176470584" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Log In"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sDK-85-AXC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9oR-1W-eTI"/>
+                            <constraint firstItem="fBV-4r-qAj" firstAttribute="centerX" secondItem="sDK-85-AXC" secondAttribute="centerX" id="DJi-FZ-j4Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OGy-KJ-gM1" secondAttribute="trailing" constant="20" id="DlZ-5u-pZh"/>
+                            <constraint firstAttribute="bottom" secondItem="sDK-85-AXC" secondAttribute="bottom" id="G3x-tW-vES"/>
+                            <constraint firstItem="OGy-KJ-gM1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fBV-4r-qAj" secondAttribute="bottom" constant="20" id="Pyf-7c-1vH"/>
+                            <constraint firstItem="OGy-KJ-gM1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SL9-mv-gMz"/>
+                            <constraint firstItem="sDK-85-AXC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="X6H-Q3-QES"/>
+                            <constraint firstItem="OGy-KJ-gM1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="k6S-8d-DN5"/>
+                            <constraint firstItem="sDK-85-AXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pCF-6I-NMb"/>
+                            <constraint firstItem="fBV-4r-qAj" firstAttribute="centerY" secondItem="sDK-85-AXC" secondAttribute="centerY" multiplier="0.5" priority="650" id="qpE-a3-SJQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="1920" height="1080"/>
+        <image name="ico-lock" width="16" height="20"/>
+        <image name="ico-username" width="18" height="20"/>
+        <image name="logo-white" width="246" height="64"/>
+    </resources>
 </document>

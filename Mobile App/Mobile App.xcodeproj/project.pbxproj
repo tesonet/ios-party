@@ -23,6 +23,8 @@
 		D0B5DBCD22589654005C52DB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBCC22589654005C52DB /* Server.swift */; };
 		D0B5DBD0225898A1005C52DB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBCF225898A1005C52DB /* LoginService.swift */; };
 		D0B5DBD222589950005C52DB /* HeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBD122589950005C52DB /* HeadersAPI.swift */; };
+		D0B5DBD92258A012005C52DB /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBD82258A012005C52DB /* RoundedView.swift */; };
+		D0B5DBDC2258A0A6005C52DB /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBDB2258A0A6005C52DB /* LoadingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D0B5DBCC22589654005C52DB /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		D0B5DBCF225898A1005C52DB /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		D0B5DBD122589950005C52DB /* HeadersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersAPI.swift; sourceTree = "<group>"; };
+		D0B5DBD82258A012005C52DB /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		D0B5DBDB2258A0A6005C52DB /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		D5EAD9358382FF89086BDACD /* Pods-Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile App/Pods-Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 		E46202BB721B50E90E2266C0 /* Pods_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +173,7 @@
 		D0B5DBD422589BB2005C52DB /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D0B5DBD72258A006005C52DB /* Views */,
 				D0B5DBD622589C17005C52DB /* State */,
 				D0B5DBAA2258899E005C52DB /* Login.storyboard */,
 				D0B5DBA82258899E005C52DB /* LoginViewController.swift */,
@@ -188,6 +193,15 @@
 			children = (
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		D0B5DBD72258A006005C52DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0B5DBD82258A012005C52DB /* RoundedView.swift */,
+				D0B5DBDB2258A0A6005C52DB /* LoadingButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +343,8 @@
 				D0B5DBC722589526005C52DB /* AuthorizationAPI.swift in Sources */,
 				D0B5DBD222589950005C52DB /* HeadersAPI.swift in Sources */,
 				D0B5DBC12258918F005C52DB /* MoyaDefaultProvider.swift in Sources */,
+				D0B5DBD92258A012005C52DB /* RoundedView.swift in Sources */,
+				D0B5DBDC2258A0A6005C52DB /* LoadingButton.swift in Sources */,
 				D0B5DBD0225898A1005C52DB /* LoginService.swift in Sources */,
 				D0B5DBCB225895A3005C52DB /* Auth.swift in Sources */,
 				D0B5DBC5225892BB005C52DB /* API.swift in Sources */,
