@@ -8,23 +8,28 @@
 
 import UIKit
 
-class ServersViewController: UIViewController {
-
+final class ServersViewController: UIViewController {
+    
+    @IBOutlet private var logOutButton: UIButton!
+    @IBOutlet private var tableView: UITableView!
+    
+    private lazy var loadingVC: UIViewController = ServersLoadingViewController.createFrom(storyboard: .servers)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
 
-        // Do any additional setup after loading the view.
+    private func showLoading() {
+        addChild(loadingVC)
+        view.addSubview(loadingVC.view)
+        loadingVC.didMove(toParent: self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func hideLoading() {
+        loadingVC.willMove(toParent: nil)
+        loadingVC.removeFromParent()
+        loadingVC.view.removeFromSuperview()
     }
-    */
-
+    
 }

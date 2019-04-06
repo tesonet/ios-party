@@ -35,6 +35,10 @@
 		D0B5DBED2258AD9F005C52DB /* Servers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */; };
 		D0B5DBEF2258ADD8005C52DB /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBEE2258ADD8005C52DB /* StoryboardNames.swift */; };
 		D0B5DBF12258AEE3005C52DB /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBF02258AEE3005C52DB /* UIViewController+Keyboard.swift */; };
+		D0B5DBF32258BC69005C52DB /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBF22258BC69005C52DB /* UIViewController+Child.swift */; };
+		D0B5DBF62258D03E005C52DB /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBF52258D03E005C52DB /* ShadowView.swift */; };
+		D0B5DBF92258D0AE005C52DB /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBF82258D0AE005C52DB /* ServerTableViewCell.swift */; };
+		D0B5DBFC2258D390005C52DB /* ServersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBFB2258D390005C52DB /* ServersState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +72,10 @@
 		D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Servers.storyboard; sourceTree = "<group>"; };
 		D0B5DBEE2258ADD8005C52DB /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		D0B5DBF02258AEE3005C52DB /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		D0B5DBF22258BC69005C52DB /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
+		D0B5DBF52258D03E005C52DB /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		D0B5DBF82258D0AE005C52DB /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
+		D0B5DBFB2258D390005C52DB /* ServersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersState.swift; sourceTree = "<group>"; };
 		D5EAD9358382FF89086BDACD /* Pods-Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile App/Pods-Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 		E46202BB721B50E90E2266C0 /* Pods_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -172,6 +180,7 @@
 				D0B5DBE22258A98D005C52DB /* NSObject+Rx.swift */,
 				D0B5DBE62258AC9C005C52DB /* NavigationHelpers.swift */,
 				D0B5DBF02258AEE3005C52DB /* UIViewController+Keyboard.swift */,
+				D0B5DBF22258BC69005C52DB /* UIViewController+Child.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -210,6 +219,9 @@
 		D0B5DBD522589BC1005C52DB /* Servers */ = {
 			isa = PBXGroup;
 			children = (
+				D0B5DBFA2258D362005C52DB /* State */,
+				D0B5DBF72258D09A005C52DB /* Cells */,
+				D0B5DBF42258D02E005C52DB /* Views */,
 				D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */,
 				D0B5DBE82258AD7E005C52DB /* ServersLoadingViewController.swift */,
 				D0B5DBEA2258AD92005C52DB /* ServersViewController.swift */,
@@ -232,6 +244,30 @@
 				D0B5DBDB2258A0A6005C52DB /* LoadingButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D0B5DBF42258D02E005C52DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0B5DBF52258D03E005C52DB /* ShadowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0B5DBF72258D09A005C52DB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D0B5DBF82258D0AE005C52DB /* ServerTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D0B5DBFA2258D362005C52DB /* State */ = {
+			isa = PBXGroup;
+			children = (
+				D0B5DBFB2258D390005C52DB /* ServersState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +407,8 @@
 				D0B5DBCD22589654005C52DB /* Server.swift in Sources */,
 				D0B5DBA92258899E005C52DB /* LoginViewController.swift in Sources */,
 				D0B5DBA72258899E005C52DB /* AppDelegate.swift in Sources */,
+				D0B5DBFC2258D390005C52DB /* ServersState.swift in Sources */,
+				D0B5DBF92258D0AE005C52DB /* ServerTableViewCell.swift in Sources */,
 				D0B5DBEB2258AD92005C52DB /* ServersViewController.swift in Sources */,
 				D0B5DBC3225891DC005C52DB /* ErrorHandler.swift in Sources */,
 				D0B5DBC722589526005C52DB /* AuthorizationAPI.swift in Sources */,
@@ -378,8 +416,10 @@
 				D0B5DBC12258918F005C52DB /* MoyaDefaultProvider.swift in Sources */,
 				D0B5DBD92258A012005C52DB /* RoundedView.swift in Sources */,
 				D0B5DBE12258A92E005C52DB /* Observable+Rx.swift in Sources */,
+				D0B5DBF32258BC69005C52DB /* UIViewController+Child.swift in Sources */,
 				D0B5DBDC2258A0A6005C52DB /* LoadingButton.swift in Sources */,
 				D0B5DBD0225898A1005C52DB /* LoginService.swift in Sources */,
+				D0B5DBF62258D03E005C52DB /* ShadowView.swift in Sources */,
 				D0B5DBDE2258A2AE005C52DB /* LoginState.swift in Sources */,
 				D0B5DBE72258AC9C005C52DB /* NavigationHelpers.swift in Sources */,
 				D0B5DBE52258AADD005C52DB /* Drive+Rx.swift in Sources */,
