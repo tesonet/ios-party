@@ -15,6 +15,6 @@ enum API {
     enum Headers {}
     
     static var baseURL: URL {
-        return URL(string: " https://playground.tesonet.lt/v1/")!
+        return URL(string: "http://playground.tesonet.lt/v1")!
     }
 }

@@ -44,7 +44,11 @@ struct LoginState {
         switch event {
         case .tappedLogin:
             newState.isFetching = true
+            #if DEBUG
+            newState.command = .login(userName: "tesonet", password: "partyanimal")
+            #else
             newState.command = .login(userName: newState.userName, password: newState.password)
+            #endif
         case .typedUsername(let newText):
             newState.userName = newText
         case .typedPassword(let newText):
