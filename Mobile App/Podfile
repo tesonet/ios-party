@@ -5,6 +5,7 @@ def shared_pods
 	pod 'Moya/RxSwift'
 	pod 'RxCocoa'
 	pod 'RxFeedback'
+	pod 'RealmSwift'
 end
 
 target 'Mobile App' do

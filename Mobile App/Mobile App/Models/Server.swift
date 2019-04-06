@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Server: Codable {
-    let name: String
-    let distance: Int
+final class Server: Object, Codable {
+    @objc dynamic var name: String = ""
+    @objc dynamic var distance: Int = 0
+    
+    override static func primaryKey() -> String {
+        return "name"
+    }
 }

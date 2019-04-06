@@ -65,7 +65,11 @@ final class ServersViewController: UIViewController {
             let loadingAnimation = state
                 .map { $0.isLoading }
                 .drive(onNext: { [unowned self] isLoading in
-                    isLoading ? self.showLoading() : self.hideLoading()
+                    if isLoading {
+                        self.showLoading()
+                    } else {
+                        self.hideLoading()
+                    }
                 })
             
             return Bindings(subscriptions: [loadingAnimation], events: [Signal<E>]())

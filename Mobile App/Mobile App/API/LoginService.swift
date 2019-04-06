@@ -30,6 +30,7 @@ struct LoginService {
     
     static func logOutUser() {
         LoginService.clearToken()
+        ServerRepository.clearServers()
         
         let questionnaireVC = LoginViewController.createFrom(storyboard: .login)
         

@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RealmSwift
 
 final class ServerRepository: NSObject {
     
@@ -25,8 +26,19 @@ final class ServerRepository: NSObject {
             .request()
             .subscribe(onSuccess: { [weak self] items in
                 self?.itemsVar.value = items
+                self?.store(items)
             })
             .disposed(by: rx.disposeBag)
     }
+    
+    private func store(_ servers: [Server]) {
+        guard let realm = try? Realm() else { return }
+        realm.add(servers, update: true)
+    }
 
+    class func clearServers() {
+        guard let realm = try? Realm() else { return }
+        realm.deleteAll()
+    }
+    
 }
