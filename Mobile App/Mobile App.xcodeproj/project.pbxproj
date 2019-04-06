@@ -79,13 +79,53 @@
 			isa = PBXGroup;
 			children = (
 				D0B5DBA62258899E005C52DB /* AppDelegate.swift */,
-				D0B5DBA82258899E005C52DB /* ViewController.swift */,
-				D0B5DBAA2258899E005C52DB /* Main.storyboard */,
+				D0B5DBBA22588DC6005C52DB /* API */,
+				D0B5DBBC22588DE5005C52DB /* Models */,
+				D0B5DBBB22588DD2005C52DB /* Utils */,
+				D0B5DBB922588D11005C52DB /* Scenes */,
+				D0B5DBB822588D07005C52DB /* Resources */,
+			);
+			path = "Mobile App";
+			sourceTree = "<group>";
+		};
+		D0B5DBB822588D07005C52DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				D0B5DBAD2258899F005C52DB /* Assets.xcassets */,
 				D0B5DBAF2258899F005C52DB /* LaunchScreen.storyboard */,
 				D0B5DBB22258899F005C52DB /* Info.plist */,
 			);
-			path = "Mobile App";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0B5DBB922588D11005C52DB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D0B5DBA82258899E005C52DB /* ViewController.swift */,
+				D0B5DBAA2258899E005C52DB /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D0B5DBBA22588DC6005C52DB /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D0B5DBBB22588DD2005C52DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D0B5DBBC22588DE5005C52DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
