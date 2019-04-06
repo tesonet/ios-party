@@ -135,18 +135,9 @@ final class LoginViewController: UIViewController {
     private func showServers() {
         let questionnaireVC = ServersViewController.createFrom(storyboard: StoryboardNames.servers)
         
-        setRootVC {
+        UIApplication.setRootVC {
             UIApplication.topViewController()?.present(questionnaireVC, animated: false, completion: nil)
         }
-    }
-    
-    private func setRootVC(_ animations: @escaping ()->()) {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        
-        UIView.transition(with: window,
-                          duration: 0.5, options: .transitionCrossDissolve,
-                          animations: animations,
-                          completion: nil)
     }
 }
 

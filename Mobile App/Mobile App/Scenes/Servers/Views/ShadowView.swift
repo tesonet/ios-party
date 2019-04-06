@@ -10,6 +10,16 @@ import UIKit
 
 final class ShadowView: UIView {
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()

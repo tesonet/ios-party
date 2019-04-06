@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Servers {
+struct ServersState {
     
     private var isFetching: Bool = true
     private var _servers: [Server] = []
@@ -31,8 +31,8 @@ struct Servers {
     var servers: [Server] {
         return _servers
     }
-    
-    static func reduce(state: LoginState, event: Event) -> LoginState {
+
+    static func reduce(state: ServersState, event: Event) -> ServersState {
         
         var newState = state
         newState.command = nil
@@ -42,6 +42,7 @@ struct Servers {
             newState.command = .logOut
         case .fetchedServers(let servers):
             newState._servers = servers
+            newState.isFetching = false
         }
         
         return newState

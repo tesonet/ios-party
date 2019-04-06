@@ -10,7 +10,7 @@ import Foundation
 
 extension API.Servers {
     
-    struct Login: ModelArrayTargetType, MethodGET {
+    struct GetAll: ModelArrayTargetType, MethodGET {
         typealias T = Server
         var path: String { return "/servers" }
     }

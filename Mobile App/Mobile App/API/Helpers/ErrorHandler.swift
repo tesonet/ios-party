@@ -27,7 +27,7 @@ final class ErrorHandler: PluginType {
         case .success(let response):
             
             if response.statusCode == 401 {
-                //TODO: - Logout
+                LoginService.logOutUser()
             }
             
             guard !(200 ... 299 ~= response.statusCode) else { return }
