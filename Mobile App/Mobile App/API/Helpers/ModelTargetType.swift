@@ -87,6 +87,6 @@ private func RxMoyaProviderRequest<T: TargetType>(_ target: T) -> RxSwift.Single
 extension Moya.TargetType {
     var sampleData: Data { return Data() }
     var validate: Bool { return false }
-    var headers: [String: String]? { return nil }
+    var headers: [String: String]? { return API.Headers.all }
     var baseURL: URL { return API.baseURL }
 }

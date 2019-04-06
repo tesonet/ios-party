@@ -17,6 +17,12 @@
 		D0B5DBC12258918F005C52DB /* MoyaDefaultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC02258918F005C52DB /* MoyaDefaultProvider.swift */; };
 		D0B5DBC3225891DC005C52DB /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC2225891DC005C52DB /* ErrorHandler.swift */; };
 		D0B5DBC5225892BB005C52DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC4225892BB005C52DB /* API.swift */; };
+		D0B5DBC722589526005C52DB /* AuthorizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC622589526005C52DB /* AuthorizationAPI.swift */; };
+		D0B5DBC92258952F005C52DB /* ServersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC82258952F005C52DB /* ServersAPI.swift */; };
+		D0B5DBCB225895A3005C52DB /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBCA225895A3005C52DB /* Auth.swift */; };
+		D0B5DBCD22589654005C52DB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBCC22589654005C52DB /* Server.swift */; };
+		D0B5DBD0225898A1005C52DB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBCF225898A1005C52DB /* LoginService.swift */; };
+		D0B5DBD222589950005C52DB /* HeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBD122589950005C52DB /* HeadersAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		D0B5DBC02258918F005C52DB /* MoyaDefaultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaDefaultProvider.swift; sourceTree = "<group>"; };
 		D0B5DBC2225891DC005C52DB /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		D0B5DBC4225892BB005C52DB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D0B5DBC622589526005C52DB /* AuthorizationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPI.swift; sourceTree = "<group>"; };
+		D0B5DBC82258952F005C52DB /* ServersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersAPI.swift; sourceTree = "<group>"; };
+		D0B5DBCA225895A3005C52DB /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		D0B5DBCC22589654005C52DB /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		D0B5DBCF225898A1005C52DB /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D0B5DBD122589950005C52DB /* HeadersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersAPI.swift; sourceTree = "<group>"; };
 		D5EAD9358382FF89086BDACD /* Pods-Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile App/Pods-Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 		E46202BB721B50E90E2266C0 /* Pods_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +132,10 @@
 			children = (
 				D0B5DBBD22588E55005C52DB /* Helpers */,
 				D0B5DBC4225892BB005C52DB /* API.swift */,
+				D0B5DBC622589526005C52DB /* AuthorizationAPI.swift */,
+				D0B5DBD122589950005C52DB /* HeadersAPI.swift */,
+				D0B5DBC82258952F005C52DB /* ServersAPI.swift */,
+				D0B5DBCF225898A1005C52DB /* LoginService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -134,6 +150,8 @@
 		D0B5DBBC22588DE5005C52DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D0B5DBCA225895A3005C52DB /* Auth.swift */,
+				D0B5DBCC22589654005C52DB /* Server.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,12 +298,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B5DBCD22589654005C52DB /* Server.swift in Sources */,
 				D0B5DBA92258899E005C52DB /* ViewController.swift in Sources */,
 				D0B5DBA72258899E005C52DB /* AppDelegate.swift in Sources */,
 				D0B5DBC3225891DC005C52DB /* ErrorHandler.swift in Sources */,
+				D0B5DBC722589526005C52DB /* AuthorizationAPI.swift in Sources */,
+				D0B5DBD222589950005C52DB /* HeadersAPI.swift in Sources */,
 				D0B5DBC12258918F005C52DB /* MoyaDefaultProvider.swift in Sources */,
+				D0B5DBD0225898A1005C52DB /* LoginService.swift in Sources */,
+				D0B5DBCB225895A3005C52DB /* Auth.swift in Sources */,
 				D0B5DBC5225892BB005C52DB /* API.swift in Sources */,
 				D0B5DBBF22589015005C52DB /* ModelTargetType.swift in Sources */,
+				D0B5DBC92258952F005C52DB /* ServersAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
