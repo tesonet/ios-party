@@ -10,16 +10,11 @@ import UIKit
 
 final class RoundedView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setup()
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
+
     private func setup() {
         layer.cornerRadius = 8
         clipsToBounds = true

@@ -34,6 +34,7 @@
 		D0B5DBEB2258AD92005C52DB /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBEA2258AD92005C52DB /* ServersViewController.swift */; };
 		D0B5DBED2258AD9F005C52DB /* Servers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */; };
 		D0B5DBEF2258ADD8005C52DB /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBEE2258ADD8005C52DB /* StoryboardNames.swift */; };
+		D0B5DBF12258AEE3005C52DB /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBF02258AEE3005C52DB /* UIViewController+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		D0B5DBEA2258AD92005C52DB /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
 		D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Servers.storyboard; sourceTree = "<group>"; };
 		D0B5DBEE2258ADD8005C52DB /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
+		D0B5DBF02258AEE3005C52DB /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		D5EAD9358382FF89086BDACD /* Pods-Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile App/Pods-Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 		E46202BB721B50E90E2266C0 /* Pods_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				D0B5DBE42258AADD005C52DB /* Drive+Rx.swift */,
 				D0B5DBE22258A98D005C52DB /* NSObject+Rx.swift */,
 				D0B5DBE62258AC9C005C52DB /* NavigationHelpers.swift */,
+				D0B5DBF02258AEE3005C52DB /* UIViewController+Keyboard.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B5DBF12258AEE3005C52DB /* UIViewController+Keyboard.swift in Sources */,
 				D0B5DBCD22589654005C52DB /* Server.swift in Sources */,
 				D0B5DBA92258899E005C52DB /* LoginViewController.swift in Sources */,
 				D0B5DBA72258899E005C52DB /* AppDelegate.swift in Sources */,

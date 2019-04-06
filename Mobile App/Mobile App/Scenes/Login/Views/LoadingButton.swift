@@ -14,6 +14,16 @@ class LoadingButton: UIButton {
     
     private var _isLoading: Bool = false
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+    
+    private func setup() {
+        layer.cornerRadius = 8
+        clipsToBounds = true
+    }
+    
     // MARK: Loading
     var isLoading: Bool {
         get { return _isLoading }

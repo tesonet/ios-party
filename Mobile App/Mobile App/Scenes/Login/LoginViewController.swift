@@ -17,9 +17,12 @@ private typealias Feedback = (Driver<LoginState>) -> Signal<E>
 
 final class LoginViewController: UIViewController {
     
+    @IBOutlet private var fieldsStackView: UIStackView!
     @IBOutlet private var userNameField: UITextField!
     @IBOutlet private var passWordField: UITextField!
     @IBOutlet private var loginButton: LoadingButton!
+    
+    @IBOutlet private var centerFieldStackConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +33,28 @@ final class LoginViewController: UIViewController {
             feedback: typedText, tappedLogin, login, showServersFeedback)
             .drive()
             .disposed(by: rx.disposeBag)
+        
+        setupFieldDelegates()
+        view.layoutIfNeeded()
+        setupKeyboard()
+    }
+    
+    private func setupFieldDelegates() {
+        userNameField.delegate = self
+        passWordField.delegate = self
+    }
+    
+    private func setupKeyboard() {
+        dismissKeyboardOnTap()
+        
+        //Support for small screen sizes, like iPhone SE
+        let distanceToBottom = view.frame.size.height - (fieldsStackView.frame.size.height + fieldsStackView.frame.origin.y)
+        adjustCenter(constrain: centerFieldStackConstraint, distanceToBottom: distanceToBottom)
     }
     
     private var typedText: Feedback {
         return bind(self) { `self`, state in
-            
+        
             let typedUsername = self.userNameField
                 .rx.text
                 .filterNil()
@@ -127,5 +147,15 @@ final class LoginViewController: UIViewController {
                           duration: 0.5, options: .transitionCrossDissolve,
                           animations: animations,
                           completion: nil)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameField {
+            passWordField.becomeFirstResponder()
+        }
+        
+        return true
     }
 }

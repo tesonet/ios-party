@@ -42,7 +42,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -71,7 +71,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -99,16 +99,18 @@
                             <constraint firstItem="fBV-4r-qAj" firstAttribute="centerX" secondItem="sDK-85-AXC" secondAttribute="centerX" id="DJi-FZ-j4Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OGy-KJ-gM1" secondAttribute="trailing" constant="20" id="DlZ-5u-pZh"/>
                             <constraint firstAttribute="bottom" secondItem="sDK-85-AXC" secondAttribute="bottom" id="G3x-tW-vES"/>
-                            <constraint firstItem="OGy-KJ-gM1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fBV-4r-qAj" secondAttribute="bottom" constant="20" id="Pyf-7c-1vH"/>
                             <constraint firstItem="OGy-KJ-gM1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SL9-mv-gMz"/>
                             <constraint firstItem="sDK-85-AXC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="X6H-Q3-QES"/>
+                            <constraint firstItem="OGy-KJ-gM1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fBV-4r-qAj" secondAttribute="bottom" constant="24" id="hoB-de-qIe"/>
                             <constraint firstItem="OGy-KJ-gM1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="k6S-8d-DN5"/>
                             <constraint firstItem="sDK-85-AXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pCF-6I-NMb"/>
-                            <constraint firstItem="fBV-4r-qAj" firstAttribute="centerY" secondItem="sDK-85-AXC" secondAttribute="centerY" multiplier="0.5" priority="650" id="qpE-a3-SJQ"/>
+                            <constraint firstItem="fBV-4r-qAj" firstAttribute="centerY" secondItem="sDK-85-AXC" secondAttribute="centerY" multiplier="0.5" priority="499" id="qpE-a3-SJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="centerFieldStackConstraint" destination="k6S-8d-DN5" id="Dqg-Im-vJj"/>
+                        <outlet property="fieldsStackView" destination="OGy-KJ-gM1" id="EFz-FT-zbv"/>
                         <outlet property="loginButton" destination="s4d-ID-bdu" id="QU7-A1-GcY"/>
                         <outlet property="passWordField" destination="Zdn-ff-C1X" id="Ej1-mZ-PX1"/>
                         <outlet property="userNameField" destination="aJq-hw-lZa" id="Fbn-SW-CoP"/>
