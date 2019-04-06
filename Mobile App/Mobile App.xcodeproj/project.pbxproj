@@ -25,6 +25,15 @@
 		D0B5DBD222589950005C52DB /* HeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBD122589950005C52DB /* HeadersAPI.swift */; };
 		D0B5DBD92258A012005C52DB /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBD82258A012005C52DB /* RoundedView.swift */; };
 		D0B5DBDC2258A0A6005C52DB /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBDB2258A0A6005C52DB /* LoadingButton.swift */; };
+		D0B5DBDE2258A2AE005C52DB /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBDD2258A2AE005C52DB /* LoginState.swift */; };
+		D0B5DBE12258A92E005C52DB /* Observable+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBE02258A92E005C52DB /* Observable+Rx.swift */; };
+		D0B5DBE32258A98D005C52DB /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBE22258A98D005C52DB /* NSObject+Rx.swift */; };
+		D0B5DBE52258AADD005C52DB /* Drive+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBE42258AADD005C52DB /* Drive+Rx.swift */; };
+		D0B5DBE72258AC9C005C52DB /* NavigationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBE62258AC9C005C52DB /* NavigationHelpers.swift */; };
+		D0B5DBE92258AD7E005C52DB /* ServersLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBE82258AD7E005C52DB /* ServersLoadingViewController.swift */; };
+		D0B5DBEB2258AD92005C52DB /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBEA2258AD92005C52DB /* ServersViewController.swift */; };
+		D0B5DBED2258AD9F005C52DB /* Servers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */; };
+		D0B5DBEF2258ADD8005C52DB /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBEE2258ADD8005C52DB /* StoryboardNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,15 @@
 		D0B5DBD122589950005C52DB /* HeadersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersAPI.swift; sourceTree = "<group>"; };
 		D0B5DBD82258A012005C52DB /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		D0B5DBDB2258A0A6005C52DB /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		D0B5DBDD2258A2AE005C52DB /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		D0B5DBE02258A92E005C52DB /* Observable+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Rx.swift"; sourceTree = "<group>"; };
+		D0B5DBE22258A98D005C52DB /* NSObject+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		D0B5DBE42258AADD005C52DB /* Drive+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drive+Rx.swift"; sourceTree = "<group>"; };
+		D0B5DBE62258AC9C005C52DB /* NavigationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelpers.swift; sourceTree = "<group>"; };
+		D0B5DBE82258AD7E005C52DB /* ServersLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersLoadingViewController.swift; sourceTree = "<group>"; };
+		D0B5DBEA2258AD92005C52DB /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Servers.storyboard; sourceTree = "<group>"; };
+		D0B5DBEE2258ADD8005C52DB /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		D5EAD9358382FF89086BDACD /* Pods-Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile App/Pods-Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 		E46202BB721B50E90E2266C0 /* Pods_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +165,10 @@
 		D0B5DBBB22588DD2005C52DB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D0B5DBE02258A92E005C52DB /* Observable+Rx.swift */,
+				D0B5DBE42258AADD005C52DB /* Drive+Rx.swift */,
+				D0B5DBE22258A98D005C52DB /* NSObject+Rx.swift */,
+				D0B5DBE62258AC9C005C52DB /* NavigationHelpers.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -156,6 +178,7 @@
 			children = (
 				D0B5DBCA225895A3005C52DB /* Auth.swift */,
 				D0B5DBCC22589654005C52DB /* Server.swift */,
+				D0B5DBEE2258ADD8005C52DB /* StoryboardNames.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +207,9 @@
 		D0B5DBD522589BC1005C52DB /* Servers */ = {
 			isa = PBXGroup;
 			children = (
+				D0B5DBEC2258AD9F005C52DB /* Servers.storyboard */,
+				D0B5DBE82258AD7E005C52DB /* ServersLoadingViewController.swift */,
+				D0B5DBEA2258AD92005C52DB /* ServersViewController.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -191,6 +217,7 @@
 		D0B5DBD622589C17005C52DB /* State */ = {
 			isa = PBXGroup;
 			children = (
+				D0B5DBDD2258A2AE005C52DB /* LoginState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -267,6 +294,7 @@
 				D0B5DBB12258899F005C52DB /* LaunchScreen.storyboard in Resources */,
 				D0B5DBAE2258899F005C52DB /* Assets.xcassets in Resources */,
 				D0B5DBAC2258899E005C52DB /* Login.storyboard in Resources */,
+				D0B5DBED2258AD9F005C52DB /* Servers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,17 +367,25 @@
 				D0B5DBCD22589654005C52DB /* Server.swift in Sources */,
 				D0B5DBA92258899E005C52DB /* LoginViewController.swift in Sources */,
 				D0B5DBA72258899E005C52DB /* AppDelegate.swift in Sources */,
+				D0B5DBEB2258AD92005C52DB /* ServersViewController.swift in Sources */,
 				D0B5DBC3225891DC005C52DB /* ErrorHandler.swift in Sources */,
 				D0B5DBC722589526005C52DB /* AuthorizationAPI.swift in Sources */,
 				D0B5DBD222589950005C52DB /* HeadersAPI.swift in Sources */,
 				D0B5DBC12258918F005C52DB /* MoyaDefaultProvider.swift in Sources */,
 				D0B5DBD92258A012005C52DB /* RoundedView.swift in Sources */,
+				D0B5DBE12258A92E005C52DB /* Observable+Rx.swift in Sources */,
 				D0B5DBDC2258A0A6005C52DB /* LoadingButton.swift in Sources */,
 				D0B5DBD0225898A1005C52DB /* LoginService.swift in Sources */,
+				D0B5DBDE2258A2AE005C52DB /* LoginState.swift in Sources */,
+				D0B5DBE72258AC9C005C52DB /* NavigationHelpers.swift in Sources */,
+				D0B5DBE52258AADD005C52DB /* Drive+Rx.swift in Sources */,
 				D0B5DBCB225895A3005C52DB /* Auth.swift in Sources */,
+				D0B5DBE32258A98D005C52DB /* NSObject+Rx.swift in Sources */,
+				D0B5DBE92258AD7E005C52DB /* ServersLoadingViewController.swift in Sources */,
 				D0B5DBC5225892BB005C52DB /* API.swift in Sources */,
 				D0B5DBBF22589015005C52DB /* ModelTargetType.swift in Sources */,
 				D0B5DBC92258952F005C52DB /* ServersAPI.swift in Sources */,
+				D0B5DBEF2258ADD8005C52DB /* StoryboardNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
