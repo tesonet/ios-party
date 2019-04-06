@@ -13,6 +13,10 @@
 		D0B5DBAC2258899E005C52DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B5DBAA2258899E005C52DB /* Main.storyboard */; };
 		D0B5DBAE2258899F005C52DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B5DBAD2258899F005C52DB /* Assets.xcassets */; };
 		D0B5DBB12258899F005C52DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B5DBAF2258899F005C52DB /* LaunchScreen.storyboard */; };
+		D0B5DBBF22589015005C52DB /* ModelTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBBE22589015005C52DB /* ModelTargetType.swift */; };
+		D0B5DBC12258918F005C52DB /* MoyaDefaultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC02258918F005C52DB /* MoyaDefaultProvider.swift */; };
+		D0B5DBC3225891DC005C52DB /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC2225891DC005C52DB /* ErrorHandler.swift */; };
+		D0B5DBC5225892BB005C52DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5DBC4225892BB005C52DB /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		D0B5DBAD2258899F005C52DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B5DBB02258899F005C52DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0B5DBB22258899F005C52DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B5DBBE22589015005C52DB /* ModelTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTargetType.swift; sourceTree = "<group>"; };
+		D0B5DBC02258918F005C52DB /* MoyaDefaultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaDefaultProvider.swift; sourceTree = "<group>"; };
+		D0B5DBC2225891DC005C52DB /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		D0B5DBC4225892BB005C52DB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D5EAD9358382FF89086BDACD /* Pods-Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile App/Pods-Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 		E46202BB721B50E90E2266C0 /* Pods_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +118,8 @@
 		D0B5DBBA22588DC6005C52DB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D0B5DBBD22588E55005C52DB /* Helpers */,
+				D0B5DBC4225892BB005C52DB /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -126,6 +136,16 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D0B5DBBD22588E55005C52DB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0B5DBBE22589015005C52DB /* ModelTargetType.swift */,
+				D0B5DBC02258918F005C52DB /* MoyaDefaultProvider.swift */,
+				D0B5DBC2225891DC005C52DB /* ErrorHandler.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +282,10 @@
 			files = (
 				D0B5DBA92258899E005C52DB /* ViewController.swift in Sources */,
 				D0B5DBA72258899E005C52DB /* AppDelegate.swift in Sources */,
+				D0B5DBC3225891DC005C52DB /* ErrorHandler.swift in Sources */,
+				D0B5DBC12258918F005C52DB /* MoyaDefaultProvider.swift in Sources */,
+				D0B5DBC5225892BB005C52DB /* API.swift in Sources */,
+				D0B5DBBF22589015005C52DB /* ModelTargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E63GYRG5R9;
-				INFOPLIST_FILE = "Mobile App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Mobile App/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E63GYRG5R9;
-				INFOPLIST_FILE = "Mobile App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Mobile App/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
