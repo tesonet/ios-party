@@ -1,0 +1,12 @@
+platform :ios, '12.0'
+use_frameworks!
+
+def shared_pods	
+	pod 'Moya/RxSwift'
+	pod 'RxCocoa'
+	pod 'RxFeedback'
+end
+
+target 'Mobile App' do
+	shared_pods
+end
