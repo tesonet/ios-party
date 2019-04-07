@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_TesonetHomeworkVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_TesonetHomeworkVersionString[];
+FOUNDATION_EXPORT double Pods_TesonetHomework_DevelopmentVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_TesonetHomework_DevelopmentVersionString[];
 

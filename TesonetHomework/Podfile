@@ -4,7 +4,7 @@ platform :ios, '12.0'
 use_frameworks!
 inhibit_all_warnings!
 
-target 'TesonetHomework' do
+target 'TesonetHomework-Development' do
     pod 'RxSwift', '~> 4.4.2'
     pod 'RxCocoa', '~> 4.4.2'
     pod 'NVActivityIndicatorView', '~> 4.6.1'
@@ -12,6 +12,10 @@ target 'TesonetHomework' do
     pod 'IQKeyboardManager', '~> 6.2.1'
     pod 'SwiftLint', '~> 0.31.0'
     pod 'SwiftGen', '~> 6.1.0'
+    pod 'ObjectMapper', '~> 3.4.2'
+
+    pod 'Alamofire', '~> 4.8.2'
+    pod 'RxAlamofire', '~> 4.4.0'
 end
 
 target 'Domain' do
@@ -19,6 +23,8 @@ target 'Domain' do
 end
 
 target 'NetworkPlatform' do
+    inherit! :search_paths
+
     pod 'RxSwift', '~> 4.4.2'
     pod 'Alamofire', '~> 4.8.2'
     pod 'RxAlamofire', '~> 4.4.0'
@@ -26,5 +32,6 @@ target 'NetworkPlatform' do
 end
 
 target 'DataPersistant' do
+    pod 'RxSwift', '~> 4.4.2'
     pod 'RealmSwift', '~> 3.14.0'
 end
