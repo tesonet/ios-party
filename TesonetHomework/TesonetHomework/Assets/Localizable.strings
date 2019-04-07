@@ -2,6 +2,7 @@
 
 // MARK: - Common
 "Common.Error.title" = "Error";
+"Common.Error.pleaseTryAgain" = "Something went wrong. Please try again.\nPull to reload.";
 "Common.Button.ok" = "Ok";
 "Common.Button.cancel" = "Cancel";
 
@@ -12,9 +13,11 @@
 "Login.Error.emptyUsername" = "Username is required";
 "Login.Error.emptyPassword" = "Password is required";
 "Login.Error.unauthorized" = "Wrong credentials";
-"Login.Error.unacceptableResponse" = "Something went wrong. Please try again.";
 "Login.loading" = "";
 
 // MARK: - Server List
 "ServerList.title" = "";
 "ServerList.loading" = "Fetching the list...";
+"ServerList.Cell.distance" = "%d km";
+"ServerList.Header.name" = "SERVER";
+"ServerList.Header.distance" = "DISTANCE";

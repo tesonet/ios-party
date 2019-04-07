@@ -15,7 +15,7 @@ extension Login {
         keychain[data: "login"] = jsonData
     }
     
-    func remove() {
+    static func remove() {
         let keychain = Keychain.localStorageKeychain
         try? keychain.remove("login")
     }

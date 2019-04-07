@@ -5,6 +5,7 @@ import Domain
 
 protocol RootNavigator: Navigatable {
     func navigateToLogin()
+    func navigateToServerList()
 }
 
 class DefaultRootNavigator: RootNavigator {
@@ -33,5 +34,10 @@ class DefaultRootNavigator: RootNavigator {
                     navigator.navigateToLogin()
                 })
         }
+    }
+    
+    func navigateToServerList() {
+        let navigator = Application.shared.serversNavigator
+        navigator.navigateToServerList(animated: false)
     }
 }

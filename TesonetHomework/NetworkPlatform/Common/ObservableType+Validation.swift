@@ -8,9 +8,9 @@ import ObjectMapper
 import Domain
 
 extension ObservableType where E == DataRequest {
-    func validateJSONResponse() -> Observable<[String: Any]> {
+    func validateJSONResponse() -> Observable<Any> {
         return responseData()
-            .flatMap({  (arguments) -> Observable<[String: Any]>  in
+            .flatMap({  (arguments) -> Observable<Any>  in
                 let (response, data) = arguments
                 if let error = self.validateResponseStatusCode(response.statusCode) {
                     return .error(error)
@@ -20,12 +20,11 @@ extension ObservableType where E == DataRequest {
                 }
                 guard let json = try? JSONSerialization.jsonObject(
                         with: data,
-                        options: []) as Any,
-                    let jsonObject = json as? [String: Any] else {
-                        return .error(NetworkError.unserializableBody)
+                        options: []) as Any else {
+                            return .error(NetworkError.unserializableBody)
                 }
 
-                return .just(jsonObject)
+                return .just(json)
             })
     }
     

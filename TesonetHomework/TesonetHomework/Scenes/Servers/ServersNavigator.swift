@@ -17,11 +17,10 @@ class DefaultServersNavigator: ServersNavigator {
     }
     
     func navigateToServerList(animated: Bool) {
-//        let viewModel = LoginViewModel(with: useCaseProvider.makeAuthorizationUseCase())
-        let viewController = ServerListViewController()//LoginViewController.initialiaze(with: viewModel)
-        rootNavigationController.setNavigationBarHidden(
-            false,
-            animated: animated)
+        let useCase = useCaseProvider.makePlaygroundUseCase()
+        let viewModel = ServerListViewModel(with: useCase)
+        let viewController = ServerListViewController.initialiaze(with: viewModel)
+        rootNavigationController.isNavigationBarHidden = false
         rootNavigationController.setViewControllers(
             [viewController],
             animated: animated)

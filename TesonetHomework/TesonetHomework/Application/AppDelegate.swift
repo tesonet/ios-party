@@ -2,6 +2,7 @@
 
 import UIKit
 import IQKeyboardManager
+import Domain
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,7 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func configureInitialScene() {
-        // TODO: - Should validate for active user session
-        Application.shared.rootNavigator.navigateToLogin()
+        let login = Login.load()
+        if login == nil {
+            Application.shared.rootNavigator.navigateToLogin()
+        } else {
+            Application.shared.rootNavigator.navigateToServerList()
+        }
     }
 }

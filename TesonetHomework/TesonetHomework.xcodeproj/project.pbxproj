@@ -85,6 +85,21 @@
 		9A40E85C2253B93300D22886 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E85B2253B93300D22886 /* ServerListViewController.swift */; };
 		9A40E85F2253EA5F00D22886 /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E85E2253EA5F00D22886 /* Navigatable.swift */; };
 		9A40E8612253EF8300D22886 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8602253EF8300D22886 /* TypeName.swift */; };
+		9A40E8632253F9D400D22886 /* ServerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8622253F9D400D22886 /* ServerListViewModel.swift */; };
+		9A40E8652254003E00D22886 /* UINavigationController+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8642254003E00D22886 /* UINavigationController+Customization.swift */; };
+		9A40E8682254098400D22886 /* ServerSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E8672254098400D22886 /* ServerSort.swift */; };
+		9A587C4F22593AD8008EC8B4 /* ServerListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A587C4E22593AD8008EC8B4 /* ServerListTableDataSource.swift */; };
+		9A587C5422593C12008EC8B4 /* ServerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A587C5222593C12008EC8B4 /* ServerListCell.swift */; };
+		9A587C5522593C12008EC8B4 /* ServerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A587C5322593C12008EC8B4 /* ServerListCell.xib */; };
+		9A587C5922594632008EC8B4 /* ServerListCell+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A587C5822594632008EC8B4 /* ServerListCell+Dequeue.swift */; };
+		9A587C5C22595F41008EC8B4 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A587C5B22595F41008EC8B4 /* ErrorStateView.swift */; };
+		9A587C5E22595F4E008EC8B4 /* ErrorStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A587C5D22595F4E008EC8B4 /* ErrorStateView.xib */; };
+		9A587C64225969B9008EC8B4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A587C63225969B9008EC8B4 /* Utility.swift */; };
+		9A75E3E8225A0F130020C215 /* ServerListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3E7225A0F130020C215 /* ServerListHeader.swift */; };
+		9A75E3EA225A0F190020C215 /* ServerListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A75E3E9225A0F190020C215 /* ServerListHeader.xib */; };
+		9A75E3EC225A267B0020C215 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3EB225A267B0020C215 /* CustomView.swift */; };
+		9A75E3EE225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3ED225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift */; };
+		9A75E3F0225A298E0020C215 /* ServerListHeader+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3EF225A298E0020C215 /* ServerListHeader+Dequeue.swift */; };
 		D4F95B91E15288AE9487B18D /* Pods_DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7512D31384C395D14505F5 /* Pods_DataPersistant.framework */; };
 		DA8C9AE110D327D9E809AF3E /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD29CE3AD3A897CE92F996 /* Pods_NetworkPlatform.framework */; };
 		E050C7CF3BC6B250C26D4481 /* Pods_TesonetHomework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69977654FFF52807D4D1DC8F /* Pods_TesonetHomework.framework */; };
@@ -217,6 +232,21 @@
 		9A40E85B2253B93300D22886 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
 		9A40E85E2253EA5F00D22886 /* Navigatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
 		9A40E8602253EF8300D22886 /* TypeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
+		9A40E8622253F9D400D22886 /* ServerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewModel.swift; sourceTree = "<group>"; };
+		9A40E8642254003E00D22886 /* UINavigationController+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Customization.swift"; sourceTree = "<group>"; };
+		9A40E8672254098400D22886 /* ServerSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSort.swift; sourceTree = "<group>"; };
+		9A587C4E22593AD8008EC8B4 /* ServerListTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListTableDataSource.swift; sourceTree = "<group>"; };
+		9A587C5222593C12008EC8B4 /* ServerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListCell.swift; sourceTree = "<group>"; };
+		9A587C5322593C12008EC8B4 /* ServerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListCell.xib; sourceTree = "<group>"; };
+		9A587C5822594632008EC8B4 /* ServerListCell+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListCell+Dequeue.swift"; sourceTree = "<group>"; };
+		9A587C5B22595F41008EC8B4 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
+		9A587C5D22595F4E008EC8B4 /* ErrorStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorStateView.xib; sourceTree = "<group>"; };
+		9A587C63225969B9008EC8B4 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		9A75E3E7225A0F130020C215 /* ServerListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListHeader.swift; sourceTree = "<group>"; };
+		9A75E3E9225A0F190020C215 /* ServerListHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListHeader.xib; sourceTree = "<group>"; };
+		9A75E3EB225A267B0020C215 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		9A75E3ED225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		9A75E3EF225A298E0020C215 /* ServerListHeader+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListHeader+Dequeue.swift"; sourceTree = "<group>"; };
 		A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6118DD9176BC0B7C5DDCB8 /* Pods-TesonetHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework/Pods-TesonetHomework.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F555E9064EEF01666B9D9 /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -320,6 +350,7 @@
 				9A40E8182252BFDF00D22886 /* Application */,
 				9A40E7962251820F00D22886 /* Assets */,
 				9A40E7FB2252B7EF00D22886 /* Common */,
+				9A40E8662254096600D22886 /* Entries */,
 				9A40E799225182D300D22886 /* Scenes */,
 				9A40E8012252BA5B00D22886 /* Views */,
 			);
@@ -561,8 +592,10 @@
 		9A40E8012252BA5B00D22886 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9A40E84D22538EFB00D22886 /* PrimaryTextField */,
+				9A587C5A22595F31008EC8B4 /* ErrorStateView */,
 				9A40E8022252BA7D00D22886 /* PrimaryButton */,
+				9A40E84D22538EFB00D22886 /* PrimaryTextField */,
+				9A75E3EB225A267B0020C215 /* CustomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -590,6 +623,7 @@
 			children = (
 				9A40E8142252BE1300D22886 /* ActivityIndicator.swift */,
 				9A40E80F2252BD8300D22886 /* ErrorTracker.swift */,
+				9A587C63225969B9008EC8B4 /* Utility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -602,6 +636,7 @@
 				9A40E8122252BDE700D22886 /* Observable+Mapping.swift */,
 				9A40E8222252CE7000D22886 /* UITextField+Shorthands.swift */,
 				9A40E85822539EED00D22886 /* UIView+RotationAnimation.swift */,
+				9A40E8642254003E00D22886 /* UINavigationController+Customization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -700,9 +735,59 @@
 		9A40E85A2253B91A00D22886 /* ServerList */ = {
 			isa = PBXGroup;
 			children = (
+				9A587C5022593BED008EC8B4 /* Views */,
+				9A587C4E22593AD8008EC8B4 /* ServerListTableDataSource.swift */,
 				9A40E85B2253B93300D22886 /* ServerListViewController.swift */,
+				9A75E3ED225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift */,
+				9A40E8622253F9D400D22886 /* ServerListViewModel.swift */,
 			);
 			path = ServerList;
+			sourceTree = "<group>";
+		};
+		9A40E8662254096600D22886 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				9A40E8672254098400D22886 /* ServerSort.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		9A587C5022593BED008EC8B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A587C67225A0EBC008EC8B4 /* ServerListHeader */,
+				9A587C5122593BF7008EC8B4 /* ServerListCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A587C5122593BF7008EC8B4 /* ServerListCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A587C5222593C12008EC8B4 /* ServerListCell.swift */,
+				9A587C5322593C12008EC8B4 /* ServerListCell.xib */,
+				9A587C5822594632008EC8B4 /* ServerListCell+Dequeue.swift */,
+			);
+			path = ServerListCell;
+			sourceTree = "<group>";
+		};
+		9A587C5A22595F31008EC8B4 /* ErrorStateView */ = {
+			isa = PBXGroup;
+			children = (
+				9A587C5B22595F41008EC8B4 /* ErrorStateView.swift */,
+				9A587C5D22595F4E008EC8B4 /* ErrorStateView.xib */,
+			);
+			path = ErrorStateView;
+			sourceTree = "<group>";
+		};
+		9A587C67225A0EBC008EC8B4 /* ServerListHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9A75E3E7225A0F130020C215 /* ServerListHeader.swift */,
+				9A75E3E9225A0F190020C215 /* ServerListHeader.xib */,
+				9A75E3EF225A298E0020C215 /* ServerListHeader+Dequeue.swift */,
+			);
+			path = ServerListHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -871,6 +956,8 @@
 			files = (
 				9A40E84A225387A000D22886 /* Roboto-Thin.ttf in Resources */,
 				9A40E83F225387A000D22886 /* Roboto-Medium.ttf in Resources */,
+				9A75E3EA225A0F190020C215 /* ServerListHeader.xib in Resources */,
+				9A587C5522593C12008EC8B4 /* ServerListCell.xib in Resources */,
 				9A40E846225387A000D22886 /* Roboto-Italic.ttf in Resources */,
 				9A40E849225387A000D22886 /* Roboto-Bold.ttf in Resources */,
 				9A40E845225387A000D22886 /* Roboto-LightItalic.ttf in Resources */,
@@ -887,6 +974,7 @@
 				9A40E744225175BC00D22886 /* LaunchScreen.storyboard in Resources */,
 				9A40E844225387A000D22886 /* Roboto-BoldItalic.ttf in Resources */,
 				9A40E741225175BC00D22886 /* Assets.xcassets in Resources */,
+				9A587C5E22595F4E008EC8B4 /* ErrorStateView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,30 +1178,42 @@
 				9A40E85C2253B93300D22886 /* ServerListViewController.swift in Sources */,
 				9A40E8042252BA8900D22886 /* PrimaryButton.swift in Sources */,
 				9A40E8152252BE1300D22886 /* ActivityIndicator.swift in Sources */,
+				9A587C5922594632008EC8B4 /* ServerListCell+Dequeue.swift in Sources */,
+				9A75E3EC225A267B0020C215 /* CustomView.swift in Sources */,
 				9A40E82E2253803200D22886 /* ServersNavigator.swift in Sources */,
+				9A587C5422593C12008EC8B4 /* ServerListCell.swift in Sources */,
 				9A40E81A2252BFEC00D22886 /* Application.swift in Sources */,
+				9A587C5C22595F41008EC8B4 /* ErrorStateView.swift in Sources */,
 				9A40E7A52251839D00D22886 /* Storyboards.swift in Sources */,
 				9A40E81E2252C4E500D22886 /* WebServiceConstants.swift in Sources */,
 				9A40E82B225376D500D22886 /* Login+Storage.swift in Sources */,
+				9A40E8632253F9D400D22886 /* ServerListViewModel.swift in Sources */,
 				9A40E8172252BF2C00D22886 /* AuthorizationNavigator.swift in Sources */,
+				9A40E8682254098400D22886 /* ServerSort.swift in Sources */,
+				9A75E3F0225A298E0020C215 /* ServerListHeader+Dequeue.swift in Sources */,
 				9A40E80A2252BC8900D22886 /* LoginViewModel.swift in Sources */,
 				9A40E79F2251831E00D22886 /* LoginViewController.swift in Sources */,
 				9A40E8102252BD8300D22886 /* ErrorTracker.swift in Sources */,
 				9A40E8252252D15A00D22886 /* RootNavigator.swift in Sources */,
+				9A587C64225969B9008EC8B4 /* Utility.swift in Sources */,
 				9A40E85622539A6C00D22886 /* LoadingViewController.swift in Sources */,
 				9A40E85F2253EA5F00D22886 /* Navigatable.swift in Sources */,
 				9A40E8612253EF8300D22886 /* TypeName.swift in Sources */,
+				9A587C4F22593AD8008EC8B4 /* ServerListTableDataSource.swift in Sources */,
 				9A40E7A32251839D00D22886 /* Strings.swift in Sources */,
 				9A40E8292253766300D22886 /* Keychain+Bundle.swift in Sources */,
 				9A40E8232252CE7000D22886 /* UITextField+Shorthands.swift in Sources */,
 				9A40E7FE2252B81E00D22886 /* UIColor+Constants.swift in Sources */,
 				9A40E8212252C5DF00D22886 /* WebServiceConstants+Development.swift in Sources */,
 				9A40E8062252BADA00D22886 /* CommonConstants.swift in Sources */,
+				9A75E3EE225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift in Sources */,
 				9A40E80D2252BCCB00D22886 /* ViewModelType.swift in Sources */,
 				9A40E85922539EEE00D22886 /* UIView+RotationAnimation.swift in Sources */,
 				9A40E7A42251839D00D22886 /* Assets.swift in Sources */,
 				9A40E8002252B83100D22886 /* UIFont+Constants.swift in Sources */,
+				9A40E8652254003E00D22886 /* UINavigationController+Customization.swift in Sources */,
 				9A40E73A225175B900D22886 /* AppDelegate.swift in Sources */,
+				9A75E3E8225A0F130020C215 /* ServerListHeader.swift in Sources */,
 				9A40E84F22538F1100D22886 /* PrimaryTextField.swift in Sources */,
 				9A40E8132252BDE700D22886 /* Observable+Mapping.swift in Sources */,
 			);

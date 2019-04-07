@@ -13,9 +13,10 @@ class PlaygroundAPI {
     
     public func servers(with login: Login) -> Observable<[Server]> {
         let path = "v1/servers"
+        let headers = ["Authorization": "Bearer \(login.token)"]
         return network.getList(
             path,
             parameters: nil,
-            headers: nil)
+            headers: headers)
     }
 }

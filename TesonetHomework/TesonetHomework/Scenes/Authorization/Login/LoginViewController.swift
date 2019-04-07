@@ -157,7 +157,7 @@ class LoginViewController: UIViewController {
         case .unacceptableStatusCode(_), // swiftlint:disable:this empty_enum_arguments
              .emptyBody,
              .unserializableBody:
-            showError(message: L10n.Login.Error.unacceptableResponse)
+            showError(message: L10n.Common.Error.pleaseTryAgain)
         }
     }
     

@@ -20,6 +20,8 @@ internal enum L10n {
       internal static let ok = L10n.tr("Localizable", "Common.Button.ok")
     }
     internal enum Error {
+      /// Something went wrong. Please try again.\nPull to reload.
+      internal static let pleaseTryAgain = L10n.tr("Localizable", "Common.Error.pleaseTryAgain")
       /// Error
       internal static let title = L10n.tr("Localizable", "Common.Error.title")
     }
@@ -37,8 +39,6 @@ internal enum L10n {
       internal static let emptyPassword = L10n.tr("Localizable", "Login.Error.emptyPassword")
       /// Username is required
       internal static let emptyUsername = L10n.tr("Localizable", "Login.Error.emptyUsername")
-      /// Something went wrong. Please try again.
-      internal static let unacceptableResponse = L10n.tr("Localizable", "Login.Error.unacceptableResponse")
       /// Wrong credentials
       internal static let unauthorized = L10n.tr("Localizable", "Login.Error.unauthorized")
     }
@@ -55,6 +55,18 @@ internal enum L10n {
     internal static let loading = L10n.tr("Localizable", "ServerList.loading")
     /// 
     internal static let title = L10n.tr("Localizable", "ServerList.title")
+    internal enum Cell {
+      /// %d km
+      internal static func distance(_ p1: Int) -> String {
+        return L10n.tr("Localizable", "ServerList.Cell.distance", p1)
+      }
+    }
+    internal enum Header {
+      /// DISTANCE
+      internal static let distance = L10n.tr("Localizable", "ServerList.Header.distance")
+      /// SERVER
+      internal static let name = L10n.tr("Localizable", "ServerList.Header.name")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
