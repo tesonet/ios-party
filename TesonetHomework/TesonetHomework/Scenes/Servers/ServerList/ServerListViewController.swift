@@ -9,6 +9,7 @@ import RxCocoa
 class ServerListViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private(set) weak var tableView: UITableView!
+    @IBOutlet private(set) weak var filterButton: UIButton!
 
     // MARK: - Variables
     private var fetchServers: BehaviorRelay<Void>!
@@ -85,6 +86,7 @@ class ServerListViewController: UIViewController {
         tableView.backgroundColor = UIColor.secondary
         setupNavigationBar()
         setupLoading()
+        setupFilterButton()
     }
     
     private func setupNavigationBar() {
@@ -103,6 +105,22 @@ class ServerListViewController: UIViewController {
 
     private func setupLoading() {
         updateLoadingState(true)
+    }
+    
+    private func setupFilterButton() {
+        filterButton.backgroundColor = UIColor.FilterButton.background
+        filterButton.setTitleColor(
+            UIColor.FilterButton.foreground,
+            for: .normal)
+        filterButton.setTitle(
+            L10n.ServerList.Button.filter,
+            for: .normal)
+        filterButton.rx
+            .tap
+            .bind { [unowned self] (_) in
+                self.showFilterOptions()
+            }
+            .disposed(by: disposeBag)
     }
     
     // MARK: - Rx Binding
@@ -188,5 +206,29 @@ class ServerListViewController: UIViewController {
             self.tableView.contentOffset = .zero
         }
         loadingViewController.dismiss(animated: true)
+    }
+    
+    private func showFilterOptions() {
+        let alertController = UIAlertController(
+            title: nil,
+            message: nil,
+            preferredStyle: .actionSheet)
+        let actionByDistance = UIAlertAction(
+            title: L10n.ServerList.Filter.byDistance,
+            style: .default) { [weak self] (_) in
+                self?.sortServers.onNext(ServerSort.distance)
+        }
+        alertController.addAction(actionByDistance)
+        let actionByName = UIAlertAction(
+            title: L10n.ServerList.Filter.byName,
+            style: .default) { [weak self] (_) in
+                self?.sortServers.onNext(ServerSort.name)
+        }
+        alertController.addAction(actionByName)
+        let actionCancel = UIAlertAction(
+            title: L10n.Common.Button.cancel,
+            style: .cancel)
+        alertController.addAction(actionCancel)
+        present(alertController, animated: true)
     }
 }

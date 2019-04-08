@@ -5,6 +5,7 @@ import Domain
 import NetworkPlatform
 import RxSwift
 import RxCocoa
+import DataPersistant
 
 final class ServerListViewModel: ViewModelType {
     struct Input {
@@ -30,7 +31,9 @@ final class ServerListViewModel: ViewModelType {
     
     // MARK: - Transform
     func transform(input: Input) -> Output {
-        let servers = transform(fetchServers: input.fetchServers)
+        let fetchedServers = transform(fetchServers: input.fetchServers)
+        let sortedServers = transform(sortServers: input.sortServers)
+        let servers = Driver.merge(fetchedServers, sortedServers)
         transform(logout: input.logout)
         return Output(
             isLoading: activityIndicator.asDriver(),
@@ -52,6 +55,34 @@ final class ServerListViewModel: ViewModelType {
                     .debug("servers")
                     .trackActivity(self.activityIndicator)
                     .trackError(self.errorTracker)
+                    .do(onNext: { [unowned self] (servers) in
+                        self.saveServers(servers)
+                    })
+                    .asDriverOnErrorJustComplete()
+            }
+    }
+
+    private func transform(sortServers: Driver<ServerSort>) -> Driver<[Server]> {
+        return sortServers
+            .flatMapLatest { (serverSort) -> Driver<[Server]> in
+                let sort: Sort
+                switch serverSort {
+                case .name:
+                    sort = Sort(
+                        key: "name",
+                        ascending: true)
+                case .distance:
+                    sort = Sort(
+                        key: "distance",
+                        ascending: true)
+                }
+                let dataStorage = Application.shared.dataStorage
+                return dataStorage
+                    .fetch(
+                        Server.self,
+                        predicate: nil,
+                        sort: sort)
+                    .debug()
                     .asDriverOnErrorJustComplete()
             }
     }
@@ -69,5 +100,23 @@ final class ServerListViewModel: ViewModelType {
         Login.remove()
         let navigator = Application.shared.rootNavigator
         navigator.navigateToLogin()
+    }
+    
+    private func saveServers(_ servers: [Server]) {
+        let dataStorage = Application.shared.dataStorage
+        dataStorage
+            .deleteAll(Server.self)
+            .debug()
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: { [unowned self] (_) in
+                dataStorage
+                    .save(servers)
+                    .asDriverOnErrorJustComplete()
+                    .drive(onNext: { (_) in
+                        print("saved to DB")
+                    })
+                    .disposed(by: self.disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
 }

@@ -55,11 +55,21 @@ internal enum L10n {
     internal static let loading = L10n.tr("Localizable", "ServerList.loading")
     /// 
     internal static let title = L10n.tr("Localizable", "ServerList.title")
+    internal enum Button {
+      /// ↑↓ Sort
+      internal static let filter = L10n.tr("Localizable", "ServerList.Button.filter")
+    }
     internal enum Cell {
       /// %d km
       internal static func distance(_ p1: Int) -> String {
         return L10n.tr("Localizable", "ServerList.Cell.distance", p1)
       }
+    }
+    internal enum Filter {
+      /// By Distance
+      internal static let byDistance = L10n.tr("Localizable", "ServerList.Filter.byDistance")
+      /// Alphanumerical
+      internal static let byName = L10n.tr("Localizable", "ServerList.Filter.byName")
     }
     internal enum Header {
       /// DISTANCE

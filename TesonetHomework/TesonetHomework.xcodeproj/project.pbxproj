@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3470EE321CABB4B1BE44DD26 /* Pods_TesonetHomework_Development_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9351CF1016D9EF81A6D9DF5 /* Pods_TesonetHomework_Development_NetworkPlatform.framework */; };
 		67523D3253C7F5945577D790 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */; };
+		9A32EEAE225A901B00205E95 /* StoringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32EEAD225A8F9400205E95 /* StoringError.swift */; };
+		9A32EEB1225AA56600205E95 /* Server+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32EEB0225AA55200205E95 /* Server+Mapping.swift */; };
+		9A32EEB4225AA68B00205E95 /* RealmStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32EEB3225AA68B00205E95 /* RealmStorable.swift */; };
 		9A40E73A225175B900D22886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40E739225175B900D22886 /* AppDelegate.swift */; };
 		9A40E741225175BC00D22886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E740225175BC00D22886 /* Assets.xcassets */; };
 		9A40E744225175BC00D22886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40E742225175BC00D22886 /* LaunchScreen.storyboard */; };
@@ -101,11 +103,14 @@
 		9A75E3EC225A267B0020C215 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3EB225A267B0020C215 /* CustomView.swift */; };
 		9A75E3EE225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3ED225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift */; };
 		9A75E3F0225A298E0020C215 /* ServerListHeader+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3EF225A298E0020C215 /* ServerListHeader+Dequeue.swift */; };
+		9A75E3F3225A61C00020C215 /* Storing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3F2225A61BD0020C215 /* Storing.swift */; };
+		9A75E3F7225A636B0020C215 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3F6225A636B0020C215 /* Storable.swift */; };
+		9A75E3F9225A65190020C215 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3F8225A65190020C215 /* Sort.swift */; };
+		9A75E3FB225A65B00020C215 /* StorageConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3FA225A65B00020C215 /* StorageConfig.swift */; };
+		9A75E3FD225A67B50020C215 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A75E3FC225A67B50020C215 /* RealmStorage.swift */; };
 		9B4C01B24A27439E63A995A7 /* Pods_TesonetHomework_Development.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D48B16CFDBBBA70CF64780 /* Pods_TesonetHomework_Development.framework */; };
-		AD1442A0A8A33D8018D521D2 /* Pods_TesonetHomework_Development_DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8DCCA2FC9FEC82A850B00 /* Pods_TesonetHomework_Development_DataPersistant.framework */; };
 		D4F95B91E15288AE9487B18D /* Pods_DataPersistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7512D31384C395D14505F5 /* Pods_DataPersistant.framework */; };
 		DA8C9AE110D327D9E809AF3E /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD29CE3AD3A897CE92F996 /* Pods_NetworkPlatform.framework */; };
-		FFE69573C43D95684823E668 /* Pods_TesonetHomework_Development_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B65131E255797D6295929E /* Pods_TesonetHomework_Development_Domain.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +166,9 @@
 		6A7149B8393A167164907921 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		730890B83E62ABB4B23ED835 /* Pods-TesonetHomework-Development-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework-Development-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework-Development-Domain/Pods-TesonetHomework-Development-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		77440ACED8D971A04B3D3511 /* Pods-NetworkPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.release.xcconfig"; sourceTree = "<group>"; };
+		9A32EEAD225A8F9400205E95 /* StoringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoringError.swift; sourceTree = "<group>"; };
+		9A32EEB0225AA55200205E95 /* Server+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Mapping.swift"; sourceTree = "<group>"; };
+		9A32EEB3225AA68B00205E95 /* RealmStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorable.swift; sourceTree = "<group>"; };
 		9A40E736225175B900D22886 /* TesonetHomework-Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TesonetHomework-Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40E739225175B900D22886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A40E740225175BC00D22886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,6 +263,11 @@
 		9A75E3EB225A267B0020C215 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		9A75E3ED225A28BB0020C215 /* ServerListViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		9A75E3EF225A298E0020C215 /* ServerListHeader+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListHeader+Dequeue.swift"; sourceTree = "<group>"; };
+		9A75E3F2225A61BD0020C215 /* Storing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storing.swift; sourceTree = "<group>"; };
+		9A75E3F6225A636B0020C215 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		9A75E3F8225A65190020C215 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		9A75E3FA225A65B00020C215 /* StorageConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConfig.swift; sourceTree = "<group>"; };
+		9A75E3FC225A67B50020C215 /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		A99942150BAFEE3ACEFB69ED /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6118DD9176BC0B7C5DDCB8 /* Pods-TesonetHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework/Pods-TesonetHomework.debug.xcconfig"; sourceTree = "<group>"; };
 		AF33DCEF3447E0EB9BF23DC4 /* Pods-TesonetHomework-Development.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetHomework-Development.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetHomework-Development/Pods-TesonetHomework-Development.debug.xcconfig"; sourceTree = "<group>"; };
@@ -286,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67523D3253C7F5945577D790 /* Pods_Domain.framework in Frameworks */,
-				FFE69573C43D95684823E668 /* Pods_TesonetHomework_Development_Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +308,6 @@
 			files = (
 				9A40E76E2251790E00D22886 /* Domain.framework in Frameworks */,
 				DA8C9AE110D327D9E809AF3E /* Pods_NetworkPlatform.framework in Frameworks */,
-				3470EE321CABB4B1BE44DD26 /* Pods_TesonetHomework_Development_NetworkPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4F95B91E15288AE9487B18D /* Pods_DataPersistant.framework in Frameworks */,
-				AD1442A0A8A33D8018D521D2 /* Pods_TesonetHomework_Development_DataPersistant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +358,23 @@
 				F9351CF1016D9EF81A6D9DF5 /* Pods_TesonetHomework_Development_NetworkPlatform.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A32EEAF225AA54500205E95 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				9A32EEB0225AA55200205E95 /* Server+Mapping.swift */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
+		9A32EEB2225AA67700205E95 /* Storables */ = {
+			isa = PBXGroup;
+			children = (
+				9A75E3F6225A636B0020C215 /* Storable.swift */,
+				9A32EEB3225AA68B00205E95 /* RealmStorable.swift */,
+			);
+			path = Storables;
 			sourceTree = "<group>";
 		};
 		9A40E72D225175B900D22886 = {
@@ -415,6 +442,9 @@
 		9A40E775225179BA00D22886 /* DataPersistant */ = {
 			isa = PBXGroup;
 			children = (
+				9A75E3F5225A63600020C215 /* Common */,
+				9A75E3F4225A63550020C215 /* Entries */,
+				9A75E3F1225A61860020C215 /* Storage */,
 				9A40E776225179BA00D22886 /* DataPersistant.h */,
 				9A40E777225179BA00D22886 /* Info.plist */,
 			);
@@ -818,6 +848,34 @@
 				9A75E3EF225A298E0020C215 /* ServerListHeader+Dequeue.swift */,
 			);
 			path = ServerListHeader;
+			sourceTree = "<group>";
+		};
+		9A75E3F1225A61860020C215 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				9A75E3F2225A61BD0020C215 /* Storing.swift */,
+				9A75E3FC225A67B50020C215 /* RealmStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		9A75E3F4225A63550020C215 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				9A32EEAF225AA54500205E95 /* Playground */,
+				9A32EEAD225A8F9400205E95 /* StoringError.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		9A75E3F5225A63600020C215 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A32EEB2225AA67700205E95 /* Storables */,
+				9A75E3F8225A65190020C215 /* Sort.swift */,
+				9A75E3FA225A65B00020C215 /* StorageConfig.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1287,6 +1345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A75E3F9225A65190020C215 /* Sort.swift in Sources */,
+				9A32EEB1225AA56600205E95 /* Server+Mapping.swift in Sources */,
+				9A75E3F3225A61C00020C215 /* Storing.swift in Sources */,
+				9A32EEB4225AA68B00205E95 /* RealmStorable.swift in Sources */,
+				9A75E3FD225A67B50020C215 /* RealmStorage.swift in Sources */,
+				9A32EEAE225A901B00205E95 /* StoringError.swift in Sources */,
+				9A75E3FB225A65B00020C215 /* StorageConfig.swift in Sources */,
+				9A75E3F7225A636B0020C215 /* Storable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1543,7 +1609,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B80F555E9064EEF01666B9D9 /* Pods-NetworkPlatform.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1575,7 +1640,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77440ACED8D971A04B3D3511 /* Pods-NetworkPlatform.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

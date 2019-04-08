@@ -23,8 +23,6 @@ target 'Domain' do
 end
 
 target 'NetworkPlatform' do
-    inherit! :search_paths
-
     pod 'RxSwift', '~> 4.4.2'
     pod 'Alamofire', '~> 4.8.2'
     pod 'RxAlamofire', '~> 4.4.0'

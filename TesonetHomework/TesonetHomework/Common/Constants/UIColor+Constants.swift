@@ -20,6 +20,10 @@ extension UIColor {
         static let background = UIColor.primary
         static let foreground = UIColor.secondary
     }
+    enum FilterButton {
+        static let background = UIColor.quaternary.withAlphaComponent(0.9)
+        static let foreground = UIColor.secondary
+    }
     enum Input {
         static let background = UIColor.secondary
         static let foreground = UIColor.tertiaryLight

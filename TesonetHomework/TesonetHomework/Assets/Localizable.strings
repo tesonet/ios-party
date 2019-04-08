@@ -21,3 +21,6 @@
 "ServerList.Cell.distance" = "%d km";
 "ServerList.Header.name" = "SERVER";
 "ServerList.Header.distance" = "DISTANCE";
+"ServerList.Button.filter" = "↑↓ Sort";
+"ServerList.Filter.byDistance" = "By Distance";
+"ServerList.Filter.byName" = "Alphanumerical";
