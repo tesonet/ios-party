@@ -4,6 +4,7 @@ import UIKit
 
 class ServerListHeader: UITableViewHeaderFooterView {
     // MARK: - Constants
+    static let height: CGFloat = 44
     private let shadowRadius: CGFloat = 15
     
     // MARK: - Outlets

@@ -11,6 +11,9 @@ class ServerListTableDataSource: NSObject {
         case server(_ server: Server)
     }
     
+    // MARK: - Constants
+    private let footerHeight: CGFloat = 44
+    
     // MARK: - Variables
     var tableSections: [Section] = [.servers]
     var servers: [Server]?
@@ -38,7 +41,15 @@ class ServerListTableDataSource: NSObject {
                 bundle: Bundle.main),
             forHeaderFooterViewReuseIdentifier: ServerListHeader.typeName)
         tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.estimatedSectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = ServerListHeader.height
+        tableView.sectionFooterHeight = CGFloat.leastNonzeroMagnitude
+        tableView.estimatedSectionFooterHeight = CGFloat.leastNonzeroMagnitude
+        tableView.tableFooterView = UIView()
+        tableView.tableFooterView?.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: tableView.bounds.width,
+            height: footerHeight)
     }
     
     // MARK: - Helpers
