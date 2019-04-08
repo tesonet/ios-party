@@ -1,0 +1,35 @@
+source 'https://github.com/CocoaPods/Specs.git'
+workspace 'TesonetHomework'
+platform :ios, '12.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'TesonetHomework-Development' do
+    pod 'RxSwift', '~> 4.4.2'
+    pod 'RxCocoa', '~> 4.4.2'
+    pod 'NVActivityIndicatorView', '~> 4.6.1'
+    pod 'KeychainAccess', '~> 3.1.2'
+    pod 'IQKeyboardManager', '~> 6.2.1'
+    pod 'SwiftLint', '~> 0.31.0'
+    pod 'SwiftGen', '~> 6.1.0'
+    pod 'ObjectMapper', '~> 3.4.2'
+
+    pod 'Alamofire', '~> 4.8.2'
+    pod 'RxAlamofire', '~> 4.4.0'
+end
+
+target 'Domain' do
+    pod 'RxSwift', '~> 4.4.2'
+end
+
+target 'NetworkPlatform' do
+    pod 'RxSwift', '~> 4.4.2'
+    pod 'Alamofire', '~> 4.8.2'
+    pod 'RxAlamofire', '~> 4.4.0'
+    pod 'ObjectMapper', '~> 3.4.2'
+end
+
+target 'DataPersistant' do
+    pod 'RxSwift', '~> 4.4.2'
+    pod 'RealmSwift', '~> 3.14.0'
+end

@@ -1,0 +1,22 @@
+strings:
+  inputs:
+    - TesonetHomework/Assets
+  outputs:
+    - templateName: structured-swift4
+      output: TesonetHomework/Assets/Generated/Strings.swift
+
+ib:
+  inputs:
+    - TesonetHomework/Scenes
+  outputs:
+    - templateName: scenes-swift4
+      output: TesonetHomework/Assets/Generated/Storyboards.swift
+      params:
+        ignoreTargetModule: true
+
+xcassets:
+  inputs:
+    - TesonetHomework/Assets/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: TesonetHomework/Assets/Generated/Assets.swift

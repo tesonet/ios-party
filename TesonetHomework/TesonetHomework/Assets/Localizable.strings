@@ -1,0 +1,26 @@
+// Created by Paulius Cesekas on 01/04/2019.
+
+// MARK: - Common
+"Common.Error.title" = "Error";
+"Common.Error.pleaseTryAgain" = "Something went wrong. Please try again.\nPull to reload.";
+"Common.Button.ok" = "Ok";
+"Common.Button.cancel" = "Cancel";
+
+// MARK: - Login
+"Login.Placeholder.username" = "Username";
+"Login.Placeholder.password" = "Password";
+"Login.Button.login" = "Log In";
+"Login.Error.emptyUsername" = "Username is required";
+"Login.Error.emptyPassword" = "Password is required";
+"Login.Error.unauthorized" = "Wrong credentials";
+"Login.loading" = "";
+
+// MARK: - Server List
+"ServerList.title" = "";
+"ServerList.loading" = "Fetching the list...";
+"ServerList.Cell.distance" = "%d km";
+"ServerList.Header.name" = "SERVER";
+"ServerList.Header.distance" = "DISTANCE";
+"ServerList.Button.filter" = "↑↓ Sort";
+"ServerList.Filter.byDistance" = "By Distance";
+"ServerList.Filter.byName" = "Alphanumerical";

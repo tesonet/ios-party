@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aVY-d7-JfU">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="VVi-BM-JU8">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aVY-d7-JfU" customClass="LoginViewController" customModule="TesonetHomework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XE7-Yc-lAJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="vW7-yS-gp3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apX-0q-9YW">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="305-GK-sbE">
+                                        <rect key="frame" x="55" y="115" width="265" height="304"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="D0O-5z-21Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="64"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TTi-vy-r8r">
+                                                <rect key="frame" x="0.0" y="164" width="265" height="140"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVG-Ls-IMS" customClass="PrimaryTextField" customModule="TesonetHomework_Development">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="FQd-U9-r1a"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="ico-username"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYz-6H-Hpx" customClass="PrimaryTextField" customModule="TesonetHomework_Development">
+                                                        <rect key="frame" x="0.0" y="50" width="265" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="TFN-94-Skh"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES" textContentType="password"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="ico-lock"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu7-c5-QIu" customClass="PrimaryButton" customModule="TesonetHomework" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="100" width="265" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="qe1-am-xzZ"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="23" minY="0.0" maxX="32" maxY="0.0"/>
+                                                        <state key="normal" title="Login Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="305-GK-sbE" firstAttribute="top" secondItem="apX-0q-9YW" secondAttribute="top" constant="115" id="1uY-ui-w8r"/>
+                                    <constraint firstItem="305-GK-sbE" firstAttribute="width" secondItem="apX-0q-9YW" secondAttribute="width" constant="-110" id="EjW-X0-7am"/>
+                                    <constraint firstItem="305-GK-sbE" firstAttribute="leading" secondItem="apX-0q-9YW" secondAttribute="leading" constant="55" id="Fd5-nI-3qo"/>
+                                    <constraint firstAttribute="bottom" secondItem="305-GK-sbE" secondAttribute="bottom" id="KKx-eG-Fh7"/>
+                                    <constraint firstAttribute="trailing" secondItem="305-GK-sbE" secondAttribute="trailing" constant="55" id="nLw-Ed-ebv"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="apX-0q-9YW" firstAttribute="leading" secondItem="4p8-UD-bAF" secondAttribute="leading" id="1sJ-0l-Lqp"/>
+                            <constraint firstItem="apX-0q-9YW" firstAttribute="top" secondItem="4p8-UD-bAF" secondAttribute="top" id="FZf-k2-7l9"/>
+                            <constraint firstItem="vW7-yS-gp3" firstAttribute="top" secondItem="XE7-Yc-lAJ" secondAttribute="top" id="Gu8-68-RWQ"/>
+                            <constraint firstItem="4p8-UD-bAF" firstAttribute="bottom" secondItem="apX-0q-9YW" secondAttribute="bottom" id="L5A-dz-rB1"/>
+                            <constraint firstAttribute="trailing" secondItem="vW7-yS-gp3" secondAttribute="trailing" id="WfD-Iy-vZi"/>
+                            <constraint firstAttribute="bottom" secondItem="vW7-yS-gp3" secondAttribute="bottom" id="pAF-r5-jCB"/>
+                            <constraint firstItem="vW7-yS-gp3" firstAttribute="leading" secondItem="XE7-Yc-lAJ" secondAttribute="leading" id="prp-mu-ioo"/>
+                            <constraint firstItem="4p8-UD-bAF" firstAttribute="trailing" secondItem="apX-0q-9YW" secondAttribute="trailing" id="ye6-Ja-hxc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4p8-UD-bAF"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Bu7-c5-QIu" id="6sC-o4-5Rv"/>
+                        <outlet property="logoImageView" destination="D0O-5z-21Q" id="Ubo-BV-Rrd"/>
+                        <outlet property="passwordTextField" destination="iYz-6H-Hpx" id="7xO-HO-gk0"/>
+                        <outlet property="usernameTextField" destination="eVG-Ls-IMS" id="myY-yP-kHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0t-XL-Top" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1920" height="1080"/>
+        <image name="ico-lock" width="10.666666984558105" height="13.333333015441895"/>
+        <image name="ico-username" width="12" height="13.333333015441895"/>
+        <image name="logo-white" width="246" height="64"/>
+    </resources>
+</document>
