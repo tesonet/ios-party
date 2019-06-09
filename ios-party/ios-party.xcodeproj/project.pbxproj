@@ -12,6 +12,10 @@
 		69DC547B22ABDD4B00103900 /* ios_party.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69DC547922ABDD4B00103900 /* ios_party.xcdatamodeld */; };
 		69DC547D22ABDD4D00103900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69DC547C22ABDD4D00103900 /* Assets.xcassets */; };
 		69DC548022ABDD4D00103900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69DC547E22ABDD4D00103900 /* LaunchScreen.storyboard */; };
+		69DC548822ABE22C00103900 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC548722ABE22C00103900 /* LoginView.swift */; };
+		69DC548A22ABF0A800103900 /* LoginEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC548922ABF0A800103900 /* LoginEntryTextField.swift */; };
+		69DC548C22ABFB7600103900 /* NSLayoutConstraint+Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC548B22ABFB7600103900 /* NSLayoutConstraint+Fill.swift */; };
+		69DC548E22AC46AF00103900 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC548D22AC46AF00103900 /* LoginButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		69DC547C22ABDD4D00103900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69DC547F22ABDD4D00103900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69DC548122ABDD4D00103900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69DC548722ABE22C00103900 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		69DC548922ABF0A800103900 /* LoginEntryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntryTextField.swift; sourceTree = "<group>"; };
+		69DC548B22ABFB7600103900 /* NSLayoutConstraint+Fill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Fill.swift"; sourceTree = "<group>"; };
+		69DC548D22AC46AF00103900 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69A8EF9822ACE46A007A2F95 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				69DC547422ABDD4B00103900 /* LoginViewController.swift */,
+				69DC548722ABE22C00103900 /* LoginView.swift */,
+				69DC548922ABF0A800103900 /* LoginEntryTextField.swift */,
+				69DC548D22AC46AF00103900 /* LoginButton.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
 		69DC546622ABDD4B00103900 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +73,9 @@
 		69DC547122ABDD4B00103900 /* ios-party */ = {
 			isa = PBXGroup;
 			children = (
+				69A8EF9822ACE46A007A2F95 /* LogIn */,
 				69DC547222ABDD4B00103900 /* AppDelegate.swift */,
-				69DC547422ABDD4B00103900 /* LoginViewController.swift */,
+				69DC548B22ABFB7600103900 /* NSLayoutConstraint+Fill.swift */,
 				69DC547C22ABDD4D00103900 /* Assets.xcassets */,
 				69DC547E22ABDD4D00103900 /* LaunchScreen.storyboard */,
 				69DC548122ABDD4D00103900 /* Info.plist */,
@@ -136,6 +156,10 @@
 			files = (
 				69DC547522ABDD4B00103900 /* LoginViewController.swift in Sources */,
 				69DC547322ABDD4B00103900 /* AppDelegate.swift in Sources */,
+				69DC548E22AC46AF00103900 /* LoginButton.swift in Sources */,
+				69DC548A22ABF0A800103900 /* LoginEntryTextField.swift in Sources */,
+				69DC548822ABE22C00103900 /* LoginView.swift in Sources */,
+				69DC548C22ABFB7600103900 /* NSLayoutConstraint+Fill.swift in Sources */,
 				69DC547B22ABDD4B00103900 /* ios_party.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
