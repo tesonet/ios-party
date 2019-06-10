@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "bg.jpg",
+      "filename" : "loading-screen.png",
       "scale" : "1x"
     },
     {

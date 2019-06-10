@@ -3,7 +3,7 @@ import UIKit
 final class LoginView: UIView {
     
     lazy private var backgroundImage: UIImageView = {
-        let image = UIImage(named: "bg")
+        let image = UIImage(named: "login-screen")
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
