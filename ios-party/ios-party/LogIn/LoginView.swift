@@ -1,6 +1,12 @@
 import UIKit
 
+protocol LoginViewDelegate: class {
+    func didTapLogin(with username: String, and password: String, in viewController: LoginView)
+}
+
 final class LoginView: UIView {
+    
+    weak var delegate: LoginViewDelegate?
     
     lazy private var backgroundImage: UIImageView = {
         let image = UIImage(named: "login-screen")
@@ -64,8 +70,6 @@ final class LoginView: UIView {
     private func setupBackground() {
         addSubview(backgroundImage)
         NSLayoutConstraint.activate([
-//            backgroundImage.topAnchor.constraint(equalTo: topAnchor),
-//            backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor),
             backgroundImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             backgroundImage.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
@@ -97,6 +101,10 @@ final class LoginView: UIView {
     }
     
     @objc private func loginButtonTapped() {
-        fatalError("Login not implemented yet")
+        delegate?.didTapLogin(
+            with: usernameInputField.value,
+            and: passwordInputField.value,
+            in: self
+        )
     }
 }

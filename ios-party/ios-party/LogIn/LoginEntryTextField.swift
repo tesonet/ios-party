@@ -34,6 +34,10 @@ final class LoginEntryTextField: UIView {
         }
     }
     
+    var value: String {
+        return inputTextField.text ?? ""
+    }
+    
     private let type: `Type`
     
     private lazy var iconImageView: UIImageView = {
@@ -49,6 +53,7 @@ final class LoginEntryTextField: UIView {
         textField.placeholder = type.placeholder
         textField.textColor = UIColor.init(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocapitalizationType = .none
         return textField
     }()
     
