@@ -1,8 +1,6 @@
 import UIKit
 
-final class LoginLoaderView: UIView {
-    
-    weak var delegate: LoginViewDelegate?
+final class ActivityIndicatorView: UIView {
     
     lazy private var backgroundImage: UIImageView = {
         let image = UIImage(named: "loading-screen")
@@ -38,7 +36,6 @@ final class LoginLoaderView: UIView {
         NSLayoutConstraint.activate([
             backgroundImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             backgroundImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-
         ])
     }
     

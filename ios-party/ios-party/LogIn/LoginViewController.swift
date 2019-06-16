@@ -5,12 +5,6 @@ final class LoginViewController: UIViewController {
     private let loginService = LoginService()
     private let serversService = ServersService()
     
-    private lazy var loadingView: LoginLoaderView = {
-        let view = LoginLoaderView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,9 +20,9 @@ final class LoginViewController: UIViewController {
     }
     
     private func authorize(with credentials: Credentials) {
-        view.addSubview(loadingView)
-        NSLayoutConstraint.fill(view: view, with: loadingView)
+        showActivityIndicator()
         loginService.getToken(credentials: credentials) { [weak self] result in
+            self?.hideActivityIndicator()
             switch result {
             case .success(let token):
                 self?.handleSuccessfulLogIn(with: token)
@@ -43,7 +37,9 @@ final class LoginViewController: UIViewController {
     }
     
     private func loadServers(with token: String) {
+        showActivityIndicator()
         serversService.getServers(token: token) { [weak self] result in
+            self?.hideActivityIndicator()
             switch result {
             case .success(let serverList):
                 self?.presentServers(serversResponse: serverList)
@@ -96,4 +92,6 @@ extension LoginViewController: LoginViewDelegate {
 //        loadServers(with: "f9731b590611a5a9377fbd02f247fcdf")
     }
 }
+
+extension LoginViewController: ActivityIndicating {}
 
