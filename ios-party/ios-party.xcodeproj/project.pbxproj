@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696FD8CD22B6566100A44CCE /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8CC22B6566100A44CCE /* ServersViewController.swift */; };
+		696FD8CF22B6566E00A44CCE /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8CE22B6566E00A44CCE /* ServersView.swift */; };
 		69DC547322ABDD4B00103900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC547222ABDD4B00103900 /* AppDelegate.swift */; };
 		69DC547522ABDD4B00103900 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC547422ABDD4B00103900 /* LoginViewController.swift */; };
 		69DC547B22ABDD4B00103900 /* ios_party.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69DC547922ABDD4B00103900 /* ios_party.xcdatamodeld */; };
@@ -20,9 +22,12 @@
 		69EBC70522AEBD1A00A3757F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EBC70422AEBD1A00A3757F /* Credentials.swift */; };
 		69EBC70722AEBD5A00A3757F /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EBC70622AEBD5A00A3757F /* AuthorizationResponse.swift */; };
 		69EBC70922B01DAE00A3757F /* LoginLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EBC70822B01DAE00A3757F /* LoginLoaderView.swift */; };
+		69EBC70B22B0287200A3757F /* ServersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EBC70A22B0287200A3757F /* ServersService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		696FD8CC22B6566100A44CCE /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		696FD8CE22B6566E00A44CCE /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
 		69DC546F22ABDD4B00103900 /* ios-party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DC547222ABDD4B00103900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69DC547422ABDD4B00103900 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		69EBC70422AEBD1A00A3757F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		69EBC70622AEBD5A00A3757F /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
 		69EBC70822B01DAE00A3757F /* LoginLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoaderView.swift; sourceTree = "<group>"; };
+		69EBC70A22B0287200A3757F /* ServersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		696FD8CB22B6563800A44CCE /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				696FD8CC22B6566100A44CCE /* ServersViewController.swift */,
+				696FD8CE22B6566E00A44CCE /* ServersView.swift */,
+			);
+			path = Servers;
+			sourceTree = "<group>";
+		};
 		69A8EF9822ACE46A007A2F95 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +99,7 @@
 		69DC547122ABDD4B00103900 /* ios-party */ = {
 			isa = PBXGroup;
 			children = (
+				696FD8CB22B6563800A44CCE /* Servers */,
 				69A8EF9822ACE46A007A2F95 /* LogIn */,
 				69DC547222ABDD4B00103900 /* AppDelegate.swift */,
 				69DC548B22ABFB7600103900 /* NSLayoutConstraint+Fill.swift */,
@@ -108,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				69E7F63622AE9E8400A6B166 /* LoginService.swift */,
+				69EBC70A22B0287200A3757F /* ServersService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,7 +204,10 @@
 				69EBC70722AEBD5A00A3757F /* AuthorizationResponse.swift in Sources */,
 				69DC548E22AC46AF00103900 /* LoginButton.swift in Sources */,
 				69EBC70522AEBD1A00A3757F /* Credentials.swift in Sources */,
+				696FD8CD22B6566100A44CCE /* ServersViewController.swift in Sources */,
 				69DC548A22ABF0A800103900 /* LoginEntryTextField.swift in Sources */,
+				696FD8CF22B6566E00A44CCE /* ServersView.swift in Sources */,
+				69EBC70B22B0287200A3757F /* ServersService.swift in Sources */,
 				69DC548822ABE22C00103900 /* LoginView.swift in Sources */,
 				69DC548C22ABFB7600103900 /* NSLayoutConstraint+Fill.swift in Sources */,
 				69DC547B22ABDD4B00103900 /* ios_party.xcdatamodeld in Sources */,

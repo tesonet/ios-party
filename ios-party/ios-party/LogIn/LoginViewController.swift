@@ -2,7 +2,9 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
-    private let service = LoginService()
+    private let loginService = LoginService()
+    private let serversService = ServersService()
+    
     private lazy var loadingView: LoginLoaderView = {
         let view = LoginLoaderView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -24,9 +26,9 @@ final class LoginViewController: UIViewController {
     }
     
     private func authorize(with credentials: Credentials) {
-        service.getToken(credentials: credentials) { [weak self] result in
         view.addSubview(loadingView)
         NSLayoutConstraint.fill(view: view, with: loadingView)
+        loginService.getToken(credentials: credentials) { [weak self] result in
             switch result {
             case .success(let token):
                 self?.handleSuccessfulLogIn(with: token)
@@ -37,7 +39,22 @@ final class LoginViewController: UIViewController {
     }
     
     private func handleSuccessfulLogIn(with token: String) {
-        fatalError("Not implemented")
+        loadServers(with: token)
+    }
+    
+    private func loadServers(with token: String) {
+        serversService.getServers(token: token) { [weak self] result in
+            switch result {
+            case .success(let serverList):
+                self?.presentServers(serversResponse: serverList)
+            case .failure(let error): ()
+            }
+        }
+    }
+    
+    private func presentServers(serversResponse: ServersResponse) {
+        let serversViewController = ServersViewController(serversResponse: serversResponse)
+        present(serversViewController, animated: true)
     }
     
     private func handleError(error: LoginError) {
@@ -75,6 +92,8 @@ extension LoginViewController: LoginViewDelegate {
     func didTapLogin(with username: String, and password: String, in viewController: LoginView) {
         let credentials = Credentials(username: username, password: password)
         authorize(with: credentials)
+        
+//        loadServers(with: "f9731b590611a5a9377fbd02f247fcdf")
     }
 }
 
