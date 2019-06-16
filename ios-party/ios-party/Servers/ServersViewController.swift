@@ -19,6 +19,7 @@ final class ServersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.white
         setupView()
     }
     
@@ -29,9 +30,16 @@ final class ServersViewController: UIViewController {
         view.addSubview(serversView)
         NSLayoutConstraint.fill(view: view, with: serversView)
     }
+    
+    @objc private func logoutTapped() {
+        fatalError("logout not implemented")
+    }
 }
 
 extension ServersViewController: ServersViewDelegate {
     
+    func logoutTapped(in viewController: ServersView) {
+        fatalError("logout not implemented")
+    }
 }
 
