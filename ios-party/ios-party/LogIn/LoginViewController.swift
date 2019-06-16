@@ -3,6 +3,11 @@ import UIKit
 final class LoginViewController: UIViewController {
 
     private let service = LoginService()
+    private lazy var loadingView: LoginLoaderView = {
+        let view = LoginLoaderView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,8 @@ final class LoginViewController: UIViewController {
     
     private func authorize(with credentials: Credentials) {
         service.getToken(credentials: credentials) { [weak self] result in
+        view.addSubview(loadingView)
+        NSLayoutConstraint.fill(view: view, with: loadingView)
             switch result {
             case .success(let token):
                 self?.handleSuccessfulLogIn(with: token)

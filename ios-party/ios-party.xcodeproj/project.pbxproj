@@ -19,6 +19,7 @@
 		69E7F63722AE9E8400A6B166 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7F63622AE9E8400A6B166 /* LoginService.swift */; };
 		69EBC70522AEBD1A00A3757F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EBC70422AEBD1A00A3757F /* Credentials.swift */; };
 		69EBC70722AEBD5A00A3757F /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EBC70622AEBD5A00A3757F /* AuthorizationResponse.swift */; };
+		69EBC70922B01DAE00A3757F /* LoginLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EBC70822B01DAE00A3757F /* LoginLoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		69E7F63622AE9E8400A6B166 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		69EBC70422AEBD1A00A3757F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		69EBC70622AEBD5A00A3757F /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
+		69EBC70822B01DAE00A3757F /* LoginLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				69DC548722ABE22C00103900 /* LoginView.swift */,
 				69DC548922ABF0A800103900 /* LoginEntryTextField.swift */,
 				69DC548D22AC46AF00103900 /* LoginButton.swift */,
+				69EBC70822B01DAE00A3757F /* LoginLoaderView.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				69DC548C22ABFB7600103900 /* NSLayoutConstraint+Fill.swift in Sources */,
 				69DC547B22ABDD4B00103900 /* ios_party.xcdatamodeld in Sources */,
 				69E7F63722AE9E8400A6B166 /* LoginService.swift in Sources */,
+				69EBC70922B01DAE00A3757F /* LoginLoaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
