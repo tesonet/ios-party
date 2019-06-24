@@ -5,17 +5,20 @@ final class LoginViewController: UIViewController {
     private let loginService = LoginService()
     private let serversService = ServersService()
     
+    private lazy var loginView: LoginView = {
+        let view = LoginView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.delegate = self
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
-        authorize(with: Credentials(username: "tesonet", password: "partyanimal"))
     }
     
     private func setupView() {
-        let loginView = LoginView()
-        loginView.delegate = self
-        loginView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loginView)
         NSLayoutConstraint.fill(view: view, with: loginView)
     }
@@ -52,6 +55,7 @@ final class LoginViewController: UIViewController {
     
     private func presentServers(serversResponse: ServersResponse) {
         let serversViewController = ServersViewController(serversResponse: serversResponse)
+        serversViewController.delegate = self
         present(serversViewController, animated: true)
     }
     
@@ -94,6 +98,10 @@ final class LoginViewController: UIViewController {
             completion: nil
         )
     }
+    
+    private func reset() {
+        loginView.configure(with: Credentials(username: "", password: ""))
+    }
 }
 
 extension LoginViewController: LoginViewDelegate {
@@ -104,5 +112,11 @@ extension LoginViewController: LoginViewDelegate {
     }
 }
 
-extension LoginViewController: ActivityIndicating {}
+extension LoginViewController: ServersViewControllerDelegate {
+    
+    func didLogout(in viewController: ServersViewController) {
+        reset()
+    }
+}
 
+extension LoginViewController: ActivityIndicating {}

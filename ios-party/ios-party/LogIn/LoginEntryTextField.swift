@@ -35,7 +35,12 @@ final class LoginEntryTextField: UIView {
     }
     
     var value: String {
-        return inputTextField.text ?? ""
+        set {
+            inputTextField.text = newValue
+        }
+        get {
+            return inputTextField.text ?? ""
+        }
     }
     
     private let type: `Type`

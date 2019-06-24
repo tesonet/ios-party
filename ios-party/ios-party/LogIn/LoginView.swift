@@ -60,6 +60,11 @@ final class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(with credentials: Credentials) {
+        usernameInputField.value = credentials.username
+        passwordInputField.value = credentials.password
+    }
+    
     private func setup() {
         setupBackground()
         setupLogo()

@@ -1,5 +1,10 @@
 import UIKit
 
+protocol ServersViewControllerDelegate: class {
+    
+    func didLogout(in viewController: ServersViewController)
+}
+
 final class ServersViewController: UIViewController {
     
     private let serversResponse: ServersResponse
@@ -10,6 +15,8 @@ final class ServersViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    weak var delegate: ServersViewControllerDelegate?
     
     init(serversResponse: ServersResponse) {
         self.serversResponse = serversResponse
@@ -35,7 +42,8 @@ final class ServersViewController: UIViewController {
     }
     
     private func handleLogout() {
-        fatalError("logout not implemented")
+        dismiss(animated: true, completion: nil)
+        delegate?.didLogout(in: self)
     }
 }
 
