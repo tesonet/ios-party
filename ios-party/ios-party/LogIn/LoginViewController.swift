@@ -28,7 +28,7 @@ final class LoginViewController: UIViewController {
             case .success(let token):
                 self?.handleSuccessfulLogIn(with: token)
             case .failure(let error):
-                self?.handleError(error: error)
+                self?.handleLoginError(error: error)
             }
         }
     }
@@ -44,7 +44,8 @@ final class LoginViewController: UIViewController {
             switch result {
             case .success(let serverList):
                 self?.presentServers(serversResponse: serverList)
-            case .failure(let error): ()
+            case .failure(let error):
+                self?.handleServerLoadError(error: error)
             }
         }
     }
@@ -54,13 +55,24 @@ final class LoginViewController: UIViewController {
         present(serversViewController, animated: true)
     }
     
-    private func handleError(error: LoginError) {
+    private func handleServerLoadError(error: ServicesError) {
+        switch error {
+        case .apiError, .decodeError, .invalidEndpoint, .invalidResponse, .noData:
+            presentGenericError()
+        }
+    }
+    
+    private func handleLoginError(error: LoginError) {
         switch error {
         case .notAuthorized:
             presentError(message: "Bad username or password. Try again")
         case .apiError, .decodeError, .encodeError, .invalidEndpoint, .invalidResponse, .noData:
-            presentError(message: "Error happened. Please call Tesonet support")
+            presentGenericError()
         }
+    }
+    
+    private func presentGenericError() {
+        presentError(message: "Something unexpected happened. Please call Tesonet support")
     }
 
     private func presentError(message: String) {
