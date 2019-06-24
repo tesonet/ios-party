@@ -10,10 +10,10 @@ public enum ServicesError: Error {
 
 struct ServersResponse {
     
-    let servers: [WelcomeElement]
+    let servers: [ServerDescription]
 }
 
-struct WelcomeElement: Codable {
+struct ServerDescription: Codable {
     let name: String
     let distance: Int
 }
@@ -60,7 +60,7 @@ final class ServersService {
             }
             
             do {
-                let servicesResponse = try JSONDecoder().decode([WelcomeElement].self, from: data)
+                let servicesResponse = try JSONDecoder().decode([ServerDescription].self, from: data)
                 self?.finish(with: completion, result: .success(servers: ServersResponse(servers: servicesResponse)))
             } catch {
                 self?.finish(with: completion, result: .failure(error: .decodeError))

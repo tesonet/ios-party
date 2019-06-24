@@ -9,6 +9,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        authorize(with: Credentials(username: "tesonet", password: "partyanimal"))
     }
     
     private func setupView() {
@@ -88,8 +89,6 @@ extension LoginViewController: LoginViewDelegate {
     func didTapLogin(with username: String, and password: String, in viewController: LoginView) {
         let credentials = Credentials(username: username, password: password)
         authorize(with: credentials)
-        
-//        loadServers(with: "f9731b590611a5a9377fbd02f247fcdf")
     }
 }
 

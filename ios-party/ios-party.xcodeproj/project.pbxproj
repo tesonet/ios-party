@@ -11,6 +11,9 @@
 		696FD8CF22B6566E00A44CCE /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8CE22B6566E00A44CCE /* ServersView.swift */; };
 		696FD8D222B6B0FE00A44CCE /* ActivityIndicating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8D122B6B0FE00A44CCE /* ActivityIndicating.swift */; };
 		696FD8D422B6B13500A44CCE /* ActivityIndicating+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8D322B6B13500A44CCE /* ActivityIndicating+UIViewController.swift */; };
+		696FD8D822C0BAC600A44CCE /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8D722C0BAC600A44CCE /* ServersViewModel.swift */; };
+		696FD8DA22C0F2A400A44CCE /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8D922C0F2A400A44CCE /* ServerTableViewCell.swift */; };
+		696FD8DC22C0F79F00A44CCE /* ServersTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FD8DB22C0F79F00A44CCE /* ServersTableHeaderView.swift */; };
 		69DC547322ABDD4B00103900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC547222ABDD4B00103900 /* AppDelegate.swift */; };
 		69DC547522ABDD4B00103900 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC547422ABDD4B00103900 /* LoginViewController.swift */; };
 		69DC547B22ABDD4B00103900 /* ios_party.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69DC547922ABDD4B00103900 /* ios_party.xcdatamodeld */; };
@@ -32,6 +35,9 @@
 		696FD8CE22B6566E00A44CCE /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
 		696FD8D122B6B0FE00A44CCE /* ActivityIndicating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicating.swift; sourceTree = "<group>"; };
 		696FD8D322B6B13500A44CCE /* ActivityIndicating+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicating+UIViewController.swift"; sourceTree = "<group>"; };
+		696FD8D722C0BAC600A44CCE /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		696FD8D922C0F2A400A44CCE /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
+		696FD8DB22C0F79F00A44CCE /* ServersTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersTableHeaderView.swift; sourceTree = "<group>"; };
 		69DC546F22ABDD4B00103900 /* ios-party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DC547222ABDD4B00103900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69DC547422ABDD4B00103900 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 			children = (
 				696FD8CC22B6566100A44CCE /* ServersViewController.swift */,
 				696FD8CE22B6566E00A44CCE /* ServersView.swift */,
+				696FD8D722C0BAC600A44CCE /* ServersViewModel.swift */,
+				696FD8D922C0F2A400A44CCE /* ServerTableViewCell.swift */,
+				696FD8DB22C0F79F00A44CCE /* ServersTableHeaderView.swift */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -223,12 +232,15 @@
 				69DC548A22ABF0A800103900 /* LoginEntryTextField.swift in Sources */,
 				696FD8CF22B6566E00A44CCE /* ServersView.swift in Sources */,
 				69EBC70B22B0287200A3757F /* ServersService.swift in Sources */,
+				696FD8DA22C0F2A400A44CCE /* ServerTableViewCell.swift in Sources */,
 				69DC548822ABE22C00103900 /* LoginView.swift in Sources */,
 				69DC548C22ABFB7600103900 /* NSLayoutConstraint+Fill.swift in Sources */,
 				69DC547B22ABDD4B00103900 /* ios_party.xcdatamodeld in Sources */,
+				696FD8D822C0BAC600A44CCE /* ServersViewModel.swift in Sources */,
 				69E7F63722AE9E8400A6B166 /* LoginService.swift in Sources */,
 				69EBC70922B01DAE00A3757F /* ActivityIndicatorView.swift in Sources */,
 				696FD8D222B6B0FE00A44CCE /* ActivityIndicating.swift in Sources */,
+				696FD8DC22C0F79F00A44CCE /* ServersTableHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

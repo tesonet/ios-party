@@ -2,13 +2,17 @@ import UIKit
 
 final class ServersViewController: UIViewController {
     
+    private let serversResponse: ServersResponse
+    
     private lazy var serversView: ServersView = {
-        let view = ServersView()
+        let viewModel = ServersViewModel(response: serversResponse)
+        let view = ServersView(viewModel: viewModel)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     init(serversResponse: ServersResponse) {
+        self.serversResponse = serversResponse
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,14 +28,13 @@ final class ServersViewController: UIViewController {
     }
     
     private func setupView() {
-        let serversView = ServersView()
         serversView.delegate = self
         serversView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(serversView)
         NSLayoutConstraint.fill(view: view, with: serversView)
     }
     
-    @objc private func logoutTapped() {
+    private func handleLogout() {
         fatalError("logout not implemented")
     }
 }
@@ -39,7 +42,6 @@ final class ServersViewController: UIViewController {
 extension ServersViewController: ServersViewDelegate {
     
     func logoutTapped(in viewController: ServersView) {
-        fatalError("logout not implemented")
+        handleLogout()
     }
 }
-
