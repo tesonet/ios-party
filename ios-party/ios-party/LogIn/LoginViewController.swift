@@ -1,9 +1,11 @@
 import UIKit
+import CoreData
 
 final class LoginViewController: UIViewController {
 
     private let loginService = LoginService()
-    private let serversService = ServersService()
+    
+    private let serversManager = ServersManager()
     
     private lazy var loginView: LoginView = {
         let view = LoginView()
@@ -37,18 +39,14 @@ final class LoginViewController: UIViewController {
     }
     
     private func handleSuccessfulLogIn(with token: String) {
-        loadServers(with: token)
-    }
-    
-    private func loadServers(with token: String) {
         showActivityIndicator()
-        serversService.getServers(token: token) { [weak self] result in
+        serversManager.getServers(with: token) { [weak self] result in
             self?.hideActivityIndicator()
             switch result {
-            case .success(let serverList):
-                self?.presentServers(serversResponse: serverList)
-            case .failure(let error):
-                self?.handleServerLoadError(error: error)
+            case .success(let serverResponse):
+                self?.presentServers(serversResponse: serverResponse)
+            case .failure:
+                self?.presentError(message: "Failed to fetch server data, please call Tesonet support")
             }
         }
     }
