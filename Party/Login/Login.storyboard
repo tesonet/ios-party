@@ -94,7 +94,7 @@
                             <constraint firstItem="RV8-pP-Fow" firstAttribute="top" secondItem="Hyl-yW-NSM" secondAttribute="top" constant="90" id="cBr-SH-lX7"/>
                             <constraint firstItem="Ehd-me-O18" firstAttribute="leading" secondItem="Hyl-yW-NSM" secondAttribute="leading" id="jwZ-eV-LpY"/>
                             <constraint firstItem="Ehd-me-O18" firstAttribute="top" secondItem="zdx-Pj-z97" secondAttribute="top" id="kAv-3t-3fd"/>
-                            <constraint firstItem="Ehd-me-O18" firstAttribute="bottom" secondItem="Hyl-yW-NSM" secondAttribute="bottom" id="pHy-p3-rYt"/>
+                            <constraint firstItem="Ehd-me-O18" firstAttribute="bottom" secondItem="zdx-Pj-z97" secondAttribute="bottom" id="pHy-p3-rYt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hyl-yW-NSM"/>
                     </view>
