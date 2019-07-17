@@ -57,6 +57,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ico-logout" id="gyS-l0-2fG">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="logout:" destination="wCx-NG-3dR" id="wfY-at-JBd"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

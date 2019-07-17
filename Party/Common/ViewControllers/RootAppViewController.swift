@@ -60,7 +60,7 @@ class RootAppViewController: BaseViewController {
     
     @objc
     func handleUnauthorizedAccessNotification() {
-        print("unauth access")
+        LogoutController(source: self).logout()
     }
     
     // MARK: - Private Methods

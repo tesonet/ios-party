@@ -34,6 +34,12 @@ class ServerListViewController: BaseViewController, Alertable {
         
         dataModel.loadData()
     }
+    
+    // MARK: - Actions
+    
+    @IBAction private func logout(_ sender: Any) {
+        LogoutController(source: self).logout()
+    }
 }
 
 // MARK: -
