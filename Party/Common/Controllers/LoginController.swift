@@ -25,6 +25,7 @@ class LoginController {
     }()
     
     // token storage for auth token
+    let tokenStorage: AuthTokenStorage
     
     // keychain storage for password
     
@@ -40,9 +41,9 @@ class LoginController {
     // MARK: - Init
     
     init(source: UIViewController,
-         delegate: LoginControllerDelegate) {
+         tokenStorage: AuthTokenStorage = AuthTokenStorage()) {
         self.source = source
-        self.delegate = delegate
+        self.tokenStorage = tokenStorage
     }
     
     // MARK: - Public Methods
@@ -77,7 +78,7 @@ class LoginController {
     private func handleSuccessfulAuthentication(with token: AuthToken) {
         isLoading = false
         // store token
-        
+        tokenStorage.store(token)
         delegate?.loginControllerDidSuccessfullyLogin(self)
     }
     

@@ -23,7 +23,8 @@ class LoginViewController: BaseViewController, Alertable {
     // MARK: - Overide superclass
     
     override func configureAfterInit() {
-        loginController = LoginController(source: self, delegate: self)
+        loginController = LoginController(source: self)
+        loginController?.delegate = self
     }
 
     // MARK: - Actions

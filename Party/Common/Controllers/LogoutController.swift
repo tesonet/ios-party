@@ -14,18 +14,21 @@ class LogoutController {
     
     weak var source: UIViewController?
     
+    // token storage for auth token
+    let tokenStorage: AuthTokenStorage
+    
     // MARK: - Init
     
-    init(source: UIViewController) {
+    init(source: UIViewController,
+         tokenStorage: AuthTokenStorage = AuthTokenStorage()) {
         self.source = source
+        self.tokenStorage = tokenStorage
     }
     
     // MARK: - Public Methods
     
     func logout() {
-        
-        // clear user data
-        
+        tokenStorage.clear()
         routeToLoginScreen()
     }
     
