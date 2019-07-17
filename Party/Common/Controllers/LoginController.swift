@@ -73,7 +73,7 @@ class LoginController {
     /// Handles successful response.
     ///
     /// - Parameter token: A access token.
-    private func handleSuccessfulAuthentication(with token: String) {
+    private func handleSuccessfulAuthentication(with token: AuthToken) {
         isLoading = false
         // store token
         

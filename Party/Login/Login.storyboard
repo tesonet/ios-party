@@ -101,11 +101,20 @@
                     <connections>
                         <outlet property="passwordTextField" destination="DCq-Iv-Uzy" id="mFt-HP-SN8"/>
                         <outlet property="usernameTextField" destination="gg8-pu-hny" id="cJT-ha-91j"/>
+                        <segue destination="1G7-CK-3FP" kind="custom" identifier="ShowServerListViewController" customClass="ReplaceRootSegue" customModule="Party" customModuleProvider="target" id="eDO-oY-UdZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PV-2X-icF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93" y="108"/>
+        </scene>
+        <!--ServerList-->
+        <scene sceneID="B30-MY-toc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ServerList" id="1G7-CK-3FP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRp-iG-iXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="108"/>
         </scene>
     </scenes>
     <resources>

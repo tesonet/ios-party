@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, Alertable {
     
     // MARK: - UI Components
     
@@ -58,11 +58,11 @@ extension LoginViewController: LoginControllerDelegate {
     // MARK: - LoginControllerDelegate
     
     func loginControllerDidSuccessfullyLogin(_ loginController: LoginController) {
-        
+        performSegue(identifier: .showServerListViewController)
     }
     
     func loginController(_ loginController: LoginController, didFailWithError error: Error) {
-        
+        showErrorAlert(message: error.localizedDescription)
     }
 }
 

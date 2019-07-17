@@ -12,7 +12,7 @@ import Alamofire
 class AuthClient {
     
     enum Result {
-        case success(String)
+        case success(token: AuthToken)
         case failure(Error)
     }
     
@@ -53,15 +53,20 @@ class AuthClient {
             .validate(statusCode: acceptedStatusCodes)
             .validate(contentType: ["application/json"])
             .responseJSON { (response) in
-                let result: Result = .success("test")
+                let result: Result
                 
                 switch response.result {
                 case .success:
-                    print("\(String(data: response.data!, encoding: .utf8))")
-                case .failure:
-                   print("\(response.error?.localizedDescription)")
+                    do {
+                        let decoder = JSONDecoder()
+                        let token = try decoder.decode(AuthToken.self, from: response.data!)
+                        result = .success(token: token)
+                    } catch let error {
+                        result = .failure(error)
+                    }
+                case .failure(let error):
+                    result = .failure(error)
                 }
-                
                 completion(result)
         }
     }

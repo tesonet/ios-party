@@ -31,4 +31,5 @@ extension SegueIdentifier {
     
     static let showSplashScreenViewController = SegueIdentifier("ShowSplashScreenViewController")
     static let showLoginViewController = SegueIdentifier("ShowLoginViewController")
+    static let showServerListViewController = SegueIdentifier("ShowServerListViewController")
 }
