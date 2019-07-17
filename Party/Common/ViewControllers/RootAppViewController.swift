@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RootAppViewController: UIViewController {
+class RootAppViewController: BaseViewController {
     
     // MARK: - Lifecycle
     
@@ -16,6 +16,14 @@ class RootAppViewController: UIViewController {
         super.viewDidLoad()
         
         performSegue(identifier: .showSplashScreenViewController)        
+    }
+    
+    override func configureAfterInit() {
+        addObservers()
+    }
+    
+    deinit {
+        removeObservers()
     }
     
     // MARK: - Public Methods
@@ -33,6 +41,26 @@ class RootAppViewController: UIViewController {
         } else {
             addViewController(viewController)
         }
+    }
+    
+    // MARK: - Notifications
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleUnauthorizedAccessNotification),
+                                               name: .unauthorizedAccess,
+                                               object: nil)
+    }
+    
+    func removeObservers() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: .unauthorizedAccess,
+                                                  object: nil)
+    }
+    
+    @objc
+    func handleUnauthorizedAccessNotification() {
+        print("unauth access")
     }
     
     // MARK: - Private Methods

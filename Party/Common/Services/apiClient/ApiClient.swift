@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+extension Notification.Name {
+    static let unauthorizedAccess = Notification.Name("UnauthorizedAccess")
+}
+
 class ApiClient {
     
     // MARK: - Dependancies
@@ -56,8 +60,9 @@ class ApiClient {
                         failure(error)
                     }
                 case .failure(let error):
-                    if (error as NSError).code == 401 {
-                        // logout user!
+                    if let afError = error as? AFError,
+                        afError.responseCode == 401 {
+                        NotificationCenter.default.post(name: .unauthorizedAccess, object: nil)
                     }
                     failure(error)
                 }
