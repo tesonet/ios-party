@@ -8,13 +8,32 @@
 
 import UIKit
 
-class SplashScreenViewController: UIViewController {
+class SplashScreenViewController: BaseViewController {
+    
+    // MARK: - Dependencies
+    
+    var tokenStorage: AuthTokenStorage!
+    
+    // MARK: - LifeCicle
+    
+    override func configureAfterInit() {
+        tokenStorage = AuthTokenStorage()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // test
-        performSegue(identifier: .showLoginViewController)
+        perform()
+    }
+    
+    // MARK: - Private methods
+    
+    private func perform() {
+        guard tokenStorage.retrieve() != nil else {
+            performSegue(identifier: .showLoginViewController)
+            return
+        }
+        performSegue(identifier: .showServerListViewController)
     }
 
 }

@@ -59,6 +59,7 @@
                     </view>
                     <connections>
                         <segue destination="C11-Nq-SmX" kind="custom" identifier="ShowLoginViewController" customClass="ReplaceRootSegue" customModule="Party" customModuleProvider="target" id="vEr-sO-LHY"/>
+                        <segue destination="mIf-JX-wfZ" kind="custom" identifier="ShowServerListViewController" customClass="ReplaceRootSegue" customModule="Party" customModuleProvider="target" id="ukx-IX-mTX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2a-pT-XC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -79,7 +80,7 @@
                 <viewControllerPlaceholder storyboardName="ServerList" id="mIf-JX-wfZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtA-4M-CXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="227"/>
+            <point key="canvasLocation" x="918" y="227"/>
         </scene>
     </scenes>
     <resources>

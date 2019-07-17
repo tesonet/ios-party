@@ -28,6 +28,8 @@ class AuthTokenStorage {
     
     func store(_ token: AuthToken?, forKey key: String = authTokenKey) {
         guard let token = token else {
+            storage.set(nil, forKey: key)
+            storage.synchronize()
             return
         }
         let data = try? JSONEncoder().encode(token)
