@@ -9,7 +9,9 @@
 import Foundation
 
 protocol ServerListDataModelDelegate: class {
-    func serverListDataModelDidUpdate(_ dataModel: ServerListDataModel)
+    func serverListDataModelDidStartLoading(_ dataModel: ServerListDataModel)
+    func serverListDataModelDidLoad(_ dataModel: ServerListDataModel)
+    func serverListDataModelDidSortData(_ dataModel: ServerListDataModel)
     func serverListDataModel(_ dataModel: ServerListDataModel, didFailWithError error: Error)
 }
 
@@ -48,12 +50,9 @@ class ServerListDataModel {
         }
         isLoading = true
         
-        apiClient.load(Server.get(),
-                       success: { [weak self] (servers) in
-                        self?.handleSuccess(with: servers)
-            }, failure: { [weak self] (error) in
-                self?.handleFailure(with: error)
-        })
+        delegate?.serverListDataModelDidStartLoading(self)
+        
+        startLoadingData()
     }
     
     /// Sorts list of data.
@@ -66,10 +65,19 @@ class ServerListDataModel {
         case .distance:
             data.sort(by: { $0.distance < $1.distance })
         }
-        delegate?.serverListDataModelDidUpdate(self)
+        delegate?.serverListDataModelDidSortData(self)
     }
     
     // MARK: - Private Methods
+    
+    private func startLoadingData() {
+        apiClient.load(Server.get(),
+                       success: { [weak self] (servers) in
+                        self?.handleSuccess(with: servers)
+            }, failure: { [weak self] (error) in
+                self?.handleFailure(with: error)
+        })
+    }
     
     private func handleFailure(with error: Error) {
         isLoading = false
@@ -79,6 +87,6 @@ class ServerListDataModel {
     private func handleSuccess(with data: [Server]?) {
         isLoading = false
         self.data = data?.map { ServerCellViewModel(server: $0) } ?? []
-        delegate?.serverListDataModelDidUpdate(self)
+        delegate?.serverListDataModelDidLoad(self)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ServerListViewController: BaseViewController, Alertable {
+class ServerListViewController: BaseViewController, Alertable, LoaderDisplaying {
 
     // MARK: - UI Components
     
@@ -72,8 +72,21 @@ extension ServerListViewController: ServerListDataModelDelegate {
     
     // MARK: - ServerListDataModelDelegate
     
-    func serverListDataModelDidUpdate(_ dataModel: ServerListDataModel) {
+    func serverListDataModelDidStartLoading(_ dataModel: ServerListDataModel) {
+        showLoader()
+    }
+    
+    func serverListDataModelDidSortData(_ dataModel: ServerListDataModel) {
         tableView.reloadData()
+    }
+    
+    func serverListDataModelDidLoad(_ dataModel: ServerListDataModel) {
+        // add delay just to see loader before data is loaded. :)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            self?.dismissLoader { 
+                self?.tableView.reloadData()
+            }
+        }
     }
     
     func serverListDataModel(_ dataModel: ServerListDataModel, didFailWithError error: Error) {

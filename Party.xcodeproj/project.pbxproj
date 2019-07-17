@@ -46,6 +46,9 @@
 		9CA673C022DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673BF22DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift */; };
 		9CA673C222DFC07E0079E3CF /* AuthTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673C122DFC07E0079E3CF /* AuthTokenStorage.swift */; };
 		9CA673C422DFCAFF0079E3CF /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673C322DFCAFF0079E3CF /* Authenticator.swift */; };
+		9CA673C722DFD7B40079E3CF /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673C622DFD7B40079E3CF /* LoaderViewController.swift */; };
+		9CA673C922DFD7CC0079E3CF /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA673C822DFD7CC0079E3CF /* LoaderViewController.xib */; };
+		9CA673CB22DFD95B0079E3CF /* LoaderDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673CA22DFD95B0079E3CF /* LoaderDisplaying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +94,9 @@
 		9CA673BF22DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+initialViewController.swift"; sourceTree = "<group>"; };
 		9CA673C122DFC07E0079E3CF /* AuthTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStorage.swift; sourceTree = "<group>"; };
 		9CA673C322DFCAFF0079E3CF /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		9CA673C622DFD7B40079E3CF /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		9CA673C822DFD7CC0079E3CF /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
+		9CA673CA22DFD95B0079E3CF /* LoaderDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDisplaying.swift; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +210,7 @@
 		9C2B48AF22DF471100AD5B29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9CA673C522DFD79B0079E3CF /* LoaderViewController */,
 				9C2B48B022DF472B00AD5B29 /* RootAppViewController.swift */,
 				9C2B48EA22DFA51E00AD5B29 /* BaseViewController.swift */,
 			);
@@ -315,6 +322,16 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		9CA673C522DFD79B0079E3CF /* LoaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CA673C622DFD7B40079E3CF /* LoaderViewController.swift */,
+				9CA673C822DFD7CC0079E3CF /* LoaderViewController.xib */,
+				9CA673CA22DFD95B0079E3CF /* LoaderDisplaying.swift */,
+			);
+			path = LoaderViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,6 +397,7 @@
 				9C2B489922DF42B000AD5B29 /* SplashScreen.storyboard in Resources */,
 				9C2B48AB22DF451300AD5B29 /* ServerList.storyboard in Resources */,
 				9C2B489022DF3FCA00AD5B29 /* LaunchScreen.storyboard in Resources */,
+				9CA673C922DFD7CC0079E3CF /* LoaderViewController.xib in Resources */,
 				9C2B488D22DF3FCA00AD5B29 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA673CB22DFD95B0079E3CF /* LoaderDisplaying.swift in Sources */,
 				9C2B48A922DF450600AD5B29 /* LoginViewController.swift in Sources */,
 				9C2B488822DF3FC900AD5B29 /* ViewController.swift in Sources */,
 				9C2B48B422DF489900AD5B29 /* SetContentSegue.swift in Sources */,
@@ -446,6 +465,7 @@
 				9C2B48BE22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift in Sources */,
 				9C2B48E222DF943A00AD5B29 /* Resource.swift in Sources */,
 				9C2B48AD22DF452400AD5B29 /* ServerListViewController.swift in Sources */,
+				9CA673C722DFD7B40079E3CF /* LoaderViewController.swift in Sources */,
 				9C2B48C222DF5DEC00AD5B29 /* IconTextField.swift in Sources */,
 				9C2B488622DF3FC900AD5B29 /* AppDelegate.swift in Sources */,
 				9C2B48D222DF8DB200AD5B29 /* UITableView+cells.swift in Sources */,
