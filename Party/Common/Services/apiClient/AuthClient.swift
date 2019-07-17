@@ -1,11 +1,3 @@
-//
-//  AuthClient.swift
-//  Party
-//
-//  Created by Darius Janavicius on 17/07/2019.
-//  Copyright © 2019 tesonet. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 
@@ -13,11 +5,11 @@ class AuthClient {
     
     enum Result {
         case success(token: AuthToken)
-        case failure(error: Error)
+        case failure(Error)
     }
     
     // MARK: - Dependancies
-    private let apiClient: ApiClient
+    
     private var sessionManager: Alamofire.SessionManager
     
     // MARK: - State
@@ -27,8 +19,7 @@ class AuthClient {
     
     // MARK: Init
     
-    init(baseUrl: URL, apiClient: ApiClient) {
-        self.apiClient = apiClient
+    init(baseUrl: URL) {
         self.baseUrl = baseUrl
         self.sessionManager = Alamofire.SessionManager.default
     }
@@ -41,20 +32,37 @@ class AuthClient {
     ///   - username: A username value to authenticate user.
     ///   - password: A password value to authenticate user
     ///   - completion: A result block after authentication process.
-    func authenticate(with username: String,
-                      password: String,
-                      completion: @escaping (_ result: Result) -> Void) {
+    func authenticate(with username: String, password: String, completion: @escaping (_ result: Result) -> Void) {
         let resource = AuthToken.get(username: username, password: password)
-    
-        apiClient.load(resource,
-                       success: { (token) in
-                        if let token = token {
-                            completion(.success(token: token))
+        let url = baseUrl.appendingPathComponent(resource.endpoint.path())
+        
+        var acceptedStatusCodes: [Int] = Array(200..<300)
+        acceptedStatusCodes += [400, 500]
+        
+        // Performe a request.
+        sessionManager.request(url,
+                               method: resource.method,
+                               parameters: resource.parameters)
+            .validate(statusCode: acceptedStatusCodes)
+            .validate(contentType: ["application/json"])
+            .responseJSON { (response) in
+                let result: Result
+                
+                switch response.result {
+                case .success:
+                    do {
+                        if let token = try response.data.flatMap(resource.parse) {
+                            result = .success(token: token)
                         } else {
-                            //completion(.failure(error: error))
+                            result = .failure(AppError.unknown)
                         }
-        }, failure: { (error) in
-            completion(.failure(error: error))
-        })
+                    } catch let error {
+                        result = .failure(error)
+                    }
+                case .failure(let error):
+                    result = .failure(error)
+                }
+                completion(result)
+        }
     }
 }

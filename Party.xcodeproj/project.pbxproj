@@ -41,6 +41,7 @@
 		9C2B48E722DFA0A300AD5B29 /* ServerListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48E622DFA0A300AD5B29 /* ServerListDataModel.swift */; };
 		9C2B48E922DFA22B00AD5B29 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48E822DFA22B00AD5B29 /* Server.swift */; };
 		9C2B48EB22DFA51E00AD5B29 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48EA22DFA51E00AD5B29 /* BaseViewController.swift */; };
+		9CA673BC22DFBC690079E3CF /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673BB22DFBC690079E3CF /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		9C2B48E622DFA0A300AD5B29 /* ServerListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModel.swift; sourceTree = "<group>"; };
 		9C2B48E822DFA22B00AD5B29 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		9C2B48EA22DFA51E00AD5B29 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9CA673BB22DFBC690079E3CF /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +269,7 @@
 		9C2B48CE22DF876100AD5B29 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9CA673BB22DFBC690079E3CF /* AppError.swift */,
 				9C2B48CF22DF877200AD5B29 /* Alertable.swift */,
 				9C2B48DD22DF8F6400AD5B29 /* CellRepresentable.swift */,
 			);
@@ -438,6 +441,7 @@
 				9C2B48DC22DF8F4700AD5B29 /* ServerCellViewModel.swift in Sources */,
 				9C2B48DA22DF8F3800AD5B29 /* ServerCell.swift in Sources */,
 				9C2B48D022DF877200AD5B29 /* Alertable.swift in Sources */,
+				9CA673BC22DFBC690079E3CF /* AppError.swift in Sources */,
 				9C2B48A122DF43FC00AD5B29 /* SplashScreenViewController.swift in Sources */,
 				9C2B48DE22DF8F6400AD5B29 /* CellRepresentable.swift in Sources */,
 				9C2B48E722DFA0A300AD5B29 /* ServerListDataModel.swift in Sources */,

@@ -19,11 +19,9 @@ class LoginController {
     
     // MARK: - Dependencies
     
-    let apiClient: ApiClient
-    
     /// A client used to authenticate user.
     lazy var authClient: AuthClient = {
-        AuthClient(baseUrl: Backend.baseUrl, apiClient: apiClient)
+        AuthClient(baseUrl: Backend.baseUrl)
     }()
     
     // token storage for auth token
@@ -42,11 +40,9 @@ class LoginController {
     // MARK: - Init
     
     init(source: UIViewController,
-         delegate: LoginControllerDelegate,
-         apiClient: ApiClient = ApiClient.shared) {
+         delegate: LoginControllerDelegate) {
         self.source = source
         self.delegate = delegate
-        self.apiClient = apiClient
     }
     
     // MARK: - Public Methods
