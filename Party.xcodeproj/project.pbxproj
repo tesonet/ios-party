@@ -49,6 +49,10 @@
 		9CA673C722DFD7B40079E3CF /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673C622DFD7B40079E3CF /* LoaderViewController.swift */; };
 		9CA673C922DFD7CC0079E3CF /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA673C822DFD7CC0079E3CF /* LoaderViewController.xib */; };
 		9CA673CB22DFD95B0079E3CF /* LoaderDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673CA22DFD95B0079E3CF /* LoaderDisplaying.swift */; };
+		9CA673CE22DFE0010079E3CF /* ServerSectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA673CD22DFE0010079E3CF /* ServerSectionViewHeader.xib */; };
+		9CA673D022DFE0410079E3CF /* ServerSectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673CF22DFE0410079E3CF /* ServerSectionViewHeader.swift */; };
+		9CA673D222DFE10C0079E3CF /* UITableView+sectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673D122DFE10C0079E3CF /* UITableView+sectionHeader.swift */; };
+		9CA673D622DFE3040079E3CF /* UIView+dropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673D522DFE3040079E3CF /* UIView+dropShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +101,10 @@
 		9CA673C622DFD7B40079E3CF /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		9CA673C822DFD7CC0079E3CF /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		9CA673CA22DFD95B0079E3CF /* LoaderDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDisplaying.swift; sourceTree = "<group>"; };
+		9CA673CD22DFE0010079E3CF /* ServerSectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerSectionViewHeader.xib; sourceTree = "<group>"; };
+		9CA673CF22DFE0410079E3CF /* ServerSectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSectionViewHeader.swift; sourceTree = "<group>"; };
+		9CA673D122DFE10C0079E3CF /* UITableView+sectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+sectionHeader.swift"; sourceTree = "<group>"; };
+		9CA673D522DFE3040079E3CF /* UIView+dropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+dropShadow.swift"; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +250,8 @@
 				9C2B48D122DF8DB200AD5B29 /* UITableView+cells.swift */,
 				9C2B48D322DF8DEE00AD5B29 /* String+classNameAsString.swift */,
 				9CA673BF22DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift */,
+				9CA673D122DFE10C0079E3CF /* UITableView+sectionHeader.swift */,
+				9CA673D522DFE3040079E3CF /* UIView+dropShadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +308,7 @@
 		9C2B48D522DF8EEC00AD5B29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9CA673CC22DFDF960079E3CF /* ServerSectionViewHeader */,
 				9C2B48D622DF8F0600AD5B29 /* ServerCell */,
 			);
 			path = Views;
@@ -330,6 +341,15 @@
 				9CA673CA22DFD95B0079E3CF /* LoaderDisplaying.swift */,
 			);
 			path = LoaderViewController;
+			sourceTree = "<group>";
+		};
+		9CA673CC22DFDF960079E3CF /* ServerSectionViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9CA673CD22DFE0010079E3CF /* ServerSectionViewHeader.xib */,
+				9CA673CF22DFE0410079E3CF /* ServerSectionViewHeader.swift */,
+			);
+			path = ServerSectionViewHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +416,7 @@
 				9C2B48A722DF44F700AD5B29 /* Login.storyboard in Resources */,
 				9C2B489922DF42B000AD5B29 /* SplashScreen.storyboard in Resources */,
 				9C2B48AB22DF451300AD5B29 /* ServerList.storyboard in Resources */,
+				9CA673CE22DFE0010079E3CF /* ServerSectionViewHeader.xib in Resources */,
 				9C2B489022DF3FCA00AD5B29 /* LaunchScreen.storyboard in Resources */,
 				9CA673C922DFD7CC0079E3CF /* LoaderViewController.xib in Resources */,
 				9C2B488D22DF3FCA00AD5B29 /* Assets.xcassets in Resources */,
@@ -451,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA673D622DFE3040079E3CF /* UIView+dropShadow.swift in Sources */,
 				9CA673CB22DFD95B0079E3CF /* LoaderDisplaying.swift in Sources */,
 				9C2B48A922DF450600AD5B29 /* LoginViewController.swift in Sources */,
 				9C2B488822DF3FC900AD5B29 /* ViewController.swift in Sources */,
@@ -459,6 +481,7 @@
 				9C2B48E022DF935200AD5B29 /* ApiClient.swift in Sources */,
 				9C2B48EB22DFA51E00AD5B29 /* BaseViewController.swift in Sources */,
 				9C2B48B722DF524B00AD5B29 /* SegueIdentifier.swift in Sources */,
+				9CA673D222DFE10C0079E3CF /* UITableView+sectionHeader.swift in Sources */,
 				9C2B48BA22DF552100AD5B29 /* UIViewController+performSegue.swift in Sources */,
 				9C2B48C622DF736600AD5B29 /* AuthClient.swift in Sources */,
 				9CA673C422DFCAFF0079E3CF /* Authenticator.swift in Sources */,
@@ -479,6 +502,7 @@
 				9CA673BC22DFBC690079E3CF /* AppError.swift in Sources */,
 				9C2B48A122DF43FC00AD5B29 /* SplashScreenViewController.swift in Sources */,
 				9C2B48DE22DF8F6400AD5B29 /* CellRepresentable.swift in Sources */,
+				9CA673D022DFE0410079E3CF /* ServerSectionViewHeader.swift in Sources */,
 				9C2B48E722DFA0A300AD5B29 /* ServerListDataModel.swift in Sources */,
 				9C2B48CD22DF832F00AD5B29 /* AuthToken.swift in Sources */,
 				9CA673C222DFC07E0079E3CF /* AuthTokenStorage.swift in Sources */,

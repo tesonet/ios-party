@@ -30,8 +30,7 @@ class ServerListViewController: BaseViewController, Alertable, LoaderDisplaying 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerCellNib(withType: ServerCell.self)
-        
+        registerTableViewCells()
         dataModel.loadData()
     }
     
@@ -63,6 +62,13 @@ class ServerListViewController: BaseViewController, Alertable, LoaderDisplaying 
         actionSheet.addAction(cancelAction)
         
         present(actionSheet, animated: true, completion: nil)
+    }
+    
+    // MARK: - Private methods
+    
+    private func registerTableViewCells() {
+        tableView.registerCellNib(withType: ServerCell.self)
+        tableView.registerHeaderFoorterNib(withType: ServerSectionViewHeader.self)
     }
 }
 
@@ -112,5 +118,14 @@ extension ServerListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return dataModel.data[indexPath.row].cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header: ServerSectionViewHeader = tableView.dequeueReusableHeaderFooter()
+        return header
     }
 }
