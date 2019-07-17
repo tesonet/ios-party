@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="RV8-pP-Fow">
-                                <rect key="frame" x="37" y="120" width="246" height="35"/>
+                                <rect key="frame" x="37" y="110" width="246" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="7Eg-ze-gBA"/>
                                 </constraints>
@@ -77,6 +77,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="login:" destination="5Bi-i1-dR6" eventType="touchUpInside" id="Yj1-h2-JMc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -95,6 +98,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hyl-yW-NSM"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="DCq-Iv-Uzy" id="mFt-HP-SN8"/>
+                        <outlet property="usernameTextField" destination="gg8-pu-hny" id="cJT-ha-91j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PV-2X-icF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

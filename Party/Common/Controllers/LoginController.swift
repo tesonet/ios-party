@@ -19,7 +19,10 @@ class LoginController {
     
     // MARK: - Dependencies
     
-    // auth client - to authenticae
+    /// A client used to authenticate user.
+    lazy var authClient: AuthClient = {
+        AuthClient(baseUrl: Backend.baseUrl)
+    }()
     
     // token storage for auth token
     
@@ -43,6 +46,11 @@ class LoginController {
     
     // MARK: - Public Methods
     
+    /// Starts login process.
+    ///
+    /// - Parameters:
+    ///   - username: A user typed text.
+    ///   - password: A user typed text.
     func startLogin(with username: String, password: String) {
         guard isLoading == false else {
             // tried to login when already in progress.
@@ -50,11 +58,21 @@ class LoginController {
         }
         isLoading = true
         
-        // start authentification
+        authClient.authenticate(with: username, password: password) { [weak self] (result) in
+            switch result {
+            case .success(let token):
+                self?.handleSuccessfulAuthentication(with: token)
+            case .failure(let error):
+                self?.handleFailure(with: error)
+            }
+        }
     }
     
     // MARK: - Private Methods
     
+    /// Handles successful response.
+    ///
+    /// - Parameter token: A access token.
     private func handleSuccessfulAuthentication(with token: String) {
         isLoading = false
         // store token
@@ -62,6 +80,9 @@ class LoginController {
         delegate?.loginControllerDidSuccessfullyLogin(self)
     }
     
+    /// Handles failed request.
+    ///
+    /// - Parameter error: A error that needs to be handled.
     private func handleFailure(with error: Error) {
         isLoading = false
         delegate?.loginController(self, didFailWithError: error)
