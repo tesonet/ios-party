@@ -12,3 +12,26 @@ struct AuthToken: Codable {
     
     let token: String
 }
+
+extension AuthToken {
+    
+    struct Parameters {
+        static let username = "username"
+        static let password = "password"
+    }
+    
+    /// Creates resource for API request to retrieve token.
+    ///
+    /// - Parameters:
+    ///   - username: A username value to authenticate user.
+    ///   - password: A password value to authenticate user
+    /// - Returns: A resource for API request.
+    static func get(username: String,
+                    password: String) -> Resource<AuthToken> {
+        let parameters = [Parameters.username: username,
+                          Parameters.password: password]
+        return Resource<AuthToken>.entity(.tokens,
+                                          method: .post,
+                                          parameters: parameters)
+    }
+}
