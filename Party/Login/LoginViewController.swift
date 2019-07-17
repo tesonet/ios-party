@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, Alertable {
+class LoginViewController: BaseViewController, Alertable {
     
     // MARK: - UI Components
     
@@ -20,18 +20,10 @@ class LoginViewController: UIViewController, Alertable {
     
     private var loginController: LoginController?
     
-    // MARK: - Init
+    // MARK: - Overide superclass
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        configureAfterInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        configureAfterInit()
+    override func configureAfterInit() {
+        loginController = LoginController(source: self, delegate: self)
     }
 
     // MARK: - Actions
@@ -42,12 +34,6 @@ class LoginViewController: UIViewController, Alertable {
                 return
         }
         loginController?.startLogin(with: username, password: password)
-    }
-    
-    // MARK: - Private methods
-    
-    private func configureAfterInit() {
-        loginController = LoginController(source: self, delegate: self)
     }
 }
 

@@ -38,6 +38,9 @@
 		9C2B48DE22DF8F6400AD5B29 /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48DD22DF8F6400AD5B29 /* CellRepresentable.swift */; };
 		9C2B48E022DF935200AD5B29 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48DF22DF935200AD5B29 /* ApiClient.swift */; };
 		9C2B48E222DF943A00AD5B29 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48E122DF943A00AD5B29 /* Resource.swift */; };
+		9C2B48E722DFA0A300AD5B29 /* ServerListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48E622DFA0A300AD5B29 /* ServerListDataModel.swift */; };
+		9C2B48E922DFA22B00AD5B29 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48E822DFA22B00AD5B29 /* Server.swift */; };
+		9C2B48EB22DFA51E00AD5B29 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48EA22DFA51E00AD5B29 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		9C2B48DD22DF8F6400AD5B29 /* CellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRepresentable.swift; sourceTree = "<group>"; };
 		9C2B48DF22DF935200AD5B29 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		9C2B48E122DF943A00AD5B29 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		9C2B48E622DFA0A300AD5B29 /* ServerListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModel.swift; sourceTree = "<group>"; };
+		9C2B48E822DFA22B00AD5B29 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		9C2B48EA22DFA51E00AD5B29 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +168,7 @@
 		9C2B48A322DF44C400AD5B29 /* ServerList */ = {
 			isa = PBXGroup;
 			children = (
+				9C2B48E522DFA08B00AD5B29 /* DataModels */,
 				9C2B48D522DF8EEC00AD5B29 /* Views */,
 				9C2B48AA22DF451300AD5B29 /* ServerList.storyboard */,
 				9C2B48AC22DF452400AD5B29 /* ServerListViewController.swift */,
@@ -188,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9C2B48B022DF472B00AD5B29 /* RootAppViewController.swift */,
+				9C2B48EA22DFA51E00AD5B29 /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -281,6 +289,15 @@
 				9C2B48DB22DF8F4700AD5B29 /* ServerCellViewModel.swift */,
 			);
 			path = ServerCell;
+			sourceTree = "<group>";
+		};
+		9C2B48E522DFA08B00AD5B29 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C2B48E622DFA0A300AD5B29 /* ServerListDataModel.swift */,
+				9C2B48E822DFA22B00AD5B29 /* Server.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +423,7 @@
 				9C2B48B422DF489900AD5B29 /* SetContentSegue.swift in Sources */,
 				9C2B48B122DF472B00AD5B29 /* RootAppViewController.swift in Sources */,
 				9C2B48E022DF935200AD5B29 /* ApiClient.swift in Sources */,
+				9C2B48EB22DFA51E00AD5B29 /* BaseViewController.swift in Sources */,
 				9C2B48B722DF524B00AD5B29 /* SegueIdentifier.swift in Sources */,
 				9C2B48BA22DF552100AD5B29 /* UIViewController+performSegue.swift in Sources */,
 				9C2B48C622DF736600AD5B29 /* AuthClient.swift in Sources */,
@@ -422,8 +440,10 @@
 				9C2B48D022DF877200AD5B29 /* Alertable.swift in Sources */,
 				9C2B48A122DF43FC00AD5B29 /* SplashScreenViewController.swift in Sources */,
 				9C2B48DE22DF8F6400AD5B29 /* CellRepresentable.swift in Sources */,
+				9C2B48E722DFA0A300AD5B29 /* ServerListDataModel.swift in Sources */,
 				9C2B48CD22DF832F00AD5B29 /* AuthToken.swift in Sources */,
 				9C2B48C922DF75F700AD5B29 /* LoginController.swift in Sources */,
+				9C2B48E922DFA22B00AD5B29 /* Server.swift in Sources */,
 				9C2B48CB22DF7AC500AD5B29 /* Backend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,6 @@ class ServerCell: UITableViewCell {
     
     func configure(with viewModel: ServerCellViewModel) {
         serverLabel.text = viewModel.serverName
-        distanceLabel.text = viewModel.distance
+        distanceLabel.text = viewModel.rawDistance
     }
 }
