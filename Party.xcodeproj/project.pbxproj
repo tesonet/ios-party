@@ -24,6 +24,7 @@
 		9C2B48BA22DF552100AD5B29 /* UIViewController+performSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48B922DF552100AD5B29 /* UIViewController+performSegue.swift */; };
 		9C2B48BC22DF5B8000AD5B29 /* ReplaceRootSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48BB22DF5B8000AD5B29 /* ReplaceRootSegue.swift */; };
 		9C2B48BE22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48BD22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift */; };
+		9C2B48C222DF5DEC00AD5B29 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48C122DF5DEC00AD5B29 /* IconTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		9C2B48B922DF552100AD5B29 /* UIViewController+performSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+performSegue.swift"; sourceTree = "<group>"; };
 		9C2B48BB22DF5B8000AD5B29 /* ReplaceRootSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceRootSegue.swift; sourceTree = "<group>"; };
 		9C2B48BD22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+rootAppViewController.swift"; sourceTree = "<group>"; };
+		9C2B48C122DF5DEC00AD5B29 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 		9C2B48AE22DF459200AD5B29 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9C2B48BF22DF5DA800AD5B29 /* Views */,
 				9C2B48B822DF550900AD5B29 /* Extensions */,
 				9C2B48B522DF523400AD5B29 /* Models */,
 				9C2B48B222DF487F00AD5B29 /* Segues */,
@@ -183,6 +186,14 @@
 				9C2B48BD22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C2B48BF22DF5DA800AD5B29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C2B48C122DF5DEC00AD5B29 /* IconTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				9C2B48BA22DF552100AD5B29 /* UIViewController+performSegue.swift in Sources */,
 				9C2B48BE22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift in Sources */,
 				9C2B48AD22DF452400AD5B29 /* ServerListViewController.swift in Sources */,
+				9C2B48C222DF5DEC00AD5B29 /* IconTextField.swift in Sources */,
 				9C2B488622DF3FC900AD5B29 /* AppDelegate.swift in Sources */,
 				9C2B48BC22DF5B8000AD5B29 /* ReplaceRootSegue.swift in Sources */,
 				9C2B48A122DF43FC00AD5B29 /* SplashScreenViewController.swift in Sources */,
