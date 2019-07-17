@@ -26,3 +26,8 @@ extension SegueIdentifier: Equatable {
         return lhs.rawValue == rhs.rawValue
     }
 }
+
+extension SegueIdentifier {
+    
+    static let showSplashScreenViewController = SegueIdentifier("ShowSplashScreenViewController")
+}

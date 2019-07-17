@@ -21,6 +21,7 @@
 		9C2B48B122DF472B00AD5B29 /* RootAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48B022DF472B00AD5B29 /* RootAppViewController.swift */; };
 		9C2B48B422DF489900AD5B29 /* SetContentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48B322DF489900AD5B29 /* SetContentSegue.swift */; };
 		9C2B48B722DF524B00AD5B29 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48B622DF524B00AD5B29 /* SegueIdentifier.swift */; };
+		9C2B48BA22DF552100AD5B29 /* UIViewController+performSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B48B922DF552100AD5B29 /* UIViewController+performSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9C2B48B022DF472B00AD5B29 /* RootAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAppViewController.swift; sourceTree = "<group>"; };
 		9C2B48B322DF489900AD5B29 /* SetContentSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetContentSegue.swift; sourceTree = "<group>"; };
 		9C2B48B622DF524B00AD5B29 /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
+		9C2B48B922DF552100AD5B29 /* UIViewController+performSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+performSegue.swift"; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 		9C2B48AE22DF459200AD5B29 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9C2B48B822DF550900AD5B29 /* Extensions */,
 				9C2B48B522DF523400AD5B29 /* Models */,
 				9C2B48B222DF487F00AD5B29 /* Segues */,
 				9C2B48AF22DF471100AD5B29 /* ViewControllers */,
@@ -166,6 +169,14 @@
 				9C2B48B622DF524B00AD5B29 /* SegueIdentifier.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9C2B48B822DF550900AD5B29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C2B48B922DF552100AD5B29 /* UIViewController+performSegue.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				9C2B48B422DF489900AD5B29 /* SetContentSegue.swift in Sources */,
 				9C2B48B122DF472B00AD5B29 /* RootAppViewController.swift in Sources */,
 				9C2B48B722DF524B00AD5B29 /* SegueIdentifier.swift in Sources */,
+				9C2B48BA22DF552100AD5B29 /* UIViewController+performSegue.swift in Sources */,
 				9C2B48AD22DF452400AD5B29 /* ServerListViewController.swift in Sources */,
 				9C2B488622DF3FC900AD5B29 /* AppDelegate.swift in Sources */,
 				9C2B48A122DF43FC00AD5B29 /* SplashScreenViewController.swift in Sources */,

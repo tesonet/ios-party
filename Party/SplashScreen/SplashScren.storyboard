@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="0z9-jY-dda"/>
                     </view>
                     <connections>
-                        <segue destination="VfS-l4-mAg" kind="custom" identifier="" customClass="SetContentSegue" customModule="Party" customModuleProvider="target" id="qMt-q6-mNc"/>
+                        <segue destination="VfS-l4-mAg" kind="custom" identifier="ShowSplashScreenViewController" customClass="SetContentSegue" customModule="Party" customModuleProvider="target" id="qMt-q6-mNc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLQ-fF-Ky9" userLabel="First Responder" sceneMemberID="firstResponder"/>

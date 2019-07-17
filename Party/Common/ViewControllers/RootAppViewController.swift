@@ -10,6 +10,16 @@ import UIKit
 
 class RootAppViewController: UIViewController {
     
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        performSegue(identifier: .showSplashScreenViewController)        
+    }
+    
+    // MARK: - Public Methods
+    
     /// Displays given view controller as content view controller.
     ///
     /// - Parameter viewController: A view controller that will be added.
