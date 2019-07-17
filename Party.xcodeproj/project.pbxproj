@@ -45,6 +45,7 @@
 		9CA673BE22DFBD4F0079E3CF /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673BD22DFBD4F0079E3CF /* LogoutController.swift */; };
 		9CA673C022DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673BF22DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift */; };
 		9CA673C222DFC07E0079E3CF /* AuthTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673C122DFC07E0079E3CF /* AuthTokenStorage.swift */; };
+		9CA673C422DFCAFF0079E3CF /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673C322DFCAFF0079E3CF /* Authenticator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		9CA673BD22DFBD4F0079E3CF /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
 		9CA673BF22DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+initialViewController.swift"; sourceTree = "<group>"; };
 		9CA673C122DFC07E0079E3CF /* AuthTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStorage.swift; sourceTree = "<group>"; };
+		9CA673C322DFCAFF0079E3CF /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +264,7 @@
 				9C2B48DF22DF935200AD5B29 /* ApiClient.swift */,
 				9C2B48E122DF943A00AD5B29 /* Resource.swift */,
 				9CA673C122DFC07E0079E3CF /* AuthTokenStorage.swift */,
+				9CA673C322DFCAFF0079E3CF /* Authenticator.swift */,
 			);
 			path = apiClient;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				9C2B48B722DF524B00AD5B29 /* SegueIdentifier.swift in Sources */,
 				9C2B48BA22DF552100AD5B29 /* UIViewController+performSegue.swift in Sources */,
 				9C2B48C622DF736600AD5B29 /* AuthClient.swift in Sources */,
+				9CA673C422DFCAFF0079E3CF /* Authenticator.swift in Sources */,
 				9C2B48BE22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift in Sources */,
 				9C2B48E222DF943A00AD5B29 /* Resource.swift in Sources */,
 				9C2B48AD22DF452400AD5B29 /* ServerListViewController.swift in Sources */,

@@ -19,6 +19,8 @@ class ApiClient {
     
     private var sessionManager: Alamofire.SessionManager
     
+    var authenticator: Authenticator
+    
     // MARK: - States
     
     // A reference for global access to a shared ApiClient instance.
@@ -29,9 +31,10 @@ class ApiClient {
     
     // MARK: Init
     
-    init(baseUrl: URL) {
+    init(baseUrl: URL, authenticator: Authenticator) {
         self.baseUrl = baseUrl
         self.sessionManager = Alamofire.SessionManager.default
+        self.authenticator = authenticator
     }
     
     // MARK: Resource loading
@@ -47,7 +50,8 @@ class ApiClient {
         // Performe a request.
         sessionManager.request(url,
                                method: resource.method,
-                               parameters: resource.parameters)
+                               parameters: resource.parameters,
+                               headers: authenticator.authenticationHeader())
             .validate(statusCode: acceptedStatusCodes)
             .validate(contentType: ["application/json"])
             .responseJSON { (response) in

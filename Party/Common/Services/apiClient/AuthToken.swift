@@ -10,7 +10,11 @@ import Foundation
 
 struct AuthToken: Codable {
     
-    let token: String
+    let value: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case value = "token"
+    }
 }
 
 extension AuthToken {

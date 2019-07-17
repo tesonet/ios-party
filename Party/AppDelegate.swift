@@ -22,7 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func configureAPIClient() {
-        let apiClient = ApiClient(baseUrl: Backend.baseUrl)
+        let tokenStorage = AuthTokenStorage()
+        let authenticator = Authenticator(tokenStorage: tokenStorage)
+        let apiClient = ApiClient(baseUrl: Backend.baseUrl,
+                                  authenticator: authenticator)
         ApiClient.shared = apiClient
     }
 }
