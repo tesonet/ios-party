@@ -20,11 +20,21 @@ class LoginViewController: BaseViewController, Alertable {
     
     private var loginController: LoginController?
     
-    // MARK: - Overide superclass
+    private var secureStorage: SecureStorage!
+    
+    // MARK: - Lifecycle
     
     override func configureAfterInit() {
-        loginController = LoginController(source: self)
+        secureStorage = SecureStorage()
+        loginController = LoginController(source: self,
+                                          secureStorage: secureStorage)
         loginController?.delegate = self
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        preloadUserCredentials()
     }
 
     // MARK: - Actions
@@ -35,6 +45,13 @@ class LoginViewController: BaseViewController, Alertable {
                 return
         }
         loginController?.startLogin(with: username, password: password)
+    }
+    
+    // MARK: - Private Methods
+    
+    private func preloadUserCredentials() {
+        usernameTextField.text = secureStorage.value(forKey: usernameKey)
+        passwordTextField.text = secureStorage.value(forKey: passwordKey)
     }
 }
 

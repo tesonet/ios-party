@@ -8,5 +8,5 @@ target 'Party' do
 
   # Pods for Party
     pod 'Alamofire'
-
+    pod 'SwiftKeychainWrapper'
 end

@@ -25,7 +25,10 @@ class LoginController {
     }()
     
     // token storage for auth token
-    let tokenStorage: AuthTokenStorage
+    private let tokenStorage: AuthTokenStorage
+    
+    /// A storage used to save user credentials.
+    private let secureStorage: SecureStorage
     
     // keychain storage for password
     
@@ -41,9 +44,11 @@ class LoginController {
     // MARK: - Init
     
     init(source: UIViewController,
-         tokenStorage: AuthTokenStorage = AuthTokenStorage()) {
+         tokenStorage: AuthTokenStorage = AuthTokenStorage(),
+         secureStorage: SecureStorage) {
         self.source = source
         self.tokenStorage = tokenStorage
+        self.secureStorage = secureStorage
     }
     
     // MARK: - Public Methods
@@ -63,7 +68,9 @@ class LoginController {
         authClient.authenticate(with: username, password: password) { [weak self] (result) in
             switch result {
             case .success(let token):
-                self?.handleSuccessfulAuthentication(with: token)
+                self?.handleSuccessfulAuthentication(with: token,
+                                                     username: username,
+                                                     password: password)
             case .failure(let error):
                 self?.handleFailure(with: error)
             }
@@ -75,10 +82,16 @@ class LoginController {
     /// Handles successful response.
     ///
     /// - Parameter token: A access token.
-    private func handleSuccessfulAuthentication(with token: AuthToken) {
+    private func handleSuccessfulAuthentication(with token: AuthToken,
+                                                username: String,
+                                                password: String) {
         isLoading = false
         // store token
         tokenStorage.store(token)
+        // store username and password to keychin
+        secureStorage.store(username, forKey: usernameKey)
+        secureStorage.store(password, forKey: passwordKey)
+        
         delegate?.loginControllerDidSuccessfullyLogin(self)
     }
     

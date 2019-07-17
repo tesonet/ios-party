@@ -53,6 +53,7 @@
 		9CA673D022DFE0410079E3CF /* ServerSectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673CF22DFE0410079E3CF /* ServerSectionViewHeader.swift */; };
 		9CA673D222DFE10C0079E3CF /* UITableView+sectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673D122DFE10C0079E3CF /* UITableView+sectionHeader.swift */; };
 		9CA673D622DFE3040079E3CF /* UIView+dropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673D522DFE3040079E3CF /* UIView+dropShadow.swift */; };
+		9CA673DA22DFE92C0079E3CF /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673D922DFE92C0079E3CF /* SecureStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		9CA673CF22DFE0410079E3CF /* ServerSectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSectionViewHeader.swift; sourceTree = "<group>"; };
 		9CA673D122DFE10C0079E3CF /* UITableView+sectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+sectionHeader.swift"; sourceTree = "<group>"; };
 		9CA673D522DFE3040079E3CF /* UIView+dropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+dropShadow.swift"; sourceTree = "<group>"; };
+		9CA673D922DFE92C0079E3CF /* SecureStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
 		C249FBF8565CD91284F1F365 /* Pods-Party.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Party.debug.xcconfig"; path = "Target Support Files/Pods-Party/Pods-Party.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +269,8 @@
 		9C2B48C322DF734800AD5B29 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9CA673C122DFC07E0079E3CF /* AuthTokenStorage.swift */,
+				9CA673D922DFE92C0079E3CF /* SecureStorage.swift */,
 				9C2B48C422DF734F00AD5B29 /* apiClient */,
 			);
 			path = Services;
@@ -280,7 +284,6 @@
 				9C2B48CC22DF832F00AD5B29 /* AuthToken.swift */,
 				9C2B48DF22DF935200AD5B29 /* ApiClient.swift */,
 				9C2B48E122DF943A00AD5B29 /* Resource.swift */,
-				9CA673C122DFC07E0079E3CF /* AuthTokenStorage.swift */,
 				9CA673C322DFCAFF0079E3CF /* Authenticator.swift */,
 			);
 			path = apiClient;
@@ -506,6 +509,7 @@
 				9C2B48E722DFA0A300AD5B29 /* ServerListDataModel.swift in Sources */,
 				9C2B48CD22DF832F00AD5B29 /* AuthToken.swift in Sources */,
 				9CA673C222DFC07E0079E3CF /* AuthTokenStorage.swift in Sources */,
+				9CA673DA22DFE92C0079E3CF /* SecureStorage.swift in Sources */,
 				9C2B48C922DF75F700AD5B29 /* LoginController.swift in Sources */,
 				9C2B48E922DFA22B00AD5B29 /* Server.swift in Sources */,
 				9C2B48CB22DF7AC500AD5B29 /* Backend.swift in Sources */,
