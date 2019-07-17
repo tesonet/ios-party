@@ -13,6 +13,8 @@ class SplashScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // test
+        performSegue(identifier: .showLoginViewController)
     }
 
 }

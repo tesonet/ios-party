@@ -30,4 +30,5 @@ extension SegueIdentifier: Equatable {
 extension SegueIdentifier {
     
     static let showSplashScreenViewController = SegueIdentifier("ShowSplashScreenViewController")
+    static let showLoginViewController = SegueIdentifier("ShowLoginViewController")
 }

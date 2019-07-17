@@ -57,6 +57,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FSL-LI-lId"/>
                     </view>
+                    <connections>
+                        <segue destination="C11-Nq-SmX" kind="custom" identifier="ShowLoginViewController" customClass="ReplaceRootSegue" customModule="Party" customModuleProvider="target" id="vEr-sO-LHY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2a-pT-XC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,7 +71,7 @@
                 <viewControllerPlaceholder storyboardName="Login" id="C11-Nq-SmX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gao-Fa-Ti9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="449"/>
+            <point key="canvasLocation" x="895" y="-37"/>
         </scene>
         <!--ServerList-->
         <scene sceneID="iZz-0q-KJl">
@@ -76,7 +79,7 @@
                 <viewControllerPlaceholder storyboardName="ServerList" id="mIf-JX-wfZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtA-4M-CXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="449"/>
+            <point key="canvasLocation" x="894" y="227"/>
         </scene>
     </scenes>
     <resources>
