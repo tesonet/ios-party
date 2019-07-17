@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q2Z-mj-6cQ">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="Q2Z-mj-6cQ" customClass="RootAppViewController" customModule="Party" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cfI-6u-YuV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0z9-jY-dda"/>
@@ -33,9 +33,28 @@
             <objects>
                 <viewController id="VfS-l4-mAg" customClass="SplashScreenViewController" customModule="Party" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DM0-jo-Rr3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="z8F-aT-RyM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="Cju-a7-Yfd">
+                                <rect key="frame" x="64.5" y="120" width="246" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="m2v-YN-cbz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="top" secondItem="DM0-jo-Rr3" secondAttribute="top" id="4k7-Nn-4pf"/>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="trailing" secondItem="FSL-LI-lId" secondAttribute="trailing" id="NDA-Sd-b97"/>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="bottom" secondItem="DM0-jo-Rr3" secondAttribute="bottom" id="ogr-xi-Hp3"/>
+                            <constraint firstItem="Cju-a7-Yfd" firstAttribute="centerX" secondItem="DM0-jo-Rr3" secondAttribute="centerX" id="pBe-yj-ISZ"/>
+                            <constraint firstItem="Cju-a7-Yfd" firstAttribute="top" secondItem="FSL-LI-lId" secondAttribute="top" constant="100" id="pUc-Qo-mbo"/>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="leading" secondItem="FSL-LI-lId" secondAttribute="leading" id="uqM-f0-5cn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FSL-LI-lId"/>
                     </view>
                 </viewController>
@@ -60,4 +79,8 @@
             <point key="canvasLocation" x="556" y="449"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="960" height="540"/>
+        <image name="logo-white" width="246" height="64"/>
+    </resources>
 </document>
