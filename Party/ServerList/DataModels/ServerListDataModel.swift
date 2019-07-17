@@ -9,11 +9,16 @@
 import Foundation
 
 protocol ServerListDataModelDelegate: class {
-    func serverListDataModelDidLoad(_ dataModel: ServerListDataModel)
+    func serverListDataModelDidUpdate(_ dataModel: ServerListDataModel)
     func serverListDataModel(_ dataModel: ServerListDataModel, didFailWithError error: Error)
 }
 
 class ServerListDataModel {
+    
+    enum SortType {
+        case distance
+        case alphanumerical
+    }
     
     // MARK: - Dependencies
     
@@ -36,6 +41,7 @@ class ServerListDataModel {
     
     // MARK: - Public Methods
     
+    /// Loads data from API.
     func loadData() {
         guard isLoading == false else {
             return
@@ -50,6 +56,19 @@ class ServerListDataModel {
         })
     }
     
+    /// Sorts list of data.
+    ///
+    /// - Parameter type: A sorting style.
+    func sort(by type: SortType) {
+        switch type {
+        case .alphanumerical:
+            data.sort(by: { $0.serverName < $1.serverName })
+        case .distance:
+            data.sort(by: { $0.distance < $1.distance })
+        }
+        delegate?.serverListDataModelDidUpdate(self)
+    }
+    
     // MARK: - Private Methods
     
     private func handleFailure(with error: Error) {
@@ -60,6 +79,6 @@ class ServerListDataModel {
     private func handleSuccess(with data: [Server]?) {
         isLoading = false
         self.data = data?.map { ServerCellViewModel(server: $0) } ?? []
-        delegate?.serverListDataModelDidLoad(self)
+        delegate?.serverListDataModelDidUpdate(self)
     }
 }

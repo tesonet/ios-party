@@ -24,7 +24,7 @@ extension ServerCellViewModel {
     init(server: Server) {
         self.serverName = server.name
         self.distance = server.distance
-        self.rawDistance = "\(server.distance)"
+        self.rawDistance = "\(server.distance) km"
     }
 }
 
@@ -41,6 +41,6 @@ extension ServerCellViewModel: CellRepresentable {
     }
     
     var cellHeight: CGFloat {
-        return 44
+        return 50
     }
 }

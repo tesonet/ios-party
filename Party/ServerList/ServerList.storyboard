@@ -18,8 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SG-ni-m1U">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.27585715055465698" blue="0.45094005531734893" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0a2-UO-ptj"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sort" image="ico-sort-light"/>
+                                <connections>
+                                    <action selector="showSortingOptions:" destination="wCx-NG-3dR" eventType="touchUpInside" id="feq-xv-aIC"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bQf-8p-5Cw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="wCx-NG-3dR" id="xBd-67-E7y"/>
@@ -31,8 +44,11 @@
                         <constraints>
                             <constraint firstItem="bQf-8p-5Cw" firstAttribute="leading" secondItem="sBJ-cG-cL9" secondAttribute="leading" id="BEa-ds-mps"/>
                             <constraint firstItem="bQf-8p-5Cw" firstAttribute="trailing" secondItem="sBJ-cG-cL9" secondAttribute="trailing" id="NYs-4G-pkK"/>
-                            <constraint firstItem="bQf-8p-5Cw" firstAttribute="bottom" secondItem="sBJ-cG-cL9" secondAttribute="bottom" id="mDv-i9-Oxr"/>
+                            <constraint firstItem="sBJ-cG-cL9" firstAttribute="trailing" secondItem="1SG-ni-m1U" secondAttribute="trailing" id="OUP-on-n2e"/>
+                            <constraint firstItem="1SG-ni-m1U" firstAttribute="leading" secondItem="sBJ-cG-cL9" secondAttribute="leading" id="eWy-W0-o5v"/>
+                            <constraint firstItem="sBJ-cG-cL9" firstAttribute="bottom" secondItem="1SG-ni-m1U" secondAttribute="bottom" id="keI-04-BrF"/>
                             <constraint firstItem="bQf-8p-5Cw" firstAttribute="top" secondItem="jlb-BJ-eWL" secondAttribute="top" id="oog-6i-ZiU"/>
+                            <constraint firstItem="1SG-ni-m1U" firstAttribute="top" secondItem="bQf-8p-5Cw" secondAttribute="bottom" id="smO-BV-OgJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sBJ-cG-cL9"/>
                     </view>
@@ -92,6 +108,7 @@
     </scenes>
     <resources>
         <image name="ico-logout" width="29.5" height="29.5"/>
+        <image name="ico-sort-light" width="12" height="10"/>
         <image name="logo-dark" width="130" height="34"/>
     </resources>
 </document>
