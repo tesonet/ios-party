@@ -1,5 +1,5 @@
 //
-//  authClient.swift
+//  AuthClient.swift
 //  Party
 //
 //  Created by Darius Janavicius on 17/07/2019.
