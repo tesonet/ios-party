@@ -16,9 +16,8 @@ class DatabaseManager {
     }()
     
     lazy var managedObjectContext: NSManagedObjectContext = {
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
+        managedObjectContext.persistentStoreCoordinator = makePersistentStoreCoordinator()
         return managedObjectContext
     }()
     
@@ -35,10 +34,14 @@ class DatabaseManager {
                     dbEntity.setValue(attribute.value, forKey: attribute.name)
                 }
             }
-            try? self.managedObjectContext.save()
-            self.managedObjectContext.refreshAllObjects()
+            do {
+                try self.managedObjectContext.save()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
         }
     }
+    
     // Loading entities from core data.
     func fetch<T>(_ entities: T.Type, completion: @escaping ([T]) -> Void) where T: Mappable {
         managedObjectContext.perform { [unowned self] in
@@ -54,6 +57,28 @@ class DatabaseManager {
                 completion([])
             }
         }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func makePersistentStoreCoordinator() -> NSPersistentStoreCoordinator {
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        // load persistent stores
+        let options: [AnyHashable: Any] = [
+            NSMigratePersistentStoresAutomaticallyOption: true,
+            NSInferMappingModelAutomaticallyOption: true
+        ]
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = urls[urls.count-1]
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+                                               configurationName: nil,
+                                               at: documentsDirectory.appendingPathComponent("database.sqlite"),
+                                               options: options)
+        } catch {
+            fatalError("failed to add persistent store")
+        }
+        return coordinator
     }
 }
 
