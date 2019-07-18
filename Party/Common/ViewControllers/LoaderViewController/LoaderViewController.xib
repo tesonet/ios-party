@@ -24,25 +24,29 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching the list..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUb-Ga-0P2">
-                    <rect key="frame" x="130" y="550" width="115.5" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <rect key="frame" x="123" y="577.5" width="129.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="v46-9X-RxE">
-                    <rect key="frame" x="169" y="315" width="37" height="37"/>
-                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bT-ca-b4f" customClass="CircleActivityIndicator" customModule="Party" customModuleProvider="target">
+                    <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="h6Y-zI-l5K"/>
+                        <constraint firstAttribute="width" constant="200" id="hRI-lh-ah0"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="oqz-aQ-Fka" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7FD-Ge-x4g"/>
+                <constraint firstItem="2bT-ca-b4f" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BD4-G6-62a"/>
+                <constraint firstItem="2bT-ca-b4f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KKt-9W-ryA"/>
                 <constraint firstItem="KUb-Ga-0P2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MO5-8G-kN6"/>
-                <constraint firstItem="v46-9X-RxE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gwV-Qd-HuG"/>
-                <constraint firstItem="v46-9X-RxE" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="h8h-T9-4Ll"/>
                 <constraint firstAttribute="bottom" secondItem="oqz-aQ-Fka" secondAttribute="bottom" id="hfP-9X-xXu"/>
                 <constraint firstItem="oqz-aQ-Fka" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iBa-rw-TsX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KUb-Ga-0P2" secondAttribute="bottom" constant="100" id="wcu-VU-ssc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KUb-Ga-0P2" secondAttribute="bottom" constant="70" id="wcu-VU-ssc"/>
                 <constraint firstItem="oqz-aQ-Fka" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yt1-kH-gRq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

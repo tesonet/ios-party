@@ -44,6 +44,7 @@
 		9C9250EC22E08949001EF5C0 /* database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C9250EA22E08949001EF5C0 /* database.xcdatamodeld */; };
 		9C9250EE22E08A00001EF5C0 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9250ED22E08A00001EF5C0 /* Mappable.swift */; };
 		9C9250F022E08A0F001EF5C0 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9250EF22E08A0F001EF5C0 /* DatabaseManager.swift */; };
+		9C9250F222E0ADC6001EF5C0 /* CircleActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9250F122E0ADC6001EF5C0 /* CircleActivityIndicator.swift */; };
 		9CA673BC22DFBC690079E3CF /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673BB22DFBC690079E3CF /* AppError.swift */; };
 		9CA673BE22DFBD4F0079E3CF /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673BD22DFBD4F0079E3CF /* LogoutController.swift */; };
 		9CA673C022DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA673BF22DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift */; };
@@ -100,6 +101,7 @@
 		9C9250EB22E08949001EF5C0 /* database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = database.xcdatamodel; sourceTree = "<group>"; };
 		9C9250ED22E08A00001EF5C0 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
 		9C9250EF22E08A0F001EF5C0 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		9C9250F122E0ADC6001EF5C0 /* CircleActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleActivityIndicator.swift; sourceTree = "<group>"; };
 		9CA673BB22DFBC690079E3CF /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		9CA673BD22DFBD4F0079E3CF /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
 		9CA673BF22DFBE2E0079E3CF /* UIStoryboard+initialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+initialViewController.swift"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				9C2B48C122DF5DEC00AD5B29 /* IconTextField.swift */,
+				9C9250F122E0ADC6001EF5C0 /* CircleActivityIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				9C9250EE22E08A00001EF5C0 /* Mappable.swift in Sources */,
 				9C2B48C622DF736600AD5B29 /* AuthClient.swift in Sources */,
 				9CA673C422DFCAFF0079E3CF /* Authenticator.swift in Sources */,
+				9C9250F222E0ADC6001EF5C0 /* CircleActivityIndicator.swift in Sources */,
 				9C2B48BE22DF5BCC00AD5B29 /* UIViewController+rootAppViewController.swift in Sources */,
 				9C2B48E222DF943A00AD5B29 /* Resource.swift in Sources */,
 				9C2B48AD22DF452400AD5B29 /* ServerListViewController.swift in Sources */,
@@ -681,7 +685,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lt.tesonet.animal.Party;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -700,7 +704,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lt.tesonet.animal.Party;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
