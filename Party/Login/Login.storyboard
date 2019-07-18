@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="33" id="7Eg-ze-gBA"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PWI-Kx-VHr">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PWI-Kx-VHr">
                                 <rect key="frame" x="50" y="190" width="220" height="148"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg8-pu-hny" customClass="IconTextField" customModule="Party" customModuleProvider="target">
@@ -86,15 +86,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PWI-Kx-VHr" firstAttribute="centerY" secondItem="zdx-Pj-z97" secondAttribute="centerY" multiplier="1.1" id="1Kg-0z-EHa"/>
                             <constraint firstItem="RV8-pP-Fow" firstAttribute="centerX" secondItem="zdx-Pj-z97" secondAttribute="centerX" id="COJ-4I-b9s"/>
                             <constraint firstItem="Ehd-me-O18" firstAttribute="trailing" secondItem="Hyl-yW-NSM" secondAttribute="trailing" id="F7W-L9-4Mx"/>
                             <constraint firstItem="Hyl-yW-NSM" firstAttribute="trailing" secondItem="PWI-Kx-VHr" secondAttribute="trailing" constant="50" id="USj-kO-TKh"/>
                             <constraint firstItem="PWI-Kx-VHr" firstAttribute="leading" secondItem="Hyl-yW-NSM" secondAttribute="leading" constant="50" id="WaP-cs-fHm"/>
-                            <constraint firstItem="RV8-pP-Fow" firstAttribute="top" secondItem="Hyl-yW-NSM" secondAttribute="top" constant="90" id="cBr-SH-lX7"/>
+                            <constraint firstItem="RV8-pP-Fow" firstAttribute="top" relation="lessThanOrEqual" secondItem="Hyl-yW-NSM" secondAttribute="top" constant="90" id="cBr-SH-lX7"/>
+                            <constraint firstItem="PWI-Kx-VHr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RV8-pP-Fow" secondAttribute="bottom" constant="70" id="dkw-mg-Xe8"/>
                             <constraint firstItem="Ehd-me-O18" firstAttribute="leading" secondItem="Hyl-yW-NSM" secondAttribute="leading" id="jwZ-eV-LpY"/>
                             <constraint firstItem="Ehd-me-O18" firstAttribute="top" secondItem="zdx-Pj-z97" secondAttribute="top" id="kAv-3t-3fd"/>
                             <constraint firstItem="Ehd-me-O18" firstAttribute="bottom" secondItem="zdx-Pj-z97" secondAttribute="bottom" id="pHy-p3-rYt"/>
+                            <constraint firstItem="Hyl-yW-NSM" firstAttribute="bottom" secondItem="PWI-Kx-VHr" secondAttribute="bottom" constant="256" id="zdN-nY-35i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hyl-yW-NSM"/>
                     </view>
