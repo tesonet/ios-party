@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderViewController" customModule="Party" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="zb8-No-Ehh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="oqz-aQ-Fka">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching the list..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUb-Ga-0P2">
+                    <rect key="frame" x="123" y="577.5" width="129.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bT-ca-b4f" customClass="CircleActivityIndicator" customModule="Party" customModuleProvider="target">
+                    <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="h6Y-zI-l5K"/>
+                        <constraint firstAttribute="width" constant="200" id="hRI-lh-ah0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oqz-aQ-Fka" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7FD-Ge-x4g"/>
+                <constraint firstItem="2bT-ca-b4f" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BD4-G6-62a"/>
+                <constraint firstItem="2bT-ca-b4f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KKt-9W-ryA"/>
+                <constraint firstItem="KUb-Ga-0P2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MO5-8G-kN6"/>
+                <constraint firstAttribute="bottom" secondItem="oqz-aQ-Fka" secondAttribute="bottom" id="hfP-9X-xXu"/>
+                <constraint firstItem="oqz-aQ-Fka" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iBa-rw-TsX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KUb-Ga-0P2" secondAttribute="bottom" constant="70" id="wcu-VU-ssc"/>
+                <constraint firstItem="oqz-aQ-Fka" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yt1-kH-gRq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="960" height="540"/>
+    </resources>
+</document>

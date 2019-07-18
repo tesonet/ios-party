@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q2Z-mj-6cQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root App View Controller-->
+        <scene sceneID="Ten-Ms-dvt">
+            <objects>
+                <viewController id="Q2Z-mj-6cQ" customClass="RootAppViewController" customModule="Party" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfI-6u-YuV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0z9-jY-dda"/>
+                    </view>
+                    <connections>
+                        <segue destination="VfS-l4-mAg" kind="custom" identifier="ShowSplashScreenViewController" customClass="SetContentSegue" customModule="Party" customModuleProvider="target" id="qMt-q6-mNc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLQ-fF-Ky9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433" y="84"/>
+        </scene>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="w1C-BW-vtx">
+            <objects>
+                <viewController id="VfS-l4-mAg" customClass="SplashScreenViewController" customModule="Party" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DM0-jo-Rr3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="z8F-aT-RyM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="Cju-a7-Yfd">
+                                <rect key="frame" x="64.5" y="110" width="246" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="m2v-YN-cbz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="top" secondItem="DM0-jo-Rr3" secondAttribute="top" id="4k7-Nn-4pf"/>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="trailing" secondItem="FSL-LI-lId" secondAttribute="trailing" id="NDA-Sd-b97"/>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="bottom" secondItem="DM0-jo-Rr3" secondAttribute="bottom" id="ogr-xi-Hp3"/>
+                            <constraint firstItem="Cju-a7-Yfd" firstAttribute="centerX" secondItem="DM0-jo-Rr3" secondAttribute="centerX" id="pBe-yj-ISZ"/>
+                            <constraint firstItem="Cju-a7-Yfd" firstAttribute="top" secondItem="FSL-LI-lId" secondAttribute="top" constant="90" id="pUc-Qo-mbo"/>
+                            <constraint firstItem="z8F-aT-RyM" firstAttribute="leading" secondItem="FSL-LI-lId" secondAttribute="leading" id="uqM-f0-5cn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FSL-LI-lId"/>
+                    </view>
+                    <connections>
+                        <segue destination="C11-Nq-SmX" kind="custom" identifier="ShowLoginViewController" customClass="ReplaceRootSegue" customModule="Party" customModuleProvider="target" id="vEr-sO-LHY"/>
+                        <segue destination="mIf-JX-wfZ" kind="custom" identifier="ShowServerListViewController" customClass="ReplaceRootSegue" customModule="Party" customModuleProvider="target" id="ukx-IX-mTX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2a-pT-XC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="85"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="kpj-EL-fZ9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="C11-Nq-SmX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gao-Fa-Ti9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="-37"/>
+        </scene>
+        <!--ServerList-->
+        <scene sceneID="iZz-0q-KJl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ServerList" id="mIf-JX-wfZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AtA-4M-CXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="227"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="960" height="540"/>
+        <image name="logo-white" width="246" height="64"/>
+    </resources>
+</document>
