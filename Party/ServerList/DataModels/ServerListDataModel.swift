@@ -25,6 +25,7 @@ class ServerListDataModel {
     // MARK: - Dependencies
     
     let apiClient: ApiClient
+    let databaseManager: DatabaseManager
     
     // MARK: - States
     
@@ -36,9 +37,12 @@ class ServerListDataModel {
     
     // MARK: - Init
     
-    init(delegate: ServerListDataModelDelegate, apiClient: ApiClient) {
+    init(delegate: ServerListDataModelDelegate,
+         apiClient: ApiClient,
+         databaseManager: DatabaseManager) {
         self.delegate = delegate
         self.apiClient = apiClient
+        self.databaseManager = databaseManager
     }
     
     // MARK: - Public Methods
@@ -70,23 +74,53 @@ class ServerListDataModel {
     
     // MARK: - Private Methods
     
+    /// Starts loading server list. First tries to load them from persistent storage, if fails - loads remote data and caches.
     private func startLoadingData() {
-        apiClient.load(Server.get(),
-                       success: { [weak self] (servers) in
-                        self?.handleSuccess(with: servers)
-            }, failure: { [weak self] (error) in
-                self?.handleFailure(with: error)
-        })
+        loadCached { [weak self] (servers) in
+            if servers.isEmpty {
+                self?.loadRemoteAndCache()
+            } else {
+                self?.handleSuccess(with: servers)
+            }
+        }
     }
     
+    /// Handles failed request.
     private func handleFailure(with error: Error) {
         isLoading = false
         delegate?.serverListDataModel(self, didFailWithError: error)
     }
     
-    private func handleSuccess(with data: [Server]?) {
+    /// Handles successfull response.
+    private func handleSuccess(with data: [Server]) {
         isLoading = false
-        self.data = data?.map { ServerCellViewModel(server: $0) } ?? []
+        self.data = data.map { ServerCellViewModel(server: $0) }
         delegate?.serverListDataModelDidLoad(self)
+    }
+    
+    // MARK: - Loading from persistent storage
+    
+    /// Loads data form persisten storage.
+    ///
+    /// - Parameter handler: A list of servers saved to core data.
+    private func loadCached(handler: @escaping (_ servers: [Server]) -> Void) {
+        databaseManager.fetch(Server.self) { handler($0) }
+    }
+    
+    // MARK: - Loading from server
+    
+    /// Loads remote data and saves to persistent store.
+    private func loadRemoteAndCache() {
+        apiClient.load(Server.get(),
+                       success: { [weak self] (servers) in
+                        if let servers = servers {
+                            self?.databaseManager.save(entities: servers)
+                            self?.handleSuccess(with: servers)
+                        } else {
+                            self?.handleSuccess(with: [])
+                        }
+            }, failure: { [weak self] (error) in
+                self?.handleFailure(with: error)
+        })
     }
 }

@@ -21,8 +21,10 @@ class ServerListViewController: BaseViewController, Alertable, LoaderDisplaying 
     // MARK: - Override superclass
     
     override func configureAfterInit() {
+        let databaseManager = DatabaseManager()
         dataModel = ServerListDataModel(delegate: self,
-                                        apiClient: ApiClient.shared)
+                                        apiClient: ApiClient.shared,
+                                        databaseManager: databaseManager)
     }
     
     // MARK: - Lifecycle
