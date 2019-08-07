@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		600BD78322E8D3FD00830AD5 /* ios-party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios-party.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		600BD78322E8D3FD00830AD5 /* ios-party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		600BD78622E8D3FD00830AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		600BD79222E8D3FF00830AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600BD79A22E8D57A00830AD5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 			);
 			dependencies = (
 			);
-			name = ios-party;
-			productName = ios-party;
+			name = "ios-party";
+			productName = "ios-party";
 			productReference = 600BD78322E8D3FD00830AD5 /* ios-party.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -265,7 +265,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Fmly.ios-party;
+				PRODUCT_BUNDLE_IDENTIFIER = "edvinas.ios-party";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -282,7 +282,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Fmly.ios-party;
+				PRODUCT_BUNDLE_IDENTIFIER = "edvinas.ios-party";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
