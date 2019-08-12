@@ -10,7 +10,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		self.window?.backgroundColor = .black
 		
-		let nc = UINavigationController(rootViewController: MainViewController())
+		let nc = UINavigationController(rootViewController: LoginViewController())
+		nc.isNavigationBarHidden = true
 		self.window?.rootViewController = nc
 		self.window?.makeKeyAndVisible()
 		
