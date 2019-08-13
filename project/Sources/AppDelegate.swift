@@ -5,7 +5,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		self.window?.backgroundColor = .black
@@ -14,6 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		nc.isNavigationBarHidden = true
 		self.window?.rootViewController = nc
 		self.window?.makeKeyAndVisible()
+		
+		// move to list view controller in case user is logged in
+		
+		if let token = StorageHelper.getSavedToken(), !token.isEmpty {
+			let ctrl = ListViewController()
+			ctrl.token = token
+			nc.pushViewController(ctrl, animated: false)
+		}
 		
 		return true
 	}

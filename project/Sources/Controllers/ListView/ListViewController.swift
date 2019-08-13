@@ -6,6 +6,30 @@ class ServerCell: UITableViewCell {
 	static var reuseIdentifier = "ServerCellReuseIdentifier"
 	private var _server: Server? = nil
 	
+	private func setup() {
+		self.backgroundView = UIView()
+		self.backgroundColor = Color.tableViewBackground
+		self.backgroundView?.backgroundColor = Color.tableViewBackground
+		
+		if let font = UIFont(name: "HelveticaNeue-Light", size: 13.0) {
+			textLabel?.font = font
+			detailTextLabel?.font = font
+		}
+		
+		textLabel?.textColor = .black
+		detailTextLabel?.textColor = .black
+	}
+	
+	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+		super.init(style: style, reuseIdentifier: reuseIdentifier)
+		setup()
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		setup()
+	}
+	
 	var server: Server? {
 		set {
 			_server = newValue
@@ -31,15 +55,24 @@ class ListViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		self.view.translatesAutoresizingMaskIntoConstraints = true
+
 		_tableView.delegate = self
 		_tableView.dataSource = self
+		
+		_tableView.backgroundView = UIView()
+		_tableView.backgroundColor = Color.tableViewBackground
+		_tableView.backgroundView?.backgroundColor = Color.tableViewBackground
 		
 		let itemLeft = UIBarButtonItem(image: UIImage(named: "logo-dark")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
 		itemLeft.isEnabled = false
 		self.navigationItem.leftBarButtonItem = itemLeft
-		let itemRight = UIBarButtonItem(image: UIImage(named: "ico-logout")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(onLogout))
+		let itemRight = UIBarButtonItem(image: UIImage(named: "ico-logout")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(logout))
 		self.navigationItem.rightBarButtonItem = itemRight
+		
+		// register header view
+		
+		_tableView?.register(UINib(nibName: "HeaderView", bundle: .main), forHeaderFooterViewReuseIdentifier: HeaderView.reuseIdentifer)
 		
 		// load sort button from xib
 		
@@ -71,8 +104,9 @@ class ListViewController: UIViewController {
 		self.navigationController?.isNavigationBarHidden = false
 	}
 	
-	@objc func onLogout() {
-		print(#function)
+	@objc func logout() {
+		debugPrint(#function)
+		StorageHelper.saveToken(nil)
 		self.navigationController?.pop()
 	}
 	
@@ -89,72 +123,72 @@ class ListViewController: UIViewController {
 		
 		let headers : [String : String] = ["Content-Type" : "application/json", "Authorization" : "Bearer \(token)"]
 		
-		Just.request(.get, url: listUrl, headers: headers) { result in
+		Just.request(.get, url: listUrl, headers: headers) { [weak self] (result: HTTPResult) in
 			if let respData = result.content {
-				if let resp = String(data: respData, encoding: .utf8) {
-					print(resp)
-				}
-				
 				do {
 					let jsonResponse = try JSONSerialization.jsonObject(with: respData, options: [])
-					print(jsonResponse)
 					
 					if let arrServers = jsonResponse as? [[String: Any]] {
-						print(arrServers)
+						debugPrint(arrServers)
 						
 						for s in arrServers {
 							if let name = s[Server.Keys.name.rawValue] as? String, let distance = s[Server.Keys.distance.rawValue] as? Int {
 								let server = Server(name: name, distance: distance)
-								self._servers.append(server)
+								self?._servers.append(server)
 							}
 						}
 						
 						DispatchQueue.main.async {
-							self._tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+							self?._tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
 						}
 					}
 				}
 				catch let error {
-					print("Error", error)
+					debugPrint(error.localizedDescription)
 				}
 			}
 			else if let error = result.error {
-				print(error.localizedDescription)
+				debugPrint(error.localizedDescription)
 			}
-		}
-	}
-	
-	private func showOrHideSortButton(show: Bool) {
-		DispatchQueue.main.async {
-			UIView.animate(withDuration: 0.2, animations: {
-				self._btnSort?.alpha = show ? 1.0 : 0.0
-			})
 		}
 	}
 	
 	private func showSortMenu() {
-		print(#function)
+		debugPrint(#function)
 		
+		_btnSort?.isHidden = true
 		let ctrl = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+		weak var s = self
 		
-		ctrl.addAction(UIAlertAction(title: NSLocalizedString("By Distance", comment: ""), style: .default , handler: { (UIAlertAction) in
-			print("By Distance")
-			self.showOrHideSortButton(show: true)
+		ctrl.addAction(UIAlertAction(title: NSLocalizedString("By Distance", comment: ""), style: .default , handler: { (action: UIAlertAction) in
+			debugPrint(action.title ?? "")
+			s?._servers.sort { $0.distance < $1.distance }
+			
+			DispatchQueue.main.async {
+				s?._btnSort?.isHidden = false
+				s?._tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+			}
 		}))
 	
-		ctrl.addAction(UIAlertAction(title: NSLocalizedString("Alphanumerical", comment: ""), style: .default , handler: { (UIAlertAction) in
-			print("Alphanumerical")
-			self.showOrHideSortButton(show: true)
+		ctrl.addAction(UIAlertAction(title: NSLocalizedString("Alphanumerical", comment: ""), style: .default , handler: { (action: UIAlertAction) in
+			debugPrint(action.title ?? "")
+			s?._servers.sort { $0.name < $1.name }
+			
+			DispatchQueue.main.async {
+				s?._btnSort?.isHidden = false
+				s?._tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+			}
 		}))
 		
-		ctrl.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (UIAlertAction) in
-			print("Cancel")
-			self.showOrHideSortButton(show: true)
+		ctrl.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action: UIAlertAction) in
+			debugPrint(action.title ?? "")
+			
+			DispatchQueue.main.async {
+				s?._btnSort?.isHidden = false
+			}
 		}))
 		
 		ctrl.view.backgroundColor = .clear
-		
-		showOrHideSortButton(show: false)
 		self.present(ctrl, animated: true)
 	}
 }
@@ -173,15 +207,14 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource
 	
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
 	{
-		return "Header"
+		return nil
 	}
 	
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
 	{
-//		let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: FMTableViewHeaderViewGroupMembers.reuseIdentifer) as? FMTableViewHeaderViewGroupMembers
-//		header?.label.text = NSLocalizedString("Members", comment: "")
-//		return header
-		return nil
+		let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.reuseIdentifer) as? HeaderView
+		header?.tintColor = .white
+		return header
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -194,7 +227,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource
 		var cell: ServerCell! = tableView.dequeueReusableCell(withIdentifier: ServerCell.reuseIdentifier) as? ServerCell
 		
 		if cell == nil {
-			cell = ServerCell(style: .subtitle, reuseIdentifier: ServerCell.reuseIdentifier)
+			cell = ServerCell(style: .value1, reuseIdentifier: ServerCell.reuseIdentifier)
 		}
 		
 		let server = _servers[indexPath.row]
@@ -205,13 +238,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 	{
-		print(#function)
+		debugPrint(#function)
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
 	
 	func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool
 	{
-		print(#function)
+		debugPrint(#function)
 		return false
 	}
 }
