@@ -7,6 +7,6 @@ target 'ios-party' do
 
   pod 'SnapKit'
   pod 'MaterialComponents/ActivityIndicator'
-	pod 'SwiftKeychainWrapper'
+  pod 'SwiftKeychainWrapper'
   pod 'Just'
 end
