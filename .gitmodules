@@ -1,0 +1,12 @@
+[submodule "UserInterface"]
+	path = UserInterface
+	url = https://github.com/MPuniskis/UserInterface
+[submodule "User"]
+	path = User
+	url = https://github.com/MPuniskis/User
+[submodule "Servers"]
+	path = Servers
+	url = https://github.com/MPuniskis/Servers
+[submodule "Authentication"]
+	path = Authentication
+	url = https://github.com/MPuniskis/Authentication
