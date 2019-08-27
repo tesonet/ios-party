@@ -16,7 +16,7 @@ class RootViewController: UIViewController {
 private extension RootViewController {
     
     func setup() {
-        setController(ViewController())
+        setController(LoginViewController())
     }
     
     func setController(_ controller: UIViewController) {
