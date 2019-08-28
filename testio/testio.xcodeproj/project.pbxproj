@@ -3,33 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B72DBE3F88E970F5DB0FACE9 /* Pods_testio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1099B151838E0EB14F58B131 /* Pods_testio.framework */; };
+		D137F7F82315B3530000404B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D137F7F72315B3530000404B /* Session.swift */; };
+		D13E4DB02316D4C000121338 /* SessionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DAF2316D4C000121338 /* SessionContext.swift */; };
+		D13E4DB22316D4E700121338 /* SessionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DB12316D4E700121338 /* SessionServices.swift */; };
+		D13E4DB42316D8BA00121338 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DB32316D8BA00121338 /* ScreenFactory.swift */; };
+		D13E4DB62316DA1600121338 /* LoginFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DB52316DA1600121338 /* LoginFacade.swift */; };
+		D13E4DB92316E01C00121338 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DB82316E01C00121338 /* Environment.swift */; };
+		D13E4DBB2316E03800121338 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DBA2316E03800121338 /* Config.swift */; };
 		D17A7C80231599D80085AAB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7C7F231599D80085AAB6 /* AppDelegate.swift */; };
 		D17A7C88231599D80085AAB6 /* testio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D17A7C86231599D80085AAB6 /* testio.xcdatamodeld */; };
 		D17A7C8A231599D90085AAB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17A7C89231599D90085AAB6 /* Assets.xcassets */; };
 		D17A7C8D231599D90085AAB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17A7C8B231599D90085AAB6 /* LaunchScreen.storyboard */; };
-		D17A7C9523159B8B0085AAB6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7C9423159B8B0085AAB6 /* RootViewController.swift */; };
+		D17A7C9523159B8B0085AAB6 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7C9423159B8B0085AAB6 /* SessionViewController.swift */; };
 		D17A7C9B2315A2AA0085AAB6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7C992315A2AA0085AAB6 /* LoginViewController.swift */; };
 		D17A7C9C2315A2AA0085AAB6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17A7C9A2315A2AA0085AAB6 /* LoginViewController.xib */; };
+		D17A7CA22315A95F0085AAB6 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7CA12315A95F0085AAB6 /* APIUrls.swift */; };
+		D17A7CA42315ABBE0085AAB6 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7CA32315ABBE0085AAB6 /* RequestFactory.swift */; };
+		D17A7CA82315AD440085AAB6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7CA72315AD440085AAB6 /* AuthService.swift */; };
+		D17A7CAA2315ADD90085AAB6 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7CA92315ADD90085AAB6 /* AuthResponse.swift */; };
+		D17A7CAC2315AE280085AAB6 /* ResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7CAB2315AE280085AAB6 /* ResponseSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1099B151838E0EB14F58B131 /* Pods_testio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		277F9BA1B2773D58502921A5 /* Pods-testio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testio.release.xcconfig"; path = "Target Support Files/Pods-testio/Pods-testio.release.xcconfig"; sourceTree = "<group>"; };
 		3DB73FC343FD749BA41B2B05 /* Pods-testio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testio.debug.xcconfig"; path = "Target Support Files/Pods-testio/Pods-testio.debug.xcconfig"; sourceTree = "<group>"; };
+		D137F7F72315B3530000404B /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		D13E4DAF2316D4C000121338 /* SessionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionContext.swift; sourceTree = "<group>"; };
+		D13E4DB12316D4E700121338 /* SessionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionServices.swift; sourceTree = "<group>"; };
+		D13E4DB32316D8BA00121338 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
+		D13E4DB52316DA1600121338 /* LoginFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFacade.swift; sourceTree = "<group>"; };
+		D13E4DB82316E01C00121338 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D13E4DBA2316E03800121338 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D17A7C7C231599D80085AAB6 /* testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17A7C7F231599D80085AAB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D17A7C87231599D80085AAB6 /* testio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testio.xcdatamodel; sourceTree = "<group>"; };
 		D17A7C89231599D90085AAB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D17A7C8C231599D90085AAB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D17A7C8E231599D90085AAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D17A7C9423159B8B0085AAB6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		D17A7C9423159B8B0085AAB6 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		D17A7C992315A2AA0085AAB6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D17A7C9A2315A2AA0085AAB6 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D17A7CA12315A95F0085AAB6 /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		D17A7CA32315ABBE0085AAB6 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		D17A7CA72315AD440085AAB6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D17A7CA92315ADD90085AAB6 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		D17A7CAB2315AE280085AAB6 /* ResponseSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +74,27 @@
 				1099B151838E0EB14F58B131 /* Pods_testio.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D13E4DAE2316D4A200121338 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				D17A7C9E2315A9190085AAB6 /* Services */,
+				D17A7C9423159B8B0085AAB6 /* SessionViewController.swift */,
+				D13E4DB12316D4E700121338 /* SessionServices.swift */,
+				D13E4DAF2316D4C000121338 /* SessionContext.swift */,
+				D137F7F72315B3530000404B /* Session.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		D13E4DB72316DFF200121338 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D13E4DB82316E01C00121338 /* Environment.swift */,
+				D13E4DBA2316E03800121338 /* Config.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		D17A7C73231599D80085AAB6 = {
@@ -73,9 +118,11 @@
 		D17A7C7E231599D80085AAB6 /* testio */ = {
 			isa = PBXGroup;
 			children = (
+				D13E4DB72316DFF200121338 /* Config */,
+				D17A7C9D2315A9090085AAB6 /* Networking */,
+				D13E4DAE2316D4A200121338 /* Session */,
 				D17A7C962315A2050085AAB6 /* UI */,
 				D17A7C7F231599D80085AAB6 /* AppDelegate.swift */,
-				D17A7C9423159B8B0085AAB6 /* RootViewController.swift */,
 				D17A7C89231599D90085AAB6 /* Assets.xcassets */,
 				D17A7C8B231599D90085AAB6 /* LaunchScreen.storyboard */,
 				D17A7C8E231599D90085AAB6 /* Info.plist */,
@@ -88,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D17A7C972315A2390085AAB6 /* Login */,
+				D13E4DB32316D8BA00121338 /* ScreenFactory.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -97,8 +145,36 @@
 			children = (
 				D17A7C992315A2AA0085AAB6 /* LoginViewController.swift */,
 				D17A7C9A2315A2AA0085AAB6 /* LoginViewController.xib */,
+				D13E4DB52316DA1600121338 /* LoginFacade.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		D17A7C9D2315A9090085AAB6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D17A7CA12315A95F0085AAB6 /* APIUrls.swift */,
+				D17A7CA32315ABBE0085AAB6 /* RequestFactory.swift */,
+				D17A7CAB2315AE280085AAB6 /* ResponseSerializer.swift */,
+				D17A7C9F2315A9280085AAB6 /* Models */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D17A7C9E2315A9190085AAB6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D17A7CA72315AD440085AAB6 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D17A7C9F2315A9280085AAB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D17A7CA92315ADD90085AAB6 /* AuthResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D6F7BC39DAFC8A8ED7824BBF /* Pods */ = {
@@ -121,6 +197,7 @@
 				D17A7C78231599D80085AAB6 /* Sources */,
 				D17A7C79231599D80085AAB6 /* Frameworks */,
 				D17A7C7A231599D80085AAB6 /* Resources */,
+				D407767E2B968AF6A8D45FB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +277,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D407767E2B968AF6A8D45FB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testio/Pods-testio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testio/Pods-testio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testio/Pods-testio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -207,10 +301,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D13E4DB22316D4E700121338 /* SessionServices.swift in Sources */,
+				D137F7F82315B3530000404B /* Session.swift in Sources */,
+				D17A7CA42315ABBE0085AAB6 /* RequestFactory.swift in Sources */,
+				D13E4DB62316DA1600121338 /* LoginFacade.swift in Sources */,
+				D13E4DB92316E01C00121338 /* Environment.swift in Sources */,
 				D17A7C88231599D80085AAB6 /* testio.xcdatamodeld in Sources */,
-				D17A7C9523159B8B0085AAB6 /* RootViewController.swift in Sources */,
+				D17A7CAC2315AE280085AAB6 /* ResponseSerializer.swift in Sources */,
+				D13E4DB02316D4C000121338 /* SessionContext.swift in Sources */,
+				D17A7CA22315A95F0085AAB6 /* APIUrls.swift in Sources */,
+				D17A7C9523159B8B0085AAB6 /* SessionViewController.swift in Sources */,
 				D17A7C9B2315A2AA0085AAB6 /* LoginViewController.swift in Sources */,
 				D17A7C80231599D80085AAB6 /* AppDelegate.swift in Sources */,
+				D17A7CAA2315ADD90085AAB6 /* AuthResponse.swift in Sources */,
+				D13E4DBB2316E03800121338 /* Config.swift in Sources */,
+				D13E4DB42316D8BA00121338 /* ScreenFactory.swift in Sources */,
+				D17A7CA82315AD440085AAB6 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +389,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEVELOPMENT_ENVIRONMENT";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -337,6 +444,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "-DRELEASE_ENVIRONMENT";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

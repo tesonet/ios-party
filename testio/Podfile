@@ -2,9 +2,10 @@
 # platform :ios, '9.0'
 
 target 'testio' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for testio
+  pod 'Alamofire'
+  pod 'PromiseKit', '~> 6.8'
+  pod 'PromiseKit/Alamofire'
 
 end

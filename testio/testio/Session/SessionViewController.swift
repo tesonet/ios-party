@@ -2,21 +2,35 @@
 import UIKit
 
 
-class RootViewController: UIViewController {
+class SessionViewController: UIViewController {
     
     private var currentController: UIViewController?
+    private var screenFactory: ScreenFactory!
+    
+    var sessionContext: SessionContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenFactory = createScreenFactory(with: sessionContext)
         setup()
     }
 }
 
 
-private extension RootViewController {
+extension SessionViewController: LoginViewControllerDelegate {
+    
+    func loginViewControllerDidLogin(_ loginViewController: LoginViewController) {
+        #warning("TODO: Show content screen")
+    }
+}
+
+
+private extension SessionViewController {
     
     func setup() {
-        setController(LoginViewController())
+        let login = screenFactory.createLogin()
+        login.delegate = self
+        setController(login)
     }
     
     func setController(_ controller: UIViewController) {
