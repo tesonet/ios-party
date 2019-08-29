@@ -114,5 +114,6 @@ private extension ServersViewController {
     
     @objc func logoutClicked() {
         facade.logout()
+        delegate?.serversViewControllerDidLogout(self)
     }
 }

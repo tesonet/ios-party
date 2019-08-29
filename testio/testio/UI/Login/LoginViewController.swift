@@ -28,9 +28,28 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         assert(facade != nil, "Facade must not be nil")
+        setupTextFields()
     }
     
     @IBAction private func loginButtonClicked(_ sender: Any) {
+        login()
+    }
+}
+
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        login()
+        return true
+    }
+}
+
+
+private extension LoginViewController {
+    
+    func login() {
         let username = usernameTextField.text ?? ""
         let passsword = passwordTextField.text ?? ""
         
@@ -42,7 +61,7 @@ class LoginViewController: UIViewController {
               password: passsword)
     }
     
-    private func login(with username: String, password: String) {
+    func login(with username: String, password: String) {
         facade
             .login(with: username,
                    password: password)
@@ -54,7 +73,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func showErrorAlert() {
+    func showErrorAlert() {
         let alert = UIAlertController(title: "Error",
                                       message: "Check your credentials and internet connection",
                                       preferredStyle: .alert)
@@ -62,5 +81,10 @@ class LoginViewController: UIViewController {
                                       style: .cancel,
                                       handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func setupTextFields() {
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
 }
