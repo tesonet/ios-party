@@ -5,6 +5,7 @@ import UIKit
 protocol ScreenFactory {
     
     func createLogin() -> LoginViewController
+    func createServers() -> ServersViewController
 }
 
 
@@ -28,5 +29,11 @@ private class DefaultScreenFactory: ScreenFactory {
         let login = LoginViewController()
         login.facade = LoginFacade(sessionContext: sessionContext)
         return login
+    }
+    
+    func createServers() -> ServersViewController {
+        let servers = ServersViewController()
+        servers.facade = ServersFacade(sessionContext: sessionContext)
+        return servers
     }
 }

@@ -6,6 +6,7 @@ import Alamofire
 protocol RequestFactory {
     
     func login(with username: String, password: String) -> DataRequest
+    func servers() -> DataRequest
 }
 
 
@@ -33,6 +34,10 @@ private class DefaultRequestFactory: RequestFactory {
                        parameters: ["username": username,
                                     "password": password],
                        encoding: JSONEncoding.default)
+    }
+    
+    func servers() -> DataRequest {
+        return request(withUrl: APIUrls.shared.servers())
     }
 }
 

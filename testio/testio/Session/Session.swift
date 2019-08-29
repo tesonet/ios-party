@@ -21,15 +21,15 @@ extension AppDelegate {
 
 class DefaultSession: Session {
 
+    private let sessionTokenKey = "Session.token"
+    
     private(set) var token: String? {
         set {
-            UserDefaults.standard
-                .set(newValue,
-                     forKey: "Session.token")
+            UserDefaults.standard.set(newValue,
+                                      forKey: sessionTokenKey)
         }
         get {
-            return UserDefaults.standard
-                .value(forKey: "Session.token") as? String
+            return UserDefaults.standard.value(forKey: sessionTokenKey) as? String
         }
     }
     

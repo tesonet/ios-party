@@ -12,6 +12,10 @@ class APIUrls {
         return url(withPath: "/tokens")
     }
     
+    func servers() -> URL {
+        return url(withPath: "/servers")
+    }
+    
     private func url(withPath path: String) -> URL {
         return URL(string: "\(baseString)\(path)")!
     }

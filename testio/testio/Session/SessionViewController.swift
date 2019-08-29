@@ -20,7 +20,15 @@ class SessionViewController: UIViewController {
 extension SessionViewController: LoginViewControllerDelegate {
     
     func loginViewControllerDidLogin(_ loginViewController: LoginViewController) {
-        #warning("TODO: Show content screen")
+        showServers()
+    }
+}
+
+
+extension SessionViewController: ServersViewControllerDelegate {
+    
+    func serversViewControllerDidLogout(_ serversViewController: ServersViewController) {
+        showLogin()
     }
 }
 
@@ -28,9 +36,24 @@ extension SessionViewController: LoginViewControllerDelegate {
 private extension SessionViewController {
     
     func setup() {
+        if sessionContext.session.isActive {
+            showServers()
+        } else {
+            showLogin()
+        }
+    }
+    
+    func showLogin() {
         let login = screenFactory.createLogin()
         login.delegate = self
         setController(login)
+    }
+    
+    func showServers() {
+        let servers = screenFactory.createServers()
+        servers.delegate = self
+        let serversNav = UINavigationController(rootViewController: servers)
+        setController(serversNav)
     }
     
     func setController(_ controller: UIViewController) {
