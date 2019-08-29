@@ -10,6 +10,12 @@ protocol ServersViewControllerDelegate: class {
 
 class ServersViewController: UIViewController {
 
+    static func createWithFacade(_ facade: ServersFacade) -> ServersViewController {
+        let controller = ServersViewController()
+        controller.facade = facade
+        return controller
+    }
+    
     @IBOutlet private weak var tableView: UITableView!
     
     private var servers: [Server] = [] {
@@ -18,7 +24,7 @@ class ServersViewController: UIViewController {
         }
     }
     
-    var facade: ServersFacade!
+    private var facade: ServersFacade!
     
     weak var delegate: ServersViewControllerDelegate?
     

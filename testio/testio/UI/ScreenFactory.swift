@@ -26,14 +26,14 @@ private class DefaultScreenFactory: ScreenFactory {
     }
     
     func createLogin() -> LoginViewController {
-        let login = LoginViewController()
-        login.facade = LoginFacade(sessionContext: sessionContext)
+        let facade = LoginFacade(sessionContext: sessionContext)
+        let login = LoginViewController.createWithFacade(facade)
         return login
     }
     
     func createServers() -> ServersViewController {
-        let servers = ServersViewController()
-        servers.facade = ServersFacade(sessionContext: sessionContext)
+        let facade = ServersFacade(sessionContext: sessionContext)
+        let servers = ServersViewController.createWithFacade(facade)
         return servers
     }
 }

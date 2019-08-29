@@ -11,10 +11,16 @@ protocol LoginViewControllerDelegate: class {
 
 class LoginViewController: UIViewController {
 
+    static func createWithFacade(_ facade: LoginFacade) -> LoginViewController {
+        let controller = LoginViewController()
+        controller.facade = facade
+        return controller
+    }
+    
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     
-    var facade: LoginFacade!
+    private var facade: LoginFacade!
     
     weak var delegate: LoginViewControllerDelegate?
     
