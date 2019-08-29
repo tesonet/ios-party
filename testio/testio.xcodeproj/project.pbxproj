@@ -22,6 +22,9 @@
 		D13E4DC62316E44000121338 /* ServersFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DC52316E44000121338 /* ServersFacade.swift */; };
 		D13E4DE823181EFF00121338 /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DE623181EFF00121338 /* ServerTableViewCell.swift */; };
 		D13E4DE923181EFF00121338 /* ServerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13E4DE723181EFF00121338 /* ServerTableViewCell.xib */; };
+		D13E4DED231828CF00121338 /* ServersRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DEC231828CF00121338 /* ServersRepo.swift */; };
+		D13E4DF623182EAA00121338 /* CDServer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DF423182EAA00121338 /* CDServer+CoreDataClass.swift */; };
+		D13E4DF723182EAA00121338 /* CDServer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E4DF523182EAA00121338 /* CDServer+CoreDataProperties.swift */; };
 		D17A7C80231599D80085AAB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7C7F231599D80085AAB6 /* AppDelegate.swift */; };
 		D17A7C88231599D80085AAB6 /* testio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D17A7C86231599D80085AAB6 /* testio.xcdatamodeld */; };
 		D17A7C8A231599D90085AAB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17A7C89231599D90085AAB6 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		D13E4DC52316E44000121338 /* ServersFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFacade.swift; sourceTree = "<group>"; };
 		D13E4DE623181EFF00121338 /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
 		D13E4DE723181EFF00121338 /* ServerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerTableViewCell.xib; sourceTree = "<group>"; };
+		D13E4DEC231828CF00121338 /* ServersRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersRepo.swift; sourceTree = "<group>"; };
+		D13E4DF423182EAA00121338 /* CDServer+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDServer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D13E4DF523182EAA00121338 /* CDServer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDServer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D17A7C7C231599D80085AAB6 /* testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17A7C7F231599D80085AAB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D17A7C87231599D80085AAB6 /* testio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testio.xcdatamodel; sourceTree = "<group>"; };
@@ -123,6 +129,41 @@
 			path = Servers;
 			sourceTree = "<group>";
 		};
+		D13E4DEA231828AF00121338 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D17A7CA72315AD440085AAB6 /* AuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D13E4DEB231828B900121338 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				D13E4DBC2316E2D000121338 /* ServersService.swift */,
+				D13E4DEC231828CF00121338 /* ServersRepo.swift */,
+			);
+			path = Servers;
+			sourceTree = "<group>";
+		};
+		D13E4DF22318298F00121338 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D13E4DF32318299900121338 /* Models */,
+				D17A7C86231599D80085AAB6 /* testio.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D13E4DF32318299900121338 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D13E4DF423182EAA00121338 /* CDServer+CoreDataClass.swift */,
+				D13E4DF523182EAA00121338 /* CDServer+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D17A7C73231599D80085AAB6 = {
 			isa = PBXGroup;
 			children = (
@@ -146,13 +187,13 @@
 			children = (
 				D13E4DB72316DFF200121338 /* Config */,
 				D17A7C9D2315A9090085AAB6 /* Networking */,
+				D13E4DF22318298F00121338 /* CoreData */,
 				D13E4DAE2316D4A200121338 /* Session */,
 				D17A7C962315A2050085AAB6 /* UI */,
 				D17A7C7F231599D80085AAB6 /* AppDelegate.swift */,
 				D17A7C89231599D90085AAB6 /* Assets.xcassets */,
 				D17A7C8B231599D90085AAB6 /* LaunchScreen.storyboard */,
 				D17A7C8E231599D90085AAB6 /* Info.plist */,
-				D17A7C86231599D80085AAB6 /* testio.xcdatamodeld */,
 			);
 			path = testio;
 			sourceTree = "<group>";
@@ -191,8 +232,8 @@
 		D17A7C9E2315A9190085AAB6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D17A7CA72315AD440085AAB6 /* AuthService.swift */,
-				D13E4DBC2316E2D000121338 /* ServersService.swift */,
+				D13E4DEB231828B900121338 /* Servers */,
+				D13E4DEA231828AF00121338 /* Auth */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -337,6 +378,7 @@
 				D137F7F82315B3530000404B /* Session.swift in Sources */,
 				D17A7CA42315ABBE0085AAB6 /* RequestFactory.swift in Sources */,
 				D13E4DB62316DA1600121338 /* LoginFacade.swift in Sources */,
+				D13E4DF623182EAA00121338 /* CDServer+CoreDataClass.swift in Sources */,
 				D13E4DB92316E01C00121338 /* Environment.swift in Sources */,
 				D17A7C88231599D80085AAB6 /* testio.xcdatamodeld in Sources */,
 				D13E4DE823181EFF00121338 /* ServerTableViewCell.swift in Sources */,
@@ -344,7 +386,9 @@
 				D13E4DB02316D4C000121338 /* SessionContext.swift in Sources */,
 				D17A7CA22315A95F0085AAB6 /* APIUrls.swift in Sources */,
 				D17A7C9523159B8B0085AAB6 /* SessionViewController.swift in Sources */,
+				D13E4DED231828CF00121338 /* ServersRepo.swift in Sources */,
 				D17A7C9B2315A2AA0085AAB6 /* LoginViewController.swift in Sources */,
+				D13E4DF723182EAA00121338 /* CDServer+CoreDataProperties.swift in Sources */,
 				D13E4DC32316E42500121338 /* ServersViewController.swift in Sources */,
 				D17A7C80231599D80085AAB6 /* AppDelegate.swift in Sources */,
 				D17A7CAA2315ADD90085AAB6 /* AuthResponse.swift in Sources */,
