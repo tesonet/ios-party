@@ -14,4 +14,15 @@ class ResponseParser{
     static func parseToken(json : JSON) -> String{
         return json["token"].stringValue
     }
+    
+    static func parseServers(json : JSON) -> [Server]{
+        var serverList : [Server] = []
+        for (_, subJson) : (String, JSON) in json{
+            let server = Server()
+            server.distance = subJson["distance"].intValue
+            server.name = subJson["name"].stringValue
+            serverList.append(server)
+        }
+        return serverList
+    }
 }

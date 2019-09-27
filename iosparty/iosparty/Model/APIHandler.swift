@@ -24,4 +24,17 @@ final class APIHandler{
             }
         }
     }
+    
+    func getServers(token: String){
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token)",
+            "Accept": "application/json"
+        ]
+
+        Alamofire.request(Constants.SERVERS_URL, headers: headers).responseJSON { response in
+            let servers = ResponseParser.parseServers(json: JSON(response.result.value!))
+            print(servers)
+        }
+    }
 }

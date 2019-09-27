@@ -19,6 +19,7 @@
 		B763CEE6233EBCCF00C498F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEE5233EBCCF00C498F2 /* Constants.swift */; };
 		B763CEE8233EBE1500C498F2 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEE7233EBE1500C498F2 /* APIHandler.swift */; };
 		B763CEEA233EC86600C498F2 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEE9233EC86600C498F2 /* ResponseParser.swift */; };
+		B763CEEC233ECB6800C498F2 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEEB233ECB6800C498F2 /* Server.swift */; };
 		E286AD5E58D3211EE05697B0 /* Pods_iosparty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980869F71AAA1BBAED34ADD /* Pods_iosparty.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		B763CEE5233EBCCF00C498F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B763CEE7233EBE1500C498F2 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		B763CEE9233EC86600C498F2 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		B763CEEB233ECB6800C498F2 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		CE7FAD4E847A18069E15E490 /* Pods-iosparty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosparty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosparty/Pods-iosparty.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				B763CEE5233EBCCF00C498F2 /* Constants.swift */,
 				B763CEE7233EBE1500C498F2 /* APIHandler.swift */,
 				B763CEE9233EC86600C498F2 /* ResponseParser.swift */,
+				B763CEEB233ECB6800C498F2 /* Server.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				B763CEE8233EBE1500C498F2 /* APIHandler.swift in Sources */,
 				B763CEBC233EBBB200C498F2 /* AppDelegate.swift in Sources */,
 				B763CEBE233EBBB200C498F2 /* SceneDelegate.swift in Sources */,
+				B763CEEC233ECB6800C498F2 /* Server.swift in Sources */,
 				B763CEEA233EC86600C498F2 /* ResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
