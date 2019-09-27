@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  iosparty
 //
-//  Created by Mantas Skeiverys on 25/09/2019.
+//  Created by Mantas Skeiverys on 28/09/2019.
 //  Copyright © 2019 Mantas Skeiverys. All rights reserved.
 //
 
