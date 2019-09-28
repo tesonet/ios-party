@@ -78,16 +78,18 @@ class ListScreenViewController: UIViewController, UITableViewDataSource {
     private func showSortActionSheet(){
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let sortAlphanumericallyAction = UIAlertAction(title: "Alphanumerical", style: .default) { (action) in
-            self.sort(by: .alphanumerical)
-        }
         let sortByDistanceAction = UIAlertAction(title: "By Distance", style: .default) { (action) in
             self.sort(by: .distance)
         }
+        
+        let sortAlphanumericallyAction = UIAlertAction(title: "Alphanumerical", style: .default) { (action) in
+            self.sort(by: .alphanumerical)
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 
-        actionSheet.addAction(sortAlphanumericallyAction)
         actionSheet.addAction(sortByDistanceAction)
+        actionSheet.addAction(sortAlphanumericallyAction)
         actionSheet.addAction(cancelAction)
         self.present(actionSheet, animated: true, completion: nil)
     }

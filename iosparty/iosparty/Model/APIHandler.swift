@@ -19,10 +19,10 @@ final class APIHandler{
                 if ResponseParser.isAuthorized(json: JSON(response.result.value!)){
                     let token = ResponseParser.parseToken(json: JSON(response.result.value!))
                     onComplete(AuthorizationResponse(success: true, token: token))
+                    return
                 }
-            }else{
-                onComplete(AuthorizationResponse(success: false, token: ""))
             }
+            onComplete(AuthorizationResponse(success: false, token: ""))
         }
     }
     

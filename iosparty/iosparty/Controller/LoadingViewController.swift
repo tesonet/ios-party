@@ -31,8 +31,14 @@ class LoadingViewController: UIViewController {
                 self.performSegue(withIdentifier: "mainScreenSegue", sender: self)
             }else{
                 self.navigationController?.popToRootViewController(animated: true)
+                self.showAlert()
             }
         }
     }
     
+    private func showAlert(){
+        let alert = UIAlertController(title: "Could not login", message: "Incorrect login information", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
