@@ -22,6 +22,12 @@
 		B763CEEC233ECB6800C498F2 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEEB233ECB6800C498F2 /* Server.swift */; };
 		B763CEEE233F880600C498F2 /* ListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEED233F880600C498F2 /* ListScreenViewController.swift */; };
 		B763CEF0233F991000C498F2 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEEF233F991000C498F2 /* AuthorizationResponse.swift */; };
+		B763CEF4233FB38300C498F2 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEF3233FB38300C498F2 /* CredentialManager.swift */; };
+		B763CEF6233FB3FE00C498F2 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEF5233FB3FE00C498F2 /* LoginManager.swift */; };
+		B763CEF8233FCF9B00C498F2 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEF7233FCF9B00C498F2 /* ServerManager.swift */; };
+		B763CEFB233FD88A00C498F2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEFA233FD88A00C498F2 /* Extensions.swift */; };
+		B763CEFE233FE9DA00C498F2 /* RealmPersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEFD233FE9DA00C498F2 /* RealmPersistentStorage.swift */; };
+		B763CF00233FEFE000C498F2 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763CEFF233FEFE000C498F2 /* LoadingViewController.swift */; };
 		E286AD5E58D3211EE05697B0 /* Pods_iosparty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980869F71AAA1BBAED34ADD /* Pods_iosparty.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +65,12 @@
 		B763CEEB233ECB6800C498F2 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		B763CEED233F880600C498F2 /* ListScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenViewController.swift; sourceTree = "<group>"; };
 		B763CEEF233F991000C498F2 /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
+		B763CEF3233FB38300C498F2 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
+		B763CEF5233FB3FE00C498F2 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		B763CEF7233FCF9B00C498F2 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		B763CEFA233FD88A00C498F2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B763CEFD233FE9DA00C498F2 /* RealmPersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistentStorage.swift; sourceTree = "<group>"; };
+		B763CEFF233FEFE000C498F2 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		CE7FAD4E847A18069E15E490 /* Pods-iosparty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosparty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosparty/Pods-iosparty.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,14 +128,13 @@
 		B763CEBA233EBBB200C498F2 /* iosparty */ = {
 			isa = PBXGroup;
 			children = (
+				B763CEF9233FD87E00C498F2 /* Helpers */,
 				B763CEE4233EBC7000C498F2 /* Controller */,
 				B763CEE3233EBC6C00C498F2 /* View */,
 				B763CEE2233EBC6600C498F2 /* Model */,
 				B763CEBB233EBBB200C498F2 /* AppDelegate.swift */,
 				B763CEBD233EBBB200C498F2 /* SceneDelegate.swift */,
-				B763CEC1233EBBB200C498F2 /* Main.storyboard */,
 				B763CEC7233EBBB300C498F2 /* Assets.xcassets */,
-				B763CEC9233EBBB300C498F2 /* LaunchScreen.storyboard */,
 				B763CECC233EBBB300C498F2 /* Info.plist */,
 				B763CEC4233EBBB200C498F2 /* iosparty.xcdatamodeld */,
 			);
@@ -143,10 +154,14 @@
 			isa = PBXGroup;
 			children = (
 				B763CEE5233EBCCF00C498F2 /* Constants.swift */,
-				B763CEE7233EBE1500C498F2 /* APIHandler.swift */,
-				B763CEE9233EC86600C498F2 /* ResponseParser.swift */,
 				B763CEEB233ECB6800C498F2 /* Server.swift */,
 				B763CEEF233F991000C498F2 /* AuthorizationResponse.swift */,
+				B763CEE7233EBE1500C498F2 /* APIHandler.swift */,
+				B763CEE9233EC86600C498F2 /* ResponseParser.swift */,
+				B763CEF3233FB38300C498F2 /* CredentialManager.swift */,
+				B763CEF5233FB3FE00C498F2 /* LoginManager.swift */,
+				B763CEF7233FCF9B00C498F2 /* ServerManager.swift */,
+				B763CEFD233FE9DA00C498F2 /* RealmPersistentStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,8 +169,8 @@
 		B763CEE3233EBC6C00C498F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B763CEBF233EBBB200C498F2 /* LoginViewController.swift */,
-				B763CEED233F880600C498F2 /* ListScreenViewController.swift */,
+				B763CEC1233EBBB200C498F2 /* Main.storyboard */,
+				B763CEC9233EBBB300C498F2 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,8 +178,19 @@
 		B763CEE4233EBC7000C498F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B763CEED233F880600C498F2 /* ListScreenViewController.swift */,
+				B763CEBF233EBBB200C498F2 /* LoginViewController.swift */,
+				B763CEFF233FEFE000C498F2 /* LoadingViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B763CEF9233FD87E00C498F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B763CEFA233FD88A00C498F2 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E4082D512A7F6825086E0E2A /* Frameworks */ = {
@@ -330,6 +356,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iosparty/Pods-iosparty-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -339,6 +366,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -357,14 +385,20 @@
 			files = (
 				B763CEE6233EBCCF00C498F2 /* Constants.swift in Sources */,
 				B763CEC6233EBBB200C498F2 /* iosparty.xcdatamodeld in Sources */,
+				B763CEF4233FB38300C498F2 /* CredentialManager.swift in Sources */,
+				B763CF00233FEFE000C498F2 /* LoadingViewController.swift in Sources */,
 				B763CEF0233F991000C498F2 /* AuthorizationResponse.swift in Sources */,
 				B763CEC0233EBBB200C498F2 /* LoginViewController.swift in Sources */,
+				B763CEF6233FB3FE00C498F2 /* LoginManager.swift in Sources */,
 				B763CEE8233EBE1500C498F2 /* APIHandler.swift in Sources */,
 				B763CEBC233EBBB200C498F2 /* AppDelegate.swift in Sources */,
 				B763CEBE233EBBB200C498F2 /* SceneDelegate.swift in Sources */,
 				B763CEEC233ECB6800C498F2 /* Server.swift in Sources */,
+				B763CEF8233FCF9B00C498F2 /* ServerManager.swift in Sources */,
 				B763CEEA233EC86600C498F2 /* ResponseParser.swift in Sources */,
 				B763CEEE233F880600C498F2 /* ListScreenViewController.swift in Sources */,
+				B763CEFE233FE9DA00C498F2 /* RealmPersistentStorage.swift in Sources */,
+				B763CEFB233FD88A00C498F2 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

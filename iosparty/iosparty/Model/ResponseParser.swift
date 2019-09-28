@@ -11,6 +11,10 @@ import SwiftyJSON
 
 class ResponseParser{
     
+    static func isAuthorized(json : JSON) -> Bool{
+        return json["message"] != "Unauthorized"
+    }
+    
     static func parseToken(json : JSON) -> String{
         return json["token"].stringValue
     }

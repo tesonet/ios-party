@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, APIHandlerDelegate {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -19,23 +19,27 @@ class LoginViewController: UIViewController, APIHandlerDelegate {
         super.viewDidLoad()
         setupUIElements()
     }
-
-//    @IBAction func clicked(_ sender: Any) {
-//        let handler = APIHandler()
-//        //handler.getToken(userName: "tesonet", password: "partyanimal")
-//        handler.getServers(token: "f9731b590611a5a9377fbd02f247fcdf")
-//    }
     
-    @IBAction func loginClicked(_ sender: Any) {
-        guard let username = usernameTextField.text, let password = passwordTextField.text else{
-            return
-        }
-        let apiHandler = APIHandler(delegate: self)
-        apiHandler.getToken(userName: username, password: password)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        passwordTextField.text = ""
     }
     
+    @IBAction func loginClicked(_ sender: Any) {
+        
+        performSegue(withIdentifier: "loginSegue", sender: self)
+    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "loginSegue") {
+            guard let username = usernameTextField.text, let password = passwordTextField.text else{
+                return
+            }
+            let vc = segue.destination as! LoadingViewController
+            vc.userName = username
+            vc.password = password
+        }
+    }
     
     private func setupUIElements(){
         logInButton.layer.cornerRadius = 5
@@ -67,16 +71,6 @@ class LoginViewController: UIViewController, APIHandlerDelegate {
         passwordTextField.leftView = passwordOuterView
     }
     
-    func tokenReceived(response: AuthorizationResponse) {
-        if response.success{
-            performSegue(withIdentifier: "loginSegue", sender: self)
-        }
-        print(response.token)
-    }
-    
-    func serversReceived(servers: [Server]) {
-        return
-    }
     
 }
 

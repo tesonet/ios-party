@@ -12,41 +12,30 @@ import SwiftyJSON
 
 final class APIHandler{
     
-    var delegate : APIHandlerDelegate
-    
-    init(delegate : APIHandlerDelegate) {
-        self.delegate = delegate
-    }
-    
-    func getToken(userName: String, password: String){
+    func getToken(userName: String, password: String, onComplete: @escaping (AuthorizationResponse) -> ()){
         let parameters : [String : String] = ["username" : userName, "password" : password]
         Alamofire.request(Constants.TOKENS_URL, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             if response.result.isSuccess{
-                print("Success")
-                let token = ResponseParser.parseToken(json: JSON(response.result.value!))
-                self.delegate.tokenReceived(response: AuthorizationResponse(success: true, token: token))
+                if ResponseParser.isAuthorized(json: JSON(response.result.value!)){
+                    let token = ResponseParser.parseToken(json: JSON(response.result.value!))
+                    onComplete(AuthorizationResponse(success: true, token: token))
+                }
             }else{
-                print("Error")
-                self.delegate.tokenReceived(response: AuthorizationResponse(success: false, token: ""))
+                onComplete(AuthorizationResponse(success: false, token: ""))
             }
         }
     }
     
-    func getServers(token: String){
+    func getServers(token: String, onComplete: @escaping ([Server]) -> ()){
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token)",
             "Accept": "application/json"
         ]
         Alamofire.request(Constants.SERVERS_URL, headers: headers).responseJSON { response in
             let servers = ResponseParser.parseServers(json: JSON(response.result.value!))
-            print(servers)
+            onComplete(servers)
         }
     }
-}
-
-protocol APIHandlerDelegate {
-    func tokenReceived(response : AuthorizationResponse)
-    func serversReceived(servers : [Server])
 }
 
 
