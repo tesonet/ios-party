@@ -25,19 +25,19 @@ class LoadingViewController: UIViewController {
     }
     
     private func loadMainScreen(){
-        LoginManager.login(userName: userName, password: password) { (success) in
+        LoginManager.login(userName: userName, password: password) { (success, reason) in
             if success{
                 sleep(3)
-                self.performSegue(withIdentifier: "mainScreenSegue", sender: self)
+                self.performSegue(withIdentifier: Constants.MAIN_SCREEN_SEGUE, sender: self)
             }else{
                 self.navigationController?.popToRootViewController(animated: true)
-                self.showAlert()
+                self.showAlert(message: reason)
             }
         }
     }
     
-    private func showAlert(){
-        let alert = UIAlertController(title: "Could not login", message: "Incorrect login information", preferredStyle: UIAlertController.Style.alert)
+    private func showAlert(message: String){
+        let alert = UIAlertController(title: "Could not login", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

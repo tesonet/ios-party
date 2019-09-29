@@ -10,18 +10,26 @@ import Foundation
 
 class LoginManager{
     
-    static func login(userName: String, password: String, loginSuccessful: @escaping (Bool) -> ()){
+    static func login(userName: String, password: String, loginSuccessful: @escaping (Bool, String) -> ()){
         let apiHandler = APIHandler()
         apiHandler.getToken(userName: userName, password: password) { (response) in
             if response.success{
-                let credentialManager = CredentialManager()
-                credentialManager.storeUserToken(token: response.token)
-                ServerManager.updateServerList {
-                    loginSuccessful(true)
+                CredentialManager.storeUserToken(token: response.token)
+                do{
+                try ServerManager.updateServerList {
+                    loginSuccessful(true, "")
+                }
+                }catch{
+                    loginSuccessful(false, "Could not store user token")
                 }
             }else{
-                loginSuccessful(false)
+                loginSuccessful(false, "Incorrect credential information")
             }
         }
+    }
+    
+    static func logout(){
+        ServerManager.deleteServers()
+        CredentialManager.deleteUserToken()
     }
 }

@@ -53,7 +53,7 @@ class ListScreenViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "serverTableCell", for: indexPath) as! ServerListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SERVER_TABLE_CELL, for: indexPath) as! ServerListCell
         let server = serverList[indexPath.row]
         cell.serverLabel.text = server.name
         cell.distanceLabel.text = String(server.distance)
@@ -72,6 +72,7 @@ class ListScreenViewController: UIViewController, UITableViewDataSource {
     }
     
     @objc private func logoutButtonTapped(tapGestureRecognizer: UITapGestureRecognizer){
+        LoginManager.logout()
         navigationController?.popToRootViewController(animated: true)
     }
     

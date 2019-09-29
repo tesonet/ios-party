@@ -7,10 +7,31 @@
 //
 
 import Foundation
+import KeychainSwift
 
 class CredentialManager{
     
-    func storeUserToken(token : String){
-        print("token was added to the keychain: \(token)")
+    static func storeUserToken(token : String){
+        let keychain = KeychainSwift()
+        keychain.set(token, forKey: Constants.USER_TOKEN_KEY)
     }
+    
+    static func getUserToken() throws -> String{
+        let keychain = KeychainSwift()
+        if let userToken = keychain.get(Constants.USER_TOKEN_KEY){
+            return userToken
+        }else{
+            throw keychainError.tokenRetrievalError("Could not retrieve user token")
+        }
+    }
+    
+    static func deleteUserToken(){
+        let keychain = KeychainSwift()
+        keychain.delete(Constants.USER_TOKEN_KEY)
+    }
+}
+
+enum keychainError: Error {
+    case tokenRetrievalError(String)
+    case tokenSetError(String)
 }

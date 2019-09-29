@@ -26,12 +26,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: Any) {
-        
-        performSegue(withIdentifier: "loginSegue", sender: self)
+        performSegue(withIdentifier: Constants.LOGIN_SEGUE, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "loginSegue") {
+        if (segue.identifier == Constants.LOGIN_SEGUE) {
             guard let username = usernameTextField.text, let password = passwordTextField.text else{
                 return
             }
@@ -54,11 +53,11 @@ class LoginViewController: UIViewController {
         let passwordIconView  = UIImageView(frame: CGRect(x: padding, y: 0, width: size, height: size))
 
         let userNameImageView = UIImageView()
-        let userNameImage = UIImage(named: "ico-username")
+        let userNameImage = UIImage(named: Constants.USER_NAME_ICON)
         userNameImageView.image = userNameImage
         
         let passwordImageView = UIImageView()
-        let passwordImage = UIImage(named: "ico-lock")
+        let passwordImage = UIImage(named: Constants.LOCK_ICON)
         passwordImageView.image = passwordImage
         
         userNameIconView.image = userNameImage

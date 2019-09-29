@@ -12,14 +12,24 @@ import RealmSwift
 class ServerManager{
     
     static func getServers(onComplete: @escaping (Results<Server>) -> ()){
-        onComplete(RealmPersistentStorage.getServerList())
+        do{
+            try updateServerList {
+                onComplete(RealmPersistentStorage.getServerList())
+            }
+        }catch{
+            onComplete(RealmPersistentStorage.getServerList())
+        }
     }
     
-    static func updateServerList(onComplete: @escaping () -> ()){
+    static func updateServerList(onComplete: @escaping () -> ()) throws{
         let apiHandler = APIHandler()
-        apiHandler.getServers(token: "f9731b590611a5a9377fbd02f247fcdf") { (servers) in
+        try apiHandler.getServers(token: CredentialManager.getUserToken()) { (servers) in
             RealmPersistentStorage.updateServerList(list: servers)
             onComplete()
         }
+    }
+    
+    static func deleteServers(){
+        RealmPersistentStorage.deleteServerList()
     }
 }

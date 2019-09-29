@@ -31,4 +31,16 @@ final class RealmPersistentStorage{
         return serverList.sorted(byKeyPath: "name", ascending: true)
     }
     
+    static func deleteServerList(){
+        let realm = try! Realm()
+        
+        do{
+            try realm.write {
+                realm.delete(getServerList())
+            }
+        }catch{
+            print("Could not delete server list")
+        }
+    }
+    
 }
