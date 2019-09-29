@@ -11,9 +11,11 @@ import KeychainSwift
 
 class CredentialManager{
     
-    static func storeUserToken(token : String){
+    static func storeUserToken(token : String) throws{
         let keychain = KeychainSwift()
-        keychain.set(token, forKey: Constants.USER_TOKEN_KEY)
+        if !keychain.set(token, forKey: Constants.USER_TOKEN_KEY){
+            throw keychainError.tokenStoringError("Could not store user token")
+        }
     }
     
     static func getUserToken() throws -> String{
@@ -33,5 +35,5 @@ class CredentialManager{
 
 enum keychainError: Error {
     case tokenRetrievalError(String)
-    case tokenSetError(String)
+    case tokenStoringError(String)
 }

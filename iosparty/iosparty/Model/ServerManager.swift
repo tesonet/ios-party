@@ -23,8 +23,10 @@ class ServerManager{
     
     static func updateServerList(onComplete: @escaping () -> ()) throws{
         let apiHandler = APIHandler()
-        try apiHandler.getServers(token: CredentialManager.getUserToken()) { (servers) in
-            RealmPersistentStorage.updateServerList(list: servers)
+        try apiHandler.getServers(token: CredentialManager.getUserToken()) { (servers, isAuthorized)  in
+            if isAuthorized{
+                RealmPersistentStorage.updateServerList(list: servers)
+            }
             onComplete()
         }
     }

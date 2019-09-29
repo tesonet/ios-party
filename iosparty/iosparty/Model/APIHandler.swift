@@ -26,14 +26,15 @@ final class APIHandler{
         }
     }
     
-    func getServers(token: String, onComplete: @escaping ([Server]) -> ()){
+    func getServers(token: String, onComplete: @escaping ([Server], Bool) -> ()){
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token)",
             "Accept": "application/json"
         ]
         Alamofire.request(Constants.SERVERS_URL, headers: headers).responseJSON { response in
+            let isAuthorized = ResponseParser.isAuthorized(json: JSON(response.result.value!))
             let servers = ResponseParser.parseServers(json: JSON(response.result.value!))
-            onComplete(servers)
+            onComplete(servers, isAuthorized)
         }
     }
 }

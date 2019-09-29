@@ -27,6 +27,7 @@ class LoadingViewController: UIViewController {
     private func loadMainScreen(){
         LoginManager.login(userName: userName, password: password) { (success, reason) in
             if success{
+                //Sleeping just to simulate the loading screen :)
                 sleep(3)
                 self.performSegue(withIdentifier: Constants.MAIN_SCREEN_SEGUE, sender: self)
             }else{

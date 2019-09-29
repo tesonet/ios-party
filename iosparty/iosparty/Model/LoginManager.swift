@@ -14,13 +14,11 @@ class LoginManager{
         let apiHandler = APIHandler()
         apiHandler.getToken(userName: userName, password: password) { (response) in
             if response.success{
-                CredentialManager.storeUserToken(token: response.token)
                 do{
-                try ServerManager.updateServerList {
+                    try CredentialManager.storeUserToken(token: response.token)
                     loginSuccessful(true, "")
-                }
                 }catch{
-                    loginSuccessful(false, "Could not store user token")
+                    loginSuccessful(false, error.localizedDescription)
                 }
             }else{
                 loginSuccessful(false, "Incorrect credential information")
