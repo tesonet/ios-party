@@ -14,6 +14,25 @@
 		598A54802342450500FD6C2B /* ios_party.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 598A547E2342450500FD6C2B /* ios_party.xcdatamodeld */; };
 		598A54822342450600FD6C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598A54812342450600FD6C2B /* Assets.xcassets */; };
 		598A54852342450600FD6C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598A54832342450600FD6C2B /* LaunchScreen.storyboard */; };
+		59C53517234246C20076B42F /* Sorting flow.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53503234246C20076B42F /* Sorting flow.png */; };
+		59C53518234246C20076B42F /* iOS-developer-task.psd in Resources */ = {isa = PBXBuildFile; fileRef = 59C53504234246C20076B42F /* iOS-developer-task.psd */; };
+		59C53519234246C20076B42F /* login-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53505234246C20076B42F /* login-screen.png */; };
+		59C5351A234246C20076B42F /* list-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53506234246C20076B42F /* list-screen.png */; };
+		59C5351B234246C20076B42F /* loading-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53507234246C20076B42F /* loading-screen.png */; };
+		59C5351C234246C20076B42F /* ico-username@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53509234246C20076B42F /* ico-username@2x.png */; };
+		59C5351D234246C20076B42F /* logo-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C5350A234246C20076B42F /* logo-dark.png */; };
+		59C5351E234246C20076B42F /* logo-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C5350B234246C20076B42F /* logo-white@2x.png */; };
+		59C5351F234246C20076B42F /* ico-logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C5350C234246C20076B42F /* ico-logout.png */; };
+		59C53520234246C20076B42F /* logo-dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C5350D234246C20076B42F /* logo-dark@2x.png */; };
+		59C53521234246C20076B42F /* ico-username.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C5350E234246C20076B42F /* ico-username.png */; };
+		59C53522234246C20076B42F /* logo-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C5350F234246C20076B42F /* logo-white.png */; };
+		59C53523234246C20076B42F /* ico-sort-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53510234246C20076B42F /* ico-sort-light.png */; };
+		59C53524234246C20076B42F /* ico-logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53511234246C20076B42F /* ico-logout@2x.png */; };
+		59C53525234246C20076B42F /* ico-lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53512234246C20076B42F /* ico-lock@2x.png */; };
+		59C53526234246C20076B42F /* ico-lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53513234246C20076B42F /* ico-lock.png */; };
+		59C53527234246C20076B42F /* ico-sort-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C53514234246C20076B42F /* ico-sort-light@2x.png */; };
+		59C53528234246C20076B42F /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59C53515234246C20076B42F /* bg.jpg */; };
+		59C53529234246C20076B42F /* sorting-mockup.sketch in Resources */ = {isa = PBXBuildFile; fileRef = 59C53516234246C20076B42F /* sorting-mockup.sketch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +45,25 @@
 		598A54812342450600FD6C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		598A54842342450600FD6C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		598A54862342450600FD6C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59C53503234246C20076B42F /* Sorting flow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sorting flow.png"; sourceTree = "<group>"; };
+		59C53504234246C20076B42F /* iOS-developer-task.psd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS-developer-task.psd"; sourceTree = "<group>"; };
+		59C53505234246C20076B42F /* login-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-screen.png"; sourceTree = "<group>"; };
+		59C53506234246C20076B42F /* list-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-screen.png"; sourceTree = "<group>"; };
+		59C53507234246C20076B42F /* loading-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-screen.png"; sourceTree = "<group>"; };
+		59C53509234246C20076B42F /* ico-username@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-username@2x.png"; sourceTree = "<group>"; };
+		59C5350A234246C20076B42F /* logo-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-dark.png"; sourceTree = "<group>"; };
+		59C5350B234246C20076B42F /* logo-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-white@2x.png"; sourceTree = "<group>"; };
+		59C5350C234246C20076B42F /* ico-logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-logout.png"; sourceTree = "<group>"; };
+		59C5350D234246C20076B42F /* logo-dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-dark@2x.png"; sourceTree = "<group>"; };
+		59C5350E234246C20076B42F /* ico-username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-username.png"; sourceTree = "<group>"; };
+		59C5350F234246C20076B42F /* logo-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-white.png"; sourceTree = "<group>"; };
+		59C53510234246C20076B42F /* ico-sort-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-sort-light.png"; sourceTree = "<group>"; };
+		59C53511234246C20076B42F /* ico-logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-logout@2x.png"; sourceTree = "<group>"; };
+		59C53512234246C20076B42F /* ico-lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-lock@2x.png"; sourceTree = "<group>"; };
+		59C53513234246C20076B42F /* ico-lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-lock.png"; sourceTree = "<group>"; };
+		59C53514234246C20076B42F /* ico-sort-light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-sort-light@2x.png"; sourceTree = "<group>"; };
+		59C53515234246C20076B42F /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		59C53516234246C20076B42F /* sorting-mockup.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sorting-mockup.sketch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +96,7 @@
 		598A54742342450500FD6C2B /* ios-party */ = {
 			isa = PBXGroup;
 			children = (
+				59C53502234246C20076B42F /* assets */,
 				598A54752342450500FD6C2B /* AppDelegate.swift */,
 				598A54772342450500FD6C2B /* SceneDelegate.swift */,
 				598A54792342450500FD6C2B /* ViewController.swift */,
@@ -68,6 +107,40 @@
 				598A547E2342450500FD6C2B /* ios_party.xcdatamodeld */,
 			);
 			path = "ios-party";
+			sourceTree = "<group>";
+		};
+		59C53502234246C20076B42F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				59C53503234246C20076B42F /* Sorting flow.png */,
+				59C53504234246C20076B42F /* iOS-developer-task.psd */,
+				59C53505234246C20076B42F /* login-screen.png */,
+				59C53506234246C20076B42F /* list-screen.png */,
+				59C53507234246C20076B42F /* loading-screen.png */,
+				59C53508234246C20076B42F /* extracted */,
+				59C53516234246C20076B42F /* sorting-mockup.sketch */,
+			);
+			path = assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		59C53508234246C20076B42F /* extracted */ = {
+			isa = PBXGroup;
+			children = (
+				59C53509234246C20076B42F /* ico-username@2x.png */,
+				59C5350A234246C20076B42F /* logo-dark.png */,
+				59C5350B234246C20076B42F /* logo-white@2x.png */,
+				59C5350C234246C20076B42F /* ico-logout.png */,
+				59C5350D234246C20076B42F /* logo-dark@2x.png */,
+				59C5350E234246C20076B42F /* ico-username.png */,
+				59C5350F234246C20076B42F /* logo-white.png */,
+				59C53510234246C20076B42F /* ico-sort-light.png */,
+				59C53511234246C20076B42F /* ico-logout@2x.png */,
+				59C53512234246C20076B42F /* ico-lock@2x.png */,
+				59C53513234246C20076B42F /* ico-lock.png */,
+				59C53514234246C20076B42F /* ico-sort-light@2x.png */,
+				59C53515234246C20076B42F /* bg.jpg */,
+			);
+			path = extracted;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +201,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C53520234246C20076B42F /* logo-dark@2x.png in Resources */,
+				59C53524234246C20076B42F /* ico-logout@2x.png in Resources */,
+				59C5351C234246C20076B42F /* ico-username@2x.png in Resources */,
+				59C53527234246C20076B42F /* ico-sort-light@2x.png in Resources */,
+				59C53528234246C20076B42F /* bg.jpg in Resources */,
+				59C5351B234246C20076B42F /* loading-screen.png in Resources */,
+				59C53526234246C20076B42F /* ico-lock.png in Resources */,
+				59C53521234246C20076B42F /* ico-username.png in Resources */,
 				598A54852342450600FD6C2B /* LaunchScreen.storyboard in Resources */,
+				59C53517234246C20076B42F /* Sorting flow.png in Resources */,
+				59C53522234246C20076B42F /* logo-white.png in Resources */,
+				59C53529234246C20076B42F /* sorting-mockup.sketch in Resources */,
 				598A54822342450600FD6C2B /* Assets.xcassets in Resources */,
+				59C5351A234246C20076B42F /* list-screen.png in Resources */,
+				59C5351D234246C20076B42F /* logo-dark.png in Resources */,
+				59C53523234246C20076B42F /* ico-sort-light.png in Resources */,
 				598A547D2342450500FD6C2B /* Main.storyboard in Resources */,
+				59C5351E234246C20076B42F /* logo-white@2x.png in Resources */,
+				59C53518234246C20076B42F /* iOS-developer-task.psd in Resources */,
+				59C53525234246C20076B42F /* ico-lock@2x.png in Resources */,
+				59C53519234246C20076B42F /* login-screen.png in Resources */,
+				59C5351F234246C20076B42F /* ico-logout.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
