@@ -25,11 +25,17 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dpJ-lc-ZJR"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-ro-aYV">
                                 <rect key="frame" x="62" y="491" width="290" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="u3C-KI-z6p"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q76-qW-Bpn">
                                 <rect key="frame" x="62" y="551" width="290" height="50"/>
@@ -44,7 +50,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RRz-Pd-O2f"/>
+                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="hyq-ZI-GKd"/>
                                 </connections>
                             </button>
                         </subviews>

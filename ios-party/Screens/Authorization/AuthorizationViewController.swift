@@ -31,6 +31,12 @@ final class AuthorizationViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        #if DEBUG
+        usernameTextField.text = "tesonet"
+        passwordTextField.text = "partyanimal"
+        logInButtonPressed()
+        #endif
     }
     
     deinit {
@@ -48,7 +54,7 @@ final class AuthorizationViewController: UIViewController {
         UITextField.swizzleMethods()
     }
     
-    @IBAction func logInButtonPressed(_ sender: UIButton) {
+    @IBAction func logInButtonPressed() {
         let credentials = Credentials(username: usernameTextField.text ?? "",
                                       password: passwordTextField.text ?? "")
         APIManager.shared.authorize(withComponents: credentials.mapToJSON() as? [String: String], { [weak self] in

@@ -20,12 +20,22 @@ final class ServerListViewController: UIViewController {
         
         APIManager.shared.getServers({ [weak self] servers in
             self?.serverModels = servers
+            servers.forEach { DBManager.shared.save($0) }
         }) { error in
             Router.route(to: .Error(description: error.localizedDescription))
         }
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logo-dark"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ico-logout"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(logout))
     }
     
-    @IBAction func logout(_ sender: UIBarButtonItem) {
+    @objc func logout() {
         APIManager.reset()
     }
     

@@ -10,13 +10,13 @@ import UIKit
 
 final class Router {
     
-    public static func route(to route: Routes, _ parameter: Any? = nil) {
+    public static func route(to route: Routes) {
         if !Thread.isMainThread {
             DispatchQueue.main.async {
-                shared.route(to: route, parameter)
+                Router.shared.route(to: route)
             }
         } else {
-            shared.route(to: route, parameter)
+            Router.shared.route(to: route)
         }
     }
     
@@ -30,7 +30,8 @@ final class Router {
     private var navigationController: UINavigationController?
     
     public static func start(with navigationController: UINavigationController) {
-        shared.navigationController = shared.navigationController ?? navigationController
+        Router.shared.navigationController = navigationController
+        
         if APIManager.hasToken {
             route(to: .ServerList)
         } else {
@@ -41,7 +42,7 @@ final class Router {
 
 extension Router {
     
-    func route(to route: Routes, _ parameter: Any? = nil) {
+    func route(to route: Routes) {
         
         switch route {
         case .Authorization:
