@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Authorization View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AuthorizationViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="AuthorizationViewController" customModule="ios_party" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="8N0-Jl-dkL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-26-ld8">
+                                <rect key="frame" x="62" y="431" width="290" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BXM-R2-WFS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-ro-aYV">
+                                <rect key="frame" x="62" y="491" width="290" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q76-qW-Bpn">
+                                <rect key="frame" x="62" y="551" width="290" height="50"/>
+                                <color key="backgroundColor" red="0.61615490913391113" green="0.8202165961265564" blue="0.19516450166702271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RRz-Pd-O2f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hiR-26-ld8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.5" id="2nJ-yJ-bOZ"/>
+                            <constraint firstAttribute="trailing" secondItem="8N0-Jl-dkL" secondAttribute="trailing" id="75S-HA-Hh5"/>
+                            <constraint firstAttribute="bottom" secondItem="8N0-Jl-dkL" secondAttribute="bottom" id="Jyy-go-hao"/>
+                            <constraint firstItem="HZN-ro-aYV" firstAttribute="width" secondItem="hiR-26-ld8" secondAttribute="width" id="Maa-cs-KbQ"/>
+                            <constraint firstItem="hiR-26-ld8" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="OJ7-fh-gjg"/>
+                            <constraint firstItem="HZN-ro-aYV" firstAttribute="top" secondItem="hiR-26-ld8" secondAttribute="bottom" constant="10" id="Uxy-fh-oXo"/>
+                            <constraint firstItem="HZN-ro-aYV" firstAttribute="height" secondItem="hiR-26-ld8" secondAttribute="height" id="YQH-aj-1LR"/>
+                            <constraint firstItem="hiR-26-ld8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a3L-zP-ugR"/>
+                            <constraint firstItem="q76-qW-Bpn" firstAttribute="centerX" secondItem="HZN-ro-aYV" secondAttribute="centerX" id="fd2-ui-aPG"/>
+                            <constraint firstItem="q76-qW-Bpn" firstAttribute="height" secondItem="HZN-ro-aYV" secondAttribute="height" id="gdN-3N-PNf"/>
+                            <constraint firstItem="8N0-Jl-dkL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gmi-U0-CK9"/>
+                            <constraint firstItem="q76-qW-Bpn" firstAttribute="width" secondItem="HZN-ro-aYV" secondAttribute="width" id="hoq-IH-Rgz"/>
+                            <constraint firstItem="HZN-ro-aYV" firstAttribute="centerX" secondItem="hiR-26-ld8" secondAttribute="centerX" id="r5H-FN-RZr"/>
+                            <constraint firstItem="q76-qW-Bpn" firstAttribute="top" secondItem="HZN-ro-aYV" secondAttribute="bottom" constant="10" id="rFZ-jV-Oxl"/>
+                            <constraint firstItem="8N0-Jl-dkL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xfa-z4-4WI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="logInButton" destination="q76-qW-Bpn" id="eWo-RG-ap5"/>
+                        <outlet property="passwordTextField" destination="HZN-ro-aYV" id="v9l-0F-M0U"/>
+                        <outlet property="usernameTextField" destination="hiR-26-ld8" id="GqV-Nw-ACe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="92"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1920" height="1080"/>
+    </resources>
+</document>
