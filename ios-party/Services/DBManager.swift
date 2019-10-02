@@ -26,6 +26,7 @@ final class DBManager {
     
     func getServers() -> [Server]? {
         let fetchRequest = NSFetchRequest<Server>(entityName: modelName)
+        fetchRequest.returnsObjectsAsFaults = false
         
         do {
             return try viewContext.fetch(fetchRequest)
@@ -39,7 +40,8 @@ final class DBManager {
     func save(_ model: ServerModel) {
 
         let fetchRequest = NSFetchRequest<Server>(entityName: modelName)
-        fetchRequest.predicate = NSPredicate(format: "name == %@", model.name)
+        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.predicate = NSPredicate(format: "(serverName == %@)", model.name)
         var models: [Server]? = []
         
         do {
@@ -48,12 +50,16 @@ final class DBManager {
             Router.route(to: .Error(description: error.localizedDescription))
         }
         
-        let entity = NSEntityDescription.entity(forEntityName: modelName, in: viewContext)!
-        let server = NSManagedObject(entity: entity, insertInto: viewContext)
+        if let server = models?.first {
+            server.setValue(model.distance, forKeyPath: "distance")
+        } else {
+            let entity = NSEntityDescription.entity(forEntityName: modelName, in: viewContext)!
+            let server = models?.first ?? NSManagedObject(entity: entity, insertInto: viewContext)
+            
+            server.setValue(model.name, forKeyPath: "serverName")
+            server.setValue(model.distance, forKeyPath: "distance")
+        }
         
-        server.setValue(model.name, forKeyPath: "name")
-        server.setValue(model.distance, forKeyPath: "distance")
-
         do {
             try viewContext.save()
         } catch let error as NSError {

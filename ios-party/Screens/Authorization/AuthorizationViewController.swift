@@ -35,7 +35,7 @@ final class AuthorizationViewController: UIViewController {
         #if DEBUG
         usernameTextField.text = "tesonet"
         passwordTextField.text = "partyanimal"
-        logInButtonPressed()
+//        logInButtonPressed()
         #endif
     }
     
