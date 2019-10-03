@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Xr-0tq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Xr-0tq">
                                 <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -92,7 +92,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-8z-dzI">
-                                <rect key="frame" x="0.0" y="821" width="414" height="41"/>
+                                <rect key="frame" x="0.0" y="796.5" width="414" height="65.5"/>
                                 <color key="backgroundColor" red="0.26263037323951721" green="0.27928459644317627" blue="0.39636215567588806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title=" Sort" image="ico-sort-light">
@@ -113,7 +113,7 @@
                             <constraint firstItem="1js-1b-G8R" firstAttribute="bottom" secondItem="qMT-Xr-0tq" secondAttribute="bottom" id="Gqk-Id-0Jx"/>
                             <constraint firstItem="Gbt-eo-JrE" firstAttribute="top" secondItem="1js-1b-G8R" secondAttribute="top" id="Jry-Hx-zVt"/>
                             <constraint firstItem="dvC-8z-dzI" firstAttribute="leading" secondItem="1js-1b-G8R" secondAttribute="leading" id="Rcg-oT-SWp"/>
-                            <constraint firstItem="dvC-8z-dzI" firstAttribute="height" secondItem="1js-1b-G8R" secondAttribute="height" multiplier="0.05" id="ZDa-ES-LRz"/>
+                            <constraint firstItem="dvC-8z-dzI" firstAttribute="height" secondItem="1js-1b-G8R" secondAttribute="height" multiplier="0.08" id="ZDa-ES-LRz"/>
                             <constraint firstItem="1js-1b-G8R" firstAttribute="trailing" secondItem="Gbt-eo-JrE" secondAttribute="trailing" id="a4w-t4-Zom"/>
                             <constraint firstAttribute="bottomMargin" secondItem="dvC-8z-dzI" secondAttribute="bottom" id="nEL-hD-2pw"/>
                         </constraints>
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2N-xj-eJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906" y="72"/>
+            <point key="canvasLocation" x="-1597" y="108"/>
         </scene>
     </scenes>
     <resources>

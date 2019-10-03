@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Network
 
 final class ServerListViewController: UIViewController {
     
@@ -14,16 +15,25 @@ final class ServerListViewController: UIViewController {
     @IBOutlet weak var sortButton: UIButton!
     
     private var serverModels: [ServerModel] = [] { didSet { tableView.reloadData() } }
+    private let monitor = NWPathMonitor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        APIManager.shared.getServers({ [weak self] servers in
-            self?.serverModels = servers
-            servers.forEach { DBManager.shared.save($0) }
-        }) { error in
-            Router.route(to: .Error(description: error.localizedDescription))
+        monitor.pathUpdateHandler = { [weak self] path in
+            if path.status == .satisfied {
+                APIManager.shared.getServers({ servers in
+                    self?.serverModels = servers
+                    servers.forEach { DBManager.shared.save($0) }
+                }) { error in
+                    Router.route(to: .Error(description: error.localizedDescription))
+                }
+            } else if let servers = DBManager.shared.getServers() {
+                self?.serverModels = servers.map { return ServerModel(name: $0.serverName ?? "", distance: Int($0.distance)) }
+            }
+            self?.monitor.cancel()
         }
+        monitor.start(queue: DispatchQueue.main)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logo-dark"),
                                                            style: .plain,
@@ -33,6 +43,7 @@ final class ServerListViewController: UIViewController {
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(logout))
+        tableView.contentInset = .init(top: 0, left: 0, bottom: sortButton.frame.height, right: 0)
     }
     
     @objc func logout() {
@@ -40,7 +51,16 @@ final class ServerListViewController: UIViewController {
     }
     
     @IBAction func sort() {
+        let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "By Distance", style: .default, handler: { [weak self] _ in
+            self?.serverModels.sort(by: { return $0.distance < $1.distance })
+        }))
+        alertController.addAction(UIAlertAction(title: "Alphanumerical", style: .default, handler: { [weak self] _ in
+            self?.serverModels.sort(by: { return $0.name < $1.name })
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        present(alertController, animated: true)
     }
 }
 
