@@ -18,11 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         print("UIApplication: didFinishLaunchingWithOptions")
         #endif
+        window = application.windows.first
+        window?.makeKey()
         if #available(iOS 13.0, *) { } else {
             #if DEBUG
             print("Pre - iOS 13 processing")
             #endif
-            window = UIWindow(frame: UIScreen.main.bounds)
             let dependency = AppDependencyContainer()
             dependency.window = window
             appFlowStateProcessor = AppFlowStateProcessor(dependency: dependency)

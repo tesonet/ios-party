@@ -9,71 +9,60 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator: LoginDelegate {
-    var loginViewController: UIViewController?
+protocol LoginCoordinator {
+    init(dependency: DependencyContainer, completionHandler: @escaping ((Bool) -> Void))
+    func start()
+}
+
+class AppLoginCoordinator: LoginCoordinator {
+    unowned private var dependency: DependencyContainer
+    private var loadingViewController: LoadingViewController?
+    private var loginViewController: LoginViewController?
+    private var loginViewModel: LoginViewModel?
+    private var completionHandler: ((Bool) -> Void)
+    
+    required init(dependency: DependencyContainer, completionHandler: @escaping ((Bool) -> Void)) {
+        self.dependency = dependency
+        self.completionHandler = completionHandler
+    }
     
     func start() {
-        loginViewController = nil
-        loginViewController = LoginViewController.
-        guard let loginVC = loginViewController else { return }
+        let loginModel = AppLoginViewModel(dependency: dependency, completionHandler: onLoggedIn)
+        loginViewModel = loginModel
+        loginViewController = AppLoginViewController.makeLoginViewController(viewModel: loginModel) as? LoginViewController
+        loginViewModel?.view = loginViewController
         displayLogin()
     }
     
-    // MARK: -
-    func displayLogin(viewController: UIViewController, presentingViewController: UIViewController) {
-        let modalViewController = viewController
-        viewController.modalPresentationStyle = .overCurrentContext
-        let presentingVC = presentingViewController
-        presentingVC.definesPresentationContext = true
-        presentingVC.present(modalViewController, animated: true, completion: nil)
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        guard let appCoordinator = appDelegate.coordinator else { return }
-        appCoordinator.contentRootPresentedVC = viewController
-        subscribeToPageLoadedNotification()
-        subscribeToDismissPageNotification()
+    func displayLogin() {
+        guard let loginVC = loginViewController as? UIViewController else { return }
+        guard let window = dependency.window else { return }
+        cleanData()
+        Transition.changeRootViewController(with: loginVC, in: window, direction: .up)
     }
     
-    func subscribeToPageLoadedNotification() {
-        Backbase.registerObserver(self, selector: #selector(pageLoaded(notification:)), forEvent: "bb.item.loaded")
+    func displayWaitingScreen() {
+        guard let loadingViewController = LoadingViewController.makeLoadingViewController() else {  return }
+        guard let window = dependency.window else { return }
+        Transition.changeRootViewController(with: loadingViewController, in: window, direction: .up)
     }
     
-    @objc
-    func pageLoaded(notification: Notification) {
-        
-    }
-    
-    func unsubscribeFromPageLoadedNotification() {
-        Backbase.unregisterObserver(self, forEvent: "bb.item.loaded")
-    }
-    
-    func subscribeToDismissPageNotification() {
-        Backbase.registerObserver(self, selector: #selector(dismissBackbaseTopPage(notification:)), forEvent: "native:dismiss-backbase")
-    }
-    
-    func unsubscribeFromDismissPageNotification() {
-        Backbase.unregisterObserver(self, forEvent: "native:dismiss-backbase")
-    }
-    
-    func dismissCurrencyConverter(completion: (() -> Void)? = nil) {
-        unsubscribeFromDismissPageNotification()
-        unsubscribeFromPageLoadedNotification()
-        currencyConverterViewController?.dismiss(animated: true) { [weak self] in
-            self?.currencyConverterViewController?.transitioningDelegate = nil
-            self?.currencyConverterViewController = nil
-            self?.presenterViewController = nil
-            guard let completionHandler = completion else { return }
-            completionHandler()
+    func onLoggedIn(state: Bool) {
+        if state {
+            displayWaitingScreen()
         }
+        completionHandler(state)
     }
     
-    @objc
-    func dismissBackbaseTopPage(notification: Notification) {
-        dismissCurrencyConverter()
+    func onError(error: AppError) {
+        dependency.errorHandler?.process(error: error)
     }
-    
-    func onCurrencyConverterCompletion() {
-        #if DEBUG
-        print("CURRENCY CONVERTER COMPLETION")
-        #endif
+}
+
+private extension AppLoginCoordinator {
+    func cleanData() {
+        LocalStorage.deleteToken()
+        LocalStorage.deleteUserCredentials()
+        dependency.dataManager?.deleteServers()
     }
 }

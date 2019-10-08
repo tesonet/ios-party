@@ -14,4 +14,9 @@ struct AppConstants {
         static let getAccessToken = "v1/tokens"
         static let getServers = "v1/servers"
     }
+    struct ServersList {
+        static let tableServerTitle = "SERVER"
+        static let tableDistanceTitle = "DISTANCE"
+        static let serversTableHeaderId = "ServersTableHeader"
+    }
 }

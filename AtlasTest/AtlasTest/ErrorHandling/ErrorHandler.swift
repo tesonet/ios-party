@@ -35,7 +35,7 @@ class ErrorHandler {
     }
 
     // MARK: - display error handler view controller
-    func process(error: AppError, inWindow: Bool = false, completionHandler:(() -> Void)?) {
+    func process(error: AppError, inWindow: Bool = false, completionHandler:(() -> Void)? = nil) {
         guard ErrorHandler.processedError == nil else { return }
         ErrorHandler.processedError = error
 

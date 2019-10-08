@@ -82,7 +82,7 @@ class ModalPresentationController: UIPresentationController, LayoutObserver {
 
     // MARK: - methods responsible for creating and animating the dimming view
     func setupDimmingView() {
-        dimmingView.backgroundColor = UIColor.black//UIColor.clear
+        dimmingView.backgroundColor = UIColor.white
         dimmingView.alpha = 0.0
     }
 

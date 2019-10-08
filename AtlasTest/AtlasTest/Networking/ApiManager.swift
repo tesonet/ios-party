@@ -103,7 +103,7 @@ private extension ApiAppManager {
             case .errorWith(let error):
                 onCompletion([:], nil, AppTestError.errorWith(error: error), nil)
             case .service: onCompletion([:], nil, AppTestError.service, nil)
-            case .onUnauthorizedRequest:
+            case .authError:
                 return onCompletion([:], nil, AppTestError.authError, nil)
             default: onCompletion([:], nil, AppTestError.service, nil)
             }

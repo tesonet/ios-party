@@ -15,6 +15,7 @@ protocol Coordinator {
 
 protocol FlowStateProcessor {
     var appFlowState: AppFlowState { get set }
+    var oldState: AppFlowState { get }
     func initAppFlow()
     func defineAuthorizationState()
     func login()
@@ -23,8 +24,11 @@ protocol FlowStateProcessor {
 }
 
 final class AppFlowStateProcessor: FlowStateProcessor {
-    private unowned var dependency: DependencyContainer
-    private var oldState: AppFlowState = .none
+    private var dependency: DependencyContainer
+    private var loginCoordinator: LoginCoordinator?
+    private var listCoordinator: ListCoordinator?
+    
+    var oldState: AppFlowState = .none
     var appFlowState: AppFlowState = .none {
         willSet(newValue) {
             oldState = appFlowState
@@ -47,6 +51,12 @@ final class AppFlowStateProcessor: FlowStateProcessor {
         #if DEBUG
         print("AppFlowStateProcessor: initAppFlow")
         #endif
+        guard let loadingViewController = LoadingViewController.makeLoadingViewController() else {  return }
+        guard let window = dependency.window else { return }
+        
+        window.rootViewController = loadingViewController
+        window.makeKeyAndVisible()
+        
         dependency.errorHandler = ErrorHandler(dependency: dependency)
         dependency.apiWorker = ApiNetWorker(dependency: dependency)
         dependency.dataManager = DataStorageManager()
@@ -66,43 +76,23 @@ final class AppFlowStateProcessor: FlowStateProcessor {
         appFlowState = .authorized
     }
     
-    func login(username: String, password: String) {
-        dependency.apiWorker?.login(username: "tesonet", password: "partyanimal") { [weak self] result in
-            switch result {
-            case .error(let error): print(error)
-            case .response(let result):
-                guard let token = result as? String else { return }
-                LocalStorage.saveToken(token)
-                self?.getServers()
-            }
-            
-        }
-    }
-    
-    func getServers() {
-        dependency.apiWorker?.getServers() { result in
-            switch result {
-            case .error(let error): print(error)
-            case .response(let result):
-            print(result)
-            }
-        }
-    }
-    
     func login() {
         #if DEBUG
         print("AppFlowStateProcessor: login")
         #endif
-        let loginCoordinator = LoginCoordinator(dependency: dependency)
-        loginCoordinator.start()
+        loginCoordinator = AppLoginCoordinator(dependency: dependency) { [weak self] isLogged in
+            guard isLogged else { return }
+            self?.appFlowState = .authorized
+        }
+        loginCoordinator?.start()
     }
     
     func displayContent() {
         #if DEBUG
         print("AppFlowStateProcessor: displayContent")
         #endif
-        let listCoordinator = ListCoordinator(dependency: dependency)
-        listCoordinator.start()
+        listCoordinator = AppListCoordinator(dependency: dependency)
+        listCoordinator?.start()
     }
     
     func onFatalError() {

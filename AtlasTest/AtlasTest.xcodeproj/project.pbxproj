@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0C61322344769800C7F596 /* UIViewController+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C61312344769800C7F596 /* UIViewController+Shadow.swift */; };
+		8C0C6134234738E000C7F596 /* AnimatedGradientCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C6133234738E000C7F596 /* AnimatedGradientCircle.swift */; };
+		8C2EB3EC234310390078BA56 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB3EB234310390078BA56 /* Transition.swift */; };
 		8C30E8432340D6A2002B2767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E8422340D6A2002B2767 /* AppDelegate.swift */; };
 		8C30E8452340D6A2002B2767 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E8442340D6A2002B2767 /* SceneDelegate.swift */; };
-		8C30E8472340D6A2002B2767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E8462340D6A2002B2767 /* ViewController.swift */; };
 		8C30E84A2340D6A2002B2767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E8482340D6A2002B2767 /* Main.storyboard */; };
 		8C30E84C2340D6A5002B2767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E84B2340D6A5002B2767 /* Assets.xcassets */; };
 		8C30E84F2340D6A5002B2767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E84D2340D6A5002B2767 /* LaunchScreen.storyboard */; };
@@ -25,7 +27,6 @@
 		8C30E8892340DE91002B2767 /* AppStateProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E8882340DE91002B2767 /* AppStateProcessing.swift */; };
 		8C30E88B2340DF5D002B2767 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E88A2340DF5D002B2767 /* AppFlowCoordinator.swift */; };
 		8C30E88D234104EC002B2767 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E88C234104EC002B2767 /* LoadingViewController.swift */; };
-		8C30E8932341056F002B2767 /* LoadingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E8922341056F002B2767 /* LoadingCoordinator.swift */; };
 		8C30E8962341059C002B2767 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E8952341059C002B2767 /* LoginViewController.swift */; };
 		8C30E898234105AC002B2767 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E897234105AC002B2767 /* LoginCoordinator.swift */; };
 		8C30E89A234105C8002B2767 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E899234105C8002B2767 /* LoginViewModel.swift */; };
@@ -64,10 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C0C61312344769800C7F596 /* UIViewController+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Shadow.swift"; sourceTree = "<group>"; };
+		8C0C6133234738E000C7F596 /* AnimatedGradientCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradientCircle.swift; sourceTree = "<group>"; };
+		8C2EB3EB234310390078BA56 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		8C30E83F2340D6A2002B2767 /* AtlasTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtlasTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C30E8422340D6A2002B2767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C30E8442340D6A2002B2767 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C30E8462340D6A2002B2767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C30E8492340D6A2002B2767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C30E84B2340D6A5002B2767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C30E84E2340D6A5002B2767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 		8C30E8882340DE91002B2767 /* AppStateProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateProcessing.swift; sourceTree = "<group>"; };
 		8C30E88A2340DF5D002B2767 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		8C30E88C234104EC002B2767 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		8C30E8922341056F002B2767 /* LoadingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCoordinator.swift; sourceTree = "<group>"; };
 		8C30E8952341059C002B2767 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C30E897234105AC002B2767 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		8C30E899234105C8002B2767 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -167,7 +169,6 @@
 				8C30E8422340D6A2002B2767 /* AppDelegate.swift */,
 				8C30E8812340DCBA002B2767 /* DependencyContainer.swift */,
 				8C30E8442340D6A2002B2767 /* SceneDelegate.swift */,
-				8C30E8462340D6A2002B2767 /* ViewController.swift */,
 				8C30E8482340D6A2002B2767 /* Main.storyboard */,
 				8C30E84B2340D6A5002B2767 /* Assets.xcassets */,
 				8C30E84D2340D6A5002B2767 /* LaunchScreen.storyboard */,
@@ -229,11 +230,14 @@
 		8C30E8752340D721002B2767 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8C2EB3EB234310390078BA56 /* Transition.swift */,
 				8C30E87F2340DC25002B2767 /* ModalPresentationController.swift */,
 				8C30E8AB23413230002B2767 /* ErrorHandling */,
 				8C30E8912341054E002B2767 /* ContentList */,
 				8C30E88F2341051A002B2767 /* Loading */,
 				8C30E88E23410509002B2767 /* Login */,
+				8C0C61312344769800C7F596 /* UIViewController+Shadow.swift */,
+				8C0C6133234738E000C7F596 /* AnimatedGradientCircle.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -260,9 +264,9 @@
 		8C30E88E23410509002B2767 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8C30E899234105C8002B2767 /* LoginViewModel.swift */,
 				8C30E8952341059C002B2767 /* LoginViewController.swift */,
 				8C30E897234105AC002B2767 /* LoginCoordinator.swift */,
-				8C30E899234105C8002B2767 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -271,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				8C30E88C234104EC002B2767 /* LoadingViewController.swift */,
-				8C30E8922341056F002B2767 /* LoadingCoordinator.swift */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -279,8 +282,8 @@
 		8C30E8912341054E002B2767 /* ContentList */ = {
 			isa = PBXGroup;
 			children = (
-				8C30E89B234105F0002B2767 /* ListViewController.swift */,
 				8C30E89D23410603002B2767 /* ListViewModel.swift */,
+				8C30E89B234105F0002B2767 /* ListViewController.swift */,
 				8C30E89F2341061B002B2767 /* ListCoordinator.swift */,
 			);
 			path = ContentList;
@@ -440,20 +443,19 @@
 				8C30E8BC2341B16C002B2767 /* AtlasTest.xcdatamodeld in Sources */,
 				8C30E8792340D7CB002B2767 /* AppError.swift in Sources */,
 				8C30E8962341059C002B2767 /* LoginViewController.swift in Sources */,
-				8C30E8472340D6A2002B2767 /* ViewController.swift in Sources */,
 				8C30E88B2340DF5D002B2767 /* AppFlowCoordinator.swift in Sources */,
 				8C30E8AD2341618D002B2767 /* ApiWorker.swift in Sources */,
 				8C30E8A423412251002B2767 /* ApiManager.swift in Sources */,
 				8C30E8B7234179AB002B2767 /* KeychainService.swift in Sources */,
 				8C30E8872340DE5D002B2767 /* AppFlowState.swift in Sources */,
 				8C30E8852340DD03002B2767 /* ReadWriteLock.swift in Sources */,
+				8C2EB3EC234310390078BA56 /* Transition.swift in Sources */,
 				8C30E8A02341061B002B2767 /* ListCoordinator.swift in Sources */,
 				8C30E87B2340D7E0002B2767 /* ErrorHandler.swift in Sources */,
 				8C30E8432340D6A2002B2767 /* AppDelegate.swift in Sources */,
 				8C30E8B123416F4A002B2767 /* Token.swift in Sources */,
 				8C30E89A234105C8002B2767 /* LoginViewModel.swift in Sources */,
 				8C30E8A2234121AC002B2767 /* Api.swift in Sources */,
-				8C30E8932341056F002B2767 /* LoadingCoordinator.swift in Sources */,
 				8C30E8452340D6A2002B2767 /* SceneDelegate.swift in Sources */,
 				8C30E8AA23412BA7002B2767 /* LocalStorage.swift in Sources */,
 				8C30E8822340DCBA002B2767 /* DependencyContainer.swift in Sources */,
@@ -464,8 +466,10 @@
 				8C30E8B923419D25002B2767 /* DataStorageManager.swift in Sources */,
 				8C30E898234105AC002B2767 /* LoginCoordinator.swift in Sources */,
 				8C30E8B323416F6A002B2767 /* Server.swift in Sources */,
+				8C0C6134234738E000C7F596 /* AnimatedGradientCircle.swift in Sources */,
 				8C30E8802340DC26002B2767 /* ModalPresentationController.swift in Sources */,
 				8C30E8A8234127A9002B2767 /* Constants.swift in Sources */,
+				8C0C61322344769800C7F596 /* UIViewController+Shadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
