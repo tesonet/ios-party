@@ -1,0 +1,8 @@
+# platform :ios, '12.4'
+use_frameworks!
+
+target 'PartySwift' do
+  pod 'Alamofire', '~> 5.0.0-rc.3'
+  pod 'SVProgressHUD'
+end
+
