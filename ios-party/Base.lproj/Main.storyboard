@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Return Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ios_party" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,56 +20,57 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.043137254901960784" green="0.058823529411764705" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNu-r9-eSm" customClass="RoundedCornerView" customModule="ios_party" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNu-r9-eSm" customClass="PasswordInput" customModule="ios_party" customModuleProvider="target">
                                 <rect key="frame" x="55" y="302" width="210" height="40"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico-lock" translatesAutoresizingMaskIntoConstraints="NO" id="kZk-rG-ivJ">
-                                        <rect key="frame" x="13" y="15" width="10" height="10"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tz0-mg-SDs">
-                                        <rect key="frame" x="36" y="0.0" width="174" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="oO8-hZ-zrR"/>
                                     <constraint firstAttribute="width" constant="210" id="t7H-Cw-6Ui"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ico-lock"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="returnDelegate" destination="BYZ-38-t0r" id="09i-m1-mY1"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fC-kG-B6B" customClass="RoundedCornerView" customModule="ios_party" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fC-kG-B6B" customClass="UsernameInput" customModule="ios_party" customModuleProvider="target">
                                 <rect key="frame" x="55" y="252" width="210" height="40"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico-username" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-Mn-u47">
-                                        <rect key="frame" x="13" y="15" width="10" height="10"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXS-zH-Kl3">
-                                        <rect key="frame" x="36" y="0.0" width="174" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="DqD-Fw-FLR"/>
                                     <constraint firstAttribute="height" constant="40" id="SyE-Rp-bml"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ico-username"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Username"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="nextInput" destination="nNu-r9-eSm" id="yaT-fG-mbz"/>
+                                </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYm-Wr-K8V" customClass="RoundedCornerButton" customModule="ios_party" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYm-Wr-K8V" customClass="ActionButton" customModule="ios_party" customModuleProvider="target">
                                 <rect key="frame" x="55" y="352" width="210" height="40"/>
                                 <color key="backgroundColor" red="0.62352941179999999" green="0.83529411760000005" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6Ek-co-6J3"/>
-                                    <constraint firstAttribute="width" constant="210" id="cuT-af-toK"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.79599471830985913" green="0.79599471830985913" blue="0.79599471830985913" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unhighlightColor">
+                                        <color key="value" red="0.62352941179999999" green="0.83529411760000005" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                        <color key="value" red="0.39083770895606407" green="0.5235750440140845" blue="0.12536303871466042" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwm-VN-rzS" userLabel="logo-layout-guide">
                                 <rect key="frame" x="160" y="0.0" width="0.0" height="252"/>
@@ -91,6 +92,7 @@
                             <constraint firstItem="4fC-kG-B6B" firstAttribute="top" secondItem="uwm-VN-rzS" secondAttribute="bottom" id="Jpq-qq-AVv"/>
                             <constraint firstItem="Mlc-58-WrF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KUv-re-9hu"/>
                             <constraint firstItem="nNu-r9-eSm" firstAttribute="top" secondItem="4fC-kG-B6B" secondAttribute="bottom" constant="10" id="N34-T6-iPv"/>
+                            <constraint firstItem="nYm-Wr-K8V" firstAttribute="width" secondItem="nNu-r9-eSm" secondAttribute="width" id="Qif-Aw-AZi"/>
                             <constraint firstItem="nYm-Wr-K8V" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WoD-Ha-C69"/>
                             <constraint firstItem="uwm-VN-rzS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dZL-8v-mWj"/>
                             <constraint firstItem="zSU-ER-4Vd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iQU-jN-xgS"/>

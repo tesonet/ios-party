@@ -10,9 +10,11 @@ import UIKit
 
 final class LoginViewController: KeyboardSafeAreaViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
+}
+
+extension LoginViewController: InputViewReturnDelegate {
+
+  func inputViewDidReturn(_: InputView) {
   }
 
 }
