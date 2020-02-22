@@ -10,11 +10,16 @@ import UIKit
 
 final class LoginViewController: KeyboardSafeAreaViewController {
 
+  @IBAction func submitLogin() {
+    performSegue(withIdentifier: "load", sender: self)
+  }
+  
 }
 
 extension LoginViewController: InputViewReturnDelegate {
 
   func inputViewDidReturn(_: InputView) {
+    submitLogin()
   }
 
 }

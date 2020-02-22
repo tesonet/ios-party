@@ -15,6 +15,7 @@
 		7C8F094B24012194009DF494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F094924012194009DF494 /* Main.storyboard */; };
 		7C8F094D24012195009DF494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F094C24012195009DF494 /* Assets.xcassets */; };
 		7C8F095024012195009DF494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F094E24012195009DF494 /* LaunchScreen.storyboard */; };
+		7CE66F62240191C9002F00AF /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE66F61240191C9002F00AF /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7C8F094C24012195009DF494 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C8F094F24012195009DF494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C8F095124012195009DF494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CE66F61240191C9002F00AF /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				7C8F094324012194009DF494 /* AppDelegate.swift */,
 				7C7A128724012D9900F8370C /* KeyboardSafeAreaViewController.swift */,
 				7C8F094724012194009DF494 /* LoginViewController.swift */,
+				7CE66F61240191C9002F00AF /* LoadingViewController.swift */,
 				7C7A128B24016DD800F8370C /* InputView.swift */,
 				7C446C4A24017FFE00077E30 /* ActionButton.swift */,
 				7C8F094924012194009DF494 /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				7C7A128824012D9900F8370C /* KeyboardSafeAreaViewController.swift in Sources */,
 				7C7A128C24016DD800F8370C /* InputView.swift in Sources */,
 				7C8F094424012194009DF494 /* AppDelegate.swift in Sources */,
+				7CE66F62240191C9002F00AF /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
