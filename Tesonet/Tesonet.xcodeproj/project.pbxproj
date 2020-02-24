@@ -239,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC9433D24044674007DF414 /* LaunchScreen.storyboard in Resources */,
+				1FC9435F24046B2B007DF414 /* Localizable.strings in Resources */,
 				1FC9433A24044674007DF414 /* Assets.xcassets in Resources */,
 				1FC943382404466C007DF414 /* Main.storyboard in Resources */,
 			);
@@ -303,6 +304,14 @@
 				1FC9433C24044674007DF414 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1FC9436124046B2B007DF414 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FC9436024046B2B007DF414 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

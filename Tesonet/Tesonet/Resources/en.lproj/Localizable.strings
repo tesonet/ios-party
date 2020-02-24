@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Tesonet
+*/
+
+// MARK: - Login
+
+"UserNamePlaceholer" = "Username";
+"PasswordPlaceholder" = "Password";
+"LoadingLabel" = "Fetching the list...";
+
+// MARK: -
