@@ -81,11 +81,6 @@
 			children = (
 				1FC943302404466C007DF414 /* AppDelegate.swift */,
 				1FC943322404466C007DF414 /* SceneDelegate.swift */,
-				1FC943342404466C007DF414 /* ViewController.swift */,
-				1FC943362404466C007DF414 /* Main.storyboard */,
-				1FC9433924044674007DF414 /* Assets.xcassets */,
-				1FC9433B24044674007DF414 /* LaunchScreen.storyboard */,
-				1FC9433E24044674007DF414 /* Info.plist */,
 			);
 			path = Tesonet;
 			sourceTree = "<group>";
@@ -97,6 +92,18 @@
 				1FC9434924044675007DF414 /* Info.plist */,
 			);
 			path = TesonetTests;
+			sourceTree = "<group>";
+		};
+		1FC9435C24046A58007DF414 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FC943362404466C007DF414 /* Main.storyboard */,
+				1FC9433924044674007DF414 /* Assets.xcassets */,
+				1FC9433B24044674007DF414 /* LaunchScreen.storyboard */,
+				1FC9433E24044674007DF414 /* Info.plist */,
+				1FC9436124046B2B007DF414 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,7 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRMTPKZM4P;
-				INFOPLIST_FILE = Tesonet/Info.plist;
+				INFOPLIST_FILE = Tesonet/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,7 +389,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRMTPKZM4P;
-				INFOPLIST_FILE = Tesonet/Info.plist;
+				INFOPLIST_FILE = Tesonet/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
