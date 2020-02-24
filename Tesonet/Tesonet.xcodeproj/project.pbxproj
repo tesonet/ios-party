@@ -20,6 +20,11 @@
 		1FC9436424046B80007DF414 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9436324046B80007DF414 /* StringExtension.swift */; };
 		1FC943672404716D007DF414 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943662404716D007DF414 /* LoadingView.swift */; };
 		1FC943692404731D007DF414 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943682404731D007DF414 /* LoginView.swift */; };
+		1FC9436B24047C42007DF414 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9436A24047C42007DF414 /* ServerListViewController.swift */; };
+		1FC9436D24048027007DF414 /* Storyboard+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9436C24048027007DF414 /* Storyboard+Loader.swift */; };
+		1FC9436F2404812A007DF414 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9436E2404812A007DF414 /* ServerCell.swift */; };
+		1FC94371240481FB007DF414 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC94370240481FB007DF414 /* ServerModel.swift */; };
+		1FC943732404847D007DF414 /* TableView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943722404847D007DF414 /* TableView+Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		1FC9436324046B80007DF414 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1FC943662404716D007DF414 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1FC943682404731D007DF414 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1FC9436A24047C42007DF414 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
+		1FC9436C24048027007DF414 /* Storyboard+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Loader.swift"; sourceTree = "<group>"; };
+		1FC9436E2404812A007DF414 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
+		1FC94370240481FB007DF414 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		1FC943722404847D007DF414 /* TableView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Loader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 			children = (
 				1FC9435824046223007DF414 /* UIKeyboardViewController.swift */,
 				1FC943532404603C007DF414 /* LoginViewController.swift */,
+				1FC9436A24047C42007DF414 /* ServerListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				1FC9435624046059007DF414 /* UserModel.swift */,
+				1FC94370240481FB007DF414 /* ServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				1FC9436324046B80007DF414 /* StringExtension.swift */,
+				1FC9436C24048027007DF414 /* Storyboard+Loader.swift */,
+				1FC943722404847D007DF414 /* TableView+Loader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,6 +167,7 @@
 			children = (
 				1FC943662404716D007DF414 /* LoadingView.swift */,
 				1FC943682404731D007DF414 /* LoginView.swift */,
+				1FC9436E2404812A007DF414 /* ServerCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,8 +281,12 @@
 				1FC943732404847D007DF414 /* TableView+Loader.swift in Sources */,
 				1FC9435924046223007DF414 /* UIKeyboardViewController.swift in Sources */,
 				1FC9436424046B80007DF414 /* StringExtension.swift in Sources */,
+				1FC94371240481FB007DF414 /* ServerModel.swift in Sources */,
 				1FC943672404716D007DF414 /* LoadingView.swift in Sources */,
+				1FC9436B24047C42007DF414 /* ServerListViewController.swift in Sources */,
 				1FC943332404466C007DF414 /* SceneDelegate.swift in Sources */,
+				1FC9436D24048027007DF414 /* Storyboard+Loader.swift in Sources */,
+				1FC9436F2404812A007DF414 /* ServerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
