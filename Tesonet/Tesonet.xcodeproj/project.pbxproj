@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		1FC943312404466C007DF414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943302404466C007DF414 /* AppDelegate.swift */; };
 		1FC943332404466C007DF414 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943322404466C007DF414 /* SceneDelegate.swift */; };
-		1FC943352404466C007DF414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943342404466C007DF414 /* ViewController.swift */; };
 		1FC943382404466C007DF414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC943362404466C007DF414 /* Main.storyboard */; };
 		1FC9433A24044674007DF414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC9433924044674007DF414 /* Assets.xcassets */; };
 		1FC9433D24044674007DF414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC9433B24044674007DF414 /* LaunchScreen.storyboard */; };
 		1FC9434824044675007DF414 /* TesonetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9434724044675007DF414 /* TesonetTests.swift */; };
+		1FC943542404603C007DF414 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943532404603C007DF414 /* LoginViewController.swift */; };
+		1FC9435724046059007DF414 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9435624046059007DF414 /* UserModel.swift */; };
+		1FC9435924046223007DF414 /* UIKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9435824046223007DF414 /* UIKeyboardViewController.swift */; };
+		1FC9435F24046B2B007DF414 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FC9436124046B2B007DF414 /* Localizable.strings */; };
+		1FC9436424046B80007DF414 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9436324046B80007DF414 /* StringExtension.swift */; };
+		1FC943672404716D007DF414 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943662404716D007DF414 /* LoadingView.swift */; };
+		1FC943692404731D007DF414 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943682404731D007DF414 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +36,6 @@
 		1FC9432D2404466C007DF414 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC943302404466C007DF414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FC943322404466C007DF414 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FC943342404466C007DF414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FC943372404466C007DF414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FC9433924044674007DF414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC9433C24044674007DF414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +43,13 @@
 		1FC9434324044675007DF414 /* TesonetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesonetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC9434724044675007DF414 /* TesonetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesonetTests.swift; sourceTree = "<group>"; };
 		1FC9434924044675007DF414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC943532404603C007DF414 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1FC9435624046059007DF414 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1FC9435824046223007DF414 /* UIKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKeyboardViewController.swift; sourceTree = "<group>"; };
+		1FC9436024046B2B007DF414 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1FC9436324046B80007DF414 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1FC943662404716D007DF414 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1FC943682404731D007DF414 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,11 @@
 			children = (
 				1FC943302404466C007DF414 /* AppDelegate.swift */,
 				1FC943322404466C007DF414 /* SceneDelegate.swift */,
+				1FC943652404715C007DF414 /* Views */,
+				1FC9436224046B6D007DF414 /* Extensions */,
+				1FC9435524046043007DF414 /* Models */,
+				1FC9435224045F8B007DF414 /* Controllers */,
+				1FC9435C24046A58007DF414 /* Resources */,
 			);
 			path = Tesonet;
 			sourceTree = "<group>";
@@ -94,6 +111,23 @@
 			path = TesonetTests;
 			sourceTree = "<group>";
 		};
+		1FC9435224045F8B007DF414 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FC9435824046223007DF414 /* UIKeyboardViewController.swift */,
+				1FC943532404603C007DF414 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1FC9435524046043007DF414 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FC9435624046059007DF414 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1FC9435C24046A58007DF414 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +138,23 @@
 				1FC9436124046B2B007DF414 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1FC9436224046B6D007DF414 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FC9436324046B80007DF414 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1FC943652404715C007DF414 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FC943662404716D007DF414 /* LoadingView.swift */,
+				1FC943682404731D007DF414 /* LoginView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +258,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC943352404466C007DF414 /* ViewController.swift in Sources */,
+				1FC943542404603C007DF414 /* LoginViewController.swift in Sources */,
 				1FC943312404466C007DF414 /* AppDelegate.swift in Sources */,
+				1FC9435724046059007DF414 /* UserModel.swift in Sources */,
+				1FC943692404731D007DF414 /* LoginView.swift in Sources */,
+				1FC943732404847D007DF414 /* TableView+Loader.swift in Sources */,
+				1FC9435924046223007DF414 /* UIKeyboardViewController.swift in Sources */,
+				1FC9436424046B80007DF414 /* StringExtension.swift in Sources */,
+				1FC943672404716D007DF414 /* LoadingView.swift in Sources */,
 				1FC943332404466C007DF414 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
