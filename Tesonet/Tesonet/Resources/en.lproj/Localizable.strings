@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  Tesonet
+*/
+
+// MARK: - Login
+
+"UserNamePlaceholer" = "Username";
+"PasswordPlaceholder" = "Password";
+"LoadingLabel" = "Fetching the list...";
+
+// MARK: -
+
+// MARK: - Sort Alert
+
+"SortByDistance" = "By Distance";
+"SortByAlphaNumeric" = "Alphanumerical";
+
+// MARK: -
+
+// MARK: - Error
+
+"LoginInfoError" = "Please, fill username and password";
+"401" = "Incorrect login info";
+"UnknownError" = "Something wrong, please try again later";
+
+// MARK: -
