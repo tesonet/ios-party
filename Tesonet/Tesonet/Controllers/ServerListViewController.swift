@@ -14,7 +14,7 @@ class ServerListViewController: UIViewController {
     private var serverList: [ServerModel] = []
 
     private lazy var sortAlert: UIAlertController = {
-        let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "SortByDistance".localized, style: .default, handler: { [weak self] (action) in
             guard let self = self else {
                 return

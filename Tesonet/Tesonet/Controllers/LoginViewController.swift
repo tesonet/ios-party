@@ -11,11 +11,7 @@ class LoginViewController: UIKeyboardViewController {
     @IBOutlet weak var loginView: LoginView!
     @IBOutlet weak var loadingView: LoadingView!
 
-    private var user: UserModel? {
-        didSet {
-            fetchServers()
-        }
-    }
+    private var user: UserModel?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,6 +37,7 @@ class LoginViewController: UIKeyboardViewController {
         view.endEditing(true)
         APIManager.sendRequest(RequestsManager.login(userName: loginInfo.userName, password: loginInfo.password), onSuccess: { [weak self] (response) in
             self?.user = UserModel(with: response.dictionaryObject)
+            self?.fetchServers()
         }) { [weak self] (errorCode) in
             self?.showAlert(with: errorCode)
         }
@@ -53,6 +50,8 @@ class LoginViewController: UIKeyboardViewController {
         APIManager.sendRequest(RequestsManager.serversList(token: user.token), onSuccess: { [weak self] (response) in
             if let list = response.arrayObject as? [[String: Any]] {
                 let servers = list.compactMap({ return ServerModel(with: $0) })
+                self?.user = nil
+                self?.loginView.clearLoginInfo()
                 self?.navigationController?.pushViewController(ServerListViewController.instantiate(with: servers), animated: true)
             }
         }) { [weak self] (errorCode) in
@@ -83,13 +82,16 @@ class LoginViewController: UIKeyboardViewController {
     }
 
     private func showAlert(with errorCode: Int?) {
-        let alertController: UIAlertController
+        let errorMessage: String
         if errorCode == 401 {
-            alertController = UIAlertController(title: "", message: "401".localized, preferredStyle: .alert)
+            errorMessage = "401".localized
         } else {
-            alertController = UIAlertController(title: "", message: "UnknownError".localized, preferredStyle: .alert)
+            errorMessage = "UnknownError".localized
         }
-        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        let alertController: UIAlertController = UIAlertController(title: "", message: errorMessage, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (_) in
+            self?.loginView.showError(errorMessage)
+        }))
         cancelLoading()
         present(alertController, animated: true)
     }

@@ -24,6 +24,8 @@ class LoginView: UIView {
         passwordImageView.image = #imageLiteral(resourceName: "lock_icon")
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "PasswordPlaceholder".localized, attributes: placeholderColor)
         loginClickHandler = handler
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
         hideError()
     }
 
@@ -42,5 +44,18 @@ class LoginView: UIView {
 
     func getLoginInfo() -> LoginModel? {
         return LoginModel(userName: userNameTextField.text, password: passwordTextField.text)
+    }
+    
+    func clearLoginInfo() {
+        userNameTextField.text = nil
+        passwordTextField.text = nil
+    }
+}
+
+extension LoginView: UITextFieldDelegate {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        hideError()
+        return true
     }
 }

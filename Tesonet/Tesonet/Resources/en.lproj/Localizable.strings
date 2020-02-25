@@ -20,8 +20,8 @@
 
 // MARK: - Error
 
-"LoginInfoError" = "Please, check username or password";
-"401" = "Error";
+"LoginInfoError" = "Please, fill username and password";
+"401" = "Incorrect login info";
 "UnknownError" = "Something wrong, please try again later";
 
 // MARK: -
