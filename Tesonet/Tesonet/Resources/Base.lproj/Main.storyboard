@@ -242,12 +242,59 @@
         <!--Server List View Controller-->
         <scene sceneID="5OI-YE-rnZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KoI-RN-d8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ServerListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mpx-UQ-X9x" customClass="ServerListViewController" customModule="Tesonet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9IP-xr-mdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MIK-2w-10J">
+                                <rect key="frame" x="0.0" y="102" width="375" height="525"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ServerCell" id="sLT-X6-ni3" customClass="ServerCell" customModule="Tesonet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="21"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sLT-X6-ni3" id="ngi-we-I4d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5me-vP-x5x">
+                                                    <rect key="frame" x="15" y="0.0" width="41" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5O-QO-REV">
+                                                    <rect key="frame" x="319" y="0.0" width="41" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="5me-vP-x5x" firstAttribute="top" secondItem="ngi-we-I4d" secondAttribute="top" id="CsP-Zm-82q"/>
+                                                <constraint firstAttribute="trailing" secondItem="c5O-QO-REV" secondAttribute="trailing" constant="15" id="D3q-T2-0Wh"/>
+                                                <constraint firstAttribute="bottom" secondItem="c5O-QO-REV" secondAttribute="bottom" id="Nch-6o-Otn"/>
+                                                <constraint firstItem="5me-vP-x5x" firstAttribute="leading" secondItem="ngi-we-I4d" secondAttribute="leading" constant="15" id="iJ8-lj-KIe"/>
+                                                <constraint firstAttribute="bottom" secondItem="5me-vP-x5x" secondAttribute="bottom" id="rY1-Za-cW4"/>
+                                                <constraint firstItem="c5O-QO-REV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5me-vP-x5x" secondAttribute="trailing" constant="15" id="t7U-yZ-1np"/>
+                                                <constraint firstItem="c5O-QO-REV" firstAttribute="top" secondItem="ngi-we-I4d" secondAttribute="top" id="tbQ-Pa-5ca"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="c5O-QO-REV" id="kOo-j2-aoh"/>
+                                            <outlet property="serverNameLabel" destination="5me-vP-x5x" id="jJL-2W-mkE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mpx-UQ-X9x" id="fsk-yg-gci"/>
+                                    <outlet property="delegate" destination="mpx-UQ-X9x" id="1XT-61-EF7"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lsa-p7-7bC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
                                 <subviews>
@@ -310,57 +357,9 @@
                                     <constraint firstAttribute="bottom" secondItem="TOM-lJ-CTZ" secondAttribute="bottom" id="qfv-n2-hrZ"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MIK-2w-10J">
-                                <rect key="frame" x="0.0" y="102" width="375" height="525"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ServerCell" id="sLT-X6-ni3" customClass="ServerCell" customModule="Tesonet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="21"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sLT-X6-ni3" id="ngi-we-I4d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5me-vP-x5x">
-                                                    <rect key="frame" x="15" y="0.0" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5O-QO-REV">
-                                                    <rect key="frame" x="319" y="0.0" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="5me-vP-x5x" firstAttribute="top" secondItem="ngi-we-I4d" secondAttribute="top" id="CsP-Zm-82q"/>
-                                                <constraint firstAttribute="trailing" secondItem="c5O-QO-REV" secondAttribute="trailing" constant="15" id="D3q-T2-0Wh"/>
-                                                <constraint firstAttribute="bottom" secondItem="c5O-QO-REV" secondAttribute="bottom" id="Nch-6o-Otn"/>
-                                                <constraint firstItem="5me-vP-x5x" firstAttribute="leading" secondItem="ngi-we-I4d" secondAttribute="leading" constant="15" id="iJ8-lj-KIe"/>
-                                                <constraint firstAttribute="bottom" secondItem="5me-vP-x5x" secondAttribute="bottom" id="rY1-Za-cW4"/>
-                                                <constraint firstItem="c5O-QO-REV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5me-vP-x5x" secondAttribute="trailing" constant="15" id="t7U-yZ-1np"/>
-                                                <constraint firstItem="c5O-QO-REV" firstAttribute="top" secondItem="ngi-we-I4d" secondAttribute="top" id="tbQ-Pa-5ca"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="distanceLabel" destination="c5O-QO-REV" id="kOo-j2-aoh"/>
-                                            <outlet property="serverNameLabel" destination="5me-vP-x5x" id="jJL-2W-mkE"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="mpx-UQ-X9x" id="fsk-yg-gci"/>
-                                    <outlet property="delegate" destination="mpx-UQ-X9x" id="1XT-61-EF7"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gss-ks-3FE">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
-                                <color key="backgroundColor" red="0.13725490196078433" green="0.0" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="81f-qR-7As"/>
                                 </constraints>
@@ -395,6 +394,7 @@
                         <outlet property="serversTableView" destination="MIK-2w-10J" id="Pn1-kC-BZN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KoI-RN-d8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1405.5999999999999" y="121.88905547226388"/>
         </scene>

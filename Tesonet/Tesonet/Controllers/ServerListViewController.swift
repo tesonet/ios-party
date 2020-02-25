@@ -13,6 +13,30 @@ class ServerListViewController: UIViewController {
 
     private var serverList: [ServerModel] = []
 
+    private lazy var sortAlert: UIAlertController = {
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "SortByDistance".localized, style: .default, handler: { [weak self] (action) in
+            guard let self = self else {
+                return
+            }
+            self.serverList = self.serverList.sorted(by: { (lhs, rhs) -> Bool in
+                return lhs.distanceToServer >= rhs.distanceToServer
+            })
+            self.serversTableView.reloadData()
+        }))
+        alertController.addAction(UIAlertAction(title: "SortByAlphaNumeric".localized, style: .default, handler: { [weak self] (action) in
+            guard let self = self else {
+                return
+            }
+            self.serverList = self.serverList.sorted(by: { (lhs, rhs) -> Bool in
+                return lhs.serverName.caseInsensitiveCompare(rhs.serverName) == .orderedAscending
+            })
+            self.serversTableView.reloadData()
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        return alertController
+    }()
+
     static func instantiate(with serverList: [ServerModel]) -> ServerListViewController {
         let vc = UIStoryboard(.main).instantiateViewController(for: ServerListViewController.self)
         vc.serverList = serverList
@@ -29,6 +53,7 @@ class ServerListViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func didClickSort(_ sender: UIButton) {
+        self.present(sortAlert, animated: true)
     }
 
     @IBAction func didClickLogout(_ sender: UIButton) {

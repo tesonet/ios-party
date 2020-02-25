@@ -39,4 +39,8 @@ class LoginView: UIView {
     @IBAction func didClickLogin(_ sender: UIButton) {
         loginClickHandler?()
     }
+
+    func getLoginInfo() -> LoginModel? {
+        return LoginModel(userName: userNameTextField.text, password: passwordTextField.text)
+    }
 }

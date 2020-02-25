@@ -26,7 +26,7 @@ class ServerCell: UITableViewCell {
             return
         }
         serverNameLabel.text = model.serverName
-        distanceLabel.text = model.distanceToServer
+        distanceLabel.text = "\(model.distanceToServer)km"
     }
 
     override func prepareForReuse() {

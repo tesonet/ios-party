@@ -4,14 +4,21 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIKeyboardViewController {
 
     @IBOutlet weak var loginView: LoginView!
     @IBOutlet weak var loadingView: LoadingView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var user: UserModel? {
+        didSet {
+            fetchServers()
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadingView.prepareView()
         loginView.prepareView { [weak self] in
             self?.logIn()
@@ -25,18 +32,32 @@ class LoginViewController: UIKeyboardViewController {
     // MARK: Actions
 
     func logIn() {
+        guard let loginInfo = loginView.getLoginInfo() else {
+            loginView.showError("LoginInfoError".localized)
+            return
+        }
+        loginView.hideError()
+        startLoading()
         view.endEditing(true)
-        navigationController?.pushViewController(ServerListViewController.instantiate(with: [
-            ServerModel(serverName: "Test1", distanceToServer: "1100km"),
-            ServerModel(serverName: "Test2", distanceToServer: "500km"),
-            ServerModel(serverName: "Test3", distanceToServer: "9900km"),
-            ServerModel(serverName: "Test4", distanceToServer: "12300km"),
-            ServerModel(serverName: "Test5", distanceToServer: "140km"),
-            ServerModel(serverName: "Test6", distanceToServer: "100km"),
-            ServerModel(serverName: "Test7", distanceToServer: "1100km"),
-            ServerModel(serverName: "Test8", distanceToServer: "13500km"),
-            ServerModel(serverName: "Test9", distanceToServer: "120km"),
-            ServerModel(serverName: "Test10", distanceToServer: "140km")]), animated: true)
+        APIManager.sendRequest(RequestsManager.login(userName: loginInfo.userName, password: loginInfo.password), onSuccess: { [weak self] (response) in
+            self?.user = UserModel(with: response.dictionaryObject)
+        }) { [weak self] (errorCode) in
+            self?.showAlert(with: errorCode)
+        }
+    }
+
+    private func fetchServers() {
+        guard let user = user else {
+            return
+        }
+        APIManager.sendRequest(RequestsManager.serversList(token: user.token), onSuccess: { [weak self] (response) in
+            if let list = response.arrayObject as? [[String: Any]] {
+                let servers = list.compactMap({ return ServerModel(with: $0) })
+                self?.navigationController?.pushViewController(ServerListViewController.instantiate(with: servers), animated: true)
+            }
+        }) { [weak self] (errorCode) in
+            self?.showAlert(with: errorCode)
+        }
     }
 
     private func startLoading() {
@@ -48,5 +69,28 @@ class LoginViewController: UIKeyboardViewController {
         }) { (_) in
             self.loginView.isHidden = true
         }
+    }
+
+    private func cancelLoading() {
+        loadingView.stopLoading()
+        UIView.animate(withDuration: 0.3, animations: {
+            self.loginView.alpha = 1
+            self.loadingView.alpha = 0
+        }) { (_) in
+            self.loginView.isHidden = false
+            self.loadingView.isHidden = true
+        }
+    }
+
+    private func showAlert(with errorCode: Int?) {
+        let alertController: UIAlertController
+        if errorCode == 401 {
+            alertController = UIAlertController(title: "", message: "401".localized, preferredStyle: .alert)
+        } else {
+            alertController = UIAlertController(title: "", message: "UnknownError".localized, preferredStyle: .alert)
+        }
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        cancelLoading()
+        present(alertController, animated: true)
     }
 }

@@ -10,3 +10,18 @@
 "LoadingLabel" = "Fetching the list...";
 
 // MARK: -
+
+// MARK: - Sort Alert
+
+"SortByDistance" = "By Distance";
+"SortByAlphaNumeric" = "Alphanumerical";
+
+// MARK: -
+
+// MARK: - Error
+
+"LoginInfoError" = "Please, check username or password";
+"401" = "Error";
+"UnknownError" = "Something wrong, please try again later";
+
+// MARK: -

@@ -25,6 +25,12 @@
 		1FC9436F2404812A007DF414 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9436E2404812A007DF414 /* ServerCell.swift */; };
 		1FC94371240481FB007DF414 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC94370240481FB007DF414 /* ServerModel.swift */; };
 		1FC943732404847D007DF414 /* TableView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC943722404847D007DF414 /* TableView+Loader.swift */; };
+		1FED39EF24052D43006D9257 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FED39ED24052D43006D9257 /* Alamofire.framework */; };
+		1FED39F024052D43006D9257 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FED39ED24052D43006D9257 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FED39F124052D43006D9257 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FED39EE24052D43006D9257 /* SwiftyJSON.framework */; };
+		1FED39F224052D43006D9257 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FED39EE24052D43006D9257 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FED39F524052E10006D9257 /* RequestsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED39F424052E10006D9257 /* RequestsManager.swift */; };
+		1FED39F724053B27006D9257 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED39F624053B27006D9257 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,21 @@
 			remoteInfo = Tesonet;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FED39F324052D43006D9257 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1FED39F224052D43006D9257 /* SwiftyJSON.framework in Embed Frameworks */,
+				1FED39F024052D43006D9257 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1FC9432D2404466C007DF414 /* Tesonet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesonet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +81,12 @@
 		1FC9436E2404812A007DF414 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
 		1FC94370240481FB007DF414 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		1FC943722404847D007DF414 /* TableView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Loader.swift"; sourceTree = "<group>"; };
+		1FED39E524052CA4006D9257 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1FED39E624052CA4006D9257 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		1FED39ED24052D43006D9257 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1FED39EE24052D43006D9257 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		1FED39F424052E10006D9257 /* RequestsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsManager.swift; sourceTree = "<group>"; };
+		1FED39F624053B27006D9257 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FED39F124052D43006D9257 /* SwiftyJSON.framework in Frameworks */,
+				1FED39EF24052D43006D9257 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +115,7 @@
 				1FC9432F2404466C007DF414 /* Tesonet */,
 				1FC9434624044675007DF414 /* TesonetTests */,
 				1FC9432E2404466C007DF414 /* Products */,
+				1FED39E424052CA4006D9257 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +133,7 @@
 			children = (
 				1FC943302404466C007DF414 /* AppDelegate.swift */,
 				1FC943322404466C007DF414 /* SceneDelegate.swift */,
+				1FED39E324052BEC006D9257 /* API */,
 				1FC943652404715C007DF414 /* Views */,
 				1FC9436224046B6D007DF414 /* Extensions */,
 				1FC9435524046043007DF414 /* Models */,
@@ -172,6 +203,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1FED39E324052BEC006D9257 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1FED39F624053B27006D9257 /* APIManager.swift */,
+				1FED39F424052E10006D9257 /* RequestsManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1FED39E424052CA4006D9257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FED39ED24052D43006D9257 /* Alamofire.framework */,
+				1FED39EE24052D43006D9257 /* SwiftyJSON.framework */,
+				1FED39E524052CA4006D9257 /* Alamofire.framework */,
+				1FED39E624052CA4006D9257 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +233,8 @@
 				1FC943292404466C007DF414 /* Sources */,
 				1FC9432A2404466C007DF414 /* Frameworks */,
 				1FC9432B2404466C007DF414 /* Resources */,
+				1FED39EC24052CC9006D9257 /* ShellScript */,
+				1FED39F324052D43006D9257 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +322,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FED39EC24052CC9006D9257 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1FC943292404466C007DF414 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -280,11 +355,13 @@
 				1FC943692404731D007DF414 /* LoginView.swift in Sources */,
 				1FC943732404847D007DF414 /* TableView+Loader.swift in Sources */,
 				1FC9435924046223007DF414 /* UIKeyboardViewController.swift in Sources */,
+				1FED39F524052E10006D9257 /* RequestsManager.swift in Sources */,
 				1FC9436424046B80007DF414 /* StringExtension.swift in Sources */,
 				1FC94371240481FB007DF414 /* ServerModel.swift in Sources */,
 				1FC943672404716D007DF414 /* LoadingView.swift in Sources */,
 				1FC9436B24047C42007DF414 /* ServerListViewController.swift in Sources */,
 				1FC943332404466C007DF414 /* SceneDelegate.swift in Sources */,
+				1FED39F724053B27006D9257 /* APIManager.swift in Sources */,
 				1FC9436D24048027007DF414 /* Storyboard+Loader.swift in Sources */,
 				1FC9436F2404812A007DF414 /* ServerCell.swift in Sources */,
 			);
@@ -456,6 +533,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRMTPKZM4P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tesonet/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,6 +555,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRMTPKZM4P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tesonet/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
