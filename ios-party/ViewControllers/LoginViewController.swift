@@ -8,12 +8,14 @@
 
 import UIKit
 
-final class LoginViewController: KeyboardSafeAreaViewController {
+final class LoginViewController: UIViewController {
 
   @IBAction func submitLogin() {
-    performSegue(withIdentifier: "load", sender: self)
+    if let splashVC = parent as? SplashViewController {
+      splashVC.goToLoad()
+    }
   }
-  
+
 }
 
 extension LoginViewController: InputViewReturnDelegate {
