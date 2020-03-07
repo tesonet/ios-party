@@ -10,10 +10,23 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
+  @IBOutlet weak var userInput: UsernameInput!
+  @IBOutlet weak var passInput: PasswordInput!
+
   @IBAction func submitLogin() {
-    if let splashVC = parent as? SplashViewController {
-      splashVC.goToLoad()
+
+    guard let splashVC = parent as? SplashViewController else { return }
+
+    let user = userInput.field.text ?? ""
+    let pass = passInput.field.text ?? ""
+
+    if user.isEmpty || pass.isEmpty {
+      // TODO: show message
+      return
     }
+
+    splashVC.beginLogin(user: user, pass: pass)
+
   }
 
 }
