@@ -18,11 +18,17 @@ final class ServerListViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    let item = servers[indexPath.row]
-    cell.textLabel?.text = item.name
-    cell.detailTextLabel?.text = "\(item.distance) km"
+
+    if let serverCell = cell as? ServerCell {
+      let item = servers[indexPath.row]
+      serverCell.serverLabel.text = item.name
+      serverCell.distanceLabel.text = "\(item.distance) km"
+    }
+
     return cell
+
   }
 
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
