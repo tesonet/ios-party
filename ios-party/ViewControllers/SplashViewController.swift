@@ -21,14 +21,17 @@ final class SplashViewController: ContainerViewController {
 extension SplashViewController: DataLoaderDelegate {
 
   func presentSuccess(_ list: ServerListResponseData) {
-    // placeholder implementation
-    let alert = UIAlertController(title: "success", message: "ok", preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-    present(alert, animated: true)
-    print(list.count, "items")
-    for item in list {
-      print(item)
-    }
+
+    // placeholder view controller
+    let vc = UIViewController()
+    vc.view.backgroundColor = .gray
+    let navigation = UINavigationController(rootViewController: vc)
+
+    RootViewTransitionController.switchViewController(
+      navigation,
+      animation: .uncoverSlideDown
+    )
+
   }
 
   func presentError(_ error: Error) {
