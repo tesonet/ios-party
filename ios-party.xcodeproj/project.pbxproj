@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C446C4B24017FFE00077E30 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C446C4A24017FFE00077E30 /* ActionButton.swift */; };
+		7C446C4B24017FFE00077E30 /* HighlightableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C446C4A24017FFE00077E30 /* HighlightableButton.swift */; };
 		7C5C315124137F0700C5B3C7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C315024137F0700C5B3C7 /* SplashViewController.swift */; };
 		7C7A128824012D9900F8370C /* KeyboardSafeAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A128724012D9900F8370C /* KeyboardSafeAreaViewController.swift */; };
 		7C7A128C24016DD800F8370C /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A128B24016DD800F8370C /* InputView.swift */; };
@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C446C4A24017FFE00077E30 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		7C446C4A24017FFE00077E30 /* HighlightableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightableButton.swift; sourceTree = "<group>"; };
 		7C5C315024137F0700C5B3C7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7C7A12852401272900F8370C /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		7C7A12862401276D00F8370C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				7C7A128B24016DD800F8370C /* InputView.swift */,
-				7C446C4A24017FFE00077E30 /* ActionButton.swift */,
+				7C446C4A24017FFE00077E30 /* HighlightableButton.swift */,
 				7CCCD99B2414D34900E1DCBF /* LogoNavigationBar.swift */,
 				7CCCD99F2414DA9200E1DCBF /* ServerCell.swift */,
 				7CCCD99D2414D63000E1DCBF /* ShadowView.swift */,
@@ -212,7 +212,7 @@
 				7CE459172413B1C60006028B /* DataLoader.swift in Sources */,
 				7CCCD9A02414DA9200E1DCBF /* ServerCell.swift in Sources */,
 				7CCCD9982414B89900E1DCBF /* MainStoryboardController.swift in Sources */,
-				7C446C4B24017FFE00077E30 /* ActionButton.swift in Sources */,
+				7C446C4B24017FFE00077E30 /* HighlightableButton.swift in Sources */,
 				7CCCD99C2414D34900E1DCBF /* LogoNavigationBar.swift in Sources */,
 				7C8F094824012194009DF494 /* LoginViewController.swift in Sources */,
 				7C7A128824012D9900F8370C /* KeyboardSafeAreaViewController.swift in Sources */,

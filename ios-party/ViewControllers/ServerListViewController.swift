@@ -46,6 +46,50 @@ final class ServerListViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+
+    super.viewWillAppear(animated)
+
+    guard let navigation = navigationController else { return }
+    navigation.isToolbarHidden = false
+
+    guard let toolbar = navigation.toolbar else { return }
+    toolbar.barStyle = .blackTranslucent
+    toolbar.barTintColor = UIColor(named: "toolbar-color")
+
+  }
+
+  @IBAction func didClickSort(_ sender: Any) {
+
+    let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+    alert.addAction(UIAlertAction(
+      title: "By Distance",
+      style: .default,
+      handler: didClickSortByDistance
+    ))
+
+    alert.addAction(UIAlertAction(
+      title: "Alphanumerical",
+      style: .default,
+      handler: didClickSortAlphanumerical
+    ))
+
+    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+    (parent ?? self).present(alert, animated: true)
+
+  }
+
+  func didClickSortByDistance(_: UIAlertAction) {
+    servers.sort { $0.distance < $1.distance }
+    tableView.reloadData()
+  }
+
+  func didClickSortAlphanumerical(_: UIAlertAction) {
+    servers.sort { $0.name < $1.name }
+    tableView.reloadData()
+  }
+
   @IBAction func didClickLogout(_ sender: UIBarButtonItem) {
 
     CredentialStorage.shared.clearAllCredentials()

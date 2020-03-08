@@ -1,5 +1,5 @@
 //
-//  ActionButton.swift
+//  HighlightableButton.swift
 //  ios-party
 //
 //  Created by Joseph on 2/22/20.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class ActionButton: UIButton {
+class HighlightableButton: UIButton {
 
   @IBInspectable var highlightColor: UIColor? {
      didSet { updateHighlight() }
@@ -29,10 +29,6 @@ class ActionButton: UIButton {
     didInit()
   }
 
-  private func didInit() {
-    layer.cornerRadius = 5
-  }
-
   override var isHighlighted: Bool {
     didSet {
       if oldValue && !isHighlighted { // only animate unhighlight
@@ -47,8 +43,28 @@ class ActionButton: UIButton {
     }
   }
 
-  private func updateHighlight() {
+  // override points
+  func didInit() { }
+  func updateHighlight() { }
+
+}
+
+final class ActionButton: HighlightableButton {
+
+  override func didInit() {
+    layer.cornerRadius = 5
+  }
+
+  override func updateHighlight() {
     backgroundColor = isHighlighted ? highlightColor : unhighlightColor
+  }
+
+}
+
+final class PlainButton: HighlightableButton {
+
+  override func updateHighlight() {
+    tintColor = isHighlighted ? highlightColor : unhighlightColor
   }
 
 }
