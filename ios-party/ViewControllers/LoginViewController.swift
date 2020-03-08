@@ -13,6 +13,13 @@ final class LoginViewController: UIViewController {
   @IBOutlet weak var userInput: UsernameInput!
   @IBOutlet weak var passInput: PasswordInput!
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    let storage = CredentialStorage.shared
+    userInput.field.text = storage.attemptingUser
+    passInput.field.text = storage.attemptingPass
+  }
+
   @IBAction func submitLogin() {
 
     guard let splashVC = parent as? SplashViewController else { return }

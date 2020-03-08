@@ -12,13 +12,20 @@ final class CredentialStorage {
 
   static let shared = CredentialStorage()
 
+  var attemptingUser: String = UserDefaults.standard.string(forKey: "username") ?? "" {
+    didSet { UserDefaults.standard.set(attemptingUser, forKey: "username") }
+  }
+
+  var attemptingPass: String = ""
+
   private(set) var username: String = ""
   private(set) var password: String = ""
   private(set) var token: String = ""
 
-  func saveLoginCredentials(user: String, pass: String) {
-    username = user
-    password = pass
+  func saveAttemptingLoginCredentials() {
+    username = attemptingUser
+    password = attemptingPass
+    attemptingPass = ""
   }
 
   func saveToken(_ token: String) {
@@ -26,6 +33,7 @@ final class CredentialStorage {
   }
 
   func clearAllCredentials() {
+    attemptingPass = ""
     username = ""
     password = ""
     token = ""

@@ -23,18 +23,19 @@ final class DataLoader {
   /// This object is set IFF there is a loading sequence in progress
   private var interactiveDelegate: DataLoaderDelegate?
 
-  private var loginData = TokensRequestData(username: "", password: "")
-
   func beginLoginSequence(user: String, pass: String, delegate: DataLoaderDelegate) {
 
+    precondition(!user.isEmpty && !pass.isEmpty)
     precondition(interactiveDelegate == nil)
     interactiveDelegate = delegate
 
-    loginData = TokensRequestData(username: user, password: pass)
+    let storage = CredentialStorage.shared
+    storage.attemptingUser = user
+    storage.attemptingPass = pass
 
     api.post(
       path: "tokens",
-      object: loginData,
+      object: TokensRequestData(username: user, password: pass),
       success: self.didReceiveLoginResponse,
       fail: self.presentError
     )
@@ -45,7 +46,7 @@ final class DataLoader {
 
     // save accepted credentials and the new token
     let storage = CredentialStorage.shared
-    storage.saveLoginCredentials(user: loginData.username, pass: loginData.password)
+    storage.saveAttemptingLoginCredentials()
     storage.saveToken(data.token)
 
     // continue to next step - load server list
