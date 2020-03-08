@@ -21,14 +21,7 @@ final class SplashViewController: ContainerViewController {
 extension SplashViewController: DataLoaderDelegate {
 
   func presentSuccess() {
-
-    guard let sb = storyboard else { return }
-
-    RootViewTransitionController.switchViewController(
-      sb.instantiateViewController(withIdentifier: "listNav"),
-      animation: .uncoverSlideDown
-    )
-
+    MainStoryboardController.shared.switchToServerListViewController()
   }
 
   func presentError(_ error: Error) {

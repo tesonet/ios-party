@@ -14,8 +14,20 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+
+    let controller = MainStoryboardController.shared
+
+    if ServerStorage.shared.list.isEmpty {
+      controller.switchToSplashViewController()
+    } else {
+      controller.switchToServerListViewController()
+    }
+
+    controller.window.makeKeyAndVisible()
+    window = controller.window
+
     return true
+
   }
 
 }

@@ -51,8 +51,7 @@ final class ServerListViewController: UITableViewController {
     CredentialStorage.shared.clearAllCredentials()
     ServerStorage.shared.clearStorage()
 
-    guard let start = storyboard?.instantiateInitialViewController() else { return }
-    RootViewTransitionController.switchViewController(start, animation: .coverSlideUp)
+    MainStoryboardController.shared.switchToSplashViewController()
 
   }
 
