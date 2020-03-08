@@ -13,6 +13,8 @@ final class ServerListViewController: UITableViewController {
   @IBOutlet weak var headerView: UIView!
   var servers = [ServerListResponseItem]()
 
+  private let distanceFormatter = NumberFormatter()
+
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return servers.count
   }
@@ -24,7 +26,8 @@ final class ServerListViewController: UITableViewController {
     if let serverCell = cell as? ServerCell {
       let item = servers[indexPath.row]
       serverCell.serverLabel.text = item.name
-      serverCell.distanceLabel.text = "\(item.distance) km"
+      let distance = distanceFormatter.string(from: NSNumber(value: item.distance))
+      serverCell.distanceLabel.text = (distance ?? "-") + " km"
     }
 
     return cell
@@ -37,6 +40,10 @@ final class ServerListViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return headerView.frame.height
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 
 }

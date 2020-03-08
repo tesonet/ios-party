@@ -109,6 +109,7 @@ final class PasswordInput: InputView {
   override func didInit(_ initialSize: CGSize) {
     super.didInit(initialSize)
     field.textContentType = .password
+    field.isSecureTextEntry = true
   }
 
 }
