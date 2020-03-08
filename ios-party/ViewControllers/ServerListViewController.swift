@@ -46,4 +46,13 @@ final class ServerListViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
   }
 
+  @IBAction func didClickLogout(_ sender: UIBarButtonItem) {
+
+    CredentialStorage.shared.clearAllCredentials()
+
+    guard let start = storyboard?.instantiateInitialViewController() else { return }
+    RootViewTransitionController.switchViewController(start, animation: .coverSlideUp)
+
+  }
+
 }

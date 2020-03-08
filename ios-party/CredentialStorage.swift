@@ -25,4 +25,10 @@ final class CredentialStorage {
     self.token = token
   }
 
+  func clearAllCredentials() {
+    username = ""
+    password = ""
+    token = ""
+  }
+
 }
