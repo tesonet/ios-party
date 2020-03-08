@@ -22,7 +22,7 @@ class ContainerViewController: KeyboardSafeAreaViewController {
     currentChildVC = children[0]
   }
 
-  func moveToNewVC(_ newVC: UIViewController) {
+  func moveToNewVC(_ newVC: UIViewController, animation: Animation) {
 
     let oldVC = currentChildVC!
     let oldView = oldVC.view!
@@ -31,21 +31,33 @@ class ContainerViewController: KeyboardSafeAreaViewController {
     oldVC.willMove(toParent: nil)
     addChild(newVC)
 
+    let fromScale, toScale: CGFloat
+
+    switch animation {
+      case .shrink: (fromScale, toScale) = (1.2, 0.8)
+      case .expand: (fromScale, toScale) = (0.8, 1.2)
+    }
+
     let newView = newVC.view!
     newView.frame = container.bounds
-    newView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+    newView.transform = CGAffineTransform(scaleX: fromScale, y: fromScale)
     newView.alpha = 0
 
     transition(from: oldVC, to: newVC, duration: 0.4, options: [], animations: {
       newView.transform = .identity
       newView.alpha = 1
-      oldView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+      oldView.transform = CGAffineTransform(scaleX: toScale, y: toScale)
       oldView.alpha = 0
     }, completion: { (finished) in
       oldVC.removeFromParent()
       newVC.didMove(toParent: self)
     })
 
+  }
+
+  enum Animation {
+    case shrink
+    case expand
   }
 
 }
