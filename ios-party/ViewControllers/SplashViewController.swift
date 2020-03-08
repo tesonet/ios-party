@@ -22,10 +22,16 @@ extension SplashViewController: DataLoaderDelegate {
 
   func presentSuccess(_ list: ServerListResponseData) {
 
-    // placeholder view controller
-    let vc = UIViewController()
-    vc.view.backgroundColor = .gray
-    let navigation = UINavigationController(rootViewController: vc)
+    guard let sb = storyboard else { return }
+
+    let navigationVC = sb.instantiateViewController(withIdentifier: "listNav")
+
+    guard
+      let navigation = navigationVC as? UINavigationController,
+      let listVC = navigation.viewControllers.first as? ServerListViewController
+      else { return }
+
+    listVC.servers = list
 
     RootViewTransitionController.switchViewController(
       navigation,
