@@ -11,7 +11,7 @@ import UIKit
 final class ServerListViewController: UITableViewController {
 
   @IBOutlet weak var headerView: UIView!
-  var servers = [ServerListResponseItem]()
+  var servers: [ServerDescriptor] = ServerStorage.shared.list
 
   private let distanceFormatter = NumberFormatter()
 
@@ -49,6 +49,7 @@ final class ServerListViewController: UITableViewController {
   @IBAction func didClickLogout(_ sender: UIBarButtonItem) {
 
     CredentialStorage.shared.clearAllCredentials()
+    ServerStorage.shared.clearStorage()
 
     guard let start = storyboard?.instantiateInitialViewController() else { return }
     RootViewTransitionController.switchViewController(start, animation: .coverSlideUp)

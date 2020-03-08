@@ -12,7 +12,7 @@ let apiBase = "http://playground.tesonet.lt/v1/"
 
 protocol DataLoaderDelegate: AnyObject {
   func presentError(_: Error)
-  func presentSuccess(_: ServerListResponseData)
+  func presentSuccess()
 }
 
 final class DataLoader {
@@ -70,10 +70,13 @@ final class DataLoader {
 
   }
 
-  func didReceiveListResponse(data: ServerListResponseData) {
+  func didReceiveListResponse(data: Array<ServerDescriptor>) {
+
+    ServerStorage.shared.updateList(data)
+
     if let delegate = interactiveDelegate {
       interactiveDelegate = nil
-      delegate.presentSuccess(data)
+      delegate.presentSuccess()
     }
   }
 
@@ -117,11 +120,4 @@ struct TokensRequestData: Encodable {
 
 struct TokensResponseData: Decodable {
   let token: String
-}
-
-typealias ServerListResponseData = Array<ServerListResponseItem>
-
-struct ServerListResponseItem: Decodable {
-  let name: String
-  let distance: Double
 }
