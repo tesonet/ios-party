@@ -181,6 +181,8 @@
                                         <constraint firstItem="llc-Ms-4tf" firstAttribute="centerY" secondItem="19n-p9-XEA" secondAttribute="centerY" id="7FE-5Y-M34"/>
                                         <constraint firstItem="jjL-hp-mPV" firstAttribute="centerY" secondItem="19n-p9-XEA" secondAttribute="centerY" id="BC8-RF-5aT"/>
                                         <constraint firstItem="llc-Ms-4tf" firstAttribute="leading" secondItem="19n-p9-XEA" secondAttribute="leadingMargin" id="K2F-Yu-5rM"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="jjL-hp-mPV" secondAttribute="trailing" id="X0h-fi-r0w"/>
+                                        <constraint firstItem="jjL-hp-mPV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="llc-Ms-4tf" secondAttribute="trailing" constant="15" id="YMI-J5-uUb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -266,9 +268,11 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b72-ib-kPL" secondAttribute="trailing" constant="15" id="DuX-fo-Kht"/>
                                 <constraint firstItem="b72-ib-kPL" firstAttribute="centerY" secondItem="iE7-kq-tDZ" secondAttribute="centerY" id="NJj-qe-GaW"/>
                                 <constraint firstAttribute="height" constant="35" id="XSc-0l-iGF"/>
                                 <constraint firstItem="Lgb-4h-Kb2" firstAttribute="centerY" secondItem="iE7-kq-tDZ" secondAttribute="centerY" id="hUc-0U-Cd1"/>
+                                <constraint firstItem="b72-ib-kPL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lgb-4h-Kb2" secondAttribute="trailing" constant="15" id="m2b-ug-Laf"/>
                                 <constraint firstAttribute="trailing" secondItem="b72-ib-kPL" secondAttribute="leading" constant="82" id="nWk-63-e0G"/>
                                 <constraint firstItem="Lgb-4h-Kb2" firstAttribute="leading" secondItem="iE7-kq-tDZ" secondAttribute="leading" constant="15" id="oBe-p5-kLE"/>
                             </constraints>
