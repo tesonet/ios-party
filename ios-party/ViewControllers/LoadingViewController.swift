@@ -23,6 +23,7 @@ final class LoadingViewController: UIViewController {
     rotate.duration = 1
     rotate.isCumulative = true
     rotate.repeatCount = .greatestFiniteMagnitude
+    rotate.isRemovedOnCompletion = false
 
     spinner.layer.add(rotate, forKey: "spin")
 
