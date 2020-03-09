@@ -87,29 +87,39 @@ final class ServerListViewController: UITableViewController {
   }
 
   func didClickSortByDistance(_: UIAlertAction) {
-
-    if sort == .distance { sortIsAscending = !sortIsAscending }
-    else { sortIsAscending = true }
-    sort = .distance
-
-    if sortIsAscending { servers.sort { $0.distance < $1.distance } }
-    else { servers.sort { $0.distance > $1.distance } }
-
-    tableView.reloadData()
-
+    setSort(.distance)
   }
 
   func didClickSortAlphanumerical(_: UIAlertAction) {
+    setSort(.name)
+  }
 
-    if sort == .name { sortIsAscending = !sortIsAscending }
+  func setSort(_ newSort: Sort) {
+
+    if newSort == sort { sortIsAscending = !sortIsAscending }
     else { sortIsAscending = true }
-    sort = .name
+    sort = newSort
 
-    let direction: ComparisonResult
-    if sortIsAscending { direction = .orderedAscending }
-    else { direction = .orderedDescending }
+    applyCurrentSort()
 
-    servers.sort { $0.name.localizedStandardCompare($1.name) == direction }
+  }
+
+  func applyCurrentSort() {
+
+    servers = ServerStorage.shared.list
+
+    switch sort {
+    case .server:
+      break
+    case .distance:
+      if sortIsAscending { servers.sort { $0.distance < $1.distance } }
+      else { servers.sort { $0.distance > $1.distance } }
+    case .name:
+      let direction: ComparisonResult
+      if sortIsAscending { direction = .orderedAscending }
+      else { direction = .orderedDescending }
+      servers.sort { $0.name.localizedStandardCompare($1.name) == direction }
+    }
 
     tableView.reloadData()
 
@@ -136,11 +146,9 @@ final class ServerListViewController: UITableViewController {
 extension ServerListViewController: DataLoaderDelegate {
 
   func presentSuccess() {
-    servers = ServerStorage.shared.list
-    sort = .server
-    sortIsAscending = true
     refreshControl?.endRefreshing()
-    tableView.reloadData()
+    servers = ServerStorage.shared.list
+    applyCurrentSort()
   }
 
   func presentError(_ error: Error) {
