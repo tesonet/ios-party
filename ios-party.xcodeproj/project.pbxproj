@@ -43,7 +43,7 @@
 		7C7A12862401276D00F8370C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7C7A128724012D9900F8370C /* KeyboardSafeAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSafeAreaViewController.swift; sourceTree = "<group>"; };
 		7C7A128B24016DD800F8370C /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
-		7C8F094024012194009DF494 /* ios-party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C8F094024012194009DF494 /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F094324012194009DF494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C8F094724012194009DF494 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C8F094A24012194009DF494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		7C8F094124012194009DF494 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7C8F094024012194009DF494 /* ios-party.app */,
+				7C8F094024012194009DF494 /* Testio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 			);
 			name = "ios-party";
 			productName = "ios-party";
-			productReference = 7C8F094024012194009DF494 /* ios-party.app */;
+			productReference = 7C8F094024012194009DF494 /* Testio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -418,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juozasvalancius.ios-party";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Testio;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -436,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juozasvalancius.ios-party";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Testio;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
