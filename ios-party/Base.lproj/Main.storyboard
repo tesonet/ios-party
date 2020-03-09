@@ -227,7 +227,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
                         <outlet property="headerView" destination="Ygb-u1-gNI" id="RgX-3n-gYH"/>
                     </connections>
@@ -286,13 +285,18 @@
         <!--Navigation Controller-->
         <scene sceneID="NFu-mw-27h">
             <objects>
-                <navigationController storyboardIdentifier="listNav" id="puf-Mf-2We" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="listNav" toolbarHidden="NO" id="puf-Mf-2We" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Iw1-oL-IaS" customClass="LogoNavigationBar" customModule="ios_party" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Z2c-nR-1ub">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14117647058823529" green="0.15686274509803921" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="lju-eu-u9C" kind="relationship" relationship="rootViewController" id="6fK-rt-v4f"/>
                     </connections>

@@ -10,10 +10,18 @@ import UIKit
 
 final class ServerListViewController: UITableViewController {
 
+  enum Sort {
+    case server
+    case distance
+    case name
+  }
+
   @IBOutlet weak var headerView: UIView!
   var servers: [ServerDescriptor] = ServerStorage.shared.list
 
   private let distanceFormatter = NumberFormatter()
+  private var sort: Sort = .server
+  private var sortIsAscending = true
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return servers.count
@@ -46,19 +54,6 @@ final class ServerListViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-
-    super.viewWillAppear(animated)
-
-    guard let navigation = navigationController else { return }
-    navigation.isToolbarHidden = false
-
-    guard let toolbar = navigation.toolbar else { return }
-    toolbar.barStyle = .blackTranslucent
-    toolbar.barTintColor = UIColor(named: "toolbar-color")
-
-  }
-
   @IBAction func didClickSort(_ sender: Any) {
 
     let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -81,13 +76,32 @@ final class ServerListViewController: UITableViewController {
   }
 
   func didClickSortByDistance(_: UIAlertAction) {
-    servers.sort { $0.distance < $1.distance }
+
+    if sort == .distance { sortIsAscending = !sortIsAscending }
+    else { sortIsAscending = true }
+    sort = .distance
+
+    if sortIsAscending { servers.sort { $0.distance < $1.distance } }
+    else { servers.sort { $0.distance > $1.distance } }
+
     tableView.reloadData()
+
   }
 
   func didClickSortAlphanumerical(_: UIAlertAction) {
-    servers.sort { $0.name < $1.name }
+
+    if sort == .name { sortIsAscending = !sortIsAscending }
+    else { sortIsAscending = true }
+    sort = .name
+
+    let direction: ComparisonResult
+    if sortIsAscending { direction = .orderedAscending }
+    else { direction = .orderedDescending }
+
+    servers.sort { $0.name.localizedStandardCompare($1.name) == direction }
+
     tableView.reloadData()
+
   }
 
   @IBAction func didClickLogout(_ sender: UIBarButtonItem) {
