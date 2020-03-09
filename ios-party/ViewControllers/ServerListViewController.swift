@@ -23,6 +23,11 @@ final class ServerListViewController: UITableViewController {
   private var sort: Sort = .server
   private var sortIsAscending = true
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+  }
+
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return servers.count
   }
@@ -52,6 +57,12 @@ final class ServerListViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+  }
+
+  @objc
+  func didPullToRefresh() {
+    let loader = DataLoader.shared
+    if !loader.isLoading { loader.beginListLoadSequence(delegate: self) }
   }
 
   @IBAction func didClickSort(_ sender: Any) {
@@ -104,12 +115,43 @@ final class ServerListViewController: UITableViewController {
 
   }
 
-  @IBAction func didClickLogout(_ sender: UIBarButtonItem) {
+  @IBAction func didClickLogout(_ sender: UIBarButtonItem?) {
+    performLogout()
+  }
 
+  /// Returns a new view controller (the splash view controller)
+  @discardableResult
+  private func performLogout() -> UIViewController {
+
+    DataLoader.shared.cancelAnyTasks()
     CredentialStorage.shared.clearAllCredentials()
     ServerStorage.shared.clearStorage()
 
-    MainStoryboardController.shared.switchToSplashViewController()
+    return MainStoryboardController.shared.switchToSplashViewController()
+
+  }
+
+}
+
+extension ServerListViewController: DataLoaderDelegate {
+
+  func presentSuccess() {
+    servers = ServerStorage.shared.list
+    sort = .server
+    sortIsAscending = true
+    refreshControl?.endRefreshing()
+    tableView.reloadData()
+  }
+
+  func presentError(_ error: Error) {
+
+    if (error as? HTTPError)?.code == 401 || error is ApplicationDataError {
+      let nextVC = performLogout()
+      nextVC.showErrorMessage("Please Log In Again.")
+    } else {
+      showErrorMessage(error.localizedDescription)
+      refreshControl?.endRefreshing()
+    }
 
   }
 

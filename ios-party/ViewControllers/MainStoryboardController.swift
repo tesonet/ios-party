@@ -21,23 +21,25 @@ final class MainStoryboardController {
   let storyboard = UIStoryboard(name: "Main", bundle: nil)
   let window = UIWindow(frame: UIScreen.main.bounds)
 
-  func switchToSplashViewController() {
-    switchViewController("splash", animation: .coverSlideUp)
+  @discardableResult
+  func switchToSplashViewController() -> UIViewController {
+    return switchViewController("splash", animation: .coverSlideUp)
   }
 
-  func switchToServerListViewController() {
-    switchViewController("listNav", animation: .uncoverSlideDown)
+  @discardableResult
+  func switchToServerListViewController() -> UIViewController {
+    return switchViewController("listNav", animation: .uncoverSlideDown)
   }
 
-  func switchViewController(_ storyboardID: String, animation: Animation) {
+  func switchViewController(_ storyboardID: String, animation: Animation) -> UIViewController {
 
     let newVC = storyboard.instantiateViewController(withIdentifier: storyboardID)
 
     let oldVC = window.rootViewController
     window.rootViewController = newVC
 
-    if animation == .none { return }
-    guard let oldView = oldVC?.view else { return }
+    if animation == .none { return newVC }
+    guard let oldView = oldVC?.view else { return newVC }
 
     if animation == .uncoverSlideDown {
 
@@ -62,6 +64,7 @@ final class MainStoryboardController {
 
     }
 
+    return newVC
 
   }
 

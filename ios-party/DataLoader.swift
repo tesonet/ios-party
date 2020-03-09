@@ -27,6 +27,10 @@ final class DataLoader {
 
   private var currentSequence: LoadingSequenceDescriptor?
 
+  var isLoading: Bool {
+    return currentSequence != nil
+  }
+
   func beginLoginSequence(user: String, pass: String, delegate: DataLoaderDelegate) {
 
     precondition(!user.isEmpty && !pass.isEmpty)
@@ -68,6 +72,11 @@ final class DataLoader {
   func beginListLoadSequence(allowLoginRetry: Bool = true, delegate: DataLoaderDelegate) {
 
     precondition(currentSequence == nil)
+
+    if CredentialStorage.shared.token.isEmpty {
+      delegate.presentError(ApplicationDataError.missingToken)
+      return
+    }
 
     let dataTask = api.get(
       path: "servers",
@@ -145,4 +154,8 @@ struct TokensRequestData: Encodable {
 
 struct TokensResponseData: Decodable {
   let token: String
+}
+
+enum ApplicationDataError: Error {
+  case missingToken
 }

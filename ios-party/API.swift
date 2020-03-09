@@ -139,8 +139,14 @@ final class API {
 }
 
 struct HTTPError: Error {
+
   let code: Int
   let message: String
+
+  var localizedDescription: String {
+    return "Something went wrong (\(code) \(message))"
+  }
+
 }
 
 struct MessageResponseData: Decodable {

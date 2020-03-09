@@ -26,30 +26,13 @@ extension SplashViewController: DataLoaderDelegate {
 
   func presentError(_ error: Error) {
 
-    // construct the error messagee
+    // show the error
 
-    let errorMessage: String
-
-    if let httpError = error as? HTTPError {
-      if httpError.code == 401 {
-        errorMessage = "Please check your username and password, then try again."
-      } else {
-        errorMessage = "Something went wrong (\(httpError.code) \(httpError.message))"
-      }
+    if let httpError = error as? HTTPError, httpError.code == 401 {
+      showErrorMessage("Please check your username and password, then try again.")
     } else {
-      errorMessage = error.localizedDescription
+      showErrorMessage(error.localizedDescription)
     }
-
-    // display the message
-
-    let alert = UIAlertController(
-      title: "Error",
-      message: errorMessage,
-      preferredStyle: .alert
-    )
-
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-    present(alert, animated: true)
 
     // return to login
 
