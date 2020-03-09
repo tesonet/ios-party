@@ -15,34 +15,42 @@ protocol DataLoaderDelegate: AnyObject {
   func presentSuccess()
 }
 
+private struct LoadingSequenceDescriptor {
+  let delegate: DataLoaderDelegate
+  var dataTask: URLSessionDataTask
+}
+
 final class DataLoader {
 
   static let shared = DataLoader()
   private let api = API()
 
-  /// This object is set IFF there is a loading sequence in progress
-  private var interactiveDelegate: DataLoaderDelegate?
+  private var currentSequence: LoadingSequenceDescriptor?
 
   func beginLoginSequence(user: String, pass: String, delegate: DataLoaderDelegate) {
 
     precondition(!user.isEmpty && !pass.isEmpty)
-    precondition(interactiveDelegate == nil)
-    interactiveDelegate = delegate
+    precondition(currentSequence == nil)
 
     let storage = CredentialStorage.shared
     storage.attemptingUser = user
     storage.attemptingPass = pass
 
-    api.post(
+    let dataTask = api.post(
       path: "tokens",
       object: TokensRequestData(username: user, password: pass),
+      context: delegate,
       success: self.didReceiveLoginResponse,
       fail: self.presentError
     )
 
+    currentSequence = LoadingSequenceDescriptor(delegate: delegate, dataTask: dataTask)
+
   }
 
-  private func didReceiveLoginResponse(data: TokensResponseData) {
+  private func didReceiveLoginResponse(data: TokensResponseData, context: DataLoaderDelegate) {
+
+    guard let descriptor = currentSequence, descriptor.delegate === context else { return }
 
     // save accepted credentials and the new token
     let storage = CredentialStorage.shared
@@ -50,64 +58,81 @@ final class DataLoader {
     storage.saveToken(data.token)
 
     // continue to next step - load server list
-    if let delegate = interactiveDelegate {
-      interactiveDelegate = nil
-      beginListLoadSequence(allowLoginRetry: false, delegate: delegate)
+    if let descriptor = currentSequence {
+      currentSequence = nil
+      beginListLoadSequence(allowLoginRetry: false, delegate: descriptor.delegate)
     }
 
   }
 
   func beginListLoadSequence(allowLoginRetry: Bool = true, delegate: DataLoaderDelegate) {
 
-    precondition(interactiveDelegate == nil)
-    interactiveDelegate = delegate
+    precondition(currentSequence == nil)
 
-    api.get(
+    let dataTask = api.get(
       path: "servers",
+      context: delegate,
       success: self.didReceiveListResponse,
       fail: allowLoginRetry ? self.didReceiveListError : self.presentError
     )
 
+    currentSequence = LoadingSequenceDescriptor(delegate: delegate, dataTask: dataTask)
+
   }
 
-  func didReceiveListResponse(data: Array<ServerDescriptor>) {
+  func didReceiveListResponse(data: Array<ServerDescriptor>, context: DataLoaderDelegate) {
+
+    guard let descriptor = currentSequence, descriptor.delegate === context else { return }
 
     ServerStorage.shared.updateList(data)
 
-    if let delegate = interactiveDelegate {
-      interactiveDelegate = nil
-      delegate.presentSuccess()
+    if let descriptor = currentSequence {
+      currentSequence = nil
+      descriptor.delegate.presentSuccess()
     }
   }
 
-  func didReceiveListError(error: Error) {
+  func didReceiveListError(error: Error, context: DataLoaderDelegate) {
+
+    guard let descriptor = currentSequence, descriptor.delegate === context else { return }
 
     // if token is unauthorized (401), get a new one with known login credentials
     if let httpError = error as? HTTPError, httpError.code == 401 {
 
       let storage = CredentialStorage.shared
 
-      if let delegate = interactiveDelegate {
-        interactiveDelegate = nil
+      if let descriptor = currentSequence {
+        currentSequence = nil
         beginLoginSequence(
           user: storage.username,
           pass: storage.password,
-          delegate: delegate
+          delegate: descriptor.delegate
         )
       }
 
     } else {
 
-      presentError(error: error)
+      presentError(error: error, context: context)
 
     }
 
   }
 
-  private func presentError(error: Error) {
-    if let delegate = interactiveDelegate {
-      interactiveDelegate = nil
-      delegate.presentError(error)
+  private func presentError(error: Error, context: DataLoaderDelegate) {
+
+    guard let descriptor = currentSequence, descriptor.delegate === context else { return }
+
+    if let descriptor = currentSequence {
+      currentSequence = nil
+      descriptor.delegate.presentError(error)
+    }
+
+  }
+
+  func cancelAnyTasks() {
+    if let descriptor = currentSequence {
+      currentSequence = nil
+      descriptor.dataTask.cancel()
     }
   }
 

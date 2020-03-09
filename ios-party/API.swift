@@ -50,37 +50,40 @@ final class API {
 
   }
 
-  func get<ResponseObject: Decodable>(
+  func get<Context, ResponseObject: Decodable>(
     path: String,
-    success: @escaping (ResponseObject) -> Void,
-    fail: @escaping (Error) -> Void
-  ) {
+    context: Context,
+    success: @escaping (ResponseObject, Context) -> Void,
+    fail: @escaping (Error, Context) -> Void
+  ) -> URLSessionDataTask {
 
     let request = createBaseRequest(path: path)
-    send(request, success, fail)
+    return self.send(request, context, success, fail)
 
   }
 
-  func post<RequestObject: Encodable, ResponseObject: Decodable>(
+  func post<Context, RequestObject: Encodable, ResponseObject: Decodable>(
     path: String,
     object: RequestObject,
-    success: @escaping (ResponseObject) -> Void,
-    fail: @escaping (Error) -> Void
-  ) {
+    context: Context,
+    success: @escaping (ResponseObject, Context) -> Void,
+    fail: @escaping (Error, Context) -> Void
+  ) -> URLSessionDataTask {
 
     var request = createBaseRequest(path: path)
     request.httpMethod = "POST"
     request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
     request.httpBody = try! encoder.encode(object)
-    send(request, success, fail)
+    return self.send(request, context, success, fail)
 
   }
 
-  private func send<ResponseObject: Decodable>(
+  private func send<Context, ResponseObject: Decodable>(
     _ request: URLRequest,
-    _ success: @escaping (ResponseObject) -> Void,
-    _ fail: @escaping (Error) -> Void
-  ) {
+    _ context: Context,
+    _ success: @escaping (ResponseObject, Context) -> Void,
+    _ fail: @escaping (Error, Context) -> Void
+  ) -> URLSessionDataTask {
 
     let task = session.dataTask(with: request) { (_data, _response, _error) in
 
@@ -93,10 +96,10 @@ final class API {
           do {
             // successful decode
             let result = try self.decoder.decode(ResponseObject.self, from: data)
-            success(result)
+            success(result, context)
           } catch {
             // invalid data format
-            fail(error)
+            fail(error, context)
           }
 
         } else {
@@ -104,11 +107,11 @@ final class API {
           do {
             // message from server for non-200 status
             let result = try self.decoder.decode(MessageResponseData.self, from: data)
-            fail(HTTPError(code: code, message: result.message))
+            fail(HTTPError(code: code, message: result.message), context)
           } catch {
             // default message for non-200 status
             let mesasge = HTTPURLResponse.localizedString(forStatusCode: code)
-            fail(HTTPError(code: code, message: mesasge))
+            fail(HTTPError(code: code, message: mesasge), context)
           }
 
         }
@@ -116,19 +119,20 @@ final class API {
       } else if let error = _error {
 
         // network error
-        fail(error)
+        fail(error, context)
 
       } else {
 
         // unexpected arguments received
         let blank = NSError(domain: "app", code: -1, userInfo: ["Description": "Unknown"])
-        fail(blank)
+        fail(blank, context)
 
       }
 
     }
 
     task.resume()
+    return task
 
   }
 
