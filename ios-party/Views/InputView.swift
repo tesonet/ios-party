@@ -56,7 +56,7 @@ class InputView: UIView {
 
   fileprivate func didInit(_ initialSize: CGSize) {
 
-    layer.cornerRadius = 5
+    layer.cornerRadius = 3
 
     field.delegate = self
     field.returnKeyType = .go

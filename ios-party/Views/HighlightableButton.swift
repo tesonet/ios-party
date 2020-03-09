@@ -52,7 +52,7 @@ class HighlightableButton: UIButton {
 final class ActionButton: HighlightableButton {
 
   override func didInit() {
-    layer.cornerRadius = 5
+    layer.cornerRadius = 3
   }
 
   override func updateHighlight() {

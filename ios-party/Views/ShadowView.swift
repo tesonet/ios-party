@@ -25,7 +25,7 @@ final class ShadowView: UIView {
     layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
     layer.shadowOffset = .zero
     layer.shadowOpacity = 0.3
-    layer.shadowRadius = 30
+    layer.shadowRadius = 15
   }
 
 }
