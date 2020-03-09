@@ -25,7 +25,7 @@ final class ServerListViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+    refreshControl?.addTarget(self, action: #selector(didRequestRefresh), for: .valueChanged)
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,9 +60,14 @@ final class ServerListViewController: UITableViewController {
   }
 
   @objc
-  func didPullToRefresh() {
+  final func didRequestRefresh() {
     let loader = DataLoader.shared
     if !loader.isLoading { loader.beginListLoadSequence(delegate: self) }
+  }
+
+  func beginRefresh() {
+    refreshControl?.beginRefreshing()
+    didRequestRefresh()
   }
 
   @IBAction func didClickSort(_ sender: Any) {

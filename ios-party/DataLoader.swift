@@ -33,8 +33,12 @@ final class DataLoader {
 
   func beginLoginSequence(user: String, pass: String, delegate: DataLoaderDelegate) {
 
-    precondition(!user.isEmpty && !pass.isEmpty)
     precondition(currentSequence == nil)
+
+    if user.isEmpty || pass.isEmpty {
+      delegate.presentError(ApplicationDataError.missingCredentials)
+      return
+    }
 
     let storage = CredentialStorage.shared
     storage.attemptingUser = user
@@ -157,5 +161,6 @@ struct TokensResponseData: Decodable {
 }
 
 enum ApplicationDataError: Error {
+  case missingCredentials
   case missingToken
 }

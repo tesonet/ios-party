@@ -18,9 +18,19 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     let controller = MainStoryboardController.shared
 
     if ServerStorage.shared.list.isEmpty {
+
       controller.switchToSplashViewController()
+
     } else {
-      controller.switchToServerListViewController()
+
+      let navigationVC = controller.switchToServerListViewController()
+
+      if
+        let navigation = navigationVC as? UINavigationController,
+        let listVC = navigation.viewControllers.last as? ServerListViewController {
+        listVC.beginRefresh()
+      }
+
     }
 
     controller.window.makeKeyAndVisible()
