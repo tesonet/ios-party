@@ -28,7 +28,11 @@ final class LoginViewController: UIViewController {
     let pass = passInput.field.text ?? ""
 
     if user.isEmpty || pass.isEmpty {
-      // TODO: show message
+      let missingFields: String
+      if user.isEmpty && pass.isEmpty { missingFields = "a username and a password" }
+      else if user.isEmpty { missingFields = "a username" }
+      else { missingFields = "a password" }
+      showErrorMessage("Please enter \(missingFields).")
       return
     }
 
