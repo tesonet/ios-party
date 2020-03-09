@@ -60,7 +60,7 @@ class InputView: UIView {
 
     field.delegate = self
     field.returnKeyType = .go
-    field.font = .systemFont(ofSize: 14)
+    field.font = UIFont(name: "Roboto-Light", size: 10)
     field.autocapitalizationType = .none
     field.autocorrectionType = .no
     field.smartDashesType = .no
