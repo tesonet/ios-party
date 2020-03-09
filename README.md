@@ -1,18 +1,23 @@
-# Task for Great iOS developer
 
-If you found this task it means we are looking for you!
+# Completed Task
+
+A simple demo iOS app that displays a list of servers after a login.
 
 > Note: To clone this repository you will need [GIT-LFS](https://git-lfs.github.com/)
 
-## Few simple steps
+## Features
 
-1. Fork this repo
-2. Do your best
-3. Prepare pull request and let us know that you are done
+- Support from iOS 11
+- Dark Mode Support on iOS 13
+- Pull Down to Refresh Server List
+- Automatic Re-login For Expired Tokens
+- Credential and Token Storage in Keychain
+- Persistence for Offline Display
+- Simple Custom Transition Animations
 
-## Few simple requirements
+## Original Requirements
 
-- Send authorization request (POST) to http://playground.te`net.lt/v1/tokens to generate token with body: `{"username": "tesonet", "password": "partyanimal"}`. (Don't forget Content-Type) *
+- Send authorization request (POST) to `http://playground.tenet.lt/v1/tokens` to generate token with body: `{"username": "tesonet", "password": "partyanimal"}`. (Don't forget Content-Type) *
 - Get servers list from http://playground.tesonet.lt/v1/servers. Add header to request: `Authorization: Bearer <token>` *
 - Create persistant layer to store servers
 - Design should be recreated as closely as possible
