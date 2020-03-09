@@ -11,6 +11,7 @@ import UIKit
 final class LoadingViewController: UIViewController {
 
   @IBOutlet weak var spinner: UIImageView!
+  @IBOutlet weak var statusLabel: UILabel!
 
   override func viewDidLoad() {
 

@@ -228,6 +228,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="fd5-QX-zzM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle"/>
                     </refreshControl>
@@ -349,6 +350,7 @@
                     <navigationItem key="navigationItem" id="Jvu-I3-UEb"/>
                     <connections>
                         <outlet property="spinner" destination="NIC-xC-7bt" id="zgG-7f-rcV"/>
+                        <outlet property="statusLabel" destination="PVg-mM-G76" id="wZj-7x-Ahi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9w-UW-HAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

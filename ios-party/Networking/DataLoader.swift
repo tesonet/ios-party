@@ -13,6 +13,12 @@ let apiBase = "http://playground.tesonet.lt/v1/"
 protocol DataLoaderDelegate: AnyObject {
   func presentError(_: Error)
   func presentSuccess()
+  func updateProgress(_: DataLoaderProgressTask)
+}
+
+enum DataLoaderProgressTask {
+  case loggingIn
+  case gettingServerList
 }
 
 private struct LoadingSequenceDescriptor {
@@ -53,6 +59,7 @@ final class DataLoader {
     )
 
     currentSequence = LoadingSequenceDescriptor(delegate: delegate, dataTask: dataTask)
+    delegate.updateProgress(.loggingIn)
 
   }
 
@@ -90,6 +97,7 @@ final class DataLoader {
     )
 
     currentSequence = LoadingSequenceDescriptor(delegate: delegate, dataTask: dataTask)
+    delegate.updateProgress(.gettingServerList)
 
   }
 

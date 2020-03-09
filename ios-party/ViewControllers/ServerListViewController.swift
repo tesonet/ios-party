@@ -168,4 +168,7 @@ extension ServerListViewController: DataLoaderDelegate {
 
   }
 
+  func updateProgress(_: DataLoaderProgressTask) {
+  }
+
 }

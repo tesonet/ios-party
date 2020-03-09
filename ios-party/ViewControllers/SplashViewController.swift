@@ -10,9 +10,13 @@ import UIKit
 
 final class SplashViewController: ContainerViewController {
 
+  private var loadingVC: LoadingViewController? = nil
+
   func beginLogin(user: String, pass: String) {
     guard let sb = storyboard else { return }
-    moveToNewVC(sb.instantiateViewController(withIdentifier: "load"), animation: .shrink)
+    let viewController = sb.instantiateViewController(withIdentifier: "load")
+    loadingVC = viewController as? LoadingViewController
+    moveToNewVC(viewController, animation: .shrink)
     DataLoader.shared.beginLoginSequence(user: user, pass: pass, delegate: self)
   }
 
@@ -36,9 +40,18 @@ extension SplashViewController: DataLoaderDelegate {
 
     // return to login
 
+    loadingVC = nil
     guard let sb = storyboard else { return }
     moveToNewVC(sb.instantiateViewController(withIdentifier: "login"), animation: .expand)
 
+  }
+
+  func updateProgress(_ task: DataLoaderProgressTask) {
+    guard let label = loadingVC?.statusLabel else { return }
+    switch task {
+      case .loggingIn: label.text = "Logging In..."
+      case .gettingServerList: label.text = "Fetching the list..."
+    }
   }
 
 }
