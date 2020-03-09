@@ -20,6 +20,10 @@ final class SplashViewController: ContainerViewController {
     DataLoader.shared.beginLoginSequence(user: user, pass: pass, delegate: self)
   }
 
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+
 }
 
 extension SplashViewController: DataLoaderDelegate {
