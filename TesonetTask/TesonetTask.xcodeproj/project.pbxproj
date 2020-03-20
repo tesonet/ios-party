@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C032A4224221F92009C9921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A4124221F92009C9921 /* AppDelegate.swift */; };
+		2C032A4424221F92009C9921 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A4324221F92009C9921 /* SceneDelegate.swift */; };
+		2C032A4624221F92009C9921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A4524221F92009C9921 /* ViewController.swift */; };
+		2C032A4B24221F94009C9921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C032A4A24221F94009C9921 /* Assets.xcassets */; };
+		2C032A4E24221F94009C9921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C032A4C24221F94009C9921 /* LaunchScreen.storyboard */; };
+		2C032A5A242227FE009C9921 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A58242227FE009C9921 /* AuthViewController.swift */; };
+		2C032A5B242227FE009C9921 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C032A59242227FE009C9921 /* AuthViewController.xib */; };
+		2C032A5D24222813009C9921 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A5C24222813009C9921 /* MainViewController.swift */; };
+		2C032A5F24222849009C9921 /* MainControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A5E24222849009C9921 /* MainControllerType.swift */; };
+		2C032A6224222882009C9921 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A6124222882009C9921 /* RootViewController.swift */; };
+		2C032A6624222A2E009C9921 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A6524222A2E009C9921 /* AuthManager.swift */; };
+		2C032A6824222A81009C9921 /* Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A6724222A81009C9921 /* Bindings.swift */; };
+		2C032A6A24222BA8009C9921 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A6924222BA8009C9921 /* ViewControllerExtension.swift */; };
+		2C032A6C24222BE3009C9921 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A6B24222BE3009C9921 /* ViewExtension.swift */; };
+		2C032A6E24235BE5009C9921 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A6D24235BE5009C9921 /* ViewModel.swift */; };
+		2C032A7124235C29009C9921 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A7024235C29009C9921 /* LoginTextField.swift */; };
+		2C032A7324235CAC009C9921 /* LoginTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C032A7224235CAC009C9921 /* LoginTextField.xib */; };
+		2C032A7524235D04009C9921 /* XibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A7424235D04009C9921 /* XibDesignable.swift */; };
+		2C032A77242360B3009C9921 /* LoginTextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A76242360B3009C9921 /* LoginTextFieldModel.swift */; };
+		2C032A7A242364C1009C9921 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A79242364C1009C9921 /* LoginButtonView.swift */; };
+		2C032A7C242364D1009C9921 /* LoginButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C032A7B242364D1009C9921 /* LoginButtonView.xib */; };
+		2C032A7E24236597009C9921 /* LoginButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A7D24236597009C9921 /* LoginButtonModel.swift */; };
+		2C032A81242382A0009C9921 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A80242382A0009C9921 /* HTTPHandler.swift */; };
+		2C032A842423848A009C9921 /* BaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A832423848A009C9921 /* BaseNetworkManager.swift */; };
+		2C032A86242385D9009C9921 /* AuthNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A85242385D9009C9921 /* AuthNetworkManager.swift */; };
+		2C032A882423881A009C9921 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A872423881A009C9921 /* LoginRequest.swift */; };
+		2C032A8A24238DD7009C9921 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A8924238DD7009C9921 /* LoginResponse.swift */; };
+		2C032A8D24238F37009C9921 /* ShowWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A8C24238F37009C9921 /* ShowWarning.swift */; };
+		2C032A8F24238F6D009C9921 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A8E24238F6D009C9921 /* AlertBuilder.swift */; };
+		2C032A9224239133009C9921 /* AuthorizedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A9124239133009C9921 /* AuthorizedRequest.swift */; };
+		2C032A9424239167009C9921 /* ServersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A9324239167009C9921 /* ServersRequest.swift */; };
+		2C032A96242391BB009C9921 /* MainNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A95242391BB009C9921 /* MainNetworkManager.swift */; };
+		2C032A98242392A0009C9921 /* ServersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A97242392A0009C9921 /* ServersResponse.swift */; };
+		2C032A9B24239B3E009C9921 /* MainTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C032A9A24239B3E009C9921 /* MainTableViewController.xib */; };
+		2C032A9D24239B60009C9921 /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A9C24239B60009C9921 /* TableManager.swift */; };
+		2C032A9F24239BA1009C9921 /* TableManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032A9E24239BA1009C9921 /* TableManagerDelegate.swift */; };
+		2C032AA124239BCE009C9921 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AA024239BCE009C9921 /* MainTableViewController.swift */; };
+		2C032AA424239BFE009C9921 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AA324239BFE009C9921 /* TableSection.swift */; };
+		2C032AA724239C55009C9921 /* CellItemInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AA624239C55009C9921 /* CellItemInterface.swift */; };
+		2C032AA924239C70009C9921 /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AA824239C70009C9921 /* CellItem.swift */; };
+		2C032AAD24239DAB009C9921 /* PaddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C032AAA24239DA9009C9921 /* PaddingCell.xib */; };
+		2C032AAE24239DAB009C9921 /* PaddingCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AAB24239DAA009C9921 /* PaddingCellItem.swift */; };
+		2C032AAF24239DAB009C9921 /* PaddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AAC24239DAB009C9921 /* PaddingCell.swift */; };
+		2C032AB224239F09009C9921 /* ServersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AB124239F09009C9921 /* ServersSection.swift */; };
+		2C032AB424239F13009C9921 /* ServersSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C032AB324239F13009C9921 /* ServersSection.xib */; };
+		2C032AB62423A00D009C9921 /* ServerSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C032AB52423A00D009C9921 /* ServerSectionModel.swift */; };
+		2C1790BC2424CD1200E816A7 /* ServelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1790BA2424CD1200E816A7 /* ServelCell.swift */; };
+		2C1790BD2424CD1200E816A7 /* ServelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1790BB2424CD1200E816A7 /* ServelCell.xib */; };
+		2C1790BF2424CE0E00E816A7 /* ServelCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1790BE2424CE0E00E816A7 /* ServelCellItem.swift */; };
+		2C1790C12424D59F00E816A7 /* MainLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1790C02424D59F00E816A7 /* MainLoadingView.swift */; };
+		2C1790C32424D5B000E816A7 /* MainLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1790C22424D5B000E816A7 /* MainLoadingView.xib */; };
+		2C1790C52424D70B00E816A7 /* MainLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1790C42424D70B00E816A7 /* MainLoadingViewModel.swift */; };
+		2C1790C72424DD8100E816A7 /* MainFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1790C62424DD8100E816A7 /* MainFooterView.swift */; };
+		2C1790C92424DD9000E816A7 /* MainFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1790C82424DD9000E816A7 /* MainFooterView.xib */; };
+		CBED426FD4446351233DBDCE /* Pods_TesonetTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C35E7FF0973F669B989AB03 /* Pods_TesonetTask.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C032A3E24221F92009C9921 /* TesonetTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesonetTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C032A4124221F92009C9921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C032A4324221F92009C9921 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2C032A4524221F92009C9921 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C032A4A24221F94009C9921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C032A4D24221F94009C9921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C032A4F24221F94009C9921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C032A58242227FE009C9921 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2C032A59242227FE009C9921 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		2C032A5C24222813009C9921 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2C032A5E24222849009C9921 /* MainControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerType.swift; sourceTree = "<group>"; };
+		2C032A6124222882009C9921 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2C032A6524222A2E009C9921 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		2C032A6724222A81009C9921 /* Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindings.swift; sourceTree = "<group>"; };
+		2C032A6924222BA8009C9921 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		2C032A6B24222BE3009C9921 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		2C032A6D24235BE5009C9921 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2C032A7024235C29009C9921 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		2C032A7224235CAC009C9921 /* LoginTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginTextField.xib; sourceTree = "<group>"; };
+		2C032A7424235D04009C9921 /* XibDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibDesignable.swift; sourceTree = "<group>"; };
+		2C032A76242360B3009C9921 /* LoginTextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldModel.swift; sourceTree = "<group>"; };
+		2C032A79242364C1009C9921 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
+		2C032A7B242364D1009C9921 /* LoginButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginButtonView.xib; sourceTree = "<group>"; };
+		2C032A7D24236597009C9921 /* LoginButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonModel.swift; sourceTree = "<group>"; };
+		2C032A80242382A0009C9921 /* HTTPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHandler.swift; sourceTree = "<group>"; };
+		2C032A832423848A009C9921 /* BaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkManager.swift; sourceTree = "<group>"; };
+		2C032A85242385D9009C9921 /* AuthNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkManager.swift; sourceTree = "<group>"; };
+		2C032A872423881A009C9921 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		2C032A8924238DD7009C9921 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		2C032A8C24238F37009C9921 /* ShowWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWarning.swift; sourceTree = "<group>"; };
+		2C032A8E24238F6D009C9921 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		2C032A9124239133009C9921 /* AuthorizedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedRequest.swift; sourceTree = "<group>"; };
+		2C032A9324239167009C9921 /* ServersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersRequest.swift; sourceTree = "<group>"; };
+		2C032A95242391BB009C9921 /* MainNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkManager.swift; sourceTree = "<group>"; };
+		2C032A97242392A0009C9921 /* ServersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersResponse.swift; sourceTree = "<group>"; };
+		2C032A9A24239B3E009C9921 /* MainTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewController.xib; sourceTree = "<group>"; };
+		2C032A9C24239B60009C9921 /* TableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManager.swift; sourceTree = "<group>"; };
+		2C032A9E24239BA1009C9921 /* TableManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManagerDelegate.swift; sourceTree = "<group>"; };
+		2C032AA024239BCE009C9921 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		2C032AA324239BFE009C9921 /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		2C032AA624239C55009C9921 /* CellItemInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItemInterface.swift; sourceTree = "<group>"; };
+		2C032AA824239C70009C9921 /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
+		2C032AAA24239DA9009C9921 /* PaddingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaddingCell.xib; sourceTree = "<group>"; };
+		2C032AAB24239DAA009C9921 /* PaddingCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingCellItem.swift; sourceTree = "<group>"; };
+		2C032AAC24239DAB009C9921 /* PaddingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingCell.swift; sourceTree = "<group>"; };
+		2C032AB124239F09009C9921 /* ServersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersSection.swift; sourceTree = "<group>"; };
+		2C032AB324239F13009C9921 /* ServersSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServersSection.xib; sourceTree = "<group>"; };
+		2C032AB52423A00D009C9921 /* ServerSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSectionModel.swift; sourceTree = "<group>"; };
+		2C1790BA2424CD1200E816A7 /* ServelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServelCell.swift; sourceTree = "<group>"; };
+		2C1790BB2424CD1200E816A7 /* ServelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServelCell.xib; sourceTree = "<group>"; };
+		2C1790BE2424CE0E00E816A7 /* ServelCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServelCellItem.swift; sourceTree = "<group>"; };
+		2C1790C02424D59F00E816A7 /* MainLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLoadingView.swift; sourceTree = "<group>"; };
+		2C1790C22424D5B000E816A7 /* MainLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainLoadingView.xib; sourceTree = "<group>"; };
+		2C1790C42424D70B00E816A7 /* MainLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLoadingViewModel.swift; sourceTree = "<group>"; };
+		2C1790C62424DD8100E816A7 /* MainFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFooterView.swift; sourceTree = "<group>"; };
+		2C1790C82424DD9000E816A7 /* MainFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainFooterView.xib; sourceTree = "<group>"; };
+		5C35E7FF0973F669B989AB03 /* Pods_TesonetTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesonetTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8654F307DD6A918CCB2B6F99 /* Pods-TesonetTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTask/Pods-TesonetTask.debug.xcconfig"; sourceTree = "<group>"; };
+		9325F39AA5C72B541BFFCCAC /* Pods-TesonetTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesonetTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesonetTask/Pods-TesonetTask.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C032A3B24221F92009C9921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBED426FD4446351233DBDCE /* Pods_TesonetTask.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		005B78D15C9822A4E900A409 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8654F307DD6A918CCB2B6F99 /* Pods-TesonetTask.debug.xcconfig */,
+				9325F39AA5C72B541BFFCCAC /* Pods-TesonetTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2C032A3524221F92009C9921 = {
+			isa = PBXGroup;
+			children = (
+				2C032A4024221F92009C9921 /* TesonetTask */,
+				2C032A3F24221F92009C9921 /* Products */,
+				005B78D15C9822A4E900A409 /* Pods */,
+				5C0400E6ACC2774F82AB668E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C032A3F24221F92009C9921 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A3E24221F92009C9921 /* TesonetTask.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C032A4024221F92009C9921 /* TesonetTask */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A6424222A26009C9921 /* Utils */,
+				2C032A63242229B2009C9921 /* Bindings */,
+				2C032A55242227CE009C9921 /* Root */,
+				2C032A4124221F92009C9921 /* AppDelegate.swift */,
+				2C032A4324221F92009C9921 /* SceneDelegate.swift */,
+				2C032A4524221F92009C9921 /* ViewController.swift */,
+				2C032A4A24221F94009C9921 /* Assets.xcassets */,
+				2C032A4C24221F94009C9921 /* LaunchScreen.storyboard */,
+				2C032A4F24221F94009C9921 /* Info.plist */,
+			);
+			path = TesonetTask;
+			sourceTree = "<group>";
+		};
+		2C032A55242227CE009C9921 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A6024222879009C9921 /* Container */,
+				2C032A57242227DB009C9921 /* Main */,
+				2C032A56242227D5009C9921 /* Auth */,
+				2C032A5E24222849009C9921 /* MainControllerType.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		2C032A56242227D5009C9921 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A822423845B009C9921 /* NetworkManager */,
+				2C032A78242364B4009C9921 /* LoginButton */,
+				2C032A6F24235C09009C9921 /* TextField */,
+				2C032A58242227FE009C9921 /* AuthViewController.swift */,
+				2C032A59242227FE009C9921 /* AuthViewController.xib */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2C032A57242227DB009C9921 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2C032AB024239EFA009C9921 /* Views */,
+				2C032A9024239121009C9921 /* RequestsModel */,
+				2C032A5C24222813009C9921 /* MainViewController.swift */,
+				2C032A95242391BB009C9921 /* MainNetworkManager.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2C032A6024222879009C9921 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A6124222882009C9921 /* RootViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		2C032A63242229B2009C9921 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A6724222A81009C9921 /* Bindings.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+		2C032A6424222A26009C9921 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A9924239B08009C9921 /* TableManager */,
+				2C032A7F24238286009C9921 /* HttpHandler */,
+				2C032A6524222A2E009C9921 /* AuthManager.swift */,
+				2C032A6924222BA8009C9921 /* ViewControllerExtension.swift */,
+				2C032A6B24222BE3009C9921 /* ViewExtension.swift */,
+				2C032A6D24235BE5009C9921 /* ViewModel.swift */,
+				2C032A7424235D04009C9921 /* XibDesignable.swift */,
+				2C032A832423848A009C9921 /* BaseNetworkManager.swift */,
+				2C032A8C24238F37009C9921 /* ShowWarning.swift */,
+				2C032A8E24238F6D009C9921 /* AlertBuilder.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2C032A6F24235C09009C9921 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A7024235C29009C9921 /* LoginTextField.swift */,
+				2C032A7224235CAC009C9921 /* LoginTextField.xib */,
+				2C032A76242360B3009C9921 /* LoginTextFieldModel.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		2C032A78242364B4009C9921 /* LoginButton */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A79242364C1009C9921 /* LoginButtonView.swift */,
+				2C032A7B242364D1009C9921 /* LoginButtonView.xib */,
+				2C032A7D24236597009C9921 /* LoginButtonModel.swift */,
+			);
+			path = LoginButton;
+			sourceTree = "<group>";
+		};
+		2C032A7F24238286009C9921 /* HttpHandler */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A80242382A0009C9921 /* HTTPHandler.swift */,
+			);
+			path = HttpHandler;
+			sourceTree = "<group>";
+		};
+		2C032A822423845B009C9921 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A85242385D9009C9921 /* AuthNetworkManager.swift */,
+				2C032A872423881A009C9921 /* LoginRequest.swift */,
+				2C032A8924238DD7009C9921 /* LoginResponse.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		2C032A9024239121009C9921 /* RequestsModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C032A9124239133009C9921 /* AuthorizedRequest.swift */,
+				2C032A9324239167009C9921 /* ServersRequest.swift */,
+				2C032A97242392A0009C9921 /* ServersResponse.swift */,
+			);
+			path = RequestsModel;
+			sourceTree = "<group>";
+		};
+		2C032A9924239B08009C9921 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C032AA524239C3F009C9921 /* CellItem */,
+				2C032AA224239BDD009C9921 /* Section */,
+				2C032A9A24239B3E009C9921 /* MainTableViewController.xib */,
+				2C032A9C24239B60009C9921 /* TableManager.swift */,
+				2C032A9E24239BA1009C9921 /* TableManagerDelegate.swift */,
+				2C032AA024239BCE009C9921 /* MainTableViewController.swift */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		2C032AA224239BDD009C9921 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				2C032AA324239BFE009C9921 /* TableSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		2C032AA524239C3F009C9921 /* CellItem */ = {
+			isa = PBXGroup;
+			children = (
+				2C032AAC24239DAB009C9921 /* PaddingCell.swift */,
+				2C032AAA24239DA9009C9921 /* PaddingCell.xib */,
+				2C032AAB24239DAA009C9921 /* PaddingCellItem.swift */,
+				2C032AA624239C55009C9921 /* CellItemInterface.swift */,
+				2C032AA824239C70009C9921 /* CellItem.swift */,
+			);
+			path = CellItem;
+			sourceTree = "<group>";
+		};
+		2C032AB024239EFA009C9921 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C032AB124239F09009C9921 /* ServersSection.swift */,
+				2C032AB324239F13009C9921 /* ServersSection.xib */,
+				2C032AB52423A00D009C9921 /* ServerSectionModel.swift */,
+				2C1790BA2424CD1200E816A7 /* ServelCell.swift */,
+				2C1790BE2424CE0E00E816A7 /* ServelCellItem.swift */,
+				2C1790BB2424CD1200E816A7 /* ServelCell.xib */,
+				2C1790C02424D59F00E816A7 /* MainLoadingView.swift */,
+				2C1790C42424D70B00E816A7 /* MainLoadingViewModel.swift */,
+				2C1790C22424D5B000E816A7 /* MainLoadingView.xib */,
+				2C1790C62424DD8100E816A7 /* MainFooterView.swift */,
+				2C1790C82424DD9000E816A7 /* MainFooterView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C0400E6ACC2774F82AB668E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C35E7FF0973F669B989AB03 /* Pods_TesonetTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C032A3D24221F92009C9921 /* TesonetTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C032A5224221F94009C9921 /* Build configuration list for PBXNativeTarget "TesonetTask" */;
+			buildPhases = (
+				851F333C1DE38C9A49DE257F /* [CP] Check Pods Manifest.lock */,
+				2C032A3A24221F92009C9921 /* Sources */,
+				2C032A3B24221F92009C9921 /* Frameworks */,
+				2C032A3C24221F92009C9921 /* Resources */,
+				7880EA03D93CA2B0E32C6F63 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TesonetTask;
+			productName = TesonetTask;
+			productReference = 2C032A3E24221F92009C9921 /* TesonetTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C032A3624221F92009C9921 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = jch;
+				TargetAttributes = {
+					2C032A3D24221F92009C9921 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 2C032A3924221F92009C9921 /* Build configuration list for PBXProject "TesonetTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C032A3524221F92009C9921;
+			productRefGroup = 2C032A3F24221F92009C9921 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C032A3D24221F92009C9921 /* TesonetTask */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C032A3C24221F92009C9921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1790C32424D5B000E816A7 /* MainLoadingView.xib in Resources */,
+				2C1790C92424DD9000E816A7 /* MainFooterView.xib in Resources */,
+				2C032A5B242227FE009C9921 /* AuthViewController.xib in Resources */,
+				2C032A7324235CAC009C9921 /* LoginTextField.xib in Resources */,
+				2C032AB424239F13009C9921 /* ServersSection.xib in Resources */,
+				2C1790BD2424CD1200E816A7 /* ServelCell.xib in Resources */,
+				2C032A4E24221F94009C9921 /* LaunchScreen.storyboard in Resources */,
+				2C032A4B24221F94009C9921 /* Assets.xcassets in Resources */,
+				2C032A9B24239B3E009C9921 /* MainTableViewController.xib in Resources */,
+				2C032A7C242364D1009C9921 /* LoginButtonView.xib in Resources */,
+				2C032AAD24239DAB009C9921 /* PaddingCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7880EA03D93CA2B0E32C6F63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTask/Pods-TesonetTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesonetTask/Pods-TesonetTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		851F333C1DE38C9A49DE257F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesonetTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C032A3A24221F92009C9921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C032AA924239C70009C9921 /* CellItem.swift in Sources */,
+				2C032A9424239167009C9921 /* ServersRequest.swift in Sources */,
+				2C032A7A242364C1009C9921 /* LoginButtonView.swift in Sources */,
+				2C032A96242391BB009C9921 /* MainNetworkManager.swift in Sources */,
+				2C032A842423848A009C9921 /* BaseNetworkManager.swift in Sources */,
+				2C032AA124239BCE009C9921 /* MainTableViewController.swift in Sources */,
+				2C032A7E24236597009C9921 /* LoginButtonModel.swift in Sources */,
+				2C032A5A242227FE009C9921 /* AuthViewController.swift in Sources */,
+				2C032A6624222A2E009C9921 /* AuthManager.swift in Sources */,
+				2C032A6824222A81009C9921 /* Bindings.swift in Sources */,
+				2C032A9224239133009C9921 /* AuthorizedRequest.swift in Sources */,
+				2C032AA424239BFE009C9921 /* TableSection.swift in Sources */,
+				2C032A98242392A0009C9921 /* ServersResponse.swift in Sources */,
+				2C032AB224239F09009C9921 /* ServersSection.swift in Sources */,
+				2C032A86242385D9009C9921 /* AuthNetworkManager.swift in Sources */,
+				2C032A7124235C29009C9921 /* LoginTextField.swift in Sources */,
+				2C032A9D24239B60009C9921 /* TableManager.swift in Sources */,
+				2C1790BC2424CD1200E816A7 /* ServelCell.swift in Sources */,
+				2C032A4624221F92009C9921 /* ViewController.swift in Sources */,
+				2C032A8D24238F37009C9921 /* ShowWarning.swift in Sources */,
+				2C032A7524235D04009C9921 /* XibDesignable.swift in Sources */,
+				2C032A4224221F92009C9921 /* AppDelegate.swift in Sources */,
+				2C032A8F24238F6D009C9921 /* AlertBuilder.swift in Sources */,
+				2C1790BF2424CE0E00E816A7 /* ServelCellItem.swift in Sources */,
+				2C032A6224222882009C9921 /* RootViewController.swift in Sources */,
+				2C032A882423881A009C9921 /* LoginRequest.swift in Sources */,
+				2C032AAE24239DAB009C9921 /* PaddingCellItem.swift in Sources */,
+				2C032A81242382A0009C9921 /* HTTPHandler.swift in Sources */,
+				2C032A6C24222BE3009C9921 /* ViewExtension.swift in Sources */,
+				2C032AA724239C55009C9921 /* CellItemInterface.swift in Sources */,
+				2C032A4424221F92009C9921 /* SceneDelegate.swift in Sources */,
+				2C1790C72424DD8100E816A7 /* MainFooterView.swift in Sources */,
+				2C032A77242360B3009C9921 /* LoginTextFieldModel.swift in Sources */,
+				2C032A5F24222849009C9921 /* MainControllerType.swift in Sources */,
+				2C032A6A24222BA8009C9921 /* ViewControllerExtension.swift in Sources */,
+				2C032AB62423A00D009C9921 /* ServerSectionModel.swift in Sources */,
+				2C032AAF24239DAB009C9921 /* PaddingCell.swift in Sources */,
+				2C1790C12424D59F00E816A7 /* MainLoadingView.swift in Sources */,
+				2C032A6E24235BE5009C9921 /* ViewModel.swift in Sources */,
+				2C1790C52424D70B00E816A7 /* MainLoadingViewModel.swift in Sources */,
+				2C032A8A24238DD7009C9921 /* LoginResponse.swift in Sources */,
+				2C032A5D24222813009C9921 /* MainViewController.swift in Sources */,
+				2C032A9F24239BA1009C9921 /* TableManagerDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C032A4C24221F94009C9921 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C032A4D24221F94009C9921 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C032A5024221F94009C9921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2C032A5124221F94009C9921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C032A5324221F94009C9921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8654F307DD6A918CCB2B6F99 /* Pods-TesonetTask.debug.xcconfig */;
+			buildSettings = {
+				API_ENDPOINT = "http://playground.tesonet.lt/v1/";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MA7KS7Y3T;
+				INFOPLIST_FILE = TesonetTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jch.TesonetTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C032A5424221F94009C9921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9325F39AA5C72B541BFFCCAC /* Pods-TesonetTask.release.xcconfig */;
+			buildSettings = {
+				API_ENDPOINT = "http://playground.tesonet.lt/v1/";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MA7KS7Y3T;
+				INFOPLIST_FILE = TesonetTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jch.TesonetTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C032A3924221F92009C9921 /* Build configuration list for PBXProject "TesonetTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C032A5024221F94009C9921 /* Debug */,
+				2C032A5124221F94009C9921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C032A5224221F94009C9921 /* Build configuration list for PBXNativeTarget "TesonetTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C032A5324221F94009C9921 /* Debug */,
+				2C032A5424221F94009C9921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C032A3624221F92009C9921 /* Project object */;
+}

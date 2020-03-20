@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginTextField" customModule="TesonetTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="83"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="OLf-pv-l5D">
+                    <rect key="frame" x="20" y="29" width="25" height="25"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="08E-6W-CPy"/>
+                        <constraint firstAttribute="height" constant="25" id="KCa-Kz-s1W"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55i-jP-jNr">
+                    <rect key="frame" x="65" y="0.0" width="342" height="83"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="55i-jP-jNr" secondAttribute="trailing" constant="20" id="04l-sh-lgP"/>
+                <constraint firstItem="55i-jP-jNr" firstAttribute="leading" secondItem="OLf-pv-l5D" secondAttribute="trailing" constant="20" id="1TE-v0-Ajz"/>
+                <constraint firstAttribute="bottom" secondItem="55i-jP-jNr" secondAttribute="bottom" id="3mL-Ua-vWh"/>
+                <constraint firstItem="55i-jP-jNr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qvE-sj-hUW"/>
+                <constraint firstItem="OLf-pv-l5D" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ze8-vD-mcE"/>
+                <constraint firstItem="OLf-pv-l5D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="zwq-Uu-4qA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImgView" destination="OLf-pv-l5D" id="0GR-x3-6V0"/>
+                <outlet property="textField" destination="55i-jP-jNr" id="c9I-iQ-HPO"/>
+            </connections>
+            <point key="canvasLocation" x="147.10144927536234" y="-118.86160714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="username" width="20" height="20"/>
+    </resources>
+</document>

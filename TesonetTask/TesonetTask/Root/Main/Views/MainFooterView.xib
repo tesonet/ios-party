@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainFooterView" customModule="TesonetTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btj-q4-855">
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="102"/>
+                    <color key="backgroundColor" red="0.2627450980392157" green="0.27450980392156865" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Sort" image="ico-sort-light">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Btj-q4-855" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OeK-tc-rlU"/>
+                <constraint firstAttribute="bottom" secondItem="Btj-q4-855" secondAttribute="bottom" id="YQE-mG-evS"/>
+                <constraint firstItem="Btj-q4-855" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="emp-9u-fEd"/>
+                <constraint firstAttribute="trailing" secondItem="Btj-q4-855" secondAttribute="trailing" id="sPK-y3-BFT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="Btj-q4-855" id="NyI-Xm-qc8"/>
+            </connections>
+            <point key="canvasLocation" x="152.17391304347828" y="-112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico-sort-light" width="12" height="10"/>
+    </resources>
+</document>
