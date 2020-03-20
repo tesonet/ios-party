@@ -1,0 +1,19 @@
+inhibit_all_warnings!
+install! 'cocoapods',
+         :deterministic_uuids => false
+platform :ios, '10.0'
+
+def global_pods
+    use_frameworks!
+    pod 'PureLayout'
+    pod 'Locksmith'
+    pod 'TPKeyboardAvoiding', '1.3.2'
+end
+
+target 'TesonetTask' do
+    global_pods
+end
+
+
+
+
