@@ -25,6 +25,8 @@
 		F67A25A8246470A300265458 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25A7246470A300265458 /* NSObject+Rx.swift */; };
 		F67A25AA2464736B00265458 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25A92464736B00265458 /* UIViewController+Keyboard.swift */; };
 		F67A25AC246473CD00265458 /* Observable+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25AB246473CD00265458 /* Observable+Rx.swift */; };
+		F67A25B02464821900265458 /* UIView+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25AF2464821900265458 /* UIView+Theme.swift */; };
+		F67A25B3246482CA00265458 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25B2246482CA00265458 /* LoginState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		F67A25A7246470A300265458 /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		F67A25A92464736B00265458 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		F67A25AB246473CD00265458 /* Observable+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Rx.swift"; sourceTree = "<group>"; };
+		F67A25AF2464821900265458 /* UIView+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Theme.swift"; sourceTree = "<group>"; };
+		F67A25B2246482CA00265458 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		F6C2276D23C4A8280042956D /* party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C2279823C4C04E0042956D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		F6C2279923C4C04E0042956D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			children = (
 				F60256182464692500671BBC /* Moya+Rx.swift */,
 				F67A25A92464736B00265458 /* UIViewController+Keyboard.swift */,
+				F67A25AF2464821900265458 /* UIView+Theme.swift */,
 			);
 			name = Helpers;
 			path = API/Helpers;
@@ -164,6 +169,7 @@
 		F67A25A124646E4A00265458 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				F67A25B1246482BA00265458 /* States */,
 				F67A25A224646E5E00265458 /* Authentication.storyboard */,
 				F67A25A424646E8300265458 /* LoginVC.swift */,
 			);
@@ -177,6 +183,14 @@
 				F67A25AB246473CD00265458 /* Observable+Rx.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		F67A25B1246482BA00265458 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				F67A25B2246482CA00265458 /* LoginState.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 		F6C2276423C4A8280042956D = {
@@ -334,6 +348,7 @@
 				F6025611246464EE00671BBC /* HeadersAPI.swift in Sources */,
 				D054DDC323C70CF500FE6579 /* AppDelegate.swift in Sources */,
 				F6025614246466C100671BBC /* AuthenticationAPI.swift in Sources */,
+				F67A25B3246482CA00265458 /* LoginState.swift in Sources */,
 				F67A25A024646D3F00265458 /* Authentication.swift in Sources */,
 				F67A25A8246470A300265458 /* NSObject+Rx.swift in Sources */,
 				F60256192464692500671BBC /* Moya+Rx.swift in Sources */,
@@ -343,6 +358,7 @@
 				F602561B2464699800671BBC /* ErrorHandler.swift in Sources */,
 				D054DDBD23C70CF500FE6579 /* ViewController.swift in Sources */,
 				F644E0232464514E007B800E /* SceneDelegate.swift in Sources */,
+				F67A25B02464821900265458 /* UIView+Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

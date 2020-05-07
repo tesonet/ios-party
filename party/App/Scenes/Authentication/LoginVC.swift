@@ -13,10 +13,18 @@ import RxCocoa
 final class LoginVC: UIViewController {
     
     @IBOutlet private var bottomConstrain: NSLayoutConstraint!
+    @IBOutlet private var usernameField: UITextField!
+    @IBOutlet private var passwordField: UITextField!
+    @IBOutlet private var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    private func setupUI() {
         adjustBottom(constrain: bottomConstrain)
         dismissKeyboardOnTap()
+        //layer.cornerRadius
     }
 }
