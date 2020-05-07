@@ -14,7 +14,7 @@ extension API.Authentication {
         typealias T = LoginResponse
         let loginForm: LoginForm
         var path: String { "tokens" }
-        var parameters: [String : Any]? {
+        var parameters: [String: Any]? {
             return ["username": loginForm.username,
                     "password": loginForm.password]
         }

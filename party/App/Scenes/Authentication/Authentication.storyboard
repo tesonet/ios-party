@@ -168,22 +168,11 @@
                         <outlet property="loginButton" destination="TYb-Ui-YHe" id="afw-xX-nPM"/>
                         <outlet property="passwordField" destination="6Oa-ed-6IN" id="YSu-En-Gai"/>
                         <outlet property="usernameField" destination="FwB-Fg-Rvr" id="KLf-Za-eem"/>
-                        <segue destination="fea-eN-NGL" kind="show" identifier="Main" id="rMN-kz-Mpw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0At-7v-EQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="175.36231884057972" y="112.5"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="Zfu-pt-mK8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="fea-eN-NGL" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="jgs-YX-hqD"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bDu-ux-eE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="771" y="113"/>
         </scene>
     </scenes>
     <resources>

@@ -21,9 +21,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard nil != (scene as? UIWindowScene) else { return }
         
         self.window = self.window ?? UIWindow()
-
-        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        
+        var vc = UIViewController()
+        
+        if KeychainManager.shared.getToken() == nil {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //TODO: change with real VC
+            vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        }
         self.window!.rootViewController = vc
 
         self.window!.makeKeyAndVisible()

@@ -63,8 +63,8 @@ struct LoginState {
             result._username = username ?? ""
         case .typedPassword(let password):
             result._password = password ?? ""
-        case .receivedSuccess(let token):
-            //TODO add keychain manager
+        case .receivedSuccess(let response):
+            KeychainManager.shared.set(token: response.token)
             result.command = .openMain
             result.isFetching = false
         }

@@ -6,3 +6,4 @@ $(SRCROOT)/Carthage/Build/iOS/RxFeedback.framework
 $(SRCROOT)/Carthage/Build/iOS/RxMoya.framework
 $(SRCROOT)/Carthage/Build/iOS/RxRelay.framework
 $(SRCROOT)/Carthage/Build/iOS/RxSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework

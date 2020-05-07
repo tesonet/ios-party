@@ -4,7 +4,7 @@ import Foundation
 import RxSwift
 import ObjectiveC
 
-fileprivate var disposeBagContext: UInt8 = 0
+private var disposeBagContext: UInt8 = 0
 
 extension Reactive where Base: AnyObject {
     func synchronizedBag<T>( _ action: () -> T) -> T {

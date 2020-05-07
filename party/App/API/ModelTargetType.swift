@@ -19,7 +19,7 @@ protocol MethodPOST: Moya.TargetType {
     var baseURL: URL { get }
 }
 
-//MARK: - Request method implementation
+// MARK: - Request method implementation
 
 extension MethodPOST {
     var parameters: [String: Any]? { return nil }
@@ -35,7 +35,6 @@ extension MethodPOST {
     var method: Moya.Method { return .post }
     var baseURL: URL { return API.baseURL }
 }
-
 
 // MARK: - request() methods
 
@@ -56,5 +55,5 @@ private func RxMoyaProviderRequest<T: TargetType>(_ target: T) -> RxSwift.Single
     
     return provider
         .request(target)
-        .do(onSuccess: { _ in let _ = provider })
+        .do(onSuccess: { _ in _ = provider })
 }

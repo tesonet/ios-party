@@ -28,6 +28,7 @@
 		F67A25B02464821900265458 /* UIView+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25AF2464821900265458 /* UIView+Theme.swift */; };
 		F67A25B3246482CA00265458 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25B2246482CA00265458 /* LoginState.swift */; };
 		F67A25B7246486A000265458 /* FeedbackHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25B6246486A000265458 /* FeedbackHelpers.swift */; };
+		F67A25BC24648EE500265458 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25BB24648EE500265458 /* KeychainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F67A25AF2464821900265458 /* UIView+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Theme.swift"; sourceTree = "<group>"; };
 		F67A25B2246482CA00265458 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		F67A25B6246486A000265458 /* FeedbackHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackHelpers.swift; sourceTree = "<group>"; };
+		F67A25BB24648EE500265458 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		F6C2276D23C4A8280042956D /* party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C2279823C4C04E0042956D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		F6C2279923C4C04E0042956D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				F67A25A92464736B00265458 /* UIViewController+Keyboard.swift */,
 				F67A25AF2464821900265458 /* UIView+Theme.swift */,
 				F67A25B6246486A000265458 /* FeedbackHelpers.swift */,
+				F67A25BB24648EE500265458 /* KeychainManager.swift */,
 			);
 			name = Helpers;
 			path = API/Helpers;
@@ -359,6 +362,7 @@
 				F60256162464675A00671BBC /* ModelTargetType.swift in Sources */,
 				D054DDC123C70CF500FE6579 /* API.swift in Sources */,
 				F67A25AC246473CD00265458 /* Observable+Rx.swift in Sources */,
+				F67A25BC24648EE500265458 /* KeychainManager.swift in Sources */,
 				F602561B2464699800671BBC /* ErrorHandler.swift in Sources */,
 				D054DDBD23C70CF500FE6579 /* ViewController.swift in Sources */,
 				F644E0232464514E007B800E /* SceneDelegate.swift in Sources */,
