@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct LoginForm {
+struct LoginForm: Equatable {
     let username: String
     let password: String
 }
 
-struct LoginResponse: Codable {
+struct LoginResponse: Codable, Equatable {
     let token: String
 }

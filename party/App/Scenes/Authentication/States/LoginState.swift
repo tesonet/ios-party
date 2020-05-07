@@ -12,25 +12,33 @@ struct LoginState {
     
     private(set) var command: Command?
     private var isFetching: Bool = false
+    private var _username: String = ""
+    private var _password: String = ""
     
     enum Command: Equatable {
-        case submit
+        case submit(LoginForm)
     }
     
     enum Event {
-        case typedUsername
-        case typedPassword
+        //optional because text field return optional string. Handling it in reduce
+        case typedUsername(String?)
+        case typedPassword(String?)
         case tappedLogIn
-        case receivedSuccess
+        case receivedSuccess(LoginResponse)
+        case receivedError
     }
     
     var isLoading: Bool {
         return isFetching
     }
     
-    var fetch: Void? {
-        guard case .submit? = command else { return nil }
-        return ()
+    var submit: LoginForm? {
+        guard case .submit(let loginForm) = command else { return nil }
+        return loginForm
+    }
+    
+    var isSubmitDisabled: Bool {
+        _username.isEmpty || _password.isEmpty
     }
     
     static func reduce(state: LoginState, event: Event) -> LoginState {
@@ -41,7 +49,16 @@ struct LoginState {
         switch event {
         case .receivedError:
             result.isFetching = false
-        case .receivedSuccess:
+        case .tappedLogIn:
+            let loginForm = LoginForm(username: result._username, password: result._password)
+            result.command = .submit(loginForm)
+            result.isFetching = true
+        case .typedUsername(let username):
+            result._username = username ?? ""
+        case .typedPassword(let password):
+            result._password = password ?? ""
+        case .receivedSuccess(let token):
+            //TODO add keychain manager
             result.isFetching = false
         }
         
