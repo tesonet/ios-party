@@ -13,7 +13,16 @@
 		D054DDC323C70CF500FE6579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D054DDB523C70CF500FE6579 /* AppDelegate.swift */; };
 		D054DDC723C70CF500FE6579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D054DDB923C70CF500FE6579 /* Assets.xcassets */; };
 		D0F8456023C70D3B005C14FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8455F23C70D3B005C14FD /* LaunchScreen.storyboard */; };
+		F6025611246464EE00671BBC /* HeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6025610246464EE00671BBC /* HeadersAPI.swift */; };
+		F6025614246466C100671BBC /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6025613246466C100671BBC /* AuthenticationAPI.swift */; };
+		F60256162464675A00671BBC /* ModelTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60256152464675A00671BBC /* ModelTargetType.swift */; };
+		F60256192464692500671BBC /* Moya+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60256182464692500671BBC /* Moya+Rx.swift */; };
+		F602561B2464699800671BBC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602561A2464699800671BBC /* ErrorHandler.swift */; };
 		F644E0232464514E007B800E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F644E0222464514E007B800E /* SceneDelegate.swift */; };
+		F67A25A024646D3F00265458 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A259F24646D3F00265458 /* Authentication.swift */; };
+		F67A25A324646E5E00265458 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67A25A224646E5E00265458 /* Authentication.storyboard */; };
+		F67A25A524646E8300265458 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25A424646E8300265458 /* LoginVC.swift */; };
+		F67A25A8246470A300265458 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25A7246470A300265458 /* NSObject+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +33,16 @@
 		D054DDB923C70CF500FE6579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D054DDBC23C70CF500FE6579 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F8455F23C70D3B005C14FD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6025610246464EE00671BBC /* HeadersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersAPI.swift; sourceTree = "<group>"; };
+		F6025613246466C100671BBC /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
+		F60256152464675A00671BBC /* ModelTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTargetType.swift; sourceTree = "<group>"; };
+		F60256182464692500671BBC /* Moya+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Rx.swift"; sourceTree = "<group>"; };
+		F602561A2464699800671BBC /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		F644E0222464514E007B800E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F67A259F24646D3F00265458 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		F67A25A224646E5E00265458 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		F67A25A424646E8300265458 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F67A25A7246470A300265458 /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		F6C2276D23C4A8280042956D /* party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C2279823C4C04E0042956D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		F6C2279923C4C04E0042956D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -65,6 +83,9 @@
 				D054DDB523C70CF500FE6579 /* AppDelegate.swift */,
 				F644E0222464514E007B800E /* SceneDelegate.swift */,
 				D054DDB323C70CF500FE6579 /* API */,
+				F67A259E24646D1400265458 /* Models */,
+				F60256172464690C00671BBC /* Helpers */,
+				F67A25A62464708200265458 /* Utils */,
 				D054DDAF23C70CF500FE6579 /* Scenes */,
 			);
 			path = App;
@@ -73,6 +94,7 @@
 		D054DDAF23C70CF500FE6579 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F67A25A124646E4A00265458 /* Authentication */,
 				D054DDB023C70CF500FE6579 /* Main */,
 			);
 			path = Scenes;
@@ -91,6 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				D054DDB423C70CF500FE6579 /* API.swift */,
+				F602561A2464699800671BBC /* ErrorHandler.swift */,
+				F6025613246466C100671BBC /* AuthenticationAPI.swift */,
+				F60256152464675A00671BBC /* ModelTargetType.swift */,
+				F6025610246464EE00671BBC /* HeadersAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -111,6 +137,40 @@
 				D054DDBC23C70CF500FE6579 /* Info.plist */,
 			);
 			path = prodResources;
+			sourceTree = "<group>";
+		};
+		F60256172464690C00671BBC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F60256182464692500671BBC /* Moya+Rx.swift */,
+			);
+			name = Helpers;
+			path = API/Helpers;
+			sourceTree = "<group>";
+		};
+		F67A259E24646D1400265458 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F67A259F24646D3F00265458 /* Authentication.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F67A25A124646E4A00265458 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F67A25A224646E5E00265458 /* Authentication.storyboard */,
+				F67A25A424646E8300265458 /* LoginVC.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F67A25A62464708200265458 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F67A25A7246470A300265458 /* NSObject+Rx.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F6C2276423C4A8280042956D = {
@@ -208,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67A25A324646E5E00265458 /* Authentication.storyboard in Resources */,
 				D054DDBF23C70CF500FE6579 /* Main.storyboard in Resources */,
 				D054DDC723C70CF500FE6579 /* Assets.xcassets in Resources */,
 				D0F8456023C70D3B005C14FD /* LaunchScreen.storyboard in Resources */,
@@ -262,8 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67A25A524646E8300265458 /* LoginVC.swift in Sources */,
+				F6025611246464EE00671BBC /* HeadersAPI.swift in Sources */,
 				D054DDC323C70CF500FE6579 /* AppDelegate.swift in Sources */,
+				F6025614246466C100671BBC /* AuthenticationAPI.swift in Sources */,
+				F67A25A024646D3F00265458 /* Authentication.swift in Sources */,
+				F67A25A8246470A300265458 /* NSObject+Rx.swift in Sources */,
+				F60256192464692500671BBC /* Moya+Rx.swift in Sources */,
+				F60256162464675A00671BBC /* ModelTargetType.swift in Sources */,
 				D054DDC123C70CF500FE6579 /* API.swift in Sources */,
+				F602561B2464699800671BBC /* ErrorHandler.swift in Sources */,
 				D054DDBD23C70CF500FE6579 /* ViewController.swift in Sources */,
 				F644E0232464514E007B800E /* SceneDelegate.swift in Sources */,
 			);

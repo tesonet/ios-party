@@ -22,8 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = self.window ?? UIWindow()
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
         self.window!.rootViewController = vc
 
         self.window!.makeKeyAndVisible()
