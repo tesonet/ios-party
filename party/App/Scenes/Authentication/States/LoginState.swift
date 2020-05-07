@@ -17,6 +17,7 @@ struct LoginState {
     
     enum Command: Equatable {
         case submit(LoginForm)
+        case openMain
     }
     
     enum Event {
@@ -35,6 +36,11 @@ struct LoginState {
     var submit: LoginForm? {
         guard case .submit(let loginForm) = command else { return nil }
         return loginForm
+    }
+    
+    var openMain: Void? {
+        guard case .openMain = command else { return nil }
+        return ()
     }
     
     var isSubmitDisabled: Bool {
@@ -59,6 +65,7 @@ struct LoginState {
             result._password = password ?? ""
         case .receivedSuccess(let token):
             //TODO add keychain manager
+            result.command = .openMain
             result.isFetching = false
         }
         

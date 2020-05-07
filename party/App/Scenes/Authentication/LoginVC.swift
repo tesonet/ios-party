@@ -64,11 +64,24 @@ final class LoginVC: UIViewController {
                 .drive(onNext: { [weak self] isDisabled in
                     self?.loginButton.isEnabled = !isDisabled
                     //TODO: not the best idea to create color here.
-                    let enableColor = UIColor(red: 171, green: 210, blue: 82, alpha: 1)
+                    let enableColor = UIColor(red: 0.67, green: 0.82, blue: 0.32, alpha: 1)
                     self?.loginButton.backgroundColor = isDisabled ? UIColor.gray : enableColor
                 })
+            
+            let loading = state
+                .map { $0.isLoading }
+                .drive(onNext: { [weak self] isLoading in
+                    //TODO: Show animation
+                })
+            
+            let openNext = state
+                .map { $0.openMain }
+                .filterNil()
+                .drive(onNext: { [weak self] _ in
+                    self?.performSegue(withIdentifier: "Main", sender: nil)
+                })
 
-            return Bindings(subscriptions: [buttonState],
+            return Bindings(subscriptions: [buttonState, loading, openNext],
                             events: [username, password, submit, tapLogIn])
         }
     }
