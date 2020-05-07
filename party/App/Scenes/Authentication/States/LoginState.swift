@@ -10,7 +10,7 @@ import Foundation
 
 struct LoginState {
     
-    private(set) var command: Command?
+    private var command: Command?
     private var isFetching: Bool = false
     private var _username: String = ""
     private var _password: String = ""
