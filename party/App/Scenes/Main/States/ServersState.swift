@@ -12,14 +12,19 @@ struct ServersState {
     
     private(set) var command: Command? = .fetch
     private var isFetching: Bool = true
+    private var _servers: [Server] = []
+    private var _sortType: Server.SortType
     
     enum Command: Equatable {
         case fetch
+        case logOut
     }
     
     enum Event {
         case receivedError
-        case receivedSuccess(ServersResponse)
+        case receivedSuccess([Server])
+        case tappedLogout
+        case tappedSort(by: Server.SortType)
     }
     
     var isLoading: Bool {
@@ -27,8 +32,19 @@ struct ServersState {
     }
     
     var fetch: Void? {
-        guard case .fetch? = command else { return nil }
+        guard case .fetch = command else { return nil }
         return ()
+    }
+    
+    var logout: Void? {
+        guard case .logOut = command else { return nil }
+        return ()
+    }
+    
+    var servers: [Server] {
+        return _servers.sorted {
+            _sortType == .distance ? $0.distance < $1.distance : $0.name < $1.name
+        }
     }
     
     static func reduce(state: ServersState, event: Event) -> ServersState {
@@ -39,8 +55,13 @@ struct ServersState {
         switch event {
         case .receivedError:
             result.isFetching = false
-        case .receivedSuccess:
+        case .receivedSuccess(let servers):
+            result._servers = servers
             result.isFetching = false
+        case .tappedSort(let type):
+            result._sortType = type
+        case .tappedLogout:
+            result.command = .logOut
         }
         
         return result

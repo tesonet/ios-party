@@ -11,4 +11,9 @@ import Foundation
 struct Server: Decodable, Equatable {
     let name: String
     let distance: Int
+    
+    enum SortType: String {
+        case distance = "By Distance"
+        case alphanumerical = "Alphanumerical"
+    }
 }
