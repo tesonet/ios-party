@@ -115,6 +115,7 @@
 		D054DDB023C70CF500FE6579 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F67A25BF24654AC400265458 /* States */,
 				D054DDB223C70CF500FE6579 /* Main.storyboard */,
 				D054DDB123C70CF500FE6579 /* ViewController.swift */,
 			);
@@ -195,6 +196,13 @@
 			isa = PBXGroup;
 			children = (
 				F67A25B2246482CA00265458 /* LoginState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		F67A25BF24654AC400265458 /* States */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = States;
 			sourceTree = "<group>";

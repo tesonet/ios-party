@@ -27,7 +27,6 @@ opt_in_rules:
  - closure_end_indentation
  - multiline_parameters
  - vertical_parameter_alignment_on_call
- - object_literal
  - SuperCallRule
 
 # rules with additional configuration
