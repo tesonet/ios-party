@@ -13,6 +13,6 @@ struct LoginForm: Equatable {
     let password: String
 }
 
-struct LoginResponse: Codable, Equatable {
+struct LoginResponse: Decodable, Equatable {
     let token: String
 }

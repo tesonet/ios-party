@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D054DDBD23C70CF500FE6579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D054DDB123C70CF500FE6579 /* ViewController.swift */; };
+		D054DDBD23C70CF500FE6579 /* ServersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D054DDB123C70CF500FE6579 /* ServersVC.swift */; };
 		D054DDBF23C70CF500FE6579 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D054DDB223C70CF500FE6579 /* Main.storyboard */; };
 		D054DDC123C70CF500FE6579 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D054DDB423C70CF500FE6579 /* API.swift */; };
 		D054DDC323C70CF500FE6579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D054DDB523C70CF500FE6579 /* AppDelegate.swift */; };
@@ -29,10 +29,13 @@
 		F67A25B3246482CA00265458 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25B2246482CA00265458 /* LoginState.swift */; };
 		F67A25B7246486A000265458 /* FeedbackHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25B6246486A000265458 /* FeedbackHelpers.swift */; };
 		F67A25BC24648EE500265458 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25BB24648EE500265458 /* KeychainManager.swift */; };
+		F67A25C6246569FF00265458 /* ServersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25C5246569FF00265458 /* ServersState.swift */; };
+		F67A25C824656A3700265458 /* ServersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25C724656A3700265458 /* ServersAPI.swift */; };
+		F67A25CA24656B2100265458 /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25C924656B2100265458 /* Servers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D054DDB123C70CF500FE6579 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D054DDB123C70CF500FE6579 /* ServersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersVC.swift; sourceTree = "<group>"; };
 		D054DDB223C70CF500FE6579 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D054DDB423C70CF500FE6579 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D054DDB523C70CF500FE6579 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +58,9 @@
 		F67A25B2246482CA00265458 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		F67A25B6246486A000265458 /* FeedbackHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackHelpers.swift; sourceTree = "<group>"; };
 		F67A25BB24648EE500265458 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		F67A25C5246569FF00265458 /* ServersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersState.swift; sourceTree = "<group>"; };
+		F67A25C724656A3700265458 /* ServersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersAPI.swift; sourceTree = "<group>"; };
+		F67A25C924656B2100265458 /* Servers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
 		F6C2276D23C4A8280042956D /* party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C2279823C4C04E0042956D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		F6C2279923C4C04E0042956D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -117,7 +123,7 @@
 			children = (
 				F67A25BF24654AC400265458 /* States */,
 				D054DDB223C70CF500FE6579 /* Main.storyboard */,
-				D054DDB123C70CF500FE6579 /* ViewController.swift */,
+				D054DDB123C70CF500FE6579 /* ServersVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 				F6025613246466C100671BBC /* AuthenticationAPI.swift */,
 				F60256152464675A00671BBC /* ModelTargetType.swift */,
 				F6025610246464EE00671BBC /* HeadersAPI.swift */,
+				F67A25C724656A3700265458 /* ServersAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F67A259F24646D3F00265458 /* Authentication.swift */,
+				F67A25C924656B2100265458 /* Servers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 		F67A25BF24654AC400265458 /* States */ = {
 			isa = PBXGroup;
 			children = (
+				F67A25C5246569FF00265458 /* ServersState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -359,20 +368,23 @@
 			files = (
 				F67A25A524646E8300265458 /* LoginVC.swift in Sources */,
 				F67A25AA2464736B00265458 /* UIViewController+Keyboard.swift in Sources */,
+				F67A25CA24656B2100265458 /* Servers.swift in Sources */,
 				F6025611246464EE00671BBC /* HeadersAPI.swift in Sources */,
 				D054DDC323C70CF500FE6579 /* AppDelegate.swift in Sources */,
 				F6025614246466C100671BBC /* AuthenticationAPI.swift in Sources */,
 				F67A25B3246482CA00265458 /* LoginState.swift in Sources */,
+				F67A25C6246569FF00265458 /* ServersState.swift in Sources */,
 				F67A25A024646D3F00265458 /* Authentication.swift in Sources */,
 				F67A25B7246486A000265458 /* FeedbackHelpers.swift in Sources */,
 				F67A25A8246470A300265458 /* NSObject+Rx.swift in Sources */,
 				F60256192464692500671BBC /* Moya+Rx.swift in Sources */,
+				F67A25C824656A3700265458 /* ServersAPI.swift in Sources */,
 				F60256162464675A00671BBC /* ModelTargetType.swift in Sources */,
 				D054DDC123C70CF500FE6579 /* API.swift in Sources */,
 				F67A25AC246473CD00265458 /* Observable+Rx.swift in Sources */,
 				F67A25BC24648EE500265458 /* KeychainManager.swift in Sources */,
 				F602561B2464699800671BBC /* ErrorHandler.swift in Sources */,
-				D054DDBD23C70CF500FE6579 /* ViewController.swift in Sources */,
+				D054DDBD23C70CF500FE6579 /* ServersVC.swift in Sources */,
 				F644E0232464514E007B800E /* SceneDelegate.swift in Sources */,
 				F67A25B02464821900265458 /* UIView+Theme.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ServersVC.swift
 //  party
 //
 //  Created by Paulius on 07/01/2020.
@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxFeedback
 
-class ViewController: UIViewController {
+final class ServersVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupNavBar()
-        
+//        API.Servers.Get().request()
+//            .subscribe(onSuccess: { (aaa) in
+//                print(aaa)
+//            })
+//            .disposed(by: rx.disposeBag)
     }
 
     private func setupNavBar() {

@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            vc = storyboard.instantiateViewController(withIdentifier: "ListVC")
+            vc = storyboard.instantiateViewController(withIdentifier: "ServersVC")
         }
         self.window!.rootViewController = vc
 

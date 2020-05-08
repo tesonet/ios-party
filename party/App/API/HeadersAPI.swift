@@ -10,9 +10,8 @@ import Foundation
 
 extension API.Headers {
     
-    //TODO: pass `real` token
     static var token: String? {
-        return ""
+        return KeychainManager.shared.getToken()
     }
     
     static var all: [String: String] {

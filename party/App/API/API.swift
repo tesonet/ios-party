@@ -13,6 +13,7 @@ import Alamofire
 enum API {
     enum Headers {}
     enum Authentication {}
+    enum Servers {}
 }
 
 extension API {

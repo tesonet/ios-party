@@ -14,7 +14,16 @@ import RxCocoa
 /// `Moya TargetType` with typealias `T: JSONJoy`
 protocol ModelTargetType { associatedtype T: Decodable }
 
+protocol ModelArrayTargetType: ModelTargetType {}
+
+// MARK: Request methods
+
 protocol MethodPOST: Moya.TargetType {
+    var parameters: [String: Any]? { get }
+    var baseURL: URL { get }
+}
+
+protocol MethodGET: Moya.TargetType {
     var parameters: [String: Any]? { get }
     var baseURL: URL { get }
 }
@@ -34,6 +43,21 @@ extension MethodPOST {
     
     var method: Moya.Method { return .post }
     var baseURL: URL { return API.baseURL }
+}
+
+extension MethodGET {
+    var parameters: [String: Any]? { return nil }
+    
+    var task: Moya.Task {
+        guard let urlParameters = parameters else { return .requestPlain }
+        return .requestParameters(parameters: urlParameters, encoding: URLEncoding.default)
+    }
+    
+    var method: Moya.Method { return .get }
+    
+    var baseURL: URL {
+        return API.baseURL
+    }
 }
 
 // MARK: - request() methods

@@ -87,7 +87,7 @@ final class LoginVC: UIViewController {
     }
     private func replaceRoot() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ListVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "ServersVC")
 
         let keyWindow = UIApplication.shared.connectedScenes
             .filter({ $0.activationState == .foregroundActive })
