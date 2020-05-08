@@ -29,7 +29,6 @@ final class ErrorHandler: PluginType {
             print("ErrorHandler: statusCode: \(String(describing: error.response?.statusCode))")
             
             guard let code = error.response?.statusCode else { return }
-            //TODO: show some error maybe with code
             print("ErrorHandler: \(code)")
             
         case .success(let response):

@@ -16,24 +16,33 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfI-Fm-Zlk">
-                        <rect key="frame" x="15" y="12" width="42" height="45"/>
+                        <rect key="frame" x="15" y="12" width="269" height="45"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-N7-CgV">
-                        <rect key="frame" x="357" y="5" width="42" height="59"/>
+                        <rect key="frame" x="289" y="24.5" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="911-e0-N1X">
+                        <rect key="frame" x="15" y="68" width="384" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4qy-q1-n6e"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hnh-N7-CgV" firstAttribute="centerY" secondItem="Fpg-cE-X8z" secondAttribute="centerY" id="5YI-M6-kWf"/>
-                    <constraint firstItem="hnh-N7-CgV" firstAttribute="top" secondItem="Fpg-cE-X8z" secondAttribute="top" constant="5" id="7BV-YT-O5o"/>
-                    <constraint firstItem="hnh-N7-CgV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qfI-Fm-Zlk" secondAttribute="trailing" constant="5" id="8dS-rX-pCR"/>
-                    <constraint firstAttribute="trailing" secondItem="hnh-N7-CgV" secondAttribute="trailing" constant="15" id="ObB-Sn-6OK"/>
+                    <constraint firstItem="hnh-N7-CgV" firstAttribute="leading" secondItem="qfI-Fm-Zlk" secondAttribute="trailing" constant="5" id="8dS-rX-pCR"/>
+                    <constraint firstItem="911-e0-N1X" firstAttribute="centerX" secondItem="Fpg-cE-X8z" secondAttribute="centerX" id="GvQ-gs-GvZ"/>
                     <constraint firstItem="qfI-Fm-Zlk" firstAttribute="centerY" secondItem="Fpg-cE-X8z" secondAttribute="centerY" id="Rug-PI-MuO"/>
+                    <constraint firstItem="qfI-Fm-Zlk" firstAttribute="width" secondItem="Fpg-cE-X8z" secondAttribute="width" multiplier="0.65" id="SOp-iZ-Ccl"/>
+                    <constraint firstItem="911-e0-N1X" firstAttribute="leading" secondItem="Fpg-cE-X8z" secondAttribute="leading" constant="15" id="fZ6-jo-VZD"/>
+                    <constraint firstAttribute="bottom" secondItem="911-e0-N1X" secondAttribute="bottom" id="mzr-g5-tgD"/>
                     <constraint firstItem="qfI-Fm-Zlk" firstAttribute="top" secondItem="Fpg-cE-X8z" secondAttribute="top" constant="12" id="ovm-1b-CiX"/>
                     <constraint firstItem="qfI-Fm-Zlk" firstAttribute="leading" secondItem="Fpg-cE-X8z" secondAttribute="leading" constant="15" id="sXw-AD-7Xh"/>
                 </constraints>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//import RealmSwift
 
 struct Server: Decodable, Equatable {
     let name: String

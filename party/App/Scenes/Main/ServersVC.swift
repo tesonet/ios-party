@@ -25,14 +25,7 @@ final class ServersVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-        
-        let nib = UINib(nibName: "ServerCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ServerCell")
-        
-        headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        headerView.layer.shadowColor = UIColor.black.cgColor
-        headerView.layer.shadowOpacity = 0.2
-        headerView.layer.shadowRadius = 10
+        uiSetup()
 
         Driver.system(
             initialState: ServersState(),
@@ -101,6 +94,16 @@ final class ServersVC: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 
         self.present(alert, animated: true)
+    }
+    
+    private func uiSetup() {
+        let nib = UINib(nibName: "ServerCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ServerCell")
+        
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        headerView.layer.shadowColor = UIColor.black.cgColor
+        headerView.layer.shadowOpacity = 0.2
+        headerView.layer.shadowRadius = 10
     }
     
     @objc
