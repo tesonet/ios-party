@@ -35,7 +35,7 @@ final class ErrorHandler: PluginType {
         case .success(let response):
             
             if response.statusCode == 401 {
-                //TODO: Check for token and if exist logout
+                UIManager.logout()
             }
             
             guard !(200 ... 299 ~= response.statusCode) else { return }

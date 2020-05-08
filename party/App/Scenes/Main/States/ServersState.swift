@@ -27,10 +27,6 @@ struct ServersState {
         case tappedSort(by: Server.SortType)
     }
     
-    var isLoading: Bool {
-        return isFetching
-    }
-    
     var fetch: Void? {
         guard case .fetch = command else { return nil }
         return ()

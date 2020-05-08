@@ -13,6 +13,8 @@ final class KeychainManager {
     
     static let shared = KeychainManager()
     
+    private init() {}
+    
     private let tokenKey = "tokenKey"
     
     private let keychain = Keychain(service: "com.paulius.party")

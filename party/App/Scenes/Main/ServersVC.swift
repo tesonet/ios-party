@@ -68,12 +68,6 @@ final class ServersVC: UIViewController {
                     UIManager.logout()
                 })
             
-            let loading = state
-                .map { $0.isLoading }
-                .drive(onNext: {
-                    //TODO: loading
-                })
-            
             let tappedLogOut = self.logOutSubject
                 .map { E.tappedLogout }
                 .asSignalOrEmpty()
