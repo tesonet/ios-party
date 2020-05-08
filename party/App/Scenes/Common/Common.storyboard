@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoadingVC-->
+        <scene sceneID="uac-Ex-RT1">
+            <objects>
+                <viewController storyboardIdentifier="LoadingVC" id="kWn-M8-eSe" customClass="LoadingVC" customModule="party" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xrk-Vr-XDX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="xX2-ed-cGn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching the list..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPw-Kq-Q0G">
+                                <rect key="frame" x="139" y="641" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-9E-zAq">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kUD-9E-zAq" firstAttribute="centerX" secondItem="Kv1-GF-Yjg" secondAttribute="centerX" id="59E-1D-ATL"/>
+                            <constraint firstItem="kUD-9E-zAq" firstAttribute="centerY" secondItem="Kv1-GF-Yjg" secondAttribute="centerY" id="Q0a-0j-0eF"/>
+                            <constraint firstItem="xX2-ed-cGn" firstAttribute="bottom" secondItem="Xrk-Vr-XDX" secondAttribute="bottom" id="X90-0o-Yog"/>
+                            <constraint firstItem="iPw-Kq-Q0G" firstAttribute="centerX" secondItem="Kv1-GF-Yjg" secondAttribute="centerX" id="XdL-dg-WSe"/>
+                            <constraint firstItem="xX2-ed-cGn" firstAttribute="leading" secondItem="Kv1-GF-Yjg" secondAttribute="leading" id="tNL-xz-Ay2"/>
+                            <constraint firstItem="Kv1-GF-Yjg" firstAttribute="bottom" secondItem="iPw-Kq-Q0G" secondAttribute="bottom" constant="200" id="tOc-Kr-cn6"/>
+                            <constraint firstItem="xX2-ed-cGn" firstAttribute="top" secondItem="Xrk-Vr-XDX" secondAttribute="top" id="tah-0H-Et3"/>
+                            <constraint firstItem="Kv1-GF-Yjg" firstAttribute="trailing" secondItem="xX2-ed-cGn" secondAttribute="trailing" id="xQg-xZ-pV7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kv1-GF-Yjg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtg-dD-4Sd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1920" height="1080"/>
+    </resources>
+</document>

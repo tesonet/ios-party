@@ -20,6 +20,15 @@ final class LoginVC: UIViewController {
     @IBOutlet private var passwordField: UITextField!
     @IBOutlet private var loginButton: UIButton!
     
+    private lazy var loadingVC: UIViewController = {
+        let storyboard = UIStoryboard(name: "Common", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "LoadingVC")
+      }()
+    
+    private lazy var enableSubmitButtonColor: UIColor = {
+        return UIColor(red: 0.67, green: 0.82, blue: 0.32, alpha: 1)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -67,16 +76,15 @@ final class LoginVC: UIViewController {
             let buttonState = state
                 .map { $0.isSubmitDisabled }
                 .drive(onNext: { [weak self] isDisabled in
-                    self?.loginButton.isEnabled = !isDisabled
-                    //TODO: not the best idea to create color here.
-                    let enableColor = UIColor(red: 0.67, green: 0.82, blue: 0.32, alpha: 1)
-                    self?.loginButton.backgroundColor = isDisabled ? UIColor.gray : enableColor
+                    guard let self = self else { return }
+                    self.loginButton.isEnabled = !isDisabled
+                    self.loginButton.backgroundColor = isDisabled ? .gray : self.enableSubmitButtonColor
                 })
             
             let loading = state
                 .map { $0.isLoading }
                 .drive(onNext: { [weak self] isLoading in
-                    //TODO: Show animation
+                    self?.handle(isLoading)
                 })
             
             let openNext = state
@@ -88,6 +96,18 @@ final class LoginVC: UIViewController {
 
             return Bindings(subscriptions: [buttonState, loading, openNext],
                             events: [username, password, submit, tapLogIn])
+        }
+    }
+    
+    private func handle(_ loading: Bool) {
+        if loading {
+            addChild(self.loadingVC)
+            view.addSubview(self.loadingVC.view)
+            loadingVC.didMove(toParent: self)
+        } else {
+            loadingVC.willMove(toParent: nil)
+            loadingVC.view.removeFromSuperview()
+            loadingVC.removeFromParent()
         }
     }
     

@@ -35,6 +35,8 @@
 		F67A25CC246574E300265458 /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67A25CB246574E300265458 /* ServerCell.xib */; };
 		F67A25CF2465756800265458 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25CE2465756800265458 /* ServerCell.swift */; };
 		F67A25D124657EBE00265458 /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25D024657EBE00265458 /* UIManager.swift */; };
+		F67A25D4246587C100265458 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67A25D3246587C100265458 /* Common.storyboard */; };
+		F67A25D6246587C800265458 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25D5246587C800265458 /* LoadingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		F67A25CB246574E300265458 /* ServerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
 		F67A25CE2465756800265458 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
 		F67A25D024657EBE00265458 /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
+		F67A25D3246587C100265458 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
+		F67A25D5246587C800265458 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		F6C2276D23C4A8280042956D /* party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C2279823C4C04E0042956D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		F6C2279923C4C04E0042956D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		D054DDAF23C70CF500FE6579 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F67A25D2246587A300265458 /* Common */,
 				F67A25A124646E4A00265458 /* Authentication */,
 				D054DDB023C70CF500FE6579 /* Main */,
 			);
@@ -233,6 +238,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F67A25D2246587A300265458 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F67A25D3246587C100265458 /* Common.storyboard */,
+				F67A25D5246587C800265458 /* LoadingVC.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F6C2276423C4A8280042956D = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +345,7 @@
 				F67A25A324646E5E00265458 /* Authentication.storyboard in Resources */,
 				D054DDBF23C70CF500FE6579 /* Main.storyboard in Resources */,
 				F67A25CC246574E300265458 /* ServerCell.xib in Resources */,
+				F67A25D4246587C100265458 /* Common.storyboard in Resources */,
 				D054DDC723C70CF500FE6579 /* Assets.xcassets in Resources */,
 				D0F8456023C70D3B005C14FD /* LaunchScreen.storyboard in Resources */,
 			);
@@ -401,6 +416,7 @@
 				F67A25C824656A3700265458 /* ServersAPI.swift in Sources */,
 				F60256162464675A00671BBC /* ModelTargetType.swift in Sources */,
 				D054DDC123C70CF500FE6579 /* API.swift in Sources */,
+				F67A25D6246587C800265458 /* LoadingVC.swift in Sources */,
 				F67A25AC246473CD00265458 /* Observable+Rx.swift in Sources */,
 				F67A25BC24648EE500265458 /* KeychainManager.swift in Sources */,
 				F602561B2464699800671BBC /* ErrorHandler.swift in Sources */,
