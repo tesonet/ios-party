@@ -11,17 +11,62 @@ import RxSwift
 import RxCocoa
 import RxFeedback
 
+private typealias E = ServersState.Event
+private typealias Feedback = (Driver<ServersState>) -> Signal<E>
 final class ServersVC: UIViewController {
 
+    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var sortButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupNavBar()
-//        API.Servers.Get().request()
-//            .subscribe(onSuccess: { (aaa) in
-//                print(aaa)
-//            })
-//            .disposed(by: rx.disposeBag)
+        
+        let nib = UINib(nibName: "ServerCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ServerCell")
+
+        Driver.system(
+            initialState: ServersState(),
+            reduce: ServersState.reduce,
+            feedback: [general])
+            .drive()
+            .disposed(by: rx.disposeBag)
+    }
+    
+    private var general: Feedback {
+        return bind(self) { `self`, state in
+            
+            let fetch = state
+                .map { $0.fetch }
+                .filterNil()
+                .flatMap { _ in
+                    API.Servers.Get().request()
+                        .map { E.receivedSuccess($0) }
+                        .asSignal(onErrorJustReturn: E.receivedError)
+                }
+            
+            let logOut = state
+                .map { $0.logout }
+                .filterNil()
+                .drive(onNext: {
+                    //TODO: LogOut
+                })
+            
+            let loading = state
+                .map { $0.isLoading }
+                .drive(onNext: {
+                    //TODO: loading
+                })
+            
+            let cells = state
+                .map { $0.servers }
+                .drive(self.tableView.rx.items(cellIdentifier: "ServerCell", cellType:
+                    ServerCell.self)) { _, item, cell in
+                        cell.setup(with: item)
+                }
+             
+            return Bindings(subscriptions: [logOut, cells],
+                            events: [fetch])
+        }
     }
 
     private func setupNavBar() {

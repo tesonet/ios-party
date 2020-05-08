@@ -13,7 +13,7 @@ struct ServersState {
     private(set) var command: Command? = .fetch
     private var isFetching: Bool = true
     private var _servers: [Server] = []
-    private var _sortType: Server.SortType
+    private var _sortType: Server.SortType = .alphanumerical
     
     enum Command: Equatable {
         case fetch

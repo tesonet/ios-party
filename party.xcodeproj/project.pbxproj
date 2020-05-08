@@ -32,6 +32,8 @@
 		F67A25C6246569FF00265458 /* ServersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25C5246569FF00265458 /* ServersState.swift */; };
 		F67A25C824656A3700265458 /* ServersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25C724656A3700265458 /* ServersAPI.swift */; };
 		F67A25CA24656B2100265458 /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25C924656B2100265458 /* Servers.swift */; };
+		F67A25CC246574E300265458 /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67A25CB246574E300265458 /* ServerCell.xib */; };
+		F67A25CF2465756800265458 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25CE2465756800265458 /* ServerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		F67A25C5246569FF00265458 /* ServersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersState.swift; sourceTree = "<group>"; };
 		F67A25C724656A3700265458 /* ServersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersAPI.swift; sourceTree = "<group>"; };
 		F67A25C924656B2100265458 /* Servers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
+		F67A25CB246574E300265458 /* ServerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
+		F67A25CE2465756800265458 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
 		F6C2276D23C4A8280042956D /* party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C2279823C4C04E0042956D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		F6C2279923C4C04E0042956D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		D054DDB023C70CF500FE6579 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F67A25CD2465755C00265458 /* Cells */,
 				F67A25BF24654AC400265458 /* States */,
 				D054DDB223C70CF500FE6579 /* Main.storyboard */,
 				D054DDB123C70CF500FE6579 /* ServersVC.swift */,
@@ -214,6 +219,15 @@
 				F67A25C5246569FF00265458 /* ServersState.swift */,
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		F67A25CD2465755C00265458 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F67A25CB246574E300265458 /* ServerCell.xib */,
+				F67A25CE2465756800265458 /* ServerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F6C2276423C4A8280042956D = {
@@ -313,6 +327,7 @@
 			files = (
 				F67A25A324646E5E00265458 /* Authentication.storyboard in Resources */,
 				D054DDBF23C70CF500FE6579 /* Main.storyboard in Resources */,
+				F67A25CC246574E300265458 /* ServerCell.xib in Resources */,
 				D054DDC723C70CF500FE6579 /* Assets.xcassets in Resources */,
 				D0F8456023C70D3B005C14FD /* LaunchScreen.storyboard in Resources */,
 			);
@@ -366,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67A25CF2465756800265458 /* ServerCell.swift in Sources */,
 				F67A25A524646E8300265458 /* LoginVC.swift in Sources */,
 				F67A25AA2464736B00265458 /* UIViewController+Keyboard.swift in Sources */,
 				F67A25CA24656B2100265458 /* Servers.swift in Sources */,
