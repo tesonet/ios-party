@@ -18,6 +18,7 @@ final class ServersVC: UIViewController {
     private let logOutSubject = PublishSubject<Void>()
     private let sortSubject = PublishSubject<Server.SortType>()
 
+    @IBOutlet private var headerView: UIView!
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var sortButton: UIButton!
     
@@ -27,6 +28,11 @@ final class ServersVC: UIViewController {
         
         let nib = UINib(nibName: "ServerCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ServerCell")
+        
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        headerView.layer.shadowColor = UIColor.black.cgColor
+        headerView.layer.shadowOpacity = 0.2
+        headerView.layer.shadowRadius = 10
 
         Driver.system(
             initialState: ServersState(),
@@ -112,7 +118,7 @@ final class ServersVC: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         let logoutImg = UIImage(named: "ico-logout")?.withRenderingMode(.alwaysOriginal)
-        let logoutButton = UIBarButtonItem(image: logoutImg, style: .plain, target: nil, action: #selector(self.logOutEventHandler))
+        let logoutButton = UIBarButtonItem(image: logoutImg, style: .plain, target: self, action: #selector(logOutEventHandler))
         let logoImg = UIImage(named: "logo-dark")?.withRenderingMode(.alwaysOriginal)
         let logo = UIBarButtonItem(image: logoImg, style: .plain, target: nil, action: nil)
         navigationItem.setRightBarButton(logoutButton, animated: false)

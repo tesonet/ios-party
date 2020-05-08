@@ -24,6 +24,11 @@ final class LoginVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         
+        #if DEBUG
+        usernameField.text = "tesonet"
+        passwordField.text = "partyanimal"
+        #endif
+        
         Driver.system(initialState: LoginState(),
                       reduce: LoginState.reduce,
                       feedback: general)
