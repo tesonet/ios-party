@@ -51,9 +51,11 @@ struct ServersState {
         switch event {
         case .receivedError:
             result.isFetching = false
+            result._servers = RealmManager.getServers()
         case .receivedSuccess(let servers):
             result._servers = servers
             result.isFetching = false
+            RealmManager.save(servers)
         case .tappedSort(let type):
             result._sortType = type
         case .tappedLogout:

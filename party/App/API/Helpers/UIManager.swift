@@ -48,4 +48,8 @@ final class UIManager {
         let vc = storyboard.instantiateViewController(withIdentifier: "ServersVC")
         replaceRootController(with: vc)
     }
+    
+    class var isLoggedIn: Bool {
+        KeychainManager.shared.getToken() != nil
+    }
 }

@@ -33,7 +33,7 @@ final class ErrorHandler: PluginType {
             
         case .success(let response):
             
-            if response.statusCode == 401 {
+            if response.statusCode == 401 && UIManager.isLoggedIn {
                 UIManager.logout()
             }
             

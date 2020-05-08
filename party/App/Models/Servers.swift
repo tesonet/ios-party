@@ -7,11 +7,11 @@
 //
 
 import Foundation
-//import RealmSwift
+import RealmSwift
 
-struct Server: Decodable, Equatable {
-    let name: String
-    let distance: Int
+final class Server: Object, Decodable {
+    @objc dynamic var name: String
+    @objc dynamic var distance: Int
     
     enum SortType: String {
         case distance = "By Distance"
