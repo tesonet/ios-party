@@ -20,22 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard nil != (scene as? UIWindowScene) else { return }
         
-        self.window = self.window ?? UIWindow()
-        
-        var vc = UIViewController()
-        
         if KeychainManager.shared.getToken() == nil {
-            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-            vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            UIManager.goToLogin()
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            vc = storyboard.instantiateViewController(withIdentifier: "ServersVC")
+            UIManager.goToMainScreen()
         }
-        self.window!.rootViewController = vc
 
-        self.window!.makeKeyAndVisible()
-
-        guard scene is UIWindowScene else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

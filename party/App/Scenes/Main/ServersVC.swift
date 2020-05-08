@@ -59,7 +59,7 @@ final class ServersVC: UIViewController {
                 .map { $0.logout }
                 .filterNil()
                 .drive(onNext: {
-                    //TODO: LogOut
+                    UIManager.logout()
                 })
             
             let loading = state

@@ -77,26 +77,15 @@ final class LoginVC: UIViewController {
             let openNext = state
                 .map { $0.openMain }
                 .filterNil()
-                .drive(onNext: { [weak self] _ in
-                    self?.replaceRoot()
+                .drive(onNext: { _ in
+                    UIManager.goToMainScreen()
                 })
 
             return Bindings(subscriptions: [buttonState, loading, openNext],
                             events: [username, password, submit, tapLogIn])
         }
     }
-    private func replaceRoot() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ServersVC")
-
-        let keyWindow = UIApplication.shared.connectedScenes
-            .filter({ $0.activationState == .foregroundActive })
-            .map({ $0 as? UIWindowScene })
-            .compactMap({ $0 })
-            .first?.windows
-            .filter({ $0.isKeyWindow }).first
-        keyWindow?.rootViewController = vc
-    }
+    
     private func setupUI() {
         adjustBottom(constrain: bottomConstrain)
         dismissKeyboardOnTap()

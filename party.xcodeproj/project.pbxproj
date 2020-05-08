@@ -34,6 +34,7 @@
 		F67A25CA24656B2100265458 /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25C924656B2100265458 /* Servers.swift */; };
 		F67A25CC246574E300265458 /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67A25CB246574E300265458 /* ServerCell.xib */; };
 		F67A25CF2465756800265458 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25CE2465756800265458 /* ServerCell.swift */; };
+		F67A25D124657EBE00265458 /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A25D024657EBE00265458 /* UIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		F67A25C924656B2100265458 /* Servers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
 		F67A25CB246574E300265458 /* ServerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
 		F67A25CE2465756800265458 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
+		F67A25D024657EBE00265458 /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 		F6C2276D23C4A8280042956D /* party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C2279823C4C04E0042956D /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		F6C2279923C4C04E0042956D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				F67A25AF2464821900265458 /* UIView+Theme.swift */,
 				F67A25B6246486A000265458 /* FeedbackHelpers.swift */,
 				F67A25BB24648EE500265458 /* KeychainManager.swift */,
+				F67A25D024657EBE00265458 /* UIManager.swift */,
 			);
 			name = Helpers;
 			path = API/Helpers;
@@ -392,6 +395,7 @@
 				F67A25C6246569FF00265458 /* ServersState.swift in Sources */,
 				F67A25A024646D3F00265458 /* Authentication.swift in Sources */,
 				F67A25B7246486A000265458 /* FeedbackHelpers.swift in Sources */,
+				F67A25D124657EBE00265458 /* UIManager.swift in Sources */,
 				F67A25A8246470A300265458 /* NSObject+Rx.swift in Sources */,
 				F60256192464692500671BBC /* Moya+Rx.swift in Sources */,
 				F67A25C824656A3700265458 /* ServersAPI.swift in Sources */,
