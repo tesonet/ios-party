@@ -14,9 +14,13 @@ import RxFeedback
 private typealias E = ServersState.Event
 private typealias Feedback = (Driver<ServersState>) -> Signal<E>
 final class ServersVC: UIViewController {
+    
+    private let logOutSubject = PublishSubject<Void>()
+    private let sortSubject = PublishSubject<Server.SortType>()
 
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var sortButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
@@ -29,6 +33,13 @@ final class ServersVC: UIViewController {
             reduce: ServersState.reduce,
             feedback: [general])
             .drive()
+            .disposed(by: rx.disposeBag)
+        
+        sortButton.rx.tap.asDriver()
+            .drive(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.showSimpleActionSheet(controller: self)
+            })
             .disposed(by: rx.disposeBag)
     }
     
@@ -57,23 +68,51 @@ final class ServersVC: UIViewController {
                     //TODO: loading
                 })
             
+            let tappedLogOut = self.logOutSubject
+                .map { E.tappedLogout }
+                .asSignalOrEmpty()
+            
             let cells = state
                 .map { $0.servers }
                 .drive(self.tableView.rx.items(cellIdentifier: "ServerCell", cellType:
                     ServerCell.self)) { _, item, cell in
                         cell.setup(with: item)
                 }
+            
+            let choosedSort = self.sortSubject
+                .map { E.tappedSort(by: $0) }
+                .asSignalOrEmpty()
              
             return Bindings(subscriptions: [logOut, cells],
-                            events: [fetch])
+                            events: [fetch, tappedLogOut, choosedSort])
         }
+    }
+    
+    func showSimpleActionSheet(controller: UIViewController) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: Server.SortType.distance.rawValue, style: .default, handler: { [weak self] _ in
+            self?.sortSubject.onNext(.distance)
+        }))
+        
+        alert.addAction(UIAlertAction(title: Server.SortType.alphanumerical.rawValue, style: .default, handler: { [weak self] _ in
+            self?.sortSubject.onNext(.alphanumerical)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+
+        self.present(alert, animated: true)
+    }
+    
+    @objc
+    private func logOutEventHandler() {
+        logOutSubject.onNext(())
     }
 
     private func setupNavBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         let logoutImg = UIImage(named: "ico-logout")?.withRenderingMode(.alwaysOriginal)
-        let logoutButton = UIBarButtonItem(image: logoutImg, style: .plain, target: nil, action: nil)
+        let logoutButton = UIBarButtonItem(image: logoutImg, style: .plain, target: nil, action: #selector(self.logOutEventHandler))
         let logoImg = UIImage(named: "logo-dark")?.withRenderingMode(.alwaysOriginal)
         let logo = UIBarButtonItem(image: logoImg, style: .plain, target: nil, action: nil)
         navigationItem.setRightBarButton(logoutButton, animated: false)
