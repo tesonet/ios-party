@@ -51,8 +51,11 @@ struct ServersState {
         switch event {
         case .receivedError:
             result.isFetching = false
+            //load from defaults if exist
+            result._servers = DefaultsManager.shared.getServers() ?? []
         case .receivedSuccess(let servers):
             result._servers = servers
+            DefaultsManager.shared.saveServers(servers)
             result.isFetching = false
         case .tappedSort(let type):
             result._sortType = type

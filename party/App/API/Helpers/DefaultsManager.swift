@@ -16,14 +16,14 @@ final class DefaultsManager {
     
     private let serversKey = "serversKey"
     
-    private func saveServers(_ servers: [Server]) {
+    func saveServers(_ servers: [Server]) {
         let userDefaults = UserDefaults.standard
         guard let encodedData: Data = try? NSKeyedArchiver.archivedData(withRootObject: servers, requiringSecureCoding: false) else { return }
         userDefaults.set(encodedData, forKey: serversKey)
         userDefaults.synchronize()
     }
     
-    private func getServers() -> [Server]? {
+    func getServers() -> [Server]? {
         guard let decoded = UserDefaults.standard.data(forKey: serversKey) else { return nil }
         return NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [Server] ?? nil
     }
