@@ -14,4 +14,14 @@ struct Constants
     static let serversURL = "https://playground.tesonet.lt/v1/servers"
     
     static let ServersViewTableViewCellID = "tesio.serversView.tableViewCellID"
+    static let keychainPasswordKey = "tesio.keychainManager.password"
+    static let keychainUsernameKey = "tesio.keychainManager.username"
+    static let keychainTokenKey = "tesio.keychainManager.token"
+}
+
+enum CredentialsKey
+{
+    case username
+    case password
+    case token
 }

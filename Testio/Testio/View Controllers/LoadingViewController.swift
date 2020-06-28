@@ -25,7 +25,7 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         navigationController?.delegate = self
         setupUI()
-        APIManager().getServers(token: self.token) { (success, serversList) in
+        APIManager.shared.getServers(token: self.token) { (success, serversList) in
             if success
             {
                 let serversViewController = ServersViewController.init(servers: serversList!)

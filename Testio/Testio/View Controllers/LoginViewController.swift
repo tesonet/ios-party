@@ -22,8 +22,15 @@ class LoginViewController: UIViewController
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        passwordCell.text = ""
-        usernameCell.text = ""
+        if let savedUsername = KeychainManager.getCredentialsForKey(CredentialsKey.username)
+        {
+            usernameCell.text = savedUsername
+        }else{usernameCell.text = ""}
+        
+        if let savedPassword = KeychainManager.getCredentialsForKey(CredentialsKey.password)
+        {
+            passwordCell.text = savedPassword
+        }else{passwordCell.text = ""}
     }
     
     fileprivate func setupUI()
@@ -43,7 +50,12 @@ class LoginViewController: UIViewController
         imgView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         //add login/password cells
+        
         usernameCell = imageWithText(text: "Username", image:UIImage(named:"Username"))
+        if let savedUsername = KeychainManager.getCredentialsForKey(CredentialsKey.password)
+        {
+            usernameCell.text = savedUsername
+        }
         view.addSubview(usernameCell)
         usernameCell.topAnchor.constraint(equalTo:imgView.bottomAnchor, constant: 100).isActive = true
         usernameCell.trailingAnchor.constraint(equalTo:view.trailingAnchor, constant: -sideConstraintConstant).isActive = true
@@ -51,6 +63,10 @@ class LoginViewController: UIViewController
         usernameCell.heightAnchor.constraint(equalToConstant: cellsHeightConstraintConstant).isActive = true
         
         passwordCell = imageWithText(text: "Password", image:UIImage(named:"Lock"))
+        if let savedPassword = KeychainManager.getCredentialsForKey(CredentialsKey.username)
+        {
+            passwordCell.text = savedPassword
+        }
         passwordCell.isSecureTextEntry = true
         view.addSubview(passwordCell)
         passwordCell.topAnchor.constraint(equalTo:usernameCell.bottomAnchor, constant: cellsGapConstraint).isActive = true
@@ -85,7 +101,24 @@ class LoginViewController: UIViewController
             print("no password entered")
             return;
         }
-        APIManager().getToken(userName: usernameCell.text!, password: passwordCell.text!) { (success, response, responseCode) in
+        
+        /*check if token exists in keychain and if internet is available
+            - if not available load "offline mode" with current servers in database*/
+        
+        if let token = KeychainManager.getCredentialsForKey(CredentialsKey.token)
+        {
+            if !APIManager.shared.isConnectedToInternet()
+            {
+                let loadingViewController = LoadingViewController.init(token: token)
+                self.navigationController?.pushViewController(loadingViewController, animated: true)
+                return
+            }
+        }
+        
+        APIManager.shared.getToken(userName: usernameCell.text!, password: passwordCell.text!) { [weak self] (success, response, responseCode) in
+            guard let self = self else {
+                return
+            }
             if responseCode == 401
             {
                 let alert = UIAlertController(title:"401 Error", message: response, preferredStyle: UIAlertController.Style.alert)
@@ -94,6 +127,9 @@ class LoginViewController: UIViewController
             }
             if (success)
             {
+                KeychainManager.writeCredentialsForKey(CredentialsKey.password, value: self.passwordCell.text!)
+                KeychainManager.writeCredentialsForKey(CredentialsKey.username, value: self.usernameCell.text!)
+                KeychainManager.writeCredentialsForKey(CredentialsKey.token, value: response)
                 let loadingViewController = LoadingViewController.init(token: response)
                 self.navigationController?.pushViewController(loadingViewController, animated: true)
             }
@@ -126,6 +162,7 @@ class LoginViewController: UIViewController
         let imageView = UIImageView()
         imageView.image = image
         textField.leftView = imageView
+        textField.autocorrectionType = .no
         textField.backgroundColor = .white
         textField.layer.cornerRadius = 5.0
         textField.placeholder = text

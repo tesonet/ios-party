@@ -12,6 +12,7 @@ import SwiftyJSON
 
 final class APIManager
 {
+    static let shared = APIManager()
     
     func getToken(userName: String, password: String, onCompletion:@escaping(Bool, String, Int?) -> ())
     {
@@ -37,7 +38,6 @@ final class APIManager
                 {
                     onCompletion(false, "Error", response.response?.statusCode)
                 }
-                break
             case .failure(let error):
                 print(error.localizedDescription)
                 onCompletion(false, "Error", nil)
@@ -45,24 +45,37 @@ final class APIManager
         }
     }
     
+    func isConnectedToInternet() -> Bool
+    {
+        return NetworkReachabilityManager()?.isReachable ?? false
+    }
+    
     func getServers(token: String, onCompletion:@escaping(Bool, [Server]?) -> ())
     {
+        //check if internet is available, if not - load servers from database
+        if (!self.isConnectedToInternet())
+        {
+            let servers = CoreDataManager.shared.getServers(sortDescriptor: nil)
+            onCompletion(true, servers)
+            return
+        }
         let header:HTTPHeaders = ["Authorization" : "Bearer \(token)"]
         AF.request(Constants.serversURL, headers: header).responseJSON{
             response in
+            
             switch response.result
             {
             case .success:
                 let responseJSON:JSON = JSON(response.value!)
+                CoreDataManager.shared.deleteServers()
                 for (_, subJson) : (String, JSON) in responseJSON
                 {
                     CoreDataManager.shared.writeServers(distance: Int16(subJson["distance"].intValue), name: subJson["name"].stringValue)
                     print(subJson["name"].stringValue)
                 }
+                CoreDataManager.shared.saveContext()
                 let servers = CoreDataManager.shared.getServers(sortDescriptor: nil)
                 onCompletion(true, servers)
-                
-                break
             case .failure(let error):
                 print(error.localizedDescription)
                 onCompletion(false, nil)
