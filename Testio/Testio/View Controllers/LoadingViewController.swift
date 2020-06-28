@@ -8,10 +8,11 @@
 
 import UIKit
 
-class LoadingViewController: UIViewController {
+class LoadingViewController: UIViewController, UINavigationControllerDelegate {
     
     private var username:String!
     private var token:String!
+    private let simpleOver = AnimationManager()
     
     convenience init (token:String)
     {
@@ -21,6 +22,7 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self
         setupUI()
         APIManager().getServers(token: self.token) { (success, serversList) in
             if success
@@ -60,4 +62,17 @@ class LoadingViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
     }
+}
+
+extension LoadingViewController: UIViewControllerTransitioningDelegate
+{
+        func navigationController(
+            _ navigationController: UINavigationController,
+            animationControllerFor operation: UINavigationController.Operation,
+            from fromVC: UIViewController,
+            to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+            
+            simpleOver.popStyle = (operation == .none)
+            return simpleOver
+        }
 }
