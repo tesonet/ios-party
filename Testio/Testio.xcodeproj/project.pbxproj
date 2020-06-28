@@ -11,6 +11,10 @@
 		86046A8324A889840008048A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8224A889830008048A /* Constants.swift */; };
 		86046A8724A88A3E0008048A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8624A88A3E0008048A /* LoadingViewController.swift */; };
 		86046A8924A88A660008048A /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8824A88A660008048A /* ServersViewController.swift */; };
+		86046A8E24A88BEA0008048A /* Server+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8D24A88BEA0008048A /* Server+CoreDataProperties.swift */; };
+		86046A8F24A88BEA0008048A /* Server+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8C24A88BEA0008048A /* Server+CoreDataClass.swift */; };
+		86046A9124A88C0B0008048A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A9024A88C0B0008048A /* APIManager.swift */; };
+		86046A9424A88CE10008048A /* ServersViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A9324A88CE10008048A /* ServersViewTableViewCell.swift */; };
 		8639238124A8873E006B072D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238024A8873E006B072D /* AppDelegate.swift */; };
 		8639238324A8873E006B072D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238224A8873E006B072D /* SceneDelegate.swift */; };
 		8639238524A8873E006B072D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238424A8873E006B072D /* LoginViewController.swift */; };
@@ -26,6 +30,10 @@
 		86046A8224A889830008048A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		86046A8624A88A3E0008048A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		86046A8824A88A660008048A /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		86046A8C24A88BEA0008048A /* Server+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Server+CoreDataClass.swift"; path = "/Users/ernestasseputis/Desktop/tesonet/testio/ios-party/Testio/Testio/Supporting Files/Server+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		86046A8D24A88BEA0008048A /* Server+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Server+CoreDataProperties.swift"; path = "/Users/ernestasseputis/Desktop/tesonet/testio/ios-party/Testio/Testio/Supporting Files/Server+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		86046A9024A88C0B0008048A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		86046A9324A88CE10008048A /* ServersViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewTableViewCell.swift; sourceTree = "<group>"; };
 		8639237D24A8873E006B072D /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8639238024A8873E006B072D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8639238224A8873E006B072D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +69,11 @@
 		86046A7F24A8895A0008048A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86046A8C24A88BEA0008048A /* Server+CoreDataClass.swift */,
+				86046A8D24A88BEA0008048A /* Server+CoreDataProperties.swift */,
 				86046A8024A889760008048A /* CoreDataManager.swift */,
 				86046A8224A889830008048A /* Constants.swift */,
+				86046A9024A88C0B0008048A /* APIManager.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -75,6 +86,14 @@
 				86046A8624A88A3E0008048A /* LoadingViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		86046A9224A88CBE0008048A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86046A9324A88CE10008048A /* ServersViewTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8639237424A8873E006B072D = {
@@ -98,6 +117,7 @@
 		8639237F24A8873E006B072D /* Testio */ = {
 			isa = PBXGroup;
 			children = (
+				86046A9224A88CBE0008048A /* Views */,
 				86046A8524A88A180008048A /* View Controllers */,
 				86046A7F24A8895A0008048A /* Supporting Files */,
 				8639238024A8873E006B072D /* AppDelegate.swift */,
@@ -236,6 +256,10 @@
 				86046A8724A88A3E0008048A /* LoadingViewController.swift in Sources */,
 				8639238524A8873E006B072D /* LoginViewController.swift in Sources */,
 				8639238124A8873E006B072D /* AppDelegate.swift in Sources */,
+				86046A8E24A88BEA0008048A /* Server+CoreDataProperties.swift in Sources */,
+				86046A9124A88C0B0008048A /* APIManager.swift in Sources */,
+				86046A9424A88CE10008048A /* ServersViewTableViewCell.swift in Sources */,
+				86046A8F24A88BEA0008048A /* Server+CoreDataClass.swift in Sources */,
 				8639238324A8873E006B072D /* SceneDelegate.swift in Sources */,
 				86046A8124A889760008048A /* CoreDataManager.swift in Sources */,
 				8639238B24A8873E006B072D /* Testio.xcdatamodeld in Sources */,
@@ -378,6 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8WDFCF7CBN;
 				INFOPLIST_FILE = Testio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8WDFCF7CBN;
 				INFOPLIST_FILE = Testio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
