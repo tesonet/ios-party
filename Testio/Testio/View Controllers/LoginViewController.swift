@@ -9,7 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController
 {
-    //
     fileprivate let sideConstraintConstant:CGFloat = 50
     fileprivate let cellsHeightConstraintConstant:CGFloat = 60
     fileprivate let cellsGapConstraint:CGFloat = 20
@@ -20,6 +19,11 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
         setupUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        passwordCell.text = ""
+        usernameCell.text = ""
     }
     
     fileprivate func setupUI()
@@ -58,7 +62,6 @@ class LoginViewController: UIViewController
         let loginButton = UIButton()
         loginButton.backgroundColor = UIColor.init(red: 160/255, green: 211/255, blue: 66/255, alpha: 1.0)
         loginButton.layer.cornerRadius = 5.0
-//        loginButton.
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.setTitle("Log In", for: .normal)
         loginButton.addTarget(self, action: #selector(loginAction), for:.touchDown)

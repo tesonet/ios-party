@@ -13,6 +13,7 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
     private var username:String!
     private var token:String!
     private let simpleOver = AnimationManager()
+    private let spinner = SpinnerView()
     
     convenience init (token:String)
     {
@@ -32,10 +33,23 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
             }
         }
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        spinner.stopRotating()
+    }
     
     fileprivate func setupUI()
     {
         assignbackground()
+        
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(spinner)
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        spinner.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        spinner.rotate()
+        
         let label:UILabel = UILabel()
         label.font = UIFont.systemFont(ofSize: 20.0)
         label.textColor = UIColor.white.withAlphaComponent(0.8)
@@ -75,4 +89,28 @@ extension LoadingViewController: UIViewControllerTransitioningDelegate
             simpleOver.popStyle = (operation == .none)
             return simpleOver
         }
+}
+
+
+extension SpinnerView
+{
+
+    func rotate(duration: Double = 1) {
+        if layer.animation(forKey: SpinnerView.kRotationAnimationKey) == nil {
+            let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+
+            rotationAnimation.fromValue = 0.0
+            rotationAnimation.toValue = Float.pi * 2.0
+            rotationAnimation.duration = duration
+            rotationAnimation.repeatCount = Float.infinity
+
+            layer.add(rotationAnimation, forKey: SpinnerView.kRotationAnimationKey)
+        }
+    }
+
+    func stopRotating() {
+        if layer.animation(forKey: SpinnerView.kRotationAnimationKey) != nil {
+            layer.removeAnimation(forKey: SpinnerView.kRotationAnimationKey)
+        }
+    }
 }
