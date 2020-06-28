@@ -154,9 +154,9 @@ class LoginViewController: UIViewController
         self.view.sendSubviewToBack(imageView)
     }
     
-    fileprivate func imageWithText(text: String!, image: UIImage!) -> UITextField
+    fileprivate func imageWithText(text: String!, image: UIImage!) -> LoginViewTextField
     {
-        let textField = UITextField()
+        let textField = LoginViewTextField()
         textField.leftViewMode = .always
         textField.translatesAutoresizingMaskIntoConstraints = false
         let imageView = UIImageView()

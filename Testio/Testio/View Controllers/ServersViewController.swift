@@ -11,7 +11,19 @@ import UIKit
 class ServersViewController: UIViewController {
     
     private var servers:[Server]?
-    private let tableView = UITableView()
+    private let tableView:UITableView = {
+        let tableView = UITableView()
+        tableView.register(ServersViewTableViewCell.self, forCellReuseIdentifier:Constants.ServersViewTableViewCellID)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
+        tableView.allowsSelection = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.rowHeight = 50.0
+        tableView.separatorColor = UIColor.black.withAlphaComponent(0.8)
+        tableView.sectionHeaderHeight = 70.0
+        return tableView
+    }()
+        
     
     convenience init(servers: [Server])
     {
@@ -27,7 +39,6 @@ class ServersViewController: UIViewController {
     
     @objc func sort()
     {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let sortDistanceAction = UIAlertAction(title: "By Distance", style: .default)
         {
             [weak self] UIAlertAction in
@@ -49,21 +60,56 @@ class ServersViewController: UIViewController {
             self.tableView.reloadData()
             
         }
-        
-        alert.addAction(sortDistanceAction)
-        alert.addAction(sortNameAction)
-
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         {
             UIAlertAction in
         }
-        alert.addAction(cancelAction)
+        
+        let actions = [cancelAction, sortNameAction, sortDistanceAction]
+        let alert = self.createAlert(title: nil, message: nil, actions: actions)
+        
         self.present(alert, animated: true, completion: nil)
         
     }
     @objc func logout()
     {
-        navigationController?.popToRootViewController(animated: true)
+        let keepCredentialsAction = UIAlertAction(title: "Keep And Logout", style: .default)
+        {
+            [weak self] UIAlertAction in
+            guard let self = self else {
+                return
+            }
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        let deleteCredentialsAction = UIAlertAction(title: "Delete And Logout", style: .default)
+        {
+            [weak self] UIAlertAction in
+            guard let self = self else {
+                return
+            }
+            KeychainManager.deleteCredentialsForKey(CredentialsKey.password)
+            KeychainManager.deleteCredentialsForKey(CredentialsKey.username)
+            KeychainManager.deleteCredentialsForKey(CredentialsKey.token)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        {
+            UIAlertAction in
+        }
+        let actions = [cancelAction, keepCredentialsAction, deleteCredentialsAction]
+        let alert = self.createAlert(title: nil, message: "Do you want to delete your saved credentials?", actions: actions)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func createAlert(title: String?, message: String?, actions: [UIAlertAction]) -> UIAlertController
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        for action in actions
+        {
+            alert.addAction(action)
+        }
+        
+        return alert
     }
 }
 
@@ -91,16 +137,6 @@ extension ServersViewController
 {
     func setupUI()
     {
-        tableView.register(ServersViewTableViewCell.self, forCellReuseIdentifier:Constants.ServersViewTableViewCellID)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .clear
-        tableView.dataSource = self
-        tableView.allowsSelection = false
-        tableView.showsVerticalScrollIndicator = false
-        tableView.rowHeight = 50.0
-        tableView.separatorColor = UIColor.black.withAlphaComponent(0.9)
-        tableView.sectionHeaderHeight = 70.0
-        
         let testioImageView = UIImageView.init(image: UIImage.init(named: "LogoDark"))
         testioImageView.contentMode = .scaleAspectFit
         testioImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -117,6 +153,16 @@ extension ServersViewController
         logoutImage.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(logout))
         logoutImage.addGestureRecognizer(gestureRecognizer)
+        
+        let headerView = TableViewHeaderView()
+        headerView.setup()
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(headerView)
+        
+        headerView.topAnchor.constraint(equalTo: testioImageView.bottomAnchor).isActive = true
+        headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0).isActive = true
+        headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         
         view.addSubview(logoutImage)
         logoutImage.bottomAnchor.constraint(equalTo: testioImageView.bottomAnchor).isActive = true
@@ -141,8 +187,9 @@ extension ServersViewController
         sortingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10.0).isActive = true
         sortingButton.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
         
+        tableView.dataSource = self
         view.addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: testioImageView.bottomAnchor, constant: 0).isActive = true
+        tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 0).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         tableView.bottomAnchor.constraint(equalTo: sortingButton.topAnchor, constant: 0).isActive = true

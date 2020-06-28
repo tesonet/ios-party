@@ -21,13 +21,13 @@ class ServersViewTableViewCell: UITableViewCell
             {
                 return
             }
-            distanceLabel = createLabelWith(text: "\(String(describing: distance)) km")
+            distanceLabel = createLabelWith(text: "\(String(describing: distance)) km", alignment: .right)
             
-            nameLabel = createLabelWith(text: server?.name)
+            nameLabel = createLabelWith(text: server?.name, alignment: .left)
             addSubview(nameLabel)
             addSubview(distanceLabel)
             distanceLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0.0).isActive = true
-            distanceLabel.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 60).isActive = true
+            distanceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0).isActive = true
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0.0).isActive = true
         }
@@ -38,14 +38,14 @@ class ServersViewTableViewCell: UITableViewCell
         distanceLabel.text = nil
     }
     
-    func createLabelWith(text: String?) -> UILabel
+    private func createLabelWith(text: String?, alignment: NSTextAlignment) -> UILabel
     {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text
         label.font = UIFont.systemFont(ofSize: 14.0)
-        label.textColor = UIColor.black.withAlphaComponent(0.5)
-        label.textAlignment = .left
+        label.textColor = UIColor.black.withAlphaComponent(0.4)
+        label.textAlignment = alignment
         return label
     }
 }

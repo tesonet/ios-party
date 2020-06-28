@@ -71,7 +71,6 @@ final class APIManager
                 for (_, subJson) : (String, JSON) in responseJSON
                 {
                     CoreDataManager.shared.writeServers(distance: Int16(subJson["distance"].intValue), name: subJson["name"].stringValue)
-                    print(subJson["name"].stringValue)
                 }
                 CoreDataManager.shared.saveContext()
                 let servers = CoreDataManager.shared.getServers(sortDescriptor: nil)
