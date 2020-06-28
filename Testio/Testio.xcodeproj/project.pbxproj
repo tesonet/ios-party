@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86046A8124A889760008048A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8024A889760008048A /* CoreDataManager.swift */; };
+		86046A8324A889840008048A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8224A889830008048A /* Constants.swift */; };
+		86046A8724A88A3E0008048A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8624A88A3E0008048A /* LoadingViewController.swift */; };
+		86046A8924A88A660008048A /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8824A88A660008048A /* ServersViewController.swift */; };
 		8639238124A8873E006B072D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238024A8873E006B072D /* AppDelegate.swift */; };
 		8639238324A8873E006B072D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238224A8873E006B072D /* SceneDelegate.swift */; };
-		8639238524A8873E006B072D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238424A8873E006B072D /* ViewController.swift */; };
+		8639238524A8873E006B072D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238424A8873E006B072D /* LoginViewController.swift */; };
 		8639238B24A8873E006B072D /* Testio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8639238924A8873E006B072D /* Testio.xcdatamodeld */; };
 		8639238D24A88740006B072D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8639238C24A88740006B072D /* Assets.xcassets */; };
 		8639239024A88740006B072D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8639238E24A88740006B072D /* LaunchScreen.storyboard */; };
@@ -18,10 +22,14 @@
 
 /* Begin PBXFileReference section */
 		6815235C6AFFB6C37010FF1E /* Pods-Testio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testio.debug.xcconfig"; path = "Target Support Files/Pods-Testio/Pods-Testio.debug.xcconfig"; sourceTree = "<group>"; };
+		86046A8024A889760008048A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		86046A8224A889830008048A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		86046A8624A88A3E0008048A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		86046A8824A88A660008048A /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
 		8639237D24A8873E006B072D /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8639238024A8873E006B072D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8639238224A8873E006B072D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8639238424A8873E006B072D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8639238424A8873E006B072D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8639238A24A8873E006B072D /* Testio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Testio.xcdatamodel; sourceTree = "<group>"; };
 		8639238C24A88740006B072D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8639238F24A88740006B072D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +58,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		86046A7F24A8895A0008048A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86046A8024A889760008048A /* CoreDataManager.swift */,
+				86046A8224A889830008048A /* Constants.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86046A8524A88A180008048A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8639238424A8873E006B072D /* LoginViewController.swift */,
+				86046A8824A88A660008048A /* ServersViewController.swift */,
+				86046A8624A88A3E0008048A /* LoadingViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		8639237424A8873E006B072D = {
 			isa = PBXGroup;
 			children = (
@@ -71,9 +98,10 @@
 		8639237F24A8873E006B072D /* Testio */ = {
 			isa = PBXGroup;
 			children = (
+				86046A8524A88A180008048A /* View Controllers */,
+				86046A7F24A8895A0008048A /* Supporting Files */,
 				8639238024A8873E006B072D /* AppDelegate.swift */,
 				8639238224A8873E006B072D /* SceneDelegate.swift */,
-				8639238424A8873E006B072D /* ViewController.swift */,
 				8639238C24A88740006B072D /* Assets.xcassets */,
 				8639238E24A88740006B072D /* LaunchScreen.storyboard */,
 				8639239124A88740006B072D /* Info.plist */,
@@ -205,10 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8639238524A8873E006B072D /* ViewController.swift in Sources */,
+				86046A8724A88A3E0008048A /* LoadingViewController.swift in Sources */,
+				8639238524A8873E006B072D /* LoginViewController.swift in Sources */,
 				8639238124A8873E006B072D /* AppDelegate.swift in Sources */,
 				8639238324A8873E006B072D /* SceneDelegate.swift in Sources */,
+				86046A8124A889760008048A /* CoreDataManager.swift in Sources */,
 				8639238B24A8873E006B072D /* Testio.xcdatamodeld in Sources */,
+				86046A8324A889840008048A /* Constants.swift in Sources */,
+				86046A8924A88A660008048A /* ServersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
