@@ -38,7 +38,6 @@ class LoadingViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 20.0)
         label.textColor = UIColor.white.withAlphaComponent(0.8)
         label.textAlignment = .center
-        label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Fetching the list..."
         view.addSubview(label)

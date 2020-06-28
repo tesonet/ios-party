@@ -27,7 +27,11 @@ class ServersViewController: UIViewController {
     
     @objc func sort()
     {
-        print("did click on sort")
+        print("did tap on sort")
+    }
+    @objc func logout()
+    {
+        print("did tap on logout")
     }
 }
 
@@ -40,6 +44,13 @@ extension ServersViewController: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ServersViewTableViewCell = tableView.dequeueReusableCell(withIdentifier:Constants.ServersViewTableViewCellID) as! ServersViewTableViewCell
+        guard let cellServer = servers?[indexPath.row] else {
+            return cell
+        }
+        cell.server = cellServer
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
         return cell
     }
 }
@@ -52,27 +63,39 @@ extension ServersViewController
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
         tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
+        tableView.rowHeight = 50.0
+        tableView.separatorColor = UIColor.black.withAlphaComponent(0.9)
         tableView.sectionHeaderHeight = 70.0
         
         let testioImageView = UIImageView.init(image: UIImage.init(named: "LogoDark"))
-        testioImageView.clipsToBounds = true
         testioImageView.contentMode = .scaleAspectFit
         testioImageView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(testioImageView)
-        testioImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20.0).isActive = true
-        testioImageView.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        testioImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40.0).isActive = true
+        testioImageView.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
         testioImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20.0).isActive = true
-        testioImageView.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+        testioImageView.heightAnchor.constraint(equalToConstant: 35.0).isActive = true
         
-        let logoutButton = UIButton.init(type:.custom)
+        let logoutImage = UIImageView.init(image: UIImage.init(named: "Logout"))
+        logoutImage.translatesAutoresizingMaskIntoConstraints = false
+        logoutImage.contentMode = .scaleAspectFit
+        logoutImage.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(logout))
+        logoutImage.addGestureRecognizer(gestureRecognizer)
         
+        view.addSubview(logoutImage)
+        logoutImage.bottomAnchor.constraint(equalTo: testioImageView.bottomAnchor).isActive = true
+        logoutImage.widthAnchor.constraint(equalToConstant: 40.0).isActive = true
+        logoutImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20.0).isActive = true
+        logoutImage.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         
         //sorting button
         let sortingButton = UIButton(type:.custom)
         sortingButton.setTitle("Sort", for: .normal)
         sortingButton.tintColor = .white
-        sortingButton.backgroundColor = UIColor.init(red: 70/255, green: 75/255, blue: 100/255, alpha: 0.95)
+        sortingButton.backgroundColor = UIColor.init(red: 65/255, green: 69/255, blue: 97/255, alpha: 0.95)
         sortingButton.addTarget(self, action: #selector(sort), for: .touchDown)
         sortingButton.setImage(UIImage.init(named: "Sort"), for: .normal)
         sortingButton.imageView?.contentMode = .scaleAspectFill
@@ -84,5 +107,11 @@ extension ServersViewController
         sortingButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:0.0).isActive = true
         sortingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10.0).isActive = true
         sortingButton.heightAnchor.constraint(equalToConstant: 80.0).isActive = true
+        
+        view.addSubview(tableView)
+        tableView.topAnchor.constraint(equalTo: testioImageView.bottomAnchor, constant: 0).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: sortingButton.topAnchor, constant: 0).isActive = true
     }
 }

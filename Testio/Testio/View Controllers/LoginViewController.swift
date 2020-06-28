@@ -31,7 +31,6 @@ class LoginViewController: UIViewController
         let imgView = UIImageView()
         imgView.contentMode =  UIView.ContentMode.scaleAspectFit
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.clipsToBounds = true
         imgView.image = UIImage(named: "LogoLight")
         view.addSubview(imgView)
         imgView.topAnchor.constraint(equalTo:view.topAnchor, constant: 150).isActive = true
