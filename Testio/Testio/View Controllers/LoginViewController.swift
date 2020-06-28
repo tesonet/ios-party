@@ -44,7 +44,7 @@ class LoginViewController: UIViewController
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "LogoLight")
         view.addSubview(imgView)
-        imgView.topAnchor.constraint(equalTo:view.topAnchor, constant: 150).isActive = true
+        imgView.topAnchor.constraint(equalTo:view.topAnchor, constant: 130).isActive = true
         imgView.trailingAnchor.constraint(equalTo:view.trailingAnchor, constant: -120).isActive = true
         imgView.leadingAnchor.constraint(equalTo:view.leadingAnchor, constant: 120).isActive = true
         imgView.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -57,7 +57,7 @@ class LoginViewController: UIViewController
             usernameCell.text = savedUsername
         }
         view.addSubview(usernameCell)
-        usernameCell.topAnchor.constraint(equalTo:imgView.bottomAnchor, constant: 100).isActive = true
+        usernameCell.topAnchor.constraint(equalTo:imgView.bottomAnchor, constant: 150).isActive = true
         usernameCell.trailingAnchor.constraint(equalTo:view.trailingAnchor, constant: -sideConstraintConstant).isActive = true
         usernameCell.leadingAnchor.constraint(equalTo:view.leadingAnchor, constant: sideConstraintConstant).isActive = true
         usernameCell.heightAnchor.constraint(equalToConstant: cellsHeightConstraintConstant).isActive = true
@@ -125,13 +125,19 @@ class LoginViewController: UIViewController
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
-            if (success)
+            if success
             {
-                KeychainManager.writeCredentialsForKey(CredentialsKey.password, value: self.passwordCell.text!)
-                KeychainManager.writeCredentialsForKey(CredentialsKey.username, value: self.usernameCell.text!)
-                KeychainManager.writeCredentialsForKey(CredentialsKey.token, value: response)
-                let loadingViewController = LoadingViewController.init(token: response)
+                guard let token = KeychainManager.getCredentialsForKey(CredentialsKey.token) else {
+                    KeychainManager.writeCredentialsForKey(CredentialsKey.password, value: self.passwordCell.text!)
+                    KeychainManager.writeCredentialsForKey(CredentialsKey.username, value: self.usernameCell.text!)
+                    KeychainManager.writeCredentialsForKey(CredentialsKey.token, value: response)
+                    let loadingViewController = LoadingViewController.init(token: response)
+                    self.navigationController?.pushViewController(loadingViewController, animated: true)
+                    return
+                }
+                let loadingViewController = LoadingViewController.init(token: token)
                 self.navigationController?.pushViewController(loadingViewController, animated: true)
+                
             }
             else
             {
@@ -147,7 +153,6 @@ class LoginViewController: UIViewController
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
         view.addSubview(imageView)

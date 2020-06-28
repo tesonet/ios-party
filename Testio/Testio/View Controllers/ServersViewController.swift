@@ -19,6 +19,7 @@ class ServersViewController: UIViewController {
         tableView.allowsSelection = false
         tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = 50.0
+        tableView.bounces = false
         tableView.separatorColor = UIColor.black.withAlphaComponent(0.8)
         tableView.sectionHeaderHeight = 70.0
         return tableView
@@ -174,7 +175,7 @@ extension ServersViewController
         let sortingButton = UIButton(type:.custom)
         sortingButton.setTitle("Sort", for: .normal)
         sortingButton.tintColor = .white
-        sortingButton.backgroundColor = UIColor.init(red: 65/255, green: 69/255, blue: 97/255, alpha: 0.95)
+        sortingButton.backgroundColor = UIColor.init(red: 65/255, green: 69/255, blue: 97/255, alpha: 1.0)
         sortingButton.addTarget(self, action: #selector(sort), for: .touchDown)
         sortingButton.setImage(UIImage.init(named: "Sort"), for: .normal)
         sortingButton.imageView?.contentMode = .scaleAspectFill

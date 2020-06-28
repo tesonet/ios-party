@@ -13,7 +13,11 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
     private var username:String!
     private var token:String!
     private let simpleOver = AnimationManager()
-    private let spinner = SpinnerView()
+    private let spinner: SpinnerView = {
+        let spinner = SpinnerView()
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        return spinner
+    }()
     
     convenience init (token:String)
     {
@@ -42,12 +46,11 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
     {
         assignbackground()
         
-        spinner.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(spinner)
         spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        spinner.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        spinner.widthAnchor.constraint(equalToConstant: 200).isActive = true
         spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        spinner.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        spinner.heightAnchor.constraint(equalToConstant: 200).isActive = true
         spinner.rotate()
         
         let label:UILabel = UILabel()
@@ -57,9 +60,9 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Fetching the list..."
         view.addSubview(label)
-        label.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -130).isActive = true
-        label.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 10).isActive = true
-        label.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: spinner.bottomAnchor,constant: 40).isActive = true
+        label.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10).isActive = true
+        label.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         label.heightAnchor.constraint(equalToConstant: 100).isActive = true
     }
     
@@ -69,8 +72,7 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
 
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = UIView.ContentMode.center
-        imageView.clipsToBounds = true
+        imageView.contentMode = .center
         imageView.image = background
         imageView.center = view.center
         view.addSubview(imageView)
