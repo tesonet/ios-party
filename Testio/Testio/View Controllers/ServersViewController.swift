@@ -27,7 +27,33 @@ class ServersViewController: UIViewController {
     
     @objc func sort()
     {
-        print("did tap on sort")
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let sortDistanceAction = UIAlertAction(title: "By Distance", style: .default)
+        {
+            [weak self] UIAlertAction in
+            let sortDescriptor = NSSortDescriptor.init(key: "distance", ascending: true)
+            self!.servers = CoreDataManager.shared.getServers(sortDescriptor: sortDescriptor)
+            self!.tableView.reloadData()
+        }
+        let sortNameAction = UIAlertAction(title: "Alphanumerical", style: .default)
+        {
+            [weak self] UIAlertAction in
+            let sortDescriptor = NSSortDescriptor.init(key: "name", ascending: true)
+            self!.servers = CoreDataManager.shared.getServers(sortDescriptor: sortDescriptor)
+            self!.tableView.reloadData()
+            
+        }
+        
+        alert.addAction(sortDistanceAction)
+        alert.addAction(sortNameAction)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        {
+            UIAlertAction in
+        }
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     @objc func logout()
     {

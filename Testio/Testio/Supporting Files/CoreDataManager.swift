@@ -21,10 +21,14 @@ class CoreDataManager {
         }
     }
     
-    func getServers() -> [Server]
+    func getServers(sortDescriptor: NSSortDescriptor?) -> [Server]
     {
         var servers = [Server]()
         let serversRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Server")
+        if let descriptor = sortDescriptor
+        {
+            serversRequest.sortDescriptors = [descriptor]
+        }
         do
         {
             servers = try context.fetch(serversRequest) as! [Server]

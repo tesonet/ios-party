@@ -59,7 +59,7 @@ final class APIManager
                     CoreDataManager.shared.writeServers(distance: Int16(subJson["distance"].intValue), name: subJson["name"].stringValue)
                     print(subJson["name"].stringValue)
                 }
-                let servers = CoreDataManager.shared.getServers()
+                let servers = CoreDataManager.shared.getServers(sortDescriptor: nil)
                 onCompletion(true, servers)
                 
                 break
