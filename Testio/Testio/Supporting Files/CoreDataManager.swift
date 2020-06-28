@@ -21,6 +21,19 @@ class CoreDataManager {
         }
     }
     
+    func deleteServers()
+    {
+        let serversRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Server")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: serversRequest)
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch let error as NSError
+        {
+            print(error.localizedDescription)
+        }
+    }
+    
     func getServers(sortDescriptor: NSSortDescriptor?) -> [Server]
     {
         var servers = [Server]()

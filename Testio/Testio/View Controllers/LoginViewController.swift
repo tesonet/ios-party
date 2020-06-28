@@ -47,6 +47,7 @@ class LoginViewController: UIViewController
         usernameCell.heightAnchor.constraint(equalToConstant: cellsHeightConstraintConstant).isActive = true
         
         passwordCell = imageWithText(text: "Password", image:UIImage(named:"Lock"))
+        passwordCell.isSecureTextEntry = true
         view.addSubview(passwordCell)
         passwordCell.topAnchor.constraint(equalTo:usernameCell.bottomAnchor, constant: cellsGapConstraint).isActive = true
         passwordCell.trailingAnchor.constraint(equalTo:view.trailingAnchor, constant: -sideConstraintConstant).isActive = true
@@ -55,8 +56,9 @@ class LoginViewController: UIViewController
         
         //add loginButton
         let loginButton = UIButton()
-        loginButton.backgroundColor = .green
+        loginButton.backgroundColor = UIColor.init(red: 160/255, green: 211/255, blue: 66/255, alpha: 1.0)
         loginButton.layer.cornerRadius = 5.0
+//        loginButton.
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.setTitle("Log In", for: .normal)
         loginButton.addTarget(self, action: #selector(loginAction), for:.touchDown)

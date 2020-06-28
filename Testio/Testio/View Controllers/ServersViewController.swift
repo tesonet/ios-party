@@ -31,16 +31,22 @@ class ServersViewController: UIViewController {
         let sortDistanceAction = UIAlertAction(title: "By Distance", style: .default)
         {
             [weak self] UIAlertAction in
+            guard let self = self else {
+                return
+            }
             let sortDescriptor = NSSortDescriptor.init(key: "distance", ascending: true)
-            self!.servers = CoreDataManager.shared.getServers(sortDescriptor: sortDescriptor)
-            self!.tableView.reloadData()
+            self.servers = CoreDataManager.shared.getServers(sortDescriptor: sortDescriptor)
+            self.tableView.reloadData()
         }
         let sortNameAction = UIAlertAction(title: "Alphanumerical", style: .default)
         {
             [weak self] UIAlertAction in
+            guard let self = self else {
+                return
+            }
             let sortDescriptor = NSSortDescriptor.init(key: "name", ascending: true)
-            self!.servers = CoreDataManager.shared.getServers(sortDescriptor: sortDescriptor)
-            self!.tableView.reloadData()
+            self.servers = CoreDataManager.shared.getServers(sortDescriptor: sortDescriptor)
+            self.tableView.reloadData()
             
         }
         
@@ -57,7 +63,7 @@ class ServersViewController: UIViewController {
     }
     @objc func logout()
     {
-        print("did tap on logout")
+        navigationController?.popToRootViewController(animated: true)
     }
 }
 
@@ -89,6 +95,7 @@ extension ServersViewController
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
         tableView.dataSource = self
+        tableView.allowsSelection = false
         tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = 50.0
         tableView.separatorColor = UIColor.black.withAlphaComponent(0.9)
