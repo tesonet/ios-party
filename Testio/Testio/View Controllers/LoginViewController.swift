@@ -98,12 +98,12 @@ class LoginViewController: UIViewController
             }
         }
         
-        APIManager.shared.getToken(userName: usernameCell.text!, password: passwordCell.text!) { [weak self] (success, response, responseCode) in
+        APIManager.shared.getToken(userName: usernameCell.text!, password: passwordCell.text!) { [weak self] (response, responseCode) in
             guard let self = self else {
                 return
             }
             
-            if success
+            if responseCode == 200
             {
                 guard let token = KeychainManager.getCredentialsForKey(CredentialsKey.token) else {
                     KeychainManager.writeCredentialsForKey(CredentialsKey.password, value: self.passwordCell.text!)

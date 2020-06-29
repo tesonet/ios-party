@@ -14,7 +14,7 @@ final class APIManager
 {
     static let shared = APIManager()
     
-    func getToken(userName: String, password: String, onCompletion:@escaping(Bool, String, Int?) -> ())
+    func getToken(userName: String, password: String, onCompletion:@escaping(String, Int?) -> ())
     {
         let requestParameters = ["username" : userName, "password" : password];
         AF.request(Constants.tokensURL, method: .post, parameters: requestParameters, encoding: JSONEncoding.default).responseJSON {
@@ -25,23 +25,21 @@ final class APIManager
             case .success:
                 if let value = response.value as? [String : Any]
                 {
-                    if statusCode == 200
+                    if let token:String = value["token"] as? String
                     {
-                        let token:String = value["token"] as! String
-                        onCompletion(true, token, nil)
+                        onCompletion(token, statusCode)
                     }
                     else
                     {
-                        onCompletion(false, value["message"] as! String, statusCode)
+                        onCompletion("Error", statusCode)
                     }
                 }
                 else
                 {
-                    onCompletion(false, "Error", statusCode)
+                    onCompletion("Error", statusCode)
                 }
             case .failure(let error):
-                print(error.localizedDescription)
-                onCompletion(false, "Error", nil)
+                onCompletion(error.localizedDescription, nil)
             }
         }
     }
@@ -71,7 +69,7 @@ final class APIManager
                 CoreDataManager.shared.deleteServers()
                 for (_, subJson) : (String, JSON) in responseJSON
                 {
-                    CoreDataManager.shared.writeServers(distance: Int16(subJson["distance"].intValue), name: subJson["name"].stringValue)
+                    CoreDataManager.shared.writeServer(distance: Int16(subJson["distance"].intValue), name: subJson["name"].stringValue)
                 }
                 CoreDataManager.shared.saveContext()
                 let servers = CoreDataManager.shared.getServers(sortDescriptor: nil)

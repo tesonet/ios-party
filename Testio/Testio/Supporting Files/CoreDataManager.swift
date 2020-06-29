@@ -53,7 +53,7 @@ class CoreDataManager {
         return servers
     }
     
-    func writeServers(distance: Int16, name: String)
+    func writeServer(distance: Int16, name: String)
     {
         let entity = NSEntityDescription.entity(forEntityName:"Server",in: context)!
         let object = NSManagedObject(entity: entity,insertInto: context)
