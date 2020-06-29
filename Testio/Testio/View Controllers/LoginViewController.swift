@@ -12,15 +12,17 @@ class LoginViewController: UIViewController
     fileprivate let sideConstraintConstant:CGFloat = 50
     fileprivate let cellsHeightConstraintConstant:CGFloat = 60
     fileprivate let cellsGapConstraint:CGFloat = 20
-    fileprivate var passwordCell:UITextField!
-    fileprivate var usernameCell:UITextField!
+    fileprivate var passwordCell:LoginViewTextField!
+    fileprivate var usernameCell:LoginViewTextField!
+    
     fileprivate let tesioImage:UIImageView = {
         let imgView = UIImageView()
         imgView.contentMode =  UIView.ContentMode.scaleAspectFit
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "LogoLight")
-       return imgView
+        return imgView
     }()
+    
     fileprivate let loginButton:UIButton = {
         let loginButton = UIButton()
         loginButton.backgroundColor = UIColor.init(red: 160/255, green: 211/255, blue: 66/255, alpha: 1.0)
@@ -59,7 +61,7 @@ class LoginViewController: UIViewController
     
     fileprivate func setupUI()
     {
-        assignbackground()
+        assignBackground()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         setupImage()
         setupCells()
@@ -70,17 +72,21 @@ class LoginViewController: UIViewController
     {
         if usernameCell.text!.isEmpty
         {
-            print("no username entered")
+            let alert = UIAlertController(title:nil, message: "You must enter username", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return;
         }
         if passwordCell.text!.isEmpty
         {
-            print("no password entered")
+            let alert = UIAlertController(title:nil, message: "You must enter password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return;
         }
         
         /*check if token exists in keychain and if internet is available
-            - if not available load "offline mode" with current servers in database*/
+         - if not available load "offline mode" with current servers in database*/
         
         if let token = KeychainManager.getCredentialsForKey(CredentialsKey.token)
         {
@@ -96,19 +102,8 @@ class LoginViewController: UIViewController
             guard let self = self else {
                 return
             }
-            if !success
-            {
-                let alert = UIAlertController(title:"Error", message: "Something Went Wrong", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-            if responseCode == 401
-            {
-                let alert = UIAlertController(title:"401 Error", message: response, preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-            else
+            
+            if success
             {
                 guard let token = KeychainManager.getCredentialsForKey(CredentialsKey.token) else {
                     KeychainManager.writeCredentialsForKey(CredentialsKey.password, value: self.passwordCell.text!)
@@ -120,7 +115,18 @@ class LoginViewController: UIViewController
                 }
                 let loadingViewController = LoadingViewController.init(token: token)
                 self.navigationController?.pushViewController(loadingViewController, animated: true)
-                
+            }
+            else if responseCode == 401
+            {
+                let alert = UIAlertController(title:"401 Error", message: "You are not authorized, check your credentials", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else
+            {
+                let alert = UIAlertController(title:"Error", message: "Something Went Wrong", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -135,14 +141,14 @@ class LoginViewController: UIViewController
     }
     fileprivate func setupCells()
     {
-        usernameCell = imageWithText(text: "Username", image:UIImage(named:"Username"))
+        usernameCell = LoginViewTextField.init(name: "Username", image: UIImage(named:"Username")!)
         view.addSubview(usernameCell)
         usernameCell.topAnchor.constraint(equalTo:tesioImage.bottomAnchor, constant: 150).isActive = true
         usernameCell.trailingAnchor.constraint(equalTo:view.trailingAnchor, constant: -sideConstraintConstant).isActive = true
         usernameCell.leadingAnchor.constraint(equalTo:view.leadingAnchor, constant: sideConstraintConstant).isActive = true
         usernameCell.heightAnchor.constraint(equalToConstant: cellsHeightConstraintConstant).isActive = true
         
-        passwordCell = imageWithText(text: "Password", image:UIImage(named:"Lock"))
+        passwordCell = LoginViewTextField.init(name: "Password", image: UIImage(named:"Lock")!)
         passwordCell.isSecureTextEntry = true
         view.addSubview(passwordCell)
         passwordCell.topAnchor.constraint(equalTo:usernameCell.bottomAnchor, constant: cellsGapConstraint).isActive = true
@@ -159,10 +165,10 @@ class LoginViewController: UIViewController
         loginButton.heightAnchor.constraint(equalToConstant: cellsHeightConstraintConstant).isActive = true
     }
     
-    fileprivate func assignbackground()
+    fileprivate func assignBackground()
     {
         let background = UIImage(named: "Background")
-
+        
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode = .scaleAspectFill
@@ -170,20 +176,5 @@ class LoginViewController: UIViewController
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
-    }
-    
-    fileprivate func imageWithText(text: String!, image: UIImage!) -> LoginViewTextField
-    {
-        let textField = LoginViewTextField()
-        textField.leftViewMode = .always
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        let imageView = UIImageView()
-        imageView.image = image
-        textField.leftView = imageView
-        textField.autocorrectionType = .no
-        textField.backgroundColor = .white
-        textField.layer.cornerRadius = 5.0
-        textField.placeholder = text
-        return textField
     }
 }

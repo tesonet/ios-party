@@ -19,24 +19,25 @@ final class APIManager
         let requestParameters = ["username" : userName, "password" : password];
         AF.request(Constants.tokensURL, method: .post, parameters: requestParameters, encoding: JSONEncoding.default).responseJSON {
             response in
+            let statusCode = response.response?.statusCode
             switch response.result
             {
             case .success:
                 if let value = response.value as? [String : Any]
                 {
-                    if response.response?.statusCode == 401
-                    {
-                        onCompletion(false, value["message"] as! String, 401)
-                    }
-                    else if response.response?.statusCode == 200
+                    if statusCode == 200
                     {
                         let token:String = value["token"] as! String
                         onCompletion(true, token, nil)
                     }
+                    else
+                    {
+                        onCompletion(false, value["message"] as! String, statusCode)
+                    }
                 }
                 else
                 {
-                    onCompletion(false, "Error", response.response?.statusCode)
+                    onCompletion(false, "Error", statusCode)
                 }
             case .failure(let error):
                 print(error.localizedDescription)

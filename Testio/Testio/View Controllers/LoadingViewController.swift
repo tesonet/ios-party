@@ -44,7 +44,7 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
     
     fileprivate func setupUI()
     {
-        assignbackground()
+        assignBackground()
         
         view.addSubview(spinner)
         spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -66,7 +66,7 @@ class LoadingViewController: UIViewController, UINavigationControllerDelegate {
         label.heightAnchor.constraint(equalToConstant: 100).isActive = true
     }
     
-    fileprivate func assignbackground()
+    fileprivate func assignBackground()
     {
         let background = UIImage(named: "Background")
 

@@ -10,6 +10,20 @@ import UIKit
 
 class LoginViewTextField: UITextField {
     
+    convenience init(name: String, image:UIImage)
+    {
+        self.init()
+        leftViewMode = .always
+        translatesAutoresizingMaskIntoConstraints = false
+        let imageView = UIImageView()
+        imageView.image = image
+        leftView = imageView
+        autocorrectionType = .no
+        backgroundColor = .white
+        layer.cornerRadius = 5.0
+        placeholder = name
+        
+    }
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         let newFrame = bounds.insetBy(dx: 40.0, dy:20.0)
         return newFrame

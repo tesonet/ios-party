@@ -30,6 +30,9 @@ class ServersViewTableViewCell: UITableViewCell
             distanceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0).isActive = true
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0.0).isActive = true
+            preservesSuperviewLayoutMargins = false
+            separatorInset = UIEdgeInsets.zero
+            layoutMargins = UIEdgeInsets.zero
         }
     }
     

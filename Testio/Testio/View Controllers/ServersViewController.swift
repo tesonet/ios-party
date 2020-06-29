@@ -169,9 +169,6 @@ extension ServersViewController: UITableViewDataSource
             return cell
         }
         cell.server = cellServer
-        cell.preservesSuperviewLayoutMargins = false
-        cell.separatorInset = UIEdgeInsets.zero
-        cell.layoutMargins = UIEdgeInsets.zero
         return cell
     }
 }
@@ -179,7 +176,7 @@ extension ServersViewController: UITableViewDataSource
 extension ServersViewController
 {
     
-    func setupUI()
+    fileprivate func setupUI()
     {
         self.view.backgroundColor = .white
         
