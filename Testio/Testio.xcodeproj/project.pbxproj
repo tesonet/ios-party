@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86046A8124A889760008048A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8024A889760008048A /* CoreDataManager.swift */; };
+		86046A8324A889840008048A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8224A889830008048A /* Constants.swift */; };
+		86046A8724A88A3E0008048A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8624A88A3E0008048A /* LoadingViewController.swift */; };
+		86046A8924A88A660008048A /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8824A88A660008048A /* ServersViewController.swift */; };
+		86046A8E24A88BEA0008048A /* Server+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8D24A88BEA0008048A /* Server+CoreDataProperties.swift */; };
+		86046A8F24A88BEA0008048A /* Server+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A8C24A88BEA0008048A /* Server+CoreDataClass.swift */; };
+		86046A9124A88C0B0008048A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A9024A88C0B0008048A /* APIManager.swift */; };
+		86046A9424A88CE10008048A /* ServersViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A9324A88CE10008048A /* ServersViewTableViewCell.swift */; };
+		86046A9A24A8C4450008048A /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A9924A8C4450008048A /* AnimationManager.swift */; };
+		86046A9C24A8CCDA0008048A /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A9B24A8CCDA0008048A /* SpinnerView.swift */; };
+		86046A9E24A90A070008048A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046A9D24A90A070008048A /* KeychainManager.swift */; };
+		86046AA224A921DA0008048A /* TableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046AA124A921DA0008048A /* TableViewHeaderView.swift */; };
+		86046AA424A923AC0008048A /* LoginViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86046AA324A923AC0008048A /* LoginViewTextField.swift */; };
+		8639238124A8873E006B072D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238024A8873E006B072D /* AppDelegate.swift */; };
+		8639238324A8873E006B072D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238224A8873E006B072D /* SceneDelegate.swift */; };
+		8639238524A8873E006B072D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639238424A8873E006B072D /* LoginViewController.swift */; };
+		8639238B24A8873E006B072D /* Testio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8639238924A8873E006B072D /* Testio.xcdatamodeld */; };
+		8639238D24A88740006B072D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8639238C24A88740006B072D /* Assets.xcassets */; };
+		8639239024A88740006B072D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8639238E24A88740006B072D /* LaunchScreen.storyboard */; };
+		94410B7B5F073EB03840EA21 /* Pods_Testio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DFEAB0F6171145DFE9549C /* Pods_Testio.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6815235C6AFFB6C37010FF1E /* Pods-Testio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testio.debug.xcconfig"; path = "Target Support Files/Pods-Testio/Pods-Testio.debug.xcconfig"; sourceTree = "<group>"; };
+		86046A8024A889760008048A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		86046A8224A889830008048A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		86046A8624A88A3E0008048A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		86046A8824A88A660008048A /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		86046A8C24A88BEA0008048A /* Server+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Server+CoreDataClass.swift"; path = "/Users/ernestasseputis/Desktop/tesonet/testio/good/ios-party/Testio/Testio/Supporting Files/Server+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		86046A8D24A88BEA0008048A /* Server+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Server+CoreDataProperties.swift"; path = "/Users/ernestasseputis/Desktop/tesonet/testio/good/ios-party/Testio/Testio/Supporting Files/Server+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		86046A9024A88C0B0008048A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		86046A9324A88CE10008048A /* ServersViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewTableViewCell.swift; sourceTree = "<group>"; };
+		86046A9924A8C4450008048A /* AnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
+		86046A9B24A8CCDA0008048A /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		86046A9D24A90A070008048A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		86046AA124A921DA0008048A /* TableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderView.swift; sourceTree = "<group>"; };
+		86046AA324A923AC0008048A /* LoginViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTextField.swift; sourceTree = "<group>"; };
+		8639237D24A8873E006B072D /* Testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8639238024A8873E006B072D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8639238224A8873E006B072D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8639238424A8873E006B072D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8639238A24A8873E006B072D /* Testio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Testio.xcdatamodel; sourceTree = "<group>"; };
+		8639238C24A88740006B072D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8639238F24A88740006B072D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8639239124A88740006B072D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A170FEE7467BDF324A1194C5 /* Pods-Testio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testio.release.xcconfig"; path = "Target Support Files/Pods-Testio/Pods-Testio.release.xcconfig"; sourceTree = "<group>"; };
+		E8DFEAB0F6171145DFE9549C /* Pods_Testio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Testio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8639237A24A8873E006B072D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94410B7B5F073EB03840EA21 /* Pods_Testio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4605C24701AA74ECD05D7AB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8DFEAB0F6171145DFE9549C /* Pods_Testio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86046A7F24A8895A0008048A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86046A8C24A88BEA0008048A /* Server+CoreDataClass.swift */,
+				86046A8D24A88BEA0008048A /* Server+CoreDataProperties.swift */,
+				86046A8024A889760008048A /* CoreDataManager.swift */,
+				86046A8224A889830008048A /* Constants.swift */,
+				86046A9024A88C0B0008048A /* APIManager.swift */,
+				86046A9924A8C4450008048A /* AnimationManager.swift */,
+				86046A9D24A90A070008048A /* KeychainManager.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86046A8524A88A180008048A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8639238424A8873E006B072D /* LoginViewController.swift */,
+				86046A8824A88A660008048A /* ServersViewController.swift */,
+				86046A8624A88A3E0008048A /* LoadingViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		86046A9224A88CBE0008048A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86046A9324A88CE10008048A /* ServersViewTableViewCell.swift */,
+				86046A9B24A8CCDA0008048A /* SpinnerView.swift */,
+				86046AA124A921DA0008048A /* TableViewHeaderView.swift */,
+				86046AA324A923AC0008048A /* LoginViewTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8639237424A8873E006B072D = {
+			isa = PBXGroup;
+			children = (
+				8639237F24A8873E006B072D /* Testio */,
+				8639237E24A8873E006B072D /* Products */,
+				EB838B2D723EF4DC0656B120 /* Pods */,
+				4605C24701AA74ECD05D7AB8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8639237E24A8873E006B072D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8639237D24A8873E006B072D /* Testio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8639237F24A8873E006B072D /* Testio */ = {
+			isa = PBXGroup;
+			children = (
+				86046A9224A88CBE0008048A /* Views */,
+				86046A8524A88A180008048A /* View Controllers */,
+				86046A7F24A8895A0008048A /* Supporting Files */,
+				8639238024A8873E006B072D /* AppDelegate.swift */,
+				8639238224A8873E006B072D /* SceneDelegate.swift */,
+				8639238C24A88740006B072D /* Assets.xcassets */,
+				8639238E24A88740006B072D /* LaunchScreen.storyboard */,
+				8639239124A88740006B072D /* Info.plist */,
+				8639238924A8873E006B072D /* Testio.xcdatamodeld */,
+			);
+			path = Testio;
+			sourceTree = "<group>";
+		};
+		EB838B2D723EF4DC0656B120 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6815235C6AFFB6C37010FF1E /* Pods-Testio.debug.xcconfig */,
+				A170FEE7467BDF324A1194C5 /* Pods-Testio.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8639237C24A8873E006B072D /* Testio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8639239424A88740006B072D /* Build configuration list for PBXNativeTarget "Testio" */;
+			buildPhases = (
+				D293D81EA7BD2485140E4BD9 /* [CP] Check Pods Manifest.lock */,
+				8639237924A8873E006B072D /* Sources */,
+				8639237A24A8873E006B072D /* Frameworks */,
+				8639237B24A8873E006B072D /* Resources */,
+				FB66DE7D6A155E164DCBCBF5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Testio;
+			productName = Testio;
+			productReference = 8639237D24A8873E006B072D /* Testio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8639237524A8873E006B072D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Ernestas Šeputis";
+				TargetAttributes = {
+					8639237C24A8873E006B072D = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 8639237824A8873E006B072D /* Build configuration list for PBXProject "Testio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8639237424A8873E006B072D;
+			productRefGroup = 8639237E24A8873E006B072D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8639237C24A8873E006B072D /* Testio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8639237B24A8873E006B072D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8639239024A88740006B072D /* LaunchScreen.storyboard in Resources */,
+				8639238D24A88740006B072D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D293D81EA7BD2485140E4BD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Testio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB66DE7D6A155E164DCBCBF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Testio/Pods-Testio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Testio/Pods-Testio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Testio/Pods-Testio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8639237924A8873E006B072D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86046A8724A88A3E0008048A /* LoadingViewController.swift in Sources */,
+				8639238524A8873E006B072D /* LoginViewController.swift in Sources */,
+				8639238124A8873E006B072D /* AppDelegate.swift in Sources */,
+				86046AA424A923AC0008048A /* LoginViewTextField.swift in Sources */,
+				86046A9A24A8C4450008048A /* AnimationManager.swift in Sources */,
+				86046A9E24A90A070008048A /* KeychainManager.swift in Sources */,
+				86046A8E24A88BEA0008048A /* Server+CoreDataProperties.swift in Sources */,
+				86046A9124A88C0B0008048A /* APIManager.swift in Sources */,
+				86046A9C24A8CCDA0008048A /* SpinnerView.swift in Sources */,
+				86046A9424A88CE10008048A /* ServersViewTableViewCell.swift in Sources */,
+				86046A8F24A88BEA0008048A /* Server+CoreDataClass.swift in Sources */,
+				8639238324A8873E006B072D /* SceneDelegate.swift in Sources */,
+				86046AA224A921DA0008048A /* TableViewHeaderView.swift in Sources */,
+				86046A8124A889760008048A /* CoreDataManager.swift in Sources */,
+				8639238B24A8873E006B072D /* Testio.xcdatamodeld in Sources */,
+				86046A8324A889840008048A /* Constants.swift in Sources */,
+				86046A8924A88A660008048A /* ServersViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8639238E24A88740006B072D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8639238F24A88740006B072D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8639239224A88740006B072D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8639239324A88740006B072D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8639239524A88740006B072D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6815235C6AFFB6C37010FF1E /* Pods-Testio.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8WDFCF7CBN;
+				INFOPLIST_FILE = Testio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Testio.Testio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8639239624A88740006B072D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A170FEE7467BDF324A1194C5 /* Pods-Testio.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8WDFCF7CBN;
+				INFOPLIST_FILE = Testio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Testio.Testio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8639237824A8873E006B072D /* Build configuration list for PBXProject "Testio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8639239224A88740006B072D /* Debug */,
+				8639239324A88740006B072D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8639239424A88740006B072D /* Build configuration list for PBXNativeTarget "Testio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8639239524A88740006B072D /* Debug */,
+				8639239624A88740006B072D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8639238924A8873E006B072D /* Testio.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8639238A24A8873E006B072D /* Testio.xcdatamodel */,
+			);
+			currentVersion = 8639238A24A8873E006B072D /* Testio.xcdatamodel */;
+			path = Testio.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8639237524A8873E006B072D /* Project object */;
+}
