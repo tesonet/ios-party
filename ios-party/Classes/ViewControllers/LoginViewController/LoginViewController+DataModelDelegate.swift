@@ -10,11 +10,11 @@ import UIKit
 extension LoginViewController: LoginDataModelDelegate {
     
     func didStartLoginOperation(dataModel: LoginDataModel) {
-        
+        // FIXME: activity indicator
     }
     
     func didFinishLoginOperation(dataModel: LoginDataModel) {
-        
+        AppDelegate.shared.logedInViewController()
     }
     
     func didFailLoginOperation(dataModel: LoginDataModel, message: String) {

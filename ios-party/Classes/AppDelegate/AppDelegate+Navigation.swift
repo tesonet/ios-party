@@ -9,12 +9,15 @@ import UIKit
 
 extension AppDelegate {
     
-    func initialNavigationController() -> UIWindow? {
+    func initialViewController() {
+    
+        window?.rootViewController = LoginViewController()
+        window?.makeKeyAndVisible()
+    }
+    
+    func logedInViewController() {
         
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = LoginViewController()
-        window.makeKeyAndVisible()
-        
-        return window
+        window?.rootViewController = ServerListViewController()
+        window?.makeKeyAndVisible()
     }
 }

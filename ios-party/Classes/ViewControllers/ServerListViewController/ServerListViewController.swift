@@ -19,6 +19,6 @@ class ServerListViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func onLogoutButtonTap(_ sender: Any) {
-        // Implement logout functionality
+        
     }
 }
