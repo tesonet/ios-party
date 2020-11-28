@@ -12,8 +12,7 @@ extension AppDelegate {
     func initialNavigationController() -> UIWindow? {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let navigation = UINavigationController(rootViewController: LoginViewController())
-        window.rootViewController = navigation
+        window.rootViewController = LoginViewController()
         window.makeKeyAndVisible()
         
         return window

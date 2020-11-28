@@ -13,6 +13,8 @@
 		803850B72572645F00788927 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850B52572645F00788927 /* LoginViewController.swift */; };
 		803850BD2572681100788927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803850BB2572681100788927 /* LaunchScreen.storyboard */; };
 		803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850C22572693300788927 /* AppDelegate+Navigation.swift */; };
+		803850C92572703D00788927 /* TextFieldCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850C82572703D00788927 /* TextFieldCustomView.swift */; };
+		803850CC2572705600788927 /* TextFieldCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803850CB2572705600788927 /* TextFieldCustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		803850B52572645F00788927 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		803850BC2572681100788927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		803850C22572693300788927 /* AppDelegate+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Navigation.swift"; sourceTree = "<group>"; };
+		803850C82572703D00788927 /* TextFieldCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomView.swift; sourceTree = "<group>"; };
+		803850CB2572705600788927 /* TextFieldCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		803850AB257263FF00788927 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				803850C72572702000788927 /* CustomView */,
 				803850B32572645F00788927 /* LoginViewController */,
 			);
 			path = ViewControllers;
@@ -105,6 +110,15 @@
 				80385091257262D900788927 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		803850C72572702000788927 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				803850C82572703D00788927 /* TextFieldCustomView.swift */,
+				803850CB2572705600788927 /* TextFieldCustomView.xib */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +181,7 @@
 				803850BD2572681100788927 /* LaunchScreen.storyboard in Resources */,
 				803850B62572645F00788927 /* LoginViewController.xib in Resources */,
 				8038509B257262D900788927 /* Assets.xcassets in Resources */,
+				803850CC2572705600788927 /* TextFieldCustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +195,7 @@
 				803850B72572645F00788927 /* LoginViewController.swift in Sources */,
 				803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */,
 				80385092257262D900788927 /* AppDelegate.swift in Sources */,
+				803850C92572703D00788927 /* TextFieldCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
