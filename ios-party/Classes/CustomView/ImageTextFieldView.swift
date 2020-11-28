@@ -41,6 +41,10 @@ class ImageTextFieldView: UIView {
         textField.isSecureTextEntry = isPasswordEntry
     }
     
+    func text() -> String {
+        return textField.text ?? ""
+    }
+    
     private func reset() {
         set(image: nil)
         set(text: "")

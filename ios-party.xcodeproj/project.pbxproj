@@ -16,6 +16,10 @@
 		803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850C22572693300788927 /* AppDelegate+Navigation.swift */; };
 		803850C92572703D00788927 /* ImageTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850C82572703D00788927 /* ImageTextFieldView.swift */; };
 		803850CC2572705600788927 /* ImageTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803850CB2572705600788927 /* ImageTextFieldView.xib */; };
+		803850DC2572845E00788927 /* LoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850DB2572845E00788927 /* LoginOperation.swift */; };
+		803850E12572891500788927 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850E02572891500788927 /* LoginDataModel.swift */; };
+		803850E52572892B00788927 /* LoginDataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850E42572892B00788927 /* LoginDataModelDelegate.swift */; };
+		803850E825728C6A00788927 /* LoginViewController+DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850E725728C6A00788927 /* LoginViewController+DataModelDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		803850C22572693300788927 /* AppDelegate+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Navigation.swift"; sourceTree = "<group>"; };
 		803850C82572703D00788927 /* ImageTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextFieldView.swift; sourceTree = "<group>"; };
 		803850CB2572705600788927 /* ImageTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTextFieldView.xib; sourceTree = "<group>"; };
+		803850DB2572845E00788927 /* LoginOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOperation.swift; sourceTree = "<group>"; };
+		803850E02572891500788927 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		803850E42572892B00788927 /* LoginDataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModelDelegate.swift; sourceTree = "<group>"; };
+		803850E725728C6A00788927 /* LoginViewController+DataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+DataModelDelegate.swift"; sourceTree = "<group>"; };
 		A51E9DEEF43285A5E2D432A9 /* Pods-ios-party.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-party.release.xcconfig"; path = "Target Support Files/Pods-ios-party/Pods-ios-party.release.xcconfig"; sourceTree = "<group>"; };
 		FA94321E29A9765E8385C0DE /* Pods_ios_party.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_party.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +87,7 @@
 			children = (
 				803850C12572691400788927 /* AppDelegate */,
 				803850C72572702000788927 /* CustomView */,
+				803850D82572836500788927 /* Operations */,
 				803850AB257263FF00788927 /* ViewControllers */,
 			);
 			path = Classes;
@@ -104,6 +113,8 @@
 		803850B32572645F00788927 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				803850DF2572890700788927 /* DataModel */,
+				803850E725728C6A00788927 /* LoginViewController+DataModelDelegate.swift */,
 				803850B52572645F00788927 /* LoginViewController.swift */,
 				803850B42572645F00788927 /* LoginViewController.xib */,
 			);
@@ -126,6 +137,39 @@
 				803850CB2572705600788927 /* ImageTextFieldView.xib */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		803850D82572836500788927 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				803850DA257283F300788927 /* ServerList */,
+				803850D9257283EB00788927 /* Login */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		803850D9257283EB00788927 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				803850DB2572845E00788927 /* LoginOperation.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		803850DA257283F300788927 /* ServerList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServerList;
+			sourceTree = "<group>";
+		};
+		803850DF2572890700788927 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				803850E02572891500788927 /* LoginDataModel.swift */,
+				803850E42572892B00788927 /* LoginDataModelDelegate.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		B0334DCA1B19732F1FFE984C /* Pods */ = {
@@ -261,9 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				803850B72572645F00788927 /* LoginViewController.swift in Sources */,
+				803850E12572891500788927 /* LoginDataModel.swift in Sources */,
 				803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */,
+				803850E52572892B00788927 /* LoginDataModelDelegate.swift in Sources */,
 				80385092257262D900788927 /* AppDelegate.swift in Sources */,
+				803850DC2572845E00788927 /* LoginOperation.swift in Sources */,
 				803850C92572703D00788927 /* ImageTextFieldView.swift in Sources */,
+				803850E825728C6A00788927 /* LoginViewController+DataModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
