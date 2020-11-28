@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ServerListTableViewCell" customModule="ios_party" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-6a-muk">
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-B8-AMC">
+                        <rect key="frame" x="220" y="0.0" width="100" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="LW5-kr-dKP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="X9M-B8-AMC" secondAttribute="bottom" id="3d5-RK-2fC"/>
+                    <constraint firstItem="QBI-6a-muk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Axe-he-MDe"/>
+                    <constraint firstAttribute="bottom" secondItem="QBI-6a-muk" secondAttribute="bottom" id="EjW-73-efL"/>
+                    <constraint firstItem="QBI-6a-muk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zfx-9l-IYL"/>
+                    <constraint firstAttribute="trailing" secondItem="X9M-B8-AMC" secondAttribute="trailing" id="gJ1-lT-NfF"/>
+                    <constraint firstItem="X9M-B8-AMC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ilM-6f-VK3"/>
+                    <constraint firstItem="X9M-B8-AMC" firstAttribute="leading" secondItem="QBI-6a-muk" secondAttribute="trailing" id="zJY-WQ-Dk6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="distanceLabel" destination="X9M-B8-AMC" id="YkD-gZ-bE7"/>
+                <outlet property="locationLabel" destination="QBI-6a-muk" id="Z92-TV-Gii"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="131"/>
+        </tableViewCell>
+    </objects>
+</document>

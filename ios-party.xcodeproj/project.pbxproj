@@ -21,6 +21,10 @@
 		803850E52572892B00788927 /* LoginDataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850E42572892B00788927 /* LoginDataModelDelegate.swift */; };
 		803850E825728C6A00788927 /* LoginViewController+DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850E725728C6A00788927 /* LoginViewController+DataModelDelegate.swift */; };
 		803850FB2572AF1900788927 /* AuthorizationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803850FA2572AF1900788927 /* AuthorizationRepository.swift */; };
+		803851052572B42C00788927 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851032572B42C00788927 /* ServerListViewController.swift */; };
+		803851062572B42C00788927 /* ServerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803851042572B42C00788927 /* ServerListViewController.xib */; };
+		803851132572B90300788927 /* ServerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851112572B90300788927 /* ServerListTableViewCell.swift */; };
+		803851142572B90300788927 /* ServerListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803851122572B90300788927 /* ServerListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		803850E42572892B00788927 /* LoginDataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModelDelegate.swift; sourceTree = "<group>"; };
 		803850E725728C6A00788927 /* LoginViewController+DataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+DataModelDelegate.swift"; sourceTree = "<group>"; };
 		803850FA2572AF1900788927 /* AuthorizationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRepository.swift; sourceTree = "<group>"; };
+		803851032572B42C00788927 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
+		803851042572B42C00788927 /* ServerListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListViewController.xib; sourceTree = "<group>"; };
+		803851112572B90300788927 /* ServerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListTableViewCell.swift; sourceTree = "<group>"; };
+		803851122572B90300788927 /* ServerListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListTableViewCell.xib; sourceTree = "<group>"; };
 		A51E9DEEF43285A5E2D432A9 /* Pods-ios-party.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-party.release.xcconfig"; path = "Target Support Files/Pods-ios-party/Pods-ios-party.release.xcconfig"; sourceTree = "<group>"; };
 		FA94321E29A9765E8385C0DE /* Pods_ios_party.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_party.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +116,7 @@
 		803850AB257263FF00788927 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				803851022572B3C200788927 /* ServerListViewController */,
 				803850B32572645F00788927 /* LoginViewController */,
 			);
 			path = ViewControllers;
@@ -191,6 +200,25 @@
 			path = AuthorizationRepository;
 			sourceTree = "<group>";
 		};
+		803851022572B3C200788927 /* ServerListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				803851092572B67600788927 /* Cells */,
+				803851032572B42C00788927 /* ServerListViewController.swift */,
+				803851042572B42C00788927 /* ServerListViewController.xib */,
+			);
+			path = ServerListViewController;
+			sourceTree = "<group>";
+		};
+		803851092572B67600788927 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				803851112572B90300788927 /* ServerListTableViewCell.swift */,
+				803851122572B90300788927 /* ServerListTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B0334DCA1B19732F1FFE984C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +298,8 @@
 				803850BD2572681100788927 /* LaunchScreen.storyboard in Resources */,
 				803850B62572645F00788927 /* LoginViewController.xib in Resources */,
 				8038509B257262D900788927 /* Assets.xcassets in Resources */,
+				803851062572B42C00788927 /* ServerListViewController.xib in Resources */,
+				803851142572B90300788927 /* ServerListTableViewCell.xib in Resources */,
 				803850CC2572705600788927 /* ImageTextFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,12 +354,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				803850B72572645F00788927 /* LoginViewController.swift in Sources */,
+				803851132572B90300788927 /* ServerListTableViewCell.swift in Sources */,
 				803850FB2572AF1900788927 /* AuthorizationRepository.swift in Sources */,
 				803850E12572891500788927 /* LoginDataModel.swift in Sources */,
 				803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */,
 				803850E52572892B00788927 /* LoginDataModelDelegate.swift in Sources */,
 				80385092257262D900788927 /* AppDelegate.swift in Sources */,
 				803850DC2572845E00788927 /* LoginOperation.swift in Sources */,
+				803851052572B42C00788927 /* ServerListViewController.swift in Sources */,
 				803850C92572703D00788927 /* ImageTextFieldView.swift in Sources */,
 				803850E825728C6A00788927 /* LoginViewController+DataModelDelegate.swift in Sources */,
 			);
