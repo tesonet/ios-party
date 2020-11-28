@@ -9,6 +9,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - Constants
+    private struct Constants {
+        static let usernamePlaceholder = "Username"
+        static let usernameImage = UIImage(named: "ico-username")
+        static let passwordPlaceholder = "Password"
+        static let passwordImage = UIImage(named: "ico-lock")
+        
+        static let loginButtonTitle = "Log in"
+    }
+    
     // MARK: - Declarations
     @IBOutlet private(set) weak var usernameTextField: ImageTextFieldView!
     @IBOutlet private(set) weak var passwordTextField: ImageTextFieldView!
@@ -26,10 +36,13 @@ class LoginViewController: UIViewController {
     }
     
     func setupUI() {
-        usernameTextField.setupUI(image: UIImage(named: "ico-username"), placeholder: "Username")
-        passwordTextField.setupUI(image: UIImage(named: "ico-lock"), placeholder: "Password", isPasswordEntry: true)
+        usernameTextField.setupUI(image: Constants.usernameImage,
+                                  placeholder: Constants.usernamePlaceholder)
+        passwordTextField.setupUI(image: Constants.passwordImage,
+                                  placeholder: Constants.passwordPlaceholder,
+                                  isPasswordEntry: true)
         
-        loginButton.setTitle("Log in", for: .normal)
+        loginButton.setTitle(Constants.loginButtonTitle, for: .normal)
     }
     
     @IBAction func onLoginButtonTap(_ sender: Any) {

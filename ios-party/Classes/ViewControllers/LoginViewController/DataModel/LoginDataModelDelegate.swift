@@ -11,5 +11,5 @@ protocol LoginDataModelDelegate {
     
     func didStartLoginOperation(dataModel: LoginDataModel)
     func didFinishLoginOperation(dataModel: LoginDataModel)
-    func didFailLoginOperation(dataModel: LoginDataModel)
+    func didFailLoginOperation(dataModel: LoginDataModel, message: String)
 }

@@ -44,7 +44,7 @@ class LoginDataModel {
     private func didFinishLoginOperation(responseData: Any) {
         guard let responseData = responseData as? [String: Any],
               let token = responseData["token"] as? String else {
-            self.delegate?.didFailLoginOperation(dataModel: self)
+            self.delegate?.didFailLoginOperation(dataModel: self, message: "Unknown error")
             return
         }
 
@@ -54,6 +54,6 @@ class LoginDataModel {
     
     private func didFailLoginOperation(error: AFError) {
         print("Login operation failed with error: \(error)")
-        self.delegate?.didFailLoginOperation(dataModel: self)
+        self.delegate?.didFailLoginOperation(dataModel: self, message: error.localizedDescription)
     }
 }
