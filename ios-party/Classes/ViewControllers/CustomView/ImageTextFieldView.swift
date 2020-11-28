@@ -1,5 +1,5 @@
 //
-//  TextFieldCustomView.swift
+//  ImageTextFieldView.swift
 //  ios-party
 //
 //  Created by Lukas on 11/28/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TextFieldCustomView: UIView {
+class ImageTextFieldView: UIView {
     
     // MARK: - Declarations
     @IBOutlet private(set) weak var contentView: UIView!
@@ -23,9 +23,9 @@ class TextFieldCustomView: UIView {
     }
     
     private func loadContentView() {
-        let bundle = Bundle(for: TextFieldCustomView.self)
+        let bundle = Bundle(for: ImageTextFieldView.self)
         
-        bundle.loadNibNamed("TextFieldCustomView", owner: self, options: nil)
+        bundle.loadNibNamed("ImageTextFieldView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

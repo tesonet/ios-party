@@ -28,7 +28,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-CC-95v">
                     <rect key="frame" x="60" y="296" width="255" height="220"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCX-lR-Bal" customClass="TextFieldCustomView" customModule="ios_party" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCX-lR-Bal" customClass="ImageTextFieldView" customModule="ios_party" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="10" width="255" height="60"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -40,7 +40,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-Rm-nWs" customClass="TextFieldCustomView" customModule="ios_party" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-Rm-nWs" customClass="ImageTextFieldView" customModule="ios_party" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="80" width="255" height="60"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>

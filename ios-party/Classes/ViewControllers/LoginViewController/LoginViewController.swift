@@ -9,8 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet private(set) weak var usernameTextField: TextFieldCustomView!
-    @IBOutlet private(set) weak var passwordTextField: TextFieldCustomView!
+    @IBOutlet private(set) weak var usernameTextField: ImageTextFieldView!
+    @IBOutlet private(set) weak var passwordTextField: ImageTextFieldView!
     @IBOutlet private(set) weak var loginButton: UIButton!
     
     // MARK: - Methods
