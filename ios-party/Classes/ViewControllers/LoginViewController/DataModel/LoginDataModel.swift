@@ -12,7 +12,10 @@ class LoginDataModel {
     
     // MARK: - Declarations
     private var delegate: LoginDataModelDelegate?
+    
+    // MARK: - Dependencies
     private let operation = LoginOperation()
+    private let authorizationRepository = AuthorizationRepository.shared
     
     // MARK: - Methods
     init(delegate: LoginDataModelDelegate) {
@@ -45,8 +48,7 @@ class LoginDataModel {
             return
         }
 
-        // FIXME: do something with token
-        
+        authorizationRepository.set(token: token)
         self.delegate?.didFinishLoginOperation(dataModel: self)
     }
     

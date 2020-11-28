@@ -5,5 +5,6 @@ target 'ios-party' do
   use_frameworks!
 
   pod 'Alamofire', '~> 5.4'
+  pod 'SwiftKeychainWrapper', '~> 4.0'
 
 end
