@@ -10,13 +10,15 @@ import Foundation
 
 class LoginOperation {
     
+    // MARK: - Constants
     struct Constants {
         static let url = "https://playground.tesonet.lt/v1/tokens"
         
         static let usernameKey = "username"
         static let passwordKey = "password"
     }
-
+    
+    // MARK: - Methods
     func request(with username: String, password: String) -> DataRequest {
         let credentials = requestCredentials(with: username, password: password)
         
@@ -25,6 +27,15 @@ class LoginOperation {
                           parameters: credentials,
                           encoding: JSONEncoding.default)
             .validate(statusCode: 200..<300)
+    }
+    
+    func parseAccessToken(response: Any) -> String? {
+        guard let responseData = response as? [String: Any],
+              let token = responseData["token"] as? String else {
+            return nil
+        }
+        
+        return token
     }
     
     private func requestCredentials(with username: String, password: String) -> [String: Any] {

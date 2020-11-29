@@ -53,22 +53,17 @@ class LoginDataModel {
     
     // MARK: - Helpers
     private func didFinishLoginOperation(responseData: Any) {
-        guard let responseData = responseData as? [String: Any],
-              let token = responseData["token"] as? String else {
-            delegate?.didFailLoginOperation(dataModel: self, message: "Unknown error")
+        guard let token = operation.parseAccessToken(response: responseData) else {
+            print("could not parse token!")
             return
         }
         
-        storeToken(token)
+        authorizationRepository.set(token: token)
         delegate?.didFinishLoginOperation(dataModel: self)
     }
     
-    private func storeToken(_ token: String) {
-        authorizationRepository.set(token: token)
-    }
-    
     private func didFailLoginOperation(error: AFError) {
-        print("Login operation failed with error: \(error)")
+        print("login operation failed with error: \(error)")
         delegate?.didFailLoginOperation(dataModel: self, message: error.localizedDescription)
     }
 }
