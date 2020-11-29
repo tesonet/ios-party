@@ -18,11 +18,13 @@ class ServerListTableViewCell: UITableViewCell {
 
     func populate() {
         reset()
+        
+        locationLabel.text = "location"
+        distanceLabel.text = "distance"
     }
     
     func reset() {
         locationLabel.text = nil
         distanceLabel.text = nil
     }
-    
 }

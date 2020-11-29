@@ -25,6 +25,11 @@
 		803851062572B42C00788927 /* ServerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803851042572B42C00788927 /* ServerListViewController.xib */; };
 		803851132572B90300788927 /* ServerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851112572B90300788927 /* ServerListTableViewCell.swift */; };
 		803851142572B90300788927 /* ServerListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803851122572B90300788927 /* ServerListTableViewCell.xib */; };
+		803851562572CD3200788927 /* UITableView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851552572CD3200788927 /* UITableView+Helpers.swift */; };
+		803851772573941400788927 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851752573941400788927 /* HeaderTableViewCell.swift */; };
+		803851782573941400788927 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803851762573941400788927 /* HeaderTableViewCell.xib */; };
+		8038517C2573A07B00788927 /* ServerListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038517B2573A07B00788927 /* ServerListOperation.swift */; };
+		803851812573A29900788927 /* ServerListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851802573A29900788927 /* ServerListDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		803851042572B42C00788927 /* ServerListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListViewController.xib; sourceTree = "<group>"; };
 		803851112572B90300788927 /* ServerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListTableViewCell.swift; sourceTree = "<group>"; };
 		803851122572B90300788927 /* ServerListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListTableViewCell.xib; sourceTree = "<group>"; };
+		803851552572CD3200788927 /* UITableView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Helpers.swift"; sourceTree = "<group>"; };
+		803851752573941400788927 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		803851762573941400788927 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		8038517B2573A07B00788927 /* ServerListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListOperation.swift; sourceTree = "<group>"; };
+		803851802573A29900788927 /* ServerListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModel.swift; sourceTree = "<group>"; };
 		A51E9DEEF43285A5E2D432A9 /* Pods-ios-party.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-party.release.xcconfig"; path = "Target Support Files/Pods-ios-party/Pods-ios-party.release.xcconfig"; sourceTree = "<group>"; };
 		FA94321E29A9765E8385C0DE /* Pods_ios_party.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_party.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +105,7 @@
 		803850A9257263BF00788927 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				803851542572CD1F00788927 /* Tools */,
 				803850C12572691400788927 /* AppDelegate */,
 				803850C72572702000788927 /* CustomView */,
 				803850D82572836500788927 /* Operations */,
@@ -171,6 +182,7 @@
 		803850DA257283F300788927 /* ServerList */ = {
 			isa = PBXGroup;
 			children = (
+				8038517B2573A07B00788927 /* ServerListOperation.swift */,
 			);
 			path = ServerList;
 			sourceTree = "<group>";
@@ -203,6 +215,7 @@
 		803851022572B3C200788927 /* ServerListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8038517E2573A24000788927 /* DataModel */,
 				803851092572B67600788927 /* Cells */,
 				803851032572B42C00788927 /* ServerListViewController.swift */,
 				803851042572B42C00788927 /* ServerListViewController.xib */,
@@ -213,10 +226,44 @@
 		803851092572B67600788927 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				80385174257393FA00788927 /* Header */,
+				8038517F2573A25600788927 /* ServerList */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		803851542572CD1F00788927 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				803851552572CD3200788927 /* UITableView+Helpers.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		80385174257393FA00788927 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				803851752573941400788927 /* HeaderTableViewCell.swift */,
+				803851762573941400788927 /* HeaderTableViewCell.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		8038517E2573A24000788927 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				803851802573A29900788927 /* ServerListDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		8038517F2573A25600788927 /* ServerList */ = {
+			isa = PBXGroup;
+			children = (
 				803851112572B90300788927 /* ServerListTableViewCell.swift */,
 				803851122572B90300788927 /* ServerListTableViewCell.xib */,
 			);
-			path = Cells;
+			path = ServerList;
 			sourceTree = "<group>";
 		};
 		B0334DCA1B19732F1FFE984C /* Pods */ = {
@@ -296,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				803850BD2572681100788927 /* LaunchScreen.storyboard in Resources */,
+				803851782573941400788927 /* HeaderTableViewCell.xib in Resources */,
 				803850B62572645F00788927 /* LoginViewController.xib in Resources */,
 				8038509B257262D900788927 /* Assets.xcassets in Resources */,
 				803851062572B42C00788927 /* ServerListViewController.xib in Resources */,
@@ -354,13 +402,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				803850B72572645F00788927 /* LoginViewController.swift in Sources */,
+				803851562572CD3200788927 /* UITableView+Helpers.swift in Sources */,
 				803851132572B90300788927 /* ServerListTableViewCell.swift in Sources */,
 				803850FB2572AF1900788927 /* AuthorizationRepository.swift in Sources */,
 				803850E12572891500788927 /* LoginDataModel.swift in Sources */,
 				803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */,
+				803851812573A29900788927 /* ServerListDataModel.swift in Sources */,
 				803850E52572892B00788927 /* LoginDataModelDelegate.swift in Sources */,
+				803851772573941400788927 /* HeaderTableViewCell.swift in Sources */,
 				80385092257262D900788927 /* AppDelegate.swift in Sources */,
 				803850DC2572845E00788927 /* LoginOperation.swift in Sources */,
+				8038517C2573A07B00788927 /* ServerListOperation.swift in Sources */,
 				803851052572B42C00788927 /* ServerListViewController.swift in Sources */,
 				803850C92572703D00788927 /* ImageTextFieldView.swift in Sources */,
 				803850E825728C6A00788927 /* LoginViewController+DataModelDelegate.swift in Sources */,

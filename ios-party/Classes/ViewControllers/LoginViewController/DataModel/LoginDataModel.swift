@@ -28,14 +28,12 @@ class LoginDataModel {
 
         let request: DataRequest = operation.request(with: username, password: password)
         request.responseJSON { [weak self] response in
-            guard let self = self else { return }
-
             switch response.result {
             case .success(let data):
-                self.didFinishLoginOperation(responseData: data)
+                self?.didFinishLoginOperation(responseData: data)
 
             case .failure(let error):
-                self.didFailLoginOperation(error: error)
+                self?.didFailLoginOperation(error: error)
             }
         }
     }
