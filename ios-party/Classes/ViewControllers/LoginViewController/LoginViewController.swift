@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoadingIndicator {
 
     // MARK: - Constants
     private struct Constants {
@@ -25,6 +25,11 @@ class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var loginButton: UIButton!
     
     private var dataModel: LoginDataModel!
+    
+    var loadingIndicatorView: UIActivityIndicatorView?
+    var viewToDisplayIndicator: UIView {
+        return super.view
+    }
     
     // MARK: - Methods
     override func viewDidLoad() {

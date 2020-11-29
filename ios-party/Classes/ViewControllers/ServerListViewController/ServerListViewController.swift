@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServerListViewController: UIViewController {
+class ServerListViewController: UIViewController, LoadingIndicator {
 
     // MARK: - Constants
     struct Constants {
@@ -15,10 +15,16 @@ class ServerListViewController: UIViewController {
         static let distanceHeaderTitle = "DISTANCE"
         
         static let tableViewHeaderHight: CGFloat = 60
+        static let tableViewSeperatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     // MARK: - Declarations
     internal var dataModel: ServerListDataModel!
+    
+    var loadingIndicatorView: UIActivityIndicatorView?
+    var viewToDisplayIndicator: UIView {
+        return super.view
+    }
     
     // MARK: - Declarations
     @IBOutlet var tableView: UITableView!
@@ -32,7 +38,7 @@ class ServerListViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20) // FIXME: looks strange
+        tableView.separatorInset = Constants.tableViewSeperatorInset
         
         tableView.registerCellNib(withType: HeaderTableViewCell.self)
         tableView.registerCellNib(withType: ServerListTableViewCell.self)

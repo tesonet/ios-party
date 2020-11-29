@@ -6,5 +6,6 @@ target 'ios-party' do
 
   pod 'Alamofire', '~> 5.4'
   pod 'SwiftKeychainWrapper', '~> 4.0'
+  pod 'PureLayout', '~> 3.0'
 
 end

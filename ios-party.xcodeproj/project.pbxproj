@@ -35,6 +35,8 @@
 		803851912573AA3700788927 /* ServerListDataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851902573AA3700788927 /* ServerListDataModelDelegate.swift */; };
 		803851942573AADB00788927 /* ServerListViewController+DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851932573AADB00788927 /* ServerListViewController+DataModelDelegate.swift */; };
 		8038519E2573E45E00788927 /* ServerLisitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038519D2573E45E00788927 /* ServerLisitRepository.swift */; };
+		803851A32573EA1F00788927 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851A22573EA1F00788927 /* AlertControllerFactory.swift */; };
+		803851AE2573F21700788927 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851AD2573F21700788927 /* LoadingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		803851902573AA3700788927 /* ServerListDataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModelDelegate.swift; sourceTree = "<group>"; };
 		803851932573AADB00788927 /* ServerListViewController+DataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListViewController+DataModelDelegate.swift"; sourceTree = "<group>"; };
 		8038519D2573E45E00788927 /* ServerLisitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLisitRepository.swift; sourceTree = "<group>"; };
+		803851A22573EA1F00788927 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
+		803851AD2573F21700788927 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		A51E9DEEF43285A5E2D432A9 /* Pods-ios-party.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-party.release.xcconfig"; path = "Target Support Files/Pods-ios-party/Pods-ios-party.release.xcconfig"; sourceTree = "<group>"; };
 		FA94321E29A9765E8385C0DE /* Pods_ios_party.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_party.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,8 +119,9 @@
 		803850A9257263BF00788927 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				803851542572CD1F00788927 /* Tools */,
 				803850C12572691400788927 /* AppDelegate */,
+				803851AB2573EE5500788927 /* Factory */,
+				803851542572CD1F00788927 /* Tools */,
 				803850C72572702000788927 /* CustomView */,
 				803850D82572836500788927 /* Operations */,
 				803850F82572AEC800788927 /* Repositories */,
@@ -250,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				803851552572CD3200788927 /* UITableView+Helpers.swift */,
+				803851AD2573F21700788927 /* LoadingIndicator.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -295,6 +301,14 @@
 				8038519D2573E45E00788927 /* ServerLisitRepository.swift */,
 			);
 			path = Servers;
+			sourceTree = "<group>";
+		};
+		803851AB2573EE5500788927 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				803851A22573EA1F00788927 /* AlertControllerFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		B0334DCA1B19732F1FFE984C /* Pods */ = {
@@ -432,6 +446,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803851AE2573F21700788927 /* LoadingIndicator.swift in Sources */,
+				803851A32573EA1F00788927 /* AlertControllerFactory.swift in Sources */,
 				803850B72572645F00788927 /* LoginViewController.swift in Sources */,
 				803851562572CD3200788927 /* UITableView+Helpers.swift in Sources */,
 				8038519E2573E45E00788927 /* ServerLisitRepository.swift in Sources */,

@@ -10,19 +10,17 @@ import UIKit
 extension LoginViewController: LoginDataModelDelegate {
     
     func didStartLoginOperation(dataModel: LoginDataModel) {
-        // FIXME: activity indicator
+        showLoading()
     }
     
     func didFinishLoginOperation(dataModel: LoginDataModel) {
+        hideLoading()
         AppDelegate.shared.logedInViewController()
     }
     
     func didFailLoginOperation(dataModel: LoginDataModel, message: String) {
-        let alert = UIAlertController(title: "Ooops", message: message, preferredStyle: .alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        alert.addAction(cancelAction)
-        
-        self.present(alert, animated: true) // FIXME: move to dedicated place
+        hideLoading()
+        let alert = AlertControllerFactory.showAlert(title: "Login Failed!", message: message)
+        present(alert, animated: true)
     }
 }

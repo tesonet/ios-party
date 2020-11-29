@@ -40,7 +40,6 @@ class ServerListDataModel {
     }
     
     private func didFinishServerLoad(data: Any) {
-        // FIXME: check for thread!
         guard let dictList = data as? [[String: Any]] else {
             delegate?.didFailServerListLoadOperation(dataModel: self)
             print("could not found server dictionary")
