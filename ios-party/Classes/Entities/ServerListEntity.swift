@@ -7,7 +7,8 @@
 
 import Foundation
 
-class ServerListEntity {
+class ServerListEntity: Equatable {
+    
     let name: String
     let distance: Int
     
@@ -31,5 +32,10 @@ class ServerListEntity {
         }
         
         return serverList
+    }
+    
+    // MARK: - Equatable
+    static func == (lhs: ServerListEntity, rhs: ServerListEntity) -> Bool {
+        return lhs.name == rhs.name && lhs.distance == rhs.distance
     }
 }

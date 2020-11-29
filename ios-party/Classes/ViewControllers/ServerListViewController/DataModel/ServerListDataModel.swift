@@ -16,6 +16,7 @@ class ServerListDataModel {
     
     // MARK: - Dependencies
     private let operation = ServerListOperation()
+    private let serverListRepository = ServerListRepository.shared
     
     // MARK: - Methods
     init(delegate: ServerListDataModelDelegate) {
@@ -46,9 +47,15 @@ class ServerListDataModel {
             return
         }
         
-        serverList = ServerListEntity.listFrom(dictList: dictList)
+        let serverList = ServerListEntity.listFrom(dictList: dictList)
+        storeServerList(serverList)
         
         delegate?.didFinishServerListLoadOperation(dataModel: self)
+    }
+    
+    private func storeServerList(_ serverList: [ServerListEntity]) {
+        self.serverList = serverList
+        serverListRepository.setServerList(serverList)
     }
     
     private func didFailServerLoad(error: AFError) {

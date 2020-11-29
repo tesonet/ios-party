@@ -42,16 +42,20 @@ class LoginDataModel {
     private func didFinishLoginOperation(responseData: Any) {
         guard let responseData = responseData as? [String: Any],
               let token = responseData["token"] as? String else {
-            self.delegate?.didFailLoginOperation(dataModel: self, message: "Unknown error")
+            delegate?.didFailLoginOperation(dataModel: self, message: "Unknown error")
             return
         }
-
-        authorizationRepository.set(token: token) // FIXME: think of moving this out of dataModel
-        self.delegate?.didFinishLoginOperation(dataModel: self)
+        
+        storeToken(token)
+        delegate?.didFinishLoginOperation(dataModel: self)
+    }
+    
+    private func storeToken(_ token: String) {
+        authorizationRepository.set(token: token)
     }
     
     private func didFailLoginOperation(error: AFError) {
         print("Login operation failed with error: \(error)")
-        self.delegate?.didFailLoginOperation(dataModel: self, message: error.localizedDescription)
+        delegate?.didFailLoginOperation(dataModel: self, message: error.localizedDescription)
     }
 }

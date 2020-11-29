@@ -29,7 +29,7 @@ class ServerListTableViewCell: UITableViewCell {
         distanceLabel.text = "\(server.distance) km"
     }
     
-    func reset() {
+    private func reset() {
         locationLabel.text = nil
         distanceLabel.text = nil
     }
