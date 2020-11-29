@@ -9,6 +9,7 @@ import UIKit
 
 extension UITableView {
     
+    // MARK: - Methods
     public func registerCellNib<T: UITableViewCell>(withType type: T.Type) {
     
         let identifier = stringFromClass(type)
@@ -23,6 +24,11 @@ extension UITableView {
         return cell
     }
     
+    func hideEmptyTableViewCells() {
+        self.tableFooterView = UIView()
+    }
+    
+    // MARK: - Helpers
     private func stringFromClass(_ aClass: AnyClass) -> String {
         guard let className: String = NSStringFromClass(aClass).components(separatedBy: ".").last else {
             print("ERROR! could not get class name from class: \(aClass)")
@@ -30,9 +36,5 @@ extension UITableView {
         }
         
         return className
-    }
-    
-    func hideEmptyTableViewCells() {
-        self.tableFooterView = UIView()
     }
 }

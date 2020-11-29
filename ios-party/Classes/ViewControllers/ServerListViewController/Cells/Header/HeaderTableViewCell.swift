@@ -9,9 +9,11 @@ import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
 
+    // MARK: - Declarations
     @IBOutlet private weak var serverLabel: UILabel!
     @IBOutlet private weak var distanceLabel: UILabel!
     
+    // MARK: - Methods
     func populate(serverTitle: String, distanceTitle: String) {
         reset()
         
@@ -19,7 +21,8 @@ class HeaderTableViewCell: UITableViewCell {
         self.distanceLabel.text = distanceTitle
     }
     
-    func reset() {
+    // MARK: - Helpers
+    private func reset() {
         serverLabel.text = nil
         distanceLabel.text = nil
     }

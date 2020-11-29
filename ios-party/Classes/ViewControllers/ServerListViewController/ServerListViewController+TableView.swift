@@ -17,11 +17,13 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell: ServerListTableViewCell =
             tableView.dequeueReusableCellWithClass(ServerListTableViewCell.self) as? ServerListTableViewCell else {
-            print("WARNING! Could not dequeue `ServerListTableViewCell` from table view.")
+            print("could not dequeue `ServerListTableViewCell` from table view.")
             return UITableViewCell()
         }
         
-        let server = dataModel.serverList[indexPath.row]
+        guard let server = dataModel.serverList[safe: indexPath.row] else {
+            return UITableViewCell()
+        }
         
         cell.populate(with: server)
         return cell

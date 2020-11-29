@@ -16,6 +16,8 @@ class LoginOperation {
         
         static let usernameKey = "username"
         static let passwordKey = "password"
+        
+        static let responseTokenKey = "token"
     }
     
     // MARK: - Methods
@@ -31,7 +33,7 @@ class LoginOperation {
     
     func parseAccessToken(response: Any) -> String? {
         guard let responseData = response as? [String: Any],
-              let token = responseData["token"] as? String else {
+              let token = responseData[Constants.responseTokenKey] as? String else {
             return nil
         }
         

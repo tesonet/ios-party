@@ -15,6 +15,7 @@ class ServerListOperation {
         static let backendURL = "https://playground.tesonet.lt/v1/servers"
     }
     
+    // MARK: - Dependencies
     private let authorizationRepository = AuthorizationRepository.shared
     
     // MARK: - Methods
