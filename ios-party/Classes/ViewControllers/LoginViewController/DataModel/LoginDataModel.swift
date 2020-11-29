@@ -46,7 +46,7 @@ class LoginDataModel {
             return
         }
 
-        authorizationRepository.set(token: token)
+        authorizationRepository.set(token: token) // FIXME: think of moving this out of dataModel
         self.delegate?.didFinishLoginOperation(dataModel: self)
     }
     
