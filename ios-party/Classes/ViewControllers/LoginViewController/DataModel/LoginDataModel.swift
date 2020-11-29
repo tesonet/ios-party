@@ -33,7 +33,20 @@ class LoginDataModel {
                 self?.didFinishLoginOperation(responseData: data)
 
             case .failure(let error):
+                // 1. one of option how to handle 401
+                guard response.response?.statusCode == 401 else {
+                    self?.didFailLoginOperation(error: error)
+                    return
+                }
+                
+                // Handle 401
                 self?.didFailLoginOperation(error: error)
+                
+                // We also could in LoginOperation.request remove validation of 200..<300
+                // in that case if we get something from server, response is valid and response.result = .success(_)
+                // Do validation on ourselves:
+                // * check for valid ex: 200..<300,
+                // * check for special ones ex: 401 ... etc
             }
         }
     }
