@@ -30,6 +30,7 @@
 		803851782573941400788927 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803851762573941400788927 /* HeaderTableViewCell.xib */; };
 		8038517C2573A07B00788927 /* ServerListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038517B2573A07B00788927 /* ServerListOperation.swift */; };
 		803851812573A29900788927 /* ServerListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851802573A29900788927 /* ServerListDataModel.swift */; };
+		803851852573A44300788927 /* ServerListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851842573A44300788927 /* ServerListViewController+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		803851762573941400788927 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		8038517B2573A07B00788927 /* ServerListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListOperation.swift; sourceTree = "<group>"; };
 		803851802573A29900788927 /* ServerListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModel.swift; sourceTree = "<group>"; };
+		803851842573A44300788927 /* ServerListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListViewController+TableView.swift"; sourceTree = "<group>"; };
 		A51E9DEEF43285A5E2D432A9 /* Pods-ios-party.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-party.release.xcconfig"; path = "Target Support Files/Pods-ios-party/Pods-ios-party.release.xcconfig"; sourceTree = "<group>"; };
 		FA94321E29A9765E8385C0DE /* Pods_ios_party.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_party.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 			children = (
 				8038517E2573A24000788927 /* DataModel */,
 				803851092572B67600788927 /* Cells */,
+				803851842573A44300788927 /* ServerListViewController+TableView.swift */,
 				803851032572B42C00788927 /* ServerListViewController.swift */,
 				803851042572B42C00788927 /* ServerListViewController.xib */,
 			);
@@ -404,6 +407,7 @@
 				803850B72572645F00788927 /* LoginViewController.swift in Sources */,
 				803851562572CD3200788927 /* UITableView+Helpers.swift in Sources */,
 				803851132572B90300788927 /* ServerListTableViewCell.swift in Sources */,
+				803851852573A44300788927 /* ServerListViewController+TableView.swift in Sources */,
 				803850FB2572AF1900788927 /* AuthorizationRepository.swift in Sources */,
 				803850E12572891500788927 /* LoginDataModel.swift in Sources */,
 				803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */,

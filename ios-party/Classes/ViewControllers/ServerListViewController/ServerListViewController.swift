@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServerListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ServerListViewController: UIViewController {
 
     // MARK: - Constants
     struct Constants {
@@ -27,31 +27,6 @@ class ServerListViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.registerCellNib(withType: HeaderTableViewCell.self)
         tableView.registerCellNib(withType: ServerListTableViewCell.self)
         tableView.hideEmptyTableViewCells()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell: ServerListTableViewCell =
-            tableView.dequeueReusableCellWithClass(ServerListTableViewCell.self) as? ServerListTableViewCell else {
-            print("WARNING! Could not dequeue `ServerListTableViewCell` from table view.")
-            return UITableViewCell()
-        }
-        
-        cell.populate()
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let cell = tableView.dequeueReusableCellWithClass(HeaderTableViewCell.self) as? HeaderTableViewCell else {
-            return nil
-        }
-        
-        cell.populate(serverTitle: Constants.serverHeaderTitle, distanceTitle: Constants.distanceHeaderTitle)
-        return cell
     }
     
     // MARK: - IBActions
