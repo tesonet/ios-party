@@ -54,6 +54,7 @@ class LoginDataModel {
     // MARK: - Helpers
     private func didFinishLoginOperation(responseData: Any) {
         guard let token = operation.parseAccessToken(response: responseData) else {
+            delegate?.didFailLoginOperation(dataModel: self, message: "Something wrong happened!")
             print("could not parse token!")
             return
         }

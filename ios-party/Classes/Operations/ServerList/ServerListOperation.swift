@@ -29,4 +29,12 @@ class ServerListOperation {
                           headers: ["Authorization": "Bearer \(token)"])
             .validate(statusCode: 200..<300)
     }
+    
+    func parseServerList(response: Any) -> [ServerListEntity]? {
+        guard let dictList = response as? [[String: Any]] else {
+            return nil
+        }
+        
+        return ServerListEntity.listFrom(dictList: dictList)
+    }
 }

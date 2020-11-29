@@ -20,6 +20,7 @@ extension LoginViewController: LoginDataModelDelegate {
     
     func didFailLoginOperation(dataModel: LoginDataModel, message: String) {
         hideLoading()
+        
         let alert = AlertControllerFactory.showAlert(title: "Login Failed!", message: message)
         present(alert, animated: true)
     }

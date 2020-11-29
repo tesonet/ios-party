@@ -40,15 +40,13 @@ class ServerListDataModel {
     }
     
     private func didFinishServerLoad(data: Any) {
-        guard let dictList = data as? [[String: Any]] else {
+        guard let serverList = operation.parseServerList(response: data) else {
             delegate?.didFailServerListLoadOperation(dataModel: self)
-            print("could not found server dictionary")
+            print("could not parse response data!")
             return
         }
         
-        let serverList = ServerListEntity.listFrom(dictList: dictList)
         storeServerList(serverList)
-        
         delegate?.didFinishServerListLoadOperation(dataModel: self)
     }
     
@@ -58,7 +56,7 @@ class ServerListDataModel {
     }
     
     private func didFailServerLoad(error: AFError) {
-        print("fail to load servers!")
+        print("fail to load server list!")
         delegate?.didFailServerListLoadOperation(dataModel: self)
     }
     
