@@ -51,30 +51,59 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-LF-7Bq">
-                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="732"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="e6P-Wn-i0e"/>
                         <outlet property="delegate" destination="-1" id="OcM-1j-BBg"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STv-D8-OA9" userLabel="BottomView">
+                    <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz9-lk-Dr4">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Sort" image="ico-sort-light">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onSortButtonTap:" destination="-1" eventType="touchUpInside" id="E4s-lG-cjT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="fz9-lk-Dr4" secondAttribute="bottom" id="8dZ-In-Df0"/>
+                        <constraint firstItem="fz9-lk-Dr4" firstAttribute="top" secondItem="STv-D8-OA9" secondAttribute="top" id="Mhd-CX-198"/>
+                        <constraint firstItem="fz9-lk-Dr4" firstAttribute="leading" secondItem="STv-D8-OA9" secondAttribute="leading" id="YJ7-k0-0Ro"/>
+                        <constraint firstAttribute="height" constant="60" id="fcR-Mc-ol1"/>
+                        <constraint firstAttribute="trailing" secondItem="fz9-lk-Dr4" secondAttribute="trailing" id="mC8-Hs-c9z"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray4Color"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="3cH-LF-7Bq" secondAttribute="bottom" id="0Xp-1h-oPM"/>
                 <constraint firstItem="3cH-LF-7Bq" firstAttribute="top" secondItem="k6G-2l-twa" secondAttribute="bottom" id="3AY-gu-QyY"/>
                 <constraint firstItem="k6G-2l-twa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7PB-jp-UJv"/>
+                <constraint firstItem="STv-D8-OA9" firstAttribute="top" secondItem="3cH-LF-7Bq" secondAttribute="bottom" id="8Zd-I2-IAB"/>
+                <constraint firstItem="STv-D8-OA9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ae7-gQ-QRb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k6G-2l-twa" secondAttribute="trailing" id="IbT-um-uSK"/>
                 <constraint firstItem="k6G-2l-twa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WZq-hp-N0J"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3cH-LF-7Bq" secondAttribute="trailing" id="Yqf-hC-DaT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="STv-D8-OA9" secondAttribute="trailing" id="b8h-pl-erG"/>
                 <constraint firstItem="3cH-LF-7Bq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fLH-a7-diR"/>
+                <constraint firstAttribute="bottom" secondItem="STv-D8-OA9" secondAttribute="bottom" id="sul-QJ-xad"/>
             </constraints>
-            <point key="canvasLocation" x="88" y="97"/>
+            <point key="canvasLocation" x="86.956521739130437" y="96.428571428571431"/>
         </view>
     </objects>
     <resources>
         <image name="ico-logout" width="29.5" height="29.5"/>
+        <image name="ico-sort-light" width="12" height="10"/>
         <image name="logo-dark" width="130" height="34"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

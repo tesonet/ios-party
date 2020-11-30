@@ -49,4 +49,29 @@ class ServerListViewController: UIViewController, LoadingIndicator {
     @IBAction func onLogoutButtonTap(_ sender: Any) {
         
     }
+    
+    @IBAction func onSortButtonTap(_ sender: Any) {
+        showSortOptions()
+    }
+    
+    private func showSortOptions() {
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let sortByDistance = UIAlertAction(title: "By Distance", style: .default) { [weak self] action in
+            self?.dataModel.set(sortType: .byDistance)
+        }
+        
+        let sortByAlphanumeric = UIAlertAction(title: "Alphanumerical", style: .default) { [weak self] action in
+            self?.dataModel.set(sortType: .byAlphanumeric)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(sortByDistance)
+        alert.addAction(sortByAlphanumeric)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+    }
 }

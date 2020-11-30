@@ -38,6 +38,7 @@
 		803851A32573EA1F00788927 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851A22573EA1F00788927 /* AlertControllerFactory.swift */; };
 		803851AE2573F21700788927 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803851AD2573F21700788927 /* LoadingIndicator.swift */; };
 		804BA72B25741D4100EFFD26 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804BA72A25741D4100EFFD26 /* Collection+Safe.swift */; };
+		804BA88B257553B000EFFD26 /* ServerListEntity+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804BA88A257553AF00EFFD26 /* ServerListEntity+Sort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		803851A22573EA1F00788927 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		803851AD2573F21700788927 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		804BA72A25741D4100EFFD26 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		804BA88A257553AF00EFFD26 /* ServerListEntity+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListEntity+Sort.swift"; sourceTree = "<group>"; };
 		A51E9DEEF43285A5E2D432A9 /* Pods-ios-party.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-party.release.xcconfig"; path = "Target Support Files/Pods-ios-party/Pods-ios-party.release.xcconfig"; sourceTree = "<group>"; };
 		FA94321E29A9765E8385C0DE /* Pods_ios_party.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_party.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				8038518D2573A58C00788927 /* ServerListEntity.swift */,
+				804BA88A257553AF00EFFD26 /* ServerListEntity+Sort.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				803851132572B90300788927 /* ServerListTableViewCell.swift in Sources */,
 				803851852573A44300788927 /* ServerListViewController+TableView.swift in Sources */,
 				803851942573AADB00788927 /* ServerListViewController+DataModelDelegate.swift in Sources */,
+				804BA88B257553B000EFFD26 /* ServerListEntity+Sort.swift in Sources */,
 				803850FB2572AF1900788927 /* AuthorizationRepository.swift in Sources */,
 				803850E12572891500788927 /* LoginDataModel.swift in Sources */,
 				803850C32572693300788927 /* AppDelegate+Navigation.swift in Sources */,

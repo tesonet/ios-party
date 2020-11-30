@@ -10,7 +10,7 @@ import UIKit
 extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataModel.serverList.count
+        return dataModel.serverList().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -21,7 +21,7 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        guard let server = dataModel.serverList[safe: indexPath.row] else {
+        guard let server = dataModel.serverList()[safe: indexPath.row] else {
             return UITableViewCell()
         }
         

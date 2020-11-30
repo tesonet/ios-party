@@ -12,4 +12,6 @@ protocol ServerListDataModelDelegate {
     func didStartServerListLoadOperation(dataModel: ServerListDataModel)
     func didFinishServerListLoadOperation(dataModel: ServerListDataModel)
     func didFailServerListLoadOperation(dataModel: ServerListDataModel)
+    
+    func didUpdateServerListBySort(dataModel: ServerListDataModel)
 }

@@ -25,4 +25,8 @@ extension ServerListViewController: ServerListDataModelDelegate {
         let warning = AlertControllerFactory.showGenericAlert()
         present(warning, animated: true)
     }
+    
+    func didUpdateServerListBySort(dataModel: ServerListDataModel) {
+        tableView.reloadData()
+    }
 }
