@@ -56,21 +56,9 @@ class ServerListViewController: UIViewController, LoadingIndicator {
     
     private func showSortOptions() {
         
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let sortByDistance = UIAlertAction(title: "By Distance", style: .default) { [weak self] action in
-            self?.dataModel.set(sortType: .byDistance)
+        let alert = AlertControllerFactory.sortAlertController { [weak self] sortType in
+            self?.dataModel.set(sortType: sortType)
         }
-        
-        let sortByAlphanumeric = UIAlertAction(title: "Alphanumerical", style: .default) { [weak self] action in
-            self?.dataModel.set(sortType: .byAlphanumeric)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        alert.addAction(sortByDistance)
-        alert.addAction(sortByAlphanumeric)
-        alert.addAction(cancelAction)
         
         present(alert, animated: true)
     }

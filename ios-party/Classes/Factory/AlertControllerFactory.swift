@@ -10,10 +10,16 @@ import UIKit
 class AlertControllerFactory {
     
     // MARK: - Constants
-    private struct Constants {
+    struct Constants {
         static let genericTitle = "Oops"
         static let genericMessage = "Something went wrong!"
         static let genericOkButtonTitle = "OK"
+        static let genericCancel = "Cancel"
+        
+        struct Sort {
+            static let byDistanceTitle = "By Distance"
+            static let byAlphanumericTitle = "Alphanumerical"
+        }
     }
     
     // MARK: - Methods
