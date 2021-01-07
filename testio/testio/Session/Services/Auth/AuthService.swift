@@ -7,10 +7,14 @@ class AuthService {
     
     private let sessionContext: SessionContext
     
+    
+    // MARK: - Init
     init(sessionContext: SessionContext) {
         self.sessionContext = sessionContext
     }
     
+    
+    // MARK: - Public
     func login(with username: String,
                password: String) -> Promise<AuthResponse> {
         return Promise { seal in
@@ -19,8 +23,8 @@ class AuthService {
                 .validate()
                 .responseJsonData(seal: seal) { jsonData in
                     
-                    let decoder = JSONDecoder()
-                    let response = try decoder.decode(AuthResponse.self, from: jsonData)
+                    let response = try TestioJSONDecoder.decoder.decode(AuthResponse.self,
+                                                                        from: jsonData)
                     return response
             }
         }

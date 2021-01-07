@@ -16,6 +16,8 @@ class ServersRepo {
         return container
     }()
     
+    
+    // MARK: - Public
     func storeServers(_ servers: [Server]) {
         
         let context = persistentContainer.viewContext
@@ -56,6 +58,7 @@ class ServersRepo {
 }
 
 
+// MARK: - Private
 private extension ServersRepo {
     
     var context: NSManagedObjectContext {

@@ -9,14 +9,17 @@ class SessionViewController: UIViewController {
     
     var sessionContext: SessionContext!
     
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        screenFactory = createScreenFactory(with: sessionContext)
+        screenFactory = makeScreenFactory(with: sessionContext)
         setup()
     }
 }
 
 
+// MARK: - LoginViewControllerDelegate
 extension SessionViewController: LoginViewControllerDelegate {
     
     func loginViewControllerDidLogin(_ loginViewController: LoginViewController) {
@@ -25,6 +28,7 @@ extension SessionViewController: LoginViewControllerDelegate {
 }
 
 
+// MARK: - ServersViewControllerDelegate
 extension SessionViewController: ServersViewControllerDelegate {
     
     func serversViewControllerDidLogout(_ serversViewController: ServersViewController) {
@@ -33,6 +37,7 @@ extension SessionViewController: ServersViewControllerDelegate {
 }
 
 
+// MARK: - Private
 private extension SessionViewController {
     
     func setup() {
@@ -44,13 +49,13 @@ private extension SessionViewController {
     }
     
     func showLogin() {
-        let login = screenFactory.createLogin()
+        let login = screenFactory.makeLoginScreen()
         login.delegate = self
         setController(login)
     }
     
     func showServers() {
-        let servers = screenFactory.createServers()
+        let servers = screenFactory.makeServersScreen()
         servers.delegate = self
         let serversNav = UINavigationController(rootViewController: servers)
         setController(serversNav)

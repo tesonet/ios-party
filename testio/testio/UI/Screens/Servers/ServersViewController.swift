@@ -10,35 +10,51 @@ protocol ServersViewControllerDelegate: class {
 
 class ServersViewController: UIViewController {
 
-    static func createWithFacade(_ facade: ServersFacade) -> ServersViewController {
+    
+    // MARK: - Init
+    static func make(dataModel: ServersDataModel) -> ServersViewController {
         let controller = ServersViewController()
-        controller.facade = facade
+        controller.dataModel = dataModel
         return controller
     }
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private var servers: [Server] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var servers: [Server] = []
     
-    private var facade: ServersFacade!
+    private var dataModel: ServersDataModel!
     
     weak var delegate: ServersViewControllerDelegate?
     
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        assert(facade != nil, "Facade must not be nil")
+        assert(dataModel != nil, "Data model must not be nil")
+        dataModel.presenter = self
         setupNavigationBar()
         setupTableView()
-        fetchServers()
+        dataModel.fetchServers()
     }
 }
 
 
+// MARK: - ServersPresenter
+extension ServersViewController: ServersPresenter {
+    
+    func presentServers(_ servers: [Server]) {
+        self.servers = servers
+        tableView.reloadData()
+    }
+    
+    func presentError(_ error: Error) {
+        showErrorAlert()
+    }
+}
+
+
+// MARK: - UITableViewDataSource
 extension ServersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
@@ -61,17 +77,8 @@ extension ServersViewController: UITableViewDataSource {
 }
 
 
+// MARK: - Private
 private extension ServersViewController {
-    
-    func fetchServers() {
-        facade.servers()
-            .done { [weak self] servers in
-                self?.servers = servers
-            }
-            .catch { [weak self] error in
-                self?.showErrorAlert()
-        }
-    }
     
     func showErrorAlert() {
         let alert = UIAlertController(title: "Error",
@@ -83,7 +90,7 @@ private extension ServersViewController {
         alert.addAction(UIAlertAction(title: "Try again",
                                       style: .default,
                                       handler: { [weak self] _ in
-                                        self?.fetchServers()}
+                                        self?.dataModel.fetchServers()}
         ))
         present(alert, animated: true, completion: nil)
     }
@@ -113,7 +120,7 @@ private extension ServersViewController {
     }
     
     @objc func logoutClicked() {
-        facade.logout()
+        dataModel.logout()
         delegate?.serversViewControllerDidLogout(self)
     }
 }

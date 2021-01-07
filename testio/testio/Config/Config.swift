@@ -19,15 +19,3 @@ class Config {
         }
     }
 }
-
-
-class DevelopmentConfig: Configuration {
-    
-    let baseAPIUrlString = "http://playground.tesonet.lt/v1"
-}
-
-
-class ProductionConfig: Configuration {
-    
-    let baseAPIUrlString = "http://playground.tesonet.lt/v1"
-}

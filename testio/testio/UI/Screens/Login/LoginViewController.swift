@@ -11,32 +11,53 @@ protocol LoginViewControllerDelegate: class {
 
 class LoginViewController: UIViewController {
 
-    static func createWithFacade(_ facade: LoginFacade) -> LoginViewController {
+    
+    // MARK: - Init
+    static func make(dataModel: LoginDataModel) -> LoginViewController {
         let controller = LoginViewController()
-        controller.facade = facade
+        controller.dataModel = dataModel
         return controller
     }
     
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     
-    private var facade: LoginFacade!
+    private var dataModel: LoginDataModel!
     
     weak var delegate: LoginViewControllerDelegate?
     
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        assert(facade != nil, "Facade must not be nil")
+        assert(dataModel != nil, "Data model must not be nil")
+        dataModel.presenter = self
         setupTextFields()
     }
     
+    
+    // MARK: - UI actions
     @IBAction private func loginButtonClicked(_ sender: Any) {
         login()
     }
 }
 
 
+// MARK: - LoginPresenter
+extension LoginViewController: LoginPresenter {
+    
+    func presentSuccess() {
+        delegate?.loginViewControllerDidLogin(self)
+    }
+    
+    func presentError(_ error: Error) {
+        showErrorAlert()
+    }
+}
+
+
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -47,30 +68,19 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 
+// MARK: - Private
 private extension LoginViewController {
     
     func login() {
         let username = usernameTextField.text ?? ""
-        let passsword = passwordTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
         
-        guard !username.isEmpty && !passsword.isEmpty else {
+        guard !username.isEmpty && !password.isEmpty else {
             return
         }
         
-        login(with: username,
-              password: passsword)
-    }
-    
-    func login(with username: String, password: String) {
-        facade
-            .login(with: username,
-                   password: password)
-            .done { [unowned self] _ in
-                self.delegate?.loginViewControllerDidLogin(self)
-            }
-            .catch { [unowned self] error in
-                self.showErrorAlert()
-        }
+        dataModel.login(with: username,
+                        password: password)
     }
     
     func showErrorAlert() {

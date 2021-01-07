@@ -3,33 +3,22 @@ import Foundation
 import Alamofire
 
 
-protocol RequestFactory {
-    
-    func login(with username: String, password: String) -> DataRequest
-    func servers() -> DataRequest
-}
-
-
-extension AppDelegate {
-    
-    func createRequestFactory(session: Session) -> RequestFactory {
-        return DefaultRequestFactory(session: session)
-    }
-}
-
-
 private class DefaultRequestFactory: RequestFactory {
     
     private var sessionManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
-    
     private let session: Session
+    private let apiUrlFactory = ApiUrlFactory.shared
     
+    
+    // MARK: - Init
     init(session: Session) {
         self.session = session
     }
     
+    
+    // MARK: - RequestFactory
     func login(with username: String, password: String) -> DataRequest {
-        return request(withUrl: APIUrls.shared.tokens(),
+        return request(withUrl: apiUrlFactory.tokens(),
                        method: .post,
                        parameters: ["username": username,
                                     "password": password],
@@ -37,17 +26,15 @@ private class DefaultRequestFactory: RequestFactory {
     }
     
     func servers() -> DataRequest {
-        return request(withUrl: APIUrls.shared.servers())
+        return request(withUrl: apiUrlFactory.servers())
     }
-}
-
-
-private extension DefaultRequestFactory {
     
-    private func request(withUrl url: URL,
-                         method: HTTPMethod = .get,
-                         parameters: Parameters? = nil,
-                         encoding: ParameterEncoding = URLEncoding.default) -> DataRequest {
+    
+    // MARK: - Private
+    func request(withUrl url: URL,
+                 method: HTTPMethod = .get,
+                 parameters: Parameters? = nil,
+                 encoding: ParameterEncoding = URLEncoding.default) -> DataRequest {
         
         var headers: [String: String] {
             var all: [String: String] = [:]
@@ -62,5 +49,14 @@ private extension DefaultRequestFactory {
                                       parameters: parameters,
                                       encoding: encoding,
                                       headers: headers)
+    }
+}
+
+
+// MARK: - AppDelegate + createRequestFactory
+extension AppDelegate {
+    
+    func createRequestFactory(session: Session) -> RequestFactory {
+        return DefaultRequestFactory(session: session)
     }
 }
