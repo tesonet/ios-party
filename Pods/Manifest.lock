@@ -1,24 +1,30 @@
 PODS:
   - Alamofire (5.4.1)
+  - GRDB.swift (5.3.0):
+    - GRDB.swift/standard (= 5.3.0)
+  - GRDB.swift/standard (5.3.0)
   - KeychainAccess (4.2.1)
   - PureLayout (3.1.6)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
+  - GRDB.swift (~> 5.3)
   - KeychainAccess (~> 4.1)
   - PureLayout (~> 3.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GRDB.swift
     - KeychainAccess
     - PureLayout
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  GRDB.swift: 6d44795b19d716e9f09f19018c3bde5b71b67ae9
   KeychainAccess: 9b07f665298d13c3a85881bd3171f6f49b8151c1
   PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
 
-PODFILE CHECKSUM: 3ec87a4b15dad3a9bfd0f01350fef41b64438d29
+PODFILE CHECKSUM: 3fe4a1154b8d0d75ca8655f32a00237f93778af7
 
 COCOAPODS: 1.9.3

@@ -6,6 +6,7 @@ def common_pods
   pod 'KeychainAccess', '~> 4.1'
   pod 'Alamofire', '~> 5.4'
   pod 'PureLayout', '~> 3.1'
+  pod 'GRDB.swift', '~> 5.3'
 end
 
 target 'ios-party' do
