@@ -48,6 +48,11 @@
 		EAC1D75325BCD15D0014A156 /* ServerEntity+GRDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */; };
 		EAC1D75925BCD41C0014A156 /* Notification+DidFinishLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D75825BCD41C0014A156 /* Notification+DidFinishLoading.swift */; };
 		EAC1D76525BCD9E60014A156 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D76425BCD9E60014A156 /* database.sqlite */; };
+		EAC1D76C25BCDFA70014A156 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D76A25BCDFA70014A156 /* ServerListViewController.swift */; };
+		EAC1D76D25BCDFA70014A156 /* ServerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D76B25BCDFA70014A156 /* ServerListViewController.xib */; };
+		EAC1D77625BCE36F0014A156 /* ServerListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D77525BCE36F0014A156 /* ServerListDataModel.swift */; };
+		EAC1D77E25BCE6070014A156 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D77C25BCE6070014A156 /* ServerCell.swift */; };
+		EAC1D77F25BCE6070014A156 /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D77D25BCE6070014A156 /* ServerCell.xib */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +127,11 @@
 		EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerEntity+GRDB.swift"; sourceTree = "<group>"; };
 		EAC1D75825BCD41C0014A156 /* Notification+DidFinishLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidFinishLoading.swift"; sourceTree = "<group>"; };
 		EAC1D76425BCD9E60014A156 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
+		EAC1D76A25BCDFA70014A156 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
+		EAC1D76B25BCDFA70014A156 /* ServerListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListViewController.xib; sourceTree = "<group>"; };
+		EAC1D77525BCE36F0014A156 /* ServerListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModel.swift; sourceTree = "<group>"; };
+		EAC1D77C25BCE6070014A156 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
+		EAC1D77D25BCE6070014A156 /* ServerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D6F725BCC1460014A156 /* Base */,
+				EAC1D76925BCDF910014A156 /* ServerList */,
 				EAC1D6C725BCBC3F0014A156 /* Loader */,
 				EAC1D60C25BC68D60014A156 /* Login */,
 			);
@@ -501,6 +512,42 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		EAC1D76925BCDF910014A156 /* ServerList */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D77A25BCE5EA0014A156 /* TableViewCells */,
+				EAC1D77425BCE3640014A156 /* DataModel */,
+				EAC1D76A25BCDFA70014A156 /* ServerListViewController.swift */,
+				EAC1D76B25BCDFA70014A156 /* ServerListViewController.xib */,
+			);
+			path = ServerList;
+			sourceTree = "<group>";
+		};
+		EAC1D77425BCE3640014A156 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D77525BCE36F0014A156 /* ServerListDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		EAC1D77A25BCE5EA0014A156 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D77B25BCE5F10014A156 /* ServerCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EAC1D77B25BCE5F10014A156 /* ServerCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D77C25BCE6070014A156 /* ServerCell.swift */,
+				EAC1D77D25BCE6070014A156 /* ServerCell.xib */,
+			);
+			path = ServerCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -612,7 +659,9 @@
 				EAC1D5CD25BC48D90014A156 /* LaunchScreen.storyboard in Resources */,
 				EAC1D6CB25BCBC530014A156 /* LoaderViewController.xib in Resources */,
 				EAC1D76525BCD9E60014A156 /* database.sqlite in Resources */,
+				EAC1D76D25BCDFA70014A156 /* ServerListViewController.xib in Resources */,
 				EAC1D5CA25BC48D90014A156 /* Assets.xcassets in Resources */,
+				EAC1D77F25BCE6070014A156 /* ServerCell.xib in Resources */,
 				EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -750,6 +799,8 @@
 				EAC1D6B325BCB90D0014A156 /* LoginInput.swift in Sources */,
 				EAC1D71625BCC52D0014A156 /* ServerEntity.swift in Sources */,
 				EAC1D70325BCC4C90014A156 /* GetServerListRequest.swift in Sources */,
+				EAC1D76C25BCDFA70014A156 /* ServerListViewController.swift in Sources */,
+				EAC1D77625BCE36F0014A156 /* ServerListDataModel.swift in Sources */,
 				EAC1D6F925BCC1630014A156 /* BaseViewController.swift in Sources */,
 				EAC1D75325BCD15D0014A156 /* ServerEntity+GRDB.swift in Sources */,
 				EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */,
@@ -758,6 +809,7 @@
 				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,
 				EAC1D6D425BCBC790014A156 /* LoaderDataModel.swift in Sources */,
 				EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */,
+				EAC1D77E25BCE6070014A156 /* ServerCell.swift in Sources */,
 				EAC1D6CA25BCBC530014A156 /* LoaderViewController.swift in Sources */,
 				EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */,
 				EAC1D6A625BCB1EE0014A156 /* LoginRequest.swift in Sources */,

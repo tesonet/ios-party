@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // FIXME: delete
-        authorization.logout()
+//        authorization.logout()
         
         resetKeychainRepositoryOnFreshInstallation()
         setupAppMode()

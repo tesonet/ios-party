@@ -50,8 +50,7 @@ extension AppDelegate {
     }
     
     func serverListViewController() -> UIViewController {
-        // FIXME: return proper view controller once implemented
-        return UIViewController()
+        return ServerListViewController()
     }
     
     func loaderViewController() -> UIViewController {
