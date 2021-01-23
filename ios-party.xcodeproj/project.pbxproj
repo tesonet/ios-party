@@ -15,6 +15,8 @@
 		EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */; };
 		EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D60F25BC69170014A156 /* LoginViewController.swift */; };
 		EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D61025BC69170014A156 /* LoginViewController.xib */; };
+		EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62025BC6B180014A156 /* LoginDataModel.swift */; };
+		EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62925BC6BF40014A156 /* LogTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Window.swift"; sourceTree = "<group>"; };
 		EAC1D60F25BC69170014A156 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAC1D61025BC69170014A156 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		EAC1D62025BC6B180014A156 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		EAC1D62925BC6BF40014A156 /* LogTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 			children = (
 				EAC1D60E25BC68FC0014A156 /* AppDelegate */,
 				EAC1D60D25BC68F50014A156 /* ViewControllers */,
+				EAC1D62825BC6BDE0014A156 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 		EAC1D60C25BC68D60014A156 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D61F25BC6B090014A156 /* DataModel */,
 				EAC1D60F25BC69170014A156 /* LoginViewController.swift */,
 				EAC1D61025BC69170014A156 /* LoginViewController.xib */,
 			);
@@ -174,6 +180,22 @@
 				EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EAC1D61F25BC6B090014A156 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D62025BC6B180014A156 /* LoginDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		EAC1D62825BC6BDE0014A156 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D62925BC6BF40014A156 /* LogTools.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */,
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
+				EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
