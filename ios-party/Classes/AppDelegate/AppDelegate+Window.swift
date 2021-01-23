@@ -7,6 +7,8 @@
 
 import UIKit
 
+fileprivate let kNavigationTransitionAnimationDuration = 0.2
+
 extension AppDelegate {
     
     // MARK: - Methods
@@ -17,8 +19,36 @@ extension AppDelegate {
         self.window = window
     }
     
+    func switchRootViewController(to viewController: UIViewController) {
+        guard let window = window else {
+            log("ERROR! Could not get window")
+            return
+        }
+        
+        window.rootViewController = viewController
+        UIView.transition(with: window,
+                          duration: kNavigationTransitionAnimationDuration,
+                          options: .transitionCrossDissolve,
+                          animations: { })
+    }
+    
     // MARK: - View Controllers
     func initialViewController() -> UIViewController {
+        switch appMode {
+        case .loggedIn:
+            return loginViewController()
+        case .loggedOut:
+            return serverListViewController()
+        }
+    }
+    
+    // MARK: - View Controllers
+    func loginViewController() -> UIViewController {
         return LoginViewController()
+    }
+    
+    func serverListViewController() -> UIViewController {
+        // FIXME: return proper view controller once implemented
+        return UIViewController()
     }
 }

@@ -26,6 +26,9 @@
 		EAC1D65C25BC6F360014A156 /* ThreadSafetyTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D65B25BC6F360014A156 /* ThreadSafetyTools.swift */; };
 		EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66025BC6F790014A156 /* Notification+NotificationPostable.swift */; };
 		EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */; };
+		EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66B25BC70500014A156 /* Notification+DidLogout.swift */; };
+		EAC1D67125BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */; };
+		EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67625BC72780014A156 /* ApplicationRepository.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,9 @@
 		EAC1D65B25BC6F360014A156 /* ThreadSafetyTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafetyTools.swift; sourceTree = "<group>"; };
 		EAC1D66025BC6F790014A156 /* Notification+NotificationPostable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+NotificationPostable.swift"; sourceTree = "<group>"; };
 		EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidLogin.swift"; sourceTree = "<group>"; };
+		EAC1D66B25BC70500014A156 /* Notification+DidLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidLogout.swift"; sourceTree = "<group>"; };
+		EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AuthorizationNotifications.swift"; sourceTree = "<group>"; };
+		EAC1D67625BC72780014A156 /* ApplicationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRepository.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D5F625BC49950014A156 /* AppDelegate.swift */,
+				EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */,
 				EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */,
 			);
 			path = AppDelegate;
@@ -275,6 +282,7 @@
 		EAC1D63A25BC6DC70014A156 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D67525BC72630014A156 /* ApplicationRepository */,
 				EAC1D63B25BC6DDF0014A156 /* KeychainRepository */,
 			);
 			path = Repositories;
@@ -311,8 +319,17 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */,
+				EAC1D66B25BC70500014A156 /* Notification+DidLogout.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EAC1D67525BC72630014A156 /* ApplicationRepository */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D67625BC72780014A156 /* ApplicationRepository.swift */,
+			);
+			path = ApplicationRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,9 +577,12 @@
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
 				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,
+				EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */,
+				EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */,
 				EAC1D65725BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift in Sources */,
 				EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */,
 				EAC1D65C25BC6F360014A156 /* ThreadSafetyTools.swift in Sources */,
+				EAC1D67125BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift in Sources */,
 				EAC1D64F25BC6EC80014A156 /* NotificationPostable.swift in Sources */,
 				EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */,
 			);
