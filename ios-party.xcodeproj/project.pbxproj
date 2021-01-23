@@ -34,6 +34,9 @@
 		EAC1D6A625BCB1EE0014A156 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6A525BCB1EE0014A156 /* LoginRequest.swift */; };
 		EAC1D6AE25BCB4450014A156 /* LoginOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6AD25BCB4450014A156 /* LoginOutput.swift */; };
 		EAC1D6B325BCB90D0014A156 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6B225BCB90D0014A156 /* LoginInput.swift */; };
+		EAC1D6CA25BCBC530014A156 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6C825BCBC530014A156 /* LoaderViewController.swift */; };
+		EAC1D6CB25BCBC530014A156 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D6C925BCBC530014A156 /* LoaderViewController.xib */; };
+		EAC1D6D425BCBC790014A156 /* LoaderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		EAC1D6A525BCB1EE0014A156 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EAC1D6AD25BCB4450014A156 /* LoginOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOutput.swift; sourceTree = "<group>"; };
 		EAC1D6B225BCB90D0014A156 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
+		EAC1D6C825BCBC530014A156 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		EAC1D6C925BCBC530014A156 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
+		EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDataModel.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +248,7 @@
 		EAC1D60D25BC68F50014A156 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D6C725BCBC3F0014A156 /* Loader */,
 				EAC1D60C25BC68D60014A156 /* Login */,
 			);
 			path = ViewControllers;
@@ -379,6 +386,24 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		EAC1D6C725BCBC3F0014A156 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D6D225BCBC6C0014A156 /* DataModel */,
+				EAC1D6C825BCBC530014A156 /* LoaderViewController.swift */,
+				EAC1D6C925BCBC530014A156 /* LoaderViewController.xib */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		EAC1D6D225BCBC6C0014A156 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -488,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC1D5CD25BC48D90014A156 /* LaunchScreen.storyboard in Resources */,
+				EAC1D6CB25BCBC530014A156 /* LoaderViewController.xib in Resources */,
 				EAC1D5CA25BC48D90014A156 /* Assets.xcassets in Resources */,
 				EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */,
 			);
@@ -625,7 +651,9 @@
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
 				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,
+				EAC1D6D425BCBC790014A156 /* LoaderDataModel.swift in Sources */,
 				EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */,
+				EAC1D6CA25BCBC530014A156 /* LoaderViewController.swift in Sources */,
 				EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */,
 				EAC1D6A625BCB1EE0014A156 /* LoginRequest.swift in Sources */,
 				EAC1D65725BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift in Sources */,
