@@ -12,6 +12,9 @@
 		EAC1D5D825BC48D90014A156 /* ios_partyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D5D725BC48D90014A156 /* ios_partyTests.swift */; };
 		EAC1D5E325BC48DA0014A156 /* ios_partyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D5E225BC48DA0014A156 /* ios_partyUITests.swift */; };
 		EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D5F625BC49950014A156 /* AppDelegate.swift */; };
+		EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */; };
+		EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D60F25BC69170014A156 /* LoginViewController.swift */; };
+		EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D61025BC69170014A156 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		EAC1D5E225BC48DA0014A156 /* ios_partyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_partyUITests.swift; sourceTree = "<group>"; };
 		EAC1D5E425BC48DA0014A156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC1D5F625BC49950014A156 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Window.swift"; sourceTree = "<group>"; };
+		EAC1D60F25BC69170014A156 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EAC1D61025BC69170014A156 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +127,8 @@
 		EAC1D60125BC49A90014A156 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				EAC1D5F625BC49950014A156 /* AppDelegate.swift */,
+				EAC1D60E25BC68FC0014A156 /* AppDelegate */,
+				EAC1D60D25BC68F50014A156 /* ViewControllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -141,6 +148,32 @@
 				EAC1D5CE25BC48D90014A156 /* Info.plist */,
 			);
 			path = TargetConfigurations;
+			sourceTree = "<group>";
+		};
+		EAC1D60C25BC68D60014A156 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D60F25BC69170014A156 /* LoginViewController.swift */,
+				EAC1D61025BC69170014A156 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EAC1D60D25BC68F50014A156 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D60C25BC68D60014A156 /* Login */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EAC1D60E25BC68FC0014A156 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D5F625BC49950014A156 /* AppDelegate.swift */,
+				EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +281,7 @@
 			files = (
 				EAC1D5CD25BC48D90014A156 /* LaunchScreen.storyboard in Resources */,
 				EAC1D5CA25BC48D90014A156 /* Assets.xcassets in Resources */,
+				EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
+				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
