@@ -20,6 +20,10 @@ protocol LoginDataModelInterface {
 
 class LoginDataModel: LoginDataModelInterface {
     
+    // MARK: - Constants
+    let kLoginURLParameterKey = "username"
+    let kPasswordURLParameterKey = "password"
+    
     // MARK: - Declarations
     weak var delegate: LoginDataModelDelegate?
     var isLoading = false
@@ -41,9 +45,14 @@ class LoginDataModel: LoginDataModelInterface {
         isLoading = true
         delegate?.loginDataModel(didStartLogin: self)
         
+        startLoginRequest(username: username, password: password)
+    }
+    
+    // FIXME: extract to class
+    func startLoginRequest(username: String, password: String) {
         var parameterDict: [String: String] = [:]
-        parameterDict["username"] = username
-        parameterDict["password"] = password
+        parameterDict[kLoginURLParameterKey] = username
+        parameterDict[kPasswordURLParameterKey] = password
         
         let request: DataRequest = AF.request("https://playground.tesonet.lt/v1/tokens",
                                               method: .post,
@@ -91,14 +100,5 @@ class LoginDataModel: LoginDataModelInterface {
             log("Login request failed with error: \(error)")
             delegate?.loginDataModel(didFailLogin: self)
         }
-    }
-    
-    func parseAccessToken(responseData: Any) -> String? {
-        guard let responseData = responseData as? [String: Any],
-              let token = responseData["token"] as? String else {
-            return nil
-        }
-        
-        return token
     }
 }
