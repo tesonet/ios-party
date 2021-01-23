@@ -20,6 +20,8 @@
 		EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62025BC6B180014A156 /* LoginDataModel.swift */; };
 		EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62925BC6BF40014A156 /* LogTools.swift */; };
 		EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */; };
+		EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D64425BC6E4C0014A156 /* Authorization.swift */; };
+		EAC1D64F25BC6EC80014A156 /* NotificationPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D64E25BC6EC80014A156 /* NotificationPostable.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		EAC1D62025BC6B180014A156 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
 		EAC1D62925BC6BF40014A156 /* LogTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTools.swift; sourceTree = "<group>"; };
 		EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainRepository.swift; sourceTree = "<group>"; };
+		EAC1D64425BC6E4C0014A156 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		EAC1D64E25BC6EC80014A156 /* NotificationPostable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPostable.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D63225BC6C910014A156 /* Authorization */,
+				EAC1D64C25BC6EA10014A156 /* Notifications */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 		EAC1D63225BC6C910014A156 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D64425BC6E4C0014A156 /* Authorization.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -271,6 +277,22 @@
 				EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */,
 			);
 			path = KeychainRepository;
+			sourceTree = "<group>";
+		};
+		EAC1D64C25BC6EA10014A156 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D64D25BC6EBC0014A156 /* NotificationPostable */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		EAC1D64D25BC6EBC0014A156 /* NotificationPostable */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D64E25BC6EC80014A156 /* NotificationPostable.swift */,
+			);
+			path = NotificationPostable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +538,8 @@
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
+				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,
+				EAC1D64F25BC6EC80014A156 /* NotificationPostable.swift in Sources */,
 				EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
