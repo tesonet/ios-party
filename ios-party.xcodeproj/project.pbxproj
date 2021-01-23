@@ -18,7 +18,7 @@
 		EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D60F25BC69170014A156 /* LoginViewController.swift */; };
 		EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D61025BC69170014A156 /* LoginViewController.xib */; };
 		EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62025BC6B180014A156 /* LoginDataModel.swift */; };
-		EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62925BC6BF40014A156 /* LogTools.swift */; };
+		EAC1D62A25BC6BF40014A156 /* GenericTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62925BC6BF40014A156 /* GenericTools.swift */; };
 		EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */; };
 		EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D64425BC6E4C0014A156 /* Authorization.swift */; };
 		EAC1D64F25BC6EC80014A156 /* NotificationPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D64E25BC6EC80014A156 /* NotificationPostable.swift */; };
@@ -53,6 +53,7 @@
 		EAC1D77625BCE36F0014A156 /* ServerListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D77525BCE36F0014A156 /* ServerListDataModel.swift */; };
 		EAC1D77E25BCE6070014A156 /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D77C25BCE6070014A156 /* ServerCell.swift */; };
 		EAC1D77F25BCE6070014A156 /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D77D25BCE6070014A156 /* ServerCell.xib */; };
+		EAC1D78725BCE77E0014A156 /* UITableView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D78625BCE77E0014A156 /* UITableView+Tools.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,7 +98,7 @@
 		EAC1D60F25BC69170014A156 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAC1D61025BC69170014A156 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		EAC1D62025BC6B180014A156 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
-		EAC1D62925BC6BF40014A156 /* LogTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTools.swift; sourceTree = "<group>"; };
+		EAC1D62925BC6BF40014A156 /* GenericTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTools.swift; sourceTree = "<group>"; };
 		EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainRepository.swift; sourceTree = "<group>"; };
 		EAC1D64425BC6E4C0014A156 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		EAC1D64E25BC6EC80014A156 /* NotificationPostable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPostable.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		EAC1D77525BCE36F0014A156 /* ServerListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModel.swift; sourceTree = "<group>"; };
 		EAC1D77C25BCE6070014A156 /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
 		EAC1D77D25BCE6070014A156 /* ServerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
+		EAC1D78625BCE77E0014A156 /* UITableView+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Tools.swift"; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,9 +312,9 @@
 		EAC1D62825BC6BDE0014A156 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D78E25BCE8070014A156 /* FileManager */,
 				EAC1D6F125BCC0EF0014A156 /* GeneralUse */,
 				EAC1D6F025BCC0E90014A156 /* UI */,
-				EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D6F225BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift */,
+				EAC1D78625BCE77E0014A156 /* UITableView+Tools.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -454,7 +457,7 @@
 		EAC1D6F125BCC0EF0014A156 /* GeneralUse */ = {
 			isa = PBXGroup;
 			children = (
-				EAC1D62925BC6BF40014A156 /* LogTools.swift */,
+				EAC1D62925BC6BF40014A156 /* GenericTools.swift */,
 				EAC1D65B25BC6F360014A156 /* ThreadSafetyTools.swift */,
 			);
 			path = GeneralUse;
@@ -546,6 +549,14 @@
 				EAC1D77D25BCE6070014A156 /* ServerCell.xib */,
 			);
 			path = ServerCell;
+			sourceTree = "<group>";
+		};
+		EAC1D78E25BCE8070014A156 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */,
+			);
+			path = FileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -792,7 +803,7 @@
 			files = (
 				EAC1D75925BCD41C0014A156 /* Notification+DidFinishLoading.swift in Sources */,
 				EAC1D73C25BCCD720014A156 /* ServerListRepository.swift in Sources */,
-				EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */,
+				EAC1D62A25BC6BF40014A156 /* GenericTools.swift in Sources */,
 				EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */,
 				EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */,
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
@@ -805,6 +816,7 @@
 				EAC1D75325BCD15D0014A156 /* ServerEntity+GRDB.swift in Sources */,
 				EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
+				EAC1D78725BCE77E0014A156 /* UITableView+Tools.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
 				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,
 				EAC1D6D425BCBC790014A156 /* LoaderDataModel.swift in Sources */,

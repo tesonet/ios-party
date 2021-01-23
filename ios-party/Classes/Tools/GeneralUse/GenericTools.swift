@@ -1,5 +1,5 @@
 //
-//  LogTools.swift
+//  GenericTools.swift
 //  ios-party
 //
 //  Created by Ergin Bilgin on 2021-01-23.
@@ -13,4 +13,8 @@ func log(_ message: String, file: String = #file, function: String = #function, 
         let fileName = file.components(separatedBy: "/").last ?? file
         NSLog("[\((fileName as NSString).deletingPathExtension).\(function) \(line) <\((Thread.isMainThread) ? "M" : "B")>]: \(message)")
     #endif
+}
+
+func className(fromClass aClass: AnyClass) -> String {
+    return String(describing: aClass)
 }
