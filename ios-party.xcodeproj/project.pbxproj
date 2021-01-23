@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D61025BC69170014A156 /* LoginViewController.xib */; };
 		EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62025BC6B180014A156 /* LoginDataModel.swift */; };
 		EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D62925BC6BF40014A156 /* LogTools.swift */; };
+		EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		EAC1D61025BC69170014A156 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		EAC1D62025BC6B180014A156 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
 		EAC1D62925BC6BF40014A156 /* LogTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTools.swift; sourceTree = "<group>"; };
+		EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainRepository.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +117,6 @@
 				F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */,
 				5531010E84A161185CF7A9BB /* Pods-ios-partyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +176,7 @@
 				EAC1D63125BC6C8B0014A156 /* Features */,
 				EAC1D60E25BC68FC0014A156 /* AppDelegate */,
 				EAC1D60D25BC68F50014A156 /* ViewControllers */,
+				EAC1D63A25BC6DC70014A156 /* Repositories */,
 				EAC1D62825BC6BDE0014A156 /* Tools */,
 			);
 			path = Classes;
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D62925BC6BF40014A156 /* LogTools.swift */,
+				EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -253,6 +256,21 @@
 			children = (
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		EAC1D63A25BC6DC70014A156 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D63B25BC6DDF0014A156 /* KeychainRepository */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EAC1D63B25BC6DDF0014A156 /* KeychainRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KeychainRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */,
+				EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */,
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
