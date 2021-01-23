@@ -22,7 +22,7 @@ extension AppDelegate {
     }
     
     @objc func didReceiveDidFinishLoginNotification() {
-        switchToLoggedInMode()
+        switchToDataLoadingMode()
     }
     
     @objc func didReceiveDidLogoutNotification() {

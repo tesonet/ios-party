@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     enum AppModeType {
         case loggedIn
         case loggedOut
+        case dataLoading
     }
     
     // MARK: - Declarations
@@ -45,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - App Mode
     func setupAppMode() {
+        // FIXME: set to data loading mode if data loading required
         if authorization.isLoggedIn() {
             appMode = .loggedIn
         } else {
@@ -70,6 +72,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         appMode = .loggedOut
         switchRootViewController(to: loginViewController())
+    }
+    
+    func switchToDataLoadingMode() {
+        guard appMode != .dataLoading else {
+            log("ERROR! App is already in data loading mode")
+            return
+        }
+        
+        appMode = .dataLoading
+        switchRootViewController(to: serverListViewController())
     }
     
     // MARK: - Keychain Repository

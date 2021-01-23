@@ -39,6 +39,8 @@ extension AppDelegate {
             return serverListViewController()
         case .loggedOut:
             return loginViewController()
+        case .dataLoading:
+            return dataLoadingViewController()
         }
     }
     
@@ -48,6 +50,11 @@ extension AppDelegate {
     }
     
     func serverListViewController() -> UIViewController {
+        // FIXME: return proper view controller once implemented
+        return UIViewController()
+    }
+    
+    func dataLoadingViewController() -> UIViewController {
         // FIXME: return proper view controller once implemented
         return UIViewController()
     }
