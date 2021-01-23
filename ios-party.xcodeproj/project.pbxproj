@@ -238,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D62925BC6BF40014A156 /* LogTools.swift */,
-				EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -269,6 +268,7 @@
 		EAC1D63B25BC6DDF0014A156 /* KeychainRepository */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D63C25BC6DF40014A156 /* KeychainRepository.swift */,
 			);
 			path = KeychainRepository;
 			sourceTree = "<group>";
