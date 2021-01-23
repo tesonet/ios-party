@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         appMode = .dataLoading
-        switchRootViewController(to: serverListViewController())
+        switchRootViewController(to: loaderViewController())
     }
     
     // MARK: - Keychain Repository
