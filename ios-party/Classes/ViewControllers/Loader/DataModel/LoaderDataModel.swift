@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol LoaderDataModelDelegate: AnyObject {
     func loaderDataModel(didFinishLoading dataModel: LoaderDataModelInterface)
@@ -21,12 +22,65 @@ class LoaderDataModel: LoaderDataModelInterface {
     // MARK: - Declarations
     weak var delegate: LoaderDataModelDelegate?
     
+    var isLoading = false
+    
+    // MARK: - Dependencies
+    var authorization: AuthorizationInterface = Authorization.shared
+    
     // MARK: - Methods
     init(delegate: LoaderDataModelDelegate) {
         self.delegate = delegate
     }
     
     func startDataLoad() {
-        // FIXME: implement
+        guard !isLoading else {
+            log("ERROR! Loading is already in progress.")
+            return
+        }
+        
+        guard let authorizationToken = authorization.token() else {
+            log("ERROR! User not logged in")
+            return
+        }
+        
+        isLoading = true
+        startGetServerListRequest(authorizationToken: authorizationToken)
+    }
+    
+    func startGetServerListRequest(authorizationToken: String) {
+        let input = GetServerListInput(token: authorizationToken)
+        let request = GetServerListRequest(withInput: input)
+        request.completionHandler = { [weak self] in
+            self?.didFinishGetServerListRequest(request)
+        }
+        
+        request.start()
+    }
+    
+    func didFinishGetServerListRequest(_ request: GetServerListRequest) {
+        isLoading = false
+        
+        guard request.output.isSuccessful else {
+            didFailGetServerListRequest(error: request.output.error)
+            return
+        }
+        
+        delegate?.loaderDataModel(didFinishLoading: self)
+    }
+    
+    func didFailGetServerListRequest(error: AFError?) {
+        guard let error: AFError = error else {
+            log("ERROR Loading failed without error.")
+            delegate?.loaderDataModel(didFailLoading: self)
+            return
+        }
+        
+        if error.responseCode == 401 {
+            log("ERROR! Loading failed with code 401")
+            delegate?.loaderDataModel(didFailLoading: self)
+        } else {
+            log("Loading failed with error: \(error)")
+            delegate?.loaderDataModel(didFailLoading: self)
+        }
     }
 }

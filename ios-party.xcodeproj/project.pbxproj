@@ -39,6 +39,10 @@
 		EAC1D6D425BCBC790014A156 /* LoaderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */; };
 		EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6F225BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift */; };
 		EAC1D6F925BCC1630014A156 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6F825BCC1620014A156 /* BaseViewController.swift */; };
+		EAC1D70325BCC4C90014A156 /* GetServerListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D70225BCC4C90014A156 /* GetServerListRequest.swift */; };
+		EAC1D70B25BCC4D70014A156 /* GetServerListInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D70A25BCC4D70014A156 /* GetServerListInput.swift */; };
+		EAC1D71025BCC4E40014A156 /* GetServerListOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D70F25BCC4E30014A156 /* GetServerListOutput.swift */; };
+		EAC1D71625BCC52D0014A156 /* ServerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D71525BCC52D0014A156 /* ServerEntity.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +108,10 @@
 		EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDataModel.swift; sourceTree = "<group>"; };
 		EAC1D6F225BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+ActivityIndicatorInterface.swift"; sourceTree = "<group>"; };
 		EAC1D6F825BCC1620014A156 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EAC1D70225BCC4C90014A156 /* GetServerListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServerListRequest.swift; sourceTree = "<group>"; };
+		EAC1D70A25BCC4D70014A156 /* GetServerListInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServerListInput.swift; sourceTree = "<group>"; };
+		EAC1D70F25BCC4E30014A156 /* GetServerListOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServerListOutput.swift; sourceTree = "<group>"; };
+		EAC1D71525BCC52D0014A156 /* ServerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEntity.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +221,7 @@
 			children = (
 				EAC1D63125BC6C8B0014A156 /* Features */,
 				EAC1D60E25BC68FC0014A156 /* AppDelegate */,
+				EAC1D71425BCC5210014A156 /* Entities */,
 				EAC1D60D25BC68F50014A156 /* ViewControllers */,
 				EAC1D6A425BCB1D80014A156 /* Server */,
 				EAC1D63A25BC6DC70014A156 /* Repositories */,
@@ -376,6 +385,7 @@
 		EAC1D6BA25BCBAB90014A156 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D70025BCC4A80014A156 /* GetServerList */,
 				EAC1D6BB25BCBAC50014A156 /* Login */,
 			);
 			path = Requests;
@@ -432,6 +442,24 @@
 				EAC1D6F825BCC1620014A156 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		EAC1D70025BCC4A80014A156 /* GetServerList */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D70225BCC4C90014A156 /* GetServerListRequest.swift */,
+				EAC1D70A25BCC4D70014A156 /* GetServerListInput.swift */,
+				EAC1D70F25BCC4E30014A156 /* GetServerListOutput.swift */,
+			);
+			path = GetServerList;
+			sourceTree = "<group>";
+		};
+		EAC1D71425BCC5210014A156 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D71525BCC52D0014A156 /* ServerEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,6 +706,8 @@
 				EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */,
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
 				EAC1D6B325BCB90D0014A156 /* LoginInput.swift in Sources */,
+				EAC1D71625BCC52D0014A156 /* ServerEntity.swift in Sources */,
+				EAC1D70325BCC4C90014A156 /* GetServerListRequest.swift in Sources */,
 				EAC1D6F925BCC1630014A156 /* BaseViewController.swift in Sources */,
 				EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
@@ -690,8 +720,10 @@
 				EAC1D6A625BCB1EE0014A156 /* LoginRequest.swift in Sources */,
 				EAC1D65725BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift in Sources */,
 				EAC1D6AE25BCB4450014A156 /* LoginOutput.swift in Sources */,
+				EAC1D71025BCC4E40014A156 /* GetServerListOutput.swift in Sources */,
 				EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */,
 				EAC1D68B25BC812F0014A156 /* RoundedButton.swift in Sources */,
+				EAC1D70B25BCC4D70014A156 /* GetServerListInput.swift in Sources */,
 				EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */,
 				EAC1D65C25BC6F360014A156 /* ThreadSafetyTools.swift in Sources */,
 				EAC1D67125BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift in Sources */,
