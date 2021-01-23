@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (5.4.1)
   - KeychainAccess (4.2.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.4)
   - KeychainAccess (~> 4.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - KeychainAccess
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   KeychainAccess: 9b07f665298d13c3a85881bd3171f6f49b8151c1
 
-PODFILE CHECKSUM: 640113a65cbd752ae1a25aa648dc9b36c2d0aa34
+PODFILE CHECKSUM: 148f756d4e9a40026ce996ff3a76b4ff2077fa1b
 
 COCOAPODS: 1.9.3
