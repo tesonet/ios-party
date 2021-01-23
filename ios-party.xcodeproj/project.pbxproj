@@ -25,6 +25,7 @@
 		EAC1D65725BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D65625BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift */; };
 		EAC1D65C25BC6F360014A156 /* ThreadSafetyTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D65B25BC6F360014A156 /* ThreadSafetyTools.swift */; };
 		EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66025BC6F790014A156 /* Notification+NotificationPostable.swift */; };
+		EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		EAC1D65625BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+NotificationPostable.swift"; sourceTree = "<group>"; };
 		EAC1D65B25BC6F360014A156 /* ThreadSafetyTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafetyTools.swift; sourceTree = "<group>"; };
 		EAC1D66025BC6F790014A156 /* Notification+NotificationPostable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+NotificationPostable.swift"; sourceTree = "<group>"; };
+		EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidLogin.swift"; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,6 +291,7 @@
 		EAC1D64C25BC6EA10014A156 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D66525BC6FE10014A156 /* Login */,
 				EAC1D64D25BC6EBC0014A156 /* NotificationPostable */,
 			);
 			path = Notifications;
@@ -302,6 +305,14 @@
 				EAC1D66025BC6F790014A156 /* Notification+NotificationPostable.swift */,
 			);
 			path = NotificationPostable;
+			sourceTree = "<group>";
+		};
+		EAC1D66525BC6FE10014A156 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +555,7 @@
 			files = (
 				EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */,
 				EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */,
+				EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */,
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
