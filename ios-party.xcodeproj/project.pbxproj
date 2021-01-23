@@ -44,6 +44,8 @@
 		EAC1D71025BCC4E40014A156 /* GetServerListOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D70F25BCC4E30014A156 /* GetServerListOutput.swift */; };
 		EAC1D71625BCC52D0014A156 /* ServerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D71525BCC52D0014A156 /* ServerEntity.swift */; };
 		EAC1D73C25BCCD720014A156 /* ServerListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D73B25BCCD720014A156 /* ServerListRepository.swift */; };
+		EAC1D74E25BCCFAD0014A156 /* FileManagerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */; };
+		EAC1D75325BCD15D0014A156 /* ServerEntity+GRDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		EAC1D70F25BCC4E30014A156 /* GetServerListOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServerListOutput.swift; sourceTree = "<group>"; };
 		EAC1D71525BCC52D0014A156 /* ServerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEntity.swift; sourceTree = "<group>"; };
 		EAC1D73B25BCCD720014A156 /* ServerListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListRepository.swift; sourceTree = "<group>"; };
+		EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTools.swift; sourceTree = "<group>"; };
+		EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerEntity+GRDB.swift"; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +297,7 @@
 			children = (
 				EAC1D6F125BCC0EF0014A156 /* GeneralUse */,
 				EAC1D6F025BCC0E90014A156 /* UI */,
+				EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D71525BCC52D0014A156 /* ServerEntity.swift */,
+				EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -721,6 +727,7 @@
 				EAC1D71625BCC52D0014A156 /* ServerEntity.swift in Sources */,
 				EAC1D70325BCC4C90014A156 /* GetServerListRequest.swift in Sources */,
 				EAC1D6F925BCC1630014A156 /* BaseViewController.swift in Sources */,
+				EAC1D75325BCD15D0014A156 /* ServerEntity+GRDB.swift in Sources */,
 				EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
@@ -735,6 +742,7 @@
 				EAC1D71025BCC4E40014A156 /* GetServerListOutput.swift in Sources */,
 				EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */,
 				EAC1D68B25BC812F0014A156 /* RoundedButton.swift in Sources */,
+				EAC1D74E25BCCFAD0014A156 /* FileManagerTools.swift in Sources */,
 				EAC1D70B25BCC4D70014A156 /* GetServerListInput.swift in Sources */,
 				EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */,
 				EAC1D65C25BC6F360014A156 /* ThreadSafetyTools.swift in Sources */,

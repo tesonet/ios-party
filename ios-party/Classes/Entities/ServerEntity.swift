@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GRDB
 
 class ServerEntity {
     
@@ -28,6 +29,12 @@ class ServerEntity {
         
         self.name = name
         self.distance = distance
+    }
+    
+    // MARK: - FetchableRecord
+    required init(row: Row) {
+        name = row["name"]
+        distance = row["distance"]
     }
     
     // MARK: - Helpers
