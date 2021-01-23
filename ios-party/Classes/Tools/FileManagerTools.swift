@@ -19,4 +19,17 @@ class FileManagerTools {
         let documentsDirectory = paths[0]
         return documentsDirectory.path
     }
+    
+    static func excludeFileFromICloudBackup(filePath: String) {
+        var fileURL = URL(fileURLWithPath: filePath)
+        
+        var resourceValues = URLResourceValues()
+        resourceValues.isExcludedFromBackup = true
+        
+        do {
+            try fileURL.setResourceValues(resourceValues)
+        } catch {
+            log("ERROR! Could not set resource values for database file: \(error)")
+        }
+    }
 }

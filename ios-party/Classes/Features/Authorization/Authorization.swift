@@ -40,5 +40,6 @@ class Authorization: AuthorizationInterface {
     
     func logout() {
         keychainRepository.removeAuthorizationToken()
+        NotificationCenter.default.post(Notification.DidLogout())
     }
 }

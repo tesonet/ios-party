@@ -27,7 +27,7 @@
 		EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66025BC6F790014A156 /* Notification+NotificationPostable.swift */; };
 		EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */; };
 		EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66B25BC70500014A156 /* Notification+DidLogout.swift */; };
-		EAC1D67125BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */; };
+		EAC1D67125BC70AD0014A156 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67025BC70AD0014A156 /* AppDelegate+Notifications.swift */; };
 		EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67625BC72780014A156 /* ApplicationRepository.swift */; };
 		EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67F25BC75B90014A156 /* ImageTextField.swift */; };
 		EAC1D68B25BC812F0014A156 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D68A25BC812F0014A156 /* RoundedButton.swift */; };
@@ -46,6 +46,8 @@
 		EAC1D73C25BCCD720014A156 /* ServerListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D73B25BCCD720014A156 /* ServerListRepository.swift */; };
 		EAC1D74E25BCCFAD0014A156 /* FileManagerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */; };
 		EAC1D75325BCD15D0014A156 /* ServerEntity+GRDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */; };
+		EAC1D75925BCD41C0014A156 /* Notification+DidFinishLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D75825BCD41C0014A156 /* Notification+DidFinishLoading.swift */; };
+		EAC1D76525BCD9E60014A156 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D76425BCD9E60014A156 /* database.sqlite */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +101,7 @@
 		EAC1D66025BC6F790014A156 /* Notification+NotificationPostable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+NotificationPostable.swift"; sourceTree = "<group>"; };
 		EAC1D66625BC6FF50014A156 /* Notification+DidLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidLogin.swift"; sourceTree = "<group>"; };
 		EAC1D66B25BC70500014A156 /* Notification+DidLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidLogout.swift"; sourceTree = "<group>"; };
-		EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AuthorizationNotifications.swift"; sourceTree = "<group>"; };
+		EAC1D67025BC70AD0014A156 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		EAC1D67625BC72780014A156 /* ApplicationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRepository.swift; sourceTree = "<group>"; };
 		EAC1D67F25BC75B90014A156 /* ImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextField.swift; sourceTree = "<group>"; };
 		EAC1D68A25BC812F0014A156 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -118,6 +120,8 @@
 		EAC1D73B25BCCD720014A156 /* ServerListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListRepository.swift; sourceTree = "<group>"; };
 		EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTools.swift; sourceTree = "<group>"; };
 		EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerEntity+GRDB.swift"; sourceTree = "<group>"; };
+		EAC1D75825BCD41C0014A156 /* Notification+DidFinishLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidFinishLoading.swift"; sourceTree = "<group>"; };
+		EAC1D76425BCD9E60014A156 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D5F625BC49950014A156 /* AppDelegate.swift */,
-				EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */,
+				EAC1D67025BC70AD0014A156 /* AppDelegate+Notifications.swift */,
 				EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */,
 			);
 			path = AppDelegate;
@@ -340,6 +344,7 @@
 		EAC1D64C25BC6EA10014A156 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D75725BCD3F50014A156 /* Loading */,
 				EAC1D66525BC6FE10014A156 /* Login */,
 				EAC1D64D25BC6EBC0014A156 /* NotificationPostable */,
 			);
@@ -474,9 +479,26 @@
 		EAC1D71A25BCCC970014A156 /* ServerListRepository */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D76325BCD8380014A156 /* Resources */,
 				EAC1D73B25BCCD720014A156 /* ServerListRepository.swift */,
 			);
 			path = ServerListRepository;
+			sourceTree = "<group>";
+		};
+		EAC1D75725BCD3F50014A156 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D75825BCD41C0014A156 /* Notification+DidFinishLoading.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		EAC1D76325BCD8380014A156 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D76425BCD9E60014A156 /* database.sqlite */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,6 +611,7 @@
 			files = (
 				EAC1D5CD25BC48D90014A156 /* LaunchScreen.storyboard in Resources */,
 				EAC1D6CB25BCBC530014A156 /* LoaderViewController.xib in Resources */,
+				EAC1D76525BCD9E60014A156 /* database.sqlite in Resources */,
 				EAC1D5CA25BC48D90014A156 /* Assets.xcassets in Resources */,
 				EAC1D61225BC69170014A156 /* LoginViewController.xib in Resources */,
 			);
@@ -718,6 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC1D75925BCD41C0014A156 /* Notification+DidFinishLoading.swift in Sources */,
 				EAC1D73C25BCCD720014A156 /* ServerListRepository.swift in Sources */,
 				EAC1D62A25BC6BF40014A156 /* LogTools.swift in Sources */,
 				EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */,
@@ -746,7 +770,7 @@
 				EAC1D70B25BCC4D70014A156 /* GetServerListInput.swift in Sources */,
 				EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */,
 				EAC1D65C25BC6F360014A156 /* ThreadSafetyTools.swift in Sources */,
-				EAC1D67125BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift in Sources */,
+				EAC1D67125BC70AD0014A156 /* AppDelegate+Notifications.swift in Sources */,
 				EAC1D64F25BC6EC80014A156 /* NotificationPostable.swift in Sources */,
 				EAC1D62125BC6B180014A156 /* LoginDataModel.swift in Sources */,
 			);

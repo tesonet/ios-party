@@ -26,6 +26,7 @@ class LoaderDataModel: LoaderDataModelInterface {
     
     // MARK: - Dependencies
     var authorization: AuthorizationInterface = Authorization.shared
+    var serverListRepository: ServerListRepositoryInterface = ServerListRepository.shared
     
     // MARK: - Methods
     init(delegate: LoaderDataModelDelegate) {
@@ -65,7 +66,8 @@ class LoaderDataModel: LoaderDataModelInterface {
             return
         }
         
-        // FIXME: handle serverlist
+        serverListRepository.setServerList(serverList: request.output.serverList)
+        NotificationCenter.default.post(Notification.DidFinishLoading())
         delegate?.loaderDataModel(didFinishLoading: self)
     }
     

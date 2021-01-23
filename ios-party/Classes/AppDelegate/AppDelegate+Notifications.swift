@@ -19,6 +19,11 @@ extension AppDelegate {
                                                selector: #selector(didReceiveDidLogoutNotification),
                                                name: Notification.DidLogout.name,
                                                object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didReceiveDidFinishLoadingNotificaiton),
+                                               name: Notification.DidFinishLoading.name,
+                                               object: nil)
     }
     
     @objc func didReceiveDidFinishLoginNotification() {
@@ -27,5 +32,9 @@ extension AppDelegate {
     
     @objc func didReceiveDidLogoutNotification() {
         switchToLoggedOutMode()
+    }
+    
+    @objc func didReceiveDidFinishLoadingNotificaiton() {
+        switchToLoggedInMode()
     }
 }

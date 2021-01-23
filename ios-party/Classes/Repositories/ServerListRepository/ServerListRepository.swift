@@ -18,6 +18,8 @@ class ServerListRepository: ServerListRepositoryInterface {
     
     // MARK: - Constants
     let kDatabaseFileName = "database.sqlite"
+    let bundleDatabaseFileName: String = "database"
+    let bundleDatabaseFileExtension: String = "sqlite"
     
     // MARK: - Declarations
     static var shared: ServerListRepositoryInterface = ServerListRepository()
@@ -27,7 +29,8 @@ class ServerListRepository: ServerListRepositoryInterface {
     
     // MARK: - Methods
     init() {
-        databasePath = FileManagerTools.documentsDirectoryPath()?.appending(kDatabaseFileName)
+        databasePath = FileManagerTools.documentsDirectoryPath()?.appending("/\(kDatabaseFileName)")
+        prepareRepository()
         
         guard let databasePath = databasePath else {
             return
@@ -75,6 +78,31 @@ class ServerListRepository: ServerListRepositoryInterface {
             }
         } catch {
             log("\(error)")
+        }
+    }
+    
+    // MARK: - Helpers
+    func prepareRepository() {
+        guard let databasePath = databasePath else {
+            log("ERROR! Could not get database path.")
+            return
+        }
+        
+        guard FileManager.default.fileExists(atPath: databasePath) == false else {
+            return
+        }
+        
+        guard let bundleDBFilePath: String = Bundle.main.path(forResource: bundleDatabaseFileName,
+                                                              ofType: bundleDatabaseFileExtension) else {
+            log("ERROR! Could not create bundle file path with file name: \(bundleDatabaseFileName).\(bundleDatabaseFileExtension)")
+            return
+        }
+        
+        do {
+            try FileManager.default.copyItem(atPath: bundleDBFilePath, toPath: databasePath)
+            FileManagerTools.excludeFileFromICloudBackup(filePath: databasePath)
+        } catch {
+            log("ERROR!: \(error)")
         }
     }
 }

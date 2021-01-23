@@ -7,7 +7,6 @@
 
 import Foundation
 
-// No logout functionality but for the sake of completeness of implementation...
 extension Notification {
     final class DidLogout: NotificationPostable {
     }
