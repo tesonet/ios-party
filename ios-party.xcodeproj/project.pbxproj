@@ -164,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				EAC1D60325BC49D20014A156 /* TargetConfigurations */,
-				EAC1D60225BC49BF0014A156 /* Resources */,
 				EAC1D60125BC49A90014A156 /* Classes */,
+				EAC1D60225BC49BF0014A156 /* Resources */,
 			);
 			path = "ios-party";
 			sourceTree = "<group>";
@@ -203,8 +203,8 @@
 		EAC1D60225BC49BF0014A156 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EAC1D5CB25BC48D90014A156 /* LaunchScreen.storyboard */,
 				EAC1D5C925BC48D90014A156 /* Assets.xcassets */,
+				EAC1D5CB25BC48D90014A156 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
