@@ -17,27 +17,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nY-NM-VDz" userLabel="NameLabel">
-                        <rect key="frame" x="32" y="16" width="323" height="47"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="20" y="16" width="372" height="47"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhh-bI-K6H" userLabel="DistanceLabel">
-                        <rect key="frame" x="355" y="16" width="100" height="47"/>
+                        <rect key="frame" x="392" y="16" width="75" height="47"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="mXg-gc-zKD"/>
+                            <constraint firstAttribute="width" constant="75" id="mXg-gc-zKD"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3nY-NM-VDz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="7dk-6S-oLd"/>
+                    <constraint firstItem="3nY-NM-VDz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="7dk-6S-oLd"/>
                     <constraint firstAttribute="bottom" secondItem="yhh-bI-K6H" secondAttribute="bottom" constant="16" id="Alz-lU-vfI"/>
                     <constraint firstAttribute="bottom" secondItem="3nY-NM-VDz" secondAttribute="bottom" constant="16" id="IKN-rt-gLM"/>
                     <constraint firstItem="yhh-bI-K6H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="cI7-82-12S"/>
-                    <constraint firstAttribute="trailing" secondItem="yhh-bI-K6H" secondAttribute="trailing" constant="32" id="i1Z-lk-gxR"/>
+                    <constraint firstAttribute="trailing" secondItem="yhh-bI-K6H" secondAttribute="trailing" constant="20" id="i1Z-lk-gxR"/>
                     <constraint firstItem="3nY-NM-VDz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="nT0-H8-RJs"/>
                     <constraint firstItem="yhh-bI-K6H" firstAttribute="leading" secondItem="3nY-NM-VDz" secondAttribute="trailing" id="t8O-7s-ftT"/>
                 </constraints>

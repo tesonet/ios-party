@@ -8,10 +8,13 @@
 import Foundation
 
 protocol ServerListDataModelDelegate: AnyObject {
+    func serverListDataModel(didSortServerList: ServerListDataModelInterface)
 }
 
 protocol ServerListDataModelInterface {
     var serverList: [ServerEntity] { get }
+    
+    func sortServerList(by sortType: ServerSortType)
 }
 
 class ServerListDataModel: ServerListDataModelInterface {
@@ -29,5 +32,9 @@ class ServerListDataModel: ServerListDataModelInterface {
     init(delegate: ServerListDataModelDelegate) {
         self.delegate = delegate
         serverList = serverListRepository.serverList()
+    }
+    
+    func sortServerList(by sortType: ServerSortType) {
+        serverList = serverList.sorted(by: sortType)
     }
 }

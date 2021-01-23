@@ -21,7 +21,7 @@ class ServerCell: UITableViewCell {
         
         self.server = server
         nameLabel.text = server.name
-        distanceLabel.text = String(server.distance)
+        distanceLabel.text = "\(server.distance) km"
     }
     
     // MARK: - Helpers

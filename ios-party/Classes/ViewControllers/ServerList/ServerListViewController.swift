@@ -22,23 +22,11 @@ class ServerListViewController: BaseViewController,
         super.viewDidLoad()
         
         dataModel = ServerListDataModel(delegate: self)
-        
-        for server in dataModel.serverList {
-            log(server.name)
-        }
+        registerTableViewCells()
     }
-    
-    // MARK: - UITableViewDataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataModel.serverList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .red
-        return cell
-    }
-
 
     // MARK: - ServerListDataModelDelegate
+    func serverListDataModel(didSortServerList: ServerListDataModelInterface) {
+        tableView.reloadData()
+    }
 }
