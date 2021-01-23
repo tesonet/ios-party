@@ -8,11 +8,12 @@
 import Foundation
 
 protocol LoaderDataModelDelegate: AnyObject {
-    
+    func loaderDataModel(didFinishLoading dataModel: LoaderDataModelInterface)
+    func loaderDataModel(didFailLoading dataModel: LoaderDataModelInterface)
 }
 
 protocol LoaderDataModelInterface {
-    
+    func startDataLoad()
 }
 
 class LoaderDataModel: LoaderDataModelInterface {
@@ -23,5 +24,9 @@ class LoaderDataModel: LoaderDataModelInterface {
     // MARK: - Methods
     init(delegate: LoaderDataModelDelegate) {
         self.delegate = delegate
+    }
+    
+    func startDataLoad() {
+        // FIXME: implement
     }
 }

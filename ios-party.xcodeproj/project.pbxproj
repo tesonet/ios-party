@@ -37,6 +37,8 @@
 		EAC1D6CA25BCBC530014A156 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6C825BCBC530014A156 /* LoaderViewController.swift */; };
 		EAC1D6CB25BCBC530014A156 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D6C925BCBC530014A156 /* LoaderViewController.xib */; };
 		EAC1D6D425BCBC790014A156 /* LoaderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */; };
+		EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6F225BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift */; };
+		EAC1D6F925BCC1630014A156 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6F825BCC1620014A156 /* BaseViewController.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		EAC1D6C825BCBC530014A156 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		EAC1D6C925BCBC530014A156 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDataModel.swift; sourceTree = "<group>"; };
+		EAC1D6F225BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+ActivityIndicatorInterface.swift"; sourceTree = "<group>"; };
+		EAC1D6F825BCC1620014A156 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +252,7 @@
 		EAC1D60D25BC68F50014A156 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D6F725BCC1460014A156 /* Base */,
 				EAC1D6C725BCBC3F0014A156 /* Loader */,
 				EAC1D60C25BC68D60014A156 /* Login */,
 			);
@@ -275,8 +280,8 @@
 		EAC1D62825BC6BDE0014A156 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				EAC1D62925BC6BF40014A156 /* LogTools.swift */,
-				EAC1D65B25BC6F360014A156 /* ThreadSafetyTools.swift */,
+				EAC1D6F125BCC0EF0014A156 /* GeneralUse */,
+				EAC1D6F025BCC0E90014A156 /* UI */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -402,6 +407,31 @@
 				EAC1D6D325BCBC790014A156 /* LoaderDataModel.swift */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		EAC1D6F025BCC0E90014A156 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D6F225BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EAC1D6F125BCC0EF0014A156 /* GeneralUse */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D62925BC6BF40014A156 /* LogTools.swift */,
+				EAC1D65B25BC6F360014A156 /* ThreadSafetyTools.swift */,
+			);
+			path = GeneralUse;
+			sourceTree = "<group>";
+		};
+		EAC1D6F725BCC1460014A156 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D6F825BCC1620014A156 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -648,6 +678,8 @@
 				EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */,
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
 				EAC1D6B325BCB90D0014A156 /* LoginInput.swift in Sources */,
+				EAC1D6F925BCC1630014A156 /* BaseViewController.swift in Sources */,
+				EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
 				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,

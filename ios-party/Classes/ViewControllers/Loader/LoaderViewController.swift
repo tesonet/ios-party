@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoaderViewController: UIViewController,
+class LoaderViewController: BaseViewController,
                             LoaderDataModelDelegate {
 
     // MARK: - Declarations
@@ -18,5 +18,18 @@ class LoaderViewController: UIViewController,
         super.viewDidLoad()
 
         dataModel = LoaderDataModel(delegate: self)
+        // No large spinner in assets, no large spinner in the app. :]
+        showActivityIndicator()
+        
+        dataModel.startDataLoad()
+    }
+    
+    // MARK: - LoaderDataModelDelegate
+    func loaderDataModel(didFinishLoading dataModel: LoaderDataModelInterface) {
+        // FIXME: implement
+    }
+    
+    func loaderDataModel(didFailLoading dataModel: LoaderDataModelInterface) {
+        // FIXME: implement
     }
 }

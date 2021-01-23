@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, LoginDataModelDelegate {
+class LoginViewController: BaseViewController, LoginDataModelDelegate {
 
     // MARK: - Declarations
     var dataModel: LoginDataModelInterface!
@@ -36,19 +36,16 @@ class LoginViewController: UIViewController, LoginDataModelDelegate {
     
     // MARK: - LoginDataModelDelegate
     func loginDataModel(didStartLogin dataModel: LoginDataModelInterface) {
-        // FIXME: show activity indicator
-        log("WARNING! Not implemented")
+        showActivityIndicator()
     }
     
     func loginDataModel(didFinishLogin dataModel: LoginDataModelInterface) {
-        // FIXME: hide activity indicator
-        log("WARNING! Not implemented")
+        hideActivityIndicator()
     }
     
     func loginDataModel(didFailLogin dataModel: LoginDataModelInterface) {
-        // FIXME: hide activity indicator
         // FIXME: show error
-        log("WARNING! Not implemented")
+        hideActivityIndicator()
     }
     
     // MARK: - Keyboard
