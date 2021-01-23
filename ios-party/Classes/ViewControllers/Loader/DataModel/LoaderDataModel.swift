@@ -65,6 +65,7 @@ class LoaderDataModel: LoaderDataModelInterface {
             return
         }
         
+        // FIXME: handle serverlist
         delegate?.loaderDataModel(didFinishLoading: self)
     }
     

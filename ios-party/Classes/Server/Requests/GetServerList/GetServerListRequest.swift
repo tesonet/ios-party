@@ -47,7 +47,7 @@ class GetServerListRequest {
             return
         }
         
-        log("\(responseDictList)")
+        output.serverList = ServerEntity.serverListFrom(dictList: responseDictList)
         output.isSuccessful = true
         
         completionHandler?()
