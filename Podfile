@@ -5,6 +5,7 @@ def common_pods
   use_frameworks!
   pod 'KeychainAccess', '~> 4.1'
   pod 'Alamofire', '~> 5.4'
+  pod 'PureLayout', '~> 3.1'
 end
 
 target 'ios-party' do
