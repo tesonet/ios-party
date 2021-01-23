@@ -11,10 +11,10 @@ import Alamofire
 class LoginRequest {
     
     // MARK: - Constants
-    let kLoginRequestURLString = "https://playground.tesonet.lt/v1/tokens"
-    let kLoginURLParameterKey = "username"
-    let kPasswordURLParameterKey = "password"
-    let kTokenKeyInJSONResponse = "token"
+    private let kLoginRequestURLString = "https://playground.tesonet.lt/v1/tokens"
+    private let kLoginURLParameterKey = "username"
+    private let kPasswordURLParameterKey = "password"
+    private let kTokenKeyInJSONResponse = "token"
     
     // MARK: - Declarations
     private (set) var input: LoginInput
