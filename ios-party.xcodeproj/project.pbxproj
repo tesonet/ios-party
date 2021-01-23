@@ -31,6 +31,9 @@
 		EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67625BC72780014A156 /* ApplicationRepository.swift */; };
 		EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67F25BC75B90014A156 /* ImageTextField.swift */; };
 		EAC1D68B25BC812F0014A156 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D68A25BC812F0014A156 /* RoundedButton.swift */; };
+		EAC1D6A625BCB1EE0014A156 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6A525BCB1EE0014A156 /* LoginRequest.swift */; };
+		EAC1D6AE25BCB4450014A156 /* LoginOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6AD25BCB4450014A156 /* LoginOutput.swift */; };
+		EAC1D6B325BCB90D0014A156 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D6B225BCB90D0014A156 /* LoginInput.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +91,9 @@
 		EAC1D67625BC72780014A156 /* ApplicationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRepository.swift; sourceTree = "<group>"; };
 		EAC1D67F25BC75B90014A156 /* ImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextField.swift; sourceTree = "<group>"; };
 		EAC1D68A25BC812F0014A156 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		EAC1D6A525BCB1EE0014A156 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		EAC1D6AD25BCB4450014A156 /* LoginOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOutput.swift; sourceTree = "<group>"; };
+		EAC1D6B225BCB90D0014A156 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +204,7 @@
 				EAC1D63125BC6C8B0014A156 /* Features */,
 				EAC1D60E25BC68FC0014A156 /* AppDelegate */,
 				EAC1D60D25BC68F50014A156 /* ViewControllers */,
+				EAC1D6A425BCB1D80014A156 /* Server */,
 				EAC1D63A25BC6DC70014A156 /* Repositories */,
 				EAC1D67E25BC759B0014A156 /* Views */,
 				EAC1D62825BC6BDE0014A156 /* Tools */,
@@ -344,6 +351,32 @@
 				EAC1D68A25BC812F0014A156 /* RoundedButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EAC1D6A425BCB1D80014A156 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D6BA25BCBAB90014A156 /* Requests */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		EAC1D6BA25BCBAB90014A156 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D6BB25BCBAC50014A156 /* Login */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		EAC1D6BB25BCBAC50014A156 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D6A525BCB1EE0014A156 /* LoginRequest.swift */,
+				EAC1D6B225BCB90D0014A156 /* LoginInput.swift */,
+				EAC1D6AD25BCB4450014A156 /* LoginOutput.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,12 +621,15 @@
 				EAC1D63D25BC6DF40014A156 /* KeychainRepository.swift in Sources */,
 				EAC1D66725BC6FF50014A156 /* Notification+DidLogin.swift in Sources */,
 				EAC1D61125BC69170014A156 /* LoginViewController.swift in Sources */,
+				EAC1D6B325BCB90D0014A156 /* LoginInput.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
 				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,
 				EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */,
 				EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */,
+				EAC1D6A625BCB1EE0014A156 /* LoginRequest.swift in Sources */,
 				EAC1D65725BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift in Sources */,
+				EAC1D6AE25BCB4450014A156 /* LoginOutput.swift in Sources */,
 				EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */,
 				EAC1D68B25BC812F0014A156 /* RoundedButton.swift in Sources */,
 				EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */,

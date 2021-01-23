@@ -20,10 +20,6 @@ protocol LoginDataModelInterface {
 
 class LoginDataModel: LoginDataModelInterface {
     
-    // MARK: - Constants
-    let kLoginURLParameterKey = "username"
-    let kPasswordURLParameterKey = "password"
-    
     // MARK: - Declarations
     weak var delegate: LoginDataModelDelegate?
     var isLoading = false
@@ -48,41 +44,22 @@ class LoginDataModel: LoginDataModelInterface {
         startLoginRequest(username: username, password: password)
     }
     
-    // FIXME: extract to class
     func startLoginRequest(username: String, password: String) {
-        var parameterDict: [String: String] = [:]
-        parameterDict[kLoginURLParameterKey] = username
-        parameterDict[kPasswordURLParameterKey] = password
-        
-        let request: DataRequest = AF.request("https://playground.tesonet.lt/v1/tokens",
-                                              method: .post,
-                                              parameters: parameterDict,
-                                              encoding: JSONEncoding.default)
-            .validate(statusCode: 200..<300)
-        
-        request.responseJSON(completionHandler: { [weak self] response in
-            switch response.result {
-            case .success(let data):
-                self?.didFinishLoginRequest(responseData: data)
-                
-            case .failure(let error):
-                self?.didFailLoginRequest(error: error)
-            }
-        })
-    }
-    
-    func didFinishLoginRequest(responseData: Any) {
-        isLoading = false
-        
-        guard let responseDict = responseData as? [String: Any] else {
-            log("ERROR! Could not parse response dictionary from response data: \(responseData)")
-            delegate?.loginDataModel(didFailLogin: self)
-            return
+        let input = LoginInput(username: username, password: password)
+        let request = LoginRequest(withInput: input)
+        request.completionHandler = { [weak self] in
+            self?.didFinishLoginRequest(request)
         }
         
-        guard let token = responseDict["token"] as? String else {
-            log("ERROR! Could not parse token from response dictionary: \(responseDict)")
-            delegate?.loginDataModel(didFailLogin: self)
+        request.start()
+    }
+    
+    func didFinishLoginRequest(_ request: LoginRequest) {
+        isLoading = false
+        
+        guard request.output.isSuccessful,
+              let token: String = request.output.token else {
+            didFailLoginRequest(error: request.output.error)
             return
         }
         
@@ -90,8 +67,12 @@ class LoginDataModel: LoginDataModelInterface {
         delegate?.loginDataModel(didFinishLogin: self)
     }
     
-    func didFailLoginRequest(error: AFError) {
-        isLoading = false
+    func didFailLoginRequest(error: AFError?) {
+        guard let error: AFError = error else {
+            log("ERROR Login failed without error.")
+            delegate?.loginDataModel(didFailLogin: self)
+            return
+        }
         
         if error.responseCode == 401 {
             log("ERROR! Login failed with code 401")
