@@ -29,6 +29,8 @@
 		EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D66B25BC70500014A156 /* Notification+DidLogout.swift */; };
 		EAC1D67125BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */; };
 		EAC1D67725BC72780014A156 /* ApplicationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67625BC72780014A156 /* ApplicationRepository.swift */; };
+		EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D67F25BC75B90014A156 /* ImageTextField.swift */; };
+		EAC1D68B25BC812F0014A156 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D68A25BC812F0014A156 /* RoundedButton.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		EAC1D66B25BC70500014A156 /* Notification+DidLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+DidLogout.swift"; sourceTree = "<group>"; };
 		EAC1D67025BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AuthorizationNotifications.swift"; sourceTree = "<group>"; };
 		EAC1D67625BC72780014A156 /* ApplicationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRepository.swift; sourceTree = "<group>"; };
+		EAC1D67F25BC75B90014A156 /* ImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextField.swift; sourceTree = "<group>"; };
+		EAC1D68A25BC812F0014A156 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +199,7 @@
 				EAC1D60E25BC68FC0014A156 /* AppDelegate */,
 				EAC1D60D25BC68F50014A156 /* ViewControllers */,
 				EAC1D63A25BC6DC70014A156 /* Repositories */,
+				EAC1D67E25BC759B0014A156 /* Views */,
 				EAC1D62825BC6BDE0014A156 /* Tools */,
 			);
 			path = Classes;
@@ -330,6 +335,15 @@
 				EAC1D67625BC72780014A156 /* ApplicationRepository.swift */,
 			);
 			path = ApplicationRepository;
+			sourceTree = "<group>";
+		};
+		EAC1D67E25BC759B0014A156 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D67F25BC75B90014A156 /* ImageTextField.swift */,
+				EAC1D68A25BC812F0014A156 /* RoundedButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -581,6 +595,8 @@
 				EAC1D66C25BC70500014A156 /* Notification+DidLogout.swift in Sources */,
 				EAC1D65725BC6EFF0014A156 /* NotificationCenter+NotificationPostable.swift in Sources */,
 				EAC1D66125BC6F790014A156 /* Notification+NotificationPostable.swift in Sources */,
+				EAC1D68B25BC812F0014A156 /* RoundedButton.swift in Sources */,
+				EAC1D68025BC75B90014A156 /* ImageTextField.swift in Sources */,
 				EAC1D65C25BC6F360014A156 /* ThreadSafetyTools.swift in Sources */,
 				EAC1D67125BC70AD0014A156 /* AppDelegate+AuthorizationNotifications.swift in Sources */,
 				EAC1D64F25BC6EC80014A156 /* NotificationPostable.swift in Sources */,

@@ -7,6 +7,52 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginDataModelDelegate {
 
+    // MARK: - Declarations
+    var dataModel: LoginDataModelInterface!
+    
+    @IBOutlet weak var emailTextField: ImageTextField!
+    @IBOutlet weak var passwordTextField: ImageTextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // MARK: - Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        dataModel = LoginDataModel(delegate: self)
+    }
+    
+    // MARK: - UI Actions
+    @IBAction func onLoginButtonTap(_ sender: Any) {
+        guard let username = emailTextField.text,
+            let password = passwordTextField.text else {
+            return
+        }
+        
+        hideKeyboard()
+        dataModel.login(withUsername: username, password: password)
+    }
+    
+    // MARK: - LoginDataModelDelegate
+    func loginDataModel(didStartLogin dataModel: LoginDataModelInterface) {
+        // FIXME: show activity indicator
+        log("WARNING! Not implemented")
+    }
+    
+    func loginDataModel(didFinishLogin dataModel: LoginDataModelInterface) {
+        // FIXME: hide activity indicator
+        log("WARNING! Not implemented")
+    }
+    
+    func loginDataModel(didFailLogin dataModel: LoginDataModelInterface) {
+        // FIXME: hide activity indicator
+        // FIXME: show error
+        log("WARNING! Not implemented")
+    }
+    
+    // MARK: - Keyboard
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
 }

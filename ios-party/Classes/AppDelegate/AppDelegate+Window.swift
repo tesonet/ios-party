@@ -36,9 +36,9 @@ extension AppDelegate {
     func initialViewController() -> UIViewController {
         switch appMode {
         case .loggedIn:
-            return loginViewController()
-        case .loggedOut:
             return serverListViewController()
+        case .loggedOut:
+            return loginViewController()
         }
     }
     
