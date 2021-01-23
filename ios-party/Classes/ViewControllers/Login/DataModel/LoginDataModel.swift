@@ -25,7 +25,7 @@ class LoginDataModel: LoginDataModelInterface {
     var isLoading = false
 
     // MARK: - Dependencies
-    // FIXME: add authorization client
+    var authorization: AuthorizationInterface = Authorization.shared
     
     // MARK: - Methods
     init(delegate: LoginDataModelDelegate) {
