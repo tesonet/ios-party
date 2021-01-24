@@ -1,0 +1,16 @@
+"username_placeholder"                  = "Username";
+"password_placeholder"                  = "Password";
+"login_action"                          = "Log in";
+"sort_action"                           = "Sort";
+"server_header"                         = "SERVER";
+"distance_header"                       = "DISTANCE";
+"sort_distance"                         = "Distance";
+"sort_alphanumerical"                   = "Alphanumerical";
+"cancel_action"                         = "Cancel";
+"x_km"                                  = "%@ km";
+"loading_message"                       = "Fetching the list...";
+"okay_action"                           = "Okay";
+"wrong_credentials_title"               = "wrong credentials";
+"wrong_credentials_description"         = "Your username or password is wrong.";
+"generic_error_title"                   = "Oops!";
+"generic_error_description"             = "Something happened.";

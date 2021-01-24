@@ -1,0 +1,6 @@
+framework module Pods_ios_party_ios_partyUITests {
+  umbrella header "Pods-ios-party-ios-partyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

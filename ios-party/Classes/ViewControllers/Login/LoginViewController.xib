@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ios_party" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="8By-VL-lcU" id="NlE-c0-Q2S"/>
+                <outlet property="passwordTextField" destination="btk-3P-iV1" id="Fwu-1C-lfS"/>
+                <outlet property="usernameTextField" destination="WEt-dY-JBW" id="fzz-Br-6a6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ND3-00-DK3" userLabel="backgroundImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dqa-72-jVB">
+                    <rect key="frame" x="60" y="350" width="294" height="196"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-dY-JBW" userLabel="UserNameTextField" customClass="ImageTextField" customModule="ios_party" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="294" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="fJL-8U-fTW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ico-username"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="btk-3P-iV1" userLabel="PasswordTextField" customClass="ImageTextField" customModule="ios_party" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="68" width="294" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="wtx-A2-jNz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ico-lock"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8By-VL-lcU" userLabel="LoginButton" customClass="RoundedButton" customModule="ios_party" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="136" width="294" height="60"/>
+                            <color key="backgroundColor" red="0.62228965759999999" green="0.83398950100000002" blue="0.20228037239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Neo-fh-cb4"/>
+                            </constraints>
+                            <state key="normal" title="Log in">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onLoginButtonTap:" destination="-1" eventType="touchUpInside" id="QEb-lI-cH8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="7a4-Wr-gfY">
+                    <rect key="frame" x="103.5" y="186" width="207" height="64"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ND3-00-DK3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4LX-dR-hxF"/>
+                <constraint firstItem="7a4-Wr-gfY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9SI-6d-Ss2"/>
+                <constraint firstItem="dqa-72-jVB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="IUL-hH-a8X"/>
+                <constraint firstItem="dqa-72-jVB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MDW-d7-5F9"/>
+                <constraint firstAttribute="bottom" secondItem="ND3-00-DK3" secondAttribute="bottom" id="Psh-Uq-OYz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dqa-72-jVB" secondAttribute="trailing" constant="60" id="V04-S4-ebz"/>
+                <constraint firstItem="dqa-72-jVB" firstAttribute="top" secondItem="7a4-Wr-gfY" secondAttribute="bottom" constant="100" id="Z8t-Td-FLZ"/>
+                <constraint firstItem="ND3-00-DK3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nGD-hU-jvR"/>
+                <constraint firstAttribute="trailing" secondItem="ND3-00-DK3" secondAttribute="trailing" id="tRv-p3-ckS"/>
+                <constraint firstItem="7a4-Wr-gfY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="yl8-OG-8vV"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="8By-VL-lcU">
+            <size key="intrinsicContentSize" width="42" height="30"/>
+        </designable>
+        <designable name="WEt-dY-JBW">
+            <size key="intrinsicContentSize" width="94" height="34"/>
+        </designable>
+        <designable name="btk-3P-iV1">
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="bg" width="1920" height="1080"/>
+        <image name="ico-lock" width="16" height="20"/>
+        <image name="ico-username" width="18" height="20"/>
+        <image name="logo-white" width="246" height="64"/>
+    </resources>
+</document>
