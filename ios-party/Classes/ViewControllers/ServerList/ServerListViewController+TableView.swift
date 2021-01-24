@@ -7,11 +7,15 @@
 
 import UIKit
 
+fileprivate let kTableViewSectionHeaderDefaultHeight: CGFloat = 55
+fileprivate let kTableViewSectionHeaderDisabledHeight: CGFloat = .leastNormalMagnitude
+
 extension ServerListViewController {
     
     // MARK: - Methods
     func registerTableViewCells() {
         tableView.registerCellNib(withType: ServerCell.self)
+        tableView.registerHeaderFooterViewNib(withType: ServerListHeaderView.self)
     }
     
     // MARK: - UITableViewDataSource
@@ -36,5 +40,41 @@ extension ServerListViewController {
         
         cell.populate(withServer: server)
         return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        guard let sectionType = UserDetailsSectionType(rawValue: section) else {
+//            log("ERROR! Could not get UserDetailsSectionType with rawValue: \(section)")
+//            return kTableViewSectionHeaderDisabledHeight
+//        }
+        
+        return kTableViewSectionHeaderDefaultHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        guard let sectionType = UserDetailsSectionType(rawValue: section) else {
+//            log("ERROR! Could not get UserDetailsSectionType with rawValue: \(section)")
+//            return nil
+//        }
+        
+        return serverListHeaderView()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return kTableViewSectionHeaderDisabledHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+    func serverListHeaderView() -> UIView? {
+        guard let headerView: ServerListHeaderView = tableView.dequeueReusableHeaderFooterView() else {
+            log("ERROR! Could not dequeue ServerListHeaderView")
+            return nil
+        }
+        
+        return headerView
     }
 }

@@ -58,6 +58,8 @@
 		EAC1D7A225BCED2B0014A156 /* ServerEntity+ArrayTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7A125BCED2B0014A156 /* ServerEntity+ArrayTools.swift */; };
 		EAC1D7A725BCED4D0014A156 /* ServerSortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7A625BCED4D0014A156 /* ServerSortType.swift */; };
 		EAC1D7AF25BCEEF50014A156 /* ServerListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7AE25BCEEF40014A156 /* ServerListViewController+TableView.swift */; };
+		EAC1D7BA25BD6D020014A156 /* ServerListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7B925BD6D020014A156 /* ServerListHeaderView.swift */; };
+		EAC1D7C225BD6D130014A156 /* ServerListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D7C125BD6D130014A156 /* ServerListHeaderView.xib */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +144,8 @@
 		EAC1D7A125BCED2B0014A156 /* ServerEntity+ArrayTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerEntity+ArrayTools.swift"; sourceTree = "<group>"; };
 		EAC1D7A625BCED4D0014A156 /* ServerSortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSortType.swift; sourceTree = "<group>"; };
 		EAC1D7AE25BCEEF40014A156 /* ServerListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerListViewController+TableView.swift"; sourceTree = "<group>"; };
+		EAC1D7B925BD6D020014A156 /* ServerListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListHeaderView.swift; sourceTree = "<group>"; };
+		EAC1D7C125BD6D130014A156 /* ServerListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListHeaderView.xib; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -526,6 +530,7 @@
 		EAC1D76925BCDF910014A156 /* ServerList */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D7B725BD6CBE0014A156 /* TableViewHeaderFooterViews */,
 				EAC1D77A25BCE5EA0014A156 /* TableViewCells */,
 				EAC1D77425BCE3640014A156 /* DataModel */,
 				EAC1D76A25BCDFA70014A156 /* ServerListViewController.swift */,
@@ -577,6 +582,23 @@
 				EAC1D7A625BCED4D0014A156 /* ServerSortType.swift */,
 			);
 			path = Server;
+			sourceTree = "<group>";
+		};
+		EAC1D7B725BD6CBE0014A156 /* TableViewHeaderFooterViews */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D7B825BD6CCB0014A156 /* ServerListHeaderView */,
+			);
+			path = TableViewHeaderFooterViews;
+			sourceTree = "<group>";
+		};
+		EAC1D7B825BD6CCB0014A156 /* ServerListHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D7B925BD6D020014A156 /* ServerListHeaderView.swift */,
+				EAC1D7C125BD6D130014A156 /* ServerListHeaderView.xib */,
+			);
+			path = ServerListHeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -687,6 +709,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC1D7C225BD6D130014A156 /* ServerListHeaderView.xib in Resources */,
 				EAC1D5CD25BC48D90014A156 /* LaunchScreen.storyboard in Resources */,
 				EAC1D6CB25BCBC530014A156 /* LoaderViewController.xib in Resources */,
 				EAC1D76525BCD9E60014A156 /* database.sqlite in Resources */,
@@ -838,6 +861,7 @@
 				EAC1D6F325BCC10D0014A156 /* UIActivityIndicatorView+ActivityIndicatorInterface.swift in Sources */,
 				EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */,
 				EAC1D78725BCE77E0014A156 /* UITableView+Tools.swift in Sources */,
+				EAC1D7BA25BD6D020014A156 /* ServerListHeaderView.swift in Sources */,
 				EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */,
 				EAC1D64525BC6E4C0014A156 /* Authorization.swift in Sources */,
 				EAC1D7AF25BCEEF50014A156 /* ServerListViewController+TableView.swift in Sources */,
