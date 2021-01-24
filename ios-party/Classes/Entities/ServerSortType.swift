@@ -10,5 +10,16 @@ import Foundation
 enum ServerSortType {
     case distance
     case alphanumerical
+
+    // MARK: - Methods
+    func title() -> String {
+        switch self {
+        case .distance:
+            return "Distance"
+            
+        case .alphanumerical:
+            return "Alphanumerical"
+        }
+    }
 }
 

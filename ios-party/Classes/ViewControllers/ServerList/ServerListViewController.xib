@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-vo-k7A">
-                    <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="698"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                     <connections>
@@ -28,7 +28,7 @@
                         <outlet property="delegate" destination="-1" id="NAq-ng-S1O"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-gh-mq6">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-gh-mq6" userLabel="SortButton">
                     <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                     <color key="backgroundColor" red="0.25452247259999999" green="0.26527598499999999" blue="0.38665807250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -39,32 +39,76 @@
                     <state key="normal" title="Sort" image="ico-sort-light">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="onSortButtonTap:" destination="-1" eventType="touchUpInside" id="KCh-Sk-M0h"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37s-as-8EO">
                     <rect key="frame" x="0.0" y="862" width="414" height="34"/>
                     <color key="backgroundColor" red="0.25452247259999999" green="0.26527598499999999" blue="0.38665807250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mby-n2-DfF">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-dark" translatesAutoresizingMaskIntoConstraints="NO" id="tCb-ju-qWe" userLabel="LogoImageView">
+                            <rect key="frame" x="8" y="16" width="130" height="28"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCz-ai-HGz" userLabel="LogoutButton">
+                            <rect key="frame" x="358" y="10" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="OQ2-2O-j61"/>
+                                <constraint firstAttribute="height" constant="40" id="Tc8-We-t1o"/>
+                            </constraints>
+                            <state key="normal" image="ico-logout"/>
+                            <connections>
+                                <action selector="onLogoutButtonTap:" destination="-1" eventType="touchUpInside" id="iis-og-pDz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94208937879999999" green="0.94222468140000004" blue="0.94205981490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="tCb-ju-qWe" firstAttribute="top" secondItem="Mby-n2-DfF" secondAttribute="top" constant="16" id="0Mt-3o-zCc"/>
+                        <constraint firstAttribute="bottom" secondItem="tCb-ju-qWe" secondAttribute="bottom" constant="16" id="AWu-Ye-Hx1"/>
+                        <constraint firstItem="tCb-ju-qWe" firstAttribute="leading" secondItem="Mby-n2-DfF" secondAttribute="leading" constant="8" id="Tvz-o7-UZi"/>
+                        <constraint firstAttribute="trailing" secondItem="pCz-ai-HGz" secondAttribute="trailing" constant="16" id="lIn-ZL-sby"/>
+                        <constraint firstItem="pCz-ai-HGz" firstAttribute="centerY" secondItem="Mby-n2-DfF" secondAttribute="centerY" id="qWI-g1-MMt"/>
+                        <constraint firstAttribute="height" constant="60" id="r2z-0u-18E"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pov-bP-Akh">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <color key="backgroundColor" red="0.94208937879999999" green="0.94222468140000004" blue="0.94205981490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Mby-n2-DfF" firstAttribute="top" secondItem="Pov-bP-Akh" secondAttribute="bottom" id="0Qp-nY-dPr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JMi-gh-mq6" secondAttribute="trailing" id="54R-xc-GJb"/>
+                <constraint firstAttribute="trailing" secondItem="Pov-bP-Akh" secondAttribute="trailing" id="5p1-Qe-QOc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kAF-vo-k7A" secondAttribute="trailing" id="DPR-gR-pHL"/>
                 <constraint firstItem="37s-as-8EO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IxL-Bf-4ou"/>
+                <constraint firstItem="kAF-vo-k7A" firstAttribute="top" secondItem="Mby-n2-DfF" secondAttribute="bottom" id="Kt7-8w-mki"/>
                 <constraint firstAttribute="trailing" secondItem="37s-as-8EO" secondAttribute="trailing" id="NMY-qS-xv2"/>
                 <constraint firstItem="kAF-vo-k7A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zrx-bK-pnW"/>
+                <constraint firstItem="Pov-bP-Akh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c4g-1d-rXT"/>
                 <constraint firstItem="JMi-gh-mq6" firstAttribute="top" secondItem="kAF-vo-k7A" secondAttribute="bottom" id="hUr-6K-VZP"/>
-                <constraint firstItem="kAF-vo-k7A" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iVF-Pd-ffQ"/>
                 <constraint firstAttribute="bottom" secondItem="37s-as-8EO" secondAttribute="bottom" id="kmI-7v-LOi"/>
+                <constraint firstItem="Mby-n2-DfF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="m04-KW-NFe"/>
+                <constraint firstItem="Pov-bP-Akh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rOf-UJ-azJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JMi-gh-mq6" secondAttribute="bottom" id="vFW-EN-hbd"/>
                 <constraint firstItem="37s-as-8EO" firstAttribute="top" secondItem="JMi-gh-mq6" secondAttribute="bottom" id="vg9-GL-RR3"/>
+                <constraint firstItem="Mby-n2-DfF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wbH-FZ-AMu"/>
                 <constraint firstItem="JMi-gh-mq6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wc2-jU-eea"/>
+                <constraint firstItem="Mby-n2-DfF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="x9T-wl-0SM"/>
             </constraints>
             <point key="canvasLocation" x="89.855072463768124" y="117.85714285714285"/>
         </view>
     </objects>
     <resources>
+        <image name="ico-logout" width="29.5" height="29.5"/>
         <image name="ico-sort-light" width="12" height="10"/>
+        <image name="logo-dark" width="130" height="34"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

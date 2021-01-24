@@ -36,5 +36,6 @@ class ServerListDataModel: ServerListDataModelInterface {
     
     func sortServerList(by sortType: ServerSortType) {
         serverList = serverList.sorted(by: sortType)
+        delegate?.serverListDataModel(didSortServerList: self)
     }
 }
