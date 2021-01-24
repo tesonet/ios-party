@@ -20,16 +20,16 @@ class LoaderViewController: BaseViewController,
         dataModel = LoaderDataModel(delegate: self)
         // No large spinner in assets, no large spinner in the app. :]
         showActivityIndicator()
-        
         dataModel.startDataLoad()
     }
     
     // MARK: - LoaderDataModelDelegate
     func loaderDataModel(didFinishLoading dataModel: LoaderDataModelInterface) {
-        // FIXME: implement
+        hideActivityIndicator()
     }
     
     func loaderDataModel(didFailLoading dataModel: LoaderDataModelInterface) {
-        // FIXME: implement
+        hideActivityIndicator()
+        // FIXME: display alert
     }
 }

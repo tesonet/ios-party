@@ -493,10 +493,7 @@
 		EAC1D71425BCC5210014A156 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				EAC1D71525BCC52D0014A156 /* ServerEntity.swift */,
-				EAC1D7A125BCED2B0014A156 /* ServerEntity+ArrayTools.swift */,
-				EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */,
-				EAC1D7A625BCED4D0014A156 /* ServerSortType.swift */,
+				EAC1D7B625BD6C740014A156 /* Server */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -569,6 +566,17 @@
 				EAC1D74D25BCCFAD0014A156 /* FileManagerTools.swift */,
 			);
 			path = FileManager;
+			sourceTree = "<group>";
+		};
+		EAC1D7B625BD6C740014A156 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D71525BCC52D0014A156 /* ServerEntity.swift */,
+				EAC1D7A125BCED2B0014A156 /* ServerEntity+ArrayTools.swift */,
+				EAC1D75225BCD15D0014A156 /* ServerEntity+GRDB.swift */,
+				EAC1D7A625BCED4D0014A156 /* ServerSortType.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
