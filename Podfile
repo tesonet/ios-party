@@ -7,6 +7,7 @@ def common_pods
   pod 'Alamofire', '~> 5.4'
   pod 'PureLayout', '~> 3.1'
   pod 'GRDB.swift', '~> 5.3'
+  pod 'R.swift', '~> 5.1'
 end
 
 target 'ios-party' do
