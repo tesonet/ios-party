@@ -46,9 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - App Mode
     func setupAppMode() {
-        // FIXME: set to data loading mode if data loading required
         if authorization.isLoggedIn() {
-            appMode = .loggedIn
+            appMode = applicationRepository.didLoadData() ? .loggedIn : .dataLoading
         } else {
             appMode = .loggedOut
         }

@@ -27,6 +27,7 @@ class LoaderDataModel: LoaderDataModelInterface {
     // MARK: - Dependencies
     var authorization: AuthorizationInterface = Authorization.shared
     var serverListRepository: ServerListRepositoryInterface = ServerListRepository.shared
+    var applicationRepository: ApplicationRepositoryInterface = ApplicationRepository()
     
     // MARK: - Methods
     init(delegate: LoaderDataModelDelegate) {
@@ -45,6 +46,7 @@ class LoaderDataModel: LoaderDataModelInterface {
         }
         
         isLoading = true
+        applicationRepository.setDidLoadData(to: false)
         startGetServerListRequest(authorizationToken: authorizationToken)
     }
     
@@ -67,6 +69,7 @@ class LoaderDataModel: LoaderDataModelInterface {
         }
         
         serverListRepository.setServerList(serverList: request.output.serverList)
+        applicationRepository.setDidLoadData(to: true)
         NotificationCenter.default.post(Notification.DidFinishLoading())
         delegate?.loaderDataModel(didFinishLoading: self)
     }
