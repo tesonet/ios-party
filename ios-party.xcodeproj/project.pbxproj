@@ -11,7 +11,7 @@
 		622999CCBEDB9EAD909668FB /* Pods_ios_partyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C619A83DA9B47BA11344BB2 /* Pods_ios_partyTests.framework */; };
 		EAC1D5CA25BC48D90014A156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D5C925BC48D90014A156 /* Assets.xcassets */; };
 		EAC1D5CD25BC48D90014A156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D5CB25BC48D90014A156 /* LaunchScreen.storyboard */; };
-		EAC1D5D825BC48D90014A156 /* ios_partyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D5D725BC48D90014A156 /* ios_partyTests.swift */; };
+		EAC1D5D825BC48D90014A156 /* ServerListDataModel_sortServerListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D5D725BC48D90014A156 /* ServerListDataModel_sortServerListTests.swift */; };
 		EAC1D5E325BC48DA0014A156 /* ios_partyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D5E225BC48DA0014A156 /* ios_partyUITests.swift */; };
 		EAC1D5F725BC49950014A156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D5F625BC49950014A156 /* AppDelegate.swift */; };
 		EAC1D60825BC68B80014A156 /* AppDelegate+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D60725BC68B80014A156 /* AppDelegate+Window.swift */; };
@@ -62,6 +62,7 @@
 		EAC1D7C225BD6D130014A156 /* ServerListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D7C125BD6D130014A156 /* ServerListHeaderView.xib */; };
 		EAC1D7D725BD7E730014A156 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7D625BD7E730014A156 /* R.generated.swift */; };
 		EAC1D7E425BD7F700014A156 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D7E625BD7F700014A156 /* Localizable.strings */; };
+		EAC1D7F325BD9BCD0014A156 /* ServerListDataModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7F225BD9BCD0014A156 /* ServerListDataModelDelegateMock.swift */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,7 +97,7 @@
 		EAC1D5CC25BC48D90014A156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAC1D5CE25BC48D90014A156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC1D5D325BC48D90014A156 /* ios-partyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-partyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAC1D5D725BC48D90014A156 /* ios_partyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_partyTests.swift; sourceTree = "<group>"; };
+		EAC1D5D725BC48D90014A156 /* ServerListDataModel_sortServerListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModel_sortServerListTests.swift; sourceTree = "<group>"; };
 		EAC1D5D925BC48D90014A156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC1D5DE25BC48D90014A156 /* ios-partyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-partyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC1D5E225BC48DA0014A156 /* ios_partyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_partyUITests.swift; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		EAC1D7C125BD6D130014A156 /* ServerListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListHeaderView.xib; sourceTree = "<group>"; };
 		EAC1D7D625BD7E730014A156 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		EAC1D7E525BD7F700014A156 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EAC1D7F225BD9BCD0014A156 /* ServerListDataModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDataModelDelegateMock.swift; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,7 +241,7 @@
 		EAC1D5D625BC48D90014A156 /* ios-partyTests */ = {
 			isa = PBXGroup;
 			children = (
-				EAC1D5D725BC48D90014A156 /* ios_partyTests.swift */,
+				EAC1D7F025BD9BB20014A156 /* ServerListDataModel */,
 				EAC1D5D925BC48D90014A156 /* Info.plist */,
 			);
 			path = "ios-partyTests";
@@ -615,6 +617,23 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		EAC1D7F025BD9BB20014A156 /* ServerListDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D7F125BD9BC00014A156 /* Mocks */,
+				EAC1D5D725BC48D90014A156 /* ServerListDataModel_sortServerListTests.swift */,
+			);
+			path = ServerListDataModel;
+			sourceTree = "<group>";
+		};
+		EAC1D7F125BD9BC00014A156 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D7F225BD9BCD0014A156 /* ServerListDataModelDelegateMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -929,7 +948,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC1D5D825BC48D90014A156 /* ios_partyTests.swift in Sources */,
+				EAC1D5D825BC48D90014A156 /* ServerListDataModel_sortServerListTests.swift in Sources */,
+				EAC1D7F325BD9BCD0014A156 /* ServerListDataModelDelegateMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,7 +1161,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75K4XJ5Y2U;
 				INFOPLIST_FILE = "ios-partyTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1164,7 +1184,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75K4XJ5Y2U;
 				INFOPLIST_FILE = "ios-partyTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

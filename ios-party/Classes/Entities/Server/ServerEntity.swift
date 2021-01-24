@@ -8,14 +8,19 @@
 import Foundation
 import GRDB
 
-class ServerEntity {
-    
+class ServerEntity: Equatable {
+
     // MARK: - Declarations
     var name: String
     var distance: Int
     
     // MARK: - Methods
     // MARK: - Initialization
+    init(name: String, distance: Int) {
+        self.name = name
+        self.distance = distance
+    }
+    
     init?(from dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String else {
             log("ERROR! Dictionary does not have name: \(dictionary)")
@@ -52,5 +57,10 @@ class ServerEntity {
         }
         
         return serverList
+    }
+    
+    // MARK: - Equatable
+    static func == (lhs: ServerEntity, rhs: ServerEntity) -> Bool {
+        return lhs.name == rhs.name && lhs.distance == rhs.distance
     }
 }
