@@ -11,7 +11,7 @@ import Alamofire
 protocol LoginDataModelDelegate: AnyObject {
     func loginDataModel(didStartLogin dataModel: LoginDataModelInterface)
     func loginDataModel(didFinishLogin dataModel: LoginDataModelInterface)
-    func loginDataModel(didFailLogin dataModel: LoginDataModelInterface)
+    func loginDataModel(didFailLogin dataModel: LoginDataModelInterface, errorType: LoginDataModel.ErrorType)
 }
 
 protocol LoginDataModelInterface {
@@ -19,6 +19,12 @@ protocol LoginDataModelInterface {
 }
 
 class LoginDataModel: LoginDataModelInterface {
+    
+    // MARK: - Enums
+    enum ErrorType {
+        case authorizationError
+        case genericError
+    }
     
     // MARK: - Declarations
     weak var delegate: LoginDataModelDelegate?
@@ -70,16 +76,16 @@ class LoginDataModel: LoginDataModelInterface {
     func didFailLoginRequest(error: AFError?) {
         guard let error: AFError = error else {
             log("ERROR Login failed without error.")
-            delegate?.loginDataModel(didFailLogin: self)
+            delegate?.loginDataModel(didFailLogin: self, errorType: .genericError)
             return
         }
         
         if error.responseCode == 401 {
             log("ERROR! Login failed with code 401")
-            delegate?.loginDataModel(didFailLogin: self)
+            delegate?.loginDataModel(didFailLogin: self, errorType: .authorizationError)
         } else {
             log("Login request failed with error: \(error)")
-            delegate?.loginDataModel(didFailLogin: self)
+            delegate?.loginDataModel(didFailLogin: self, errorType: .genericError)
         }
     }
 }

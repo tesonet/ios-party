@@ -283,7 +283,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
     struct localizable {
       /// en translation: %@ km
       ///
@@ -313,6 +313,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let login_action = Rswift.StringResource(key: "login_action", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Okay
+      ///
+      /// Locales: en
+      static let okay_action = Rswift.StringResource(key: "okay_action", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Oops!
+      ///
+      /// Locales: en
+      static let generic_error_title = Rswift.StringResource(key: "generic_error_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Password
       ///
       /// Locales: en
@@ -321,6 +329,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let server_header = Rswift.StringResource(key: "server_header", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Something happened.
+      ///
+      /// Locales: en
+      static let generic_error_description = Rswift.StringResource(key: "generic_error_description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Sort
       ///
       /// Locales: en
@@ -329,6 +341,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let username_placeholder = Rswift.StringResource(key: "username_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Your username or password is wrong.
+      ///
+      /// Locales: en
+      static let wrong_credentials_description = Rswift.StringResource(key: "wrong_credentials_description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: wrong credentials
+      ///
+      /// Locales: en
+      static let wrong_credentials_title = Rswift.StringResource(key: "wrong_credentials_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
       /// en translation: %@ km
       ///
@@ -437,6 +457,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_action", bundle: bundle, comment: "")
       }
 
+      /// en translation: Okay
+      ///
+      /// Locales: en
+      static func okay_action(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("okay_action", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "okay_action"
+        }
+
+        return NSLocalizedString("okay_action", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Oops!
+      ///
+      /// Locales: en
+      static func generic_error_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("generic_error_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "generic_error_title"
+        }
+
+        return NSLocalizedString("generic_error_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: Password
       ///
       /// Locales: en
@@ -467,6 +517,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("server_header", bundle: bundle, comment: "")
       }
 
+      /// en translation: Something happened.
+      ///
+      /// Locales: en
+      static func generic_error_description(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("generic_error_description", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "generic_error_description"
+        }
+
+        return NSLocalizedString("generic_error_description", bundle: bundle, comment: "")
+      }
+
       /// en translation: Sort
       ///
       /// Locales: en
@@ -495,6 +560,36 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("username_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Your username or password is wrong.
+      ///
+      /// Locales: en
+      static func wrong_credentials_description(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("wrong_credentials_description", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "wrong_credentials_description"
+        }
+
+        return NSLocalizedString("wrong_credentials_description", bundle: bundle, comment: "")
+      }
+
+      /// en translation: wrong credentials
+      ///
+      /// Locales: en
+      static func wrong_credentials_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("wrong_credentials_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "wrong_credentials_title"
+        }
+
+        return NSLocalizedString("wrong_credentials_title", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

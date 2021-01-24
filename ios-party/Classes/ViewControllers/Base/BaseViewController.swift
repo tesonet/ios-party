@@ -21,4 +21,24 @@ class BaseViewController: UIViewController {
     func hideActivityIndicator() {
         activityIndicator.hide()
     }
+    
+    // MARK: Alerts
+    func showAlert(title: String, message: String, actionList: [UIAlertAction]? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        guard let actionList: [UIAlertAction] = actionList,
+              !actionList.isEmpty else {
+            let okayAction = UIAlertAction(title: R.string.localizable.okay_action(), style: .default)
+            alertController.addAction(okayAction)
+            
+            present(alertController, animated: true)
+            return
+        }
+        
+        for action in actionList {
+            alertController.addAction(action)
+        }
+        
+        present(alertController, animated: true)
+    }
 }

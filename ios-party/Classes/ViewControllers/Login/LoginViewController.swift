@@ -47,9 +47,18 @@ class LoginViewController: BaseViewController, LoginDataModelDelegate {
         hideActivityIndicator()
     }
     
-    func loginDataModel(didFailLogin dataModel: LoginDataModelInterface) {
-        // FIXME: show error
+    func loginDataModel(didFailLogin dataModel: LoginDataModelInterface, errorType: LoginDataModel.ErrorType) {
         hideActivityIndicator()
+        
+        switch errorType {
+        case .authorizationError:
+            showAlert(title: R.string.localizable.wrong_credentials_title(),
+                      message: R.string.localizable.wrong_credentials_description())
+            
+        default:
+            showAlert(title: R.string.localizable.generic_error_title(),
+                      message: R.string.localizable.generic_error_description())
+        }
     }
     
     // MARK: - Keyboard

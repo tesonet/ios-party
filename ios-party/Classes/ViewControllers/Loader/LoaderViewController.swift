@@ -34,6 +34,8 @@ class LoaderViewController: BaseViewController,
     
     func loaderDataModel(didFailLoading dataModel: LoaderDataModelInterface) {
         hideActivityIndicator()
-        // FIXME: display alert
+        
+        showAlert(title: R.string.localizable.generic_error_title(),
+                  message: R.string.localizable.generic_error_description())
     }
 }

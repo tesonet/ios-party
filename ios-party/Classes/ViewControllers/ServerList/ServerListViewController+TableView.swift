@@ -14,10 +14,11 @@ extension ServerListViewController {
     
     // MARK: - Enums
     enum ServerListSectionType: Int, CaseIterable {
-        // MARK: - Cases
+        
+        // MARK: Cases
         case serverList
         
-        // MARK: - Methods
+        // MARK: Methods
         func headerHeight() -> CGFloat {
             switch self {
             case .serverList:
