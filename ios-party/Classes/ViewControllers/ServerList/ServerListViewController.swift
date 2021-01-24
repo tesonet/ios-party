@@ -16,6 +16,7 @@ class ServerListViewController: BaseViewController,
     var dataModel: ServerListDataModelInterface!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortButton: UIButton!
     
     // MARK: - Dependencies
     var authorization: AuthorizationInterface = Authorization.shared
@@ -25,6 +26,8 @@ class ServerListViewController: BaseViewController,
         super.viewDidLoad()
         
         dataModel = ServerListDataModel(delegate: self)
+        
+        sortButton.setTitle(R.string.localizable.sort_action(), for: .normal)
         registerTableViewCells()
     }
     
@@ -58,7 +61,7 @@ class ServerListViewController: BaseViewController,
                                                   self?.dataModel.sortServerList(by: .alphanumerical)
                                                  })
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: R.string.localizable.cancel_action(), style: .cancel)
         
         alertController.addAction(distanceAction)
         alertController.addAction(alphanumericalAction)

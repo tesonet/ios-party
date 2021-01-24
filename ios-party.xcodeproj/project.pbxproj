@@ -61,6 +61,7 @@
 		EAC1D7BA25BD6D020014A156 /* ServerListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7B925BD6D020014A156 /* ServerListHeaderView.swift */; };
 		EAC1D7C225BD6D130014A156 /* ServerListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D7C125BD6D130014A156 /* ServerListHeaderView.xib */; };
 		EAC1D7D725BD7E730014A156 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1D7D625BD7E730014A156 /* R.generated.swift */; };
+		EAC1D7E425BD7F700014A156 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAC1D7E625BD7F700014A156 /* Localizable.strings */; };
 		EE3760A32E8DBC99B88DEE1B /* Pods_ios_party_ios_partyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE4154A393C47115054A5D /* Pods_ios_party_ios_partyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		EAC1D7B925BD6D020014A156 /* ServerListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListHeaderView.swift; sourceTree = "<group>"; };
 		EAC1D7C125BD6D130014A156 /* ServerListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerListHeaderView.xib; sourceTree = "<group>"; };
 		EAC1D7D625BD7E730014A156 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		EAC1D7E525BD7F700014A156 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9B8C81B69D409AC147711A7 /* Pods-ios-partyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-partyTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-partyTests/Pods-ios-partyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +272,7 @@
 		EAC1D60225BC49BF0014A156 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAC1D7DB25BD7F310014A156 /* Localization */,
 				EAC1D7D625BD7E730014A156 /* R.generated.swift */,
 				EAC1D5C925BC48D90014A156 /* Assets.xcassets */,
 				EAC1D5CB25BC48D90014A156 /* LaunchScreen.storyboard */,
@@ -604,6 +607,14 @@
 			path = ServerListHeaderView;
 			sourceTree = "<group>";
 		};
+		EAC1D7DB25BD7F310014A156 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1D7E625BD7F700014A156 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -717,6 +728,7 @@
 				EAC1D5CD25BC48D90014A156 /* LaunchScreen.storyboard in Resources */,
 				EAC1D6CB25BCBC530014A156 /* LoaderViewController.xib in Resources */,
 				EAC1D76525BCD9E60014A156 /* database.sqlite in Resources */,
+				EAC1D7E425BD7F700014A156 /* Localizable.strings in Resources */,
 				EAC1D76D25BCDFA70014A156 /* ServerListViewController.xib in Resources */,
 				EAC1D5CA25BC48D90014A156 /* Assets.xcassets in Resources */,
 				EAC1D77F25BCE6070014A156 /* ServerCell.xib in Resources */,
@@ -951,6 +963,14 @@
 				EAC1D5CC25BC48D90014A156 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EAC1D7E625BD7F700014A156 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC1D7E525BD7F700014A156 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

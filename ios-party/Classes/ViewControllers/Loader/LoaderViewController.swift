@@ -12,12 +12,16 @@ class LoaderViewController: BaseViewController,
 
     // MARK: - Declarations
     var dataModel: LoaderDataModelInterface!
+    @IBOutlet weak var loadingMessageLabel: UILabel!
     
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dataModel = LoaderDataModel(delegate: self)
+        
+        loadingMessageLabel.text = R.string.localizable.loading_message()
+        
         // No large spinner in assets, no large spinner in the app. :]
         showActivityIndicator()
         dataModel.startDataLoad()

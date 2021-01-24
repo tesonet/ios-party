@@ -15,10 +15,10 @@ enum ServerSortType {
     func title() -> String {
         switch self {
         case .distance:
-            return "Distance"
+            return R.string.localizable.sort_distance()
             
         case .alphanumerical:
-            return "Alphanumerical"
+            return R.string.localizable.sort_alphanumerical()
         }
     }
 }

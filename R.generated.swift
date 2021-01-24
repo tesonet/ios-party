@@ -281,6 +281,228 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
+    struct localizable {
+      /// en translation: %@ km
+      ///
+      /// Locales: en
+      static let x_km = Rswift.StringResource(key: "x_km", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Alphanumerical
+      ///
+      /// Locales: en
+      static let sort_alphanumerical = Rswift.StringResource(key: "sort_alphanumerical", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Cancel
+      ///
+      /// Locales: en
+      static let cancel_action = Rswift.StringResource(key: "cancel_action", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: DISTANCE
+      ///
+      /// Locales: en
+      static let distance_header = Rswift.StringResource(key: "distance_header", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Distance
+      ///
+      /// Locales: en
+      static let sort_distance = Rswift.StringResource(key: "sort_distance", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Fetching the list...
+      ///
+      /// Locales: en
+      static let loading_message = Rswift.StringResource(key: "loading_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Log in
+      ///
+      /// Locales: en
+      static let login_action = Rswift.StringResource(key: "login_action", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Password
+      ///
+      /// Locales: en
+      static let password_placeholder = Rswift.StringResource(key: "password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: SERVER
+      ///
+      /// Locales: en
+      static let server_header = Rswift.StringResource(key: "server_header", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Sort
+      ///
+      /// Locales: en
+      static let sort_action = Rswift.StringResource(key: "sort_action", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Username
+      ///
+      /// Locales: en
+      static let username_placeholder = Rswift.StringResource(key: "username_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: %@ km
+      ///
+      /// Locales: en
+      static func x_km(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("x_km", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "x_km"
+        }
+
+        let format = NSLocalizedString("x_km", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
+      }
+
+      /// en translation: Alphanumerical
+      ///
+      /// Locales: en
+      static func sort_alphanumerical(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sort_alphanumerical", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sort_alphanumerical"
+        }
+
+        return NSLocalizedString("sort_alphanumerical", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Cancel
+      ///
+      /// Locales: en
+      static func cancel_action(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("cancel_action", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "cancel_action"
+        }
+
+        return NSLocalizedString("cancel_action", bundle: bundle, comment: "")
+      }
+
+      /// en translation: DISTANCE
+      ///
+      /// Locales: en
+      static func distance_header(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("distance_header", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "distance_header"
+        }
+
+        return NSLocalizedString("distance_header", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Distance
+      ///
+      /// Locales: en
+      static func sort_distance(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sort_distance", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sort_distance"
+        }
+
+        return NSLocalizedString("sort_distance", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Fetching the list...
+      ///
+      /// Locales: en
+      static func loading_message(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("loading_message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "loading_message"
+        }
+
+        return NSLocalizedString("loading_message", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Log in
+      ///
+      /// Locales: en
+      static func login_action(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("login_action", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "login_action"
+        }
+
+        return NSLocalizedString("login_action", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Password
+      ///
+      /// Locales: en
+      static func password_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("password_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "password_placeholder"
+        }
+
+        return NSLocalizedString("password_placeholder", bundle: bundle, comment: "")
+      }
+
+      /// en translation: SERVER
+      ///
+      /// Locales: en
+      static func server_header(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("server_header", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "server_header"
+        }
+
+        return NSLocalizedString("server_header", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Sort
+      ///
+      /// Locales: en
+      static func sort_action(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sort_action", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sort_action"
+        }
+
+        return NSLocalizedString("sort_action", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Username
+      ///
+      /// Locales: en
+      static func username_placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("username_placeholder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "username_placeholder"
+        }
+
+        return NSLocalizedString("username_placeholder", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()

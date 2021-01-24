@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderViewController" customModule="ios_party" customModuleProvider="target">
             <connections>
+                <outlet property="loadingMessageLabel" destination="Faw-HZ-DDN" id="1ue-ZY-DiK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

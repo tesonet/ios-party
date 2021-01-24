@@ -21,7 +21,7 @@ class ServerCell: UITableViewCell {
         
         self.server = server
         nameLabel.text = server.name
-        distanceLabel.text = "\(server.distance) km"
+        distanceLabel.text = R.string.localizable.x_km("\(server.distance)")
     }
     
     // MARK: - Helpers

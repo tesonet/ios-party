@@ -85,7 +85,7 @@ extension ServerListViewController {
             return kTableViewSectionHeaderDisabledHeight
         }
         
-        return sectionType.headerHeight()
+        return sectionType.footerHeight()
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

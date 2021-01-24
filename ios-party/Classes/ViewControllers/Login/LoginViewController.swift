@@ -12,7 +12,7 @@ class LoginViewController: BaseViewController, LoginDataModelDelegate {
     // MARK: - Declarations
     var dataModel: LoginDataModelInterface!
     
-    @IBOutlet weak var emailTextField: ImageTextField!
+    @IBOutlet weak var usernameTextField: ImageTextField!
     @IBOutlet weak var passwordTextField: ImageTextField!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -21,11 +21,15 @@ class LoginViewController: BaseViewController, LoginDataModelDelegate {
         super.viewDidLoad()
         
         dataModel = LoginDataModel(delegate: self)
+        
+        usernameTextField.placeholder = R.string.localizable.username_placeholder()
+        passwordTextField.placeholder = R.string.localizable.password_placeholder()
+        loginButton.setTitle(R.string.localizable.login_action(), for: .normal)
     }
     
     // MARK: - UI Actions
     @IBAction func onLoginButtonTap(_ sender: Any) {
-        guard let username = emailTextField.text,
+        guard let username = usernameTextField.text,
             let password = passwordTextField.text else {
             return
         }

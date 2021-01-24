@@ -21,8 +21,8 @@ class ServerListHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Methods
     override func awakeFromNib() {
-        serverLabel.text = "SERVER"
-        distanceLabel.text = "DISTANCE"
+        serverLabel.text = R.string.localizable.server_header()
+        distanceLabel.text = R.string.localizable.distance_header()
         
         layer.shadowOpacity = kShadowOpacity
         layer.shadowOffset = kShadowOffset

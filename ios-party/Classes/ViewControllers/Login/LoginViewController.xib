@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ios_party" customModuleProvider="target">
             <connections>
-                <outlet property="emailTextField" destination="WEt-dY-JBW" id="fzz-Br-6a6"/>
                 <outlet property="loginButton" destination="8By-VL-lcU" id="NlE-c0-Q2S"/>
                 <outlet property="passwordTextField" destination="btk-3P-iV1" id="Fwu-1C-lfS"/>
+                <outlet property="usernameTextField" destination="WEt-dY-JBW" id="fzz-Br-6a6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
