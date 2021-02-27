@@ -16,6 +16,10 @@ final class ListViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(ServerTableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.delegate = self
+        
+        let refreshControl = UIRefreshControl(frame: .zero)
+        refreshControl.addTarget(self, action: #selector(refreshAction(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
         return tableView
     }()
     
@@ -88,6 +92,10 @@ final class ListViewController: UIViewController {
         }))
         present(alertController, animated: true)
     }
+    
+    @objc func refreshAction(_ sender: Any) {
+        dataSource.update()
+    }
 }
 
 extension ListViewController {
@@ -139,5 +147,6 @@ extension ListViewController: ListDataSourceDelegate {
         } else {
             tableView.reloadData()
         }
+        tableView.refreshControl?.endRefreshing()
     }
 }
