@@ -71,7 +71,7 @@ final class ListViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    @objc func logoutAction(_ sender :Any) {#imageLiteral(resourceName: "simulator_screenshot_6963BBDF-4D5B-460C-B975-E2490DFC5EF3.png")
+    @objc func logoutAction(_ sender :Any) {
         AuthenticationStorage.shared.clearData()
         coordinator?.navigate(.login)
     }
