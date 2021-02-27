@@ -33,6 +33,7 @@ final class LoginViewController: UIViewController {
     
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "logo-white"))
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -52,11 +53,18 @@ final class LoginViewController: UIViewController {
         stackView.alignment = .center
         return stackView
     }()
+    
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.hidesWhenStopped = true
+        view.color = .white
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-        // Do any additional setup after loading the view.
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -67,8 +75,11 @@ final class LoginViewController: UIViewController {
 // MARK - Layout Setup
 extension LoginViewController {
     private func setupLayout() {
-        [backgroundImageView, logoImageView, stackView].forEach { view.addSubview($0) }
+        [backgroundImageView, logoImageView, stackView, activityIndicator].forEach { view.addSubview($0) }
         [usernameField, passwordField, loginButton].forEach { stackView.addArrangedSubview($0) }
+        
+        let guide = UILayoutGuide()
+        view.addLayoutGuide(guide)
         
         NSLayoutConstraint.activate([
             // BackgroundImageView
@@ -95,7 +106,13 @@ extension LoginViewController {
             passwordField.widthAnchor.constraint(greaterThanOrEqualToConstant: LayoutConstants.textFieldMinimumWidthConstant),
             //Button
             loginButton.heightAnchor.constraint(equalToConstant: LayoutConstants.textFieldHeightConstant),
-            loginButton.widthAnchor.constraint(greaterThanOrEqualToConstant: LayoutConstants.textFieldMinimumWidthConstant)
+            loginButton.widthAnchor.constraint(greaterThanOrEqualToConstant: LayoutConstants.textFieldMinimumWidthConstant),
+            //Guide
+            guide.topAnchor.constraint(equalTo: stackView.bottomAnchor),
+            guide.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            //ActivityIndicatorView
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: guide.centerYAnchor)
         ])
     }
     
@@ -117,9 +134,11 @@ extension LoginViewController {
         }
         
         disableFields(true)
+        activityIndicator.startAnimating()
         AuthService().authenticate(username: username, password: password) { [weak self] result in
             guard let self = self else { return }
             self.disableFields(false)
+            self.activityIndicator.stopAnimating()
             switch result {
             case .success: self.coordinator?.navigate(.list)
             case .failure(let error): self.showErrorAlert(error)
