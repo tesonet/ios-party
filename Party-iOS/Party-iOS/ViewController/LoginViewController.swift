@@ -59,33 +59,8 @@ final class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @objc private func loginAction(_ sender: Any) {
-        AuthService().authenticate(username: usernameField.text!, password: passwordField.text!) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success: self.coordinator?.navigate(.list)
-            case .failure(let error): self.showErrorAlert(error)
-            }
-        }
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
-    }
-    
-    private func showErrorAlert(_ error: APIClientError) {
-        let message: String = {
-            if case .networkError(let networkError) = error,
-               case .http(let httpError, _) = networkError,
-               case .unauthorized = httpError {
-                return "Username or Password is incorrect"
-            } else {
-                return "Network error occured."
-            }
-        }()
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true)
     }
 }
 
@@ -128,5 +103,40 @@ extension LoginViewController {
         static let textFieldHeightConstant: CGFloat =  60
         static let textFieldMinimumWidthConstant: CGFloat = 280
         static let logoBottomMarginConsant: CGFloat = 200
+    }
+}
+
+extension LoginViewController {
+    @objc private func loginAction(_ sender: Any) {
+        guard let username = usernameField.text, !username.isEmpty,
+              let password = passwordField.text, !password.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Username or password is empty.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true)
+            return
+        }
+        
+        AuthService().authenticate(username: username, password: password) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success: self.coordinator?.navigate(.list)
+            case .failure(let error): self.showErrorAlert(error)
+            }
+        }
+    }
+    
+    private func showErrorAlert(_ error: APIClientError) {
+        let message: String = {
+            if case .networkError(let networkError) = error,
+               case .http(let httpError, _) = networkError,
+               case .unauthorized = httpError {
+                return "Username or Password is incorrect"
+            } else {
+                return "Network error occured."
+            }
+        }()
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true)
     }
 }
