@@ -8,7 +8,7 @@
 import Foundation
 import Security
 
-class KeyChain {
+final class KeyChain {
     
     class func load(key: String) -> Data? {
         let query = [

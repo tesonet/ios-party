@@ -11,7 +11,7 @@ protocol ListDataSourceDelegate: AnyObject {
     func dataSourceDidUpdate(error: APIClientError?)
 }
 
-class ListDataSource: NSObject {
+final class ListDataSource: NSObject {
     
     var servers: [Server]? = ListStorage.load()
     
