@@ -116,13 +116,19 @@ extension LoginViewController {
             return
         }
         
+        disableFields(true)
         AuthService().authenticate(username: username, password: password) { [weak self] result in
             guard let self = self else { return }
+            self.disableFields(false)
             switch result {
             case .success: self.coordinator?.navigate(.list)
             case .failure(let error): self.showErrorAlert(error)
             }
         }
+    }
+    
+    private func disableFields(_ isDisabled: Bool) {
+        [usernameField, passwordField, loginButton].forEach { $0.isEnabled = !isDisabled }
     }
     
     private func showErrorAlert(_ error: APIClientError) {
