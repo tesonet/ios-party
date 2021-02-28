@@ -16,11 +16,11 @@ public struct NetworkConnection {
         self.additionalHeaders = additionalHeaders
     }
     
-    public typealias NetworkConnectionResult = Result<(URLResponse, Data), NetworkConnectionError>
-    public typealias Completion = (NetworkConnectionResult) -> Void
+    public typealias ConnectionResult = Result<(URLResponse, Data), ConnectionError>
+    public typealias Completion = (ConnectionResult) -> Void
     
     public func request(_ endPoint: EndPoint, completion: @escaping Completion) {
-        let request = RequestBuilder().makeRequest(endpoint: endPoint, additionalHeaders: additionalHeaders)
+        let request = RequestFactory().makeRequest(endpoint: endPoint, additionalHeaders: additionalHeaders)
         session.dataTask(with: request) { (result) in
             DispatchQueue.main.async {
                 self.handleTaskResult(result, completion: completion)
@@ -36,19 +36,15 @@ public struct NetworkConnection {
                 return
             }
             
-            let responseResult: NetworkConnectionResult = {
+            let responseResult: ConnectionResult = {
                 switch response.status?.responseType {
                  case .success: return .success(success)
-                 default:
-                    return .failure(.http(response.status, success.1))
+                 default: return .failure(.http(response.status, success.1))
                  }
             }()
             completion(responseResult)
         case .failure(let failure):
-            guard let failure = failure as? URLError else {
-                completion(.failure(.unknown))
-                return
-            }
+            guard let failure = failure as? URLError else { completion(.failure(.unknown)); return }
             completion(.failure(.url(failure)))
         }
     }

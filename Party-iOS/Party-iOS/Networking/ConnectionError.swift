@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum NetworkConnectionError: Error {
+public enum ConnectionError: Error {
     case unknown
     case url(URLError)
     case http(HTTPStatusCode?, Data?)

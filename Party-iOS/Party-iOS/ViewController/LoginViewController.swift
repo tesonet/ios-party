@@ -11,10 +11,10 @@ final class LoginViewController: UIViewController {
     
     weak var coordinator: Coordinator?
     
-    private lazy var usernameField: UITextField = LoginFieldBuilder.makeLoginTextField(placeholder: "Username", image: UIImage(named: "ico-username"))
+    private lazy var usernameField: UITextField = LoginFieldFactory.makeLoginTextField(placeholder: "Username", image: UIImage(named: "ico-username"))
     
     private lazy var passwordField: UITextField = {
-        let textField = LoginFieldBuilder.makeLoginTextField(placeholder: "Password", image: UIImage(named: "ico-lock"))
+        let textField = LoginFieldFactory.makeLoginTextField(placeholder: "Password", image: UIImage(named: "ico-lock"))
         textField.isSecureTextEntry = true
         return textField
     }()

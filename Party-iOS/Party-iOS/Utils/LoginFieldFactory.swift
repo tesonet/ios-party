@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct LoginFieldBuilder {
+struct LoginFieldFactory {
     static func makeLoginTextField(placeholder: String?, image: UIImage?) -> UITextField {
         let textField = UITextField(frame: .zero)
         textField.placeholder = placeholder

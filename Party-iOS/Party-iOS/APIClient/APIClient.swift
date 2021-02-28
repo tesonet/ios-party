@@ -111,7 +111,7 @@ private extension APIClient {
 }
 
 enum APIClientError: Error {
-    case networkError(NetworkConnectionError)
+    case networkError(ConnectionError)
     case decodingError(Error)
 }
 

@@ -10,8 +10,6 @@ import Foundation
 public protocol URLSessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
     func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
-    func uploadTask(with request: URLRequest, fromFile fileURL: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
-    func uploadTask(with request: URLRequest, from data: Data?, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
 }
 
 public protocol URLSessionDataTaskProtocol {
@@ -19,9 +17,6 @@ public protocol URLSessionDataTaskProtocol {
 }
 
 extension URLSession: URLSessionProtocol {
-    public func uploadTask(with request: URLRequest, from data: Data?, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
-        return (uploadTask(with: request, from: data, completionHandler: completionHandler) as URLSessionDataTask) as URLSessionDataTaskProtocol
-    }
     
     public func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         return (dataTask(with: url, completionHandler: completionHandler) as URLSessionDataTask) as URLSessionDataTaskProtocol
@@ -31,9 +26,6 @@ extension URLSession: URLSessionProtocol {
         return (dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask) as URLSessionDataTaskProtocol
     }
     
-    public func uploadTask(with request: URLRequest, fromFile fileURL: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
-        return (uploadTask(with: request, fromFile: fileURL, completionHandler: completionHandler) as URLSessionUploadTask) as URLSessionDataTaskProtocol
-    }
 }
 extension URLSessionDataTask: URLSessionDataTaskProtocol {}
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RequestBuilder {
+struct RequestFactory {
     func makeRequest(endpoint: EndPoint, additionalHeaders: Headers?) -> URLRequest {
         let  baseURL = endpoint.baseURL
         let url = endpoint.path.isEmpty ? baseURL : baseURL.appendingPathComponent(endpoint.path)
