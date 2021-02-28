@@ -46,16 +46,16 @@ final class ServerTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             nameLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
             nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: distanceLabel.leadingAnchor),
+            nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            nameLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 44),
             
             distanceLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            distanceLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            distanceLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            distanceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            distanceLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 44)
         ])
     }
     
-    override var intrinsicContentSize: CGSize {
-        CGSize(width: super.intrinsicContentSize.width, height: 35)
-    }
-
 }

@@ -49,5 +49,8 @@ final class ServerHeaderView: UIView {
             distanceLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
-
+    
+    override var intrinsicContentSize: CGSize {
+        CGSize(width: super.intrinsicContentSize.width, height: 35)
+    }
 }
