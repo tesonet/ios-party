@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nCo-Y6-7Sk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="Fjj-lN-oMN">
+            <objects>
+                <viewController id="nCo-Y6-7Sk" customClass="LogInViewController" customModule="Testio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2lc-H6-W44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fSh-fd-6U0" userLabel="Background image view">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tqk-cf-pha" userLabel="Logo image view">
+                                <rect key="frame" x="142" y="274" width="130" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="E8P-eH-2mM"/>
+                                    <constraint firstAttribute="width" constant="130" id="bvS-DJ-CyS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DQ8-Ln-ik2" userLabel="Login form stack view">
+                                <rect key="frame" x="50" y="408" width="314" height="140"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tesonet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2n-uG-lzK" userLabel="Username text field" customClass="TextField" customModule="Testio" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="41.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="partyanimal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeS-DV-0vZ" userLabel="Password text field" customClass="TextField" customModule="Testio" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="314" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-ov-maG" userLabel="Login button" customClass="Button" customModule="Testio" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="98.5" width="314" height="41.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="nCo-Y6-7Sk" eventType="touchUpInside" id="AOb-I7-IXL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Ujy-Qv-hZC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZKP-bz-eNE"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="DQ8-Ln-ik2" firstAttribute="centerX" secondItem="2lc-H6-W44" secondAttribute="centerX" id="9bW-RH-KmU"/>
+                            <constraint firstItem="fSh-fd-6U0" firstAttribute="leading" secondItem="ZKP-bz-eNE" secondAttribute="leading" id="HD8-8e-bgm"/>
+                            <constraint firstItem="ZKP-bz-eNE" firstAttribute="trailing" secondItem="DQ8-Ln-ik2" secondAttribute="trailing" constant="50" id="JBl-UK-s67"/>
+                            <constraint firstAttribute="bottom" secondItem="fSh-fd-6U0" secondAttribute="bottom" id="KEo-zn-xPc"/>
+                            <constraint firstItem="Tqk-cf-pha" firstAttribute="centerX" secondItem="2lc-H6-W44" secondAttribute="centerX" id="Y6B-50-lsG"/>
+                            <constraint firstItem="DQ8-Ln-ik2" firstAttribute="centerY" secondItem="2lc-H6-W44" secondAttribute="centerY" constant="30" id="cOi-Cd-eJS"/>
+                            <constraint firstItem="fSh-fd-6U0" firstAttribute="trailing" secondItem="ZKP-bz-eNE" secondAttribute="trailing" id="i4D-Hn-00u"/>
+                            <constraint firstItem="fSh-fd-6U0" firstAttribute="top" secondItem="2lc-H6-W44" secondAttribute="top" id="oHY-R6-jGZ"/>
+                            <constraint firstItem="DQ8-Ln-ik2" firstAttribute="leading" secondItem="ZKP-bz-eNE" secondAttribute="leading" constant="50" id="xPw-f3-vUV"/>
+                            <constraint firstItem="DQ8-Ln-ik2" firstAttribute="top" secondItem="Tqk-cf-pha" secondAttribute="bottom" constant="100" id="zj7-c8-Gfr"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="j9V-vY-vji" appends="YES" id="n5h-41-WrF"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Bhl-ov-maG" id="jHd-aS-999"/>
+                        <outlet property="passwordTextField" destination="VeS-DV-0vZ" id="MtO-tx-wg1"/>
+                        <outlet property="usernameTextField" destination="b2n-uG-lzK" id="ShF-nH-7Pk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0V-lT-rBS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="j9V-vY-vji">
+                    <connections>
+                        <action selector="onScreenTap:" destination="nCo-Y6-7Sk" id="pIZ-wv-MFj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="960" height="540"/>
+        <image name="whiteLogo" width="246" height="64"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
