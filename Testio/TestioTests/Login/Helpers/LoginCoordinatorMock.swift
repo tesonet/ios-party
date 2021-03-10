@@ -9,9 +9,9 @@ import UIKit
 @testable import Testio
 
 final class LoginCoordinatorMock: LoginCoordinatorProtocol {
-   
+    
     var parentViewController: UIViewController
-    var onStop: (() -> ())?
+    var onStop: ((CoordinatorStopReason) -> ())?
     var childCoordinator: CoordinatorProtocol?
     var viewController: UIViewController?
     
@@ -22,7 +22,7 @@ final class LoginCoordinatorMock: LoginCoordinatorProtocol {
         self.parentViewController = parentViewController
     }
     func start() {}
-    func stop() {}
+    func stop(reason: CoordinatorStopReason) {}
     
     func displayMessage(_ message: String) {
         onDisplayMessage?()
