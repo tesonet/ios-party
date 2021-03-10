@@ -16,9 +16,9 @@ extension TextFieldType {
     var placeholder: String {
         switch self {
         case .username:
-            return Localization.TextField.userNamePlaceholder
+            return LoginLocalization.TextField.userNamePlaceholder
         case .password:
-            return Localization.TextField.passwordPlaceholder
+            return LoginLocalization.TextField.passwordPlaceholder
         }
     }
     
@@ -32,18 +32,18 @@ extension TextFieldType {
     var leftView: UIView? {
         switch self {
         case .username:
-            return Constants.textField.images.userIcon
+            return LoginConstants.textField.images.userIcon
         case .password:
-            return Constants.textField.images.lockIcon
+            return LoginConstants.textField.images.lockIcon
         }
     }
     
     var font: UIFont {
-        Constants.textField.fonts.text
+        LoginConstants.textField.fonts.text
     }
     
     var textColor: UIColor {
-        Constants.colors.text
+        LoginConstants.colors.text
     }
     
     var isSecureTextEntry: Bool {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Localization {
+struct LoginLocalization {
     
     struct Alert {
         static var title: String {

@@ -10,15 +10,12 @@ import Foundation
 final class ApiClient: ApiClientProtocol {
     
     func post(url: URL, body: Data?, headers: [String: String], completion: @escaping (Result<Data, ApiClientError>) -> ()) {
-        let session = URLSession.shared
-        
+        let sessionConfiguration = URLSessionConfiguration.default
+        sessionConfiguration.httpAdditionalHeaders = headers
+        let session = URLSession(configuration: sessionConfiguration)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = body
-        headers.forEach { header, value in
-            request.setValue(value, forHTTPHeaderField: header)
-        }
-        
         let task = session.dataTask(with: request) { data, response, error in
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.requestFailed(Int.max, "Response is not an instance of HTTPURLResponse")))
@@ -33,9 +30,9 @@ final class ApiClient: ApiClientProtocol {
                     completion(.failure(.requestFailed(responseCode, "Cannot get response data")))
                 }
             case 401:
-                completion(.failure(.requestFailed(responseCode, error?.localizedDescription ?? Localization.Error.unauthorized)))
+                completion(.failure(.requestFailed(responseCode, error?.localizedDescription ?? LoginLocalization.Error.unauthorized)))
             case 402...405:
-                completion(.failure(.requestFailed(responseCode, error?.localizedDescription ?? Localization.Error.unknown)))
+                completion(.failure(.requestFailed(responseCode, error?.localizedDescription ?? LoginLocalization.Error.unknown)))
             default:
                 completion(.failure(.requestFailed(responseCode, "Unknown response code: \(responseCode)")))
             }

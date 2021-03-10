@@ -10,11 +10,8 @@ import Foundation
 protocol LoginViewModelProtocol {
     //MARK: - Bindings
     
-    
     //MARK: - Data
-    func start()
 
-    
     //MARK: - UI events
     func login(username: String, password: String)
 }

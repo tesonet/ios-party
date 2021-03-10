@@ -7,11 +7,15 @@
 
 import UIKit
 
-final class LoginCoordinator: CoordinatorProtocol {
+protocol LoginCoordinatorProtocol: CoordinatorProtocol {
+    func displayNextScreen(with authorizationData: AuthorizationData)
+}
+
+final class LoginCoordinator: LoginCoordinatorProtocol  {
     
     var viewController: UIViewController?
     let parentViewController: UIViewController
-    var onStop: (() -> ())?
+    var onStop: ((CoordinatorStopReason) -> ())?
     private(set) var childCoordinator: CoordinatorProtocol?
     
     required init(with parentViewController: UIViewController) {
@@ -32,12 +36,23 @@ final class LoginCoordinator: CoordinatorProtocol {
         parentViewController.present(loginViewController, animated: false)
     }
     
-    func stop() {
-        onStop?()
+    func stop(reason :CoordinatorStopReason) {
+        onStop?(reason)
     }
     
-    func displayNextScreen() {
-        //TODO: - display servers screen
+    func displayNextScreen(with authorizationData: AuthorizationData) {
+        let serversListCoordinator = ServersListCoordinator(with: viewController ?? parentViewController, authorizationData: authorizationData)
+        childCoordinator = serversListCoordinator
+        serversListCoordinator.onStop = { reason in
+            switch reason {
+            case .error(let description):
+                self.displayMessage(description)
+            default:
+                break
+            }
+            self.childCoordinator = nil
+        }
+        serversListCoordinator.start()
     }
 }
 

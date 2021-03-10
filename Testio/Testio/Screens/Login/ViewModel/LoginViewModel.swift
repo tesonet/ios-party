@@ -10,14 +10,12 @@ import Foundation
 final class LoginViewModel: LoginViewModelProtocol {
     
     private let loginService: LoginServiceProtocol
-    private weak var coordinator: CoordinatorProtocol?
+    private weak var coordinator: LoginCoordinatorProtocol?
     
-    init(loginService: LoginServiceProtocol, coordinator: CoordinatorProtocol) {
+    init(loginService: LoginServiceProtocol, coordinator: LoginCoordinatorProtocol) {
         self.loginService = loginService
         self.coordinator = coordinator
     }
-    
-    func start() {}
 }
 
 //MARK: - UI events
@@ -26,9 +24,8 @@ extension LoginViewModel {
     func login(username: String, password: String) {
         loginService.logIn(username: username, password: password) { [weak self] result in
             switch result {
-            case .success(let authorizatioData):
-                //TODO: - store token
-                self?.coordinator?.displayNextScreen()
+            case .success(let authorizationData):
+                self?.coordinator?.displayNextScreen(with: authorizationData)
             case .failure(let error):
                 self?.coordinator?.displayMessage(error.description)
             }

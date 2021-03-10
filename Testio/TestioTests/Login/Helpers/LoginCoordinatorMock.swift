@@ -8,8 +8,9 @@
 import UIKit
 @testable import Testio
 
-final class LoginCoordinatorMock: CoordinatorProtocol {
-    
+final class LoginCoordinatorMock: LoginCoordinatorProtocol {
+   
+    var parentViewController: UIViewController
     var onStop: (() -> ())?
     var childCoordinator: CoordinatorProtocol?
     var viewController: UIViewController?
@@ -17,7 +18,9 @@ final class LoginCoordinatorMock: CoordinatorProtocol {
     var onDisplayNextScreen: (() -> ())?
     var onDisplayMessage: (() -> ())?
     
-    required init(with parentViewController: UIViewController) {}
+    init(with parentViewController: UIViewController) {
+        self.parentViewController = parentViewController
+    }
     func start() {}
     func stop() {}
     
@@ -25,7 +28,7 @@ final class LoginCoordinatorMock: CoordinatorProtocol {
         onDisplayMessage?()
     }
     
-    func displayNextScreen() {
+    func displayNextScreen(with authorizationData: AuthorizationData) {
         onDisplayNextScreen?()
     }
 }

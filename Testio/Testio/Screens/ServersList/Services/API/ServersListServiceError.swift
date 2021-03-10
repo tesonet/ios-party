@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LoginServiceError: Error {
+enum ServersListServiceError: Error {
     case requestFailed(String)
     case dataDecodingFailed(String)
     

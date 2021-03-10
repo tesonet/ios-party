@@ -18,8 +18,8 @@ class TextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundColor = Constants.textField.colors.background
-        layer.cornerRadius = Constants.geometry.cornerRadius
+        backgroundColor = LoginConstants.textField.colors.background
+        layer.cornerRadius = LoginConstants.geometry.cornerRadius
         layer.masksToBounds = true
         delegate = self
     }
@@ -37,19 +37,19 @@ class TextField: UITextField {
 extension TextField {
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         let defaultEditingRect = super.editingRect(forBounds: bounds)
-        return defaultEditingRect.offsetBy(dx: Constants.textField.geometry.leftImageOffset, dy: 0)
+        return defaultEditingRect.offsetBy(dx: LoginConstants.textField.geometry.leftImageOffset, dy: 0)
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         let defaultTextRect = super.textRect(forBounds: bounds)
-        return defaultTextRect.offsetBy(dx: Constants.textField.geometry.leftImageOffset, dy: 0)
+        return defaultTextRect.offsetBy(dx: LoginConstants.textField.geometry.leftImageOffset, dy: 0)
     }
     
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         let defaultViewRect = super.leftViewRect(forBounds: bounds)
         return defaultViewRect
-            .offsetBy(dx: Constants.textField.geometry.leftImageOffset, dy: 0)
-            .insetBy(dx: Constants.textField.geometry.leftViewXInset, dy: Constants.textField.geometry.leftViewYInset)
+            .offsetBy(dx: LoginConstants.textField.geometry.leftImageOffset, dy: 0)
+            .insetBy(dx: LoginConstants.textField.geometry.leftViewXInset, dy: LoginConstants.textField.geometry.leftViewYInset)
     }
 }
 

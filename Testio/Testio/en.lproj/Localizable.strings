@@ -17,8 +17,14 @@
 "unauthorized" = "Unauthorized";
 "unknown" = "Unknown error";
 
-
 //MARK: - Alert
 
 "alert.title" = "Info";
 "alert.ok" = "OK";
+
+//MARK: - Servers list
+
+"serverList.activity.fetchingList" = "Fetching the list...";
+"serverList.sorting.distance" = "By Distance";
+"serverList.sorting.alphanumerical" = "Alphanumerical";
+"serverList.server.formattedDostance" = "%d km";

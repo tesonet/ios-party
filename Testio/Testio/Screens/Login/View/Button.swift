@@ -11,21 +11,21 @@ class Button: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.cornerRadius = Constants.geometry.cornerRadius
+        layer.cornerRadius = LoginConstants.geometry.cornerRadius
         layer.masksToBounds = true
         
-        backgroundColor = Constants.loginButton.color.enabledBackground
-        setTitle(Localization.Button.logIn, for: .normal)
+        backgroundColor = LoginConstants.loginButton.color.enabledBackground
+        setTitle(LoginLocalization.Button.logIn, for: .normal)
     }
     
     func enable() {
         isEnabled = true
-        setBackgroundColor(color: Constants.loginButton.color.enabledBackground, forState: .normal)
+        setBackgroundColor(color: LoginConstants.loginButton.color.enabledBackground, forState: .normal)
     }
     
     func disable() {
         isEnabled = false
-        setBackgroundColor(color: Constants.loginButton.color.disabledBackground, forState: .disabled)
+        setBackgroundColor(color: LoginConstants.loginButton.color.disabledBackground, forState: .disabled)
     }
     
     private func setBackgroundColor(color: UIColor, forState: UIControl.State) {

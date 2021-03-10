@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Constants {
+struct LoginConstants {
     struct textField {
         struct geometry {
             static let leftImageOffset = CGFloat(10)
