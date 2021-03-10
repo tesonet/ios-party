@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Testio
+
+  Created by Andrii Popov on 3/8/21.
+  
+*/
+
+//MARK: - Login screen
+
+"login.button.title" = "Log In";
+"login.userNameTextField.placeholder" = "Username";
+"login.passwordTextField.placeholder" = "Password";
+
+//MARK: - Errors
+
+"unauthorized" = "Unauthorized";
+"unknown" = "Unknown error";
+
+//MARK: - Alert
+
+"alert.title" = "Info";
+"alert.ok" = "OK";
+
+//MARK: - Servers list
+
+"serverList.activity.fetchingList" = "Fetching the list...";
+"serverList.sorting.distance" = "By Distance";
+"serverList.sorting.alphanumerical" = "Alphanumerical";
+"serverList.server.formattedDostance" = "%d km";
