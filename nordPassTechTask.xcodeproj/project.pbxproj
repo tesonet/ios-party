@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE1CE1432624D8D6001F29FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1422624D8D6001F29FD /* LoginView.swift */; };
+		BE1CE14D2624D90E001F29FD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE14C2624D90E001F29FD /* ViewModel.swift */; };
+		BE1CE1562624DAD5001F29FD /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1552624DAD5001F29FD /* LoginRepositoryProtocol.swift */; };
+		BE1CE15B2624DFB8001F29FD /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE15A2624DFB8001F29FD /* LoginResponse.swift */; };
+		BE1CE1682624E0EB001F29FD /* ServerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1672624E0EB001F29FD /* ServerRepositoryProtocol.swift */; };
+		BE1CE16D2624E15F001F29FD /* ServersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE16C2624E15F001F29FD /* ServersResponse.swift */; };
+		BE1CE1722624E167001F29FD /* ServerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1712624E167001F29FD /* ServerDTO.swift */; };
+		BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17A2624E202001F29FD /* ServersView.swift */; };
+		BE1CE1802624E78D001F29FD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17F2624E78D001F29FD /* AppState.swift */; };
+		BE1CE1882624E870001F29FD /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1872624E870001F29FD /* ServerViewModel.swift */; };
+		BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */; };
+		BEA9639B2624D65B00DA3012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639A2624D65B00DA3012 /* Assets.xcassets */; };
+		BEA9639E2624D65B00DA3012 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639D2624D65B00DA3012 /* Preview Assets.xcassets */; };
+		BEA963A92624D65B00DA3012 /* nordPassTechTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963A82624D65B00DA3012 /* nordPassTechTaskTests.swift */; };
+		BEA963B42624D65B00DA3012 /* nordPassTechTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963B32624D65B00DA3012 /* nordPassTechTaskUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEA963A52624D65B00DA3012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEA9638B2624D65B00DA3012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEA963922624D65B00DA3012;
+			remoteInfo = nordPassTechTask;
+		};
+		BEA963B02624D65B00DA3012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEA9638B2624D65B00DA3012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEA963922624D65B00DA3012;
+			remoteInfo = nordPassTechTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE1CE1422624D8D6001F29FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BE1CE14C2624D90E001F29FD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BE1CE1552624DAD5001F29FD /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		BE1CE15A2624DFB8001F29FD /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		BE1CE1672624E0EB001F29FD /* ServerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepositoryProtocol.swift; sourceTree = "<group>"; };
+		BE1CE16C2624E15F001F29FD /* ServersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersResponse.swift; sourceTree = "<group>"; };
+		BE1CE1712624E167001F29FD /* ServerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDTO.swift; sourceTree = "<group>"; };
+		BE1CE17A2624E202001F29FD /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
+		BE1CE17F2624E78D001F29FD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BE1CE1872624E870001F29FD /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
+		BEA963932624D65B00DA3012 /* nordPassTechTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nordPassTechTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskApp.swift; sourceTree = "<group>"; };
+		BEA9639A2624D65B00DA3012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEA9639D2624D65B00DA3012 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BEA9639F2624D65B00DA3012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA963A42624D65B00DA3012 /* nordPassTechTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nordPassTechTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA963A82624D65B00DA3012 /* nordPassTechTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskTests.swift; sourceTree = "<group>"; };
+		BEA963AA2624D65B00DA3012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA963AF2624D65B00DA3012 /* nordPassTechTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nordPassTechTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA963B32624D65B00DA3012 /* nordPassTechTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskUITests.swift; sourceTree = "<group>"; };
+		BEA963B52624D65B00DA3012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEA963902624D65B00DA3012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA963A12624D65B00DA3012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA963AC2624D65B00DA3012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE1CE1472624D8E3001F29FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE1CE1422624D8D6001F29FD /* LoginView.swift */,
+				BE1CE18F2624EB68001F29FD /* ServersView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE1CE14B2624D8F6001F29FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEA9639A2624D65B00DA3012 /* Assets.xcassets */,
+				BEA9639C2624D65B00DA3012 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE1CE1512624DA73001F29FD /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BE1CE14C2624D90E001F29FD /* ViewModel.swift */,
+				BE1CE1552624DAD5001F29FD /* LoginRepositoryProtocol.swift */,
+				BE1CE1672624E0EB001F29FD /* ServerRepositoryProtocol.swift */,
+				BE1CE17F2624E78D001F29FD /* AppState.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		BE1CE15F2624DFC8001F29FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE1CE1632624DFEF001F29FD /* Responses */,
+				BE1CE1762624E16E001F29FD /* DTO */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE1CE1632624DFEF001F29FD /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				BE1CE15A2624DFB8001F29FD /* LoginResponse.swift */,
+				BE1CE16C2624E15F001F29FD /* ServersResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		BE1CE1762624E16E001F29FD /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				BE1CE1712624E167001F29FD /* ServerDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		BE1CE18F2624EB68001F29FD /* ServersView */ = {
+			isa = PBXGroup;
+			children = (
+				BE1CE17A2624E202001F29FD /* ServersView.swift */,
+				BE1CE1872624E870001F29FD /* ServerViewModel.swift */,
+			);
+			path = ServersView;
+			sourceTree = "<group>";
+		};
+		BEA9638A2624D65B00DA3012 = {
+			isa = PBXGroup;
+			children = (
+				BEA963952624D65B00DA3012 /* nordPassTechTask */,
+				BEA963A72624D65B00DA3012 /* nordPassTechTaskTests */,
+				BEA963B22624D65B00DA3012 /* nordPassTechTaskUITests */,
+				BEA963942624D65B00DA3012 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEA963942624D65B00DA3012 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEA963932624D65B00DA3012 /* nordPassTechTask.app */,
+				BEA963A42624D65B00DA3012 /* nordPassTechTaskTests.xctest */,
+				BEA963AF2624D65B00DA3012 /* nordPassTechTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEA963952624D65B00DA3012 /* nordPassTechTask */ = {
+			isa = PBXGroup;
+			children = (
+				BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */,
+				BEA9639F2624D65B00DA3012 /* Info.plist */,
+				BE1CE1472624D8E3001F29FD /* Views */,
+				BE1CE14B2624D8F6001F29FD /* Resources */,
+				BE1CE1512624DA73001F29FD /* Logic */,
+				BE1CE15F2624DFC8001F29FD /* Models */,
+			);
+			path = nordPassTechTask;
+			sourceTree = "<group>";
+		};
+		BEA9639C2624D65B00DA3012 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BEA9639D2624D65B00DA3012 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BEA963A72624D65B00DA3012 /* nordPassTechTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEA963A82624D65B00DA3012 /* nordPassTechTaskTests.swift */,
+				BEA963AA2624D65B00DA3012 /* Info.plist */,
+			);
+			path = nordPassTechTaskTests;
+			sourceTree = "<group>";
+		};
+		BEA963B22624D65B00DA3012 /* nordPassTechTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEA963B32624D65B00DA3012 /* nordPassTechTaskUITests.swift */,
+				BEA963B52624D65B00DA3012 /* Info.plist */,
+			);
+			path = nordPassTechTaskUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEA963922624D65B00DA3012 /* nordPassTechTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA963B82624D65B00DA3012 /* Build configuration list for PBXNativeTarget "nordPassTechTask" */;
+			buildPhases = (
+				BEA9638F2624D65B00DA3012 /* Sources */,
+				BEA963902624D65B00DA3012 /* Frameworks */,
+				BEA963912624D65B00DA3012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nordPassTechTask;
+			productName = nordPassTechTask;
+			productReference = BEA963932624D65B00DA3012 /* nordPassTechTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEA963A32624D65B00DA3012 /* nordPassTechTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA963BB2624D65B00DA3012 /* Build configuration list for PBXNativeTarget "nordPassTechTaskTests" */;
+			buildPhases = (
+				BEA963A02624D65B00DA3012 /* Sources */,
+				BEA963A12624D65B00DA3012 /* Frameworks */,
+				BEA963A22624D65B00DA3012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEA963A62624D65B00DA3012 /* PBXTargetDependency */,
+			);
+			name = nordPassTechTaskTests;
+			productName = nordPassTechTaskTests;
+			productReference = BEA963A42624D65B00DA3012 /* nordPassTechTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEA963AE2624D65B00DA3012 /* nordPassTechTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA963BE2624D65B00DA3012 /* Build configuration list for PBXNativeTarget "nordPassTechTaskUITests" */;
+			buildPhases = (
+				BEA963AB2624D65B00DA3012 /* Sources */,
+				BEA963AC2624D65B00DA3012 /* Frameworks */,
+				BEA963AD2624D65B00DA3012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEA963B12624D65B00DA3012 /* PBXTargetDependency */,
+			);
+			name = nordPassTechTaskUITests;
+			productName = nordPassTechTaskUITests;
+			productReference = BEA963AF2624D65B00DA3012 /* nordPassTechTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEA9638B2624D65B00DA3012 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BEA963922624D65B00DA3012 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					BEA963A32624D65B00DA3012 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BEA963922624D65B00DA3012;
+					};
+					BEA963AE2624D65B00DA3012 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BEA963922624D65B00DA3012;
+					};
+				};
+			};
+			buildConfigurationList = BEA9638E2624D65B00DA3012 /* Build configuration list for PBXProject "nordPassTechTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEA9638A2624D65B00DA3012;
+			productRefGroup = BEA963942624D65B00DA3012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEA963922624D65B00DA3012 /* nordPassTechTask */,
+				BEA963A32624D65B00DA3012 /* nordPassTechTaskTests */,
+				BEA963AE2624D65B00DA3012 /* nordPassTechTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEA963912624D65B00DA3012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA9639E2624D65B00DA3012 /* Preview Assets.xcassets in Resources */,
+				BEA9639B2624D65B00DA3012 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA963A22624D65B00DA3012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA963AD2624D65B00DA3012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEA9638F2624D65B00DA3012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE1CE1882624E870001F29FD /* ServerViewModel.swift in Sources */,
+				BE1CE1722624E167001F29FD /* ServerDTO.swift in Sources */,
+				BE1CE1802624E78D001F29FD /* AppState.swift in Sources */,
+				BE1CE1682624E0EB001F29FD /* ServerRepositoryProtocol.swift in Sources */,
+				BE1CE1432624D8D6001F29FD /* LoginView.swift in Sources */,
+				BE1CE16D2624E15F001F29FD /* ServersResponse.swift in Sources */,
+				BE1CE14D2624D90E001F29FD /* ViewModel.swift in Sources */,
+				BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */,
+				BE1CE1562624DAD5001F29FD /* LoginRepositoryProtocol.swift in Sources */,
+				BE1CE15B2624DFB8001F29FD /* LoginResponse.swift in Sources */,
+				BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA963A02624D65B00DA3012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA963A92624D65B00DA3012 /* nordPassTechTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA963AB2624D65B00DA3012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA963B42624D65B00DA3012 /* nordPassTechTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEA963A62624D65B00DA3012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEA963922624D65B00DA3012 /* nordPassTechTask */;
+			targetProxy = BEA963A52624D65B00DA3012 /* PBXContainerItemProxy */;
+		};
+		BEA963B12624D65B00DA3012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEA963922624D65B00DA3012 /* nordPassTechTask */;
+			targetProxy = BEA963B02624D65B00DA3012 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BEA963B62624D65B00DA3012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEA963B72624D65B00DA3012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEA963B92624D65B00DA3012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"nordPassTechTask/Resources/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = nordPassTechTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.icanswiftabit.nordPassTechTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEA963BA2624D65B00DA3012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"nordPassTechTask/Resources/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = nordPassTechTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.icanswiftabit.nordPassTechTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEA963BC2624D65B00DA3012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nordPassTechTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.icanswiftabit.nordPassTechTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nordPassTechTask.app/nordPassTechTask";
+			};
+			name = Debug;
+		};
+		BEA963BD2624D65B00DA3012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nordPassTechTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.icanswiftabit.nordPassTechTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nordPassTechTask.app/nordPassTechTask";
+			};
+			name = Release;
+		};
+		BEA963BF2624D65B00DA3012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nordPassTechTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.icanswiftabit.nordPassTechTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nordPassTechTask;
+			};
+			name = Debug;
+		};
+		BEA963C02624D65B00DA3012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nordPassTechTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.icanswiftabit.nordPassTechTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nordPassTechTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEA9638E2624D65B00DA3012 /* Build configuration list for PBXProject "nordPassTechTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA963B62624D65B00DA3012 /* Debug */,
+				BEA963B72624D65B00DA3012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEA963B82624D65B00DA3012 /* Build configuration list for PBXNativeTarget "nordPassTechTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA963B92624D65B00DA3012 /* Debug */,
+				BEA963BA2624D65B00DA3012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEA963BB2624D65B00DA3012 /* Build configuration list for PBXNativeTarget "nordPassTechTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA963BC2624D65B00DA3012 /* Debug */,
+				BEA963BD2624D65B00DA3012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEA963BE2624D65B00DA3012 /* Build configuration list for PBXNativeTarget "nordPassTechTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA963BF2624D65B00DA3012 /* Debug */,
+				BEA963C02624D65B00DA3012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEA9638B2624D65B00DA3012 /* Project object */;
+}
