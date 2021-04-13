@@ -15,7 +15,7 @@ struct nordPassTechTaskApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ServersView(viewModel: ServerViewModel<ImmediateScheduler>.mock(state: .mock()).eraseToAnyViewModel())
+            EntryView()
                 .environmentObject(appState)
         }
     }

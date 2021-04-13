@@ -16,12 +16,16 @@
 		BE1CE1722624E167001F29FD /* ServerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1712624E167001F29FD /* ServerDTO.swift */; };
 		BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17A2624E202001F29FD /* ServersView.swift */; };
 		BE1CE1802624E78D001F29FD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17F2624E78D001F29FD /* AppState.swift */; };
-		BE1CE1882624E870001F29FD /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1872624E870001F29FD /* ServerViewModel.swift */; };
+		BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1872624E870001F29FD /* ServersViewModel.swift */; };
 		BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */; };
 		BEA9639B2624D65B00DA3012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639A2624D65B00DA3012 /* Assets.xcassets */; };
 		BEA9639E2624D65B00DA3012 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639D2624D65B00DA3012 /* Preview Assets.xcassets */; };
 		BEA963A92624D65B00DA3012 /* nordPassTechTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963A82624D65B00DA3012 /* nordPassTechTaskTests.swift */; };
 		BEA963B42624D65B00DA3012 /* nordPassTechTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963B32624D65B00DA3012 /* nordPassTechTaskUITests.swift */; };
+		BEB9A08526259CB1003FF71F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A08426259CB1003FF71F /* LoginViewModel.swift */; };
+		BEB9A08E2625A1FE003FF71F /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */; };
+		BEB9A09A26260D28003FF71F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A09926260D28003FF71F /* LoginRequest.swift */; };
+		BEB9A0A626261459003FF71F /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A0A526261459003FF71F /* EntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +55,7 @@
 		BE1CE1712624E167001F29FD /* ServerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDTO.swift; sourceTree = "<group>"; };
 		BE1CE17A2624E202001F29FD /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
 		BE1CE17F2624E78D001F29FD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		BE1CE1872624E870001F29FD /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
+		BE1CE1872624E870001F29FD /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
 		BEA963932624D65B00DA3012 /* nordPassTechTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nordPassTechTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskApp.swift; sourceTree = "<group>"; };
 		BEA9639A2624D65B00DA3012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +67,10 @@
 		BEA963AF2624D65B00DA3012 /* nordPassTechTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nordPassTechTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA963B32624D65B00DA3012 /* nordPassTechTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskUITests.swift; sourceTree = "<group>"; };
 		BEA963B52624D65B00DA3012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB9A08426259CB1003FF71F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		BEB9A09926260D28003FF71F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		BEB9A0A526261459003FF71F /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +101,9 @@
 		BE1CE1472624D8E3001F29FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE1CE1422624D8D6001F29FD /* LoginView.swift */,
+				BEB9A08926259F0A003FF71F /* LoginView */,
 				BE1CE18F2624EB68001F29FD /* ServersView */,
+				BEB9A0A526261459003FF71F /* EntryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +133,7 @@
 			children = (
 				BE1CE1632624DFEF001F29FD /* Responses */,
 				BE1CE1762624E16E001F29FD /* DTO */,
+				BEB9A09E26260D4D003FF71F /* Requests */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BE1CE17A2624E202001F29FD /* ServersView.swift */,
-				BE1CE1872624E870001F29FD /* ServerViewModel.swift */,
+				BE1CE1872624E870001F29FD /* ServersViewModel.swift */,
 			);
 			path = ServersView;
 			sourceTree = "<group>";
@@ -181,6 +191,7 @@
 				BEA9639F2624D65B00DA3012 /* Info.plist */,
 				BE1CE1472624D8E3001F29FD /* Views */,
 				BE1CE14B2624D8F6001F29FD /* Resources */,
+				BEB9A0922625A204003FF71F /* Repositories */,
 				BE1CE1512624DA73001F29FD /* Logic */,
 				BE1CE15F2624DFC8001F29FD /* Models */,
 			);
@@ -211,6 +222,31 @@
 				BEA963B52624D65B00DA3012 /* Info.plist */,
 			);
 			path = nordPassTechTaskUITests;
+			sourceTree = "<group>";
+		};
+		BEB9A08926259F0A003FF71F /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				BE1CE1422624D8D6001F29FD /* LoginView.swift */,
+				BEB9A08426259CB1003FF71F /* LoginViewModel.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		BEB9A0922625A204003FF71F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BEB9A09E26260D4D003FF71F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9A09926260D28003FF71F /* LoginRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,14 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1CE1882624E870001F29FD /* ServerViewModel.swift in Sources */,
+				BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */,
+				BEB9A08E2625A1FE003FF71F /* LoginRepository.swift in Sources */,
+				BEB9A0A626261459003FF71F /* EntryView.swift in Sources */,
 				BE1CE1722624E167001F29FD /* ServerDTO.swift in Sources */,
 				BE1CE1802624E78D001F29FD /* AppState.swift in Sources */,
 				BE1CE1682624E0EB001F29FD /* ServerRepositoryProtocol.swift in Sources */,
+				BEB9A09A26260D28003FF71F /* LoginRequest.swift in Sources */,
 				BE1CE1432624D8D6001F29FD /* LoginView.swift in Sources */,
 				BE1CE16D2624E15F001F29FD /* ServersResponse.swift in Sources */,
 				BE1CE14D2624D90E001F29FD /* ViewModel.swift in Sources */,
 				BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */,
+				BEB9A08526259CB1003FF71F /* LoginViewModel.swift in Sources */,
 				BE1CE1562624DAD5001F29FD /* LoginRepositoryProtocol.swift in Sources */,
 				BE1CE15B2624DFB8001F29FD /* LoginResponse.swift in Sources */,
 				BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */,
@@ -511,6 +551,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"nordPassTechTask/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = B799ALMBWW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = nordPassTechTask/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -532,6 +573,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"nordPassTechTask/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = B799ALMBWW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = nordPassTechTask/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

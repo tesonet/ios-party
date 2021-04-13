@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class ServerViewModel<S>: ViewModel where S: Scheduler {
+final class ServersViewModel<S>: ViewModel where S: Scheduler {
     @Published var state: ServersState
     
     private let repository: ServerRepositoryProtocol
@@ -35,9 +35,9 @@ extension ServersState {
     }
 }
 
-extension ServerViewModel {
-    static func mock(state: ServersState) -> ServerViewModel<ImmediateScheduler> {
-        ServerViewModel<ImmediateScheduler>(state: .mock(), with: ServerRepositoryProtocolMock(), on: ImmediateScheduler.shared)
+extension ServersViewModel {
+    static func mock(state: ServersState) -> ServersViewModel<ImmediateScheduler> {
+        ServersViewModel<ImmediateScheduler>(state: .mock(), with: ServerRepositoryProtocolMock(), on: ImmediateScheduler.shared)
     }
 }
 #endif

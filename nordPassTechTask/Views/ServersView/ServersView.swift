@@ -35,14 +35,22 @@ struct ServersView: View {
     @EnvironmentObject var environment: AppState
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(0...10, id: \.self) {
+            Text("\($0)")
+        }
+        .navigationBarItems(trailing:
+                                Button("Logout") {
+                                    environment.token = nil
+                                })
+        .navigationBarHidden(false)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #if DEBUG
 struct ServersView_Previews: PreviewProvider {
     static var previews: some View {
-        ServersView(viewModel: ServerViewModel<ImmediateScheduler>.mock(state: .mock()).eraseToAnyViewModel())
+        ServersView(viewModel: ServersViewModel<ImmediateScheduler>.mock(state: .mock()).eraseToAnyViewModel())
             .environmentObject(AppState.mock())
     }
 }
