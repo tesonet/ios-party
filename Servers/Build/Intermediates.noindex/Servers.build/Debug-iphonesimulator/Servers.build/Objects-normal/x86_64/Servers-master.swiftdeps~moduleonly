@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "fb4acd87a8ba6b64a40c528376507594"
+build_time: [1618387695, 781298000]
+inputs:
+  "/Users/Nick/Documents/Projects/ios-party/Servers/Servers/ViewController.swift": [1618387688, 814904472]
+  "/Users/Nick/Documents/Projects/ios-party/Servers/Servers/AppDelegate.swift": [1618387688, 798155126]
+  "/Users/Nick/Documents/Projects/ios-party/Servers/Servers/SceneDelegate.swift": [1618387688, 812305499]
