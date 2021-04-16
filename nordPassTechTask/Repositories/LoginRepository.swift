@@ -8,18 +8,6 @@
 import Foundation
 import Combine
 
-enum LoginError: LocalizedError {
-    case unknownError
-    case unathorized
-    
-    var errorDescription: String? {
-        switch self {
-        case .unknownError: return "Unknown Server Error"
-        case .unathorized: return "Wrong username or password"
-        }
-    }
-}
-
 struct LoginRepository: LoginRepositoryProtocol {
     private let session: URLSession
     
@@ -40,13 +28,13 @@ struct LoginRepository: LoginRepositoryProtocol {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         return session.dataTaskPublisher(for: request)
-            .tryMap{ result in
+            .tryMap { result in
                 
-                guard let response = result.response as? HTTPURLResponse else { throw LoginError.unknownError }
+                guard let response = result.response as? HTTPURLResponse else { throw NetworkError.unknownError }
                 
-                guard response.statusCode != 401 else { throw LoginError.unathorized }
+                guard response.statusCode != 401 else { throw NetworkError.unathorized }
                 
-                guard (199...299).contains(response.statusCode) else { throw LoginError.unknownError }
+                guard (199...299).contains(response.statusCode) else { throw NetworkError.unknownError }
                 
                 return result.data
             }

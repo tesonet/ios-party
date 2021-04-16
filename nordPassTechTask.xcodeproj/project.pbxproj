@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE124950262790D200197E68 /* ServersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12494F262790D200197E68 /* ServersRepository.swift */; };
+		BE1249582627997B00197E68 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1249572627997B00197E68 /* NetworkError.swift */; };
 		BE1CE1432624D8D6001F29FD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1422624D8D6001F29FD /* LoginView.swift */; };
 		BE1CE14D2624D90E001F29FD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE14C2624D90E001F29FD /* ViewModel.swift */; };
 		BE1CE1562624DAD5001F29FD /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1552624DAD5001F29FD /* LoginRepositoryProtocol.swift */; };
 		BE1CE15B2624DFB8001F29FD /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE15A2624DFB8001F29FD /* LoginResponse.swift */; };
-		BE1CE1682624E0EB001F29FD /* ServerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1672624E0EB001F29FD /* ServerRepositoryProtocol.swift */; };
+		BE1CE1682624E0EB001F29FD /* ServersRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1672624E0EB001F29FD /* ServersRepositoryProtocol.swift */; };
 		BE1CE16D2624E15F001F29FD /* ServersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE16C2624E15F001F29FD /* ServersResponse.swift */; };
 		BE1CE1722624E167001F29FD /* ServerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1712624E167001F29FD /* ServerDTO.swift */; };
 		BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17A2624E202001F29FD /* ServersView.swift */; };
 		BE1CE1802624E78D001F29FD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17F2624E78D001F29FD /* AppState.swift */; };
 		BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1872624E870001F29FD /* ServersViewModel.swift */; };
+		BEA3249B262A488000266C23 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3249A262A488000266C23 /* AlertError.swift */; };
 		BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */; };
 		BEA9639B2624D65B00DA3012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639A2624D65B00DA3012 /* Assets.xcassets */; };
 		BEA9639E2624D65B00DA3012 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639D2624D65B00DA3012 /* Preview Assets.xcassets */; };
@@ -26,6 +29,8 @@
 		BEB9A08E2625A1FE003FF71F /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */; };
 		BEB9A09A26260D28003FF71F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A09926260D28003FF71F /* LoginRequest.swift */; };
 		BEB9A0A626261459003FF71F /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A0A526261459003FF71F /* EntryView.swift */; };
+		BEBAFDED262A21D8003A8ACB /* ServersStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBAFDEC262A21D8003A8ACB /* ServersStoreProtocol.swift */; };
+		BEBAFDF5262A3112003A8ACB /* ServersJsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBAFDF4262A3112003A8ACB /* ServersJsonStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +51,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE12494F262790D200197E68 /* ServersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersRepository.swift; sourceTree = "<group>"; };
+		BE1249572627997B00197E68 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BE1CE1422624D8D6001F29FD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BE1CE14C2624D90E001F29FD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BE1CE1552624DAD5001F29FD /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
 		BE1CE15A2624DFB8001F29FD /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		BE1CE1672624E0EB001F29FD /* ServerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepositoryProtocol.swift; sourceTree = "<group>"; };
+		BE1CE1672624E0EB001F29FD /* ServersRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersRepositoryProtocol.swift; sourceTree = "<group>"; };
 		BE1CE16C2624E15F001F29FD /* ServersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersResponse.swift; sourceTree = "<group>"; };
 		BE1CE1712624E167001F29FD /* ServerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDTO.swift; sourceTree = "<group>"; };
 		BE1CE17A2624E202001F29FD /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
 		BE1CE17F2624E78D001F29FD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BE1CE1872624E870001F29FD /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		BEA3249A262A488000266C23 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
 		BEA963932624D65B00DA3012 /* nordPassTechTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nordPassTechTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskApp.swift; sourceTree = "<group>"; };
 		BEA9639A2624D65B00DA3012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +79,8 @@
 		BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		BEB9A09926260D28003FF71F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		BEB9A0A526261459003FF71F /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		BEBAFDEC262A21D8003A8ACB /* ServersStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersStoreProtocol.swift; sourceTree = "<group>"; };
+		BEBAFDF4262A3112003A8ACB /* ServersJsonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersJsonStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +132,10 @@
 			children = (
 				BE1CE14C2624D90E001F29FD /* ViewModel.swift */,
 				BE1CE1552624DAD5001F29FD /* LoginRepositoryProtocol.swift */,
-				BE1CE1672624E0EB001F29FD /* ServerRepositoryProtocol.swift */,
+				BE1CE1672624E0EB001F29FD /* ServersRepositoryProtocol.swift */,
 				BE1CE17F2624E78D001F29FD /* AppState.swift */,
+				BEBAFDEC262A21D8003A8ACB /* ServersStoreProtocol.swift */,
+				BEA3249A262A488000266C23 /* AlertError.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -237,6 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */,
+				BE12494F262790D200197E68 /* ServersRepository.swift */,
+				BE1249572627997B00197E68 /* NetworkError.swift */,
+				BEBAFDF4262A3112003A8ACB /* ServersJsonStore.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -378,12 +393,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1249582627997B00197E68 /* NetworkError.swift in Sources */,
 				BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */,
 				BEB9A08E2625A1FE003FF71F /* LoginRepository.swift in Sources */,
 				BEB9A0A626261459003FF71F /* EntryView.swift in Sources */,
 				BE1CE1722624E167001F29FD /* ServerDTO.swift in Sources */,
+				BEA3249B262A488000266C23 /* AlertError.swift in Sources */,
 				BE1CE1802624E78D001F29FD /* AppState.swift in Sources */,
-				BE1CE1682624E0EB001F29FD /* ServerRepositoryProtocol.swift in Sources */,
+				BEBAFDED262A21D8003A8ACB /* ServersStoreProtocol.swift in Sources */,
+				BE1CE1682624E0EB001F29FD /* ServersRepositoryProtocol.swift in Sources */,
+				BE124950262790D200197E68 /* ServersRepository.swift in Sources */,
+				BEBAFDF5262A3112003A8ACB /* ServersJsonStore.swift in Sources */,
 				BEB9A09A26260D28003FF71F /* LoginRequest.swift in Sources */,
 				BE1CE1432624D8D6001F29FD /* LoginView.swift in Sources */,
 				BE1CE16D2624E15F001F29FD /* ServersResponse.swift in Sources */,

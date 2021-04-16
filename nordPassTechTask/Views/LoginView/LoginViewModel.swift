@@ -29,8 +29,8 @@ final class LoginViewModel<S>: ViewModel where S: Scheduler {
             repository.login(username: state.username, password: state.password)
                 .receive(on: scheduler)
                 .catch { [weak self] error -> Empty<String, Never> in
-                    guard let error = error as? LoginError else {
-                        self?.state.error = LoginError.unknownError.errorDescription
+                    guard let error = error as? NetworkError else {
+                        self?.state.error = NetworkError.unknownError.errorDescription
                         return Empty<String, Never>(completeImmediately: true)
                     }
                     self?.state.error = error.errorDescription

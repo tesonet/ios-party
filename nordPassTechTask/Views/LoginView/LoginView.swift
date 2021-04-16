@@ -37,7 +37,12 @@ struct LoginView: View {
             TextField("Username", text: viewModel.binding(\.username, with: LoginInput.updateLogin))
             SecureField("Password", text: viewModel.binding(\.password, with: LoginInput.updatePassword))
             NavigationLink(
-                destination: ServersView(viewModel: ServersViewModel<ImmediateScheduler>.mock(state: .mock()).eraseToAnyViewModel()),
+                destination: ServersView(
+                    viewModel: ServersViewModel<DispatchQueue>(
+                        state: ServersState(),
+                        with: ServersRepository(appState: env),
+                        store: ServersJsonStore(jsonName: "servers.json"),
+                        on: DispatchQueue.main).eraseToAnyViewModel()),
                 isActive: .constant(env.token != nil),
                 label: {
                     Button("Login") {

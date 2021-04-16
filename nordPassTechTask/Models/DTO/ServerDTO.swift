@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ServerDTO: Codable {
+struct ServerDTO: Codable, Hashable {
     let name: String
     let distance: Int
 }
