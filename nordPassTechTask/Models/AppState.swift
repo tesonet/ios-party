@@ -9,14 +9,10 @@ import Foundation
 import Combine
 
 final class AppState: ObservableObject {
-    @Published var token: String? {
-        didSet {
-            UserDefaults.standard.set(token, forKey: "token")
-        }
-    }
+    @Published var token: String?
     
     init(token: String?) {
-        self.token = token ?? UserDefaults.standard.string(forKey: "token")
+        self.token = token
     }
 }
 

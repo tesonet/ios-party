@@ -35,7 +35,9 @@ struct LoginView: View {
                     .font(.caption2)
             }
             TextField("Username", text: viewModel.binding(\.username, with: LoginInput.updateLogin))
+                .textContentType(.username)
             SecureField("Password", text: viewModel.binding(\.password, with: LoginInput.updatePassword))
+                .textContentType(.password)
             NavigationLink(
                 destination: ServersView(
                     viewModel: ServersViewModel<DispatchQueue>(

@@ -38,7 +38,12 @@ final class LoginViewModel<S>: ViewModel where S: Scheduler {
                     return Empty<String, Never>(completeImmediately: true)
                 }
                 .sink { [weak self] token in
-                    self?.appState.token = token
+                    guard let self = self else { return }
+                    
+                    if let passwordData = self.state.password.data(using: .utf8) {
+                        Keychain.save(password: passwordData, account: self.state.username)
+                    }
+                    self.appState.token = token
                 }
                 .store(in: &bag)
         case .updateLogin(let username):

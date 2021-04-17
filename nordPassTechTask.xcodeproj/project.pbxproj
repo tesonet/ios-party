@@ -19,6 +19,7 @@
 		BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17A2624E202001F29FD /* ServersView.swift */; };
 		BE1CE1802624E78D001F29FD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17F2624E78D001F29FD /* AppState.swift */; };
 		BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1872624E870001F29FD /* ServersViewModel.swift */; };
+		BE3BF5D3262AE84600080FB3 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3BF5D2262AE84600080FB3 /* Keychain.swift */; };
 		BEA3249B262A488000266C23 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3249A262A488000266C23 /* AlertError.swift */; };
 		BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */; };
 		BEA9639B2624D65B00DA3012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639A2624D65B00DA3012 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		BE1CE17A2624E202001F29FD /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
 		BE1CE17F2624E78D001F29FD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BE1CE1872624E870001F29FD /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		BE3BF5D2262AE84600080FB3 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		BEA3249A262A488000266C23 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
 		BEA963932624D65B00DA3012 /* nordPassTechTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nordPassTechTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskApp.swift; sourceTree = "<group>"; };
@@ -133,9 +135,7 @@
 				BE1CE14C2624D90E001F29FD /* ViewModel.swift */,
 				BE1CE1552624DAD5001F29FD /* LoginRepositoryProtocol.swift */,
 				BE1CE1672624E0EB001F29FD /* ServersRepositoryProtocol.swift */,
-				BE1CE17F2624E78D001F29FD /* AppState.swift */,
 				BEBAFDEC262A21D8003A8ACB /* ServersStoreProtocol.swift */,
-				BEA3249A262A488000266C23 /* AlertError.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -143,6 +143,7 @@
 		BE1CE15F2624DFC8001F29FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE1CE17F2624E78D001F29FD /* AppState.swift */,
 				BE1CE1632624DFEF001F29FD /* Responses */,
 				BE1CE1762624E16E001F29FD /* DTO */,
 				BEB9A09E26260D4D003FF71F /* Requests */,
@@ -176,6 +177,15 @@
 			path = ServersView;
 			sourceTree = "<group>";
 		};
+		BE3BF5CB262AE82B00080FB3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BEA3249A262A488000266C23 /* AlertError.swift */,
+				BE3BF5D2262AE84600080FB3 /* Keychain.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BEA9638A2624D65B00DA3012 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 			children = (
 				BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */,
 				BEA9639F2624D65B00DA3012 /* Info.plist */,
+				BE3BF5CB262AE82B00080FB3 /* Helpers */,
 				BE1CE1472624D8E3001F29FD /* Views */,
 				BE1CE14B2624D8F6001F29FD /* Resources */,
 				BEB9A0922625A204003FF71F /* Repositories */,
@@ -397,6 +408,7 @@
 				BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */,
 				BEB9A08E2625A1FE003FF71F /* LoginRepository.swift in Sources */,
 				BEB9A0A626261459003FF71F /* EntryView.swift in Sources */,
+				BE3BF5D3262AE84600080FB3 /* Keychain.swift in Sources */,
 				BE1CE1722624E167001F29FD /* ServerDTO.swift in Sources */,
 				BEA3249B262A488000266C23 /* AlertError.swift in Sources */,
 				BE1CE1802624E78D001F29FD /* AppState.swift in Sources */,
