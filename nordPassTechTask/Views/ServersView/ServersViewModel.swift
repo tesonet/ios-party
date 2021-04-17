@@ -28,7 +28,6 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
         case .initialFetch:
             
             store.load()
-                .delay(for: .seconds(6), scheduler: DispatchQueue.global())
                 .receive(on: scheduler)
                 .catch { error -> Empty<[ServerDTO], Never> in
                     assert(false, "Loading from store: \(error)")
@@ -41,7 +40,6 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
                 .store(in: &bag)
 
             repository.getServers()
-                .delay(for: .seconds(5), scheduler: DispatchQueue.global())
                 .receive(on: scheduler)
                 .catch { [weak self] error -> Empty<[ServerDTO], Never> in
                     print(error.localizedDescription)

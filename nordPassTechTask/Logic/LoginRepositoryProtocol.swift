@@ -22,15 +22,14 @@ final class LoginRepositoryProtocolMock: LoginRepositoryProtocol {
     var loginUsernamePasswordCalled: Bool {
         loginUsernamePasswordCallsCount > 0
     }
-    var loginUsernamePasswordReceivedArguments: (username: String, password: String)?
-    var loginUsernamePasswordReceivedInvocations: [(username: String, password: String)] = []
-    var loginUsernamePasswordReturnValue: AnyPublisher<String, Error>!
-    var loginUsernamePasswordClosure: ((String, String) -> AnyPublisher<String, Error>)?
+    var loginUsernamePasswordReturnValue: String?
 
     func login(username: String, password: String) -> AnyPublisher<String, Error> {
         loginUsernamePasswordCallsCount += 1
-        loginUsernamePasswordReceivedArguments = (username: username, password: password)
-        loginUsernamePasswordReceivedInvocations.append((username: username, password: password))
-        return loginUsernamePasswordClosure.map({ $0(username, password) }) ?? loginUsernamePasswordReturnValue
+        if let returnValue = loginUsernamePasswordReturnValue {
+            return Just(returnValue).setFailureType(to: Error.self).eraseToAnyPublisher()
+        } else {
+            return Fail(error: NetworkError.unathorized).eraseToAnyPublisher()
+        }
     }
 }

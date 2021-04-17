@@ -17,7 +17,7 @@ struct LoginState {
 enum LoginInput {
     case login
     
-    case updateLogin(String)
+    case updateUsername(String)
     case updatePassword(String)
 }
 
@@ -34,7 +34,7 @@ struct LoginView: View {
                     .foregroundColor(.red)
                     .font(.caption2)
             }
-            TextField("Username", text: viewModel.binding(\.username, with: LoginInput.updateLogin))
+            TextField("Username", text: viewModel.binding(\.username, with: LoginInput.updateUsername))
                 .textContentType(.username)
             SecureField("Password", text: viewModel.binding(\.password, with: LoginInput.updatePassword))
                 .textContentType(.password)

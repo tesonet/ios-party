@@ -23,16 +23,15 @@ final class ServersStoreProtocolMock: ServersStoreProtocol {
     var saveCalled: Bool {
         saveCallsCount > 0
     }
-    var saveReceivedServers: [ServerDTO]?
-    var saveReceivedInvocations: [[ServerDTO]] = []
-    var saveReturnValue: AnyPublisher<Void, Error> = Just(Void()).setFailureType(to: Error.self).eraseToAnyPublisher()
-    var saveClosure: (([ServerDTO]) -> AnyPublisher<Void, Error>)?
-
+    var saveShouldSucceed = true
     func save(_ servers: [ServerDTO]) -> AnyPublisher<Void, Error> {
         saveCallsCount += 1
-        saveReceivedServers = servers
-        saveReceivedInvocations.append(servers)
-        return saveClosure.map({ $0(servers) }) ?? saveReturnValue
+        if saveShouldSucceed {
+            return Just(Void()).setFailureType(to: Error.self).eraseToAnyPublisher()
+        } else {
+            return Fail(error: ServersJsonStoreError.unknownError).eraseToAnyPublisher()
+        }
+        
     }
     
    // MARK: - load
@@ -41,11 +40,14 @@ final class ServersStoreProtocolMock: ServersStoreProtocol {
     var loadCalled: Bool {
         loadCallsCount > 0
     }
-    var loadReturnValue: AnyPublisher<[ServerDTO], Error> = Just([]).setFailureType(to: Error.self).eraseToAnyPublisher()
-    var loadClosure: (() -> AnyPublisher<[ServerDTO], Error>)?
+    var loadReturnValue: [ServerDTO]?
 
     func load() -> AnyPublisher<[ServerDTO], Error> {
         loadCallsCount += 1
-        return loadClosure.map({ $0() }) ?? loadReturnValue
+        if let returnvalue = loadReturnValue {
+           return Just(returnvalue).setFailureType(to: Error.self).eraseToAnyPublisher()
+       } else {
+           return Fail(error: ServersJsonStoreError.unknownError).eraseToAnyPublisher()
+       }
     }
 }

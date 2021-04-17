@@ -46,7 +46,7 @@ final class LoginViewModel<S>: ViewModel where S: Scheduler {
                     self.appState.token = token
                 }
                 .store(in: &bag)
-        case .updateLogin(let username):
+        case .updateUsername(let username):
             state.username = username
         case .updatePassword(let password):
             state.password = password

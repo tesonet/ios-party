@@ -15,7 +15,19 @@ protocol ServersRepositoryProtocol {
 // MARK: - ServerRepositoryProtocolMock -
 
 final class ServersRepositoryProtocolMock: ServersRepositoryProtocol {
+    
+    var getServersCallsCount = 0
+    var getServersCalled: Bool {
+        getServersCallsCount > 0
+    }
+    var getServersReturnValue: [ServerDTO]?
+    
     func getServers() -> AnyPublisher<[ServerDTO], Error> {
-        Just([ServerDTO]()).setFailureType(to: Error.self).eraseToAnyPublisher()
+        getServersCallsCount += 1
+        if let returnValue = getServersReturnValue {
+            return Just(returnValue).setFailureType(to: Error.self).eraseToAnyPublisher()
+        } else {
+            return Fail(error: NetworkError.unathorized).eraseToAnyPublisher()
+        }
     }
 }
