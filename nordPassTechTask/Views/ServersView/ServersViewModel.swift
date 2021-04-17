@@ -28,7 +28,7 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
         case .initialFetch:
             
             store.load()
-                .delay(for: .seconds(30), scheduler: DispatchQueue.global())
+                .delay(for: .seconds(6), scheduler: DispatchQueue.global())
                 .receive(on: scheduler)
                 .catch { error -> Empty<[ServerDTO], Never> in
                     assert(false, "Loading from store: \(error)")
@@ -41,7 +41,7 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
                 .store(in: &bag)
 
             repository.getServers()
-                .delay(for: .seconds(30), scheduler: DispatchQueue.global())
+                .delay(for: .seconds(5), scheduler: DispatchQueue.global())
                 .receive(on: scheduler)
                 .catch { [weak self] error -> Empty<[ServerDTO], Never> in
                     print(error.localizedDescription)
@@ -74,6 +74,15 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
         
         case .updateError(let error):
             state.error = error
+        case .updateSortedBy(let sortBy):
+            state.sortedBy = sortBy
+            switch state.sortedBy {
+            case .name:
+                state.servers = state.servers.sorted(by: { $0.name > $1.name })
+            case .distance:
+                state.servers = state.servers.sorted(by: { $0.distance > $1.distance })
+            default: break
+            }
         }
     }
 }
@@ -81,7 +90,7 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
 #if DEBUG
 extension ServersState {
     static func mock(servers: [ServerDTO] = []) -> ServersState {
-        ServersState(servers: servers, sortingOrder: .descending, sortingBy: .none, isOrderSheetPresented: false)
+        ServersState(servers: servers, sortingOrder: .descending, sortedBy: .none, isOrderSheetPresented: false)
     }
 }
 

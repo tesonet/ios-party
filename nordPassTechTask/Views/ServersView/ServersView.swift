@@ -22,7 +22,7 @@ enum ServerSortedBy {
 struct ServersState {
     var servers: [ServerDTO] = []
     var sortingOrder: SortingOrder = .descending
-    var sortingBy: ServerSortedBy = .none
+    var sortedBy: ServerSortedBy = .none
     var isOrderSheetPresented: Bool = false
     var error: AlertError? = nil
 }
@@ -31,6 +31,7 @@ enum ServerInput {
     case initialFetch
     case updateIsOrderSheetPresented(Bool)
     case updateError(AlertError?)
+    case updateSortedBy(ServerSortedBy)
 }
 
 struct ServersView: View {
@@ -40,11 +41,14 @@ struct ServersView: View {
     var body: some View {
         VStack(spacing: 0) {
             if viewModel.servers.isEmpty {
+                VStack {
                 ProgressView(value: 0).progressViewStyle(CircularProgressViewStyle())
                     .foregroundColor(.green)
                     .onAppear {
                         viewModel.trigger(.initialFetch)
                     }
+                    Text("Fetching the list...")
+                }
             } else {
                 HStack {
                     Text("SERVER")
@@ -75,6 +79,21 @@ struct ServersView: View {
                 
             }
         }
+        .actionSheet(isPresented: viewModel.binding(\.isOrderSheetPresented, with: ServerInput.updateIsOrderSheetPresented)) {
+            ActionSheet(title: Text("Sort by"), message: nil, buttons: [
+                .default(Text("Distance"), action: {
+                    withAnimation {
+                        viewModel.trigger(.updateSortedBy(.distance))
+                    }
+                }),
+                .default(Text("Alphanumerical"), action: {
+                    withAnimation {
+                        viewModel.trigger(.updateSortedBy(.name))
+                    }
+                }),
+                .cancel()
+            ])
+        }
         .alert(item: viewModel.binding(\.error, with: ServerInput.updateError)) { error -> Alert in
             Alert(title: Text(error.reason), dismissButton: .default(Text("Retry"), action: {
                 viewModel.trigger(.initialFetch)
@@ -85,6 +104,7 @@ struct ServersView: View {
             trailing:
                 Button {
                     environment.token = nil
+                    
                 } label: {
                     Image("logout")
                 }
