@@ -87,7 +87,7 @@ extension LoginViewController: LoginViewProtocol {
     }
     
     func show(error: Error) {
-        
+        present(error: error)
     }
 }
 

@@ -59,7 +59,7 @@ extension ApiEndpoint {
     private var scheme: String {
         switch self {
         case .login: return "https"
-        case .servers: return "https"
+        case .servers: return "http"
         }
     }
 }

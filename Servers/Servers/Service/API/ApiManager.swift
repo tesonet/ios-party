@@ -10,7 +10,7 @@ import Foundation
 final class ApiManager: ApiManagerProtocol {
     private let networkService: NetworkServiceProtocol
     private let decodableService: DecodableServiceProtocol
-    private let keychainService: KeychainServiceProtocol
+    private var keychainService: KeychainServiceProtocol
     
     required init(networkService: NetworkServiceProtocol,
                   decodableService: DecodableServiceProtocol,
@@ -69,5 +69,17 @@ final class ApiManager: ApiManagerProtocol {
                 }
             }
         }
+    }
+    
+    func save(token: String) {
+        self.keychainService.token = token
+    }
+    
+    func logout() {
+        self.keychainService.token = nil
+    }
+    
+    func isLoggedIn() -> Bool {
+        return self.keychainService.token != nil
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01266367262C1CC7002EDB6B /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01266366262C1CC7002EDB6B /* ServerCell.xib */; };
+		0126636C262C1D62002EDB6B /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126636B262C1D62002EDB6B /* ServerConstants.swift */; };
+		01266374262C7E50002EDB6B /* ServerSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01266373262C7E50002EDB6B /* ServerSortButton.swift */; };
+		01266379262C85E0002EDB6B /* ErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01266378262C85E0002EDB6B /* ErrorProtocol.swift */; };
 		015763E9262AF84E00EF380D /* BaseLoadingFromXIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */; };
 		015763F8262B1D1900EF380D /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763F7262B1D1900EF380D /* ApiEndpoint.swift */; };
 		01576400262B226000EF380D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763FF262B226000EF380D /* ApiManager.swift */; };
@@ -29,6 +33,7 @@
 		01660B1F2626F5AC002A1D61 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660B1E2626F5AC002A1D61 /* ModuleBuilder.swift */; };
 		01660B2D2626F7A9002A1D61 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660B2C2626F7A9002A1D61 /* NetworkService.swift */; };
 		01660B3626272C45002A1D61 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660B3526272C45002A1D61 /* LoginButton.swift */; };
+		019EACEC262C8DC800F88B25 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EACEB262C8DC800F88B25 /* BaseButton.swift */; };
 		019F66452629CAFF003E36AF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F66442629CAFF003E36AF /* LoadingView.swift */; };
 		01C65737262B3D170015DD0E /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C65736262B3D170015DD0E /* LoginPresenterProtocol.swift */; };
 		01C6573C262B3D3D0015DD0E /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6573B262B3D3D0015DD0E /* LoginViewProtocol.swift */; };
@@ -37,6 +42,10 @@
 		01C6576F262C04EC0015DD0E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6576E262C04EC0015DD0E /* Router.swift */; };
 		01C65778262C0D6C0015DD0E /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C65777262C0D6C0015DD0E /* RouterProtocol.swift */; };
 		01C6577D262C0D960015DD0E /* ServersPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6577C262C0D960015DD0E /* ServersPresenterProtocol.swift */; };
+		01C657A9262C1BC60015DD0E /* Servers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C657A6262C1BC50015DD0E /* Servers.storyboard */; };
+		01C657AA262C1BC60015DD0E /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C657A7262C1BC60015DD0E /* ServersViewController.swift */; };
+		01C657AB262C1BC60015DD0E /* ServersViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C657A8262C1BC60015DD0E /* ServersViewProtocol.swift */; };
+		01C657B0262C1BF50015DD0E /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C657AF262C1BF50015DD0E /* ServerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01266366262C1CC7002EDB6B /* ServerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
+		0126636B262C1D62002EDB6B /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
+		01266373262C7E50002EDB6B /* ServerSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSortButton.swift; sourceTree = "<group>"; };
+		01266378262C85E0002EDB6B /* ErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProtocol.swift; sourceTree = "<group>"; };
 		015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadingFromXIBView.swift; sourceTree = "<group>"; };
 		015763F7262B1D1900EF380D /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		015763FF262B226000EF380D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -85,6 +98,7 @@
 		01660B1E2626F5AC002A1D61 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		01660B2C2626F7A9002A1D61 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		01660B3526272C45002A1D61 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		019EACEB262C8DC800F88B25 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		019F66442629CAFF003E36AF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		01C65736262B3D170015DD0E /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		01C6573B262B3D3D0015DD0E /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
@@ -93,6 +107,10 @@
 		01C6576E262C04EC0015DD0E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		01C65777262C0D6C0015DD0E /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		01C6577C262C0D960015DD0E /* ServersPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersPresenterProtocol.swift; sourceTree = "<group>"; };
+		01C657A6262C1BC50015DD0E /* Servers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Servers.storyboard; sourceTree = "<group>"; };
+		01C657A7262C1BC60015DD0E /* ServersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		01C657A8262C1BC60015DD0E /* ServersViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersViewProtocol.swift; sourceTree = "<group>"; };
+		01C657AF262C1BF50015DD0E /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +138,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0126637D262C866E002EDB6B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				01266378262C85E0002EDB6B /* ErrorProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		015763ED262AF85100EF380D /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */,
+				019EACEB262C8DC800F88B25 /* BaseButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -180,6 +207,7 @@
 			children = (
 				01660ABB2626DA68002A1D61 /* AppDelegate.swift */,
 				01660ABD2626DA68002A1D61 /* SceneDelegate.swift */,
+				0126637D262C866E002EDB6B /* Protocol */,
 				01C65773262C0D5F0015DD0E /* Router */,
 				015763ED262AF85100EF380D /* Base */,
 				01660B312626F7B7002A1D61 /* Service */,
@@ -302,8 +330,23 @@
 			isa = PBXGroup;
 			children = (
 				01C6577C262C0D960015DD0E /* ServersPresenterProtocol.swift */,
+				01C6579A262C1B8D0015DD0E /* View */,
 			);
 			path = ServersModule;
+			sourceTree = "<group>";
+		};
+		01C6579A262C1B8D0015DD0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01C657A8262C1BC60015DD0E /* ServersViewProtocol.swift */,
+				01C657A7262C1BC60015DD0E /* ServersViewController.swift */,
+				01C657AF262C1BF50015DD0E /* ServerCell.swift */,
+				01266366262C1CC7002EDB6B /* ServerCell.xib */,
+				01C657A6262C1BC50015DD0E /* Servers.storyboard */,
+				0126636B262C1D62002EDB6B /* ServerConstants.swift */,
+				01266373262C7E50002EDB6B /* ServerSortButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,7 +454,9 @@
 			files = (
 				01660B052626DECA002A1D61 /* Login.storyboard in Resources */,
 				01660AC82626DA6B002A1D61 /* LaunchScreen.storyboard in Resources */,
+				01266367262C1CC7002EDB6B /* ServerCell.xib in Resources */,
 				01660AC52626DA6B002A1D61 /* Assets.xcassets in Resources */,
+				01C657A9262C1BC60015DD0E /* Servers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,12 +486,17 @@
 				01660B2D2626F7A9002A1D61 /* NetworkService.swift in Sources */,
 				01576405262B22CB00EF380D /* KeychainService.swift in Sources */,
 				01660B3626272C45002A1D61 /* LoginButton.swift in Sources */,
+				01C657AA262C1BC60015DD0E /* ServersViewController.swift in Sources */,
+				01266374262C7E50002EDB6B /* ServerSortButton.swift in Sources */,
 				01C65737262B3D170015DD0E /* LoginPresenterProtocol.swift in Sources */,
+				01266379262C85E0002EDB6B /* ErrorProtocol.swift in Sources */,
 				015763F8262B1D1900EF380D /* ApiEndpoint.swift in Sources */,
 				01660AEF2626DAB2002A1D61 /* LoginPresenter.swift in Sources */,
 				01C6577D262C0D960015DD0E /* ServersPresenterProtocol.swift in Sources */,
 				01660ABC2626DA68002A1D61 /* AppDelegate.swift in Sources */,
+				01C657AB262C1BC60015DD0E /* ServersViewProtocol.swift in Sources */,
 				01660B0E2626E321002A1D61 /* LoginTextField.swift in Sources */,
+				019EACEC262C8DC800F88B25 /* BaseButton.swift in Sources */,
 				01576436262B391100EF380D /* DecodableService.swift in Sources */,
 				01660B1F2626F5AC002A1D61 /* ModuleBuilder.swift in Sources */,
 				0157640E262B35E000EF380D /* ApiManagerProtocol.swift in Sources */,
@@ -457,9 +507,11 @@
 				019F66452629CAFF003E36AF /* LoadingView.swift in Sources */,
 				01C65778262C0D6C0015DD0E /* RouterProtocol.swift in Sources */,
 				01C6575B262C04470015DD0E /* NetworkServiceProtocol.swift in Sources */,
+				0126636C262C1D62002EDB6B /* ServerConstants.swift in Sources */,
 				015763E9262AF84E00EF380D /* BaseLoadingFromXIBView.swift in Sources */,
 				01C65763262C047A0015DD0E /* KeychainServiceProtocol.swift in Sources */,
 				01576429262B382800EF380D /* AuthData.swift in Sources */,
+				01C657B0262C1BF50015DD0E /* ServerCell.swift in Sources */,
 				01660ABE2626DA68002A1D61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

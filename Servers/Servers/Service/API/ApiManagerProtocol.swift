@@ -13,4 +13,8 @@ protocol ApiManagerProtocol {
                   keychainService: KeychainServiceProtocol)
     
     func login(username: String, password: String, completion: ((Result<String, Error>) -> ())?)
+    func getServers(completion: ((Result<[ServerModel], Error>) -> ())?)
+    func save(token: String)
+    func logout()
+    func isLoggedIn() -> Bool
 }

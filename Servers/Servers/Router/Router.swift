@@ -18,15 +18,26 @@ class Router: RouterProtocol {
     
     func initialViewController() {
         guard let navigationController = navigationController,
-              let loginVC = moduleBuilder?.createLoginModule(router: self) else { return }
-        navigationController.viewControllers = [loginVC]
+              let builder = moduleBuilder else { return }
+                      
+        let loginViewController = builder.createLoginModule(router: self)
+    
+        navigationController.viewControllers = [loginViewController]
+        navigationController.setNavigationBarHidden(true, animated: false)
+        
+        if builder.isLoggedIn {
+            let serversViewController = builder.createServersModule(router: self)
+            navigationController.pushViewController(serversViewController, animated: false)
+        }
+        
     }
     
     func showServers() {
-        
+        guard let serversVC = moduleBuilder?.createServersModule(router: self) else { return }
+        navigationController?.pushViewController(serversVC, animated: true)
     }
     
     func popToRoot() {
-        
+        navigationController?.popToRootViewController(animated: true)
     }
 }

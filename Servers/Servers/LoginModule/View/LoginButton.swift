@@ -7,10 +7,8 @@
 
 import UIKit
 
-class LoginButton: UIButton {
-    
-    var didTap: (() -> ())?
-    
+class LoginButton: BaseButton {
+        
     override var isEnabled: Bool {
         get {
             return super.isEnabled
@@ -28,12 +26,6 @@ class LoginButton: UIButton {
         setTitle(LoginConstants.button.title, for: .normal)
         clipsToBounds = true
         layer.cornerRadius = 5
-        
-        addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
-    }
-    
-    @objc func buttonDidTap() {
-        didTap?()
     }
 }
 

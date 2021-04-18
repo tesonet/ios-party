@@ -39,7 +39,7 @@ class LoginPresenter: LoginPresenterProtocol {
     required init(view: LoginViewProtocol, apiManager: ApiManagerProtocol, router: RouterProtocol) {
         self.vc = view
         self.apiManager = apiManager
-        self.router = router
+        self.router = router        
     }
     
     func logIn() {
@@ -52,7 +52,9 @@ class LoginPresenter: LoginPresenterProtocol {
             self?.vc?.updateUI(isLoading: false)
             
             switch result {
-            case .success(let token): break
+            case .success(let token):
+                self?.apiManager.save(token: token)
+                self?.router?.showServers()
             case .failure(let error):
                 self?.vc?.show(error: error)
             }

@@ -26,6 +26,10 @@ final class KeychainService: KeychainServiceProtocol {
             if let tokenString = newValue,
                let data = tokenString.data(using: .utf8) {
                 save(value: data, forKey: KeychainKey.token.rawValue)
+            } else {
+                if let oldToken = token {
+                    remove(value: oldToken, for: KeychainKey.token.rawValue)
+                }
             }
         }
     }
@@ -54,5 +58,11 @@ final class KeychainService: KeychainServiceProtocol {
         }
         
         return nil
+    }
+    
+    private func remove(value: String, for key: String) {
+        let query = [kSecClass as String: kSecClassGenericPassword as String, kSecAttrAccount as String: key,
+                    kSecValueData as String: value] as CFDictionary
+        SecItemDelete(query)
     }
 }
