@@ -11,7 +11,7 @@ struct UIConstraints {
     struct Layout {
         static let cornerRadius: CGFloat = 4
         static let innerSpacing: CGFloat = 8
-        static let margin: CGFloat = 18
+        static let margin: CGFloat = 16
     }
     
     struct Progress {

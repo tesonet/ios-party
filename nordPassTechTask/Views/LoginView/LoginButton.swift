@@ -41,6 +41,7 @@ struct LoginButton: View {
                             .progressViewStyle(CircularProgressViewStyle())
                     } else {
                         Text("Log In")
+                            .font(.headline)
                     }
                 }
                 Spacer()

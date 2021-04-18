@@ -8,6 +8,32 @@
 import Foundation
 import Combine
 
+private extension Int {
+    private static let numberFormatter = NumberFormatter()
+    
+    func distance() -> String {
+        Self.numberFormatter.numberStyle = .none
+        return Self.numberFormatter.string(from: NSNumber(integerLiteral: self)) ?? ""
+    }
+}
+
+struct Server: Hashable {
+    let name: String
+    let distance: Int
+    let distanceFormatted: String
+    
+    init(dto: ServerDTO) {
+        self.init(name: dto.name, distance: dto.distance)
+    }
+    
+    internal init(name: String, distance: Int) {
+        self.name = name
+        self.distance = distance
+        self.distanceFormatted = "\(distance.distance()) km"
+    }
+}
+
+
 final class ServersViewModel<S>: ViewModel where S: Scheduler {
     @Published var state: ServersState
     
@@ -35,7 +61,7 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
                 }
                 .sink { [weak self] servers in
                     guard self?.state.servers.isEmpty != false, !servers.isEmpty else { return }
-                    self?.state.servers = servers
+                    self?.state.servers = servers.map(Server.init(dto:))
                 }
                 .store(in: &bag)
 
@@ -52,7 +78,7 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
                 }
                 .flatMap { [weak self] servers -> AnyPublisher<Void, Error> in
                     guard let self = self else { return Empty<Void, Error>(completeImmediately: true).eraseToAnyPublisher() }
-                    self.state.servers = servers
+                    self.state.servers = servers.map(Server.init(dto:))
                     return self.store.save(servers)
                 }
                 .catch { [weak self] error -> Empty<Void, Never> in
@@ -87,7 +113,7 @@ final class ServersViewModel<S>: ViewModel where S: Scheduler {
 
 #if DEBUG
 extension ServersState {
-    static func mock(servers: [ServerDTO] = []) -> ServersState {
+    static func mock(servers: [Server] = []) -> ServersState {
         ServersState(servers: servers, sortingOrder: .descending, sortedBy: .none, isOrderSheetPresented: false)
     }
 }

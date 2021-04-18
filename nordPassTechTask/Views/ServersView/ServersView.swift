@@ -20,7 +20,7 @@ enum ServerSortedBy {
 }
 
 struct ServersState {
-    var servers: [ServerDTO] = []
+    var servers: [Server] = []
     var sortingOrder: SortingOrder = .descending
     var sortedBy: ServerSortedBy = .none
     var isOrderSheetPresented: Bool = false
@@ -32,6 +32,39 @@ enum ServerInput {
     case updateIsOrderSheetPresented(Bool)
     case updateError(AlertError?)
     case updateSortedBy(ServerSortedBy)
+}
+
+private struct ServersHeaderView: View {
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(Color.primary)
+                .colorInvert()
+                .shadow(color: Color("shadow"), radius: 30, x: 0.0, y: 0.0)
+            HStack {
+                Text("SERVER")
+                Spacer()
+                Text("DISTANCE")
+            }
+            .font(.subheadline)
+            .foregroundColor(Color("gray"))
+            .padding(UIConstraints.Layout.margin)
+        }
+    }
+}
+
+private struct ServersRowView: View {
+    @Binding var server: Server
+    
+    var body: some View {
+        HStack {
+            Text(server.name)
+            Spacer()
+            Text(server.distanceFormatted)
+        }
+        .font(Font.body.weight(.light))
+        .foregroundColor(Color("primaryText"))
+    }
 }
 
 struct ServersView: View {
@@ -54,19 +87,19 @@ struct ServersView: View {
                         }
                 }
             } else {
-                HStack {
-                    Text("SERVER")
-                    Spacer()
-                    Text("DISTANCE")
-                }
-                .padding(.horizontal)
+                ServersHeaderView()
                 List(viewModel.servers, id: \.self) { server in
-                    HStack {
-                        Text(server.name)
-                        Spacer()
-                        Text("\(server.distance) km")
+                    if viewModel.servers.first == server  {
+                        ServersRowView(server: .constant(server))
+                            .padding(.bottom, UIConstraints.Layout.innerSpacing)
+                            .padding(.top, UIConstraints.Layout.innerSpacing + 12)
+                    } else {
+                        ServersRowView(server: .constant(server))
+                            .padding(.vertical, UIConstraints.Layout.innerSpacing)
                     }
                 }
+                .zIndex(-1)
+                .layoutPriority(1)
                 Button {
                     viewModel.trigger(.updateIsOrderSheetPresented(true))
                 } label: {
@@ -75,11 +108,11 @@ struct ServersView: View {
                         Image("sort")
                         Text("Sort")
                     }
-                    .padding(.vertical, 16)
+                    .padding(.vertical, UIConstraints.Layout.margin)
                     Spacer()
                 }
                 .foregroundColor(Color.white)
-                .background(Color(red: 0.26, green: 0.27, blue: 0.39))
+                .background(Color("buttonBackground"))
                 
             }
         }
@@ -121,14 +154,11 @@ struct ServersView: View {
 
 #if DEBUG
 struct ServersView_Previews: PreviewProvider {
-    static let servers: [ServerDTO] = [ServerDTO(name: "Poland", distance: 1234)]
+    static let servers: [Server] = [Server(name: "Poland", distance: 1234)]
     
     static var previews: some View {
-//        ServersView(viewModel: ServersViewModel<ImmediateScheduler>.mock(state: .mock(servers: servers)).eraseToAnyViewModel())
-//            .environmentObject(AppState.mock())
-        ServersProgressView()
-            .background(Color.black)
-            .previewLayout(.sizeThatFits)
+        ServersView(viewModel: ServersViewModel<ImmediateScheduler>.mock(state: .mock(servers: servers)).eraseToAnyViewModel())
+            .environmentObject(AppState.mock())
     }
 }
 #endif
