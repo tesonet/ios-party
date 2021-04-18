@@ -21,6 +21,7 @@
 		BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1872624E870001F29FD /* ServersViewModel.swift */; };
 		BE23F9E9262C4D4300865CEB /* Busy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23F9E8262C4D4300865CEB /* Busy.swift */; };
 		BE23F9ED262C4EAD00865CEB /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23F9EC262C4EAD00865CEB /* LoginButton.swift */; };
+		BE23F9F1262C857700865CEB /* ServersProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23F9F0262C857700865CEB /* ServersProgressView.swift */; };
 		BE3BF5D3262AE84600080FB3 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3BF5D2262AE84600080FB3 /* Keychain.swift */; };
 		BE3BF5DB262AF60C00080FB3 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3BF5DA262AF60C00080FB3 /* ServersViewModel.swift */; };
 		BE625862262B411F00AE1DB3 /* ServersJsonStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE625861262B411F00AE1DB3 /* ServersJsonStoreTests.swift */; };
@@ -64,6 +65,7 @@
 		BE1CE1872624E870001F29FD /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
 		BE23F9E8262C4D4300865CEB /* Busy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busy.swift; sourceTree = "<group>"; };
 		BE23F9EC262C4EAD00865CEB /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		BE23F9F0262C857700865CEB /* ServersProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersProgressView.swift; sourceTree = "<group>"; };
 		BE3BF5D2262AE84600080FB3 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		BE3BF5DA262AF60C00080FB3 /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
 		BE625861262B411F00AE1DB3 /* ServersJsonStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersJsonStoreTests.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				BE1CE18F2624EB68001F29FD /* ServersView */,
 				BEB9A0A526261459003FF71F /* EntryView.swift */,
 				BE625877262C40C300AE1DB3 /* UIConstraints.swift */,
+				BE23F9F0262C857700865CEB /* ServersProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				BE1CE16D2624E15F001F29FD /* ServersResponse.swift in Sources */,
 				BE1CE14D2624D90E001F29FD /* ViewModel.swift in Sources */,
 				BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */,
+				BE23F9F1262C857700865CEB /* ServersProgressView.swift in Sources */,
 				BEB9A08526259CB1003FF71F /* LoginViewModel.swift in Sources */,
 				BE625878262C40C300AE1DB3 /* UIConstraints.swift in Sources */,
 				BE1CE1562624DAD5001F29FD /* LoginRepositoryProtocol.swift in Sources */,

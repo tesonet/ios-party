@@ -41,13 +41,17 @@ struct ServersView: View {
     var body: some View {
         VStack(spacing: 0) {
             if viewModel.servers.isEmpty {
-                VStack {
-                ProgressView(value: 0).progressViewStyle(CircularProgressViewStyle())
-                    .foregroundColor(.green)
-                    .onAppear {
-                        viewModel.trigger(.initialFetch)
-                    }
-                    Text("Fetching the list...")
+                ZStack {
+                    Image("background")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .ignoresSafeArea(.container)
+                    ServersProgressView()
+                        .onAppear {
+                            withAnimation {
+                                viewModel.trigger(.initialFetch)
+                            }
+                        }
                 }
             } else {
                 HStack {
@@ -117,11 +121,14 @@ struct ServersView: View {
 
 #if DEBUG
 struct ServersView_Previews: PreviewProvider {
-    static let servers: [ServerDTO] = [ServerDTO(name: "Poland", distance: 1234) ]
+    static let servers: [ServerDTO] = [ServerDTO(name: "Poland", distance: 1234)]
     
     static var previews: some View {
-        ServersView(viewModel: ServersViewModel<ImmediateScheduler>.mock(state: .mock(servers: servers)).eraseToAnyViewModel())
-            .environmentObject(AppState.mock())
+//        ServersView(viewModel: ServersViewModel<ImmediateScheduler>.mock(state: .mock(servers: servers)).eraseToAnyViewModel())
+//            .environmentObject(AppState.mock())
+        ServersProgressView()
+            .background(Color.black)
+            .previewLayout(.sizeThatFits)
     }
 }
 #endif

@@ -88,7 +88,7 @@ struct LoginView: View {
         .textFieldStyle(PlainTextFieldStyle())
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .navigationBarHidden(true)
-        .padding()
+        .padding(.horizontal , UIConstraints.Layout.margin)
     }
 }
 

@@ -13,4 +13,9 @@ struct UIConstraints {
         static let innerSpacing: CGFloat = 8
         static let margin: CGFloat = 18
     }
+    
+    struct Progress {
+        static let width: CGFloat = 150
+        static let lineWidth: CGFloat = 8
+    }
 }
