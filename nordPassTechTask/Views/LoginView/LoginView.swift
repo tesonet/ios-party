@@ -12,6 +12,16 @@ struct LoginState {
     var username: String = ""
     var password: String = ""
     var error: String? = nil
+    var isFormValid: Bool
+    var isBusy: Bool = false
+    
+    init(username: String = "", password: String = "", error: String? = nil, isBusy: Bool = false) {
+        self.username = username
+        self.password = password
+        self.error = error
+        self.isFormValid = !username.isEmpty && !password.isEmpty
+        self.isBusy = isBusy
+    }
 }
 
 enum LoginInput {
@@ -21,23 +31,34 @@ enum LoginInput {
     case updatePassword(String)
 }
 
-
 struct LoginView: View {
     @ObservedObject var viewModel: AnyViewModel<LoginState, LoginInput>
     @EnvironmentObject var env: AppState
     
     var body: some View {
-        return VStack {
+        VStack(spacing: UIConstraints.Layout.innerSpacing) {
             Spacer()
-            if let error = viewModel.error {
-                Text(error)
-                    .foregroundColor(.red)
-                    .font(.caption2)
+            Image("logo-white")
+            Spacer()
+            HStack(spacing: UIConstraints.Layout.innerSpacing) {
+
+                Image(systemName: "person.fill")
+                TextField("Username", text: viewModel.binding(\.username, with: LoginInput.updateUsername))
+                    .textContentType(.username)
             }
-            TextField("Username", text: viewModel.binding(\.username, with: LoginInput.updateUsername))
-                .textContentType(.username)
-            SecureField("Password", text: viewModel.binding(\.password, with: LoginInput.updatePassword))
-                .textContentType(.password)
+            .padding(.all, UIConstraints.Layout.margin)
+            .background(Color.white)
+            .cornerRadius(UIConstraints.Layout.cornerRadius)
+            
+            HStack {
+                Image(systemName: "lock.fill")
+                SecureField("Password", text: viewModel.binding(\.password, with: LoginInput.updatePassword))
+                    .textContentType(.password)
+            }
+            .padding(.all, UIConstraints.Layout.margin)
+            .background(Color.white)
+            .cornerRadius(UIConstraints.Layout.cornerRadius)
+            
             NavigationLink(
                 destination: ServersView(
                     viewModel: ServersViewModel<DispatchQueue>(
@@ -47,13 +68,24 @@ struct LoginView: View {
                         on: DispatchQueue.main).eraseToAnyViewModel()),
                 isActive: .constant(env.token != nil),
                 label: {
-                    Button("Login") {
+                    LoginButton {
                         viewModel.trigger(.login)
                     }
                 }
             )
+            .disabled(!viewModel.isFormValid)
+            .busy(viewModel.isBusy)
+            
+            if let error = viewModel.error {
+                Text(error)
+                    .foregroundColor(.red)
+                    .font(.caption2)
+            }
             Spacer()
         }
+        .accentColor(Color("gray"))
+        .foregroundColor(Color("gray"))
+        .textFieldStyle(PlainTextFieldStyle())
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .navigationBarHidden(true)
         .padding()

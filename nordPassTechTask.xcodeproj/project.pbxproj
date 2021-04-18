@@ -19,15 +19,18 @@
 		BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17A2624E202001F29FD /* ServersView.swift */; };
 		BE1CE1802624E78D001F29FD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE17F2624E78D001F29FD /* AppState.swift */; };
 		BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE1872624E870001F29FD /* ServersViewModel.swift */; };
+		BE23F9E9262C4D4300865CEB /* Busy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23F9E8262C4D4300865CEB /* Busy.swift */; };
+		BE23F9ED262C4EAD00865CEB /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23F9EC262C4EAD00865CEB /* LoginButton.swift */; };
 		BE3BF5D3262AE84600080FB3 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3BF5D2262AE84600080FB3 /* Keychain.swift */; };
 		BE3BF5DB262AF60C00080FB3 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3BF5DA262AF60C00080FB3 /* ServersViewModel.swift */; };
 		BE625862262B411F00AE1DB3 /* ServersJsonStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE625861262B411F00AE1DB3 /* ServersJsonStoreTests.swift */; };
 		BE625867262B413F00AE1DB3 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE625866262B413F00AE1DB3 /* LoginViewModelTests.swift */; };
+		BE625872262C3E9000AE1DB3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE625871262C3E9000AE1DB3 /* Colors.xcassets */; };
+		BE625878262C40C300AE1DB3 /* UIConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE625877262C40C300AE1DB3 /* UIConstraints.swift */; };
 		BEA3249B262A488000266C23 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3249A262A488000266C23 /* AlertError.swift */; };
 		BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */; };
 		BEA9639B2624D65B00DA3012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639A2624D65B00DA3012 /* Assets.xcassets */; };
 		BEA9639E2624D65B00DA3012 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA9639D2624D65B00DA3012 /* Preview Assets.xcassets */; };
-		BEA963A92624D65B00DA3012 /* nordPassTechTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA963A82624D65B00DA3012 /* nordPassTechTaskTests.swift */; };
 		BEB9A08526259CB1003FF71F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A08426259CB1003FF71F /* LoginViewModel.swift */; };
 		BEB9A08E2625A1FE003FF71F /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */; };
 		BEB9A09A26260D28003FF71F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9A09926260D28003FF71F /* LoginRequest.swift */; };
@@ -59,10 +62,14 @@
 		BE1CE17A2624E202001F29FD /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
 		BE1CE17F2624E78D001F29FD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BE1CE1872624E870001F29FD /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		BE23F9E8262C4D4300865CEB /* Busy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busy.swift; sourceTree = "<group>"; };
+		BE23F9EC262C4EAD00865CEB /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		BE3BF5D2262AE84600080FB3 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		BE3BF5DA262AF60C00080FB3 /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
 		BE625861262B411F00AE1DB3 /* ServersJsonStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersJsonStoreTests.swift; sourceTree = "<group>"; };
 		BE625866262B413F00AE1DB3 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		BE625871262C3E9000AE1DB3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BE625877262C40C300AE1DB3 /* UIConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstraints.swift; sourceTree = "<group>"; };
 		BEA3249A262A488000266C23 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
 		BEA963932624D65B00DA3012 /* nordPassTechTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nordPassTechTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA963962624D65B00DA3012 /* nordPassTechTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskApp.swift; sourceTree = "<group>"; };
@@ -70,7 +77,6 @@
 		BEA9639D2624D65B00DA3012 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BEA9639F2624D65B00DA3012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA963A42624D65B00DA3012 /* nordPassTechTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nordPassTechTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEA963A82624D65B00DA3012 /* nordPassTechTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nordPassTechTaskTests.swift; sourceTree = "<group>"; };
 		BEA963AA2624D65B00DA3012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB9A08426259CB1003FF71F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BEB9A08D2625A1FE003FF71F /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 				BEB9A08926259F0A003FF71F /* LoginView */,
 				BE1CE18F2624EB68001F29FD /* ServersView */,
 				BEB9A0A526261459003FF71F /* EntryView.swift */,
+				BE625877262C40C300AE1DB3 /* UIConstraints.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA9639A2624D65B00DA3012 /* Assets.xcassets */,
+				BE625871262C3E9000AE1DB3 /* Colors.xcassets */,
 				BEA9639C2624D65B00DA3012 /* Preview Content */,
 			);
 			path = Resources;
@@ -170,6 +178,7 @@
 			children = (
 				BEA3249A262A488000266C23 /* AlertError.swift */,
 				BE3BF5D2262AE84600080FB3 /* Keychain.swift */,
+				BE23F9E8262C4D4300865CEB /* Busy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -218,7 +227,6 @@
 		BEA963A72624D65B00DA3012 /* nordPassTechTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEA963A82624D65B00DA3012 /* nordPassTechTaskTests.swift */,
 				BEA963AA2624D65B00DA3012 /* Info.plist */,
 				BE3BF5DA262AF60C00080FB3 /* ServersViewModel.swift */,
 				BE625861262B411F00AE1DB3 /* ServersJsonStoreTests.swift */,
@@ -232,6 +240,7 @@
 			children = (
 				BE1CE1422624D8D6001F29FD /* LoginView.swift */,
 				BEB9A08426259CB1003FF71F /* LoginViewModel.swift */,
+				BE23F9EC262C4EAD00865CEB /* LoginButton.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -335,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE625872262C3E9000AE1DB3 /* Colors.xcassets in Resources */,
 				BEA9639E2624D65B00DA3012 /* Preview Assets.xcassets in Resources */,
 				BEA9639B2624D65B00DA3012 /* Assets.xcassets in Resources */,
 			);
@@ -355,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1249582627997B00197E68 /* NetworkError.swift in Sources */,
+				BE23F9ED262C4EAD00865CEB /* LoginButton.swift in Sources */,
 				BE1CE1882624E870001F29FD /* ServersViewModel.swift in Sources */,
 				BEB9A08E2625A1FE003FF71F /* LoginRepository.swift in Sources */,
 				BEB9A0A626261459003FF71F /* EntryView.swift in Sources */,
@@ -365,6 +376,7 @@
 				BEBAFDED262A21D8003A8ACB /* ServersStoreProtocol.swift in Sources */,
 				BE1CE1682624E0EB001F29FD /* ServersRepositoryProtocol.swift in Sources */,
 				BE124950262790D200197E68 /* ServersRepository.swift in Sources */,
+				BE23F9E9262C4D4300865CEB /* Busy.swift in Sources */,
 				BEBAFDF5262A3112003A8ACB /* ServersJsonStore.swift in Sources */,
 				BEB9A09A26260D28003FF71F /* LoginRequest.swift in Sources */,
 				BE1CE1432624D8D6001F29FD /* LoginView.swift in Sources */,
@@ -372,6 +384,7 @@
 				BE1CE14D2624D90E001F29FD /* ViewModel.swift in Sources */,
 				BEA963972624D65B00DA3012 /* nordPassTechTaskApp.swift in Sources */,
 				BEB9A08526259CB1003FF71F /* LoginViewModel.swift in Sources */,
+				BE625878262C40C300AE1DB3 /* UIConstraints.swift in Sources */,
 				BE1CE1562624DAD5001F29FD /* LoginRepositoryProtocol.swift in Sources */,
 				BE1CE15B2624DFB8001F29FD /* LoginResponse.swift in Sources */,
 				BE1CE17B2624E202001F29FD /* ServersView.swift in Sources */,
@@ -384,7 +397,6 @@
 			files = (
 				BE625867262B413F00AE1DB3 /* LoginViewModelTests.swift in Sources */,
 				BE625862262B411F00AE1DB3 /* ServersJsonStoreTests.swift in Sources */,
-				BEA963A92624D65B00DA3012 /* nordPassTechTaskTests.swift in Sources */,
 				BE3BF5DB262AF60C00080FB3 /* ServersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

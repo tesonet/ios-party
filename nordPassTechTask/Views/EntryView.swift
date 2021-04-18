@@ -19,12 +19,18 @@ struct EntryView: View {
                     on: DispatchQueue.main
                 ).eraseToAnyViewModel()
             )
+            .background(
+                Image("background")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            )
+            .ignoresSafeArea(.container, edges: .top)
         }
     }
 }
 
 struct EntryView_Previews: PreviewProvider {
     static var previews: some View {
-        EntryView()
+        EntryView().environmentObject(AppState.mock())
     }
 }

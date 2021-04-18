@@ -26,6 +26,7 @@ final class LoginViewModel<S>: ViewModel where S: Scheduler {
     func trigger(_ input: LoginInput) {
         switch input {
         case .login:
+            state.isBusy = true
             repository.login(username: state.username, password: state.password)
                 .receive(on: scheduler)
                 .catch { [weak self] error -> Empty<String, Never> in
@@ -34,10 +35,11 @@ final class LoginViewModel<S>: ViewModel where S: Scheduler {
                         return Empty<String, Never>(completeImmediately: true)
                     }
                     self?.state.error = error.errorDescription
-                    
+                    self?.state.isBusy = false
                     return Empty<String, Never>(completeImmediately: true)
                 }
                 .sink { [weak self] token in
+                    self?.state.isBusy = false
                     guard let self = self else { return }
                     
                     if let passwordData = self.state.password.data(using: .utf8) {
@@ -48,9 +50,15 @@ final class LoginViewModel<S>: ViewModel where S: Scheduler {
                 .store(in: &bag)
         case .updateUsername(let username):
             state.username = username
+            updateIsFormValid()
         case .updatePassword(let password):
             state.password = password
+            updateIsFormValid()
         }
+    }
+    
+    private func updateIsFormValid() {
+        state.isFormValid = !state.username.isEmpty && !state.password.isEmpty
     }
 }
 

@@ -22,6 +22,7 @@ final class LoginViewModelTests: XCTestCase {
         // Assert
         XCTAssertEqual(sut.state.password, "")
         XCTAssertEqual(sut.state.username, "")
+        XCTAssertFalse(sut.state.isFormValid)
         XCTAssertNil(sut.state.error)
     }
     
@@ -84,5 +85,30 @@ final class LoginViewModelTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(sut.state.password, expectePassword)
+    }
+    
+    func test_formShouldBeValidOnlyIfUsernameAndPasswordAreNotEmpty() {
+        // Arrange
+        let repository = LoginRepositoryProtocolMock()
+        let appState = AppState(token: nil)
+        let sut = LoginViewModel(state: LoginState(), with: repository, appState: appState, on: ImmediateScheduler.shared)
+        
+        // Act
+        sut.trigger(.updateUsername("test"))
+        
+        // Assert
+        XCTAssertFalse(sut.state.isFormValid)
+        
+        // Act
+        sut.trigger(.updatePassword("test"))
+        
+        // Assert
+        XCTAssertTrue(sut.state.isFormValid)
+        
+        // Act
+        sut.trigger(.updateUsername(""))
+        
+        // Assert
+        XCTAssertFalse(sut.state.isFormValid)
     }
 }
