@@ -1,8 +1,8 @@
 //
-//  LoginProtocol.swift
+//  LoginPresenterProtocol.swift
 //  Servers
 //
-//  Created by Nikita Khodzhaiev on 14.04.2021.
+//  Created by Nikita Khodzhaiev on 17.04.2021.
 //
 
 import UIKit
@@ -14,15 +14,8 @@ protocol LoginPresenterProtocol: class {
     var isLoginButtonEnabled: Bool { get }
     var loadingMessage: String { get }
 
-    init(view: LoginViewProtocol, networkService: NetworkServiceProtocol)
+    init(view: LoginViewProtocol, apiManager: ApiManagerProtocol)
     
     func logIn()
     func didChange(username: String?, password: String?)
 }
-
-protocol LoginViewProtocol: class {
-    func updateUI(isLoading: Bool)
-    func show(error: Error)
-    func setLoginButton(enabled: Bool)
-}
-

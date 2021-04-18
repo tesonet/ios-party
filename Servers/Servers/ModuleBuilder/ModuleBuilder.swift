@@ -20,8 +20,11 @@ class ModelBuilder: ModelBuilderProtocol {
         }
         
         let networkService = NetworkService()
-        let presenter = LoginPresenter(view: loginVC, networkService: networkService)
-
+        let decodableService = DecodableService()
+        let keychainService = KeychainService()
+        let apiManager = ApiManager(networkService: networkService, decodableService: decodableService, keychainService: keychainService)
+        
+        let presenter = LoginPresenter(view: loginVC, apiManager: apiManager)
         loginVC.presenter = presenter
         return loginVC
     }

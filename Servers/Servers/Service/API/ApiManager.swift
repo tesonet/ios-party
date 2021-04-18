@@ -10,11 +10,14 @@ import Foundation
 class ApiManager: ApiManagerProtocol {
     private let networkService: NetworkServiceProtocol
     private let decodableService: DecodableServiceProtocol
-    
+    private let keychainService: KeychainService
+
     required init(networkService: NetworkServiceProtocol,
-                  decodableService: DecodableServiceProtocol) {
+                  decodableService: DecodableServiceProtocol,
+                  keychainService: KeychainService) {
         self.networkService = networkService
         self.decodableService = decodableService
+        self.keychainService = keychainService
     }
     
     func login(username: String, password: String, completion: ((Result<String, Error>) -> ())?) {

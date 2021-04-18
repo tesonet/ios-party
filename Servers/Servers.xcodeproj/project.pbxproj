@@ -25,7 +25,6 @@
 		01660ADE2626DA6B002A1D61 /* ServersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660ADD2626DA6B002A1D61 /* ServersUITests.swift */; };
 		01660AEF2626DAB2002A1D61 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660AEE2626DAB2002A1D61 /* LoginPresenter.swift */; };
 		01660AF42626DB88002A1D61 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660AF32626DB88002A1D61 /* LoginViewController.swift */; };
-		01660AFD2626DBBC002A1D61 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660AFC2626DBBC002A1D61 /* LoginProtocols.swift */; };
 		01660B052626DECA002A1D61 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01660B042626DECA002A1D61 /* Login.storyboard */; };
 		01660B0E2626E321002A1D61 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660B0D2626E321002A1D61 /* LoginTextField.swift */; };
 		01660B162626E746002A1D61 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660B152626E746002A1D61 /* LoginConstants.swift */; };
@@ -34,6 +33,8 @@
 		01660B2D2626F7A9002A1D61 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660B2C2626F7A9002A1D61 /* NetworkService.swift */; };
 		01660B3626272C45002A1D61 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01660B3526272C45002A1D61 /* LoginButton.swift */; };
 		019F66452629CAFF003E36AF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F66442629CAFF003E36AF /* LoadingView.swift */; };
+		01C65737262B3D170015DD0E /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C65736262B3D170015DD0E /* LoginPresenterProtocol.swift */; };
+		01C6573C262B3D3D0015DD0E /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6573B262B3D3D0015DD0E /* LoginViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +79,6 @@
 		01660ADF2626DA6B002A1D61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01660AEE2626DAB2002A1D61 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		01660AF32626DB88002A1D61 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		01660AFC2626DBBC002A1D61 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		01660B042626DECA002A1D61 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		01660B0D2626E321002A1D61 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		01660B152626E746002A1D61 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
@@ -87,6 +87,8 @@
 		01660B2C2626F7A9002A1D61 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		01660B3526272C45002A1D61 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		019F66442629CAFF003E36AF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		01C65736262B3D170015DD0E /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
+		01C6573B262B3D3D0015DD0E /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +211,6 @@
 		01660AF82626DB8F002A1D61 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
-				01660AFC2626DBBC002A1D61 /* LoginProtocols.swift */,
 				0157642D262B382C00EF380D /* Model */,
 				01660B1A2626EE25002A1D61 /* Presenter */,
 				01660B092626E309002A1D61 /* View */,
@@ -220,6 +221,7 @@
 		01660B092626E309002A1D61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01C6573B262B3D3D0015DD0E /* LoginViewProtocol.swift */,
 				01660AF32626DB88002A1D61 /* LoginViewController.swift */,
 				01660B0D2626E321002A1D61 /* LoginTextField.swift */,
 				01660B3526272C45002A1D61 /* LoginButton.swift */,
@@ -233,6 +235,7 @@
 		01660B1A2626EE25002A1D61 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				01C65736262B3D170015DD0E /* LoginPresenterProtocol.swift */,
 				01660AEE2626DAB2002A1D61 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
@@ -388,10 +391,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C6573C262B3D3D0015DD0E /* LoginViewProtocol.swift in Sources */,
 				01576400262B226000EF380D /* ApiManager.swift in Sources */,
 				01660B2D2626F7A9002A1D61 /* NetworkService.swift in Sources */,
 				01576405262B22CB00EF380D /* KeychainService.swift in Sources */,
 				01660B3626272C45002A1D61 /* LoginButton.swift in Sources */,
+				01C65737262B3D170015DD0E /* LoginPresenterProtocol.swift in Sources */,
 				015763F8262B1D1900EF380D /* ApiEndpoint.swift in Sources */,
 				01660AEF2626DAB2002A1D61 /* LoginPresenter.swift in Sources */,
 				01660AC02626DA68002A1D61 /* ViewController.swift in Sources */,
@@ -399,7 +404,6 @@
 				01660ABC2626DA68002A1D61 /* AppDelegate.swift in Sources */,
 				01660B0E2626E321002A1D61 /* LoginTextField.swift in Sources */,
 				01576436262B391100EF380D /* DecodableService.swift in Sources */,
-				01660AFD2626DBBC002A1D61 /* LoginProtocols.swift in Sources */,
 				01660B1F2626F5AC002A1D61 /* ModuleBuilder.swift in Sources */,
 				0157640E262B35E000EF380D /* ApiManagerProtocol.swift in Sources */,
 				01660B162626E746002A1D61 /* LoginConstants.swift in Sources */,

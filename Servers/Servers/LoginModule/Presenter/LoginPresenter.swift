@@ -29,19 +29,32 @@ class LoginPresenter: LoginPresenterProtocol {
         return LoadingMessage.fetchingServers.rawValue
     }
     
+    private let apiManager: ApiManagerProtocol
+
     private weak var vc: LoginViewProtocol?
-    private let networkService: NetworkServiceProtocol
     
     private var usernameInput: String?
     private var passwordInput: String?
     
-    required init(view: LoginViewProtocol, networkService: NetworkServiceProtocol) {
-        self.vc = view
-        self.networkService = networkService
+    required init(view: LoginViewProtocol, apiManager: ApiManagerProtocol) {
+        self.apiManager = apiManager
     }
     
     func logIn() {
+        guard let userName = usernameInput,
+              let password = passwordInput else { return }
+        
         vc?.updateUI(isLoading: true)
+
+        apiManager.login(username: userName, password: password) { [weak self] (result) in
+            self?.vc?.updateUI(isLoading: false)
+            
+            switch result {
+            case .success(let token): break
+            case .failure(let error):
+                self?.vc?.show(error: error)
+            }
+        }
     }
     
     func didChange(username: String?, password: String?) {

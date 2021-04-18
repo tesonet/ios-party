@@ -9,7 +9,8 @@ import Foundation
 
 protocol ApiManagerProtocol {
     init(networkService: NetworkServiceProtocol,
-                  decodableService: DecodableServiceProtocol)
+                  decodableService: DecodableServiceProtocol,
+                  keychainService: KeychainService)
     
     func login(username: String, password: String, completion: ((Result<String, Error>) -> ())?)
 }
