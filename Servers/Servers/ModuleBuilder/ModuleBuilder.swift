@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol ModelBuilderProtocol {
-    static func createLoginModule() -> UIViewController
+protocol ModuleBuilderProtocol {
+    func createLoginModule(router: RouterProtocol) -> UIViewController
 }
 
-class ModelBuilder: ModelBuilderProtocol {
+class ModuleBuilder: ModuleBuilderProtocol {
     
-    static func createLoginModule() -> UIViewController {
+    func createLoginModule(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
         guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else {
             fatalError("No LoginViewController in storyboard")
@@ -24,7 +24,7 @@ class ModelBuilder: ModelBuilderProtocol {
         let keychainService = KeychainService()
         let apiManager = ApiManager(networkService: networkService, decodableService: decodableService, keychainService: keychainService)
         
-        let presenter = LoginPresenter(view: loginVC, apiManager: apiManager)
+        let presenter = LoginPresenter(view: loginVC, apiManager: apiManager, router: router)
         loginVC.presenter = presenter
         return loginVC
     }

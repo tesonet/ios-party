@@ -14,7 +14,7 @@ protocol LoginPresenterProtocol: class {
     var isLoginButtonEnabled: Bool { get }
     var loadingMessage: String { get }
 
-    init(view: LoginViewProtocol, apiManager: ApiManagerProtocol)
+    init(view: LoginViewProtocol, apiManager: ApiManagerProtocol, router: RouterProtocol)
     
     func logIn()
     func didChange(username: String?, password: String?)

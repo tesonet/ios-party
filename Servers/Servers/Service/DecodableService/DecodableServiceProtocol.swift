@@ -9,5 +9,5 @@ import Foundation
 
 protocol DecodableServiceProtocol {
     func authValue(data: Data) -> Result<AuthModel, Error>
-    func serverValue(data: Data) -> Result<ServerModel, Error>
+    func serverValue(data: Data) -> Result<[ServerModel], Error>
 }

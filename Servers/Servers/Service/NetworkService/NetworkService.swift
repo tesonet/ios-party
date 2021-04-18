@@ -19,10 +19,6 @@ enum NetworkError: Error {
     case unknownError
 }
 
-protocol NetworkServiceProtocol {
-    func performRequest(url: URL, method: HTTPMethod, headers: [String: String], body: Data?, completion: ((Result<Data, NetworkError>) -> ())?)
-}
-
 final class NetworkService: NetworkServiceProtocol {
     
     func performRequest(url: URL, method: HTTPMethod, headers: [String : String], body: Data?, completion: ((Result<Data, NetworkError>) -> ())?) {

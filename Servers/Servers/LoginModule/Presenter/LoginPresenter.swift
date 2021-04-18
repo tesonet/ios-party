@@ -30,14 +30,16 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     private let apiManager: ApiManagerProtocol
-
+    private var router: RouterProtocol?
     private weak var vc: LoginViewProtocol?
     
     private var usernameInput: String?
     private var passwordInput: String?
     
-    required init(view: LoginViewProtocol, apiManager: ApiManagerProtocol) {
+    required init(view: LoginViewProtocol, apiManager: ApiManagerProtocol, router: RouterProtocol) {
+        self.vc = view
         self.apiManager = apiManager
+        self.router = router
     }
     
     func logIn() {

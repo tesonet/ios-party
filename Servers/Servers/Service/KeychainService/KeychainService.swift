@@ -12,7 +12,7 @@ fileprivate enum KeychainKey: String {
     case token = "token"
 }
 
-class KeychainService {
+final class KeychainService: KeychainServiceProtocol {
     
     var token: String? {
         get {

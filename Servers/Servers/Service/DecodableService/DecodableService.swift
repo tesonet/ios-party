@@ -13,7 +13,7 @@ class DecodableService: DecodableServiceProtocol {
         return decode(data: data)
     }
     
-    func serverValue(data: Data) -> Result<ServerModel, Error> {
+    func serverValue(data: Data) -> Result<[ServerModel], Error> {
         return decode(data: data)
     }
     
