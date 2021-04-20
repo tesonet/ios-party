@@ -65,7 +65,9 @@ final class CoreDataManager: CoreDataManagerProtocol {
         
         let container = NSPersistentContainer(name: "Servers", managedObjectModel: model)
         container.loadPersistentStores { (storeDescription, error) in
-            fatalError("Unresolved error: \(String(describing: error?.localizedDescription))")
+            if let error = error {
+                fatalError("Unresolved error: \(String(describing: error.localizedDescription))")
+            }
         }
         
         return container

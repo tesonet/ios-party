@@ -15,6 +15,13 @@ protocol ModuleBuilderProtocol {
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
+    
+    private lazy var storageService: StorageService = {
+        let coredataManager = CoreDataManager()
+        let serverStorageManager = ServerStorageManager(coreDataManager: coredataManager)
+        return StorageService(serverStorageManager: serverStorageManager)
+    }()
+    
     private lazy var apiManager: ApiManager = {
         let networkService = NetworkService()
         let decodableService = DecodableService()
@@ -44,7 +51,7 @@ class ModuleBuilder: ModuleBuilderProtocol {
             fatalError("No ServersViewController in storyboard")
         }
         
-        let presenter = ServersPresenter(view: serversVC, apiManager: apiManager, router: router)
+        let presenter = ServersPresenter(view: serversVC, apiManager: apiManager, router: router, storageService: storageService)
         serversVC.presenter = presenter
         return serversVC
     }

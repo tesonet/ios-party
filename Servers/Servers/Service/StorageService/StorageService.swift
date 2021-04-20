@@ -20,9 +20,15 @@ class StorageService: StorageServiceProtocol {
         serverStorageManager.save(servers: servers, completion: completion)
     }
     
-    func getServers(sortingMethod: SortingMethod) -> Result<[Server], Error> {
+    func getServers(sortingMethod: SortingMethod) -> Result<[ServerModel], Error> {
         let key = sortingMethod == .alphanumerical ? "name" : "distance"
-        return serverStorageManager.getServers(sorting: key, isAscending: true)
-    }
         
+        let result = serverStorageManager.getServers(sorting: key, isAscending: true)
+        
+        switch result {
+            case .success(let servers):
+                return .success(servers.map({ $0.toModel() }))
+            case .failure(let error): return .failure(error)
+        } 
+    }
 }

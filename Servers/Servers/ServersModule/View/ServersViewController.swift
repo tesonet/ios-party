@@ -23,15 +23,14 @@ class ServersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        presenter.getServersFromBackend()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         setupTitleView()
-        setupButtons()
-        
-        presenter.getServers()
+        setupButtons()        
     }
     
     private func setupButtons() {

@@ -1,22 +1,12 @@
 //
-//  ServerRouter.swift
+//  ServersPresenter.swift
 //  Servers
 //
-//  Created by Nikita Khodzhaiev on 18.04.2021.
+//  Created by Nikita Khodzhaiev on 20.04.2021.
 //
 
 import Foundation
 
-protocol ServersPresenterProtocol: class {
-    var servers: [ServerModel] { get }
-    
-    init(view: ServersViewProtocol, apiManager: ApiManagerProtocol, router: RouterProtocol)
-    
-    func getServers()
-    func sort()
-    func didSelect(option: String)
-    func logOut()
-}
 
 enum SortingMethod: String {
     case alphanumerical = "Alphanumerical"
@@ -38,7 +28,8 @@ class ServersPresenter: ServersPresenterProtocol {
     private let apiManager: ApiManagerProtocol
     private var router: RouterProtocol?
     private weak var vc: ServersViewProtocol?
-    
+    private weak var storageService: StorageServiceProtocol?
+
     private var sortMethod = SortingMethod.alphanumerical {
         didSet {
             resort()
@@ -46,21 +37,36 @@ class ServersPresenter: ServersPresenterProtocol {
         }
     }
     
-    required init(view: ServersViewProtocol, apiManager: ApiManagerProtocol, router: RouterProtocol) {
+    required init(view: ServersViewProtocol, apiManager: ApiManagerProtocol, router: RouterProtocol, storageService: StorageServiceProtocol) {
         self.vc = view
         self.apiManager = apiManager
         self.router = router
+        self.storageService = storageService
     }
     
-    func getServers() {
+    func getServersFromBackend() {
         apiManager.getServers { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let servers):
-                    self?._servers = servers
+                    self?.updateLocal(with: servers)
                 case .failure(let error):
                     self?.vc?.show(error: error)
                 }
+            }
+        }
+    }
+    
+    func getLocalServers() {
+        guard let storageService = storageService else { return }
+        let result = storageService.getServers(sortingMethod: sortMethod)
+        DispatchQueue.main.async {
+            switch result {
+            case .success(let servers):
+                self._servers = servers
+                self.vc?.reloadUI()
+            case .failure(let error):
+                self.vc?.show(error: error)
             }
         }
     }
@@ -76,6 +82,20 @@ class ServersPresenter: ServersPresenterProtocol {
     func logOut() {
         apiManager.logout()
         router?.popToRoot()
+    }
+    
+    private func updateLocal(with servers: [ServerModel]) {
+        
+        storageService?.save(servers: servers) { [weak self] (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    self?.getLocalServers()
+                case .failure(let error):
+                    self?.vc?.show(error: error)
+                }
+            }
+        }
     }
     
     private func resort() {

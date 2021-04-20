@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol StorageServiceProtocol {
+protocol StorageServiceProtocol: class {
         
     init(serverStorageManager: ServerStorageManager)
     
     func save(servers: [ServerModel], completion: @escaping ((Result<Bool, Error>) -> ()))
-    func getServers(sortingMethod: SortingMethod) -> Result<[Server], Error>
+    func getServers(sortingMethod: SortingMethod) -> Result<[ServerModel], Error>
 }

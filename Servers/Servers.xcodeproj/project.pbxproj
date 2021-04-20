@@ -19,6 +19,8 @@
 		0126F403262EDFE000071B62 /* CoreDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126F402262EDFE000071B62 /* CoreDataManagerProtocol.swift */; };
 		0126F416262EE03900071B62 /* ServerStorageManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126F415262EE03800071B62 /* ServerStorageManagerProtocol.swift */; };
 		0126F425262EE0A200071B62 /* StorageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126F424262EE0A200071B62 /* StorageServiceProtocol.swift */; };
+		01375BF6262EE1B500B2EA71 /* Server+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01375BF5262EE1B500B2EA71 /* Server+Extension.swift */; };
+		01375BFE262EF92A00B2EA71 /* ServersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */; };
 		015763E9262AF84E00EF380D /* BaseLoadingFromXIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */; };
 		015763F8262B1D1900EF380D /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763F7262B1D1900EF380D /* ApiEndpoint.swift */; };
 		01576400262B226000EF380D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763FF262B226000EF380D /* ApiManager.swift */; };
@@ -86,6 +88,8 @@
 		0126F402262EDFE000071B62 /* CoreDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerProtocol.swift; sourceTree = "<group>"; };
 		0126F415262EE03800071B62 /* ServerStorageManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStorageManagerProtocol.swift; sourceTree = "<group>"; };
 		0126F424262EE0A200071B62 /* StorageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceProtocol.swift; sourceTree = "<group>"; };
+		01375BF5262EE1B500B2EA71 /* Server+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Extension.swift"; sourceTree = "<group>"; };
+		01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersPresenter.swift; sourceTree = "<group>"; };
 		015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadingFromXIBView.swift; sourceTree = "<group>"; };
 		015763F7262B1D1900EF380D /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		015763FF262B226000EF380D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -159,7 +163,7 @@
 			children = (
 				0126F411262EE01900071B62 /* ServerStorageManager */,
 				0126F40A262EE00200071B62 /* CoreDataManager */,
-				0110644E262EAD1200C75D05 /* Servers.xcdatamodeld */,
+				01375BF4262EE1A500B2EA71 /* ServerModel */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -214,6 +218,24 @@
 				0110644A262EACF900C75D05 /* CoreData */,
 			);
 			path = StorageService;
+			sourceTree = "<group>";
+		};
+		01375BF4262EE1A500B2EA71 /* ServerModel */ = {
+			isa = PBXGroup;
+			children = (
+				0110644E262EAD1200C75D05 /* Servers.xcdatamodeld */,
+				01375BF5262EE1B500B2EA71 /* Server+Extension.swift */,
+			);
+			path = ServerModel;
+			sourceTree = "<group>";
+		};
+		01375C02262EF94000B2EA71 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01C6577C262C0D960015DD0E /* ServersPresenterProtocol.swift */,
+				01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		015763ED262AF85100EF380D /* Base */ = {
@@ -400,7 +422,7 @@
 		01C65781262C0DA00015DD0E /* ServersModule */ = {
 			isa = PBXGroup;
 			children = (
-				01C6577C262C0D960015DD0E /* ServersPresenterProtocol.swift */,
+				01375C02262EF94000B2EA71 /* Presenter */,
 				01106459262EBC0000C75D05 /* Model */,
 				01C6579A262C1B8D0015DD0E /* View */,
 			);
@@ -553,8 +575,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01375BF6262EE1B500B2EA71 /* Server+Extension.swift in Sources */,
 				01106455262EBBE800C75D05 /* ServerModel.swift in Sources */,
 				01C6573C262B3D3D0015DD0E /* LoginViewProtocol.swift in Sources */,
+				01375BFE262EF92A00B2EA71 /* ServersPresenter.swift in Sources */,
 				01576400262B226000EF380D /* ApiManager.swift in Sources */,
 				01660B2D2626F7A9002A1D61 /* NetworkService.swift in Sources */,
 				01576405262B22CB00EF380D /* KeychainService.swift in Sources */,
