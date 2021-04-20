@@ -11,7 +11,3 @@ struct AuthModel: Decodable {
     var token: String
 }
 
-struct ServerModel: Decodable {
-    let name: String
-    let distance: Int
-}

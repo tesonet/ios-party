@@ -36,6 +36,10 @@ class LoginViewController: UIViewController {
         setupTextFields()
         setupButton()
         setupImages()
+        
+        usernameTextField.text = "tesonet"
+        passwordTextField.text = "partyanimal"
+
     }
     
     private func setupButton() {
