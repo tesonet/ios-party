@@ -7,15 +7,11 @@
 
 import UIKit
 
-protocol ModuleBuilderProtocol {
-    var isLoggedIn: Bool { get }
-    
-    func createLoginModule(router: RouterProtocol) -> UIViewController
-    func createServersModule(router: RouterProtocol) -> UIViewController
-}
-
 class ModuleBuilder: ModuleBuilderProtocol {
     
+    var isLoggedIn: Bool {
+        return apiManager.isLoggedIn()
+    }
     private lazy var storageService: StorageService = {
         let coredataManager = CoreDataManager()
         let serverStorageManager = ServerStorageManager(coreDataManager: coredataManager)
@@ -29,10 +25,6 @@ class ModuleBuilder: ModuleBuilderProtocol {
         let apiManager = ApiManager(networkService: networkService, decodableService: decodableService, keychainService: keychainService)
         return apiManager
     }()
-    
-    var isLoggedIn: Bool {
-        return apiManager.isLoggedIn()
-    }
     
     func createLoginModule(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
@@ -56,4 +48,7 @@ class ModuleBuilder: ModuleBuilderProtocol {
         return serversVC
     }
     
+    func createTransitionAnimator() -> TransitionAnimator {
+        return TransitionAnimator()
+    }
 }

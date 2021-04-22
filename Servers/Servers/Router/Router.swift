@@ -11,9 +11,12 @@ class Router: RouterProtocol {
     var navigationController: UINavigationController?
     var moduleBuilder: ModuleBuilderProtocol?
     
+    private var animator: TransitionAnimator
+    
     init(navigationController: UINavigationController, moduleBuilder: ModuleBuilderProtocol) {
         self.navigationController = navigationController
         self.moduleBuilder = moduleBuilder
+        self.animator = moduleBuilder.createTransitionAnimator()
     }
     
     func initialViewController() {
@@ -26,18 +29,21 @@ class Router: RouterProtocol {
         navigationController.setNavigationBarHidden(true, animated: false)
         
         if builder.isLoggedIn {
-            let serversViewController = builder.createServersModule(router: self)
-            navigationController.pushViewController(serversViewController, animated: false)
+            showServers()
         }
-        
     }
     
     func showServers() {
         guard let serversVC = moduleBuilder?.createServersModule(router: self) else { return }
-        navigationController?.pushViewController(serversVC, animated: true)
+        
+        serversVC.modalPresentationStyle = .fullScreen
+        serversVC.transitioningDelegate = animator
+        
+        navigationController?.viewControllers.first?.present(serversVC, animated: true, completion: nil)
     }
     
-    func popToRoot() {
-        navigationController?.popToRootViewController(animated: true)
+    func backToLogin() {
+        navigationController?.viewControllers.first?.transitioningDelegate = animator
+        navigationController?.viewControllers.first?.dismiss(animated: true, completion: nil)
     }
 }

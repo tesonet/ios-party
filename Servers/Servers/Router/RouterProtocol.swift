@@ -14,5 +14,5 @@ protocol RouterProtocol {
     
     func initialViewController()
     func showServers()
-    func popToRoot()
+    func backToLogin()
 }

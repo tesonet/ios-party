@@ -21,7 +21,9 @@
 		0126F425262EE0A200071B62 /* StorageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126F424262EE0A200071B62 /* StorageServiceProtocol.swift */; };
 		01375BF6262EE1B500B2EA71 /* Server+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01375BF5262EE1B500B2EA71 /* Server+Extension.swift */; };
 		01375BFE262EF92A00B2EA71 /* ServersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */; };
-		015763E9262AF84E00EF380D /* BaseLoadingFromXIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */; };
+		0155904E2630760600C24291 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155904D2630760600C24291 /* TransitionAnimator.swift */; };
+		015590562630801200C24291 /* TransitionAnimatorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015590552630801200C24291 /* TransitionAnimatorConfig.swift */; };
+		0155906C263154C600C24291 /* ModuleBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155906B263154C600C24291 /* ModuleBuilderProtocol.swift */; };
 		015763F8262B1D1900EF380D /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763F7262B1D1900EF380D /* ApiEndpoint.swift */; };
 		01576400262B226000EF380D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015763FF262B226000EF380D /* ApiManager.swift */; };
 		01576405262B22CB00EF380D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01576404262B22CB00EF380D /* KeychainService.swift */; };
@@ -90,7 +92,9 @@
 		0126F424262EE0A200071B62 /* StorageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceProtocol.swift; sourceTree = "<group>"; };
 		01375BF5262EE1B500B2EA71 /* Server+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+Extension.swift"; sourceTree = "<group>"; };
 		01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersPresenter.swift; sourceTree = "<group>"; };
-		015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadingFromXIBView.swift; sourceTree = "<group>"; };
+		0155904D2630760600C24291 /* TransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
+		015590552630801200C24291 /* TransitionAnimatorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimatorConfig.swift; sourceTree = "<group>"; };
+		0155906B263154C600C24291 /* ModuleBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilderProtocol.swift; sourceTree = "<group>"; };
 		015763F7262B1D1900EF380D /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		015763FF262B226000EF380D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		01576404262B22CB00EF380D /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
@@ -238,10 +242,27 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		015590602631533F00C24291 /* TransitionAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				0155904D2630760600C24291 /* TransitionAnimator.swift */,
+				015590552630801200C24291 /* TransitionAnimatorConfig.swift */,
+			);
+			path = TransitionAnimator;
+			sourceTree = "<group>";
+		};
+		015590642631535300C24291 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				015763ED262AF85100EF380D /* Base */,
+				015590602631533F00C24291 /* TransitionAnimator */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		015763ED262AF85100EF380D /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				015763E8262AF84E00EF380D /* BaseLoadingFromXIBView.swift */,
 				019EACEB262C8DC800F88B25 /* BaseButton.swift */,
 			);
 			path = Base;
@@ -299,9 +320,9 @@
 			children = (
 				01660ABB2626DA68002A1D61 /* AppDelegate.swift */,
 				01660ABD2626DA68002A1D61 /* SceneDelegate.swift */,
-				0126637D262C866E002EDB6B /* Protocol */,
 				01C65773262C0D5F0015DD0E /* Router */,
-				015763ED262AF85100EF380D /* Base */,
+				015590642631535300C24291 /* View */,
+				0126637D262C866E002EDB6B /* Protocol */,
 				01660B312626F7B7002A1D61 /* Service */,
 				01660B232626F630002A1D61 /* ModuleBuilder */,
 				01660AF82626DB8F002A1D61 /* LoginModule */,
@@ -365,6 +386,7 @@
 		01660B232626F630002A1D61 /* ModuleBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				0155906B263154C600C24291 /* ModuleBuilderProtocol.swift */,
 				01660B1E2626F5AC002A1D61 /* ModuleBuilder.swift */,
 			);
 			path = ModuleBuilder;
@@ -597,12 +619,14 @@
 				01660B0E2626E321002A1D61 /* LoginTextField.swift in Sources */,
 				019EACEC262C8DC800F88B25 /* BaseButton.swift in Sources */,
 				01106450262EAD1200C75D05 /* Servers.xcdatamodeld in Sources */,
+				0155904E2630760600C24291 /* TransitionAnimator.swift in Sources */,
 				01576436262B391100EF380D /* DecodableService.swift in Sources */,
 				01660B1F2626F5AC002A1D61 /* ModuleBuilder.swift in Sources */,
 				0157640E262B35E000EF380D /* ApiManagerProtocol.swift in Sources */,
 				01660B162626E746002A1D61 /* LoginConstants.swift in Sources */,
 				01660AF42626DB88002A1D61 /* LoginViewController.swift in Sources */,
 				0157643E262B3AB000EF380D /* DecodableServiceProtocol.swift in Sources */,
+				0155906C263154C600C24291 /* ModuleBuilderProtocol.swift in Sources */,
 				01C6576F262C04EC0015DD0E /* Router.swift in Sources */,
 				019F66452629CAFF003E36AF /* LoadingView.swift in Sources */,
 				01C65778262C0D6C0015DD0E /* RouterProtocol.swift in Sources */,
@@ -610,12 +634,12 @@
 				0126F403262EDFE000071B62 /* CoreDataManagerProtocol.swift in Sources */,
 				0126636C262C1D62002EDB6B /* ServerConstants.swift in Sources */,
 				0126F416262EE03900071B62 /* ServerStorageManagerProtocol.swift in Sources */,
-				015763E9262AF84E00EF380D /* BaseLoadingFromXIBView.swift in Sources */,
 				01C65763262C047A0015DD0E /* KeychainServiceProtocol.swift in Sources */,
 				01576429262B382800EF380D /* AuthModel.swift in Sources */,
 				01C657B0262C1BF50015DD0E /* ServerCell.swift in Sources */,
 				0110643E262EAC5100C75D05 /* StorageService.swift in Sources */,
 				01660ABE2626DA68002A1D61 /* SceneDelegate.swift in Sources */,
+				015590562630801200C24291 /* TransitionAnimatorConfig.swift in Sources */,
 				0126F425262EE0A200071B62 /* StorageServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

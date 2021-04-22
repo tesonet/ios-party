@@ -14,7 +14,7 @@ final class CoreDataManager: CoreDataManagerProtocol {
         return persistantContainer.viewContext
     }
     
-    var newBackgroundContext:NSManagedObjectContext {
+    var newBackgroundContext: NSManagedObjectContext {
         return persistantContainer.newBackgroundContext()
     }
         

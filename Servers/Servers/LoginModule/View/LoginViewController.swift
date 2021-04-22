@@ -22,11 +22,6 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var loadingMessageLabel: UILabel!
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupUI()
@@ -36,10 +31,6 @@ class LoginViewController: UIViewController {
         setupTextFields()
         setupButton()
         setupImages()
-        
-        usernameTextField.text = "tesonet"
-        passwordTextField.text = "partyanimal"
-
     }
     
     private func setupButton() {

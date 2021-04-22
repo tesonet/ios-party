@@ -81,7 +81,7 @@ class ServersPresenter: ServersPresenterProtocol {
     
     func logOut() {
         apiManager.logout()
-        router?.popToRoot()
+        router?.backToLogin()
     }
     
     private func updateLocal(with servers: [ServerModel]) {

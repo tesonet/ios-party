@@ -49,14 +49,16 @@ class LoginPresenter: LoginPresenterProtocol {
         vc?.updateUI(isLoading: true)
 
         apiManager.login(username: userName, password: password) { [weak self] (result) in
-            self?.vc?.updateUI(isLoading: false)
-            
             switch result {
             case .success(let token):
                 self?.apiManager.save(token: token)
                 self?.router?.showServers()
             case .failure(let error):
                 self?.vc?.show(error: error)
+            }
+            
+            DispatchQueue.main.async {
+                self?.vc?.updateUI(isLoading: false)
             }
         }
     }
