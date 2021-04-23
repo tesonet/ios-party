@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DecodableService: DecodableServiceProtocol {
+final class DecodableService: DecodableServiceProtocol {
     
     func authValue(data: Data) -> Result<AuthModel, Error> {
         return decode(data: data)

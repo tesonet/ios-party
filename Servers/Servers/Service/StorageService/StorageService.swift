@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StorageService: StorageServiceProtocol {
+final class StorageService: StorageServiceProtocol {
     
     private var serverStorageManager: ServerStorageManager
     

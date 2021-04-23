@@ -75,11 +75,11 @@ final class ApiManager: ApiManagerProtocol {
         self.keychainService.token = token
     }
     
-    func logout() {
-        self.keychainService.token = nil
-    }
-    
     func isLoggedIn() -> Bool {
         return self.keychainService.token != nil
+    }
+    
+    func logout() {
+        self.keychainService.token = nil
     }
 }

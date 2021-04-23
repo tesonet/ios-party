@@ -23,6 +23,7 @@
 		01375BFE262EF92A00B2EA71 /* ServersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */; };
 		0142AA202633089C00F397FA /* ApiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142AA1F2633089C00F397FA /* ApiManagerTests.swift */; };
 		0142AA2926330ED300F397FA /* MockLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142AA2826330ED300F397FA /* MockLogin.swift */; };
+		0142AA2D26330F6900F397FA /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142AA2C26330F6900F397FA /* UIViewController+extension.swift */; };
 		0155904E2630760600C24291 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155904D2630760600C24291 /* TransitionAnimator.swift */; };
 		015590562630801200C24291 /* TransitionAnimatorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015590552630801200C24291 /* TransitionAnimatorConfig.swift */; };
 		0155906C263154C600C24291 /* ModuleBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155906B263154C600C24291 /* ModuleBuilderProtocol.swift */; };
@@ -87,6 +88,7 @@
 		01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersPresenter.swift; sourceTree = "<group>"; };
 		0142AA1F2633089C00F397FA /* ApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTests.swift; sourceTree = "<group>"; };
 		0142AA2826330ED300F397FA /* MockLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogin.swift; sourceTree = "<group>"; };
+		0142AA2C26330F6900F397FA /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		0155904D2630760600C24291 /* TransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
 		015590552630801200C24291 /* TransitionAnimatorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimatorConfig.swift; sourceTree = "<group>"; };
 		0155906B263154C600C24291 /* ModuleBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilderProtocol.swift; sourceTree = "<group>"; };
@@ -184,14 +186,6 @@
 		0126F411262EE01900071B62 /* ServerStorageManager */ = {
 			isa = PBXGroup;
 			children = (
-				0126F41D262EE04D00071B62 /* ServerStorageManager */,
-			);
-			path = ServerStorageManager;
-			sourceTree = "<group>";
-		};
-		0126F41D262EE04D00071B62 /* ServerStorageManager */ = {
-			isa = PBXGroup;
-			children = (
 				0126F415262EE03800071B62 /* ServerStorageManagerProtocol.swift */,
 				0126F3FA262EDB5D00071B62 /* ServerStorageManager.swift */,
 			);
@@ -211,8 +205,8 @@
 		01375BF4262EE1A500B2EA71 /* ServerModel */ = {
 			isa = PBXGroup;
 			children = (
-				0110644E262EAD1200C75D05 /* Servers.xcdatamodeld */,
 				01375BF5262EE1B500B2EA71 /* Server+Extension.swift */,
+				0110644E262EAD1200C75D05 /* Servers.xcdatamodeld */,
 			);
 			path = ServerModel;
 			sourceTree = "<group>";
@@ -224,6 +218,14 @@
 				01375BFD262EF92A00B2EA71 /* ServersPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0142AA3026330F9500F397FA /* UIViewController+extension */ = {
+			isa = PBXGroup;
+			children = (
+				0142AA2C26330F6900F397FA /* UIViewController+extension.swift */,
+			);
+			path = "UIViewController+extension";
 			sourceTree = "<group>";
 		};
 		015590602631533F00C24291 /* TransitionAnimator */ = {
@@ -240,6 +242,7 @@
 			children = (
 				015763ED262AF85100EF380D /* Base */,
 				015590602631533F00C24291 /* TransitionAnimator */,
+				0142AA3026330F9500F397FA /* UIViewController+extension */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			files = (
 				01375BF6262EE1B500B2EA71 /* Server+Extension.swift in Sources */,
 				01106455262EBBE800C75D05 /* ServerModel.swift in Sources */,
+				0142AA2D26330F6900F397FA /* UIViewController+extension.swift in Sources */,
 				01C6573C262B3D3D0015DD0E /* LoginViewProtocol.swift in Sources */,
 				01375BFE262EF92A00B2EA71 /* ServersPresenter.swift in Sources */,
 				01576400262B226000EF380D /* ApiManager.swift in Sources */,
