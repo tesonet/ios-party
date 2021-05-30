@@ -6,95 +6,129 @@
 //
 
 import SwiftUI
-import Combine
+import ComposableArchitecture
 
-struct LoginState {
-    var username: String = ""
-    var password: String = ""
-    var error: String? = nil
-    var isFormValid: Bool
-    var isBusy: Bool = false
-    
-    init(username: String = "", password: String = "", error: String? = nil, isBusy: Bool = false) {
-        self.username = username
-        self.password = password
-        self.error = error
-        self.isFormValid = !username.isEmpty && !password.isEmpty
-        self.isBusy = isBusy
-    }
-}
-
-enum LoginInput {
-    case login
-    
-    case updateUsername(String)
-    case updatePassword(String)
-}
-
-struct LoginView: View {
-    @ObservedObject var viewModel: AnyViewModel<LoginState, LoginInput>
-    @EnvironmentObject var env: AppState
+struct LoginButton: View {
+    let isEnabled: Bool
+    let inProgress: Bool
     
     var body: some View {
-        VStack(spacing: UIConstraints.Layout.innerSpacing) {
+        HStack {
             Spacer()
-            Image("logo-white")
-            Spacer()
-            HStack(spacing: UIConstraints.Layout.innerSpacing) {
-
-                Image(systemName: "person.fill")
-                TextField("Username", text: viewModel.binding(\.username, with: LoginInput.updateUsername))
-                    .textContentType(.username)
-            }
-            .padding(.all, UIConstraints.Layout.margin)
-            .background(Color.white)
-            .cornerRadius(UIConstraints.Layout.cornerRadius)
-            
-            HStack {
-                Image(systemName: "lock.fill")
-                SecureField("Password", text: viewModel.binding(\.password, with: LoginInput.updatePassword))
-                    .textContentType(.password)
-            }
-            .padding(.all, UIConstraints.Layout.margin)
-            .background(Color.white)
-            .cornerRadius(UIConstraints.Layout.cornerRadius)
-            
-            NavigationLink(
-                destination: ServersView(
-                    viewModel: ServersViewModel<DispatchQueue>(
-                        state: ServersState(),
-                        with: ServersRepository(appState: env),
-                        store: ServersJsonStore(jsonName: "servers.json"),
-                        on: DispatchQueue.main).eraseToAnyViewModel()),
-                isActive: .constant(env.token != nil),
-                label: {
-                    LoginButton {
-                        viewModel.trigger(.login)
-                    }
+            ZStack {
+                Rectangle()
+                    .fill(Color.clear)
+                if inProgress {
+                    ProgressView(value: 0.0)
+                        .progressViewStyle(CircularProgressViewStyle())
+                } else {
+                    Text("Log In")
+                        .font(.headline)
                 }
-            )
-            .disabled(!viewModel.isFormValid)
-            .busy(viewModel.isBusy)
-            
-            if let error = viewModel.error {
-                Text(error)
-                    .foregroundColor(.red)
-                    .font(.caption2)
             }
             Spacer()
         }
-        .accentColor(Color("gray"))
-        .foregroundColor(Color("gray"))
-        .textFieldStyle(PlainTextFieldStyle())
-        .textFieldStyle(RoundedBorderTextFieldStyle())
-        .navigationBarHidden(true)
-        .padding(.horizontal , UIConstraints.Layout.margin)
+        .foregroundColor(.white)
+        .background(isEnabled ? Color("green") : Color("gray"))
+        .cornerRadius(UIConstraints.Layout.cornerRadius)
+    }
+}
+
+//struct LoginButton_Preview: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            LoginButton(isEnabled: true, inProgress: true)
+//        }
+//    }
+//}
+
+struct LoginView: View {
+    let store: Store<LoginState, LoginAction>
+    
+    var body: some View {
+        WithViewStore(store) { viewStore in
+            VStack(spacing: UIConstraints.Layout.innerSpacing) {
+                Spacer()
+                
+                Image("logo-white")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 40)
+                
+                Spacer()
+                
+                VStack(spacing: 8) {
+                    HStack(spacing: UIConstraints.Layout.innerSpacing) {
+                        Image(systemName: "person.fill")
+                        TextField("Username", text: viewStore.binding(get: \.username, send: LoginAction.updateUsername))
+                            .textContentType(.username)
+                    }
+                    .padding(.all, UIConstraints.Layout.margin)
+                    .frame(height: UIConstraints.Layout.inputFieldHeight)
+                    .background(Color.white)
+                    .cornerRadius(UIConstraints.Layout.cornerRadius)
+                    
+                    HStack {
+                        Image(systemName: "lock.fill")
+                        SecureField("Password", text: viewStore.binding(get: \.password, send: LoginAction.updatePassword))
+                            .textContentType(.password)
+                    }
+                    .padding(.all, UIConstraints.Layout.margin)
+                    .frame(height: UIConstraints.Layout.inputFieldHeight)
+                    .background(Color.white)
+                    .cornerRadius(UIConstraints.Layout.cornerRadius)
+                    
+                    NavigationLink(
+                        destination:
+                            IfLetStore(
+                                self.store.scope(
+                                    state: \.serverState,
+                                    action: LoginAction.optionalServers
+                                ),
+                                then: ServersView.init(store:)
+                            )
+                        ,
+                        isActive: viewStore.binding(
+                            get: \.navigatedToServers,
+                            send: LoginAction.navigateToServers(isActive:)
+                        ),
+                        label: {
+                            LoginButton(isEnabled: viewStore.isFormValid, inProgress: viewStore.inProgress)
+                        }
+                    )
+                    .frame(height: UIConstraints.Layout.inputFieldHeight)
+                    .disabled(!viewStore.isFormValid || viewStore.inProgress)
+                }
+                .padding(.horizontal, 40)
+                .padding(.bottom, 60)
+                    
+                Spacer()
+            }
+            .alert(store.scope(state: \.errorAlert), dismiss: .errorAlertDismissed)
+            .accentColor(Color("gray"))
+            .foregroundColor(Color("gray"))
+            .textFieldStyle(PlainTextFieldStyle())
+            .navigationBarHidden(true)
+            .padding(.horizontal , UIConstraints.Layout.margin)
+        }
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: LoginViewModel<ImmediateScheduler>.mock(state: .mock()).eraseToAnyViewModel())
-            .environmentObject(AppState.mock())
+        let dependencies = GlobalDependencies.mock
+        NavigationView {
+            LoginView(
+                store: Store(
+                    initialState: LoginState(),
+                    reducer: LoginReducer.reducer,
+                    environment: GlobalEnvironment.mock(
+                        mainQueue: { .main },
+                        environment: LoginEnvironment(dependencies),
+                        dependencies: dependencies
+                    )
+                )
+            )
+        }
     }
 }

@@ -12,6 +12,7 @@ struct UIConstraints {
         static let cornerRadius: CGFloat = 4
         static let innerSpacing: CGFloat = 8
         static let margin: CGFloat = 16
+        static let inputFieldHeight: CGFloat = 48
     }
     
     struct Progress {

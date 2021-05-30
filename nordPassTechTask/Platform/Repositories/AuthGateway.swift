@@ -1,24 +1,29 @@
 //
-//  LoginRepository.swift
+//  AuthGateway.swift
 //  nordPassTechTask
 //
-//  Created by Blazej Wdowikowski on 13/04/2021.
+//  Created by Mikhail Markin on 30.05.2021.
 //
 
 import Foundation
 import Combine
 
-struct LoginRepository: LoginRepositoryProtocol {
-    private let session: URLSession
+struct AuthGateway {
+    private let _session: URLSession
     
     init(session: URLSession = .shared) {
-        self.session = session
+        _session = session
     }
     
-    func login(username: String, password: String) -> AnyPublisher<String, Error> {
+    func authenticate(username: String, password: String) -> AnyPublisher<User, Error> {        
+        struct LoginRequest: Encodable {
+            let username: String
+            let password: String
+        }
+
         let stringUrl = "https://playground.tesonet.lt/v1/tokens"
         guard let url = URL(string: stringUrl) else {
-            return Fail<String, Error>(error: URLError(.badURL, userInfo: [NSURLErrorFailingURLErrorKey: stringUrl])).eraseToAnyPublisher()
+            return Fail<User, Error>(error: URLError(.badURL, userInfo: [NSURLErrorFailingURLErrorKey: stringUrl])).eraseToAnyPublisher()
         }
         
         let loginRequest = LoginRequest(username: username, password: password)
@@ -27,7 +32,7 @@ struct LoginRepository: LoginRepositoryProtocol {
         request.httpBody = try? JSONEncoder().encode(loginRequest)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        return session.dataTaskPublisher(for: request)
+        return _session.dataTaskPublisher(for: request)
             .tryMap { result in
                 
                 guard let response = result.response as? HTTPURLResponse else { throw NetworkError.unknownError }
@@ -38,8 +43,7 @@ struct LoginRepository: LoginRepositoryProtocol {
                 
                 return result.data
             }
-            .decode(type: LoginResponse.self, decoder: JSONDecoder())
-            .map(\.token)
+            .decode(type: User.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }

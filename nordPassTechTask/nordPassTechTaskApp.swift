@@ -10,13 +10,9 @@ import Combine
 
 @main
 struct nordPassTechTaskApp: App {
-    
-    @StateObject var appState = AppState(token: nil)
-    
     var body: some Scene {
         WindowGroup {
             EntryView()
-                .environmentObject(appState)
         }
     }
 }

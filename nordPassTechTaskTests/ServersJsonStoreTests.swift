@@ -13,11 +13,11 @@ final class ServersJsonStoreTest: XCTestCase {
     
     func test_saveAndLoad() {
         // Arrange
-        let expectedServers = [ServerDTO(name: "fixedServer", distance: 0)]
-        let sut = ServersJsonStore(jsonName: "testServers.json")
+        let expectedServers = [Server(name: "fixedServer", distance: 0)]
+        let sut = JsonServersStore()
         
         // Act
-        _ = sut.save(expectedServers)
+        _ = sut.setServers(expectedServers)
             .receive(on: ImmediateScheduler.shared)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -29,7 +29,7 @@ final class ServersJsonStoreTest: XCTestCase {
                 }
             }, receiveValue: { _ in })
         
-        _ = sut.load()
+        _ = sut.getServers()
             .receive(on: ImmediateScheduler.shared)
             .sink(receiveCompletion: { completion in
                 switch completion {

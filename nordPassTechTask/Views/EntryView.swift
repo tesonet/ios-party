@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct EntryView: View {
-    @EnvironmentObject var environment: AppState
+    private let _environment: GlobalEnvironment<LoginEnvironment> = {
+        let dependencies = GlobalDependencies.live
+        return GlobalEnvironment.live(environment: LoginEnvironment(dependencies), dependencies: dependencies)
+    }()
     
     var body: some View {
         NavigationView {
             LoginView(
-                viewModel: LoginViewModel<DispatchQueue>(
-                    with: LoginRepository(),
-                    appState: environment,
-                    on: DispatchQueue.main
-                ).eraseToAnyViewModel()
+                store: Store(
+                    initialState: LoginState(),
+                    reducer: LoginReducer.reducer,
+                    environment: _environment
+                )
             )
             .background(
                 Image("background")
@@ -31,6 +35,6 @@ struct EntryView: View {
 
 struct EntryView_Previews: PreviewProvider {
     static var previews: some View {
-        EntryView().environmentObject(AppState.mock())
+        EntryView()
     }
 }

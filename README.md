@@ -21,3 +21,13 @@ If you found this task it means we are looking for you!
 - Bonus: implement credential storage in keychain
 
 * Handle 401 response
+
+
+# Solution
+
+## Notes for reviewes
+
+- To make this task more practival I decided to try something new and my sight fell on [Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture). So it is the first trial of this architecture framework.
+- To make my life slightly easier and save some time I asked @icanswiftabit a permission to reuse some code from his solution.
+- I was focused on resolving architecture things rather than UI component, so no fancy animations and pixel perfect design. Anyway it could be added later on.
+- Thanks for review, any comments and questions are very welcome!

@@ -6,33 +6,7 @@
 //
 
 import SwiftUI
-import Combine
-
-enum SortingOrder {
-    case descending
-    case ascending
-}
-
-enum ServerSortedBy {
-    case none
-    case name
-    case distance
-}
-
-struct ServersState {
-    var servers: [Server] = []
-    var sortingOrder: SortingOrder = .descending
-    var sortedBy: ServerSortedBy = .none
-    var isOrderSheetPresented: Bool = false
-    var error: AlertError? = nil
-}
-
-enum ServerInput {
-    case initialFetch
-    case updateIsOrderSheetPresented(Bool)
-    case updateError(AlertError?)
-    case updateSortedBy(ServerSortedBy)
-}
+import ComposableArchitecture
 
 private struct ServersHeaderView: View {
     var body: some View {
@@ -54,13 +28,13 @@ private struct ServersHeaderView: View {
 }
 
 private struct ServersRowView: View {
-    @Binding var server: Server
+    let server: Server
     
     var body: some View {
         HStack {
             Text(server.name)
             Spacer()
-            Text(server.distanceFormatted)
+            Text("\(server.distance.distance()) km")
         }
         .font(Font.body.weight(.light))
         .foregroundColor(Color("primaryText"))
@@ -68,97 +42,105 @@ private struct ServersRowView: View {
 }
 
 struct ServersView: View {
-    @ObservedObject var viewModel: AnyViewModel<ServersState, ServerInput>
-    @EnvironmentObject var environment: AppState
+    let store: Store<ServersState, LifecycleAction<ServersAction>>
     
     var body: some View {
-        VStack(spacing: 0) {
-            if viewModel.servers.isEmpty {
-                ZStack {
-                    Image("background")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .ignoresSafeArea(.container)
-                    ServersProgressView()
-                        .onAppear {
-                            withAnimation {
-                                viewModel.trigger(.initialFetch)
-                            }
+        WithViewStore(store) { (viewStore: ViewStore<ServersState, ServersAction>) in
+            let servers = viewStore.sortedServers
+            VStack(spacing: 0) {
+                if servers.isEmpty {
+                    ZStack {
+                        Image("background")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .ignoresSafeArea(.container)
+                        ServersProgressView()
+                    }
+                } else {
+                    ServersHeaderView()
+
+                    List(servers, id: \.self) { server in
+                        if servers.first == server  {
+                            ServersRowView(server: server)
+                                .padding(.bottom, UIConstraints.Layout.innerSpacing)
+                                .padding(.top, UIConstraints.Layout.innerSpacing + 12)
+                        } else {
+                            ServersRowView(server: server)
+                                .padding(.vertical, UIConstraints.Layout.innerSpacing)
                         }
-                }
-            } else {
-                ServersHeaderView()
-                List(viewModel.servers, id: \.self) { server in
-                    if viewModel.servers.first == server  {
-                        ServersRowView(server: .constant(server))
-                            .padding(.bottom, UIConstraints.Layout.innerSpacing)
-                            .padding(.top, UIConstraints.Layout.innerSpacing + 12)
-                    } else {
-                        ServersRowView(server: .constant(server))
-                            .padding(.vertical, UIConstraints.Layout.innerSpacing)
                     }
+                    .zIndex(-1)
+                    .layoutPriority(1)
+
+                    Button(
+                        action: {
+                            viewStore.send(.orderSheetButtonTapped)
+
+                        },
+                        label: {
+                            Spacer()
+                            HStack {
+                                Image("sort")
+                                Text("Sort")
+                            }
+                            .padding(.vertical, UIConstraints.Layout.margin)
+                            Spacer()
+                        }
+                    )
+                    .foregroundColor(Color.white)
+                    .background(Color("buttonBackground"))
+                    .zIndex(1)
+                    .actionSheet(store.scope(state: \.orderSheet), dismiss: .orderSheetDismissed)
                 }
-                .zIndex(-1)
-                .layoutPriority(1)
-                Button {
-                    viewModel.trigger(.updateIsOrderSheetPresented(true))
-                } label: {
-                    Spacer()
-                    HStack {
-                        Image("sort")
-                        Text("Sort")
-                    }
-                    .padding(.vertical, UIConstraints.Layout.margin)
-                    Spacer()
-                }
-                .foregroundColor(Color.white)
-                .background(Color("buttonBackground"))
-                
             }
-        }
-        .actionSheet(isPresented: viewModel.binding(\.isOrderSheetPresented, with: ServerInput.updateIsOrderSheetPresented)) {
-            ActionSheet(title: Text("Sort by"), message: nil, buttons: [
-                .default(Text("Distance"), action: {
-                    withAnimation {
-                        viewModel.trigger(.updateSortedBy(.distance))
+            .alert(store.scope(state: \.errorAlert), dismiss: ServersAction.errorAlertDismissed)
+            .navigationBarHidden(false)
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarItems(
+                leading: Image("logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 20),
+                trailing: Button(
+                    action: { viewStore.send(.logout) },
+                    label: {
+                        Image("logout")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 16, alignment: .bottom)
                     }
-                }),
-                .default(Text("Alphanumerical"), action: {
-                    withAnimation {
-                        viewModel.trigger(.updateSortedBy(.name))
-                    }
-                }),
-                .cancel()
-            ])
+                )
+            )
+            .navigationBarBackButtonHidden(true)
         }
-        .alert(item: viewModel.binding(\.error, with: ServerInput.updateError)) { error -> Alert in
-            Alert(title: Text(error.reason), dismissButton: .default(Text("Retry"), action: {
-                viewModel.trigger(.initialFetch)
-            }))
-        }
-        .navigationBarItems(
-            leading: Image("logo"),
-            trailing:
-                Button {
-                    environment.token = nil
-                    
-                } label: {
-                    Image("logout")
-                }
-        )
-        .navigationBarHidden(false)
-        .navigationBarTitle("", displayMode: .inline)
-        .navigationBarBackButtonHidden(true)
     }
 }
 
 #if DEBUG
 struct ServersView_Previews: PreviewProvider {
-    static let servers: [Server] = [Server(name: "Poland", distance: 1234)]
-    
     static var previews: some View {
-        ServersView(viewModel: ServersViewModel<ImmediateScheduler>.mock(state: .mock(servers: servers)).eraseToAnyViewModel())
-            .environmentObject(AppState.mock())
+        let dependencies = GlobalDependencies.mock
+        ServersView(
+            store: Store(
+                initialState: ServersState(),
+                reducer: ServersReducer.reducer,
+                environment: GlobalEnvironment.mock(
+                    mainQueue: { .main },
+                    environment: ServersEnvironment(dependencies),
+                    dependencies: dependencies
+                )
+            )
+            .scope(state: { $0! })
+        )
     }
 }
 #endif
+
+private extension Int {
+    static let numberFormatter = NumberFormatter()
+    
+    func distance() -> String {
+        Self.numberFormatter.numberStyle = .none
+        return Self.numberFormatter.string(from: NSNumber(integerLiteral: self)) ?? ""
+    }
+}
