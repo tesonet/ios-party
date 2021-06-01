@@ -12,7 +12,7 @@ If you found this task it means we are looking for you!
 
 ## Few simple requirements
 
-- Send authorization request (POST) to http://playground.te`net.lt/v1/tokens to generate token with body: `{"username": "tesonet", "password": "partyanimal"}`. (Don't forget Content-Type) *
+- Send authorization request (POST) to http://playground.tesonet.lt/v1/tokens to generate token with body: `{"username": "tesonet", "password": "partyanimal"}`. (Don't forget Content-Type) *
 - Get servers list from http://playground.tesonet.lt/v1/servers. Add header to request: `Authorization: Bearer <token>` *
 - Create persistant layer to store servers
 - Design should be recreated as closely as possible
@@ -21,3 +21,13 @@ If you found this task it means we are looking for you!
 - Bonus: implement credential storage in keychain
 
 * Handle 401 response
+
+
+# Solution
+
+## Notes for reviewes
+
+- To make this task more practival I decided to try something new and my sight fell on [Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture). So it is the first trial of this architecture framework.
+- To make my life slightly easier and save some time I asked @icanswiftabit a permission to reuse some code from his solution.
+- I was focused on resolving architecture things rather than UI component, so no fancy animations and pixel perfect design. Anyway it could be added later on.
+- Thanks for review, any comments and questions are very welcome!
